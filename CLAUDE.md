@@ -1,0 +1,88 @@
+# TdoT-Leistungskurse — Projektregeln
+
+Vertonte, automatisch abspielbare Web-Präsentationen zu den Leistungskursen **Deutsch, Englisch,
+Kunst** für den Tag der offenen Tür der Heinrich-Böll-Schule Hattersheim (Hessen).
+Zielgruppe: E-Phase (Klasse 11), Abitur voraussichtlich 2029.
+
+Plan und Inhalt: `PLAN.md`. Entscheidungen: `ENTSCHEIDUNGEN.md` (nummeriert, nicht still neu
+verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
+
+## Konventionen
+
+- **Sprache:** alles sichtbare und gesprochene durchgehend Deutsch, echte Umlaute. Code, Ids,
+  Dateinamen ASCII/englisch.
+- **Fakten nur aus den Faktenblättern.** Jede Aussage über Erlasse, OAVO, KCGO, Bewertung muss
+  dort mit Quelle stehen. Was dort [UNSICHER] ist, kommt nicht ungeprüft in ein Skript.
+- **Bilder:** keine Fotos von Personen der Schule. Nur Gemini-generiert oder gemeinfrei/frei
+  lizenziert. Generierte (erfundene) Personen dürfen von vorn zu sehen sein, Text im Bild ist
+  erlaubt (Entscheidung 10) — jeden Text im Bild auf Rechtschreibung prüfen. Keine KI-Porträts
+  realer Personen; keine Gemini-Bilder „im Stil von" geschützten Künstlern. Jede fremde
+  Abbildung bekommt einen Eintrag im Bildnachweis.
+- **Szene 2 jedes Films** enthält den Rat „deutlich besser als fünf Punkte“ (Entscheidung 26).
+- **Sprechtext:** vollständige, ausformulierte Sätze, die vorgelesen natürlich klingen — keine
+  Stichwortketten, keine Doppelpunkt-Aufzählungen, keine Einwortsätze (Nutzer 27.10.2026).
+- **Hosting:** GitHub Pages (Konto des Nutzers), Repository öffentlich → keine Namen von
+  Kolleg:innen oder Schüler:innen, kein Tracking, keine externen Schriften/CDNs.
+- **Offline-fähig:** alle Dateien lokal referenziert, läuft auch vom USB-Stick im Kiosk-Modus.
+- **Kein Scrollen** (digitale Tafel, Entscheidung 25): jede Seite im Querformat auf einen Bildschirm; nach Änderungen mit `scrollHeight` bei 1920×1080, 1280×720, 1024×768 nachmessen.
+
+## Stand
+
+- 27.10.2026: Projekt angelegt. Vier Faktenblätter (allgemein, Deutsch, Englisch, Kunst) liegen
+  in `quellen/`, tragende Aussagen gegengeprüft (Vermerk im Kopf jedes Blatts). Erlass 2029 noch
+  nicht erschienen → Inhalte nach Erlass 2028, im Skript als „Stand Abitur 2028" kennzeichnen.
+  Gestaltung als Dokumentarfilm mit Untertiteln und „Ton aus“-Knopf (Entscheidung 9).
+- 28.10.2026: Drehbuch Deutsch v0.2 freigegeben. Prototyp steht: `index.html`, `film.html`,
+  Deutsch komplett vertont (6:46 min). Am selben Tag alle Bilder fertig (Gemini + 5 gemeinfreie),
+  Schulszenen nach Fotos der HBS-Oberstufe, Schullogo eingebaut. Deutsch ist inhaltlich fertig;
+  offen: Englisch, Kunst, Kiosk-Modus, GitHub Pages.
+- 28.10.2026 (später): Neuausrichtung — Stil F „filmisch gemalt“, Leitfiguren-Duo, mehr
+  Präsentationselemente, Stimme Theo mit Eleven v4 (Entscheidungen 18–20). Drehbuch Deutsch 0.4
+  wartet auf Freigabe; Bilder und Ton der Fassung 0.3 sind damit überholt.
+- 28.10.2026 (Abend, Arbeitsstand zum Weitermachen): Drehbuch 0.4 freigegeben. Erledigt: 14 Bilder
+  im Stil F (`art/deutsch/v04/*_raw.png` → `media/deutsch/img/`), Figurenporträts
+  `assets/img/figur_sie.jpg`/`figur_er.jpg`, `content/deutsch.json` 0.4 (panel/band/captions/
+  imageCues mit `fit: "pinned"`, takeaways), `tools/build.mjs` neu (löst alle `"at"` auf, Merkkarte,
+  Modell im Manifest), `film.html` und `assets/css/film.css` neu.
+  Alte v0.3-Bilder/Aufnahmen liegen in `art/archiv/deutsch_v03/`.
+- 29.10.2026: Deutsch 0.4 fertig: `film.js` neu (Präsentationselemente, Fundstücke, Merkkarte),
+  vertont mit Theo v4 (30 Sätze, 3 439 Zeichen, **4:29 min gemessen**), geprüft auf Desktop und
+  Handy-Breite, Startseite in neuer Optik. Danach: Leitfarbe Schulgrün #C8D530, Logo freigestellt
+  (Fassung für dunklen Grund), Porträtkarten statt Pinnwand (Entscheidungen 21–23).
+  Englisch fertig. Stand 29.10.2026 nach Entscheidung 26: Deutsch 5:05, Englisch 5:30 min (gemessen).
+- 29.10.2026 (später): Merkkarten gesprochen (Entscheidung 27), Klausurersatz „entscheidet die
+  Lehrkraft“, Klausurzahl GK/LK verglichen. Drehbücher Deutsch 0.7 und Englisch 0.4 vertont
+  (9 neue Sätze, Englisch Szene 7 mit Beispiel Orwell „1984“), **Deutsch 5:30, Englisch 6:05 min
+  gemessen**; beide freigegeben (Nutzer 29.10.2026).
+- 29.10.2026 (Abend): Kunst fertig. Drehbuch 0.4 freigegeben, 15 Gemini-Bilder
+  (`art/kunst/v01/*_raw.png` → `media/kunst/img/`; k14 = Gebäudebild aus Deutsch), 2 gemeinfreie
+  (Morisot, Caillebotte; Originale in `art/kunst/pd/`), `content/kunst.json`, vertont (34 Sätze,
+  4 Aufnahmen wortgleich aus Englisch übernommen), **5:34 min gemessen**, Kachel auf der Startseite
+  aktiv. Drei Bilder (Flur, Hof, Wiese) waren den Schulfotos zu ähnlich und wurden ohne Fotovorlage
+  neu erzeugt (Entscheidung 15).
+- 29.10.2026 (spät): Tonstart repariert (Vorladen, Uhr wartet auf den Ton, Entscheidung 28),
+  Dauerbetrieb `kiosk.html` (Entscheidung 29), neue Titelbilder mit Fachmotiven (Entscheidung 30).
+  Im unsichtbaren Browser-Pane laufen keine Animationsframes: Filmende dort nicht prüfbar, nur
+  der Rahmen (Ende-Meldung per postMessage von Hand geschickt).
+  Offen: GitHub Pages; Kiosk einmal am echten Gerät mit Ton testen.
+
+## Präsentationselemente (content/<fach>.json)
+
+- `panel` rechts: `stats` (value/label/sub/prefix; reine Zahlen zählen hoch), `combo`
+  (figure sie/er, a, b, ok), `list` (check: true für Häkchen), `compare` (head + items label/a/b),
+  `ring` (parts mit value, notes). Jedes Element mit `"at"`.
+- `band` unten: `timeline` (label Q1…, text). `captions`: Bildunterschriften.
+- `imageCues` mit `"fit": "card"`: Original als Porträtkarte; die Bildunterschrift „Name · Werk“ steht dann groß daneben.
+- `takeaways`: Merkkarte. Mit `"at"` erscheint sie zum Zusammenfassungssatz („Kurz
+  zusammengefasst: …“) und steht danach noch 3 s; ohne `"at"` nach dem letzten Satz, 5 s stumm.
+
+## Aufbau
+
+- `drehbuch/<fach>.md` — einzige Quelle des Sprechtexts (Zeilen `  > ` unter „Sprechtext“).
+- `content/<fach>.json` — Szenen: Bild, Bewegung, Einblendungen; Stellen per Wortanker `"at"`.
+- `tools/build.mjs <fach>` — erzeugt `assets/data/<fach>.js`, `media/<fach>/audio_manifest.json`,
+  Platzhalter. Nach jeder Änderung an Drehbuch oder content neu laufen lassen.
+- Vertonen: `media_speak_batch` mit dem Manifest (erst `dry_run`), dann wieder `build.mjs`
+  (misst die Dauern). Verwaiste Aufnahmen meldet `build.mjs`, löscht sie aber nicht.
+- `tools/check_film.mjs` — Datenprüfung + Zustand/Bildschirmfotos im Chrome headless.
+  Bildschirmfotos immer mit `static=1` (headless friert CSS-Übergänge ein).

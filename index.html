@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leistungskurse an der Heinrich-Böll-Schule</title>
+<style>
+  :root {
+    --ink: #f6f3ee; --ink-soft: #c9c3b9; --night: #0b0c0f; --card: #16181d; --line: rgba(255,255,255,0.12);
+    --ok: #4caf72; --no: #e0533f;
+    --sans: "Segoe UI Variable Display", "Segoe UI Variable", "Segoe UI", Inter, system-ui, -apple-system, Roboto, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 20% -10%, #23262e 0%, var(--night) 55%); color: var(--ink); font-family: var(--sans); }
+  main { max-width: 1200px; margin: 0 auto; padding: clamp(24px, 5vh, 64px) 16px 48px; }
+  .logo { display: inline-block; margin-bottom: 1.6em; }
+  .logo img { display: block; height: clamp(64px, 11vw, 120px); width: auto; }
+  .kicker { letter-spacing: 0.26em; text-transform: uppercase; font-size: 13px; font-weight: 700; color: var(--ink-soft); margin: 0 0 0.9em; }
+  h1 { font-weight: 800; font-size: clamp(36px, 6vw, 76px); line-height: 1; letter-spacing: -0.025em; margin: 0 0 0.4em; }
+  .lead { font-size: clamp(16px, 1.6vw, 20px); color: var(--ink-soft); max-width: 46em; line-height: 1.55; margin: 0 0 2.2em; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+  .tile { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 340px; padding: 24px;
+    border-radius: 20px; overflow: hidden; text-decoration: none; color: var(--ink); background: var(--card);
+    border: 1px solid var(--line); transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
+  .tile::before { content: ""; position: absolute; inset: 0; background: var(--bg) var(--pos, center) / cover; transition: transform 0.6s; }
+  .tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,9,12,0.92) 18%, rgba(8,9,12,0.1) 72%); }
+  .tile > * { position: relative; z-index: 1; }
+  a.tile:hover, a.tile:focus-visible { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
+  a.tile:hover::before { transform: scale(1.04); }
+  .tile .subj { font-size: clamp(30px, 3vw, 40px); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 0.2em; }
+  .tile .subj::after { content: ""; display: block; width: 1.6em; height: 5px; border-radius: 3px; background: var(--accent); margin-top: 0.25em; }
+  .tile .what { color: var(--ink-soft); margin: 0.4em 0 1.2em; line-height: 1.45; }
+  .tile .go { display: inline-flex; align-items: center; gap: 0.5em; align-self: flex-start; padding: 0.6em 1.2em; border-radius: 999px;
+    background: var(--accent); color: #16180a; font-size: 15px; font-weight: 700; }
+  .tile .go svg { width: 1em; height: 1em; fill: currentColor; }
+  .tile.soon .go { background: rgba(255,255,255,0.14); color: var(--ink-soft); }
+  .tile .len { position: absolute; top: 18px; right: 18px; font-size: 13px; font-weight: 700; padding: 0.35em 0.8em; background: rgba(8,9,12,0.6); border-radius: 999px; }
+  .field { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4em 1em; margin: 0 0 1.2em; }
+  .field .num { font-size: 13px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.4em 0.9em;
+    border-radius: 999px; background: var(--accent, #c8d530); color: #16180a; }
+  .field h2 { margin: 0; font-size: clamp(22px, 2.6vw, 34px); font-weight: 800; letter-spacing: -0.01em; }
+  .field p { margin: 0; flex-basis: 100%; color: var(--ink-soft); font-size: clamp(15px, 1.4vw, 18px); }
+  footer { margin-top: 3em; font-size: 13px; color: #8a857c; line-height: 1.5; }
+
+  /* Querformat ab Tablet-Größe (digitale Tafel): alles auf einem Bildschirm, kein Scrollen.
+     Größen hängen an der Bildschirmhöhe (vh), damit die Seite bei jeder Auflösung genau passt. */
+  @media (min-width: 900px) and (min-aspect-ratio: 4/3) {
+    html, body { height: 100%; overflow: hidden; }
+    main { max-width: none; height: 100vh; padding: 4vh 4vw 3vh; display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; gap: 3vh; }
+    .head { display: flex; align-items: center; gap: 3vw; }
+    .logo { margin: 0; flex: none; }
+    .logo img { height: 15vh; }
+    .kicker { font-size: 1.5vh; margin-bottom: 0.6vh; }
+    h1 { font-size: 7vh; margin: 0 0 1vh; }
+    .lead { font-size: 2vh; margin: 0; max-width: 60em; }
+    .tiles { grid-template-columns: repeat(3, 1fr); gap: 1.6vw; min-height: 0; }
+    .tile { min-height: 0; padding: 3vh 1.6vw; border-radius: 2vh; }
+    .tile .subj { font-size: 4.6vh; }
+    .tile .what { font-size: 1.9vh; margin: 0.6vh 0 2vh; }
+    .tile .go { font-size: 1.9vh; padding: 1vh 1.4vw; }
+    .tile .len { font-size: 1.5vh; top: 2vh; right: 2vh; }
+    .field { margin: 0; gap: 0.6vh 1.2vw; }
+    .field .num { font-size: 1.6vh; }
+    .field h2 { font-size: 3.6vh; }
+    .field p { font-size: 2vh; }
+    footer { margin: 0; font-size: 1.4vh; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="head">
+    <div class="logo"><img src="assets/img/logo_hbs_dunkel.png" alt="Heinrich-Böll-Schule Hattersheim"></div>
+    <div class="head-text">
+      <p class="kicker">Gymnasiale Oberstufe · Tag der offenen Tür</p>
+      <h1>Leistungskurse im Film</h1>
+      <p class="lead">Du überlegst, welche Leistungskurse du wählen sollst? Diese kurzen Filme zeigen dir, was dich in den
+        Fächern Deutsch, Englisch und Kunst erwartet: was das Land Hessen verbindlich vorschreibt, wie im Kurs gearbeitet
+        und bewertet wird und worin die besonderen Herausforderungen liegen.</p>
+    </div>
+  </header>
+
+  <section class="field" aria-label="Aufgabenfeld">
+    <span class="num">Aufgabenfeld I</span>
+    <h2>Das sprachlich-literarisch-künstlerische Aufgabenfeld</h2>
+    <p>Unsere Leistungskurse in diesem Aufgabenfeld: Deutsch, Englisch und Kunst</p>
+  </section>
+
+  <div class="tiles">
+    <a class="tile" href="film.html?fach=deutsch" style="--accent:#c8d530; --bg: url('media/deutsch/img/s01.jpg'); --pos: 88% center">
+      <span class="len" id="len-deutsch"></span>
+      <p class="subj">Deutsch</p>
+      <p class="what">Literatur, Sprache und Medien – von der Aufklärung bis zur Gegenwart.</p>
+      <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Film ansehen</span>
+    </a>
+    <a class="tile" href="film.html?fach=englisch" style="--accent:#c8d530; --bg: url('media/englisch/img/e01.jpg'); --pos: 78% center">
+      <span class="len" id="len-englisch"></span>
+      <p class="subj">Englisch</p>
+      <p class="what">Literatur, Film und die großen Fragen der englischsprachigen Welt – auf Englisch.</p>
+      <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Film ansehen</span>
+    </a>
+    <a class="tile" href="film.html?fach=kunst" style="--accent:#c8d530; --bg: url('media/kunst/img/k01.jpg'); --pos: 72% center">
+      <span class="len" id="len-kunst"></span>
+      <p class="subj">Kunst</p>
+      <p class="what">Bilder verstehen und selbst gestalten – von Malerei und Fotografie bis zur Architektur.</p>
+      <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Film ansehen</span>
+    </a>
+  </div>
+
+  <footer>Stand: Oktober 2026 · Grundlage: Oberstufen- und Abiturverordnung (OAVO) des Landes Hessen, Kerncurricula und
+    Abiturerlass 2028. Illustrationen KI-generiert (Google Gemini), dargestellte Personen sind erfunden.
+    · <a href="kiosk.html" style="color:inherit">Dauerbetrieb für die Räume</a></footer>
+</main>
+<script src="assets/data/deutsch.js"></script>
+<script src="assets/data/englisch.js"></script>
+<script src="assets/data/kunst.js"></script>
+<script>
+  (function () {
+    ['deutsch', 'englisch', 'kunst'].forEach(function (id) {
+      var f = (window.FILMS || {})[id], el = document.getElementById('len-' + id);
+      if (f && el) el.textContent = Math.floor(f.total / 60) + ':' + String(Math.floor(f.total % 60)).padStart(2, '0') + ' Minuten';
+    });
+  })();
+</script>
+</body>
+</html>

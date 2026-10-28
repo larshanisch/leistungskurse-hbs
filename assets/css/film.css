@@ -1,0 +1,258 @@
+:root {
+  --accent: #c8d530;   /* Schulgrün aus dem Logo (gemessen: rgb 200,213,48) */
+  --on-accent: #16180a; /* Schrift auf grünen Flächen – Weiß wäre zu kontrastarm */
+  --ink: #f6f3ee;
+  --ink-soft: #cfc8bd;
+  --night: #0b0c0f;
+  --glass: rgba(16, 18, 24, 0.58);
+  --glass-strong: rgba(14, 16, 22, 0.78);
+  --line: rgba(255, 255, 255, 0.14);
+  --ok: #4caf72;
+  --no: #e0533f;
+  --sans: "Segoe UI Variable Display", "Segoe UI Variable", "Segoe UI", Inter, system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fs-sub: clamp(16px, 2.1vw, 32px);
+  --radius: 18px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--night); color: var(--ink); font-family: var(--sans); }
+button, a { font: inherit; color: inherit; }
+
+#stage { position: fixed; inset: 0; overflow: hidden; background: #000; }
+
+/* ---------- Bilder ---------- */
+/* Zwei Bildebenen tauschen ihre Reihenfolge (z-index 1/2); alles darüber liegt ab Ebene 5. */
+.shot { position: absolute; inset: 0; opacity: 0; will-change: opacity; overflow: hidden; }
+.shot .bg { position: absolute; inset: -4%; background-size: cover; background-position: center; display: none; }
+.shot .frame { position: absolute; inset: 0; will-change: transform; }
+.shot .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* Porträtkarte ("fit": "card"): Original links als Karte, dahinter dasselbe Bild unscharf und dunkel;
+   Name und Werk stehen dann groß rechts (#caption.big) */
+.shot.card .bg { display: block; filter: blur(34px) brightness(0.32) saturate(0.85); }
+.shot.card .frame { inset: auto; left: 31%; top: 44%; height: 62vh; }
+.shot.card .frame img { position: static; display: block; height: 100%; width: auto; max-width: 46vw; object-fit: contain;
+  border-radius: 18px; box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08); }
+.shot.contain .bg { display: block; filter: blur(28px) brightness(0.38) saturate(0.8); }
+.shot.contain .frame img { object-fit: contain; }
+
+#shade { position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.38) 100%),
+    linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%); }
+
+#shade, #chapter, #title, #corner, #logo, #caption, #panel, #band, #takeaways, #endcard, #subs { z-index: 5; }
+
+/* ---------- Kapitelkarte ---------- */
+#chapter { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 9vw;
+  background: radial-gradient(ellipse at 20% 50%, #1d2027 0%, var(--night) 70%); opacity: 0; pointer-events: none; overflow: hidden; }
+.chap-num { position: absolute; right: 6vw; bottom: -6vh; font-size: 46vh; font-weight: 800; line-height: 1; color: transparent;
+  -webkit-text-stroke: 2px rgba(255,255,255,0.07); letter-spacing: -0.04em; }
+.chap-kicker { font-size: clamp(12px, 1.3vw, 18px); letter-spacing: 0.32em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.9em; }
+.chap-title { font-size: clamp(34px, 6vw, 96px); font-weight: 800; line-height: 1.02; letter-spacing: -0.02em; max-width: 14em; }
+.chap-title::after { content: ""; display: block; width: 2.2em; height: 6px; border-radius: 3px; background: var(--accent); margin-top: 0.35em; }
+
+/* ---------- Titel ---------- */
+#title { position: absolute; left: 6vw; right: 45vw; bottom: 22vh; opacity: 0; pointer-events: none; text-shadow: 0 2px 30px rgba(0,0,0,0.55); }
+#title h1 { font-size: clamp(38px, 6.4vw, 110px); font-weight: 800; letter-spacing: -0.025em; margin: 0; line-height: 0.98; }
+#title p { margin: 0.7em 0 0; font-size: clamp(14px, 1.6vw, 24px); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+#title p::before { content: ""; display: inline-block; width: 2em; height: 4px; border-radius: 2px; background: var(--accent); vertical-align: middle; margin-right: 0.8em; }
+
+/* ---------- Hinweis, Logo, Bildunterschrift ---------- */
+#corner { position: absolute; top: 3vh; left: 3vw; padding: 0.5em 1em; font-size: clamp(11px, 1.1vw, 16px); font-weight: 600;
+  border-radius: 999px; background: var(--glass); border: 1px solid var(--accent); backdrop-filter: blur(12px);
+  opacity: 0; transition: opacity 0.8s; pointer-events: none; }
+#corner.on { opacity: 1; }
+/* Schullogo freigestellt (Fassung für dunklen Grund aus dem HBS-Planer); weicher Schatten hält es
+   auch auf hellen Bildstellen lesbar */
+#logo { position: absolute; top: 3vh; left: 3vw; opacity: 0; transition: opacity 0.8s; pointer-events: none; }
+#logo img { display: block; height: clamp(52px, 13vh, 140px); width: auto;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.75)) drop-shadow(0 0 2px rgba(0,0,0,0.6)); }
+#logo.on { opacity: 1; }
+#stage.at-start #logo { opacity: 1; z-index: 16; transition: none; }
+
+#caption { position: absolute; left: 4vw; bottom: 19vh; max-width: 60vw; pointer-events: none; }
+#caption span { display: inline-block; padding: 0.55em 1.1em; font-size: clamp(15px, 1.7vw, 26px); font-weight: 600; line-height: 1.25;
+  background: var(--glass-strong); border-left: 5px solid var(--accent); border-radius: 0 12px 12px 0; backdrop-filter: blur(12px);
+  opacity: 0; transform: translateX(-1em); transition: opacity 0.5s, transform 0.5s; }
+#caption.on span { opacity: 1; transform: none; }
+/* große Bildunterschrift neben einer Porträtkarte: Name weiß, Werk grün */
+#caption.big { left: 56%; right: 5vw; bottom: auto; top: 50%; transform: translateY(-50%); max-width: none; }
+#caption.big span { background: none; border: 0; padding: 0; backdrop-filter: none; font-size: clamp(26px, 3.6vw, 60px); font-weight: 800;
+  line-height: 1.08; letter-spacing: -0.02em; text-shadow: 0 2px 20px rgba(0,0,0,0.6); }
+#caption.big span b { display: block; margin-top: 0.35em; font-size: 0.62em; font-weight: 700; color: var(--accent); letter-spacing: 0; }
+
+/* ---------- Präsentationselemente (rechts) ---------- */
+#panel { position: absolute; right: 4vw; top: 50%; transform: translateY(-55%); width: min(36vw, 600px); pointer-events: none; }
+#panel .card { background: var(--glass); border: 1px solid var(--line); border-radius: var(--radius); backdrop-filter: blur(16px) saturate(1.2);
+  padding: clamp(14px, 1.6vw, 26px); box-shadow: 0 20px 60px rgba(0,0,0,0.35); opacity: 0; transform: translateY(14px) scale(0.98);
+  transition: opacity 0.6s, transform 0.6s; }
+#panel .card.on { opacity: 1; transform: none; }
+#panel .p-title { font-size: clamp(11px, 1vw, 15px); letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; color: var(--accent); margin: 0 0 0.9em; }
+.reveal { opacity: 0; transform: translateY(10px); transition: opacity 0.5s, transform 0.5s; }
+.reveal.on { opacity: 1; transform: none; }
+
+/* Zahlen */
+.stat { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 0.2em 0.9em; padding: 0.55em 0; border-top: 1px solid var(--line); }
+.stat:first-of-type { border-top: 0; }
+.stat .num { font-size: clamp(34px, 4.6vw, 76px); font-weight: 800; line-height: 1; color: var(--accent); letter-spacing: -0.03em; min-width: 1.4em; font-variant-numeric: tabular-nums; }
+.stat .num small { font-size: 0.32em; font-weight: 700; color: var(--ink-soft); margin-right: 0.3em; letter-spacing: 0; vertical-align: middle; }
+.stat .lbl { font-size: clamp(14px, 1.45vw, 22px); font-weight: 600; line-height: 1.25; }
+.stat .lbl em { display: block; font-style: normal; font-weight: 500; color: var(--ink-soft); font-size: 0.8em; margin-top: 0.15em; }
+
+/* Kombinationen */
+.combo { display: flex; align-items: center; gap: 0.8em; padding: 0.6em 0; border-top: 1px solid var(--line); font-size: clamp(14px, 1.5vw, 23px); font-weight: 600; }
+.combo:first-of-type { border-top: 0; }
+.combo .av { width: 2.4em; height: 2.4em; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.6); flex: none; }
+.combo .av.none { display: grid; place-items: center; background: rgba(255,255,255,0.08); border-style: dashed; color: var(--ink-soft); font-size: 0.8em; }
+.combo .pair { flex: 1; }
+.combo .badge { width: 1.7em; height: 1.7em; border-radius: 50%; display: grid; place-items: center; font-weight: 800; color: #fff; flex: none; }
+.combo.ok .badge { background: var(--ok); }
+.combo.no .badge { background: var(--no); }
+.combo.no .pair { text-decoration: line-through; text-decoration-color: var(--no); text-decoration-thickness: 3px; }
+
+/* Liste */
+.li { display: flex; gap: 0.75em; align-items: baseline; padding: 0.45em 0; font-size: clamp(15px, 1.55vw, 24px); font-weight: 600; line-height: 1.25; }
+.li .dot { flex: none; width: 1.6em; height: 1.6em; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center;
+  font-size: 0.7em; font-weight: 800; transform: translateY(0.1em); }
+
+/* Vergleich */
+.cmp { display: grid; grid-template-columns: 0.8fr 1fr 1.25fr; gap: 0; font-size: clamp(13px, 1.3vw, 20px); }
+.cmp > div { padding: 0.6em 0.6em; border-top: 1px solid var(--line); line-height: 1.25; }
+.cmp .h { border-top: 0; font-weight: 800; font-size: 1.05em; }
+.cmp .h.lk, .cmp .lk { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+.cmp .h.lk { border-radius: 10px 10px 0 0; }
+.cmp .rl { color: var(--ink-soft); font-weight: 600; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.06em; }
+.cmp .lk { font-weight: 700; }
+
+/* Ring */
+.ring-wrap { display: flex; align-items: center; gap: 1.2em; }
+.ring-wrap svg { width: clamp(120px, 14vw, 220px); height: auto; flex: none; transform: rotate(-90deg); }
+.ring-wrap circle { fill: none; stroke-width: 16; }
+.ring-wrap .track { stroke: rgba(255,255,255,0.12); }
+.ring-wrap .seg { transition: stroke-dasharray 1.4s cubic-bezier(.2,.7,.2,1); stroke-linecap: butt; }
+.ring-legend .lg { display: flex; align-items: baseline; gap: 0.5em; font-size: clamp(14px, 1.5vw, 23px); font-weight: 600; padding: 0.25em 0; }
+.ring-legend .lg b { font-size: 1.7em; font-weight: 800; min-width: 2.4em; }
+.notes { margin-top: 0.9em; display: grid; gap: 0.45em; }
+.note { padding: 0.5em 0.8em; border-radius: 10px; background: rgba(255,255,255,0.07); font-size: clamp(12px, 1.2vw, 18px); font-weight: 600; line-height: 1.3; }
+
+/* ---------- Zeitleiste (unten) ---------- */
+#band { position: absolute; left: 5vw; right: 5vw; bottom: 19vh; pointer-events: none; }
+#band .tl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1vw; position: relative; }
+#band .tl::before { content: ""; position: absolute; left: 1.2em; right: 1.2em; top: 1.15em; height: 3px; background: rgba(255,255,255,0.18); }
+.st { position: relative; padding-top: 2.8em; opacity: 0.35; transition: opacity 0.6s; }
+.st::before { content: attr(data-q); position: absolute; top: 0; left: 0; width: 2.3em; height: 2.3em; border-radius: 50%; display: grid; place-items: center;
+  background: #2a2d35; border: 2px solid rgba(255,255,255,0.3); font-weight: 800; font-size: clamp(11px, 1vw, 15px); }
+.st.on { opacity: 1; }
+.st.on::before { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.st .stx { background: var(--glass-strong); border: 1px solid var(--line); border-radius: 12px; padding: 0.55em 0.75em; backdrop-filter: blur(12px);
+  font-size: clamp(12px, 1.25vw, 19px); font-weight: 600; line-height: 1.25; }
+
+/* ---------- Merkkarte ---------- */
+#takeaways { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(6,7,10,0.55);
+  opacity: 0; pointer-events: none; transition: opacity 0.6s; }
+#takeaways.on { opacity: 1; }
+#takeaways .tk { width: min(70vw, 900px); background: var(--glass-strong); border: 1px solid var(--line); border-radius: 24px; padding: clamp(18px, 2.6vw, 44px);
+  backdrop-filter: blur(18px); box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+#takeaways h3 { margin: 0 0 1em; font-size: clamp(12px, 1.2vw, 18px); letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); }
+#takeaways .tki { display: flex; align-items: center; gap: 0.9em; padding: 0.55em 0; border-top: 1px solid var(--line); font-size: clamp(18px, 2.4vw, 38px); font-weight: 700; }
+#takeaways .tki:first-of-type { border-top: 0; }
+#takeaways .tki b { color: var(--accent); font-size: 1.3em; min-width: 1.2em; }
+
+/* ---------- Abspann ---------- */
+#endcard { position: absolute; left: 7vw; right: 7vw; top: 18vh; opacity: 0; pointer-events: none; transition: opacity 1s; }
+#endcard.on { opacity: 1; }
+#endcard .end-line { font-size: clamp(22px, 3vw, 48px); font-weight: 800; margin: 0 0 0.4em; text-shadow: 0 2px 18px rgba(0,0,0,0.7); }
+#endcard .end-line.small { font-size: clamp(13px, 1.4vw, 20px); font-weight: 500; color: var(--ink-soft); }
+#endcard .credits { margin-top: 2em; font-size: clamp(11px, 1.05vw, 15px); color: var(--ink-soft); line-height: 1.55; max-width: 62em;
+  background: var(--glass); border-radius: 14px; padding: 1em 1.2em; backdrop-filter: blur(10px); }
+#endcard .credits h3 { font-size: 1em; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin: 0 0 0.5em; }
+
+/* ---------- Untertitel ---------- */
+#subs { position: absolute; left: 0; right: 0; bottom: 7vh; text-align: center; pointer-events: none; padding: 0 6vw; }
+#subs span { display: inline-block; max-width: 1150px; padding: 0.32em 0.8em; font-size: var(--fs-sub); font-weight: 500; line-height: 1.35;
+  background: rgba(8,9,12,0.72); border-radius: 12px; opacity: 0; transition: opacity 0.25s; }
+#subs.on span { opacity: 1; }
+#stage.no-subs #subs { display: none; }
+
+/* ---------- Ton-Knopf ---------- */
+#mute { position: absolute; top: 2.6vh; right: 2.4vw; z-index: 20; display: flex; align-items: center; gap: 0.5em;
+  padding: 0.55em 1.05em 0.55em 0.85em; border: 1px solid var(--line); border-radius: 999px; background: var(--glass);
+  backdrop-filter: blur(12px); cursor: pointer; font-size: clamp(14px, 1.25vw, 18px); font-weight: 600; }
+#mute svg { width: 1.35em; height: 1.35em; fill: currentColor; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+#mute svg path:first-child { stroke: none; }
+#mute .ico-off { display: none; }
+#mute[aria-pressed="true"] { border-color: var(--accent); }
+#mute[aria-pressed="true"] .ico-on { display: none; }
+#mute[aria-pressed="true"] .ico-off { display: inline; }
+#mute:hover, #mute:focus-visible { background: var(--glass-strong); }
+
+/* ---------- Start und Ende ---------- */
+#start, #finish { position: absolute; inset: 0; z-index: 15; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end;
+  padding: 0 7vw 16vh; background: rgba(0,0,0,0.45); }
+#start[hidden], #finish[hidden] { display: none; }
+.start-kicker { margin: 0 0 0.8em; font-size: clamp(12px, 1.2vw, 17px); font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ink-soft); }
+.start-title { margin: 0 0 0.5em; font-size: clamp(40px, 7vw, 120px); font-weight: 800; line-height: 0.98; letter-spacing: -0.025em; text-shadow: 0 2px 30px rgba(0,0,0,0.5); }
+#startBtn { display: flex; align-items: center; gap: 0.7em; padding: 0.85em 1.8em 0.85em 1.4em; border: 0; border-radius: 999px;
+  background: var(--accent); color: var(--on-accent); font-size: clamp(18px, 1.9vw, 28px); font-weight: 700; cursor: pointer; box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
+#startBtn:hover, #startBtn:focus-visible { filter: brightness(1.1); }
+#startBtn svg { width: 1.2em; height: 1.2em; fill: currentColor; }
+.start-hint { margin: 1.1em 0 0; color: var(--ink-soft); font-size: clamp(13px, 1.25vw, 18px); }
+#finish { align-items: center; justify-content: center; padding: 0; }
+#finish p { font-size: clamp(28px, 4vw, 60px); font-weight: 800; margin: 0 0 1em; }
+.finish-btns { display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; }
+.finish-btns button, .finish-btns a { padding: 0.75em 1.4em; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--glass); cursor: pointer; text-decoration: none; font-size: clamp(15px, 1.4vw, 20px); font-weight: 600; }
+.finish-btns button { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+
+/* ---------- Steuerleiste ---------- */
+#controls { position: absolute; left: 0; right: 0; bottom: 0; z-index: 10; padding: 0 2vw 1.2vh;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0)); transition: opacity 0.4s; }
+#stage:not(.ctl-visible) #controls { opacity: 0; pointer-events: none; }
+#stage:not(.ctl-visible) { cursor: none; }
+#progress { position: relative; height: 20px; cursor: pointer; display: flex; align-items: center; }
+#progress::before { content: ""; position: absolute; left: 0; right: 0; height: 4px; background: rgba(255,255,255,0.22); border-radius: 2px; }
+#progress-fill { position: absolute; left: 0; height: 4px; background: var(--accent); border-radius: 2px; width: 0; }
+#progress-marks i { position: absolute; top: 4px; width: 3px; height: 12px; border-radius: 2px; background: rgba(255,255,255,0.75); }
+.ctl-row { display: flex; align-items: center; gap: 0.3em; flex-wrap: wrap; }
+.ctl-row button, .ctl-row a { background: none; border: 0; padding: 0.45em 0.6em; cursor: pointer; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; }
+.ctl-row button:hover, .ctl-row a:hover, .ctl-row button:focus-visible { background: rgba(255,255,255,0.12); }
+.ctl-row svg { width: 22px; height: 22px; fill: currentColor; stroke: currentColor; stroke-width: 2; vertical-align: middle; }
+#fsBtn svg { fill: none; }
+#playBtn .ico-play { display: none; }
+#stage.paused #playBtn .ico-play { display: inline; }
+#stage.paused #playBtn .ico-pause { display: none; }
+#time { font-variant-numeric: tabular-nums; font-size: 14px; color: var(--ink-soft); margin-left: 0.4em; }
+#chapName { font-size: 14px; color: var(--ink-soft); margin-left: 0.8em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30vw; }
+.spacer { flex: 1; }
+#subsBtn[aria-pressed="false"] { color: var(--ink-soft); text-decoration: line-through; }
+
+/* ---------- Handy ---------- */
+@media (max-width: 760px) {
+  #panel { left: 4vw; right: 4vw; width: auto; top: 11vh; transform: none; }
+  #panel .card { padding: 12px 14px; }
+  .stat .num { font-size: 34px; }
+  .cmp { font-size: 12px; }
+  .ring-wrap svg { width: 96px; }
+  #band { bottom: 24vh; left: 3vw; right: 3vw; }
+  #band .tl { grid-template-columns: repeat(2, 1fr); row-gap: 1.2vh; }
+  #band .tl::before { display: none; }
+  #caption { bottom: 26vh; max-width: 92vw; }
+  #title { right: 6vw; bottom: 30vh; }
+  .shot.card .frame { height: 42vh; top: 34%; left: 50%; }
+  .shot.card .frame img { max-width: 84vw; }
+  #caption.big { left: 5vw; right: 5vw; top: auto; bottom: 26vh; transform: none; text-align: center; }
+  #caption.big span { font-size: 26px; }
+  #takeaways .tk { width: 90vw; }
+  #subs { bottom: 14vh; padding: 0 4vw; }
+  #subs span { font-size: 16px; }
+  #chapName, #time { display: none; }
+  .ctl-row { flex-wrap: nowrap; gap: 0; }
+  .ctl-row button, .ctl-row a { padding: 0.45em 0.45em; font-size: 14px; }
+  #start { padding-bottom: 20vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shot .frame { transform: none !important; }
+}
+
+/* Nur für Prüfwerkzeuge (?static=1): Endzustand ohne Übergang zeigen */
+#stage.static *, #stage.static *::before { transition: none !important; }
+.finish-hint { margin: 1.4em 0 0; color: var(--ink-soft); font-size: clamp(13px, 1.2vw, 17px); }

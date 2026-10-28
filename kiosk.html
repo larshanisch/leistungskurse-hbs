@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leistungskurse · Dauerbetrieb</title>
+<style>
+  :root {
+    --ink: #f6f3ee; --ink-soft: #c9c3b9; --night: #0b0c0f; --card: #16181d; --line: rgba(255,255,255,0.12);
+    --accent: #c8d530; --on-accent: #16180a;
+    --sans: "Segoe UI Variable Display", "Segoe UI Variable", "Segoe UI", Inter, system-ui, -apple-system, Roboto, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--night); color: var(--ink); font-family: var(--sans); }
+  body.playing { cursor: none; }
+
+  /* Auswahl */
+  #choose { position: fixed; inset: 0; display: grid; place-content: center; gap: 4vh; padding: 4vh 4vw; text-align: center;
+    background: radial-gradient(ellipse at 20% -10%, #23262e 0%, var(--night) 60%); }
+  #choose img { height: 13vh; justify-self: center; }
+  #choose h1 { margin: 0; font-size: 6vh; font-weight: 800; letter-spacing: -0.02em; }
+  #choose p { margin: 0; font-size: 2.1vh; color: var(--ink-soft); line-height: 1.5; }
+  .rooms { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.6vw; }
+  .rooms button { font: inherit; color: var(--ink); background: var(--card); border: 2px solid var(--line); border-radius: 2vh;
+    padding: 3vh 1.6vw; cursor: pointer; display: grid; gap: 1vh; text-align: left; transition: border-color 0.2s, transform 0.2s; }
+  .rooms button:hover, .rooms button:focus-visible, .rooms button.pre { border-color: var(--accent); transform: translateY(-3px); outline: none; }
+  .rooms b { font-size: 3.4vh; }
+  .rooms span { font-size: 1.9vh; color: var(--ink-soft); }
+  .rooms em { font-style: normal; justify-self: start; margin-top: 1vh; padding: 0.8vh 1.4vw; border-radius: 999px;
+    background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 1.8vh; }
+
+  /* Film und Zwischenkarte */
+  #player { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #000; }
+  #next { position: fixed; inset: 0; display: grid; place-content: center; text-align: center; gap: 2vh;
+    background: var(--night) center / cover no-repeat; opacity: 0; pointer-events: none; transition: opacity 0.8s; }
+  #next.on { opacity: 1; }
+  #next::before { content: ""; position: absolute; inset: 0; background: rgba(8,9,12,0.72); }
+  #next > * { position: relative; margin: 0; }
+  #next img { height: 12vh; justify-self: center; }
+  #next .k { letter-spacing: 0.26em; text-transform: uppercase; font-weight: 700; font-size: 2vh; color: var(--accent); }
+  #next .t { font-size: 8vh; font-weight: 800; letter-spacing: -0.02em; }
+  #next .l { font-size: 2.4vh; color: var(--ink-soft); }
+  @media (max-aspect-ratio: 1/1) { .rooms { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="choose">
+  <img src="assets/img/logo_hbs_dunkel.png" alt="Heinrich-Böll-Schule Hattersheim">
+  <h1>Leistungskurse im Dauerbetrieb</h1>
+  <p>Wähle den Raum. Die Filme laufen danach im Vollbild nacheinander und immer wieder von vorn.<br>
+    Ein Klick ist nötig, damit der Browser den Ton erlaubt. Beenden: Esc und Seite neu laden.</p>
+  <div class="rooms">
+    <button type="button" data-filme="deutsch,englisch"><b>Raum 1</b><span>Deutsch und Englisch im Wechsel</span><em>Starten</em></button>
+    <button type="button" data-filme="kunst"><b>Kunstraum</b><span>Kunst in Dauerschleife</span><em>Starten</em></button>
+    <button type="button" data-filme="deutsch,englisch,kunst"><b>Alle drei</b><span>Deutsch, Englisch und Kunst nacheinander</span><em>Starten</em></button>
+  </div>
+</div>
+<iframe id="player" title="Film" allow="autoplay; fullscreen" hidden></iframe>
+<div id="next" aria-live="polite">
+  <img src="assets/img/logo_hbs_dunkel.png" alt="">
+  <p class="k">Als Nächstes</p>
+  <p class="t"></p>
+  <p class="l"></p>
+</div>
+
+<script src="assets/data/deutsch.js"></script>
+<script src="assets/data/englisch.js"></script>
+<script src="assets/data/kunst.js"></script>
+<script>
+  (function () {
+    var NEXT_SECONDS = 6;    // Zwischenkarte vor jedem Film
+    var films = window.FILMS || {};
+    var params = new URLSearchParams(location.search);
+    var player = document.getElementById('player'), next = document.getElementById('next');
+    var list = [], pos = 0;
+
+    // ?filme=… hebt einen Raum hervor; starten muss trotzdem ein Klick (Ton-Freigabe des Browsers)
+    var pre = params.get('filme');
+    document.querySelectorAll('.rooms button').forEach(function (b) {
+      if (b.dataset.filme === pre) { b.classList.add('pre'); b.focus(); }
+      b.addEventListener('click', function () { start(b.dataset.filme.split(',')); });
+    });
+
+    function fmt(s) { return Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0') + ' Minuten'; }
+
+    function start(ids) {
+      list = ids.filter(function (id) { return films[id]; });
+      if (!list.length) return;
+      var el = document.documentElement;
+      if (el.requestFullscreen) el.requestFullscreen().catch(function () { /* ohne Vollbild weiter */ });
+      document.getElementById('choose').hidden = true;
+      document.body.classList.add('playing');
+      pos = 0;
+      announce();
+    }
+
+    // Zwischenkarte zeigen, dann den Film laden
+    function announce() {
+      var id = list[pos], f = films[id];
+      next.querySelector('.t').textContent = f.title;
+      next.querySelector('.l').textContent = fmt(f.total);
+      var first = f.scenes[0], img = first && first.image && first.image.src;
+      next.style.backgroundImage = img ? 'url("' + img + '")' : '';
+      next.classList.add('on');
+      setTimeout(function () {
+        player.hidden = false;
+        player.src = 'film.html?fach=' + encodeURIComponent(id) + '&kiosk=1&autostart=1';
+      }, NEXT_SECONDS * 1000);
+    }
+    // Karte erst ausblenden, wenn der Film geladen ist (sonst blitzt Schwarz auf)
+    player.addEventListener('load', function () {
+      if (player.getAttribute('src')) setTimeout(function () { next.classList.remove('on'); }, 300);
+    });
+
+    window.addEventListener('message', function (e) {
+      if (!e.data || e.data.type !== 'tdot-film-ended') return;
+      pos = (pos + 1) % list.length;
+      announce();
+    });
+  })();
+</script>
+</body>
+</html>

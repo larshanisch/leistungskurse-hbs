@@ -1,0 +1,8 @@
+# Wegwerf-Ordner der Prüfwerkzeuge
+.build_cache/
+# Lokale Einstellungen der Claude-Sitzung
+.claude/
+# Rohbilder, Originale und Vorlagen bleiben lokal (groß; Schulfotos mit ungeklärten Bildrechten)
+art/
+# Platzhalterbilder aus dem Prototyp
+media/*/img/ph_*.svg

@@ -1,0 +1,179 @@
+{
+  "id": "englisch",
+  "title": "Leistungskurs Englisch",
+  "accent": "#c8d530",
+  "script": "drehbuch/englisch.md",
+  "voice": {
+    "voice_id": "TIKjTeWOFujJEvXK1qIU",
+    "name": "Theo Teacher – Clear & Trustworthy",
+    "model": "eleven_v4",
+    "format": "mp3_44100_64"
+  },
+  "scenes": [
+    {
+      "n": 1,
+      "logo": true,
+      "title": { "main": "Leistungskurs Englisch", "sub": "Gymnasiale Oberstufe" },
+      "image": { "src": "e01.jpg", "motion": "zoom-in", "focus": [0.7, 0.55] }
+    },
+    {
+      "n": 2,
+      "chapter": "Der Rahmen",
+      "image": { "src": "e02.jpg", "motion": "pan-right" },
+      "panel": { "type": "stats", "items": [
+        { "at": "fünf Punkte", "value": "5", "label": "Punkte am Ende der Einführungsphase", "prefix": "mind.", "sub": "besser deutlich mehr – die Anforderungen steigen" },
+        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden", "sub": "als Tutorium 6" },
+        { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
+      ] }
+    },
+    {
+      "n": 3,
+      "image": { "src": "e03.jpg", "motion": "zoom-out" },
+      "panel": { "type": "combo", "title": "Englisch passt zu …", "items": [
+        { "at": "mit Deutsch", "figure": "sie", "a": "Englisch", "b": "Deutsch", "ok": true },
+        { "at": "mit Kunst", "figure": "er", "a": "Englisch", "b": "Kunst", "ok": true },
+        { "at": "vielen anderen", "a": "Englisch", "b": "viele weitere Fächer", "ok": true }
+      ] }
+    },
+    {
+      "n": 4,
+      "chapter": "Was du liest",
+      "corner": "Beispiel: Abiturjahrgang 2028",
+      "image": { "src": "e04.jpg", "motion": "zoom-in", "focus": [0.3, 0.4] },
+      "panel": { "type": "stats", "items": [
+        { "at": "acht Themenfelder", "value": "8", "label": "Themenfelder im Kerncurriculum", "sub": "je Halbjahr ist eines verbindlich" }
+      ] },
+      "band": { "type": "timeline", "items": [
+        { "at": "USA", "label": "Q1", "text": "USA: Politics, culture, society" },
+        { "at": "Wissenschaft", "label": "Q2", "text": "Science and technology" },
+        { "at": "Großbritannien", "label": "Q3", "text": "UK: Politics, culture, society" },
+        { "at": "Einzelnem", "label": "Q4", "text": "The individual and society" }
+      ] }
+    },
+    {
+      "n": 5,
+      "corner": "Beispiel: Abiturjahrgang 2028",
+      "image": { "src": "e05.jpg", "motion": "zoom-in", "focus": [0.5, 0.5] },
+      "imageCues": [
+        { "at": "In Brit", "src": "e05a.jpg", "fit": "card", "motion": "still" },
+        { "at": "Der Film", "src": "e05b.jpg", "fit": "card", "motion": "still" },
+        { "at": "Shakespeares", "src": "pd_fuseli.jpg", "fit": "card", "motion": "still",
+          "placeholder": "PD: Henry Fuseli, Studie zu den drei Hexen aus Macbeth, um 1783" },
+        { "at": "Dazu kommen kürzere", "src": "pd_empire.jpg", "fit": "card", "motion": "still",
+          "placeholder": "PD: Walter Crane, Imperial Federation – Karte des Britischen Empire, 1886" }
+      ],
+      "captions": [
+        { "at": "In Brit", "text": "Brit Bennett · The Vanishing Half" },
+        { "at": "Der Film", "text": "Film · Ex Machina" },
+        { "at": "Shakespeares", "text": "William Shakespeare · Macbeth – nur im Leistungskurs" },
+        { "at": "Dazu kommen kürzere", "text": "Kürzere Texte · Orwell, Kureishi, Smith" }
+      ]
+    },
+    {
+      "n": 6,
+      "image": { "src": "e06.jpg", "motion": "zoom-in" },
+      "panel": { "type": "list", "title": "Mehr als Romane", "items": [
+        { "at": "Filmen", "text": "Filme" },
+        { "at": "Gedichten", "text": "Gedichte aus verschiedenen Epochen" },
+        { "at": "Kurzgeschichten", "text": "Kurzgeschichten" },
+        { "at": "Sachtexten", "text": "aktuelle Sachtexte" }
+      ] }
+    },
+    {
+      "n": 7,
+      "image": { "src": "e07.jpg", "motion": "pan-right" },
+      "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
+        { "at": "länger", "label": "Texte", "a": "anspruchsvoll", "b": "komplexer und länger" },
+        { "at": "zwei Romane", "label": "Romane", "a": "einer", "b": "mindestens zwei – bei uns z. B. Orwell, „1984“" },
+        { "at": "früheren Jahrhunderten", "label": "Epochen", "a": "20./21. Jahrhundert", "b": "auch frühere Jahrhunderte" },
+        { "at": "Niveau B2", "label": "Ziel", "a": "B2, Lesen und Hören C1", "b": "B2, Lesen und Hören C1" }
+      ] },
+      "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
+        "1 Themenfeld je Halbjahr",
+        "Pflichtwerke für ganz Hessen",
+        "Leistungskurs: mehr, länger, auch ältere Texte"
+      ] }
+    },
+    {
+      "n": 8,
+      "chapter": "Wie gearbeitet wird",
+      "image": { "src": "e08.jpg", "motion": "zoom-in", "focus": [0.45, 0.6] },
+      "panel": { "type": "list", "title": "Schreiben auf Englisch", "items": [
+        { "at": "fasst", "text": "zusammenfassen" },
+        { "at": "analysierst", "text": "analysieren" },
+        { "at": "Stellung", "text": "Stellung nehmen oder kreativ schreiben" },
+        { "at": "Sprachmittlung", "text": "Sprachmittlung: sinngemäß, für bestimmte Leser" }
+      ] }
+    },
+    {
+      "n": 9,
+      "image": { "src": "e09.jpg", "motion": "zoom-in", "focus": [0.3, 0.45] },
+      "panel": { "type": "stats", "items": [
+        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten 1 · Grundkurs bei uns: 1" },
+        { "at": "Deutsch und Mathematik", "value": "2", "label": "Deutsch und Mathematik: auch im Grundkurs", "sub": "als Leistungskurs also keine zusätzliche Klausur" },
+        { "at": "Lehrkraft", "value": "↔", "label": "Referat statt einer Klausur in Q1 oder Q2", "sub": "wenn die Lehrkraft es festlegt" },
+        { "at": "Kommunikationsprüfung", "value": "Q3", "label": "mündliche Kommunikationsprüfung statt einer Klausur" }
+      ], "notes": [
+        { "at": "Bei uns", "text": "bei uns: zwei Prüflinge · zwei Lehrkräfte · frei auf Englisch" }
+      ] }
+    },
+    {
+      "n": 10,
+      "chapter": "Bewertung und Abitur",
+      "image": { "src": "e10.jpg", "motion": "zoom-in", "dim": 0.45 },
+      "panel": { "type": "ring", "at": "Sechzig Prozent", "parts": [
+        { "label": "Sprache", "value": 60 },
+        { "label": "Inhalt", "value": 40, "at": "vierzig" }
+      ], "notes": [
+        { "at": "vielfältig", "text": "Bandbreite des Ausdrucks entscheidet" },
+        { "at": "fehlerfrei", "text": "Wiederholungsfehler zählen nicht" }
+      ] }
+    },
+    {
+      "n": 11,
+      "corner": "Stand Abitur 2028",
+      "image": { "src": "e11.jpg", "motion": "zoom-in", "focus": [0.65, 0.55] },
+      "panel": { "type": "stats", "items": [
+        { "at": "zweihundertfünfundachtzig", "value": "285", "label": "Minuten Bearbeitungszeit" }
+      ], "notes": [
+        { "at": "Sprachmittlung", "text": "Teil 1: Sprachmittlung – für alle" },
+        { "at": "Schreibaufgabe", "text": "Teil 2: Schreiben zu einem längeren englischen Text – 1 aus 2" },
+        { "at": "Wörterbuch", "text": "ein- und zweisprachiges Wörterbuch, nur gedruckt" }
+      ] }
+    },
+    {
+      "n": 12,
+      "chapter": "Herausforderungen und Kursfahrt",
+      "image": { "src": "e12.jpg", "motion": "pan-up" },
+      "panel": { "type": "list", "check": true, "title": "Was du mitbringen solltest", "items": [
+        { "at": "Lust", "text": "Lust auf lange englische Texte" },
+        { "at": "Mut", "text": "Mut zum freien Sprechen" },
+        { "at": "Freude", "text": "Freude an treffenden Formulierungen" },
+        { "at": "Zeitgefühl", "text": "ein gutes Zeitgefühl" }
+      ], "notes": [
+        { "at": "sechzehnhundertfünfzig", "text": "im Abitur: bis zu 1 650 Wörter Textvorlage" }
+      ] }
+    },
+    {
+      "n": 13,
+      "corner": "bei uns in der Regel",
+      "image": { "src": "e13.jpg", "motion": "zoom-out" },
+      "captions": [
+        { "at": "Kursfahrt", "text": "Kursfahrt ins englischsprachige Ausland" }
+      ]
+    },
+    {
+      "n": 14,
+      "image": { "src": "e14.jpg", "motion": "zoom-out" }
+    },
+    {
+      "n": 15,
+      "logo": true,
+      "image": { "src": "e15.jpg", "motion": "zoom-out", "dim": 0.45 },
+      "endCard": {
+        "lines": ["Stand: Oktober 2026",
+          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Englisch, Abiturerlass 2028, Erlass zur Bewertung in den modernen Fremdsprachen vom 15.03.2026 des Landes Hessen"]
+      }
+    }
+  ]
+}

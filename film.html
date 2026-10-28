@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leistungskurse · Film</title>
+<link rel="stylesheet" href="assets/css/film.css">
+</head>
+<body>
+<div id="stage" class="ctl-visible">
+  <div class="shot" id="shotA"><div class="bg"></div><div class="frame"><img alt=""></div></div>
+  <div class="shot" id="shotB"><div class="bg"></div><div class="frame"><img alt=""></div></div>
+  <div id="shade"></div>
+
+  <div id="chapter" aria-live="polite"><div class="chap-num"></div><div class="chap-kicker"></div><div class="chap-title"></div></div>
+  <div id="title"><h1></h1><p></p></div>
+  <div id="corner"></div>
+  <div id="logo"><img src="assets/img/logo_hbs_dunkel.png" alt="Heinrich-Böll-Schule Hattersheim"></div>
+  <div id="caption"><span></span></div>
+  <div id="panel"></div>
+  <div id="band"></div>
+  <div id="takeaways"></div>
+  <div id="endcard"></div>
+  <div id="subs" aria-live="off"><span></span></div>
+
+  <button id="mute" type="button" aria-pressed="false">
+    <svg class="ico-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none"/></svg>
+    <svg class="ico-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 9.5l5 5M21.5 9.5l-5 5" fill="none"/></svg>
+    <span class="lbl">Ton aus</span>
+  </button>
+
+  <div id="start">
+    <p class="start-kicker">Heinrich-Böll-Schule · Gymnasiale Oberstufe</p>
+    <h2 class="start-title"></h2>
+    <button id="startBtn" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+      <span>Film starten</span>
+    </button>
+    <p class="start-hint"></p>
+  </div>
+
+  <div id="finish" hidden>
+    <p>Ende des Films</p>
+    <div class="finish-btns">
+      <button type="button" id="againBtn">Noch einmal ansehen</button>
+      <a href="index.html" class="btn-link">Zur Übersicht</a>
+    </div>
+    <p class="finish-hint" id="finishHint" aria-live="polite"></p>
+  </div>
+
+  <div id="controls">
+    <div id="progress" role="slider" aria-label="Position im Film" tabindex="0"><div id="progress-fill"></div><div id="progress-marks"></div></div>
+    <div class="ctl-row">
+      <button type="button" id="prevBtn" title="Vorherige Szene (←)" aria-label="Vorherige Szene">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+      <button type="button" id="playBtn" title="Pause (Leertaste)" aria-label="Pause">
+        <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+        <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+      <button type="button" id="nextBtn" title="Nächste Szene (→)" aria-label="Nächste Szene">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+      <span id="time">0:00 / 0:00</span>
+      <span id="chapName"></span>
+      <span class="spacer"></span>
+      <button type="button" id="subsBtn" aria-pressed="true" title="Untertitel (U)">Untertitel an</button>
+      <button type="button" id="fsBtn" title="Vollbild (F)" aria-label="Vollbild">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none"/></svg></button>
+      <a href="index.html" id="homeBtn" title="Zur Übersicht">Übersicht</a>
+    </div>
+  </div>
+</div>
+
+<script src="assets/data/deutsch.js"></script>
+<script src="assets/data/englisch.js"></script>
+<script src="assets/data/kunst.js"></script>
+<script src="assets/js/film.js"></script>
+</body>
+</html>
