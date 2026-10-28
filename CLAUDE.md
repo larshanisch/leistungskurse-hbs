@@ -99,6 +99,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Vergleichstafeln ohne „–“ und „grundlegend“ beim GK.
 - 29.10.2026: Film Mathematik fertig (Drehbuch 0.3, Leitfigur C, **5:34 min gemessen**, Entscheidung 54). Film-Id `mathematik`,
   Fach-Id `mathe` mit `film`-Zuordnung in `index.html`.
+- 29.10.2026: Klausurzahlen genauer in Filmen und Planer (Entscheidung 55): **Kunst 5:41, PoWi 5:49, Geschichte 5:51,
+  Mathematik 5:38 min**. `.build_cache/reuse_takes.mjs <fach>` übernimmt wortgleiche Aufnahmen auch aus dem eigenen Ordner.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Offen: Filme Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

@@ -1,6 +1,9 @@
 # Drehbuch — Leistungskurs Kunst
 
-Version 0.6 · 29.10.2026 (freigegeben)
+Version 0.7 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.6: Szene „Klausuren“ vergleicht mit dem Grundkurs: Zwei- und dreistündige Grundkurse schreiben in Q1–Q3 je eine Klausur, der LK zwei; Deutsch und Mathematik schon im vierstündigen GK zwei (Schaubild Klausuren, Abb. 4 und Anmerkung a; Nutzer 29.10.2026, Entscheidung 55).
+
 
 Änderung gegenüber 0.5: Szene zum Unterschied GK/LK nach der Prüfung `drehbuch/pruefung_gk_lk.md`: Was beide Kursarten tun, wird nicht mehr als LK-Merkmal dargestellt; die Vergleichstafel nennt für den GK, was er tut, statt „–“ oder „grundlegend“ (Nutzer 29.10.2026, Entscheidung 53).
 
@@ -193,7 +196,7 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   Prüfung statt einer Klausur in Q3 oder Q4“ · Hinweis „eigenes Werk, auch zu Hause · Präsentation
   und Gespräch“
 - **Sprechtext:**
-  > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine. Deine Lehrkraft kann entscheiden,
+  > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine. Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine. Deine Lehrkraft kann entscheiden,
   > dass euer ganzer Kurs im ersten Jahr eine Klausur durch ein Referat oder eine Präsentation
   > ersetzt. Im zweiten Jahr ersetzt eine
   > fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk – je nach Aufgabe auch zu

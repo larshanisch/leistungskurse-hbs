@@ -531,10 +531,15 @@
           other.join(' oder ') + ' kommen' + (SUBJ[a].field === 3 ? ' – also weder Mathematik noch eine Naturwissenschaft' : need.indexOf('Deutsch') >= 0 ? ' – Deutsch also nicht' : '') +
           ' <small>(die drei schriftlichen Fächer müssen mindestens zwei Aufgabenfelder abdecken)</small>.');
       }
+      // wie viele Prüfungsfächer frei bleiben, zeigen die Schaltflächen „frei wählbar“ (kein eigener Satz, Entscheidung 55)
       var free = 3 - need.length;
-      notes.push(free === 0 ? 'Damit sind deine Prüfungsfächer 3 bis 5 festgelegt; offen sind nur die Reihenfolge und das genaue Fach.'
-        : free === 3 ? 'Die Prüfungsfächer 3 bis 5 kannst du frei wählen.'
-        : (free === 1 ? 'Ein Prüfungsfach' : free + ' Prüfungsfächer') + ' kannst du darüber hinaus frei wählen.');
+      // Klausuren in Q1–Q3: LK zwei pro Halbjahr; vierstündige GK Deutsch und Mathematik ebenfalls zwei, alle übrigen
+      // Grundkurse an der HBS eine (Schaubild Klausuren, Abb. 4, Anmerkung a; Entscheidung 55)
+      var more = [a, b].filter(function (id) { return id !== 'deutsch' && id !== 'mathe'; }).map(function (id) { return SUBJ[id].name; });
+      notes.push('<b>Klausuren in Q1 bis Q3:</b> ' + (more.length === 0
+        ? 'Deutsch und Mathematik schreiben schon im Grundkurs zwei pro Halbjahr – mit diesen Leistungskursen kommt keine dazu.'
+        : 'pro Halbjahr ' + (more.length === 1 ? 'eine' : 'zwei') + ' mehr, als wenn du ' + more.join(' und ') + ' als Grundkurs hättest' +
+          (more.length === 1 ? ' – Deutsch und Mathematik haben schon im Grundkurs zwei.' : '.')));
       return { need: need, free: free, notes: notes };
     }
 
@@ -563,7 +568,7 @@
         '<p class="how">1 bis 3 schriftlich, 4 mündlich, 5 als Präsentation oder mündlich.</p>' +
         '<ul>' + c.notes.map(function (n) { return '<li>' + n + '</li>'; }).join('') + '</ul>' +
         '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Das Angebot an Leistungskursen ' +
-        'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';
+        'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 9 Abs. 6, § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';
     }
 
     function filmSubj(film) { var id = Object.keys(SUBJ).filter(function (k) { return SUBJ[k].film === film; })[0]; return id ? SUBJ[id] : null; }

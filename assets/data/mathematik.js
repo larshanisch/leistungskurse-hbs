@@ -4,7 +4,7 @@ window.FILMS["mathematik"] = {
  "id": "mathematik",
  "title": "Leistungskurs Mathematik",
  "accent": "#c8d530",
- "total": 334.4,
+ "total": 338.4,
  "credits": [
   "Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
@@ -666,8 +666,8 @@ window.FILMS["mathematik"] = {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 27.51,
-   "speechEnd": 26.11,
+   "duration": 31.51,
+   "speechEnd": 30.11,
    "sentences": [
     {
      "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine.",
@@ -677,9 +677,9 @@ window.FILMS["mathematik"] = {
      "start": 0.6
     },
     {
-     "text": "Das ist im Grundkurs Mathematik übrigens genauso, weil er vier Wochenstunden hat.",
-     "audio": "media/mathematik/audio/s09_2_a5e053f8.mp3",
-     "dur": 4.72,
+     "text": "Das ist im Grundkurs Mathematik übrigens genauso, weil er vier Wochenstunden hat; der Leistungskurs Mathematik bringt dir also keine zusätzliche Klausur.",
+     "audio": "media/mathematik/audio/s09_2_dbaeb190.mp3",
+     "dur": 8.72,
      "estimated": false,
      "start": 4.81
     },
@@ -688,14 +688,14 @@ window.FILMS["mathematik"] = {
      "audio": "media/mathematik/audio/s09_3_16f11324.mp3",
      "dur": 8.56,
      "estimated": false,
-     "start": 9.98
+     "start": 13.98
     },
     {
      "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
      "audio": "media/mathematik/audio/s09_4_bd516576.mp3",
      "dur": 7.12,
      "estimated": false,
-     "start": 18.99
+     "start": 22.99
     }
    ],
    "cues": [
@@ -705,34 +705,39 @@ window.FILMS["mathematik"] = {
      "end": 4.36
     },
     {
-     "text": "Das ist im Grundkurs Mathematik übrigens genauso, weil er vier Wochenstunden hat.",
+     "text": "Das ist im Grundkurs Mathematik übrigens genauso, weil er vier Wochenstunden hat;",
      "start": 4.81,
-     "end": 9.53
+     "end": 9.426
+    },
+    {
+     "text": "der Leistungskurs Mathematik bringt dir also keine zusätzliche Klausur.",
+     "start": 9.426,
+     "end": 13.473
     },
     {
      "text": "Deine Lehrkraft kann entscheiden,",
-     "start": 9.98,
-     "end": 11.826
+     "start": 13.98,
+     "end": 15.826
     },
     {
      "text": "dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat",
-     "start": 11.826,
-     "end": 16.694
+     "start": 15.826,
+     "end": 20.694
     },
     {
      "text": "oder eine Präsentation ersetzt.",
-     "start": 16.694,
-     "end": 18.428
+     "start": 20.694,
+     "end": 22.428
     },
     {
      "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
-     "start": 18.99,
-     "end": 24.303
+     "start": 22.99,
+     "end": 28.303
     },
     {
      "text": "was dich in der Prüfung erwartet.",
-     "start": 24.303,
-     "end": 26.057
+     "start": 28.303,
+     "end": 30.057
     }
    ],
    "image": {
@@ -745,19 +750,19 @@ window.FILMS["mathematik"] = {
      {
       "value": "2",
       "label": "Klausuren pro Halbjahr",
-      "sub": "im letzten Halbjahr 1 – im Grundkurs genauso",
+      "sub": "im letzten Halbjahr 1 – im Grundkurs genauso, also keine zusätzliche",
       "t": 2.286
      },
      {
       "value": "↔",
       "label": "Referat oder Präsentation statt einer Klausur",
       "sub": "wenn die Lehrkraft es festlegt",
-      "t": 10.316
+      "t": 14.316
      },
      {
       "value": "Q3",
       "label": "Klausur unter Abiturbedingungen",
-      "t": 19.149
+      "t": 23.149
      }
     ]
    },
@@ -847,7 +852,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 238.57
+   "start": 242.57
   },
   {
    "n": 11,
@@ -956,7 +961,7 @@ window.FILMS["mathematik"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 260.51
+   "start": 264.51
   },
   {
    "n": 12,
@@ -1029,7 +1034,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 290.3
+   "start": 294.3
   },
   {
    "n": 13,
@@ -1062,7 +1067,7 @@ window.FILMS["mathematik"] = {
     "src": "media/mathematik/img/m13.jpg",
     "motion": "zoom-out"
    },
-   "start": 307.63
+   "start": 311.63
   },
   {
    "n": 14,
@@ -1115,7 +1120,7 @@ window.FILMS["mathematik"] = {
     ]
    },
    "logo": true,
-   "start": 318.03
+   "start": 322.03
   }
  ]
 };

@@ -103,7 +103,7 @@
       "n": 9,
       "image": { "src": "k09.jpg", "motion": "zoom-out" },
       "panel": { "type": "stats", "items": [
-        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten Halbjahr 1" },
+        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1" },
         { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur in Q1 oder Q2", "sub": "wenn die Lehrkraft es festlegt" },
         { "at": "fachpraktische", "value": "Q3/Q4", "label": "fachpraktische Prüfung statt einer Klausur" }
       ], "notes": [

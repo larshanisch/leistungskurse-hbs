@@ -1,6 +1,7 @@
 # Faktenblatt: Leistungskurse in Hessen – fächerübergreifende amtliche Vorgaben
 
 Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Q-Phase 2027/28–2028/29, Landesabitur 2029
+Version 1.7 (29.10.2026: Klausurzahl je LK-Kombination)
 Version 1.6 (29.10.2026: Kombinationen nach den Tutoriumsblättern der HBS)
 Version 1.5 (29.10.2026: Kursangebot der HBS, Aufgabenfelder II und III)
 Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung, Aufgabenfeld I)
@@ -79,6 +80,7 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
 
 - **Anzahl:** In jedem LK schreibt man in **Q1, Q2 und Q3 je 2 Klausuren**, im **Prüfungshalbjahr Q4 1 Klausur**. – OAVO § 9 Abs. 6 Nr. 1 und 3, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
 - **Vergleich Grundkurs (Gegenprüfung 29.10.2026):** Die vierstündigen Grundkurse Deutsch und Mathematik schreiben wie der LK in Q1–Q3 je 2 Klausuren (Abb. 4 „Alle übrigen Leistungskurse und vierstündigen Grundkurse (Fächer Mathematik und Deutsch)“). In jedem zwei- und dreistündigen Grundkurs ist in Q1–Q3 „jeweils eine Klausur anzufertigen“. Wer Deutsch oder Mathematik als LK wählt, schreibt dort also nicht mehr Klausuren als im GK; in Englisch (an der HBS dreistündiger GK) wird aus 1 Klausur pro Halbjahr 2. – Schaubild S. 2, Abb. 4 und Allgemeine Anmerkung a), https://kultus.hessen.de/sites/kultus.hessen.de/files/2026-07/uebersicht_klausuren.pdf, abgerufen 27.10.2026; SCHULE: GK Englisch dreistündig, eine Klausur (Nutzer 29.10.2026)
+- **[ABLEITUNG] Klausuren je LK-Kombination (Q1–Q3):** Ein LK in Deutsch oder Mathematik bringt keine zusätzliche Klausur (der vierstündige Pflicht-GK hat schon zwei); jeder andere LK eine pro Halbjahr mehr als der zwei- oder dreistündige GK. D + M als LKs: zwei Klausuren pro Halbjahr weniger als zwei andere LKs bei sonst gleicher Belegung. Für Q4 nennt das Schaubild bei zwei- und dreistündigen GK keine Klausur – dort kein Vergleich. – Schaubild Abb. 4 und Allgemeine Anmerkung a), abgerufen 27.10.2026; Nutzer 29.10.2026
 - **Dauer:** „Die Bearbeitungszeit für eine Klausur beträgt in der Regel 90 Minuten.“ Die Anforderungen an die Arbeit unter Abiturbedingungen bleiben davon unberührt. – OAVO § 9 Abs. 3 Satz 5–6, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
 - **Klausur unter Abiturbedingungen:** In Q3 „soll“ es im LK Gelegenheit zu einer Arbeit geben, die nach Art und Umfang der Abiturprüfung entspricht. Die Bearbeitungszeit darf dabei in Unterrichtsstunden statt in Zeitstunden bemessen werden. – OAVO § 9 Abs. 11, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
 - **Vergleichsarbeit:** In Q1 oder Q2 „soll“ in allen Fächern eine Klausur als Vergleichsarbeit geschrieben werden. – OAVO § 9 Abs. 10; Schaubild S. 1–2, abgerufen 27.10.2026

@@ -4,7 +4,7 @@ window.FILMS["powi"] = {
  "id": "powi",
  "title": "Leistungskurs Politik und Wirtschaft",
  "accent": "#c8d530",
- "total": 344.56,
+ "total": 349.01,
  "credits": [
   "Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
@@ -694,8 +694,8 @@ window.FILMS["powi"] = {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 22.34,
-   "speechEnd": 20.94,
+   "duration": 26.79,
+   "speechEnd": 25.39,
    "sentences": [
     {
      "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine.",
@@ -705,18 +705,25 @@ window.FILMS["powi"] = {
      "start": 0.6
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "audio": "media/powi/audio/s09_2_16f11324.mp3",
-     "dur": 8.56,
+     "text": "Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine.",
+     "audio": "media/powi/audio/s09_2_68b17b1f.mp3",
+     "dur": 4,
      "estimated": false,
      "start": 4.81
     },
     {
+     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
+     "audio": "media/powi/audio/s09_3_16f11324.mp3",
+     "dur": 8.56,
+     "estimated": false,
+     "start": 9.26
+    },
+    {
      "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
-     "audio": "media/powi/audio/s09_3_bd516576.mp3",
+     "audio": "media/powi/audio/s09_4_bd516576.mp3",
      "dur": 7.12,
      "estimated": false,
-     "start": 13.82
+     "start": 18.27
     }
    ],
    "cues": [
@@ -726,29 +733,34 @@ window.FILMS["powi"] = {
      "end": 4.36
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden,",
+     "text": "Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine.",
      "start": 4.81,
-     "end": 6.656
+     "end": 8.81
+    },
+    {
+     "text": "Deine Lehrkraft kann entscheiden,",
+     "start": 9.26,
+     "end": 11.106
     },
     {
      "text": "dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat",
-     "start": 6.656,
-     "end": 11.524
+     "start": 11.106,
+     "end": 15.974
     },
     {
      "text": "oder eine Präsentation ersetzt.",
-     "start": 11.524,
-     "end": 13.258
+     "start": 15.974,
+     "end": 17.708
     },
     {
      "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
-     "start": 13.82,
-     "end": 19.133
+     "start": 18.27,
+     "end": 23.583
     },
     {
      "text": "was dich in der Prüfung erwartet.",
-     "start": 19.133,
-     "end": 20.887
+     "start": 23.583,
+     "end": 25.337
     }
    ],
    "image": {
@@ -761,19 +773,19 @@ window.FILMS["powi"] = {
      {
       "value": "2",
       "label": "Klausuren pro Halbjahr",
-      "sub": "im letzten Halbjahr 1",
+      "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1",
       "t": 2.286
      },
      {
       "value": "↔",
       "label": "Referat oder Präsentation statt einer Klausur",
       "sub": "wenn die Lehrkraft es festlegt",
-      "t": 5.146
+      "t": 9.596
      },
      {
       "value": "Q3",
       "label": "Klausur unter Abiturbedingungen",
-      "t": 13.979
+      "t": 18.429
      }
     ]
    },
@@ -872,7 +884,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 247.58
+   "start": 252.03
   },
   {
    "n": 11,
@@ -964,7 +976,7 @@ window.FILMS["powi"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 270.48
+   "start": 274.93
   },
   {
    "n": 12,
@@ -1037,7 +1049,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 296.06
+   "start": 300.51
   },
   {
    "n": 13,
@@ -1075,7 +1087,7 @@ window.FILMS["powi"] = {
     "src": "media/powi/img/p13.jpg",
     "motion": "zoom-out"
    },
-   "start": 313.31
+   "start": 317.76
   },
   {
    "n": 14,
@@ -1128,7 +1140,7 @@ window.FILMS["powi"] = {
     ]
    },
    "logo": true,
-   "start": 327.87
+   "start": 332.32
   }
  ]
 };

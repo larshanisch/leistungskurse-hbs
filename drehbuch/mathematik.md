@@ -1,6 +1,9 @@
 # Drehbuch — Leistungskurs Mathematik
 
-Version 0.3 · 29.10.2026 (freigegeben, vertont)
+Version 0.4 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.3: Szene „Klausuren“ vergleicht mit dem Grundkurs: Zwei- und dreistündige Grundkurse schreiben in Q1–Q3 je eine Klausur, der LK zwei; Deutsch und Mathematik schon im vierstündigen GK zwei (Schaubild Klausuren, Abb. 4 und Anmerkung a; Nutzer 29.10.2026, Entscheidung 55).
+
 
 Änderung gegenüber 0.2: Szene zum Unterschied GK/LK nach der Prüfung `drehbuch/pruefung_gk_lk.md`: Was beide Kursarten tun, wird nicht mehr als LK-Merkmal dargestellt; die Vergleichstafel nennt für den GK, was er tut, statt „–“ oder „grundlegend“ (Nutzer 29.10.2026, Entscheidung 53).
 
@@ -166,7 +169,8 @@ Wie im Drehbuch PoWi. **Beleg** FB-M = `quellen/faktenblatt_mathematik.md`, FB-A
   Abiturbedingungen“
 - **Sprechtext:**
   > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine. Das ist im Grundkurs Mathematik übrigens
-  > genauso, weil er vier Wochenstunden hat. Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in einem
+  > genauso, weil er vier Wochenstunden hat; der Leistungskurs Mathematik bringt dir also keine zusätzliche
+  > Klausur. Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in einem
   > der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt. Im dritten
   > Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in
   > der Prüfung erwartet.

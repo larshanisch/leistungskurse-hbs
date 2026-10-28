@@ -4,7 +4,7 @@ window.FILMS["kunst"] = {
  "id": "kunst",
  "title": "Leistungskurs Kunst",
  "accent": "#c8d530",
- "total": 336.88,
+ "total": 341.33,
  "credits": [
   "Berthe Morisot: Die Wiege (Le berceau), 1872, Musée d’Orsay, Paris – gemeinfrei, Wikimedia Commons (Google Art Project)",
   "Gustave Caillebotte: Straße in Paris, Regenwetter (Rue de Paris, temps de pluie), 1877, Art Institute of Chicago – gemeinfrei, Wikimedia Commons (Google Art Project)",
@@ -720,8 +720,8 @@ window.FILMS["kunst"] = {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 27.06,
-   "speechEnd": 25.66,
+   "duration": 31.51,
+   "speechEnd": 30.11,
    "sentences": [
     {
      "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine.",
@@ -731,18 +731,25 @@ window.FILMS["kunst"] = {
      "start": 0.6
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs im ersten Jahr eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "audio": "media/kunst/audio/s09_2_f2130b71.mp3",
-     "dur": 7.68,
+     "text": "Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine.",
+     "audio": "media/kunst/audio/s09_2_68b17b1f.mp3",
+     "dur": 4,
      "estimated": false,
      "start": 4.81
     },
     {
+     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs im ersten Jahr eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
+     "audio": "media/kunst/audio/s09_3_f2130b71.mp3",
+     "dur": 7.68,
+     "estimated": false,
+     "start": 9.26
+    },
+    {
      "text": "Im zweiten Jahr ersetzt eine fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk – je nach Aufgabe auch zu Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.",
-     "audio": "media/kunst/audio/s09_3_c805a11e.mp3",
+     "audio": "media/kunst/audio/s09_4_c805a11e.mp3",
      "dur": 12.72,
      "estimated": false,
-     "start": 12.94
+     "start": 17.39
     }
    ],
    "cues": [
@@ -752,29 +759,34 @@ window.FILMS["kunst"] = {
      "end": 4.36
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden,",
+     "text": "Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine.",
      "start": 4.81,
-     "end": 6.716
+     "end": 8.81
+    },
+    {
+     "text": "Deine Lehrkraft kann entscheiden,",
+     "start": 9.26,
+     "end": 11.166
     },
     {
      "text": "dass euer ganzer Kurs im ersten Jahr eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "start": 6.716,
-     "end": 12.432
+     "start": 11.166,
+     "end": 16.882
     },
     {
      "text": "Im zweiten Jahr ersetzt eine fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk",
-     "start": 12.94,
-     "end": 18.7
+     "start": 17.39,
+     "end": 23.15
     },
     {
      "text": "– je nach Aufgabe auch zu Hause –,",
-     "start": 18.7,
-     "end": 20.74
+     "start": 23.15,
+     "end": 25.19
     },
     {
      "text": "stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.",
-     "start": 20.74,
-     "end": 25.54
+     "start": 25.19,
+     "end": 29.99
     }
    ],
    "image": {
@@ -787,25 +799,25 @@ window.FILMS["kunst"] = {
      {
       "value": "2",
       "label": "Klausuren pro Halbjahr",
-      "sub": "im letzten Halbjahr 1",
+      "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1",
       "t": 2.286
      },
      {
       "value": "↔",
       "label": "Referat oder Präsentation statt einer Klausur in Q1 oder Q2",
       "sub": "wenn die Lehrkraft es festlegt",
-      "t": 5.156
+      "t": 9.606
      },
      {
       "value": "Q3/Q4",
       "label": "fachpraktische Prüfung statt einer Klausur",
-      "t": 14.68
+      "t": 19.13
      }
     ],
     "notes": [
      {
       "text": "eigenes Werk, auch zu Hause · Präsentation und Gespräch",
-      "t": 17.98
+      "t": 22.43
      }
     ]
    },
@@ -884,7 +896,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 240.51
+   "start": 244.96
   },
   {
    "n": 11,
@@ -977,7 +989,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 260.48
+   "start": 264.93
   },
   {
    "n": 12,
@@ -1045,7 +1057,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 289.42
+   "start": 293.87
   },
   {
    "n": 13,
@@ -1083,7 +1095,7 @@ window.FILMS["kunst"] = {
     "src": "media/kunst/img/k13.jpg",
     "motion": "zoom-out"
    },
-   "start": 305.87
+   "start": 310.32
   },
   {
    "n": 14,
@@ -1136,7 +1148,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "logo": true,
-   "start": 321.31
+   "start": 325.76
   }
  ]
 };
