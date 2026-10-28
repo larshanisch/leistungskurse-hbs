@@ -7,6 +7,8 @@ window.FILMS["geschichte"] = {
  "total": 351.09,
  "credits": [
   "Jean Nicolas Ventadour: Die Paulskirche in Frankfurt am Main, 1848, Aquarell, Historisches Museum Frankfurt – gemeinfrei, Wikimedia Commons",
+  "Erich Greiser: Ausrufung der Republik durch Philipp Scheidemann am Reichstag, Berlin, 9. November 1918, Fotografie – gemeinfrei, Wikimedia Commons",
+  "Bundesarchiv, Bild 183-85458-0002 / Foto: Peter Heinz Junge: Kampfgruppen am Brandenburger Tor, Berlin, 13. August 1961 – CC BY-SA 3.0 DE (creativecommons.org/licenses/by-sa/3.0/de), verkleinert, Wikimedia Commons",
   "Alle übrigen Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
  "scenes": [
@@ -382,6 +384,21 @@ window.FILMS["geschichte"] = {
       0.6
      ],
      "t": 6.84
+    },
+    {
+     "src": "media/geschichte/img/pd_scheidemann.jpg",
+     "fit": "card",
+     "motion": "still",
+     "t": 9.64
+    },
+    {
+     "src": "media/geschichte/img/g05.jpg",
+     "motion": "zoom-in",
+     "focus": [
+      0.5,
+      0.6
+     ],
+     "t": 12.639
     }
    ],
    "captions": [
@@ -393,27 +410,19 @@ window.FILMS["geschichte"] = {
     {
      "text": "",
      "t": 6.84,
+     "end": 9.64
+    },
+    {
+     "text": "Erich Greiser · Ausrufung der Republik am Reichstag, 9. November 1918",
+     "t": 9.64,
+     "end": 12.639
+    },
+    {
+     "text": "",
+     "t": 12.639,
      "end": 20.12
     }
    ],
-   "panel": {
-    "type": "list",
-    "title": "Vom Kaiserreich bis 1945",
-    "items": [
-     {
-      "text": "Kolonialherrschaft und Erster Weltkrieg",
-      "t": 6.289
-     },
-     {
-      "text": "Weimarer Republik",
-      "t": 10.919
-     },
-     {
-      "text": "NS-Diktatur und Völkermord",
-      "t": 12.639
-     }
-    ]
-   },
    "corner": "Beispiel: Abiturjahrgang 2028",
    "start": 99.13
   },
@@ -465,17 +474,38 @@ window.FILMS["geschichte"] = {
     "src": "media/geschichte/img/g06.jpg",
     "motion": "pan-right"
    },
+   "imageCues": [
+    {
+     "src": "media/geschichte/img/pd_mauerbau.jpg",
+     "fit": "card",
+     "motion": "still",
+     "t": 4.016
+    },
+    {
+     "src": "media/geschichte/img/g06.jpg",
+     "motion": "pan-right",
+     "t": 8.377
+    }
+   ],
+   "captions": [
+    {
+     "text": "Peter Heinz Junge · Kampfgruppen am Brandenburger Tor, 13. August 1961",
+     "t": 4.016,
+     "end": 8.377
+    },
+    {
+     "text": "",
+     "t": 8.377,
+     "end": 22.57
+    }
+   ],
    "panel": {
     "type": "list",
     "title": "Nach 1945",
     "items": [
      {
-      "text": "Kalter Krieg",
-      "t": 2.708
-     },
-     {
-      "text": "Mauerbau, friedliche Revolution, Einheit",
-      "t": 4.598
+      "text": "Kalter Krieg, Mauerbau, friedliche Revolution, Einheit",
+      "t": 11.284
      },
      {
       "text": "Einigung Europas",

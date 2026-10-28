@@ -6,7 +6,8 @@ window.FILMS["powi"] = {
  "accent": "#c8d530",
  "total": 349.01,
  "credits": [
-  "Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
+  "Parlamentarischer Rat: Urschrift des Grundgesetzes für die Bundesrepublik Deutschland, Titelblatt, 1949 – gemeinfrei, Wikimedia Commons",
+  "Alle übrigen Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
  "scenes": [
   {
@@ -365,17 +366,42 @@ window.FILMS["powi"] = {
     "src": "media/powi/img/p05.jpg",
     "motion": "pan-left"
    },
+   "imageCues": [
+    {
+     "src": "media/powi/img/pd_grundgesetz.jpg",
+     "fit": "card",
+     "motion": "still",
+     "t": 4.73
+    },
+    {
+     "src": "media/powi/img/p05.jpg",
+     "motion": "pan-left",
+     "t": 8.502
+    }
+   ],
+   "captions": [
+    {
+     "text": "Parlamentarischer Rat · Urschrift des Grundgesetzes, 1949",
+     "t": 4.73,
+     "end": 8.502
+    },
+    {
+     "text": "",
+     "t": 8.502,
+     "end": 24.25
+    }
+   ],
    "panel": {
     "type": "list",
     "title": "Erstes Halbjahr",
     "items": [
      {
       "text": "Grundgesetz und Bundesverfassungsgericht",
-      "t": 4.73
+      "t": 9.998
      },
      {
       "text": "Parteien, Populismus, Extremismus",
-      "t": 8.502
+      "t": 9.998
      },
      {
       "text": "Filterblasen und Fake News",

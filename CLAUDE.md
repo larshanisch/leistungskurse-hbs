@@ -106,6 +106,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - 29.10.2026: Planer mit Kästen „Schriftlich“ (1–3) und „Mündlich“ (4–5) (Entscheidung 57). „Analysis“ im Mathe-Film per
   ausgewählter Neuaufnahme richtig betont (Entscheidung 58), **5:40 min**. Falsch betonte Wörter: erst denselben Satz mehrfach
   aufnehmen und hören lassen, Umschreibungen halfen hier nicht. Wird eine Datei unter gleichem Namen ersetzt: `CACHE` in `sw.js` hochzählen.
+- 29.10.2026: Gemeinfreie Fotos in Geschichte 0.5 (Scheidemann, Mauerbau) und PoWi 0.5 (Grundgesetz), Entscheidung 59.
+  Regel: Porträtkarte und Liste (`panel`) nie gleichzeitig – sonst verdeckt die Liste die große Bildunterschrift.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Offen: Filme Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

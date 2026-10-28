@@ -3,12 +3,7 @@
   "title": "Leistungskurs Geschichte",
   "accent": "#c8d530",
   "script": "drehbuch/geschichte.md",
-  "voice": {
-    "voice_id": "TIKjTeWOFujJEvXK1qIU",
-    "name": "Theo Teacher – Clear & Trustworthy",
-    "model": "eleven_v4",
-    "format": "mp3_44100_64"
-  },
+  "voice": { "voice_id": "TIKjTeWOFujJEvXK1qIU", "name": "Theo Teacher – Clear & Trustworthy", "model": "eleven_v4", "format": "mp3_44100_64" },
   "scenes": [
     {
       "n": 1,
@@ -20,34 +15,48 @@
       "n": 2,
       "chapter": "Der Rahmen",
       "image": { "src": "g02.jpg", "motion": "pan-right" },
-      "panel": { "type": "stats", "items": [
-        { "at": "fünf Punkte", "value": "5", "label": "Punkte am Ende der Einführungsphase", "prefix": "mind.", "sub": "besser deutlich mehr – die Anforderungen steigen" },
-        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden" },
-        { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
-      ] }
+      "panel": {
+        "type": "stats",
+        "items": [
+          {
+            "at": "fünf Punkte",
+            "value": "5",
+            "label": "Punkte am Ende der Einführungsphase",
+            "prefix": "mind.",
+            "sub": "besser deutlich mehr – die Anforderungen steigen"
+          },
+          { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden" },
+          { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
+        ]
+      }
     },
     {
       "n": 3,
       "image": { "src": "g03.jpg", "motion": "zoom-out" },
-      "panel": { "type": "combo", "title": "Geschichte passt zu …", "items": [
-        { "at": "Fremdsprache", "a": "Geschichte", "b": "Englisch oder Mathematik", "ok": true },
-        { "at": "kombinierst", "figure": "d", "a": "Geschichte", "b": "Biologie", "ok": true },
-        { "at": "Mathematik.", "a": "Geschichte", "b": "Deutsch, Kunst oder PoWi", "ok": false }
-      ] }
+      "panel": {
+        "type": "combo",
+        "title": "Geschichte passt zu …",
+        "items": [
+          { "at": "Fremdsprache", "a": "Geschichte", "b": "Englisch oder Mathematik", "ok": true },
+          { "at": "kombinierst", "figure": "d", "a": "Geschichte", "b": "Biologie", "ok": true },
+          { "at": "Mathematik.", "a": "Geschichte", "b": "Deutsch, Kunst oder PoWi", "ok": false }
+        ]
+      }
     },
     {
       "n": 4,
       "chapter": "Was du lernst",
       "image": { "src": "g04.jpg", "motion": "zoom-in", "focus": [0.35, 0.5] },
-      "band": { "type": "timeline", "items": [
-        { "at": "neunzehnte", "label": "Q1", "text": "19. Jahrhundert" },
-        { "at": "Demokratie und Diktatur", "label": "Q2", "text": "Demokratie und Diktatur 1917–1945" },
-        { "at": "Kalte Krieg", "label": "Q3", "text": "Kalter Krieg, Teilung, Globalisierung" },
-        { "at": "öffentlich", "label": "Q4", "text": "Umgang mit Geschichte" }
-      ] },
-      "panel": { "type": "stats", "items": [
-        { "at": "Neun", "value": "9", "label": "verbindliche Themenfelder fürs Abitur" }
-      ] }
+      "band": {
+        "type": "timeline",
+        "items": [
+          { "at": "neunzehnte", "label": "Q1", "text": "19. Jahrhundert" },
+          { "at": "Demokratie und Diktatur", "label": "Q2", "text": "Demokratie und Diktatur 1917–1945" },
+          { "at": "Kalte Krieg", "label": "Q3", "text": "Kalter Krieg, Teilung, Globalisierung" },
+          { "at": "öffentlich", "label": "Q4", "text": "Umgang mit Geschichte" }
+        ]
+      },
+      "panel": { "type": "stats", "items": [{ "at": "Neun", "value": "9", "label": "verbindliche Themenfelder fürs Abitur" }] }
     },
     {
       "n": 5,
@@ -55,111 +64,165 @@
       "image": { "src": "g05.jpg", "motion": "zoom-in", "focus": [0.5, 0.6] },
       "imageCues": [
         { "at": "Revolution von 1848", "src": "pd_paulskirche.jpg", "fit": "card", "motion": "still" },
-        { "at": "Kolonialherrschaft", "src": "g05.jpg", "motion": "zoom-in", "focus": [0.5, 0.6] }
+        { "at": "Kolonialherrschaft", "src": "g05.jpg", "motion": "zoom-in", "focus": [0.5, 0.6] },
+        { "at": "Weg in den Ersten Weltkrieg", "src": "pd_scheidemann.jpg", "fit": "card", "motion": "still" },
+        { "at": "nationalsozialistische", "src": "g05.jpg", "motion": "zoom-in", "focus": [0.5, 0.6] }
       ],
       "captions": [
         { "at": "Revolution von 1848", "text": "Jean Nicolas Ventadour · Die Paulskirche in Frankfurt am Main, 1848" },
-        { "at": "Kolonialherrschaft", "text": "" }
-      ],
-      "panel": { "type": "list", "title": "Vom Kaiserreich bis 1945", "items": [
-        { "at": "Kolonialherrschaft", "text": "Kolonialherrschaft und Erster Weltkrieg" },
-        { "at": "Weimarer", "text": "Weimarer Republik" },
-        { "at": "nationalsozialistische", "text": "NS-Diktatur und Völkermord" }
-      ] }
+        { "at": "Kolonialherrschaft", "text": "" },
+        { "at": "Weg in den Ersten Weltkrieg", "text": "Erich Greiser · Ausrufung der Republik am Reichstag, 9. November 1918" },
+        { "at": "nationalsozialistische", "text": "" }
+      ]
     },
     {
       "n": 6,
       "image": { "src": "g06.jpg", "motion": "pan-right" },
-      "panel": { "type": "list", "title": "Nach 1945", "items": [
-        { "at": "Kalten Krieg", "text": "Kalter Krieg" },
-        { "at": "Mauer", "text": "Mauerbau, friedliche Revolution, Einheit" },
-        { "at": "Einigung Europas", "text": "Einigung Europas" },
-        { "at": "gestritten", "text": "Streit über die Vergangenheit" }
-      ] }
+      "panel": {
+        "type": "list",
+        "title": "Nach 1945",
+        "items": [
+          { "at": "Einigung Europas", "text": "Kalter Krieg, Mauerbau, friedliche Revolution, Einheit" },
+          { "at": "Einigung Europas", "text": "Einigung Europas" },
+          { "at": "gestritten", "text": "Streit über die Vergangenheit" }
+        ]
+      },
+      "imageCues": [
+        { "at": "Bau der Mauer", "src": "pd_mauerbau.jpg", "fit": "card", "motion": "still" },
+        { "at": "Weg zur deutschen Einheit", "src": "g06.jpg", "motion": "pan-right" }
+      ],
+      "captions": [
+        { "at": "Bau der Mauer", "text": "Peter Heinz Junge · Kampfgruppen am Brandenburger Tor, 13. August 1961" },
+        { "at": "Weg zur deutschen Einheit", "text": "" }
+      ]
     },
     {
       "n": 7,
       "image": { "src": "g07.jpg", "motion": "zoom-in", "focus": [0.6, 0.55] },
-      "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
-        { "at": "Quellen und Deutungen", "label": "Themen", "a": "dieselben Themenfelder", "b": "vertiefter, mehr Quellen" },
-        { "at": "Geschichtsbild", "label": "Deutungen", "a": "vergleichen und erörtern", "b": "dazu Geschichtsbilder, aktuelle Kontroversen" },
-        { "at": "Recherche", "label": "Arbeitsweise", "a": "Quellen und Darstellungen untersuchen", "b": "dazu eigene Recherche vor Ort" }
-      ] },
-      "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
-        "19. Jahrhundert bis Gegenwart",
-        "Quellen und Deutungen im Mittelpunkt",
-        "Leistungskurs: forschender und eigenständiger"
-      ] }
+      "panel": {
+        "type": "compare",
+        "head": ["Grundkurs", "Leistungskurs"],
+        "items": [
+          { "at": "Quellen und Deutungen", "label": "Themen", "a": "dieselben Themenfelder", "b": "vertiefter, mehr Quellen" },
+          {
+            "at": "Geschichtsbild",
+            "label": "Deutungen",
+            "a": "vergleichen und erörtern",
+            "b": "dazu Geschichtsbilder, aktuelle Kontroversen"
+          },
+          {
+            "at": "Recherche",
+            "label": "Arbeitsweise",
+            "a": "Quellen und Darstellungen untersuchen",
+            "b": "dazu eigene Recherche vor Ort"
+          }
+        ]
+      },
+      "takeaways": {
+        "at": "Kurz zusammengefasst",
+        "title": "Das Wichtigste aus Kapitel 2",
+        "items": ["19. Jahrhundert bis Gegenwart", "Quellen und Deutungen im Mittelpunkt", "Leistungskurs: forschender und eigenständiger"]
+      }
     },
     {
       "n": 8,
       "chapter": "Wie gearbeitet wird",
       "image": { "src": "g08.jpg", "motion": "pan-left" },
-      "panel": { "type": "list", "title": "Quellen befragen", "items": [
-        { "at": "Quellen aller Art", "text": "Reden, Briefe, Zeitungen, Plakate, Fotos, Karikaturen" },
-        { "at": "Absicht", "text": "Wer? Mit welcher Absicht? Aus welcher Sicht?" },
-        { "at": "Darstellungen", "text": "Darstellungen von Historikern vergleichen" },
-        { "at": "Denkmäler", "text": "Denkmäler, Filme, Gedenktage" },
-        { "at": "Gedenkstätte", "text": "Gedenkstätte oder Museum – wenn möglich" }
-      ] }
+      "panel": {
+        "type": "list",
+        "title": "Quellen befragen",
+        "items": [
+          { "at": "Quellen aller Art", "text": "Reden, Briefe, Zeitungen, Plakate, Fotos, Karikaturen" },
+          { "at": "Absicht", "text": "Wer? Mit welcher Absicht? Aus welcher Sicht?" },
+          { "at": "Darstellungen", "text": "Darstellungen von Historikern vergleichen" },
+          { "at": "Denkmäler", "text": "Denkmäler, Filme, Gedenktage" },
+          { "at": "Gedenkstätte", "text": "Gedenkstätte oder Museum – wenn möglich" }
+        ]
+      }
     },
     {
       "n": 9,
       "image": { "src": "g09.jpg", "motion": "zoom-out" },
-      "panel": { "type": "stats", "items": [
-        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1" },
-        { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur", "sub": "wenn die Lehrkraft es festlegt" },
-        { "at": "dritten Halbjahr", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
-      ] }
+      "panel": {
+        "type": "stats",
+        "items": [
+          {
+            "at": "zwei Klausuren",
+            "value": "2",
+            "label": "Klausuren pro Halbjahr",
+            "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1"
+          },
+          {
+            "at": "Lehrkraft",
+            "value": "↔",
+            "label": "Referat oder Präsentation statt einer Klausur",
+            "sub": "wenn die Lehrkraft es festlegt"
+          },
+          { "at": "dritten Halbjahr", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
+        ]
+      }
     },
     {
       "n": 10,
       "chapter": "Bewertung und Abitur",
       "image": { "src": "g10.jpg", "motion": "zoom-in", "focus": [0.45, 0.55], "dim": 0.3 },
-      "panel": { "type": "list", "title": "So wird bewertet", "items": [
-        { "at": "Quelle genau", "text": "Quelle genau untersuchen" },
-        { "at": "einordnest", "text": "in ihre Zeit einordnen" },
-        { "at": "Fachbegriffe", "text": "Fachbegriffe sicher verwenden" },
-        { "at": "begründetes Urteil", "text": "begründet urteilen" }
-      ], "notes": [
-        { "at": "ausreichende", "text": "Nur Wiedergabe reicht nicht für „ausreichend“" },
-        { "at": "Sprachfehler", "text": "gehäufte Sprachfehler: bis zu 2 Punkte Abzug" }
-      ] }
+      "panel": {
+        "type": "list",
+        "title": "So wird bewertet",
+        "items": [
+          { "at": "Quelle genau", "text": "Quelle genau untersuchen" },
+          { "at": "einordnest", "text": "in ihre Zeit einordnen" },
+          { "at": "Fachbegriffe", "text": "Fachbegriffe sicher verwenden" },
+          { "at": "begründetes Urteil", "text": "begründet urteilen" }
+        ],
+        "notes": [
+          { "at": "ausreichende", "text": "Nur Wiedergabe reicht nicht für „ausreichend“" },
+          { "at": "Sprachfehler", "text": "gehäufte Sprachfehler: bis zu 2 Punkte Abzug" }
+        ]
+      }
     },
     {
       "n": 11,
       "corner": "Stand Abitur 2028",
       "image": { "src": "g11.jpg", "motion": "zoom-in", "focus": [0.5, 0.5] },
-      "panel": { "type": "stats", "items": [
-        { "at": "einen von drei", "value": "1 aus 3", "label": "Vorschläge zur Wahl" },
-        { "at": "dreihundert Minuten", "value": "300", "label": "Minuten Bearbeitungszeit" }
-      ], "notes": [
-        { "at": "interpretierst", "text": "Quellen interpretieren, historisch argumentieren · auch Rede, Brief oder Plädoyer" },
-        { "at": "Grundgesetz", "text": "Hilfsmittel: Grundgesetz" }
-      ] }
+      "panel": {
+        "type": "stats",
+        "items": [
+          { "at": "einen von drei", "value": "1 aus 3", "label": "Vorschläge zur Wahl" },
+          { "at": "dreihundert Minuten", "value": "300", "label": "Minuten Bearbeitungszeit" }
+        ],
+        "notes": [
+          { "at": "interpretierst", "text": "Quellen interpretieren, historisch argumentieren · auch Rede, Brief oder Plädoyer" },
+          { "at": "Grundgesetz", "text": "Hilfsmittel: Grundgesetz" }
+        ]
+      }
     },
     {
       "n": 12,
       "chapter": "Die Herausforderungen",
       "image": { "src": "g12.jpg", "motion": "pan-up" },
-      "panel": { "type": "list", "check": true, "title": "Was du mitbringen solltest", "items": [
-        { "at": "Neugier", "text": "Neugier auf die Vergangenheit" },
-        { "at": "Freude", "text": "Freude an längeren Texten" },
-        { "at": "Lust", "text": "Lust zu diskutieren" },
-        { "at": "schweren Themen", "text": "Ernst auch bei schweren Themen" }
-      ] }
+      "panel": {
+        "type": "list",
+        "check": true,
+        "title": "Was du mitbringen solltest",
+        "items": [
+          { "at": "Neugier", "text": "Neugier auf die Vergangenheit" },
+          { "at": "Freude", "text": "Freude an längeren Texten" },
+          { "at": "Lust", "text": "Lust zu diskutieren" },
+          { "at": "schweren Themen", "text": "Ernst auch bei schweren Themen" }
+        ]
+      }
     },
-    {
-      "n": 13,
-      "image": { "src": "g13.jpg", "motion": "zoom-out" }
-    },
+    { "n": 13, "image": { "src": "g13.jpg", "motion": "zoom-out" } },
     {
       "n": 14,
       "logo": true,
       "image": { "src": "g14.jpg", "motion": "zoom-out", "dim": 0.45 },
       "endCard": {
-        "lines": ["Stand: Oktober 2026",
-          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Geschichte, Abiturerlass 2028 des Landes Hessen, Einheitliche Prüfungsanforderungen Geschichte (KMK)"]
+        "lines": [
+          "Stand: Oktober 2026",
+          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Geschichte, Abiturerlass 2028 des Landes Hessen, Einheitliche Prüfungsanforderungen Geschichte (KMK)"
+        ]
       }
     }
   ]

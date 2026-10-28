@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Politik und Wirtschaft
 
-Version 0.4 · 29.10.2026 (freigegeben)
+Version 0.5 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.4: Szene 5 zeigt zu „Grundgesetz“ das Titelblatt der Urschrift als Porträtkarte, die Liste erscheint danach (Nutzer 29.10.2026, Entscheidung 59). Sprechtext unverändert.
 
 Änderung gegenüber 0.3: Szene „Klausuren“ vergleicht mit dem Grundkurs: Zwei- und dreistündige Grundkurse schreiben in Q1–Q3 je eine Klausur, der LK zwei; Deutsch und Mathematik schon im vierstündigen GK zwei (Schaubild Klausuren, Abb. 4 und Anmerkung a; Nutzer 29.10.2026, Entscheidung 55).
 
@@ -106,9 +108,11 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 ### Szene 5 · Demokratie
 
 - **Bild:** F — erfundener Plenarsaal von der Besuchertribüne aus, C mit Mitschülerinnen und
-  Mitschülern auf der Tribüne (Exkursion, SCHULE: „falls möglich“).
+  Mitschülern auf der Tribüne (Exkursion, SCHULE: „falls möglich“). Davor als Porträtkarte zu „Grundgesetz“ bis
+  „Parteien“: PD — Parlamentarischer Rat, Urschrift des Grundgesetzes, Titelblatt, 1949 (gemeinfrei, Wikimedia
+  Commons, geladen 29.10.2026, `art/powi/pd/grundgesetz_urschrift_s1.jpg`, 1280×1816).
 - **Bewegung:** Schwenk von rechts nach links.
-- **Element:** LISTE „Grundgesetz und Bundesverfassungsgericht“ · „Parteien, Populismus,
+- **Element:** LISTE ab „Extremismus“: „Grundgesetz und Bundesverfassungsgericht“ · „Parteien, Populismus,
   Extremismus“ · „Filterblasen und Fake News“ · HINWEIS „Beispiel: Abiturjahrgang 2028“
 - **Sprechtext:**
   > Im aktuellen Jahrgang geht es im ersten Halbjahr zum Beispiel um das Grundgesetz und um die

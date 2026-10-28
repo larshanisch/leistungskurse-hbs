@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Geschichte
 
-Version 0.4 · 29.10.2026 (freigegeben)
+Version 0.5 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.4: Szene 5 zusätzlich mit dem Foto der Ausrufung der Republik 1918, Szene 6 mit einem Foto vom Mauerbau 1961 (Bundesarchiv), beide als Porträtkarte; die Listen stehen nur noch, wenn keine Karte zu sehen ist (Nutzer 29.10.2026, Entscheidung 59). Sprechtext unverändert.
 
 Änderung gegenüber 0.3: Szene „Klausuren“ vergleicht mit dem Grundkurs: Zwei- und dreistündige Grundkurse schreiben in Q1–Q3 je eine Klausur, der LK zwei; Deutsch und Mathematik schon im vierstündigen GK zwei (Schaubild Klausuren, Abb. 4 und Anmerkung a; Nutzer 29.10.2026, Entscheidung 55).
 
@@ -104,9 +106,11 @@ Wie im Drehbuch PoWi. **Beleg** FB-G = `quellen/faktenblatt_geschichte.md`, FB-A
   ruhiges Licht. Dazu als Porträtkarte zu „1848“: PD — Jean Nicolas Ventadour, *Die Paulskirche in
   Frankfurt am Main*, 1848, Aquarell, Historisches Museum Frankfurt (gemeinfrei, Wikimedia Commons;
   geladen 29.10.2026 nach Zustimmung, `art/geschichte/pd/paulskirche_1848_ventadour.jpg`, 1243×1400).
+  Zu „Weg in den Ersten Weltkrieg“ bis „nationalsozialistische“: PD — Erich Greiser, Ausrufung der Republik
+  durch Philipp Scheidemann am Reichstag, 9. November 1918 (gemeinfrei, Wikimedia Commons, geladen 29.10.2026,
+  `art/geschichte/pd/scheidemann_1918_greiser.jpg`, 996×1252).
 - **Bewegung:** Zoom ein.
-- **Element:** LISTE „Revolution 1848/49“ · „Kolonialherrschaft und Erster Weltkrieg“ · „Weimarer Republik“ ·
-  „NS-Diktatur und Völkermord“ · HINWEIS „Beispiel: Abiturjahrgang 2028“
+- **Element:** keine Liste (die beiden Karten tragen die Szene) · HINWEIS „Beispiel: Abiturjahrgang 2028“
 - **Sprechtext:**
   > Im aktuellen Jahrgang gehören dazu zum Beispiel die Revolution von 1848, die deutsche Kolonialherrschaft
   > in Afrika und der Weg in den Ersten Weltkrieg, die Weimarer Republik und die nationalsozialistische
@@ -116,10 +120,13 @@ Wie im Drehbuch PoWi. **Beleg** FB-G = `quellen/faktenblatt_geschichte.md`, FB-A
 ### Szene 6 · Nach 1945
 
 - **Bild:** F — Menschen auf einer Mauer bei Nacht, jubelnd, Lichter, keine erkennbaren realen Personen,
-  kein lesbares Graffiti (Sinnbild für 1989).
+  kein lesbares Graffiti (Sinnbild für 1989). Davor als Porträtkarte zu „Bau der Mauer“ bis „Weg zur deutschen
+  Einheit“: Bundesarchiv, Bild 183-85458-0002 / Foto: Peter Heinz Junge, Kampfgruppen am Brandenburger Tor,
+  13. August 1961 (CC BY-SA 3.0 DE, Wikimedia Commons, geladen 29.10.2026,
+  `art/geschichte/pd/mauerbau_1961_bundesarchiv_183-85458-0002.jpg`, 773×800; im Bildnachweis mit Lizenz).
 - **Bewegung:** Schwenk von links nach rechts.
-- **Element:** LISTE „Kalter Krieg“ · „Mauerbau, friedliche Revolution, Einheit“ · „Einigung Europas“ ·
-  „Streit über die Vergangenheit“
+- **Element:** LISTE ab „Einigung Europas“: „Kalter Krieg, Mauerbau, friedliche Revolution, Einheit“ · „Einigung
+  Europas“ · „Streit über die Vergangenheit“
 - **Sprechtext:**
   > Nach 1945 untersuchst du den Kalten Krieg, den Bau der Mauer, die friedliche Revolution in der DDR und
   > den Weg zur deutschen Einheit, außerdem die Einigung Europas. Im letzten Halbjahr geht es darum, wie über
