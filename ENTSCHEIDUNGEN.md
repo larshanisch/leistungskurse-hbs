@@ -1,6 +1,6 @@
 # Entscheidungslog
 
-Version 43 · 29.10.2026
+Version 44 · 29.10.2026
 
 | Nr. | Datum | Entscheidung | Begründung |
 |---|---|---|---|
@@ -66,3 +66,4 @@ Version 43 · 29.10.2026
 | 60 | 29.10.2026 | Jeder Film nennt die Klausur unter Abiturbedingungen in Q3 (Satz „Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.“, Tafelpunkt „Q3 · Klausur unter Abiturbedingungen“). Neu in Deutsch 0.11, Englisch 0.6, Kunst 0.8; Geschichte, Mathematik, PoWi hatten ihn schon, Biologie bekommt ihn | Nutzer: Warum nur bei Geschichte? Die Regel gilt für jeden LK (OAVO § 9 Abs. 11, „soll“, FB-A Abschn. 3); das Fehlen war uneinheitlich gewachsen, keine Entscheidung. Aufnahme wortgleich übernommen, 0 Zeichen. Gemessen: **Deutsch 5:43, Englisch 6:13, Kunst 5:49 min**; Tafeln mit fünf Punkten passen (Bildschirmfotos 1600×900) |
 | 61 | 29.10.2026 | Schmaler Fortschrittsbalken in Schulgrün am oberen Rand jedes Films (`#topbar`), immer sichtbar, auch wenn die Steuerleiste ausgeblendet ist; zeigt Gesehenes (grün) und Rest (hell) | Nutzer-Idee. Höhe max(4 px, 0,5 vh), nicht anklickbar – Springen bleibt Sache der Steuerleiste |
 | 62 | 29.10.2026 | Drehbuch Biologie 0.2 freigegeben: Leitfigur D, keine Besonderheiten, Experimente „eher selten“ (Szene 6 mit Schwerpunkt Material) | Nutzer 29.10.2026; Faktenblatt Biologie 1.0 (KCGO 2024, LA28) |
+| 63 | 29.10.2026 | Film Biologie nach Drehbuch 0.2: Leitfigur D, 13 Gemini-Bilder `art/biologie/v01/` → `media/biologie/img/`, b14 = Gebäudebild aus Deutsch. Biologieraum ohne Fotovorlage erfunden (kein Schulfoto davon). b02 zweimal erzeugt: Die Mensa aus dem Kunst-Film als Vorlage brachte dessen Leitfigur mit – neu mit der Mensa aus Geschichte (zeigt schon D); Pseudo-Schrift auf dem Wahlbogen per ffmpeg `delogo` entfernt. Kachel auf der Startseite aktiv, Kiosk „Alle Filme“ mit Biologie | Vertont 29.10.2026: 22 Sätze, 3 657 Zeichen; 10 Sätze wortgleich aus anderen Filmen übernommen. Gemessen: **5:45 min**. Geprüft: Datenprüfung, 15 Bildschirmfotos, Startseite Feld III ohne Scrollen auf fünf Tafelgrößen, Planer bei allen 25 Paaren |

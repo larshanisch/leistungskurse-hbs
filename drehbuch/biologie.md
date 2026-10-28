@@ -254,4 +254,4 @@ Wie im Drehbuch PoWi. **Beleg** FB-B = `quellen/faktenblatt_biologie.md`, FB-A =
 - [x] Keine Besonderheiten (Nutzer 29.10.2026).
 - [x] **Szene 6:** Experimente „eher selten“, Schwerpunkt Material (Nutzer 29.10.2026).
 - [ ] Gemeinfreie Bilder: Vorschlag folgt mit der Bildplanung (z. B. Darwin-Skizze „I think“ 1837, Mendel).
-- [ ] Länge: Sprechtext 4 850 Zeichen (gezählt 29.10.2026; Mathematik 4 820 Zeichen = 5:40 min gemessen) → etwa 5:40 min.
+- [x] Länge: 4 792 Zeichen gesprochen, **5:45 min gemessen** (29.10.2026).

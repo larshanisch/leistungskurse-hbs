@@ -1,0 +1,138 @@
+{
+  "categories": {
+    "narration": {
+      "kind": "tts",
+      "voice_id": "TIKjTeWOFujJEvXK1qIU",
+      "items": [
+        {
+          "file": "audio/s01_1_ba7a27de.mp3",
+          "text": "Im Leistungskurs Biologie gehst du der Frage nach, wie Leben funktioniert: wie Gene Merkmale steuern, wie sich Arten im Lauf der Evolution verändern, wie Nervenzellen Signale weitergeben und wie Ökosysteme zusammenhängen."
+        },
+        {
+          "file": "audio/s01_2_38ecb1a2.mp3",
+          "text": "Und du lernst, solche Fragen mit Experimenten und Daten selbst zu untersuchen."
+        },
+        {
+          "file": "audio/s02_1_1ad2b7ad.mp3",
+          "text": "Du wählst den Leistungskurs Biologie gegen Ende der Einführungsphase und brauchst dafür in diesem Fach mindestens fünf Punkte."
+        },
+        {
+          "file": "audio/s02_2_0b1aadf2.mp3",
+          "text": "Fünf Punkte sind aber nur die Untergrenze: Weil die Anforderungen im Leistungskurs steigen, kann es gut sein, dass du dort weniger Punkte bekommst als in der Einführungsphase – du solltest also deutlich besser sein."
+        },
+        {
+          "file": "audio/s02_3_86c480eb.mp3",
+          "text": "Der Kurs hat bei uns fünf Wochenstunden, als Tutorium sechs, und alle vier Halbjahre zählen im Abitur doppelt."
+        },
+        {
+          "file": "audio/s03_1_d73cff63.mp3",
+          "text": "Biologie ist eine Naturwissenschaft und erfüllt damit die Regel, dass einer deiner beiden Leistungskurse eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein muss."
+        },
+        {
+          "file": "audio/s03_2_f4821f0b.mp3",
+          "text": "An unserer Schule kannst du Biologie deshalb mit jedem anderen Leistungskurs kombinieren, von Deutsch, Englisch und Kunst über Politik und Wirtschaft und Geschichte bis Chemie und Mathematik."
+        },
+        {
+          "file": "audio/s04_1_c354321e.mp3",
+          "text": "Jedes der vier Halbjahre hat ein großes Thema: zuerst Genetik und Gentechnik, dann die Evolution und die Arbeit der Nervenzellen, danach Ökosysteme und der Stoffwechsel mit Fotosynthese und Zellatmung, und zum Schluss die Frage, wie der Mensch Ökosysteme verändert und wie sich die Vielfalt des Lebens erhalten lässt."
+        },
+        {
+          "file": "audio/s04_2_d12e52dd.mp3",
+          "text": "Die verbindlichen Themenfelder sind im Grund- und im Leistungskurs dieselben; der Unterschied liegt darin, wie weit und wie tief du in sie einsteigst."
+        },
+        {
+          "file": "audio/s05_1_46dfa453.mp3",
+          "text": "Du vervielfältigst zum Beispiel DNA und vergleichst sie miteinander, du verfolgst in Familienstammbäumen, wie eine Erbkrankheit weitergegeben wird, und du untersuchst, wie Medikamente, Gifte oder Alkohol die Signalübertragung zwischen Nervenzellen verändern."
+        },
+        {
+          "file": "audio/s06_1_8374db23.mp3",
+          "text": "Im Unterricht experimentierst du auch selbst, vor allem aber arbeitest du mit Material: Du wertest Messreihen, Diagramme und Beschreibungen von Versuchen aus."
+        },
+        {
+          "file": "audio/s06_2_a860a698.mp3",
+          "text": "Dabei gehst du vor wie in der Forschung: Du stellst eine Frage, leitest eine Hypothese ab und prüfst, ob die Ergebnisse sie stützen oder widerlegen."
+        },
+        {
+          "file": "audio/s07_1_9f7e0599.mp3",
+          "text": "Im Leistungskurs gehst du weiter: Du lernst, wie man fremde Gene mit Plasmiden oder Viren in Zellen einbaut, wie Krebs auf der Ebene der Gene entsteht, wie sich der Mensch entwickelt hat und wie Hormone und Nerven zusammenarbeiten."
+        },
+        {
+          "file": "audio/s07_2_38ed9fc8.mp3",
+          "text": "Experimentieren und Material auswerten gehören zu beiden Kursarten; im Leistungskurs arbeitest du dabei selbstständiger, mit mehr Fachsprache und an komplexeren Fragen."
+        },
+        {
+          "file": "audio/s07_3_d1f99139.mp3",
+          "text": "Kurz zusammengefasst: Die vier Halbjahre führen dich von den Genen über Evolution und Nervenzellen bis zu Ökosystemen und Stoffwechsel, du untersuchst Fragen mit Experimenten und Daten, und im Leistungskurs gehst du tiefer und arbeitest selbstständiger."
+        },
+        {
+          "file": "audio/s08_1_68811809.mp3",
+          "text": "In der Biologie geht es auch um Fragen, die uns alle betreffen: Wie weit darf Gentechnik gehen, was bringt ein Gentest, und welche Naturschutzmaßnahme hilft wirklich?"
+        },
+        {
+          "file": "audio/s08_2_e45d891f.mp3",
+          "text": "Du lernst, solche Fragen aus mehreren Blickwinkeln zu betrachten und dein Urteil mit Belegen zu begründen."
+        },
+        {
+          "file": "audio/s09_1_521a6670.mp3",
+          "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine."
+        },
+        {
+          "file": "audio/s09_2_68b17b1f.mp3",
+          "text": "Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine."
+        },
+        {
+          "file": "audio/s09_3_16f11324.mp3",
+          "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt."
+        },
+        {
+          "file": "audio/s09_4_bd516576.mp3",
+          "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet."
+        },
+        {
+          "file": "audio/s10_1_027ca782.mp3",
+          "text": "Jede Aufgabe bringt Bewertungseinheiten; aus dem Anteil, den du erreichst, ergeben sich deine Punkte, fünf Punkte zum Beispiel ab fünfundvierzig Prozent."
+        },
+        {
+          "file": "audio/s10_2_92b8e9b0.mp3",
+          "text": "Weil die Aufgaben mit Material arbeiten, kommt es darauf an, Diagramme, Tabellen und Versuchsergebnisse genau auszuwerten."
+        },
+        {
+          "file": "audio/s10_3_e06bc9db.mp3",
+          "text": "Gehäufte Fehler in Sprache oder äußerer Form kosten bis zu zwei Punkte."
+        },
+        {
+          "file": "audio/s11_1_06dae170.mp3",
+          "text": "Im Abitur bekommst du nach heutigem Stand vier Aufgabenvorschläge und wählst drei davon aus."
+        },
+        {
+          "file": "audio/s11_2_67573668.mp3",
+          "text": "Jede Aufgabe arbeitet mit Material, zum Beispiel mit Diagrammen, Tabellen oder der Beschreibung eines Versuchs."
+        },
+        {
+          "file": "audio/s11_3_8d7d55c3.mp3",
+          "text": "Du hast dreihundert Minuten Zeit, und insgesamt gibt es hundertzwanzig Bewertungseinheiten."
+        },
+        {
+          "file": "audio/s12_1_c7e1e2f1.mp3",
+          "text": "Was solltest du mitbringen?"
+        },
+        {
+          "file": "audio/s12_2_1a7989bc.mp3",
+          "text": "Neugier und Freude am genauen Beobachten, Ausdauer beim Lernen vieler Fachbegriffe, keine Scheu vor etwas Chemie und Mathematik, denn ohne sie lassen sich Stoffwechsel und das Wachstum von Populationen nicht verstehen – und Freude daran, aus Daten etwas herauszulesen."
+        },
+        {
+          "file": "audio/s13_1_56901060.mp3",
+          "text": "Wenn du wissen willst, wie Leben im ganz Kleinen und im ganz Großen funktioniert, und gern selbst nachforschst, ist der Leistungskurs Biologie das Richtige für dich."
+        },
+        {
+          "file": "audio/s14_1_b3442b93.mp3",
+          "text": "Alle Angaben entsprechen dem Stand vom Oktober 2026; die Vorgaben für deinen Jahrgang veröffentlicht das Land voraussichtlich im Sommer 2027."
+        },
+        {
+          "file": "audio/s14_2_8efcdcb9.mp3",
+          "text": "Bei Fragen helfen dir deine Lehrkräfte für Biologie gern weiter."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "id": "biologie",
+  "title": "Leistungskurs Biologie",
+  "accent": "#c8d530",
+  "script": "drehbuch/biologie.md",
+  "voice": {
+    "voice_id": "TIKjTeWOFujJEvXK1qIU",
+    "name": "Theo Teacher – Clear & Trustworthy",
+    "model": "eleven_v4",
+    "format": "mp3_44100_64"
+  },
+  "scenes": [
+    {
+      "n": 1,
+      "logo": true,
+      "title": { "main": "Leistungskurs Biologie", "sub": "Gymnasiale Oberstufe" },
+      "image": { "src": "b01.jpg", "motion": "zoom-in", "focus": [0.62, 0.45] }
+    },
+    {
+      "n": 2,
+      "chapter": "Der Rahmen",
+      "image": { "src": "b02.jpg", "motion": "pan-right" },
+      "panel": { "type": "stats", "items": [
+        { "at": "fünf Punkte", "value": "5", "label": "Punkte am Ende der Einführungsphase", "prefix": "mind.", "sub": "besser deutlich mehr – die Anforderungen steigen" },
+        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden", "sub": "als Tutorium 6" },
+        { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
+      ] }
+    },
+    {
+      "n": 3,
+      "image": { "src": "b03.jpg", "motion": "zoom-out" },
+      "panel": { "type": "combo", "title": "Biologie passt zu …", "items": [
+        { "at": "Deutsch, Englisch und Kunst", "a": "Biologie", "b": "Englisch, Deutsch oder Kunst", "ok": true },
+        { "at": "Geschichte", "figure": "d", "a": "Biologie", "b": "Geschichte", "ok": true },
+        { "at": "Chemie und Mathematik", "a": "Biologie", "b": "Politik und Wirtschaft, Chemie oder Mathematik", "ok": true }
+      ] }
+    },
+    {
+      "n": 4,
+      "chapter": "Was du lernst",
+      "image": { "src": "b04.jpg", "motion": "zoom-in", "focus": [0.3, 0.45] },
+      "band": { "type": "timeline", "items": [
+        { "at": "Genetik", "label": "Q1", "text": "Genetik und Gentechnik" },
+        { "at": "Evolution", "label": "Q2", "text": "Evolution und Nervensystem" },
+        { "at": "Ökosysteme", "label": "Q3", "text": "Ökosysteme und Stoffwechsel" },
+        { "at": "wie der Mensch", "label": "Q4", "text": "Mensch, Nachhaltigkeit, Vielfalt" }
+      ] },
+      "panel": { "type": "stats", "items": [
+        { "at": "verbindlichen Themenfelder", "value": "8", "label": "verbindliche Themenfelder", "sub": "in Grund- und Leistungskurs dieselben" }
+      ] }
+    },
+    {
+      "n": 5,
+      "image": { "src": "b05.jpg", "motion": "pan-right" },
+      "panel": { "type": "list", "title": "Was du damit machst", "items": [
+        { "at": "DNA", "text": "DNA vervielfältigen und vergleichen" },
+        { "at": "Familienstammbäumen", "text": "Erbgänge in Familienstammbäumen" },
+        { "at": "Medikamente", "text": "Wirkung von Stoffen an Synapsen" }
+      ] }
+    },
+    {
+      "n": 6,
+      "image": { "src": "b06.jpg", "motion": "zoom-in", "focus": [0.5, 0.6] },
+      "panel": { "type": "list", "title": "Mit Material arbeiten", "items": [
+        { "at": "experimentierst", "text": "auch selbst experimentieren" },
+        { "at": "Messreihen", "text": "Messreihen, Diagramme, Versuche auswerten" },
+        { "at": "Hypothese", "text": "Frage → Hypothese → Prüfung" }
+      ] }
+    },
+    {
+      "n": 7,
+      "image": { "src": "b07.jpg", "motion": "zoom-in", "focus": [0.4, 0.4] },
+      "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
+        { "at": "weiter", "label": "Themenfelder", "a": "8", "b": "dieselben 8" },
+        { "at": "Plasmiden", "label": "Inhalte", "a": "Gene, Evolution, Nervenzellen, Ökosysteme, Stoffwechsel", "b": "dazu Gentechnik mit Vektoren, Krebs, Evolution des Menschen, Hormone" },
+        { "at": "selbstständiger", "label": "Arbeiten", "a": "Experimente und Material auswerten", "b": "selbstständiger, komplexer, mehr Fachsprache" }
+      ] },
+      "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
+        "Gene, Evolution, Nervenzellen, Ökosysteme, Stoffwechsel",
+        "Fragen mit Experimenten und Daten untersuchen",
+        "Leistungskurs: tiefer und selbstständiger"
+      ] }
+    },
+    {
+      "n": 8,
+      "chapter": "Wie gearbeitet wird",
+      "image": { "src": "b08.jpg", "motion": "pan-left" },
+      "panel": { "type": "list", "title": "Begründet urteilen", "items": [
+        { "at": "Gentechnik", "text": "Gentechnik: Wie weit darf sie gehen?" },
+        { "at": "Gentest", "text": "Gentest: Was bringt er?" },
+        { "at": "Naturschutzmaßnahme", "text": "Naturschutz: Was hilft wirklich?" },
+        { "at": "Blickwinkeln", "text": "aus mehreren Blickwinkeln, mit Belegen" }
+      ] }
+    },
+    {
+      "n": 9,
+      "image": { "src": "b09.jpg", "motion": "zoom-out" },
+      "panel": { "type": "stats", "items": [
+        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1" },
+        { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur", "sub": "wenn die Lehrkraft es festlegt" },
+        { "at": "dritten Halbjahr", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
+      ] }
+    },
+    {
+      "n": 10,
+      "chapter": "Bewertung und Abitur",
+      "image": { "src": "b10.jpg", "motion": "zoom-in", "focus": [0.45, 0.55], "dim": 0.3 },
+      "panel": { "type": "list", "title": "So wird bewertet", "items": [
+        { "at": "Bewertungseinheiten", "text": "Bewertungseinheiten je Teilaufgabe" },
+        { "at": "fünfundvierzig", "text": "ab 45 % der Einheiten: 5 Punkte" },
+        { "at": "Material", "text": "Material genau auswerten" }
+      ], "notes": [
+        { "at": "Gehäufte", "text": "gehäufte Fehler in Sprache oder Form: bis zu 2 Punkte Abzug" }
+      ] }
+    },
+    {
+      "n": 11,
+      "corner": "Stand Abitur 2028",
+      "image": { "src": "b11.jpg", "motion": "zoom-in", "focus": [0.5, 0.55] },
+      "panel": { "type": "stats", "items": [
+        { "at": "vier Aufgabenvorschläge", "value": "3 aus 4", "label": "Aufgabenvorschläge wählst du aus" },
+        { "at": "dreihundert", "value": "300", "label": "Minuten Bearbeitungszeit" },
+        { "at": "hundertzwanzig", "value": "120", "label": "Bewertungseinheiten im Leistungskurs" }
+      ], "notes": [
+        { "at": "Material", "text": "jede Aufgabe mit Material: Diagramme, Tabellen, Versuche" }
+      ] }
+    },
+    {
+      "n": 12,
+      "chapter": "Die Herausforderungen",
+      "image": { "src": "b12.jpg", "motion": "pan-up" },
+      "panel": { "type": "list", "check": true, "title": "Was du mitbringen solltest", "items": [
+        { "at": "Neugier", "text": "Neugier und genaues Beobachten" },
+        { "at": "Fachbegriffe", "text": "Ausdauer bei vielen Fachbegriffen" },
+        { "at": "Chemie", "text": "keine Scheu vor Chemie und etwas Mathematik" },
+        { "at": "Daten", "text": "Freude daran, Daten auszuwerten" }
+      ] }
+    },
+    {
+      "n": 13,
+      "image": { "src": "b13.jpg", "motion": "zoom-out" }
+    },
+    {
+      "n": 14,
+      "logo": true,
+      "image": { "src": "b14.jpg", "motion": "zoom-out", "dim": 0.45 },
+      "endCard": {
+        "lines": ["Stand: Oktober 2026",
+          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Biologie, Abiturerlass 2028 des Landes Hessen"]
+      }
+    }
+  ]
+}
