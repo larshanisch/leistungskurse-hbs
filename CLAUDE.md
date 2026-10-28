@@ -64,7 +64,21 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Dauerbetrieb `kiosk.html` (Entscheidung 29), neue Titelbilder mit Fachmotiven (Entscheidung 30).
   Im unsichtbaren Browser-Pane laufen keine Animationsframes: Filmende dort nicht prüfbar, nur
   der Rahmen (Ende-Meldung per postMessage von Hand geschickt).
-  Offen: GitHub Pages; Kiosk einmal am echten Gerät mit Ton testen.
+- 29.10.2026 (Nacht): Startseite mit Überschrift „Aufgabenfeld I“ statt Kombinationskasten
+  (Entscheidung 31). **Online:** https://larshanisch.github.io/leistungskurse-hbs/ (Repository
+  `larshanisch/leistungskurse-hbs`, öffentlich, Pages aus `main`/Hauptordner). Geprüft: alle 174
+  Dateiverweise in exakter Schreibweise vorhanden, Film und Aufnahmen laden online.
+  Offen: Kiosk einmal am echten Gerät mit Ton testen; QR-Code.
+
+## Veröffentlichen
+
+- Repository `https://github.com/larshanisch/leistungskurse-hbs`, Zweig `main`; GitHub Pages baut nach jedem
+  Push von selbst (1–2 min). Autor der Commits: „Hanisch“ mit `295572885+larshanisch@users.noreply.github.com`
+  (lokal gesetzt) – nie die Outlook-Adresse.
+- GitHub CLI: die angemeldete aus dem HBS-Planer mitbenutzen,
+  `/c/Projekte/SL-Verwaltungstool/werkzeuge/gh/bin/gh.exe` – keine zweite installieren (Nutzer 29.10.2026).
+- GitHub Pages unterscheidet Groß- und Kleinschreibung, Windows nicht: nach neuen Dateien die Verweise gegen
+  `git ls-files` abgleichen.
 
 ## Präsentationselemente (content/<fach>.json)
 

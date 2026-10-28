@@ -1,6 +1,6 @@
 # Entscheidungslog
 
-Version 19 · 29.10.2026
+Version 20 · 29.10.2026
 
 | Nr. | Datum | Entscheidung | Begründung |
 |---|---|---|---|
@@ -35,3 +35,4 @@ Version 19 · 29.10.2026
 | 29 | 29.10.2026 | Dauerbetrieb über `kiosk.html`: Raum wählen (Raum 1 Deutsch und Englisch im Wechsel, Kunstraum Kunst allein, oder alle drei), ein Klick startet Vollbild; zwischen den Filmen 6 s Karte „Als Nächstes“. Die Filme laufen in einem eingebetteten Rahmen (`film.html?kiosk=1`) und melden ihr Ende dem Rahmen. `?loop=1` bleibt für einen einzelnen Film | Nutzer (Entscheidung zu den Räumen vom 27.10.2026). Der eine Klick ist nötig, weil Browser Ton ohne Bedienung sperren; weil die Seite selbst nicht neu lädt, gilt die Freigabe für alle folgenden Filme |
 | 30 | 29.10.2026 | Neue Titelbilder (Szene 1, Kachel, Startbildschirm, Kiosk-Karte) mit Fachmotiven statt Schulszenen: Deutsch Bühne mit Kulissen aus den Pflichtwerken, Englisch Collage der englischsprachigen Welt, Kunst Atelier mit Malerei, Fotografie, Architektur und Design. Figur und Motive rechts, links Ruhe für den Titel. Alte Titelbilder in `art/archiv/titel_alt/` | Nutzer: Titelbilder sollen stärker auf Fachinhalte eingehen |
 | 31 | 29.10.2026 | Startseite ohne Kasten „Welche Kombinationen gehen?“; stattdessen über den Kacheln die Überschrift „Aufgabenfeld I · Das sprachlich-literarisch-künstlerische Aufgabenfeld“ mit dem Satz „Unsere Leistungskurse in diesem Aufgabenfeld: Deutsch, Englisch und Kunst“. Die Kombinationsregel bleibt in den Filmen (Szene 3) | Nutzer. Die HBS bietet in diesem Aufgabenfeld nur diese drei LKs an (Nutzer 29.10.2026). Gemessen 29.10.2026: bei 1920×1080, 1280×720, 1024×768 und 3840×2160 genau bildschirmhoch |
+| 32 | 29.10.2026 | Veröffentlicht unter https://larshanisch.github.io/leistungskurse-hbs/ (öffentliches Repository `larshanisch/leistungskurse-hbs`, Pages aus `main`). Anlegen und Hochladen mit der GitHub CLI aus dem HBS-Planer, keine eigene Installation | Nutzer. Vorher geprüft: keine Namen, keine Mail-Adressen, keine externen Skripte; Schulfotos und Rohbilder (`art/`) bleiben lokal; 16 MB |
