@@ -1,6 +1,6 @@
 # Drehbuch — Leistungskurs Deutsch
 
-Version 0.10 · 29.10.2026 (Entwurf)
+Version 0.10 · 29.10.2026 (freigegeben)
 
 Änderung gegenüber 0.9: Szene 10 nennt nicht mehr Englisch als Gegenbeispiel, sondern alle Fächer außer Mathematik – dort bringt der Leistungskurs eine Klausur pro Halbjahr mehr (Nutzer 29.10.2026, Entscheidung 56).
 
