@@ -4,7 +4,7 @@ window.FILMS["englisch"] = {
  "id": "englisch",
  "title": "Leistungskurs Englisch",
  "accent": "#c8d530",
- "total": 365.01,
+ "total": 372.58,
  "credits": [
   "Henry Fuseli (Johann Heinrich Füssli): Studie zu den drei Hexen aus „Macbeth“, um 1783, Auckland Art Gallery Toi o Tāmaki – gemeinfrei, Wikimedia Commons",
   "Walter Crane: Imperial Federation – Map of the World Showing the Extent of the British Empire in 1886 – gemeinfrei, Wikimedia Commons (Norman B. Leventhal Map Center, Boston Public Library)",
@@ -749,8 +749,8 @@ window.FILMS["englisch"] = {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 38.55,
-   "speechEnd": 37.15,
+   "duration": 46.12,
+   "speechEnd": 44.72,
    "sentences": [
     {
      "text": "Im Leistungskurs schreibst du pro Halbjahr zwei Klausuren, im letzten eine; im Grundkurs ist es bei uns nur eine.",
@@ -779,6 +779,13 @@ window.FILMS["englisch"] = {
      "dur": 11.36,
      "estimated": false,
      "start": 25.79
+    },
+    {
+     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
+     "audio": "media/englisch/audio/s09_5_bd516576.mp3",
+     "dur": 7.12,
+     "estimated": false,
+     "start": 37.6
     }
    ],
    "cues": [
@@ -826,6 +833,16 @@ window.FILMS["englisch"] = {
      "text": "oder einem Mitschüler vor zwei Lehrkräften frei auf Englisch.",
      "start": 33.535,
      "end": 37.035
+    },
+    {
+     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
+     "start": 37.6,
+     "end": 42.913
+    },
+    {
+     "text": "was dich in der Prüfung erwartet.",
+     "start": 42.913,
+     "end": 44.667
     }
    ],
    "image": {
@@ -861,6 +878,11 @@ window.FILMS["englisch"] = {
       "value": "Q3",
       "label": "mündliche Kommunikationsprüfung statt einer Klausur",
       "t": 28.257
+     },
+     {
+      "value": "Q3",
+      "label": "Klausur unter Abiturbedingungen",
+      "t": 41.054
      }
     ],
     "notes": [
@@ -946,7 +968,7 @@ window.FILMS["englisch"] = {
     ],
     "t": 3.608
    },
-   "start": 258.29
+   "start": 265.86
   },
   {
    "n": 11,
@@ -1025,7 +1047,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 276.42
+   "start": 283.99
   },
   {
    "n": 12,
@@ -1104,7 +1126,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 301.31
+   "start": 308.88
   },
   {
    "n": 13,
@@ -1150,7 +1172,7 @@ window.FILMS["englisch"] = {
     }
    ],
    "corner": "bei uns in der Regel",
-   "start": 318.56
+   "start": 326.13
   },
   {
    "n": 14,
@@ -1193,7 +1215,7 @@ window.FILMS["englisch"] = {
     "src": "media/englisch/img/e14.jpg",
     "motion": "zoom-out"
    },
-   "start": 331.92
+   "start": 339.49
   },
   {
    "n": 15,
@@ -1246,7 +1268,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "logo": true,
-   "start": 349.36
+   "start": 356.93
   }
  ]
 };

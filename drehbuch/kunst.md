@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Kunst
 
-Version 0.7 · 29.10.2026 (freigegeben)
+Version 0.8 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.7: Szene 9 nennt die Klausur unter Abiturbedingungen in Q3, wie in den übrigen Filmen (Satz wortgleich übernommen; OAVO § 9 Abs. 11, FB-A Abschn. 3; Nutzer 29.10.2026, Entscheidung 60).
 
 Änderung gegenüber 0.6: Szene „Klausuren“ vergleicht mit dem Grundkurs: Zwei- und dreistündige Grundkurse schreiben in Q1–Q3 je eine Klausur, der LK zwei; Deutsch und Mathematik schon im vierstündigen GK zwei (Schaubild Klausuren, Abb. 4 und Anmerkung a; Nutzer 29.10.2026, Entscheidung 55).
 
@@ -200,7 +202,7 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   > dass euer ganzer Kurs im ersten Jahr eine Klausur durch ein Referat oder eine Präsentation
   > ersetzt. Im zweiten Jahr ersetzt eine
   > fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk – je nach Aufgabe auch zu
-  > Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.
+  > Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist. Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
 - **Beleg:** FB-K 4 (OAVO § 9 Abs. 6, 6a Nr. 1 „nach Entscheidung der Lehrkraft … einheitlich“ und
   6a Nr. 4 — am Originaltext geprüft; HKM-Schaubild Klausuren Abb. 2; ERL23 Abschn. 2.1.2
   häusliche Arbeit; Präsentation und Gespräch nach 2.3.2). Dauer bewusst nicht genannt (Nutzer).

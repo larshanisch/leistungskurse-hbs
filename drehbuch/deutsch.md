@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Deutsch
 
-Version 0.10 · 29.10.2026 (freigegeben)
+Version 0.11 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.10: Szene 10 nennt die Klausur unter Abiturbedingungen in Q3, wie in den übrigen Filmen (Satz wortgleich übernommen; OAVO § 9 Abs. 11, FB-A Abschn. 3; Nutzer 29.10.2026, Entscheidung 60).
 
 Änderung gegenüber 0.9: Szene 10 nennt nicht mehr Englisch als Gegenbeispiel, sondern alle Fächer außer Mathematik – dort bringt der Leistungskurs eine Klausur pro Halbjahr mehr (Nutzer 29.10.2026, Entscheidung 56).
 
@@ -219,7 +221,7 @@ Inhaltsangabe, damit jede Porträtkarte genau so lange steht, wie über das Werk
   > Der Leistungskurs Deutsch bringt dir also keine zusätzliche
   > Klausur. Das gilt sonst nur noch für Mathematik; in allen anderen Fächern schreibt der Grundkurs
   > bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei. Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in einem
-  > der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt. Deine
+  > der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt. Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet. Deine
   > Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.
 - **Beleg:** FB-A (§ 9 Abs. 6 Nr. 1–3, Abs. 6a Nr. 1 „nach Entscheidung der Lehrkraft … einheitlich“
   und Abs. 7 — am Originaltext geprüft; § 9 Abs. 2; HKM-Schaubild Klausuren Abb. 1 und 4,

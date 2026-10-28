@@ -449,6 +449,7 @@
     const hold = renderAudio(tt);
     if (hold !== null && playing) { base = hold; startedAt = now(); }
     $('progress-fill').style.width = (100 * tt / total) + '%';
+    $('topbar-fill').style.transform = 'scaleX(' + (tt / total) + ')';
     $('time').textContent = fmt(tt) + ' / ' + fmt(total);
     requestAnimationFrame(frame);
   }

@@ -3,12 +3,7 @@
   "title": "Leistungskurs Kunst",
   "accent": "#c8d530",
   "script": "drehbuch/kunst.md",
-  "voice": {
-    "voice_id": "TIKjTeWOFujJEvXK1qIU",
-    "name": "Theo Teacher – Clear & Trustworthy",
-    "model": "eleven_v4",
-    "format": "mp3_44100_64"
-  },
+  "voice": { "voice_id": "TIKjTeWOFujJEvXK1qIU", "name": "Theo Teacher – Clear & Trustworthy", "model": "eleven_v4", "format": "mp3_44100_64" },
   "scenes": [
     {
       "n": 1,
@@ -20,34 +15,48 @@
       "n": 2,
       "chapter": "Der Rahmen",
       "image": { "src": "k02.jpg", "motion": "pan-right" },
-      "panel": { "type": "stats", "items": [
-        { "at": "fünf Punkte", "value": "5", "label": "Punkte am Ende der Einführungsphase", "prefix": "mind.", "sub": "besser deutlich mehr – die Anforderungen steigen" },
-        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden" },
-        { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
-      ] }
+      "panel": {
+        "type": "stats",
+        "items": [
+          {
+            "at": "fünf Punkte",
+            "value": "5",
+            "label": "Punkte am Ende der Einführungsphase",
+            "prefix": "mind.",
+            "sub": "besser deutlich mehr – die Anforderungen steigen"
+          },
+          { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden" },
+          { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
+        ]
+      }
     },
     {
       "n": 3,
       "image": { "src": "k03.jpg", "motion": "zoom-out" },
-      "panel": { "type": "combo", "title": "Kunst passt zu …", "items": [
-        { "at": "Mathematik", "a": "Kunst", "b": "Mathematik oder Naturwissenschaft", "ok": true },
-        { "at": "Kunst mit Englisch", "figure": "er", "a": "Kunst", "b": "Englisch", "ok": true },
-        { "at": "Kunst mit Deutsch", "a": "Kunst", "b": "Deutsch", "ok": false }
-      ] }
+      "panel": {
+        "type": "combo",
+        "title": "Kunst passt zu …",
+        "items": [
+          { "at": "Mathematik", "a": "Kunst", "b": "Mathematik oder Naturwissenschaft", "ok": true },
+          { "at": "Kunst mit Englisch", "figure": "er", "a": "Kunst", "b": "Englisch", "ok": true },
+          { "at": "Kunst mit Deutsch", "a": "Kunst", "b": "Deutsch", "ok": false }
+        ]
+      }
     },
     {
       "n": 4,
       "chapter": "Was du lernst",
       "image": { "src": "k04.jpg", "motion": "zoom-in", "focus": [0.35, 0.45] },
-      "band": { "type": "timeline", "items": [
-        { "at": "Malerei", "label": "Q1", "text": "Klassische Bildkünste" },
-        { "at": "Fotografie", "label": "Q2", "text": "Medien" },
-        { "at": "Architektur", "label": "Q3", "text": "Gestaltete Umwelt" },
-        { "at": "Gegenwart", "label": "Q4", "text": "Gegenwart und Transformation" }
-      ] },
-      "panel": { "type": "stats", "items": [
-        { "at": "neun", "value": "9", "label": "verbindliche Themenfelder fürs Abitur" }
-      ] }
+      "band": {
+        "type": "timeline",
+        "items": [
+          { "at": "Malerei", "label": "Q1", "text": "Klassische Bildkünste" },
+          { "at": "Fotografie", "label": "Q2", "text": "Medien" },
+          { "at": "Architektur", "label": "Q3", "text": "Gestaltete Umwelt" },
+          { "at": "Gegenwart", "label": "Q4", "text": "Gegenwart und Transformation" }
+        ]
+      },
+      "panel": { "type": "stats", "items": [{ "at": "neun", "value": "9", "label": "verbindliche Themenfelder fürs Abitur" }] }
     },
     {
       "n": 5,
@@ -69,92 +78,140 @@
     {
       "n": 6,
       "image": { "src": "k06.jpg", "motion": "pan-right" },
-      "panel": { "type": "list", "title": "Fotografie, Design, Architektur", "items": [
-        { "at": "dokumentarische", "text": "Fotografie: dokumentarisch und inszeniert" },
-        { "at": "Plakate", "text": "Plakat und Layout: Bild und Schrift" },
-        { "at": "Bauten", "text": "Architektur: Grund- und Aufriss" },
-        { "at": "Museumsfahrten", "text": "Museumsfahrten und Ausstellungen, auch eigene – bei uns in der Regel" }
-      ] }
+      "panel": {
+        "type": "list",
+        "title": "Fotografie, Design, Architektur",
+        "items": [
+          { "at": "dokumentarische", "text": "Fotografie: dokumentarisch und inszeniert" },
+          { "at": "Plakate", "text": "Plakat und Layout: Bild und Schrift" },
+          { "at": "Bauten", "text": "Architektur: Grund- und Aufriss" },
+          { "at": "Museumsfahrten", "text": "Museumsfahrten und Ausstellungen, auch eigene – bei uns in der Regel" }
+        ]
+      }
     },
     {
       "n": 7,
       "image": { "src": "k07.jpg", "motion": "zoom-in", "focus": [0.3, 0.7] },
-      "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
-        { "at": "dieselben", "label": "Themen", "a": "dieselben Themenfelder", "b": "vertiefter" },
-        { "at": "Farb- und Gestaltungstheorien", "label": "Theorie und Gestalten", "a": "Ideen, Skizzen, eigene Werke", "b": "dazu Farb- und Gestaltungstheorien, Varianten, Entwurfsgrafik oder Modell" },
-        { "at": "Fachsprache", "label": "Fachsprache", "a": "sicher", "b": "differenziert, kunstwissenschaftlich" }
-      ] },
-      "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
-        "Analyse und Gestaltung zählen gleich",
-        "4 Halbjahre: Bildkünste, Medien, Umwelt, Gegenwart",
-        "Leistungskurs: tiefer, theoretischer, eigenständiger"
-      ] }
+      "panel": {
+        "type": "compare",
+        "head": ["Grundkurs", "Leistungskurs"],
+        "items": [
+          { "at": "dieselben", "label": "Themen", "a": "dieselben Themenfelder", "b": "vertiefter" },
+          {
+            "at": "Farb- und Gestaltungstheorien",
+            "label": "Theorie und Gestalten",
+            "a": "Ideen, Skizzen, eigene Werke",
+            "b": "dazu Farb- und Gestaltungstheorien, Varianten, Entwurfsgrafik oder Modell"
+          },
+          { "at": "Fachsprache", "label": "Fachsprache", "a": "sicher", "b": "differenziert, kunstwissenschaftlich" }
+        ]
+      },
+      "takeaways": {
+        "at": "Kurz zusammengefasst",
+        "title": "Das Wichtigste aus Kapitel 2",
+        "items": [
+          "Analyse und Gestaltung zählen gleich",
+          "4 Halbjahre: Bildkünste, Medien, Umwelt, Gegenwart",
+          "Leistungskurs: tiefer, theoretischer, eigenständiger"
+        ]
+      }
     },
     {
       "n": 8,
       "chapter": "Wie gearbeitet wird",
       "image": { "src": "k08.jpg", "motion": "pan-left" },
-      "panel": { "type": "list", "title": "Zwei Rollen", "items": [
-        { "at": "Als Betrachter", "text": "Bilder erschließen: beschreiben, analysieren, deuten, am Bild belegen" },
-        { "at": "Als Gestalter", "text": "Bilder gestalten: skizzieren, Varianten entwickeln, umsetzen, den Weg erläutern" }
-      ] }
+      "panel": {
+        "type": "list",
+        "title": "Zwei Rollen",
+        "items": [
+          { "at": "Als Betrachter", "text": "Bilder erschließen: beschreiben, analysieren, deuten, am Bild belegen" },
+          { "at": "Als Gestalter", "text": "Bilder gestalten: skizzieren, Varianten entwickeln, umsetzen, den Weg erläutern" }
+        ]
+      }
     },
     {
       "n": 9,
       "image": { "src": "k09.jpg", "motion": "zoom-out" },
-      "panel": { "type": "stats", "items": [
-        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1" },
-        { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur in Q1 oder Q2", "sub": "wenn die Lehrkraft es festlegt" },
-        { "at": "fachpraktische", "value": "Q3/Q4", "label": "fachpraktische Prüfung statt einer Klausur" }
-      ], "notes": [
-        { "at": "eigenes Werk", "text": "eigenes Werk, auch zu Hause · Präsentation und Gespräch" }
-      ] }
+      "panel": {
+        "type": "stats",
+        "items": [
+          {
+            "at": "zwei Klausuren",
+            "value": "2",
+            "label": "Klausuren pro Halbjahr",
+            "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1"
+          },
+          {
+            "at": "Lehrkraft",
+            "value": "↔",
+            "label": "Referat oder Präsentation statt einer Klausur in Q1 oder Q2",
+            "sub": "wenn die Lehrkraft es festlegt"
+          },
+          { "at": "fachpraktische", "value": "Q3/Q4", "label": "fachpraktische Prüfung statt einer Klausur" },
+          { "at": "Abiturbedingungen", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
+        ],
+        "notes": [{ "at": "eigenes Werk", "text": "eigenes Werk, auch zu Hause · Präsentation und Gespräch" }]
+      }
     },
     {
       "n": 10,
       "chapter": "Bewertung und Abitur",
       "image": { "src": "k10.jpg", "motion": "zoom-in", "focus": [0.3, 0.45], "dim": 0.3 },
-      "panel": { "type": "list", "title": "So wird bewertet", "items": [
-        { "at": "Idee", "text": "Praxis: Idee, Umsetzung, Lösungsweg" },
-        { "at": "genaue", "text": "Schrift: genaue Beobachtung, Fachsprache, begründete Deutung" }
-      ], "notes": [
-        { "at": "Sprachfehler", "text": "gehäufte Sprachfehler: bis zu 2 Punkte Abzug" }
-      ] }
+      "panel": {
+        "type": "list",
+        "title": "So wird bewertet",
+        "items": [
+          { "at": "Idee", "text": "Praxis: Idee, Umsetzung, Lösungsweg" },
+          { "at": "genaue", "text": "Schrift: genaue Beobachtung, Fachsprache, begründete Deutung" }
+        ],
+        "notes": [{ "at": "Sprachfehler", "text": "gehäufte Sprachfehler: bis zu 2 Punkte Abzug" }]
+      }
     },
     {
       "n": 11,
       "corner": "Stand Abitur 2028",
       "image": { "src": "k11.jpg", "motion": "zoom-in", "focus": [0.3, 0.55] },
-      "panel": { "type": "stats", "items": [
-        { "at": "eine von drei", "value": "1 aus 3", "label": "Aufgaben zur Wahl" },
-        { "at": "dreihundert Minuten", "value": "300", "label": "Minuten Bearbeitungszeit", "sub": "praktische Aufgabe: 345" }
-      ], "notes": [
-        { "at": "eine praktische Aufgabe", "text": "praktisch mit schriftlichem Anteil · schriftlich mit praktischem Anteil · rein schriftlich" },
-        { "at": "Computer", "text": "je nach Ausstattung auch am Computer oder mit Modellbaumaterial" }
-      ] }
+      "panel": {
+        "type": "stats",
+        "items": [
+          { "at": "eine von drei", "value": "1 aus 3", "label": "Aufgaben zur Wahl" },
+          { "at": "dreihundert Minuten", "value": "300", "label": "Minuten Bearbeitungszeit", "sub": "praktische Aufgabe: 345" }
+        ],
+        "notes": [
+          {
+            "at": "eine praktische Aufgabe",
+            "text": "praktisch mit schriftlichem Anteil · schriftlich mit praktischem Anteil · rein schriftlich"
+          },
+          { "at": "Computer", "text": "je nach Ausstattung auch am Computer oder mit Modellbaumaterial" }
+        ]
+      }
     },
     {
       "n": 12,
       "chapter": "Die Herausforderungen",
       "image": { "src": "k12.jpg", "motion": "pan-up" },
-      "panel": { "type": "list", "check": true, "title": "Was du mitbringen solltest", "items": [
-        { "at": "Freude", "text": "Freude am Gestalten und genauen Hinsehen" },
-        { "at": "Lust", "text": "Lust, über Bilder zu schreiben" },
-        { "at": "Interesse", "text": "Interesse an Kunstgeschichte" },
-        { "at": "Zeit", "text": "Zeit – auch für Arbeit zu Hause" }
-      ] }
+      "panel": {
+        "type": "list",
+        "check": true,
+        "title": "Was du mitbringen solltest",
+        "items": [
+          { "at": "Freude", "text": "Freude am Gestalten und genauen Hinsehen" },
+          { "at": "Lust", "text": "Lust, über Bilder zu schreiben" },
+          { "at": "Interesse", "text": "Interesse an Kunstgeschichte" },
+          { "at": "Zeit", "text": "Zeit – auch für Arbeit zu Hause" }
+        ]
+      }
     },
-    {
-      "n": 13,
-      "image": { "src": "k13.jpg", "motion": "zoom-out" }
-    },
+    { "n": 13, "image": { "src": "k13.jpg", "motion": "zoom-out" } },
     {
       "n": 14,
       "logo": true,
       "image": { "src": "k14.jpg", "motion": "zoom-out", "dim": 0.45 },
       "endCard": {
-        "lines": ["Stand: Oktober 2026",
-          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Kunst, Abiturerlass 2028, Erlass zur fachpraktischen Prüfung vom 19.07.2023 des Landes Hessen, Einheitliche Prüfungsanforderungen Kunst (KMK)"]
+        "lines": [
+          "Stand: Oktober 2026",
+          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Kunst, Abiturerlass 2028, Erlass zur fachpraktischen Prüfung vom 19.07.2023 des Landes Hessen, Einheitliche Prüfungsanforderungen Kunst (KMK)"
+        ]
       }
     }
   ]

@@ -108,6 +108,9 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   aufnehmen und hören lassen, Umschreibungen halfen hier nicht. Wird eine Datei unter gleichem Namen ersetzt: `CACHE` in `sw.js` hochzählen.
 - 29.10.2026: Gemeinfreie Fotos in Geschichte 0.5 (Scheidemann, Mauerbau) und PoWi 0.5 (Grundgesetz), Entscheidung 59.
   Regel: Porträtkarte und Liste (`panel`) nie gleichzeitig – sonst verdeckt die Liste die große Bildunterschrift.
+- 29.10.2026: Klausur unter Abiturbedingungen jetzt in allen Filmen (Entscheidung 60): **Deutsch 5:43, Englisch 6:13,
+  Kunst 5:49 min**. Fortschrittsbalken oben im Player (Entscheidung 61). Drehbuch Biologie 0.2 freigegeben (Leitfigur D,
+  Entscheidung 62); als Nächstes Bilder und `content/biologie.json`.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Offen: Filme Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

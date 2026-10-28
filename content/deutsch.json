@@ -3,12 +3,7 @@
   "title": "Leistungskurs Deutsch",
   "accent": "#c8d530",
   "script": "drehbuch/deutsch.md",
-  "voice": {
-    "voice_id": "TIKjTeWOFujJEvXK1qIU",
-    "name": "Theo Teacher – Clear & Trustworthy",
-    "model": "eleven_v4",
-    "format": "mp3_44100_64"
-  },
+  "voice": { "voice_id": "TIKjTeWOFujJEvXK1qIU", "name": "Theo Teacher – Clear & Trustworthy", "model": "eleven_v4", "format": "mp3_44100_64" },
   "scenes": [
     {
       "n": 1,
@@ -20,34 +15,52 @@
       "n": 2,
       "chapter": "Der Rahmen",
       "image": { "src": "s02.jpg", "motion": "pan-right" },
-      "panel": { "type": "stats", "items": [
-        { "at": "fünf Punkte", "value": "5", "label": "Punkte am Ende der Einführungsphase", "prefix": "mind.", "sub": "besser deutlich mehr – die Anforderungen steigen" },
-        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden" },
-        { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
-      ] }
+      "panel": {
+        "type": "stats",
+        "items": [
+          {
+            "at": "fünf Punkte",
+            "value": "5",
+            "label": "Punkte am Ende der Einführungsphase",
+            "prefix": "mind.",
+            "sub": "besser deutlich mehr – die Anforderungen steigen"
+          },
+          { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden" },
+          { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
+        ]
+      }
     },
     {
       "n": 3,
       "image": { "src": "s03.jpg", "motion": "zoom-out" },
-      "panel": { "type": "combo", "title": "Welche Kombination geht?", "items": [
-        { "at": "Deutsch und Englisch", "figure": "sie", "a": "Deutsch", "b": "Englisch", "ok": true },
-        { "at": "Deutsch und Englisch", "figure": "er", "a": "Englisch", "b": "Kunst", "ok": true },
-        { "at": "Deutsch und Kunst", "a": "Deutsch", "b": "Kunst", "ok": false }
-      ] }
+      "panel": {
+        "type": "combo",
+        "title": "Welche Kombination geht?",
+        "items": [
+          { "at": "Deutsch und Englisch", "figure": "sie", "a": "Deutsch", "b": "Englisch", "ok": true },
+          { "at": "Deutsch und Englisch", "figure": "er", "a": "Englisch", "b": "Kunst", "ok": true },
+          { "at": "Deutsch und Kunst", "a": "Deutsch", "b": "Kunst", "ok": false }
+        ]
+      }
     },
     {
       "n": 4,
       "chapter": "Was du liest",
       "image": { "src": "s04.jpg", "motion": "zoom-in", "focus": [0.75, 0.4] },
-      "band": { "type": "timeline", "items": [
-        { "at": "Fiktion", "label": "Q1", "text": "Fiktion und Wirklichkeit" },
-        { "at": "Sprache und Literatur", "label": "Q2", "text": "Sprache und Literatur in politisch-gesellschaftlichen Spannungsfeldern" },
-        { "at": "Zäsuren", "label": "Q3", "text": "Zäsuren, Umbrüche und Neuanfänge" },
-        { "at": "wie Literatur", "label": "Q4", "text": "Literatur und Rezeption" }
-      ] },
-      "panel": { "type": "stats", "items": [
-        { "at": "neun Themenfelder", "value": "9", "label": "verbindliche Themenfelder fürs Abitur" }
-      ] }
+      "band": {
+        "type": "timeline",
+        "items": [
+          { "at": "Fiktion", "label": "Q1", "text": "Fiktion und Wirklichkeit" },
+          {
+            "at": "Sprache und Literatur",
+            "label": "Q2",
+            "text": "Sprache und Literatur in politisch-gesellschaftlichen Spannungsfeldern"
+          },
+          { "at": "Zäsuren", "label": "Q3", "text": "Zäsuren, Umbrüche und Neuanfänge" },
+          { "at": "wie Literatur", "label": "Q4", "text": "Literatur und Rezeption" }
+        ]
+      },
+      "panel": { "type": "stats", "items": [{ "at": "neun Themenfelder", "value": "9", "label": "verbindliche Themenfelder fürs Abitur" }] }
     },
     {
       "n": 5,
@@ -71,9 +84,7 @@
     {
       "n": 6,
       "image": { "src": "pd_friedrich.jpg", "motion": "still", "pos": [[0.5, 0.95], [0.5, 0.35]] },
-      "imageCues": [
-        { "at": "Zeit", "src": "pd_kirchner.jpg", "motion": "still", "pos": [[0.5, 0.25], [0.5, 0.5]] }
-      ],
+      "imageCues": [{ "at": "Zeit", "src": "pd_kirchner.jpg", "motion": "still", "pos": [[0.5, 0.25], [0.5, 0.5]] }],
       "captions": [
         { "at": "So liest", "text": "Romantik · Caspar David Friedrich, um 1817" },
         { "at": "Zeit", "text": "Expressionismus · Ernst Ludwig Kirchner, 1914" }
@@ -83,93 +94,142 @@
       "n": 7,
       "corner": "Beispiel: Abiturjahrgang 2028",
       "image": { "src": "s07.jpg", "motion": "zoom-in" },
-      "panel": { "type": "list", "title": "Nicht nur Bücher", "items": [
-        { "at": "digitalen Medien", "text": "Sprache in digitalen Medien" },
-        { "at": "Theaterinszenierungen", "text": "Drama und Inszenierung" },
-        { "at": "Literatur von heute", "text": "Literatur der Gegenwart" },
-        { "at": "Theaterbesuche", "text": "Theaterbesuche – bei uns in der Regel" }
-      ] }
+      "panel": {
+        "type": "list",
+        "title": "Nicht nur Bücher",
+        "items": [
+          { "at": "digitalen Medien", "text": "Sprache in digitalen Medien" },
+          { "at": "Theaterinszenierungen", "text": "Drama und Inszenierung" },
+          { "at": "Literatur von heute", "text": "Literatur der Gegenwart" },
+          { "at": "Theaterbesuche", "text": "Theaterbesuche – bei uns in der Regel" }
+        ]
+      }
     },
     {
       "n": 8,
       "image": { "src": "s08.jpg", "motion": "pan-right" },
-      "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
-        { "at": "dieselben", "label": "Themen und Lektüren", "a": "dieselben", "b": "vertiefter" },
-        { "at": "theoretische Texte", "label": "Texte", "a": "literarische und pragmatische", "b": "dazu theoretische Texte (Schiller, Novalis, Nietzsche, Freud)" },
-        { "at": "in beiden Kursarten", "label": "Deuten und Urteilen", "a": "begründet", "b": "selbstständiger, mit Theorie" }
-      ] },
-      "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
-        "4 Halbjahre, 4 Themen",
-        "Pflichtlektüren für ganz Hessen",
-        "Leistungskurs: tiefer und theoretischer"
-      ] }
+      "panel": {
+        "type": "compare",
+        "head": ["Grundkurs", "Leistungskurs"],
+        "items": [
+          { "at": "dieselben", "label": "Themen und Lektüren", "a": "dieselben", "b": "vertiefter" },
+          {
+            "at": "theoretische Texte",
+            "label": "Texte",
+            "a": "literarische und pragmatische",
+            "b": "dazu theoretische Texte (Schiller, Novalis, Nietzsche, Freud)"
+          },
+          { "at": "in beiden Kursarten", "label": "Deuten und Urteilen", "a": "begründet", "b": "selbstständiger, mit Theorie" }
+        ]
+      },
+      "takeaways": {
+        "at": "Kurz zusammengefasst",
+        "title": "Das Wichtigste aus Kapitel 2",
+        "items": ["4 Halbjahre, 4 Themen", "Pflichtlektüren für ganz Hessen", "Leistungskurs: tiefer und theoretischer"]
+      }
     },
     {
       "n": 9,
       "chapter": "Wie gearbeitet wird",
       "image": { "src": "s09.jpg", "motion": "zoom-in", "focus": [0.45, 0.6] },
-      "panel": { "type": "list", "title": "Schreiben im Mittelpunkt", "items": [
-        { "at": "interpretierst", "text": "interpretieren" },
-        { "at": "analysierst", "text": "analysieren" },
-        { "at": "erörterst", "text": "erörtern" },
-        { "at": "Grundlage von Material", "text": "materialgestützt schreiben" }
-      ] }
+      "panel": {
+        "type": "list",
+        "title": "Schreiben im Mittelpunkt",
+        "items": [
+          { "at": "interpretierst", "text": "interpretieren" },
+          { "at": "analysierst", "text": "analysieren" },
+          { "at": "erörterst", "text": "erörtern" },
+          { "at": "Grundlage von Material", "text": "materialgestützt schreiben" }
+        ]
+      }
     },
     {
       "n": 10,
       "image": { "src": "s10.jpg", "motion": "pan-left" },
-      "panel": { "type": "stats", "items": [
-        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im Grundkurs genauso · im letzten Halbjahr 1" },
-        { "at": "in allen anderen Fächern", "value": "1 → 2", "label": "andere Fächer: GK → LK", "sub": "außer Mathematik – dort kommt eine Klausur dazu" },
-        { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur", "sub": "wenn die Lehrkraft es festlegt" },
-        { "at": "Mitarbeit", "value": "≥", "label": "Mitarbeit zählt mindestens so viel wie die Klausuren" }
-      ] }
+      "panel": {
+        "type": "stats",
+        "items": [
+          {
+            "at": "zwei Klausuren",
+            "value": "2",
+            "label": "Klausuren pro Halbjahr",
+            "sub": "im Grundkurs genauso · im letzten Halbjahr 1"
+          },
+          {
+            "at": "in allen anderen Fächern",
+            "value": "1 → 2",
+            "label": "andere Fächer: GK → LK",
+            "sub": "außer Mathematik – dort kommt eine Klausur dazu"
+          },
+          {
+            "at": "Lehrkraft",
+            "value": "↔",
+            "label": "Referat oder Präsentation statt einer Klausur",
+            "sub": "wenn die Lehrkraft es festlegt"
+          },
+          { "at": "Abiturbedingungen", "value": "Q3", "label": "Klausur unter Abiturbedingungen" },
+          { "at": "Mitarbeit", "value": "≥", "label": "Mitarbeit zählt mindestens so viel wie die Klausuren" }
+        ]
+      }
     },
     {
       "n": 11,
       "chapter": "Bewertung und Abitur",
       "image": { "src": "s11.jpg", "motion": "zoom-in", "dim": 0.45 },
-      "panel": { "type": "ring", "at": "siebzig Prozent", "parts": [
-        { "label": "Verstehen", "value": 70 },
-        { "label": "Darstellung", "value": 30, "at": "dreißig" }
-      ], "notes": [
-        { "at": "ab drei Fehlern", "text": "ab 3 Fehlern pro 100 Wörter: −1 Punkt" },
-        { "at": "ab sechs", "text": "ab 6 Fehlern: −2 Punkte" }
-      ] }
+      "panel": {
+        "type": "ring",
+        "at": "siebzig Prozent",
+        "parts": [{ "label": "Verstehen", "value": 70 }, { "label": "Darstellung", "value": 30, "at": "dreißig" }],
+        "notes": [
+          { "at": "ab drei Fehlern", "text": "ab 3 Fehlern pro 100 Wörter: −1 Punkt" },
+          { "at": "ab sechs", "text": "ab 6 Fehlern: −2 Punkte" }
+        ]
+      }
     },
     {
       "n": 12,
       "corner": "Stand Abitur 2028",
       "image": { "src": "s12.jpg", "motion": "zoom-in", "focus": [0.3, 0.6] },
-      "panel": { "type": "stats", "items": [
-        { "at": "dreihundertfünfzehn", "value": "315", "label": "Minuten Bearbeitungszeit" },
-        { "at": "eine von vier", "value": "1 aus 4", "label": "Aufgaben zur Wahl" }
-      ], "notes": [
-        { "at": "Hilfsmittel", "text": "Hilfsmittel: Rechtschreibwörterbuch · Pflichtlektüren ohne Kommentar · Liste der Arbeitsanweisungen" }
-      ] }
+      "panel": {
+        "type": "stats",
+        "items": [
+          { "at": "dreihundertfünfzehn", "value": "315", "label": "Minuten Bearbeitungszeit" },
+          { "at": "eine von vier", "value": "1 aus 4", "label": "Aufgaben zur Wahl" }
+        ],
+        "notes": [
+          {
+            "at": "Hilfsmittel",
+            "text": "Hilfsmittel: Rechtschreibwörterbuch · Pflichtlektüren ohne Kommentar · Liste der Arbeitsanweisungen"
+          }
+        ]
+      }
     },
     {
       "n": 13,
       "chapter": "Die Herausforderungen",
       "image": { "src": "s13.jpg", "motion": "pan-up" },
-      "panel": { "type": "list", "check": true, "title": "Was du mitbringen solltest", "items": [
-        { "at": "Freude", "text": "Freude an viel Lektüre" },
-        { "at": "Ausdauer", "text": "Ausdauer für lange Schreibzeiten" },
-        { "at": "Sorgfalt", "text": "Sorgfalt in Sprache und Stil" },
-        { "at": "Bereitschaft", "text": "eigenes Urteil statt Auswendiglernen" }
-      ] }
+      "panel": {
+        "type": "list",
+        "check": true,
+        "title": "Was du mitbringen solltest",
+        "items": [
+          { "at": "Freude", "text": "Freude an viel Lektüre" },
+          { "at": "Ausdauer", "text": "Ausdauer für lange Schreibzeiten" },
+          { "at": "Sorgfalt", "text": "Sorgfalt in Sprache und Stil" },
+          { "at": "Bereitschaft", "text": "eigenes Urteil statt Auswendiglernen" }
+        ]
+      }
     },
-    {
-      "n": 14,
-      "image": { "src": "s14.jpg", "motion": "zoom-out" }
-    },
+    { "n": 14, "image": { "src": "s14.jpg", "motion": "zoom-out" } },
     {
       "n": 15,
       "logo": true,
       "image": { "src": "s15.jpg", "motion": "zoom-out", "dim": 0.45 },
       "endCard": {
-        "lines": ["Stand: Oktober 2026",
-          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Deutsch, Abiturerlass 2028 des Landes Hessen"]
+        "lines": [
+          "Stand: Oktober 2026",
+          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Deutsch, Abiturerlass 2028 des Landes Hessen"
+        ]
       }
     }
   ]

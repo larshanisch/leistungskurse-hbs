@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Englisch
 
-Version 0.5 · 29.10.2026 (freigegeben)
+Version 0.6 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.5: Szene 9 nennt die Klausur unter Abiturbedingungen in Q3, wie in den übrigen Filmen (Satz wortgleich übernommen; OAVO § 9 Abs. 11, FB-A Abschn. 3; Nutzer 29.10.2026, Entscheidung 60).
 
 Änderung gegenüber 0.4 (Nutzer 29.10.2026): Szene 1 — erster Satz ohne Rückgriff auf den
 Deutsch-Film („die beiden“ setzte voraus, dass man das Duo schon kennt); jeder Film soll in jeder
@@ -204,7 +206,7 @@ werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   > entscheiden, dass euer ganzer Kurs im ersten oder zweiten Halbjahr eine Klausur durch ein Referat
   > ersetzt. Im dritten Halbjahr ersetzt eine mündliche Kommunikationsprüfung eine Klausur: Bei
   > uns sprichst du dabei zusammen mit einer Mitschülerin oder einem Mitschüler vor zwei Lehrkräften
-  > frei auf Englisch.
+  > frei auf Englisch. Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
 - **Beleg:** FB-E 4 (Schaubild Klausuren Abb. 1 und 4, Allgemeine Anmerkung a; OAVO § 9 Abs. 6
   Nr. 1–3, Abs. 6a Nr. 1 „nach Entscheidung der Lehrkraft … einheitlich“ und Nr. 3 — am Originaltext geprüft;
   SCHULE: Grundkurs Englisch dreistündig, eine Klausur (Nutzer 29.10.2026);

@@ -4,7 +4,7 @@ window.FILMS["deutsch"] = {
  "id": "deutsch",
  "title": "Leistungskurs Deutsch",
  "accent": "#c8d530",
- "total": 335.37,
+ "total": 342.94,
  "credits": [
   "Caspar David Friedrich: Der Wanderer über dem Nebelmeer, um 1817, Hamburger Kunsthalle – gemeinfrei, Wikimedia Commons",
   "Peter Friedel: Heinrich von Kleist, Miniatur, 1801 – gemeinfrei, Wikimedia Commons",
@@ -821,8 +821,8 @@ window.FILMS["deutsch"] = {
    "n": 10,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 35.8,
-   "speechEnd": 34.4,
+   "duration": 43.37,
+   "speechEnd": 41.97,
    "sentences": [
     {
      "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine – genau wie im Grundkurs Deutsch.",
@@ -853,11 +853,18 @@ window.FILMS["deutsch"] = {
      "start": 20.27
     },
     {
-     "text": "Deine Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.",
-     "audio": "media/deutsch/audio/s10_5_e77900c0.mp3",
-     "dur": 4.4,
+     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
+     "audio": "media/deutsch/audio/s10_5_bd516576.mp3",
+     "dur": 7.12,
      "estimated": false,
      "start": 30
+    },
+    {
+     "text": "Deine Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.",
+     "audio": "media/deutsch/audio/s10_6_e77900c0.mp3",
+     "dur": 4.4,
+     "estimated": false,
+     "start": 37.57
     }
    ],
    "cues": [
@@ -897,9 +904,19 @@ window.FILMS["deutsch"] = {
      "end": 29.435
     },
     {
-     "text": "Deine Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.",
+     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
      "start": 30,
-     "end": 34.4
+     "end": 35.313
+    },
+    {
+     "text": "was dich in der Prüfung erwartet.",
+     "start": 35.313,
+     "end": 37.067
+    },
+    {
+     "text": "Deine Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.",
+     "start": 37.57,
+     "end": 41.97
     }
    ],
    "image": {
@@ -928,9 +945,14 @@ window.FILMS["deutsch"] = {
       "t": 20.614
      },
      {
+      "value": "Q3",
+      "label": "Klausur unter Abiturbedingungen",
+      "t": 33.454
+     },
+     {
       "value": "≥",
       "label": "Mitarbeit zählt mindestens so viel wie die Klausuren",
-      "t": 30.334
+      "t": 37.904
      }
     ]
    },
@@ -1010,7 +1032,7 @@ window.FILMS["deutsch"] = {
     ],
     "t": 1.7
    },
-   "start": 245.24
+   "start": 252.81
   },
   {
    "n": 12,
@@ -1093,7 +1115,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 266.01
+   "start": 273.58
   },
   {
    "n": 13,
@@ -1161,7 +1183,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 288.55
+   "start": 296.12
   },
   {
    "n": 14,
@@ -1199,7 +1221,7 @@ window.FILMS["deutsch"] = {
     "src": "media/deutsch/img/s14.jpg",
     "motion": "zoom-out"
    },
-   "start": 304.92
+   "start": 312.49
   },
   {
    "n": 15,
@@ -1252,7 +1274,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "logo": true,
-   "start": 319.56
+   "start": 327.13
   }
  ]
 };

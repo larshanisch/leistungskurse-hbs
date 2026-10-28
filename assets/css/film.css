@@ -209,6 +209,10 @@ button, a { font: inherit; color: inherit; }
   background: var(--glass); cursor: pointer; text-decoration: none; font-size: clamp(15px, 1.4vw, 20px); font-weight: 600; }
 .finish-btns button { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 
+/* ---------- Fortschritt oben: immer sichtbar, auch wenn die Steuerleiste ausgeblendet ist ---------- */
+#topbar { position: absolute; left: 0; right: 0; top: 0; z-index: 11; height: max(4px, 0.5vh); background: rgba(255,255,255,0.16); pointer-events: none; }
+#topbar-fill { position: absolute; inset: 0; background: var(--accent); transform-origin: left center; transform: scaleX(0); }
+
 /* ---------- Steuerleiste ---------- */
 #controls { position: absolute; left: 0; right: 0; bottom: 0; z-index: 10; padding: 0 2vw 1.2vh;
   background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0)); transition: opacity 0.4s; }

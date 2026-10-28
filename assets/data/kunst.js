@@ -4,7 +4,7 @@ window.FILMS["kunst"] = {
  "id": "kunst",
  "title": "Leistungskurs Kunst",
  "accent": "#c8d530",
- "total": 341.33,
+ "total": 348.9,
  "credits": [
   "Berthe Morisot: Die Wiege (Le berceau), 1872, Musée d’Orsay, Paris – gemeinfrei, Wikimedia Commons (Google Art Project)",
   "Gustave Caillebotte: Straße in Paris, Regenwetter (Rue de Paris, temps de pluie), 1877, Art Institute of Chicago – gemeinfrei, Wikimedia Commons (Google Art Project)",
@@ -720,8 +720,8 @@ window.FILMS["kunst"] = {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 31.51,
-   "speechEnd": 30.11,
+   "duration": 39.08,
+   "speechEnd": 37.68,
    "sentences": [
     {
      "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine.",
@@ -750,6 +750,13 @@ window.FILMS["kunst"] = {
      "dur": 12.72,
      "estimated": false,
      "start": 17.39
+    },
+    {
+     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
+     "audio": "media/kunst/audio/s09_5_bd516576.mp3",
+     "dur": 7.12,
+     "estimated": false,
+     "start": 30.56
     }
    ],
    "cues": [
@@ -787,6 +794,16 @@ window.FILMS["kunst"] = {
      "text": "stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.",
      "start": 25.19,
      "end": 29.99
+    },
+    {
+     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
+     "start": 30.56,
+     "end": 35.873
+    },
+    {
+     "text": "was dich in der Prüfung erwartet.",
+     "start": 35.873,
+     "end": 37.627
     }
    ],
    "image": {
@@ -812,6 +829,11 @@ window.FILMS["kunst"] = {
       "value": "Q3/Q4",
       "label": "fachpraktische Prüfung statt einer Klausur",
       "t": 19.13
+     },
+     {
+      "value": "Q3",
+      "label": "Klausur unter Abiturbedingungen",
+      "t": 34.014
      }
     ],
     "notes": [
@@ -896,7 +918,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 244.96
+   "start": 252.53
   },
   {
    "n": 11,
@@ -989,7 +1011,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 264.93
+   "start": 272.5
   },
   {
    "n": 12,
@@ -1057,7 +1079,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 293.87
+   "start": 301.44
   },
   {
    "n": 13,
@@ -1095,7 +1117,7 @@ window.FILMS["kunst"] = {
     "src": "media/kunst/img/k13.jpg",
     "motion": "zoom-out"
    },
-   "start": 310.32
+   "start": 317.89
   },
   {
    "n": 14,
@@ -1148,7 +1170,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "logo": true,
-   "start": 325.76
+   "start": 333.33
   }
  ]
 };
