@@ -1,6 +1,6 @@
 # Drehbuch — Leistungskurs Politik und Wirtschaft
 
-Version 0.2 · 29.10.2026 (wartet auf Freigabe)
+Version 0.2 · 29.10.2026 (freigegeben, vertont)
 
 Änderungen gegenüber 0.1 (Nutzer 29.10.2026): Leitfigur C mit Mathematik + PoWi bestätigt.
 Szene 5 — Exkursion „wenn es möglich ist“. Szene 8 — Debatten und Planspiele statt „Simulationen“.

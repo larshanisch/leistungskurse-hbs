@@ -106,10 +106,32 @@
   .chip[aria-pressed="true"] small { color: var(--on-accent); }
   .chip:disabled { opacity: 0.35; cursor: default; }
   .result { padding: 22px; border-radius: 20px; background: linear-gradient(160deg, #1d2027 0%, var(--card) 70%); border: 1px solid var(--line); }
-  .result .verdict { margin: 0 0 0.8em; font-size: 22px; font-weight: 800; line-height: 1.25; }
+  .result .verdict { margin: 0 0 0.8em; font-size: 18px; font-weight: 800; line-height: 1.25; color: var(--ink-soft); }
+  .result .verdict.ok { color: var(--ink); }
   .result .verdict.ok::before { content: "✓ "; color: var(--accent); }
+  /* Ergebnis: die beiden gewählten LKs mit ihren Titelbildern (Entscheidung 46) */
+  .duo { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 10px; margin-bottom: 0.7em; }
+  .duo .plus { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--on-accent); font-weight: 900; font-size: 22px; }
+  .lkpic { position: relative; display: flex; flex-direction: column; justify-content: flex-end; height: 160px; padding: 12px 14px; border-radius: 14px;
+    overflow: hidden; text-decoration: none; background: #111317; border: 1px solid var(--line); }
+  .lkpic::before { content: ""; position: absolute; inset: 0; background: var(--bg) var(--pos, center) / cover; transition: transform 0.6s; }
+  .lkpic::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,9,12,0.92) 10%, rgba(8,9,12,0.15) 65%); }
+  .lkpic > * { position: relative; z-index: 1; }
+  a.lkpic:hover::before { transform: scale(1.05); }
+  a.lkpic:hover { border-color: var(--accent); }
+  .lkpic .k { font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+  .lkpic b { font-size: 21px; font-weight: 800; line-height: 1.15; }
+  .lkpic .play { position: absolute; top: 10px; right: 10px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+    font-size: 14px; background: var(--accent); color: var(--on-accent); box-shadow: 0 4px 14px rgba(0,0,0,0.4); }
+  .lkpic .play.away { width: auto; height: auto; padding: 0.3em 0.8em; border-radius: 999px; font-size: 12px; font-weight: 700;
+    background: rgba(8,9,12,0.75); color: var(--ink-soft); }
+  .lkpic.empty { border: 2px dashed var(--line); background: rgba(255,255,255,0.03); justify-content: center; align-items: center; text-align: center; }
+  .lkpic.empty::before, .lkpic.empty::after { content: none; }
+  .lkpic.empty b { font-size: 17px; color: var(--ink-soft); }
+  .chip .th { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--bg) var(--pos, center) / cover; border: 1px solid rgba(255,255,255,0.2); }
+  .chip .nm { flex: 1; min-width: 0; overflow-wrap: anywhere; }
   .result .wait { margin: 0; font-size: 18px; color: var(--ink-soft); line-height: 1.5; }
-  .slots { display: grid; grid-template-columns: 1.2fr 1.2fr 2.6fr; gap: 10px; margin-bottom: 0.9em; }
+  .slots { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 0.9em; }
   .slot { padding: 0.7em 0.8em; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,0.05); }
   .slot.lk { border-color: var(--accent); }
   .slot .k { display: block; white-space: nowrap; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.3em; }
@@ -128,8 +150,8 @@
   footer { margin-top: 3em; font-size: 13px; color: #8a857c; line-height: 1.5; }
 
   @media (max-width: 599px) { .cta { flex-wrap: wrap; } .cta .txt { flex-basis: calc(100% - 60px - 1.2em); } .cta .open { margin-left: auto; } }
-  @media (max-width: 599px) { .plan { grid-template-columns: minmax(0, 1fr) !important; } .chips { grid-template-columns: 1fr 1fr; } .chip { font-size: 15px; } .slot b { font-size: 15px; } }
-  @media (max-width: 899px) { .plan { grid-template-columns: 1fr 1fr; } .result { grid-column: 1 / -1; } .slots { grid-template-columns: 1fr 1fr; } .slots .slot:last-child { grid-column: 1 / -1; } }
+  @media (max-width: 599px) { .plan { grid-template-columns: minmax(0, 1fr) !important; } .chips { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .chip { padding: 0.5em 0.6em; gap: 0.4em; } .chip .th { width: 24px; height: 24px; } .chip { font-size: 15px; } .lkpic { height: 130px; } .lkpic b { font-size: 17px; } }
+  @media (max-width: 899px) { .plan { grid-template-columns: 1fr 1fr; } .result { grid-column: 1 / -1; } #setup { place-items: start center; } }
 
   /* Querformat ab Tablet-Größe (digitale Tafel): alles auf einem Bildschirm, kein Scrollen.
      Größen hängen an der Bildschirmhöhe (vh), damit die Seite bei jeder Auflösung genau passt. */
@@ -188,7 +210,16 @@
     .chips { gap: 0.9vh; }
     .chip { font-size: 2.1vh; padding: 0.9vh 0.9vw; border-radius: 1.2vh; }
     .chip small { font-size: 1.4vh; }
-    .result .verdict { font-size: 2.8vh; margin-bottom: 1.6vh; }
+    .result .verdict { font-size: 2vh; margin-bottom: 1.2vh; }
+    .duo { gap: 0.8vw; margin-bottom: 1vh; }
+    .duo .plus { width: 4vh; height: 4vh; font-size: 2.6vh; }
+    .lkpic { height: 11.5vh; padding: 1.2vh 1vw; border-radius: 1.6vh; }
+    .lkpic .k { font-size: 1.4vh; }
+    .lkpic b { font-size: 2.6vh; }
+    .lkpic .play { width: 4vh; height: 4vh; font-size: 1.7vh; top: 1.2vh; right: 1.2vh; }
+    .lkpic .play.away { width: auto; height: auto; font-size: 1.4vh; }
+    .lkpic.empty b { font-size: 2vh; }
+    .chip .th { width: 3.4vh; height: 3.4vh; }
     .result .wait { font-size: 2.2vh; }
     .slots { gap: 0.6vw; margin-bottom: 1.6vh; }
     .slot { padding: 1vh 0.7vw; border-radius: 1.2vh; }
@@ -208,10 +239,54 @@
     .plan { grid-template-columns: 1fr 1.5fr; }
     .plan .col { grid-column: 1; }
     .result { grid-column: 2; grid-row: 1 / span 2; }
-    .chips { grid-template-columns: 1fr 1fr; }
+    .chips { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.7vh; }
+    .chip { padding: 0.7vh 0.6vw; gap: 0.4vw; }
+    .chip .th { width: 2.8vh; height: 2.8vh; }
     .result ul { font-size: 1.75vh; }
     .fcard h2 { font-size: 3.3vh; }
     .result .fine { margin-top: 1.2vh; }
+  }
+  /* Raum-Einrichtung (Entscheidung 45): was in einem anderen Raum läuft, ist ausgegraut */
+  .logo { -webkit-touch-callout: none; user-select: none; }
+  .fcard.away { cursor: default; }
+  .fcard.away .pic::before { filter: grayscale(1) brightness(0.5); }
+  .fcard.away:hover, .fcard.away:focus-visible { transform: none; border-color: var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+  .fcard.away:hover .pic::before { transform: none; }
+  .fcard.away h2, .fcard.away p { color: #8a857c; }
+  .fcard.away h2::after { background: #55524c; }
+  .fcard li.away { background: rgba(255,255,255,0.04); color: #8a857c; border-color: rgba(255,255,255,0.08); }
+  .fcard .go.away { color: var(--ink-soft); }
+  .tile.away::before { filter: grayscale(1) brightness(0.38); }
+  .tile.away::after { background: linear-gradient(to top, rgba(8,9,12,0.92) 15%, rgba(8,9,12,0.3) 70%); }
+  .tile.away .subj { color: #b9b4ab; }
+  .tile.away .subj::after { background: #55524c; }
+  .tile.away .go { background: rgba(255,255,255,0.12); color: var(--ink-soft); }
+  .result .links span.away { padding: 0.4em 1em; border-radius: 999px; background: rgba(255,255,255,0.05); color: #8a857c; font-size: 14px; font-weight: 700; }
+  #setup { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 16px; background: rgba(8,9,12,0.94); overflow: auto; }
+  #setup .box { width: min(1100px, 100%); padding: 28px; border-radius: 20px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(0,0,0,0.6); }
+  #setup h2 { margin: 0 0 0.3em; font-size: clamp(24px, 3vw, 36px); font-weight: 800; }
+  #setup .hint { margin: 0 0 1.2em; color: var(--ink-soft); font-size: 16px; line-height: 1.5; max-width: 60em; }
+  #setup .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+  #setup fieldset { margin: 0; padding: 14px; border: 1px solid var(--line); border-radius: 14px; display: grid; gap: 8px; align-content: start; }
+  #setup legend { padding: 0 6px; font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+  #setup label { display: flex; align-items: center; gap: 0.6em; padding: 0.55em 0.8em; border-radius: 10px; cursor: pointer;
+    background: rgba(255,255,255,0.05); border: 1px solid var(--line); font-size: 17px; font-weight: 700; }
+  #setup label small { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+  #setup label:has(input:checked) { background: rgba(200,213,48,0.16); border-color: var(--accent); }
+  #setup input { width: 1.2em; height: 1.2em; accent-color: var(--accent); }
+  #setup .acts { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; margin-top: 1.4em; }
+  #setup .acts button { font-weight: 800; font-size: 16px; padding: 0.7em 1.4em; border-radius: 999px; cursor: pointer; border: 1px solid var(--line); }
+  #setup .acts .ghost { background: transparent; }
+  #setup .acts .primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+  #setup .acts .primary:disabled { opacity: 0.4; cursor: default; }
+  @media (min-width: 900px) and (min-aspect-ratio: 4/3) {
+    #setup .box { padding: 3.4vh 2.4vw; border-radius: 2vh; }
+    #setup h2 { font-size: 4vh; }
+    #setup .hint { font-size: 1.9vh; }
+    #setup legend { font-size: 1.5vh; }
+    #setup label { font-size: 2.1vh; }
+    #setup label small { font-size: 1.4vh; }
+    #setup .acts button { font-size: 1.9vh; }
   }
 </style>
 </head>
@@ -273,9 +348,23 @@
     <span class="modes">· <a href="tafel.html" target="_top">Vollbild für die Tafel</a>
     · <a href="kiosk.html" target="_top">Dauerbetrieb für die Räume</a></span></footer>
 </main>
+<div id="setup" hidden role="dialog" aria-modal="true" aria-labelledby="setupTitle">
+  <div class="box">
+    <p class="kicker">Einrichtung für dieses Gerät</p>
+    <h2 id="setupTitle">Welche Filme laufen in diesem Raum?</h2>
+    <p class="hint">Was du nicht auswählst, erscheint ausgegraut mit dem Hinweis, dass wir es in einem anderen Raum zeigen.
+      Der Kurswahl-Planer bleibt vollständig. Später ändern: drei Sekunden auf das Schullogo drücken.</p>
+    <div class="cols" id="setupCols"></div>
+    <div class="acts">
+      <button type="button" class="ghost" id="setupAll">Alles zeigen, kein fester Raum</button>
+      <button type="button" class="primary" id="setupSave" disabled>Speichern</button>
+    </div>
+  </div>
+</div>
 <script src="assets/data/deutsch.js"></script>
 <script src="assets/data/englisch.js"></script>
 <script src="assets/data/kunst.js"></script>
+<script src="assets/data/powi.js"></script>
 <script>
   (function () {
     // Aufgabenfelder nach KMK-Vereinbarung, Kursangebot nach der Übersicht der Schule (Entscheidung 37)
@@ -292,7 +381,8 @@
                     what: 'Literatur, Film und die großen Fragen der englischsprachigen Welt – auf Englisch.' },
       kunst:      { name: 'Kunst', field: 1, img: 'media/kunst/img/k01.jpg', pos: '72% center',
                     what: 'Bilder verstehen und selbst gestalten – von Malerei und Fotografie bis zur Architektur.' },
-      powi:       { name: 'Politik und Wirtschaft', field: 2 },
+      powi:       { name: 'Politik und Wirtschaft', field: 2, img: 'media/powi/img/p01.jpg', pos: '80% center',
+                    what: 'Demokratie, Wirtschaft und internationale Politik – analysieren und begründet urteilen.' },
       geschichte: { name: 'Geschichte', field: 2 },
       mathe:      { name: 'Mathematik', field: 3, kind: 'm' },
       biologie:   { name: 'Biologie', field: 3, kind: 'nw' },
@@ -315,18 +405,33 @@
     var minutes = function (f) { return Math.floor(f.total / 60) + ':' + String(Math.floor(f.total % 60)).padStart(2, '0') + ' Minuten'; };
     var PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>';
 
+    // --- Raum (Entscheidung 45): das Gerät merkt sich, welche Fächer hier gezeigt werden ---
+    // Handy-Seite (handy.html → index.html?alle=1): immer alles, auch nach dem Rückweg aus einem Film
+    var KEY = 'tdot-raum', params = new URLSearchParams(location.search), room = null, SHOW_ALL = false;
+    try { if (params.has('alle')) sessionStorage.setItem('tdot-alle', '1'); SHOW_ALL = sessionStorage.getItem('tdot-alle') === '1'; } catch (e) { SHOW_ALL = params.has('alle'); }
+    try { room = JSON.parse(localStorage.getItem(KEY)); } catch (e) { room = null; }
+    function here(id) { return SHOW_ALL || !room || room.all || room.subjects.indexOf(id) >= 0; }
+    var AWAY = 'Diesen Kurs stellen wir in einem anderen Raum vor.';
+
     // im Vollbild-Rahmen (tafel.html) keine Links auf andere Betriebsarten
     if (window.parent !== window) document.querySelector('.modes').hidden = true;
 
     // --- Startansicht ---
-    $('fields').innerHTML = FIELDS.map(function (f) {
-      var films = f.subjects.filter(function (id) { return FILMS[id]; }).length;
-      return '<a class="fcard" href="#feld-' + f.id + '"><span class="pic" style="--bg: url(\'' + f.img + '\'); --pos: ' + f.pos + '"></span>' +
-        '<span class="num">Aufgabenfeld ' + f.num + '</span><div class="body">' +
-        '<h2>' + esc(f.sub) + '</h2><p>' + esc(f.name) + '</p><ul>' + f.subjects.map(function (id) {
-          return '<li' + (FILMS[id] ? ' class="film"' : '') + '>' + esc(SUBJ[id].name) + '</li>';
-        }).join('') + '</ul><span class="go">' + (films ? films + (films === 1 ? ' Film' : ' Filme') + ' ansehen →' : 'Filme folgen – Kurse ansehen →') + '</span></div></a>';
-    }).join('');
+    function renderHome() {
+      $('fields').innerHTML = FIELDS.map(function (f) {
+        var away = !f.subjects.some(here);
+        var films = f.subjects.filter(function (id) { return FILMS[id] && here(id); }).length;
+        var go = away ? 'Zeigen wir in einem anderen Raum' : films ? films + (films === 1 ? ' Film' : ' Filme') + ' ansehen →' : 'Filme folgen – Kurse ansehen →';
+        return (away ? '<div class="fcard away">' : '<a class="fcard" href="#feld-' + f.id + '">') +
+          '<span class="pic" style="--bg: url(\'' + f.img + '\'); --pos: ' + f.pos + '"></span>' +
+          '<span class="num">Aufgabenfeld ' + f.num + '</span><div class="body">' +
+          '<h2>' + esc(f.sub) + '</h2><p>' + esc(f.name) + '</p><ul>' + f.subjects.map(function (id) {
+            var cls = !here(id) ? 'away' : FILMS[id] ? 'film' : '';
+            return '<li' + (cls ? ' class="' + cls + '"' : '') + '>' + esc(SUBJ[id].name) + '</li>';
+          }).join('') + '</ul><span class="go' + (away ? ' away' : '') + '">' + go + '</span></div>' + (away ? '</div>' : '</a>');
+      }).join('');
+    }
+    renderHome();
 
     // --- Feldansicht ---
     function lkBadge(id) { return LK1.indexOf(id) >= 0 ? '1. oder 2. LK' : '2. LK'; }
@@ -336,6 +441,11 @@
       $('tiles').style.setProperty('--n', f.subjects.length);
       $('tiles').innerHTML = f.subjects.map(function (id, i, all) {
         var s = SUBJ[id], film = FILMS[id];
+        if (!here(id)) {
+          var bg = film ? s.img : f.img, bpos = film ? s.pos : 'center';
+          return '<div class="tile away" style="--bg: url(\'' + bg + '\'); --pos: ' + bpos + '"><span class="lk">' + lkBadge(id) + '</span>' +
+            '<p class="subj">' + esc(s.name) + '</p><p class="what">' + AWAY + '</p><span class="go">Anderer Raum</span></div>';
+        }
         if (!film) {
           // jede Kachel zeigt einen anderen Ausschnitt des Feldbilds
           var pos = all.length > 1 ? Math.round(100 * i / (all.length - 1)) + '% center' : 'center';
@@ -350,9 +460,21 @@
 
     // --- Planer ---
     var pick = { a: null, b: null };
+    // Titelbild des Films, sonst das Bild des Aufgabenfelds
+    function picOf(id) { var s = SUBJ[id]; return s.img ? { img: s.img, pos: s.pos } : { img: FIELDS[s.field - 1].img, pos: FIELDS[s.field - 1].pos }; }
+    function lkPic(id, label) {
+      if (!id) return '<div class="lkpic empty"><b>' + label.replace('LK', 'Leistungskurs') + ' wählen</b></div>';
+      var pic = picOf(id), style = ' style="--bg: url(\'' + pic.img + '\'); --pos: ' + pic.pos + '"';
+      var inner = '<span class="k">' + label + '</span><b>' + esc(SUBJ[id].name) + '</b>';
+      if (FILMS[id] && here(id)) return '<a class="lkpic" href="film.html?fach=' + id + '"' + style + '><span class="play" title="Film ansehen">▶</span>' + inner + '</a>';
+      return '<div class="lkpic"' + style + '>' + (FILMS[id] ? '<span class="play away">Film: anderer Raum</span>' : '') + inner + '</div>';
+    }
+    function duo(a, b) { return '<div class="duo">' + lkPic(a, '1. LK') + '<span class="plus" aria-hidden="true">+</span>' + lkPic(b, '2. LK') + '</div>'; }
     function chips(el, list, slot) {
       $(el).innerHTML = list.map(function (id) {
-        return '<button type="button" class="chip" data-id="' + id + '" aria-pressed="false">' + esc(SUBJ[id].name) +
+        var pic = picOf(id);
+        return '<button type="button" class="chip" data-id="' + id + '" aria-pressed="false">' +
+          '<span class="th" style="--bg: url(\'' + pic.img + '\'); --pos: ' + pic.pos + '"></span><span class="nm">' + esc(SUBJ[id].name) + '</span>' +
           '<small>' + FIELDS[SUBJ[id].field - 1].num + '</small></button>';
       }).join('');
       $(el).addEventListener('click', function (e) {
@@ -410,7 +532,7 @@
       });
       var a = pick.a, b = pick.b, r = $('result');
       if (!a || !b) {
-        r.innerHTML = '<p class="wait">' + (!a && !b ? 'Wähle links deinen 1. und deinen 2. Leistungskurs.'
+        r.innerHTML = duo(a, b) + '<p class="wait">' + (!a && !b ? 'Wähle links deinen 1. und deinen 2. Leistungskurs.'
           : !a ? 'Wähle noch deinen 1. Leistungskurs – Englisch, Biologie, Mathematik oder Politik und Wirtschaft.'
           : 'Wähle noch deinen 2. Leistungskurs.') + '</p>' +
           '<p class="fine">Deutsch und Kunst zusammen gehen nicht: Einer der beiden Leistungskurse muss eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein.</p>';
@@ -419,16 +541,11 @@
       var c = consequences(a, b);
       var chipsHtml = c.need.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') +
         new Array(c.free + 1).join('<span class="free">frei wählbar</span>');
-      var films = [a, b].filter(function (id) { return FILMS[id]; });
-      r.innerHTML = '<p class="verdict ok">' + esc(SUBJ[a].name) + ' und ' + esc(SUBJ[b].name) + ' kannst du an der HBS kombinieren.</p>' +
-        '<div class="slots">' +
-          '<div class="slot lk"><span class="k">Prüfungsfach 1</span><b>' + esc(SUBJ[a].name) + '</b></div>' +
-          '<div class="slot lk"><span class="k">Prüfungsfach 2</span><b>' + esc(SUBJ[b].name) + '</b></div>' +
-          '<div class="slot"><span class="k">Prüfungsfächer 3 bis 5</span><div class="need">' + chipsHtml + '</div></div>' +
-        '</div>' +
+      r.innerHTML = duo(a, b) +
+        '<p class="verdict ok">Diese Kombination gibt es an der HBS. Beide LKs sind deine Prüfungsfächer 1 und 2.</p>' +
+        '<div class="slots"><div class="slot"><span class="k">Prüfungsfächer 3 bis 5</span><div class="need">' + chipsHtml + '</div></div></div>' +
         '<p class="how">1 bis 3 schriftlich, 4 mündlich, 5 als Präsentation oder mündlich.</p>' +
         '<ul>' + c.notes.map(function (n) { return '<li>' + n + '</li>'; }).join('') + '</ul>' +
-        (films.length ? '<p class="links">' + films.map(function (id) { return '<a href="film.html?fach=' + id + '">▶ Film ' + esc(SUBJ[id].name) + '</a>'; }).join('') + '</p>' : '') +
         '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Das Angebot an Leistungskursen ' +
         'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';
     }
@@ -451,6 +568,38 @@
     }
     window.addEventListener('hashchange', route);
     route();
+
+    // --- Einrichtung ---
+    function openSetup() {
+      $('setupCols').innerHTML = FIELDS.map(function (f) {
+        return '<fieldset><legend>Aufgabenfeld ' + f.num + '</legend>' + f.subjects.map(function (id) {
+          var on = room && (room.all || room.subjects.indexOf(id) >= 0);
+          return '<label><input type="checkbox" value="' + id + '"' + (on ? ' checked' : '') + '>' + esc(SUBJ[id].name) +
+            (FILMS[id] ? '' : '<small>Film folgt</small>') + '</label>';
+        }).join('') + '</fieldset>';
+      }).join('');
+      update();
+      $('setup').hidden = false;
+    }
+    function chosen() { return [].map.call($('setupCols').querySelectorAll('input:checked'), function (i) { return i.value; }); }
+    function update() { $('setupSave').disabled = !chosen().length; }
+    function save(r) {
+      room = r;
+      try { localStorage.setItem(KEY, JSON.stringify(r)); } catch (e) { /* ohne Speicher gilt die Wahl bis zum Neuladen */ }
+      $('setup').hidden = true;
+      renderHome(); route();
+    }
+    $('setupCols').addEventListener('change', update);
+    $('setupSave').addEventListener('click', function () {
+      var c = chosen(); save({ all: c.length === Object.keys(SUBJ).length, subjects: c });
+    });
+    $('setupAll').addEventListener('click', function () { save({ all: true, subjects: [] }); });
+    // versteckter Zugang: drei Sekunden auf das Logo drücken, oder index.html?einrichten
+    var hold = null, logo = document.querySelector('.logo');
+    logo.addEventListener('pointerdown', function () { clearTimeout(hold); hold = setTimeout(openSetup, 3000); });
+    ['pointerup', 'pointerleave', 'pointercancel'].forEach(function (ev) { logo.addEventListener(ev, function () { clearTimeout(hold); }); });
+    logo.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    if (params.has('einrichten') || (!room && !SHOW_ALL)) openSetup();
   })();
 </script>
 </body>

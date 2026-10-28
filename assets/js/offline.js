@@ -7,8 +7,8 @@
   const CACHE = 'tdot-filme-v1';           // derselbe Name wie in sw.js
   const PARALLEL = 4;
   const CORE = ['index.html', 'film.html', 'assets/css/film.css', 'assets/js/film.js',
-    'assets/data/deutsch.js', 'assets/data/englisch.js', 'assets/data/kunst.js',
-    'assets/img/logo_hbs_dunkel.png', 'assets/img/figur_sie.jpg', 'assets/img/figur_er.jpg',
+    'assets/data/deutsch.js', 'assets/data/englisch.js', 'assets/data/kunst.js', 'assets/data/powi.js',
+    'assets/img/logo_hbs_dunkel.png', 'assets/img/figur_sie.jpg', 'assets/img/figur_er.jpg', 'assets/img/figur_c.jpg',
     'media/start/feld1.jpg', 'media/start/feld2.jpg', 'media/start/feld3.jpg'];
 
   function mediaList() {

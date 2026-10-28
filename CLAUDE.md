@@ -88,7 +88,11 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   ein neuer Film braucht dort `img`, `pos`, `what` und ein `<script src="assets/data/<fach>.js">`
   (auch in `film.html`, `tafel.html`, `kiosk.html`, `offline.js` CORE).
   Startseite mit Bildkarten je Aufgabenfeld (`media/start/feld1–3.jpg`, Entscheidung 42).
-  Offen: Filme Politik und Wirtschaft, Geschichte, Mathematik, Biologie, Chemie – je Fach Faktenblatt →
+- 29.10.2026: Film Politik und Wirtschaft fertig (Drehbuch 0.2, Leitfigur C, **5:38 min gemessen**, Entscheidung 44).
+- 29.10.2026: Raum-Einrichtung auf der Startseite (Entscheidung 45): erstes Öffnen fragt, welche Filme im Raum
+  laufen; Logo 3 s drücken oder `?einrichten` ändert es; Handys über `handy.html` (zeigt alles, großer QR-Code).
+  Planer mit Titelbildern im Ergebnis (Entscheidung 46). Beim Testen im Browser vorher `localStorage.removeItem('tdot-raum')`.
+  Offen: Filme Geschichte, Mathematik, Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.
 
 ## Veröffentlichen

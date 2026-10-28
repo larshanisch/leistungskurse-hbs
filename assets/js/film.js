@@ -19,7 +19,7 @@
   const COUNT_UP = 0.9;      // Dauer des Hochzählens einer Zahl
   const RING_GROW = 1.3;     // Dauer, bis ein Ringsegment voll ist
   const IDLE_MS = 3000;      // Steuerleiste blendet sich aus
-  const FIGURES = { sie: 'assets/img/figur_sie.jpg', er: 'assets/img/figur_er.jpg' };
+  const FIGURES = { sie: 'assets/img/figur_sie.jpg', er: 'assets/img/figur_er.jpg', c: 'assets/img/figur_c.jpg' };
 
   const film = (window.FILMS || {})[fachId];
   const $ = (id) => document.getElementById(id);
@@ -254,7 +254,8 @@
       sc.endCard.lines.forEach((line, k) => ui.endcard.appendChild(el('p', 'end-line' + (k > 0 ? ' small' : ''), line)));
       const c = el('div', 'credits');
       c.appendChild(el('h3', '', 'Bildnachweis'));
-      (film.credits.length ? film.credits : ['Bildnachweis folgt.']).forEach((line) => c.appendChild(el('div', '', line)));
+      // ohne content/<fach>_credits.json: nur eigene KI-Bilder
+      (film.credits.length ? film.credits : ['Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden.']).forEach((line) => c.appendChild(el('div', '', line)));
       ui.endcard.appendChild(c);
     }
     $('chapName').textContent = currentChapterName(sc);

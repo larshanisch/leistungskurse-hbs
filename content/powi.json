@@ -1,0 +1,156 @@
+{
+  "id": "powi",
+  "title": "Leistungskurs Politik und Wirtschaft",
+  "accent": "#c8d530",
+  "script": "drehbuch/powi.md",
+  "voice": {
+    "voice_id": "TIKjTeWOFujJEvXK1qIU",
+    "name": "Theo Teacher – Clear & Trustworthy",
+    "model": "eleven_v4",
+    "format": "mp3_44100_64"
+  },
+  "scenes": [
+    {
+      "n": 1,
+      "logo": true,
+      "title": { "main": "Leistungskurs Politik und Wirtschaft", "sub": "Gymnasiale Oberstufe" },
+      "image": { "src": "p01.jpg", "motion": "zoom-in", "focus": [0.68, 0.45] }
+    },
+    {
+      "n": 2,
+      "chapter": "Der Rahmen",
+      "image": { "src": "p02.jpg", "motion": "pan-right" },
+      "panel": { "type": "stats", "items": [
+        { "at": "fünf Punkte", "value": "5", "label": "Punkte am Ende der Einführungsphase", "prefix": "mind.", "sub": "besser deutlich mehr – die Anforderungen steigen" },
+        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden", "sub": "als Tutorium 6" },
+        { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
+      ] }
+    },
+    {
+      "n": 3,
+      "image": { "src": "p03.jpg", "motion": "zoom-out" },
+      "panel": { "type": "combo", "title": "Politik und Wirtschaft passt zu …", "items": [
+        { "at": "Fremdsprache", "a": "Politik und Wirtschaft", "b": "Englisch, Biologie oder Chemie", "ok": true },
+        { "at": "kombinierst", "figure": "c", "a": "Politik und Wirtschaft", "b": "Mathematik", "ok": true },
+        { "at": "Mathematik.", "a": "Politik und Wirtschaft", "b": "Deutsch, Kunst oder Geschichte", "ok": false }
+      ] }
+    },
+    {
+      "n": 4,
+      "chapter": "Was du lernst",
+      "image": { "src": "p04.jpg", "motion": "zoom-in", "focus": [0.35, 0.45] },
+      "band": { "type": "timeline", "items": [
+        { "at": "Demokratie", "label": "Q1", "text": "Demokratie" },
+        { "at": "Wirtschaft", "label": "Q2", "text": "Wirtschaft" },
+        { "at": "internationalen", "label": "Q3", "text": "Internationale Beziehungen" },
+        { "at": "Zukunft Europas", "label": "Q4", "text": "Europa" }
+      ] },
+      "panel": { "type": "stats", "items": [
+        { "at": "Neun", "value": "9", "label": "verbindliche Themenfelder fürs Abitur" }
+      ] }
+    },
+    {
+      "n": 5,
+      "corner": "Beispiel: Abiturjahrgang 2028",
+      "image": { "src": "p05.jpg", "motion": "pan-left" },
+      "panel": { "type": "list", "title": "Erstes Halbjahr", "items": [
+        { "at": "Grundgesetz", "text": "Grundgesetz und Bundesverfassungsgericht" },
+        { "at": "Parteien", "text": "Parteien, Populismus, Extremismus" },
+        { "at": "Filterblasen", "text": "Filterblasen und Fake News" },
+        { "at": "Exkursion", "text": "Exkursion, etwa in ein Parlament – wenn es möglich ist" }
+      ] }
+    },
+    {
+      "n": 6,
+      "image": { "src": "p06.jpg", "motion": "zoom-in", "focus": [0.45, 0.4] },
+      "panel": { "type": "list", "title": "Wirtschaft und Welt", "items": [
+        { "at": "Konjunktur", "text": "Konjunktur messen und steuern" },
+        { "at": "Konflikt", "text": "ein aktueller Konflikt, Vereinte Nationen, NATO" },
+        { "at": "Welthandel", "text": "Welthandel und Lieferketten" },
+        { "at": "Europäische Union", "text": "die EU in der Welt, etwa in der Klimapolitik" }
+      ] }
+    },
+    {
+      "n": 7,
+      "image": { "src": "p07.jpg", "motion": "zoom-in", "focus": [0.55, 0.55] },
+      "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
+        { "at": "dieselben", "label": "Themen", "a": "dieselben", "b": "vertieft" },
+        { "at": "Theorien", "label": "Theorie", "a": "–", "b": "Demokratie, Krieg und Frieden, Welthandel" },
+        { "at": "Forschungsprojekten", "label": "Arbeitsweise", "a": "grundlegend", "b": "eigene kleine Forschungsprojekte" }
+      ] },
+      "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
+        "Demokratie, Wirtschaft, Welt, Europa",
+        "Politik und Wirtschaft gehören zusammen",
+        "Leistungskurs: theoretischer und eigenständiger"
+      ] }
+    },
+    {
+      "n": 8,
+      "chapter": "Wie gearbeitet wird",
+      "image": { "src": "p08.jpg", "motion": "pan-right" },
+      "panel": { "type": "list", "title": "Im Unterricht", "items": [
+        { "at": "Texte", "text": "Analysieren: Texte, Statistiken, Grafiken – wer will was?" },
+        { "at": "wägst", "text": "Urteilen: Lösungen abwägen, Zielkonflikte, eigene Begründung" },
+        { "at": "Debatten", "text": "Mitreden: Position vertreten, Debatten, Planspiele" }
+      ] }
+    },
+    {
+      "n": 9,
+      "image": { "src": "p09.jpg", "motion": "zoom-out" },
+      "panel": { "type": "stats", "items": [
+        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten Halbjahr 1" },
+        { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur", "sub": "wenn die Lehrkraft es festlegt" },
+        { "at": "dritten Halbjahr", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
+      ] }
+    },
+    {
+      "n": 10,
+      "chapter": "Bewertung und Abitur",
+      "image": { "src": "p10.jpg", "motion": "zoom-in", "focus": [0.45, 0.6], "dim": 0.3 },
+      "panel": { "type": "list", "title": "So wird bewertet", "items": [
+        { "at": "Material", "text": "Material genau erschließen" },
+        { "at": "Fachbegriffe", "text": "Fachbegriffe sicher verwenden" },
+        { "at": "begründetes Urteil", "text": "begründet urteilen – mit Gegenpositionen" }
+      ], "notes": [
+        { "at": "ausreichende", "text": "Nur Wiedergabe reicht nicht für „ausreichend“" },
+        { "at": "Sprachfehler", "text": "gehäufte Sprachfehler: bis zu 2 Punkte Abzug" }
+      ] }
+    },
+    {
+      "n": 11,
+      "corner": "Stand Abitur 2028",
+      "image": { "src": "p11.jpg", "motion": "zoom-in", "focus": [0.5, 0.5] },
+      "panel": { "type": "stats", "items": [
+        { "at": "einen von drei", "value": "1 aus 3", "label": "Vorschläge zur Wahl" },
+        { "at": "dreihundert Minuten", "value": "300", "label": "Minuten Bearbeitungszeit" }
+      ], "notes": [
+        { "at": "Textaufgabe", "text": "meist Textaufgabe mit Material · auch Positionspapier oder Rede" },
+        { "at": "Grundgesetz", "text": "Hilfsmittel: Grundgesetz, Charta der Vereinten Nationen" }
+      ] }
+    },
+    {
+      "n": 12,
+      "chapter": "Die Herausforderungen",
+      "image": { "src": "p12.jpg", "motion": "pan-up" },
+      "panel": { "type": "list", "check": true, "title": "Was du mitbringen solltest", "items": [
+        { "at": "Interesse", "text": "Interesse an Nachrichten" },
+        { "at": "Freude", "text": "Freude an längeren Texten" },
+        { "at": "Zahlen", "text": "keine Angst vor Zahlen und Statistiken" },
+        { "at": "Meinungen", "text": "andere Meinungen ernst nehmen" }
+      ] }
+    },
+    {
+      "n": 13,
+      "image": { "src": "p13.jpg", "motion": "zoom-out" }
+    },
+    {
+      "n": 14,
+      "logo": true,
+      "image": { "src": "p14.jpg", "motion": "zoom-out", "dim": 0.45 },
+      "endCard": {
+        "lines": ["Stand: Oktober 2026",
+          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Politik und Wirtschaft, Abiturerlass 2028 des Landes Hessen, Einheitliche Prüfungsanforderungen Sozialkunde/Politik (KMK)"]
+      }
+    }
+  ]
+}
