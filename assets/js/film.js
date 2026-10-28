@@ -12,6 +12,7 @@
   // in tafel.html oder kiosk.html: der Rahmen hält das Vollbild, der Film braucht keinen eigenen Knopf
   const FRAMED = window.parent !== window;
   const AUTOSTART = params.get('autostart') === '1';
+  const HOME = 'index.html#' + encodeURIComponent(fachId);
   const FADE = 1.2;          // Überblendung zwischen Bildern
   const CHAPTER_FADE = 0.7;  // Ein- und Ausblenden der Kapitelkarte
   const SUB_HOLD = 0.35;     // Untertitel steht noch kurz nach dem Satzende
@@ -397,7 +398,7 @@
     clearInterval(finishTimer);
     finishTimer = setInterval(() => {
       left--;
-      if (left <= 0) { clearInterval(finishTimer); location.href = 'index.html'; } else tick();
+      if (left <= 0) { clearInterval(finishTimer); location.href = HOME; } else tick();
     }, 1000);
   }
   function cancelFinish() { clearInterval(finishTimer); finishTimer = null; $('finishHint').textContent = ''; }
@@ -578,6 +579,8 @@
   document.querySelector('.start-hint').textContent = fmt(total) + ' Minuten · mit Ton und Untertiteln';
   // Startbildschirm zeigt das erste Bild als Standbild statt Schwarz
   $('start').style.background = 'linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2)), url("' + shots[0].src + '") center / cover no-repeat';
+  // „Übersicht“ führt zurück in das Aufgabenfeld dieses Fachs (index.html#deutsch)
+  document.querySelectorAll('a[href="index.html"]').forEach((a) => { a.href = HOME; });
   if (LOOP || KIOSK) $('homeBtn').hidden = true;
   if (FRAMED) $('fsBtn').hidden = true;
 

@@ -8,63 +8,188 @@
 <style>
   :root {
     --ink: #f6f3ee; --ink-soft: #c9c3b9; --night: #0b0c0f; --card: #16181d; --line: rgba(255,255,255,0.12);
-    --ok: #4caf72; --no: #e0533f;
+    --accent: #c8d530; --on-accent: #16180a; --no: #e0533f;
     --sans: "Segoe UI Variable Display", "Segoe UI Variable", "Segoe UI", Inter, system-ui, -apple-system, Roboto, Arial, sans-serif;
   }
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 20% -10%, #23262e 0%, var(--night) 55%); color: var(--ink); font-family: var(--sans); }
   main { max-width: 1200px; margin: 0 auto; padding: clamp(24px, 5vh, 64px) 16px 48px; }
   .logo { display: inline-block; margin-bottom: 1.6em; }
   .logo img { display: block; height: clamp(64px, 11vw, 120px); width: auto; }
   .kicker { letter-spacing: 0.26em; text-transform: uppercase; font-size: 13px; font-weight: 700; color: var(--ink-soft); margin: 0 0 0.9em; }
   h1 { font-weight: 800; font-size: clamp(36px, 6vw, 76px); line-height: 1; letter-spacing: -0.025em; margin: 0 0 0.4em; }
-  .lead { font-size: clamp(16px, 1.6vw, 20px); color: var(--ink-soft); max-width: 46em; line-height: 1.55; margin: 0 0 2.2em; }
-  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
-  .tile { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 340px; padding: 24px;
-    border-radius: 20px; overflow: hidden; text-decoration: none; color: var(--ink); background: var(--card);
+  .lead { font-size: clamp(16px, 1.6vw, 20px); color: var(--ink-soft); max-width: 46em; line-height: 1.55; margin: 0 0 2em; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+
+  /* Kopf einer Unterseite: Zurück-Knopf, Feldnummer, Überschrift */
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6em 1em; margin: 0 0 1.2em; }
+  .back { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.5em 1.1em; border-radius: 999px; text-decoration: none;
+    border: 1px solid var(--line); background: rgba(255,255,255,0.06); font-weight: 700; font-size: 15px; }
+  .back:hover, .back:focus-visible { border-color: var(--accent); }
+  .num { font-size: 13px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.4em 0.9em;
+    border-radius: 999px; background: var(--accent); color: var(--on-accent); }
+  .bar h2 { flex: 1 1 0; min-width: 12em; margin: 0; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.15; font-weight: 800; letter-spacing: -0.01em; }
+  .bar .to-plan { margin-left: auto; }
+
+  /* Startansicht: drei Aufgabenfelder und der Planer */
+  .fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .fcard { position: relative; display: flex; flex-direction: column; gap: 0.7em; padding: 24px; border-radius: 20px; overflow: hidden;
+    text-decoration: none; background: linear-gradient(160deg, #1d2027 0%, var(--card) 70%); border: 1px solid var(--line);
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
+  .fcard:hover, .fcard:focus-visible { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
+  .fcard .num { align-self: flex-start; }
+  .fcard h2 { margin: 0; font-size: clamp(20px, 2vw, 28px); line-height: 1.2; font-weight: 800; letter-spacing: -0.01em; }
+  .fcard p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+  .fcard ul { list-style: none; margin: auto 0 0; padding: 0; display: grid; gap: 0.45em; }
+  .fcard li { display: flex; justify-content: space-between; align-items: baseline; gap: 1em; font-size: 18px; font-weight: 700;
+    padding-top: 0.45em; border-top: 1px solid var(--line); }
+  .fcard li small { font-size: 13px; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
+  .fcard li small.film { color: var(--accent); }
+  .cta { display: flex; align-items: center; gap: 1.2em; margin-top: 20px; padding: 18px 24px; border-radius: 20px; text-decoration: none;
+    background: var(--accent); color: var(--on-accent); transition: transform 0.25s, box-shadow 0.25s; }
+  .cta:hover, .cta:focus-visible { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(0,0,0,0.45); }
+  .cta svg { flex: none; width: 44px; height: 44px; }
+  .cta strong { display: block; font-size: clamp(19px, 2vw, 26px); font-weight: 800; }
+  .cta span { font-size: 15px; font-weight: 600; }
+
+  /* Feldansicht: eine Kachel je Kurs */
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .tile { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 300px; padding: 24px;
+    border-radius: 20px; overflow: hidden; text-decoration: none; background: var(--card);
     border: 1px solid var(--line); transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
-  .tile::before { content: ""; position: absolute; inset: 0; background: var(--bg) var(--pos, center) / cover; transition: transform 0.6s; }
+  .tile::before { content: ""; position: absolute; inset: 0; background: var(--bg, none) var(--pos, center) / cover; transition: transform 0.6s; }
   .tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,9,12,0.92) 18%, rgba(8,9,12,0.1) 72%); }
+  .tile.soon::before { background: linear-gradient(160deg, #22252d 0%, #121418 80%); }
+  .tile.soon::after { background: none; }
   .tile > * { position: relative; z-index: 1; }
   a.tile:hover, a.tile:focus-visible { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
   a.tile:hover::before { transform: scale(1.04); }
-  .tile .subj { font-size: clamp(30px, 3vw, 40px); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 0.2em; }
+  .tile .subj { font-size: clamp(28px, 3vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; margin: 0 0 0.2em; }
   .tile .subj::after { content: ""; display: block; width: 1.6em; height: 5px; border-radius: 3px; background: var(--accent); margin-top: 0.25em; }
   .tile .what { color: var(--ink-soft); margin: 0.4em 0 1.2em; line-height: 1.45; }
   .tile .go { display: inline-flex; align-items: center; gap: 0.5em; align-self: flex-start; padding: 0.6em 1.2em; border-radius: 999px;
-    background: var(--accent); color: #16180a; font-size: 15px; font-weight: 700; }
+    background: var(--accent); color: var(--on-accent); font-size: 15px; font-weight: 700; }
   .tile .go svg { width: 1em; height: 1em; fill: currentColor; }
   .tile.soon .go { background: rgba(255,255,255,0.14); color: var(--ink-soft); }
-  .tile .len { position: absolute; top: 18px; right: 18px; font-size: 13px; font-weight: 700; padding: 0.35em 0.8em; background: rgba(8,9,12,0.6); border-radius: 999px; }
-  .field { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4em 1em; margin: 0 0 1.2em; }
-  .field .num { font-size: 13px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.4em 0.9em;
-    border-radius: 999px; background: var(--accent, #c8d530); color: #16180a; }
-  .field h2 { margin: 0; font-size: clamp(22px, 2.6vw, 34px); font-weight: 800; letter-spacing: -0.01em; }
-  .field p { margin: 0; flex-basis: 100%; color: var(--ink-soft); font-size: clamp(15px, 1.4vw, 18px); }
+  .tile .len, .tile .lk { position: absolute; top: 18px; font-size: 13px; font-weight: 700; padding: 0.35em 0.8em; background: rgba(8,9,12,0.6); border-radius: 999px; }
+  .tile .len { right: 18px; }
+  .tile .lk { left: 18px; border: 1px solid var(--line); }
+
+  /* Planer */
+  .plan { display: grid; grid-template-columns: 1fr 1fr 1.7fr; gap: 20px; align-items: start; }
+  .col { padding: 20px; border-radius: 20px; background: var(--card); border: 1px solid var(--line); }
+  .col h3 { margin: 0; font-size: 20px; font-weight: 800; }
+  .col .rule { margin: 0.3em 0 0.9em; font-size: 14px; line-height: 1.4; color: var(--ink-soft); }
+  .chips { display: grid; gap: 8px; }
+  .chip { display: flex; justify-content: space-between; align-items: center; gap: 0.6em; padding: 0.55em 0.9em; border-radius: 12px; cursor: pointer;
+    border: 1px solid var(--line); background: rgba(255,255,255,0.05); font-size: 17px; font-weight: 700; text-align: left; }
+  .chip small { font-size: 12px; font-weight: 700; color: var(--ink-soft); letter-spacing: 0.08em; }
+  .chip:hover:not(:disabled) { border-color: var(--accent); }
+  .chip[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+  .chip[aria-pressed="true"] small { color: var(--on-accent); }
+  .chip:disabled { opacity: 0.35; cursor: default; }
+  .result { padding: 22px; border-radius: 20px; background: linear-gradient(160deg, #1d2027 0%, var(--card) 70%); border: 1px solid var(--line); }
+  .result .verdict { margin: 0 0 0.8em; font-size: 22px; font-weight: 800; line-height: 1.25; }
+  .result .verdict.ok::before { content: "✓ "; color: var(--accent); }
+  .result .wait { margin: 0; font-size: 18px; color: var(--ink-soft); line-height: 1.5; }
+  .slots { display: grid; grid-template-columns: 1.2fr 1.2fr 2.6fr; gap: 10px; margin-bottom: 0.9em; }
+  .slot { padding: 0.7em 0.8em; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,0.05); }
+  .slot.lk { border-color: var(--accent); }
+  .slot .k { display: block; white-space: nowrap; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.3em; }
+  .slot b { font-size: 17px; }
+  .how { margin: -0.4em 0 0.9em; font-size: 14px; color: var(--ink-soft); }
+  .need { display: flex; flex-wrap: wrap; gap: 6px; }
+  .need span { padding: 0.3em 0.7em; border-radius: 999px; font-size: 14px; font-weight: 700; background: rgba(200,213,48,0.16); border: 1px solid rgba(200,213,48,0.5); }
+  .need span.free { background: none; border-style: dashed; border-color: var(--line); color: var(--ink-soft); }
+  .result ul { margin: 0; padding: 0 0 0 1.1em; display: grid; gap: 0.45em; font-size: 16px; line-height: 1.4; }
+  .result ul small { color: var(--ink-soft); }
+  .result .links { margin: 0.9em 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .result .links a { padding: 0.4em 1em; border-radius: 999px; background: rgba(255,255,255,0.1); text-decoration: none; font-size: 14px; font-weight: 700; }
+  .result .links a:hover { background: var(--accent); color: var(--on-accent); }
+  .fine { margin: 1em 0 0; font-size: 13px; color: #8a857c; line-height: 1.45; }
+
   footer { margin-top: 3em; font-size: 13px; color: #8a857c; line-height: 1.5; }
+
+  @media (max-width: 599px) { .plan { grid-template-columns: minmax(0, 1fr) !important; } .chips { grid-template-columns: 1fr 1fr; } .chip { font-size: 15px; } .slot b { font-size: 15px; } }
+  @media (max-width: 899px) { .plan { grid-template-columns: 1fr 1fr; } .result { grid-column: 1 / -1; } .slots { grid-template-columns: 1fr 1fr; } .slots .slot:last-child { grid-column: 1 / -1; } }
 
   /* Querformat ab Tablet-Größe (digitale Tafel): alles auf einem Bildschirm, kein Scrollen.
      Größen hängen an der Bildschirmhöhe (vh), damit die Seite bei jeder Auflösung genau passt. */
   @media (min-width: 900px) and (min-aspect-ratio: 4/3) {
     html, body { height: 100%; overflow: hidden; }
-    main { max-width: none; height: 100vh; padding: 4vh 4vw 3vh; display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; gap: 3vh; }
+    main { max-width: none; height: 100vh; padding: 4vh 4vw 3vh; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 3vh; }
     .head { display: flex; align-items: center; gap: 3vw; }
     .logo { margin: 0; flex: none; }
     .logo img { height: 15vh; }
     .kicker { font-size: 1.5vh; margin-bottom: 0.6vh; }
     h1 { font-size: 7vh; margin: 0 0 1vh; }
     .lead { font-size: 2vh; margin: 0; max-width: 60em; }
-    .tiles { grid-template-columns: repeat(3, 1fr); gap: 1.6vw; min-height: 0; }
+    /* Unterseiten: schmaler Kopf, damit Kacheln und Planer Platz haben */
+    body.sub .logo img { height: 8vh; }
+    body.sub h1 { font-size: 4.4vh; margin: 0; }
+    body.sub .lead { display: none; }
+    .view { min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+    .bar { margin: 0 0 2.4vh; gap: 1vh 1.2vw; flex-wrap: nowrap; }
+    .bar > * { flex-shrink: 0; }
+    .bar h2 { flex: 1 1 0; min-width: 0; }
+    .back { font-size: 1.9vh; }
+    .num { font-size: 1.6vh; }
+    .bar h2 { font-size: 3.6vh; }
+
+    #v-home { grid-template-rows: minmax(0, 1fr) auto; }
+    .fields { grid-template-columns: repeat(3, 1fr); gap: 1.6vw; min-height: 0; }
+    .fcard { padding: 3vh 1.8vw; border-radius: 2vh; gap: 1.4vh; }
+    .fcard h2 { font-size: 3.2vh; }
+    .fcard p { font-size: 2vh; }
+    .fcard li { font-size: 2.9vh; padding-top: 1.2vh; }
+    .fcard ul { gap: 1.2vh; }
+    .fcard li small { font-size: 1.6vh; }
+    .cta { margin-top: 2.4vh; padding: 2vh 1.8vw; border-radius: 2vh; gap: 1.4vw; }
+    .cta svg { width: 5vh; height: 5vh; }
+    .cta strong { font-size: 3vh; }
+    .cta span { font-size: 1.9vh; }
+
+    .tiles { grid-template-columns: repeat(var(--n, 3), 1fr); gap: 1.6vw; min-height: 0; }
     .tile { min-height: 0; padding: 3vh 1.6vw; border-radius: 2vh; }
     .tile .subj { font-size: 4.6vh; }
     .tile .what { font-size: 1.9vh; margin: 0.6vh 0 2vh; }
     .tile .go { font-size: 1.9vh; padding: 1vh 1.4vw; }
-    .tile .len { font-size: 1.5vh; top: 2vh; right: 2vh; }
-    .field { margin: 0; gap: 0.6vh 1.2vw; }
-    .field .num { font-size: 1.6vh; }
-    .field h2 { font-size: 3.6vh; }
-    .field p { font-size: 2vh; }
+    .tile .len, .tile .lk { font-size: 1.5vh; top: 2vh; }
+    .tile .len { right: 2vh; }
+    .tile .lk { left: 2vh; }
+
+    .plan { gap: 1.4vw; min-height: 0; }
+    .col, .result { padding: 2.4vh 1.4vw; border-radius: 2vh; }
+    .col h3 { font-size: 2.6vh; }
+    .col .rule { font-size: 1.7vh; margin: 0.6vh 0 1.4vh; }
+    .chips { gap: 0.9vh; }
+    .chip { font-size: 2.1vh; padding: 0.9vh 0.9vw; border-radius: 1.2vh; }
+    .chip small { font-size: 1.4vh; }
+    .result .verdict { font-size: 2.8vh; margin-bottom: 1.6vh; }
+    .result .wait { font-size: 2.2vh; }
+    .slots { gap: 0.6vw; margin-bottom: 1.6vh; }
+    .slot { padding: 1vh 0.7vw; border-radius: 1.2vh; }
+    .slot .k { font-size: 1.4vh; margin-bottom: 0.5vh; }
+    .slot b { font-size: 2.1vh; }
+    .how { font-size: 1.7vh; margin: -0.6vh 0 1.6vh; }
+    .need { gap: 0.6vh 0.4vw; }
+    .need span { font-size: 1.7vh; }
+    .result ul { font-size: 1.9vh; gap: 0.8vh; }
+    .result .links { margin-top: 1.6vh; gap: 0.5vw; }
+    .result .links a { font-size: 1.7vh; }
+    .fine { font-size: 1.45vh; margin-top: 1.6vh; }
     footer { margin: 0; font-size: 1.4vh; }
+  }
+  /* fast quadratische Tafeln (4:3): Wahlspalten untereinander, damit das Ergebnis genug Breite hat */
+  @media (min-width: 900px) and (min-aspect-ratio: 4/3) and (max-aspect-ratio: 3/2) {
+    .plan { grid-template-columns: 1fr 1.5fr; }
+    .plan .col { grid-column: 1; }
+    .result { grid-column: 2; grid-row: 1 / span 2; }
+    .chips { grid-template-columns: 1fr 1fr; }
+    .result ul { font-size: 1.75vh; }
+    .result .fine { margin-top: 1.2vh; }
   }
 </style>
 </head>
@@ -74,56 +199,219 @@
     <div class="logo"><img src="assets/img/logo_hbs_dunkel.png" alt="Heinrich-Böll-Schule Hattersheim"></div>
     <div class="head-text">
       <p class="kicker">Gymnasiale Oberstufe · Tag der offenen Tür</p>
-      <h1>Leistungskurse im Film</h1>
-      <p class="lead">Du überlegst, welche Leistungskurse du wählen sollst? Diese kurzen Filme zeigen dir, was dich in den
-        Fächern Deutsch, Englisch und Kunst erwartet: was das Land Hessen verbindlich vorschreibt, wie im Kurs gearbeitet
-        und bewertet wird und worin die besonderen Herausforderungen liegen.</p>
+      <h1>Leistungskurse an der HBS</h1>
+      <p class="lead">Du überlegst, welche Leistungskurse du wählen sollst? Wähle ein Aufgabenfeld und sieh dir an, was dich
+        in den Kursen erwartet: was das Land Hessen verbindlich vorschreibt, wie gearbeitet und bewertet wird und worin die
+        Herausforderungen liegen. Im Planer kannst du ausprobieren, welche zwei Leistungskurse zusammenpassen.</p>
     </div>
   </header>
 
-  <section class="field" aria-label="Aufgabenfeld">
-    <span class="num">Aufgabenfeld I</span>
-    <h2>Das sprachlich-literarisch-künstlerische Aufgabenfeld</h2>
-    <p>Unsere Leistungskurse in diesem Aufgabenfeld: Deutsch, Englisch und Kunst</p>
+  <section class="view" id="v-home">
+    <div class="fields" id="fields"></div>
+    <a class="cta" href="#planer">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="8" width="17" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="27" y="8" width="17" height="32" rx="4" fill="currentColor"/><path d="M9 24h7M12.5 20.5v7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+      <div><strong>Kurswahl durchspielen</strong><span>Welche zwei Leistungskurse kannst du an der HBS kombinieren – und was folgt daraus für dein Abitur?</span></div>
+    </a>
   </section>
 
-  <div class="tiles">
-    <a class="tile" href="film.html?fach=deutsch" style="--accent:#c8d530; --bg: url('media/deutsch/img/s01.jpg'); --pos: 88% center">
-      <span class="len" id="len-deutsch"></span>
-      <p class="subj">Deutsch</p>
-      <p class="what">Literatur, Sprache und Medien – von der Aufklärung bis zur Gegenwart.</p>
-      <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Film ansehen</span>
-    </a>
-    <a class="tile" href="film.html?fach=englisch" style="--accent:#c8d530; --bg: url('media/englisch/img/e01.jpg'); --pos: 78% center">
-      <span class="len" id="len-englisch"></span>
-      <p class="subj">Englisch</p>
-      <p class="what">Literatur, Film und die großen Fragen der englischsprachigen Welt – auf Englisch.</p>
-      <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Film ansehen</span>
-    </a>
-    <a class="tile" href="film.html?fach=kunst" style="--accent:#c8d530; --bg: url('media/kunst/img/k01.jpg'); --pos: 72% center">
-      <span class="len" id="len-kunst"></span>
-      <p class="subj">Kunst</p>
-      <p class="what">Bilder verstehen und selbst gestalten – von Malerei und Fotografie bis zur Architektur.</p>
-      <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Film ansehen</span>
-    </a>
-  </div>
+  <section class="view" id="v-feld" hidden>
+    <div class="bar">
+      <a class="back" href="#">← Aufgabenfelder</a>
+      <span class="num" id="feldNum"></span>
+      <h2 id="feldName"></h2>
+      <a class="back to-plan" href="#planer">Kurswahl durchspielen</a>
+    </div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section class="view" id="v-planer" hidden>
+    <div class="bar">
+      <a class="back" href="#">← Aufgabenfelder</a>
+      <h2>Kurswahl durchspielen</h2>
+    </div>
+    <div class="plan">
+      <div class="col">
+        <h3>1. Leistungskurs</h3>
+        <p class="rule">Eine Fremdsprache, Mathematik oder eine Naturwissenschaft (Landesregel). An der HBS (Ziffer = Aufgabenfeld):</p>
+        <div class="chips" id="chips1"></div>
+      </div>
+      <div class="col">
+        <h3>2. Leistungskurs</h3>
+        <p class="rule">Aus dem Angebot der Schule. An der HBS:</p>
+        <div class="chips" id="chips2"></div>
+      </div>
+      <div class="result" id="result" aria-live="polite"></div>
+    </div>
+  </section>
 
   <footer>Stand: Oktober 2026 · Grundlage: Oberstufen- und Abiturverordnung (OAVO) des Landes Hessen, Kerncurricula und
-    Abiturerlass 2028. Illustrationen KI-generiert (Google Gemini), dargestellte Personen sind erfunden.
-    <span class="modes">· <a href="tafel.html" target="_top" style="color:inherit">Vollbild für die Tafel</a>
-    · <a href="kiosk.html" target="_top" style="color:inherit">Dauerbetrieb für die Räume</a></span></footer>
+    Abiturerlass 2028, Kursangebot der Heinrich-Böll-Schule. Illustrationen KI-generiert (Google Gemini), dargestellte
+    Personen sind erfunden.
+    <span class="modes">· <a href="tafel.html" target="_top">Vollbild für die Tafel</a>
+    · <a href="kiosk.html" target="_top">Dauerbetrieb für die Räume</a></span></footer>
 </main>
 <script src="assets/data/deutsch.js"></script>
 <script src="assets/data/englisch.js"></script>
 <script src="assets/data/kunst.js"></script>
 <script>
   (function () {
+    // Aufgabenfelder nach KMK-Vereinbarung, Kursangebot nach der Übersicht der Schule (Entscheidung 37)
+    var FIELDS = [
+      { id: 1, num: 'I', name: 'Das sprachlich-literarisch-künstlerische Aufgabenfeld', sub: 'Sprachen, Literatur und Kunst', subjects: ['deutsch', 'englisch', 'kunst'] },
+      { id: 2, num: 'II', name: 'Das gesellschaftswissenschaftliche Aufgabenfeld', sub: 'Politik, Wirtschaft und Geschichte', subjects: ['powi', 'geschichte'] },
+      { id: 3, num: 'III', name: 'Das mathematisch-naturwissenschaftlich-technische Aufgabenfeld', sub: 'Mathematik und Naturwissenschaften', subjects: ['mathe', 'biologie', 'chemie'] }
+    ];
+    // kind: fs = fortgeführte Fremdsprache, nw = Naturwissenschaft, m = Mathematik (OAVO § 13 Abs. 2, § 24 Abs. 6)
+    var SUBJ = {
+      deutsch:    { name: 'Deutsch', field: 1, img: 'media/deutsch/img/s01.jpg', pos: '88% center',
+                    what: 'Literatur, Sprache und Medien – von der Aufklärung bis zur Gegenwart.' },
+      englisch:   { name: 'Englisch', field: 1, kind: 'fs', img: 'media/englisch/img/e01.jpg', pos: '78% center',
+                    what: 'Literatur, Film und die großen Fragen der englischsprachigen Welt – auf Englisch.' },
+      kunst:      { name: 'Kunst', field: 1, img: 'media/kunst/img/k01.jpg', pos: '72% center',
+                    what: 'Bilder verstehen und selbst gestalten – von Malerei und Fotografie bis zur Architektur.' },
+      powi:       { name: 'Politik und Wirtschaft', field: 2 },
+      geschichte: { name: 'Geschichte', field: 2 },
+      mathe:      { name: 'Mathematik', field: 3, kind: 'm' },
+      biologie:   { name: 'Biologie', field: 3, kind: 'nw' },
+      chemie:     { name: 'Chemie', field: 3, kind: 'nw' }
+    };
+    var LK1 = ['englisch', 'biologie', 'chemie', 'mathe'];
+    var LK2 = ['englisch', 'deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie', 'mathe'];
+    var FILMS = window.FILMS || {};
+    var $ = function (id) { return document.getElementById(id); };
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var minutes = function (f) { return Math.floor(f.total / 60) + ':' + String(Math.floor(f.total % 60)).padStart(2, '0') + ' Minuten'; };
+    var PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>';
+
     // im Vollbild-Rahmen (tafel.html) keine Links auf andere Betriebsarten
     if (window.parent !== window) document.querySelector('.modes').hidden = true;
-    ['deutsch', 'englisch', 'kunst'].forEach(function (id) {
-      var f = (window.FILMS || {})[id], el = document.getElementById('len-' + id);
-      if (f && el) el.textContent = Math.floor(f.total / 60) + ':' + String(Math.floor(f.total % 60)).padStart(2, '0') + ' Minuten';
-    });
+
+    // --- Startansicht ---
+    $('fields').innerHTML = FIELDS.map(function (f) {
+      return '<a class="fcard" href="#feld-' + f.id + '"><span class="num">Aufgabenfeld ' + f.num + '</span>' +
+        '<h2>' + esc(f.name) + '</h2><p>' + esc(f.sub) + '</p><ul>' + f.subjects.map(function (id) {
+          return '<li>' + esc(SUBJ[id].name) + (FILMS[id] ? '<small class="film">▶ Film</small>' : '<small>Film folgt</small>') + '</li>';
+        }).join('') + '</ul></a>';
+    }).join('');
+
+    // --- Feldansicht ---
+    function lkBadge(id) { return LK1.indexOf(id) >= 0 ? '1. oder 2. LK' : '2. LK'; }
+    function showField(f) {
+      $('feldNum').textContent = 'Aufgabenfeld ' + f.num;
+      $('feldName').textContent = f.name;
+      $('tiles').style.setProperty('--n', f.subjects.length);
+      $('tiles').innerHTML = f.subjects.map(function (id) {
+        var s = SUBJ[id], film = FILMS[id];
+        if (!film) {
+          return '<div class="tile soon"><span class="lk">' + lkBadge(id) + '</span><p class="subj">' + esc(s.name) + '</p>' +
+            '<p class="what">Der Film zu diesem Leistungskurs entsteht gerade.</p><span class="go">Film folgt</span></div>';
+        }
+        return '<a class="tile" href="film.html?fach=' + id + '" style="--bg: url(\'' + s.img + '\'); --pos: ' + s.pos + '">' +
+          '<span class="lk">' + lkBadge(id) + '</span><span class="len">' + minutes(film) + '</span>' +
+          '<p class="subj">' + esc(s.name) + '</p><p class="what">' + esc(s.what) + '</p><span class="go">' + PLAY + 'Film ansehen</span></a>';
+      }).join('');
+    }
+
+    // --- Planer ---
+    var pick = { a: null, b: null };
+    function chips(el, list, slot) {
+      $(el).innerHTML = list.map(function (id) {
+        return '<button type="button" class="chip" data-id="' + id + '" aria-pressed="false">' + esc(SUBJ[id].name) +
+          '<small>' + FIELDS[SUBJ[id].field - 1].num + '</small></button>';
+      }).join('');
+      $(el).addEventListener('click', function (e) {
+        var b = e.target.closest('.chip');
+        if (!b || b.disabled) return;
+        pick[slot] = pick[slot] === b.dataset.id ? null : b.dataset.id;
+        renderPlan();
+      });
+    }
+    chips('chips1', LK1, 'a');
+    chips('chips2', LK2, 'b');
+
+    // Was folgt aus den beiden LKs für die Prüfungsfächer 3 bis 5? (OAVO § 24 Abs. 1, 2, 6)
+    function consequences(a, b) {
+      var has = function (id) { return a === id || b === id; };
+      var kind = function (k) { return SUBJ[a].kind === k || SUBJ[b].kind === k; };
+      var covered = {}; covered[SUBJ[a].field] = covered[SUBJ[b].field] = true;
+      var need = [], notes = [];
+      if (!has('deutsch')) { need.push('Deutsch'); covered[1] = true; }
+      if (!has('mathe')) { need.push('Mathematik'); covered[3] = true; }
+      if (!kind('fs') && !kind('nw')) need.push('Fremdsprache, Naturwissenschaft oder Informatik');
+      FIELDS.forEach(function (f) { if (!covered[f.id]) need.push('ein Fach aus Aufgabenfeld ' + f.num); });
+
+      if (need.indexOf('Deutsch') >= 0 || need.indexOf('Mathematik') >= 0) {
+        notes.push('Deutsch und Mathematik gehören für alle zu den fünf Prüfungsfächern.');
+      }
+      if (need.some(function (n) { return n.indexOf('Fremdsprache') === 0; })) {
+        notes.push('Unter den Prüfungsfächern muss eine Fremdsprache, eine Naturwissenschaft oder Informatik sein – das deckt keiner deiner beiden LKs ab.');
+      }
+      if (need.some(function (n) { return n.indexOf('Aufgabenfeld') >= 0; })) {
+        notes.push('Alle drei Aufgabenfelder müssen in deinen Prüfungsfächern vorkommen – Aufgabenfeld II etwa mit Politik und Wirtschaft oder Geschichte.');
+      }
+      if (SUBJ[a].field === SUBJ[b].field) {
+        var other = FIELDS.filter(function (f) { return f.id !== SUBJ[a].field; }).map(function (f) { return f.num; });
+        notes.push('Beide LKs liegen in Aufgabenfeld ' + FIELDS[SUBJ[a].field - 1].num + '. Dein 3. Prüfungsfach (schriftlich) muss deshalb aus Aufgabenfeld ' +
+          other.join(' oder ') + ' kommen <small>(die drei schriftlichen Fächer müssen mindestens zwei Aufgabenfelder abdecken)</small>.');
+      }
+      var free = 3 - need.length;
+      notes.push(free === 0 ? 'Damit sind deine Prüfungsfächer 3 bis 5 schon festgelegt – du entscheidest nur noch die Reihenfolge und welches Fach du konkret nimmst.'
+        : free === 3 ? 'Die Prüfungsfächer 3 bis 5 kannst du frei wählen.'
+        : (free === 1 ? 'Ein Prüfungsfach' : free + ' Prüfungsfächer') + ' kannst du darüber hinaus frei wählen.');
+      return { need: need, free: free, notes: notes };
+    }
+
+    function renderPlan() {
+      ['chips1', 'chips2'].forEach(function (el, i) {
+        var mine = i ? pick.b : pick.a, theirs = i ? pick.a : pick.b;
+        $(el).querySelectorAll('.chip').forEach(function (c) {
+          c.setAttribute('aria-pressed', String(c.dataset.id === mine));
+          c.disabled = c.dataset.id === theirs;
+        });
+      });
+      var a = pick.a, b = pick.b, r = $('result');
+      if (!a || !b) {
+        r.innerHTML = '<p class="wait">' + (!a && !b ? 'Wähle links deinen 1. und deinen 2. Leistungskurs.'
+          : !a ? 'Wähle noch deinen 1. Leistungskurs – Englisch, Biologie, Chemie oder Mathematik.'
+          : 'Wähle noch deinen 2. Leistungskurs.') + '</p>' +
+          '<p class="fine">Deutsch und Kunst zusammen gehen nicht: Einer der beiden Leistungskurse muss eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein.</p>';
+        return;
+      }
+      var c = consequences(a, b);
+      var chipsHtml = c.need.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') +
+        new Array(c.free + 1).join('<span class="free">frei wählbar</span>');
+      var films = [a, b].filter(function (id) { return FILMS[id]; });
+      r.innerHTML = '<p class="verdict ok">' + esc(SUBJ[a].name) + ' und ' + esc(SUBJ[b].name) + ' kannst du an der HBS kombinieren.</p>' +
+        '<div class="slots">' +
+          '<div class="slot lk"><span class="k">Prüfungsfach 1</span><b>' + esc(SUBJ[a].name) + '</b></div>' +
+          '<div class="slot lk"><span class="k">Prüfungsfach 2</span><b>' + esc(SUBJ[b].name) + '</b></div>' +
+          '<div class="slot"><span class="k">Prüfungsfächer 3 bis 5</span><div class="need">' + chipsHtml + '</div></div>' +
+        '</div>' +
+        '<p class="how">1 bis 3 schriftlich, 4 mündlich, 5 als Präsentation oder mündlich.</p>' +
+        '<ul>' + c.notes.map(function (n) { return '<li>' + n + '</li>'; }).join('') + '</ul>' +
+        (films.length ? '<p class="links">' + films.map(function (id) { return '<a href="film.html?fach=' + id + '">▶ Film ' + esc(SUBJ[id].name) + '</a>'; }).join('') + '</p>' : '') +
+        '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Einen Anspruch auf einen bestimmten ' +
+        'Leistungskurs gibt es nicht. Grundlage: OAVO § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';
+    }
+
+    // --- Ansichten über die Adresse (#feld-2, #planer, #deutsch …), damit „Zurück“ im Browser funktioniert ---
+    function route() {
+      var h = decodeURIComponent(location.hash.slice(1)), view = 'home', field = null;
+      if (/^feld-[123]$/.test(h)) { view = 'feld'; field = FIELDS[Number(h.slice(5)) - 1]; }
+      else if (SUBJ[h]) { view = 'feld'; field = FIELDS[SUBJ[h].field - 1]; }   // Rückweg aus einem Film
+      else if (/^planer(\/|$)/.test(h)) {
+        // #planer/englisch/biologie wählt gleich vor (für Prüfwerkzeuge und Direktlinks)
+        var p = h.split('/');
+        if (p.length === 3) { pick.a = LK1.indexOf(p[1]) >= 0 ? p[1] : null; pick.b = LK2.indexOf(p[2]) >= 0 && p[2] !== p[1] ? p[2] : null; }
+        view = 'planer';
+      }
+      ['home', 'feld', 'planer'].forEach(function (v) { $('v-' + v).hidden = v !== view; });
+      document.body.classList.toggle('sub', view !== 'home');
+      if (field) showField(field);
+      if (view === 'planer') renderPlan();
+    }
+    window.addEventListener('hashchange', route);
+    route();
   })();
 </script>
 </body>
