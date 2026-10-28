@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Leistungskurse · QR-Code zum Ausdrucken</title>
+<style>
+  /* Druckvorlage A4 hoch: weißer Grund, schwarzer Code (scannt am sichersten) */
+  @page { size: A4 portrait; margin: 14mm; }
+  * { box-sizing: border-box; }
+  html { background: #e9e7e2; }
+  body { margin: 0; font-family: "Segoe UI Variable Display", "Segoe UI", Inter, system-ui, Arial, sans-serif; color: #16180a; }
+  .sheet { width: 210mm; min-height: 297mm; margin: 10mm auto; padding: 16mm 18mm; background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15); display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .logo { height: 30mm; margin-bottom: 8mm; }
+  .kicker { margin: 0; font-size: 11pt; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #555; }
+  h1 { margin: 3mm 0 2mm; font-size: 34pt; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; }
+  .field { margin: 0 0 8mm; font-size: 14pt; }
+  .field b { background: #c8d530; padding: 0.5mm 2.5mm; border-radius: 2mm; }
+  .main { width: 110mm; height: 110mm; }
+  .scan { margin: 6mm 0 1mm; font-size: 18pt; font-weight: 700; }
+  .url { margin: 0; font-size: 12pt; color: #444; }
+  .spacer { flex: 1; }
+  .teacher { display: flex; align-items: center; gap: 6mm; text-align: left; border-top: 0.4mm solid #ccc; padding-top: 6mm; width: 100%; }
+  .teacher img { width: 32mm; height: 32mm; flex: none; }
+  .teacher p { margin: 0 0 1.5mm; font-size: 11pt; color: #333; }
+  .teacher b { font-size: 12pt; color: #16180a; }
+  @media print {
+    html { background: #fff; }
+    .sheet { margin: 0; width: auto; min-height: 0; height: 269mm; padding: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <img class="logo" src="assets/img/logo_hbs.png" alt="Heinrich-Böll-Schule Hattersheim">
+  <p class="kicker">Gymnasiale Oberstufe · Tag der offenen Tür</p>
+  <h1>Leistungskurse im Film</h1>
+  <p class="field"><b>Aufgabenfeld I</b> · Deutsch, Englisch und Kunst</p>
+  <img class="main" src="assets/img/qr_start.svg" alt="QR-Code zur Seite larshanisch.github.io/leistungskurse-hbs">
+  <p class="scan">Scannen und Film ansehen</p>
+  <p class="url">larshanisch.github.io/leistungskurse-hbs</p>
+  <div class="spacer"></div>
+  <div class="teacher">
+    <img src="assets/img/qr_tafel.svg" alt="QR-Code zur Tafel-Seite">
+    <div>
+      <p><b>Für Lehrkräfte: Vollbild an der Tafel</b></p>
+      <p>Übersicht und Filme im Vollbild, jeden Film selbst wählen.</p>
+      <p>larshanisch.github.io/leistungskurse-hbs/tafel.html</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

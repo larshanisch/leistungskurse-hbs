@@ -70,7 +70,9 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Dateiverweise in exakter Schreibweise vorhanden, Film und Aufnahmen laden online.
 - 29.10.2026 (Nacht, später): `tafel.html` = Standardmodus im Vollbild (Entscheidung 33): ein Klick,
   dann Übersicht und Filme im Rahmen; Esc verlässt das Vollbild, ein Knopf holt es zurück.
-  Offen: Kiosk und Tafel einmal am echten Gerät mit Ton testen; QR-Code.
+- 29.10.2026: QR-Codes (`assets/img/qr_start.svg`, `qr_tafel.svg`, Paket qrcode 1.5.4, nur im Scratchpad
+  installiert), Druckvorlage `qr.html` und `qr_aushang.pdf` (A4, eine Seite). Alle Seiten noindex (Entscheidung 34).
+  Offen: Kiosk und Tafel am echten Gerät mit Ton testen; QR-Codes mit dem Handy scannen (kein Decoder hier).
 
 ## Veröffentlichen
 
