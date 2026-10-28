@@ -4,7 +4,7 @@ window.FILMS["mathematik"] = {
  "id": "mathematik",
  "title": "Leistungskurs Mathematik",
  "accent": "#c8d530",
- "total": 338.4,
+ "total": 339.6,
  "credits": [
   "Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
@@ -244,13 +244,13 @@ window.FILMS["mathematik"] = {
    "n": 4,
    "chapter": "Was du lernst",
    "chapterDur": 3,
-   "duration": 25.65,
-   "speechEnd": 24.25,
+   "duration": 26.37,
+   "speechEnd": 24.97,
    "sentences": [
     {
      "text": "Die vier Halbjahre bauen aufeinander auf: zuerst die Analysis mit der Integralrechnung, dann die Geometrie im dreidimensionalen Raum und eine Vertiefung der Analysis, danach die Stochastik und zum Schluss Funktionenscharen, bei denen du ganze Familien von Funktionen auf einmal untersuchst.",
      "audio": "media/mathematik/audio/s04_1_9a86b72b.mp3",
-     "dur": 18,
+     "dur": 18.72,
      "estimated": false,
      "start": 0.6
     },
@@ -259,34 +259,34 @@ window.FILMS["mathematik"] = {
      "audio": "media/mathematik/audio/s04_2_9a8f4015.mp3",
      "dur": 5.2,
      "estimated": false,
-     "start": 19.05
+     "start": 19.77
     }
    ],
    "cues": [
     {
      "text": "Die vier Halbjahre bauen aufeinander auf: zuerst die Analysis mit der Integralrechnung,",
      "start": 0.6,
-     "end": 6
+     "end": 6.216
     },
     {
      "text": "dann die Geometrie im dreidimensionalen Raum und eine Vertiefung der Analysis,",
-     "start": 6,
-     "end": 10.841
+     "start": 6.216,
+     "end": 11.251
     },
     {
      "text": "danach die Stochastik und zum Schluss Funktionenscharen,",
-     "start": 10.841,
-     "end": 14.317
+     "start": 11.251,
+     "end": 14.866
     },
     {
      "text": "bei denen du ganze Familien von Funktionen auf einmal untersuchst.",
-     "start": 14.317,
-     "end": 18.414
+     "start": 14.866,
+     "end": 19.126
     },
     {
      "text": "Im Leistungskurs sind zehn Themenfelder verbindlich, eines mehr als im Grundkurs.",
-     "start": 19.05,
-     "end": 24.25
+     "start": 19.77,
+     "end": 24.97
     }
    ],
    "image": {
@@ -304,7 +304,7 @@ window.FILMS["mathematik"] = {
       "value": "10",
       "label": "verbindliche Themenfelder im Leistungskurs",
       "sub": "im Grundkurs 9",
-      "t": 20.462
+      "t": 21.182
      }
     ]
    },
@@ -314,22 +314,22 @@ window.FILMS["mathematik"] = {
      {
       "label": "Q1",
       "text": "Analysis",
-      "t": 3.89
+      "t": 4.021
      },
      {
       "label": "Q2",
       "text": "Geometrie im Raum",
-      "t": 6.621
+      "t": 6.862
      },
      {
       "label": "Q3",
       "text": "Stochastik",
-      "t": 11.648
+      "t": 12.09
      },
      {
       "label": "Q4",
       "text": "Funktionenscharen",
-      "t": 13.324
+      "t": 13.833
      }
     ]
    },
@@ -394,7 +394,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 106.46
+   "start": 107.18
   },
   {
    "n": 6,
@@ -466,14 +466,14 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 124.38
+   "start": 125.1
   },
   {
    "n": 7,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 44.42,
-   "speechEnd": 41.42,
+   "duration": 44.66,
+   "speechEnd": 41.66,
    "sentences": [
     {
      "text": "Im Leistungskurs gehst du weiter: Du berechnest das Volumen von Körpern, die durch Drehung entstehen, beschreibst logistisches Wachstum, arbeitest mit der Normalverteilung und lernst Hypothesentests kennen – also, wie man mit Statistik prüft, ob eine Behauptung zutrifft.",
@@ -492,7 +492,7 @@ window.FILMS["mathematik"] = {
     {
      "text": "Kurz zusammengefasst: Die vier Halbjahre führen dich durch Analysis, Geometrie, Stochastik und Funktionenscharen, es geht ums Verstehen und Begründen, und im Leistungskurs arbeitest du mit mehr Themen, formaler und mit Beweisen.",
      "audio": "media/mathematik/audio/s07_3_71f82012.mp3",
-     "dur": 14.56,
+     "dur": 14.8,
      "estimated": false,
      "start": 26.86
     }
@@ -531,22 +531,22 @@ window.FILMS["mathematik"] = {
     {
      "text": "Kurz zusammengefasst: Die vier Halbjahre führen dich durch Analysis,",
      "start": 26.86,
-     "end": 31.202
+     "end": 31.274
     },
     {
      "text": "Geometrie, Stochastik und Funktionenscharen,",
-     "start": 31.202,
-     "end": 34.012
+     "start": 31.274,
+     "end": 34.13
     },
     {
      "text": "es geht ums Verstehen und Begründen,",
-     "start": 34.012,
-     "end": 36.311
+     "start": 34.13,
+     "end": 36.467
     },
     {
      "text": "und im Leistungskurs arbeitest du mit mehr Themen, formaler und mit Beweisen.",
-     "start": 36.311,
-     "end": 41.228
+     "start": 36.467,
+     "end": 41.465
     }
    ],
    "image": {
@@ -593,7 +593,7 @@ window.FILMS["mathematik"] = {
     ],
     "t": 26.86
    },
-   "start": 142.35
+   "start": 143.07
   },
   {
    "n": 8,
@@ -660,7 +660,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 189.77
+   "start": 190.73
   },
   {
    "n": 9,
@@ -766,7 +766,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 208.06
+   "start": 209.02
   },
   {
    "n": 10,
@@ -852,14 +852,14 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 242.57
+   "start": 243.53
   },
   {
    "n": 11,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 26.79,
-   "speechEnd": 25.39,
+   "duration": 27.03,
+   "speechEnd": 25.63,
    "sentences": [
     {
      "text": "Das Abitur hat nach heutigem Stand zwei Teile.",
@@ -878,7 +878,7 @@ window.FILMS["mathematik"] = {
     {
      "text": "Im zweiten bearbeitest du mit Hilfsmitteln je eine größere Aufgabe zur Analysis, zur Geometrie und zur Stochastik; bei der Analysis wählst du aus zwei Vorschlägen.",
      "audio": "media/mathematik/audio/s11_3_fe5343f5.mp3",
-     "dur": 10.56,
+     "dur": 10.8,
      "estimated": false,
      "start": 11.74
     },
@@ -887,7 +887,7 @@ window.FILMS["mathematik"] = {
      "audio": "media/mathematik/audio/s11_4_46e2bc9d.mp3",
      "dur": 2.64,
      "estimated": false,
-     "start": 22.75
+     "start": 22.99
     }
    ],
    "cues": [
@@ -909,22 +909,22 @@ window.FILMS["mathematik"] = {
     {
      "text": "Im zweiten bearbeitest du mit Hilfsmitteln je eine größere Aufgabe zur Analysis,",
      "start": 11.74,
-     "end": 16.923
+     "end": 17.041
     },
     {
      "text": "zur Geometrie und zur Stochastik;",
-     "start": 16.923,
-     "end": 19.061
+     "start": 17.041,
+     "end": 19.227
     },
     {
      "text": "bei der Analysis wählst du aus zwei Vorschlägen.",
-     "start": 19.061,
-     "end": 22.17
+     "start": 19.227,
+     "end": 22.407
     },
     {
      "text": "Du hast dreihundertdreißig Minuten Zeit.",
-     "start": 22.75,
-     "end": 25.39
+     "start": 22.99,
+     "end": 25.63
     }
    ],
    "image": {
@@ -946,7 +946,7 @@ window.FILMS["mathematik"] = {
      {
       "value": "330",
       "label": "Minuten Bearbeitungszeit",
-      "t": 23.278
+      "t": 23.518
      }
     ],
     "notes": [
@@ -956,12 +956,12 @@ window.FILMS["mathematik"] = {
      },
      {
       "text": "Teil 2 mit Rechner und Formelsammlung: Analysis (1 aus 2), Geometrie, Stochastik",
-      "t": 13.424
+      "t": 13.463
      }
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 264.51
+   "start": 265.47
   },
   {
    "n": 12,
@@ -1034,7 +1034,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 294.3
+   "start": 295.5
   },
   {
    "n": 13,
@@ -1067,7 +1067,7 @@ window.FILMS["mathematik"] = {
     "src": "media/mathematik/img/m13.jpg",
     "motion": "zoom-out"
    },
-   "start": 311.63
+   "start": 312.83
   },
   {
    "n": 14,
@@ -1120,7 +1120,7 @@ window.FILMS["mathematik"] = {
     ]
    },
    "logo": true,
-   "start": 322.03
+   "start": 323.23
   }
  ]
 };

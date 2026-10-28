@@ -101,6 +101,11 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Fach-Id `mathe` mit `film`-Zuordnung in `index.html`.
 - 29.10.2026: Klausurzahlen genauer in Filmen und Planer (Entscheidung 55): **Kunst 5:41, PoWi 5:49, Geschichte 5:51,
   Mathematik 5:38 min**. `.build_cache/reuse_takes.mjs <fach>` übernimmt wortgleiche Aufnahmen auch aus dem eigenen Ordner.
+- 29.10.2026: Deutsch 0.10 – Klausur-Vergleich nennt alle Fächer außer Mathematik statt nur Englisch (Entscheidung 56),
+  **5:35 min gemessen**. `tools/build.mjs` liest Aussprache-Umschreibungen aus `content/aussprache.json` (Untertitel bleiben).
+- 29.10.2026: Planer mit Kästen „Schriftlich“ (1–3) und „Mündlich“ (4–5) (Entscheidung 57). „Analysis“ im Mathe-Film per
+  ausgewählter Neuaufnahme richtig betont (Entscheidung 58), **5:40 min**. Falsch betonte Wörter: erst denselben Satz mehrfach
+  aufnehmen und hören lassen, Umschreibungen halfen hier nicht. Wird eine Datei unter gleichem Namen ersetzt: `CACHE` in `sw.js` hochzählen.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Offen: Filme Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

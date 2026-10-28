@@ -109,6 +109,13 @@ function placeholderSvg(n, text) {
 // --- Aufbau ---------------------------------------------------------------------------------
 const speech = speechByScene(script);
 const voiceKey = JSON.stringify(content.voice);
+// Aussprache-Liste für alle Filme: { "Wort im Drehbuch": "so spricht es die Stimme" }, nur ganze Wörter
+const ausspracheFile = path.join(ROOT, 'content', 'aussprache.json');
+const AUSSPRACHE = fs.existsSync(ausspracheFile) ? JSON.parse(fs.readFileSync(ausspracheFile, 'utf8')) : {};
+function speakAs(s) {
+  return Object.keys(AUSSPRACHE).reduce((out, w) =>
+    out.replace(new RegExp('(^|[^\\p{L}])' + w + '(?![\\p{L}])', 'gu'), (m, pre) => pre + AUSSPRACHE[w]), s);
+}
 const manifestItems = [];
 const report = { scenes: 0, sentences: 0, audioPresent: 0, audioMissing: 0, chars: 0, warnings: [] };
 const usedImages = new Set();
@@ -134,8 +141,11 @@ for (const sc of content.scenes) {
   const text = speech.get(sc.n);
   if (!text) { report.warnings.push(`Szene ${sc.n}: kein Sprechtext im Drehbuch`); continue; }
   const sentences = splitSentences(text).map((s, i) => {
-    const file = `audio/s${String(sc.n).padStart(2, '0')}_${i + 1}_${hash(voiceKey + s)}.mp3`;
-    manifestItems.push({ file, text: s });
+    // Untertitel zeigen s; die Stimme bekommt die Sprechfassung (Aussprache-Liste, z. B. „Analysis“ → „Analüsis“).
+    // Ohne Treffer ist sie gleich s, die Dateinamen der bisherigen Aufnahmen bleiben dann unverändert.
+    const spoken = speakAs(s);
+    const file = `audio/s${String(sc.n).padStart(2, '0')}_${i + 1}_${hash(voiceKey + spoken)}.mp3`;
+    manifestItems.push({ file, text: spoken });
     const abs = path.join(mediaDir, file);
     let dur = fs.existsSync(abs) ? probe(abs) : null;
     const estimated = dur === null;

@@ -132,7 +132,26 @@
   .slot.lk { border-color: var(--accent); }
   .slot .k { display: block; white-space: nowrap; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.3em; }
   .slot b { font-size: 17px; }
-  .how { margin: -0.4em 0 0.9em; font-size: 14px; color: var(--ink-soft); }
+  /* Prüfungsübersicht: 1–3 schriftlich, 4–5 mündlich (Entscheidung 57) */
+  .exam { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 10px; margin-bottom: 0.7em; }
+  .grp { padding: 0.6em 0.7em; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,0.05); display: grid; gap: 6px 10px; align-content: start; }
+  .grp.w { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grp.m { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grp > .k { grid-column: 1 / -1; }
+  .grp.w { border-color: rgba(200,213,48,0.55); }
+  .grp > .k { font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+  .grp.w > .k { color: var(--accent); }
+  .grp > .k small { font-weight: 700; letter-spacing: 0.02em; text-transform: none; }
+  .pf { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; align-content: start; gap: 2px 0.4em; }
+  .pf b, .pf em { grid-column: 1 / -1; min-width: 0; hyphens: auto; }
+  .pf em { font-style: normal; font-size: 13px; color: var(--ink-soft); line-height: 1.25; }
+  .pf i { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-style: normal; font-weight: 900; font-size: 14px;
+    border: 1px solid var(--line); color: var(--ink-soft); }
+  .grp.w .pf i { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .pf b { font-size: 16px; line-height: 1.2; }
+  .pf small { font-size: 13px; color: var(--ink-soft); line-height: 1.25; }
+  .spread { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-bottom: 0.9em; }
+  .spread > .k { font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); }
   .need { display: flex; flex-wrap: wrap; gap: 6px; }
   .need span { padding: 0.3em 0.7em; border-radius: 999px; font-size: 14px; font-weight: 700; background: rgba(200,213,48,0.16); border: 1px solid rgba(200,213,48,0.5); }
   .need span.free { background: none; border-style: dashed; border-color: var(--line); color: var(--ink-soft); }
@@ -147,7 +166,7 @@
   footer .linkish { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
 
   @media (max-width: 599px) { .cta { flex-wrap: wrap; } .cta .txt { flex-basis: calc(100% - 60px - 1.2em); } .cta .open { margin-left: auto; } }
-  @media (max-width: 599px) { .plan { grid-template-columns: minmax(0, 1fr) !important; } .chips { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .chip { padding: 0.5em 0.6em; gap: 0.4em; } .chip .th { width: 24px; height: 24px; } .chip { font-size: 15px; } .lkpic { height: 130px; } .lkpic b { font-size: 17px; } }
+  @media (max-width: 599px) { .plan { grid-template-columns: minmax(0, 1fr) !important; } .chips { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .chip { padding: 0.5em 0.6em; gap: 0.4em; } .chip .th { width: 24px; height: 24px; } .chip { font-size: 15px; } .lkpic { height: 130px; } .lkpic b { font-size: 17px; } .exam { grid-template-columns: minmax(0, 1fr); } .grp.w, .grp.m { grid-template-columns: minmax(0, 1fr); } .pf { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; } }
   @media (max-width: 899px) { .plan { grid-template-columns: 1fr 1fr; } .result { grid-column: 1 / -1; } #setup { place-items: start center; } }
 
   /* Querformat ab Tablet-Größe (digitale Tafel): alles auf einem Bildschirm, kein Scrollen.
@@ -207,10 +226,10 @@
     .chips { gap: 0.9vh; }
     .chip { font-size: 2.1vh; padding: 0.9vh 0.9vw; border-radius: 1.2vh; }
     .chip small { font-size: 1.4vh; }
-    .result .verdict { font-size: 2vh; margin-bottom: 1.2vh; }
+    .result .verdict { font-size: 2vh; margin-bottom: 0.9vh; }
     .duo { gap: 0.8vw; margin-bottom: 1vh; }
     .duo .plus { width: 4vh; height: 4vh; font-size: 2.6vh; }
-    .lkpic { height: 11.5vh; padding: 1.2vh 1vw; border-radius: 1.6vh; }
+    .lkpic { height: 8.5vh; padding: 1.2vh 1vw; border-radius: 1.6vh; }
     .lkpic .k { font-size: 1.4vh; }
     .lkpic b { font-size: 2.6vh; }
     .lkpic.empty b { font-size: 2vh; }
@@ -220,13 +239,22 @@
     .slot { padding: 1vh 0.7vw; border-radius: 1.2vh; }
     .slot .k { font-size: 1.4vh; margin-bottom: 0.5vh; }
     .slot b { font-size: 2.1vh; }
-    .how { font-size: 1.7vh; margin: -0.6vh 0 1.6vh; }
+    .exam { gap: 0.7vw; margin-bottom: 1vh; }
+    .grp { padding: 1vh 0.7vw; border-radius: 1.2vh; gap: 0.7vh; }
+    .grp > .k, .spread > .k { font-size: 1.4vh; }
+    .pf { gap: 0.2vh 0.4vw; }
+    .grp { gap: 0.7vh 0.7vw; }
+    .pf i { width: 3vh; height: 3vh; font-size: 1.6vh; }
+    .pf b { font-size: 1.95vh; }
+    .pf small, .pf em { font-size: 1.5vh; }
+    .pf b { font-size: 1.85vh; }
+    .spread { gap: 0.6vh 0.6vw; margin-bottom: 1.4vh; }
     .need { gap: 0.6vh 0.4vw; }
     .need span { font-size: 1.7vh; }
     .result ul { font-size: 1.85vh; gap: 0.7vh; }
     .result .links { margin-top: 1.6vh; gap: 0.5vw; }
     .result .links a { font-size: 1.7vh; }
-    .fine { font-size: 1.45vh; margin-top: 1.6vh; }
+    .fine { font-size: 1.45vh; margin-top: 1.2vh; }
     footer { margin: 0; font-size: 1.4vh; }
   }
   /* fast quadratische Tafeln (4:3): Wahlspalten untereinander, damit das Ergebnis genug Breite hat */
@@ -516,9 +544,7 @@
       if (!kind('fs') && !kind('nw')) need.push('Fremdsprache oder Naturwissenschaft');
       FIELDS.forEach(function (f) { if (!covered[f.id]) need.push('ein Fach aus Aufgabenfeld ' + f.num); });
 
-      if (need.indexOf('Deutsch') >= 0 || need.indexOf('Mathematik') >= 0) {
-        notes.push('Deutsch und Mathematik gehören für alle zu den fünf Prüfungsfächern.');
-      }
+      // dass Deutsch und Mathematik für alle Prüfungsfächer sind, zeigt die Zeile „In 3 bis 5“ (Entscheidung 57)
       if (need.some(function (n) { return n.indexOf('Fremdsprache') === 0; })) {
         notes.push('Unter den Prüfungsfächern muss eine Fremdsprache oder eine Naturwissenschaft sein – das deckt keiner deiner beiden LKs ab.');
       }
@@ -527,12 +553,15 @@
       }
       if (SUBJ[a].field === SUBJ[b].field) {
         var other = FIELDS.filter(function (f) { return f.id !== SUBJ[a].field; }).map(function (f) { return f.num; });
-        notes.push('Beide LKs liegen in Aufgabenfeld ' + FIELDS[SUBJ[a].field - 1].num + '. Dein 3. Prüfungsfach (schriftlich) muss deshalb aus Aufgabenfeld ' +
-          other.join(' oder ') + ' kommen' + (SUBJ[a].field === 3 ? ' – also weder Mathematik noch eine Naturwissenschaft' : need.indexOf('Deutsch') >= 0 ? ' – Deutsch also nicht' : '') +
-          ' <small>(die drei schriftlichen Fächer müssen mindestens zwei Aufgabenfelder abdecken)</small>.');
+        notes.push('Beide LKs liegen in Aufgabenfeld ' + FIELDS[SUBJ[a].field - 1].num + ', die drei schriftlichen Fächer müssen aber mindestens zwei Aufgabenfelder abdecken. ' +
+          'Dein 3. Prüfungsfach kommt deshalb aus Aufgabenfeld ' + other.join(' oder ') +
+          (SUBJ[a].field === 3 ? ' – also weder Mathematik noch eine Naturwissenschaft' : need.indexOf('Deutsch') >= 0 ? ' – Deutsch also nicht' : '') + '.');
       }
       // wie viele Prüfungsfächer frei bleiben, zeigen die Schaltflächen „frei wählbar“ (kein eigener Satz, Entscheidung 55)
       var free = 3 - need.length;
+      var third = SUBJ[a].field === SUBJ[b].field
+        ? 'aus Aufgabenfeld ' + FIELDS.filter(function (f) { return f.id !== SUBJ[a].field; }).map(function (f) { return f.num; }).join(' oder ')
+        : 'deine Wahl';
       // Klausuren in Q1–Q3: LK zwei pro Halbjahr; vierstündige GK Deutsch und Mathematik ebenfalls zwei, alle übrigen
       // Grundkurse an der HBS eine (Schaubild Klausuren, Abb. 4, Anmerkung a; Entscheidung 55)
       var more = [a, b].filter(function (id) { return id !== 'deutsch' && id !== 'mathe'; }).map(function (id) { return SUBJ[id].name; });
@@ -540,8 +569,10 @@
         ? 'Deutsch und Mathematik schreiben schon im Grundkurs zwei pro Halbjahr – mit diesen Leistungskursen kommt keine dazu.'
         : 'pro Halbjahr ' + (more.length === 1 ? 'eine' : 'zwei') + ' mehr, als wenn du ' + more.join(' und ') + ' als Grundkurs hättest' +
           (more.length === 1 ? ' – Deutsch und Mathematik haben schon im Grundkurs zwei.' : '.')));
-      return { need: need, free: free, notes: notes };
+      return { need: need, free: free, notes: notes, third: third };
     }
+
+    function pf(n, kind, name, more) { return '<div class="pf"><i>' + n + '</i><small>' + kind + '</small><b>' + esc(name) + '</b>' + (more ? '<em>' + esc(more) + '</em>' : '') + '</div>'; }
 
     function renderPlan() {
       ['chips1', 'chips2'].forEach(function (el, i) {
@@ -563,9 +594,14 @@
       var chipsHtml = c.need.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') +
         new Array(c.free + 1).join('<span class="free">frei wählbar</span>');
       r.innerHTML = duo(a, b) +
-        '<p class="verdict ok">Diese Kombination gibt es an der HBS. Beide LKs sind deine Prüfungsfächer 1 und 2.</p>' +
-        '<div class="slots"><div class="slot"><span class="k">Prüfungsfächer 3 bis 5</span><div class="need">' + chipsHtml + '</div></div></div>' +
-        '<p class="how">1 bis 3 schriftlich, 4 mündlich, 5 als Präsentation oder mündlich.</p>' +
+        '<p class="verdict ok">Diese Kombination gibt es an der HBS.</p>' +
+        '<div class="exam">' +
+          '<div class="grp w"><span class="k">Schriftlich <small>· Landesabitur</small></span>' +
+            pf(1, 'LK', SUBJ[a].name) + pf(2, 'LK', SUBJ[b].name) + pf(3, 'GK', '3. Fach', c.third) + '</div>' +
+          '<div class="grp m"><span class="k">Mündlich</span>' +
+            pf(4, 'GK', 'Prüfung') + pf(5, 'GK', 'Präsentation', 'oder Prüfung') + '</div>' +
+        '</div>' +
+        '<div class="spread"><span class="k">In 3 bis 5 gehören – Reihenfolge frei</span><div class="need">' + chipsHtml + '</div></div>' +
         '<ul>' + c.notes.map(function (n) { return '<li>' + n + '</li>'; }).join('') + '</ul>' +
         '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Das Angebot an Leistungskursen ' +
         'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 9 Abs. 6, § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';

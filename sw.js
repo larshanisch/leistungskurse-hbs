@@ -7,11 +7,17 @@
 //   gespeicherten Datei zu.
 // - Seiten, Skripte, Daten: zuerst aus dem Netz (damit Änderungen ankommen), nach 4 s oder
 //   ohne Netz aus dem Speicher.
-const CACHE = 'tdot-filme-v1';
+// Version erhöhen, wenn eine Aufnahme oder ein Bild unter gleichem Namen ersetzt wird
+// (sonst bleibt auf den Tafeln die alte Datei, Entscheidung 58)
+const CACHE = 'tdot-filme-v2';
 const NET_TIMEOUT = 4000;
 
 self.addEventListener('install', () => self.skipWaiting());
-self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));
+self.addEventListener('activate', (e) => e.waitUntil(
+  caches.keys()
+    .then((keys) => Promise.all(keys.filter((k) => k.startsWith('tdot-filme-') && k !== CACHE).map((k) => caches.delete(k))))
+    .then(() => self.clients.claim())
+));
 
 self.addEventListener('fetch', (e) => {
   const req = e.request;

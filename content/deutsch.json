@@ -120,7 +120,7 @@
       "image": { "src": "s10.jpg", "motion": "pan-left" },
       "panel": { "type": "stats", "items": [
         { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im Grundkurs genauso · im letzten Halbjahr 1" },
-        { "at": "in Englisch dagegen", "value": "1 → 2", "label": "Englisch: GK → LK", "sub": "dort kommt eine Klausur dazu" },
+        { "at": "in allen anderen Fächern", "value": "1 → 2", "label": "andere Fächer: GK → LK", "sub": "außer Mathematik – dort kommt eine Klausur dazu" },
         { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur", "sub": "wenn die Lehrkraft es festlegt" },
         { "at": "Mitarbeit", "value": "≥", "label": "Mitarbeit zählt mindestens so viel wie die Klausuren" }
       ] }

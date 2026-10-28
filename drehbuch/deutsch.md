@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Deutsch
 
-Version 0.9 · 29.10.2026 (freigegeben)
+Version 0.10 · 29.10.2026 (Entwurf)
+
+Änderung gegenüber 0.9: Szene 10 nennt nicht mehr Englisch als Gegenbeispiel, sondern alle Fächer außer Mathematik – dort bringt der Leistungskurs eine Klausur pro Halbjahr mehr (Nutzer 29.10.2026, Entscheidung 56).
 
 Änderung gegenüber 0.8: Szene zum Unterschied GK/LK nach der Prüfung `drehbuch/pruefung_gk_lk.md`: Was beide Kursarten tun, wird nicht mehr als LK-Merkmal dargestellt; die Vergleichstafel nennt für den GK, was er tut, statt „–“ oder „grundlegend“ (Nutzer 29.10.2026, Entscheidung 53).
 
@@ -210,13 +212,13 @@ Inhaltsangabe, damit jede Porträtkarte genau so lange steht, wie über das Werk
   die anderen hören zu.
 - **Bewegung:** Schwenk von rechts nach links.
 - **Element:** ZAHL „2 Klausuren pro Halbjahr“ (darunter „im Grundkurs genauso · im letzten
-  Halbjahr 1“) · „Englisch: Grundkurs 1, Leistungskurs 2“ · „Referat oder Präsentation statt einer
+  Halbjahr 1“) · „andere Fächer außer Mathematik: Grundkurs 1, Leistungskurs 2“ · „Referat oder Präsentation statt einer
   Klausur – wenn die Lehrkraft es festlegt“ · „Mitarbeit zählt mindestens so viel“
 - **Sprechtext:**
   > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine – genau wie im Grundkurs Deutsch.
   > Der Leistungskurs Deutsch bringt dir also keine zusätzliche
-  > Klausur; in Englisch dagegen schreibt der Grundkurs bei uns eine Klausur pro Halbjahr und der
-  > Leistungskurs zwei. Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in einem
+  > Klausur. Das gilt sonst nur noch für Mathematik; in allen anderen Fächern schreibt der Grundkurs
+  > bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei. Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in einem
   > der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt. Deine
   > Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.
 - **Beleg:** FB-A (§ 9 Abs. 6 Nr. 1–3, Abs. 6a Nr. 1 „nach Entscheidung der Lehrkraft … einheitlich“

@@ -4,7 +4,7 @@ window.FILMS["deutsch"] = {
  "id": "deutsch",
  "title": "Leistungskurs Deutsch",
  "accent": "#c8d530",
- "total": 332.2,
+ "total": 335.37,
  "credits": [
   "Caspar David Friedrich: Der Wanderer über dem Nebelmeer, um 1817, Hamburger Kunsthalle – gemeinfrei, Wikimedia Commons",
   "Peter Friedel: Heinrich von Kleist, Miniatur, 1801 – gemeinfrei, Wikimedia Commons",
@@ -821,8 +821,8 @@ window.FILMS["deutsch"] = {
    "n": 10,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 32.63,
-   "speechEnd": 31.23,
+   "duration": 35.8,
+   "speechEnd": 34.4,
    "sentences": [
     {
      "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine – genau wie im Grundkurs Deutsch.",
@@ -832,25 +832,32 @@ window.FILMS["deutsch"] = {
      "start": 0.6
     },
     {
-     "text": "Der Leistungskurs Deutsch bringt dir also keine zusätzliche Klausur; in Englisch dagegen schreibt der Grundkurs bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei.",
-     "audio": "media/deutsch/audio/s10_2_155ae799.mp3",
-     "dur": 10,
+     "text": "Der Leistungskurs Deutsch bringt dir also keine zusätzliche Klausur.",
+     "audio": "media/deutsch/audio/s10_2_fa6836d0.mp3",
+     "dur": 3.84,
      "estimated": false,
      "start": 6.65
     },
     {
+     "text": "Das gilt sonst nur noch für Mathematik; in allen anderen Fächern schreibt der Grundkurs bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei.",
+     "audio": "media/deutsch/audio/s10_3_e87b1eec.mp3",
+     "dur": 8.88,
+     "estimated": false,
+     "start": 10.94
+    },
+    {
      "text": "Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "audio": "media/deutsch/audio/s10_3_d9c2b376.mp3",
+     "audio": "media/deutsch/audio/s10_4_d9c2b376.mp3",
      "dur": 9.28,
      "estimated": false,
-     "start": 17.1
+     "start": 20.27
     },
     {
      "text": "Deine Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.",
-     "audio": "media/deutsch/audio/s10_4_e77900c0.mp3",
+     "audio": "media/deutsch/audio/s10_5_e77900c0.mp3",
      "dur": 4.4,
      "estimated": false,
-     "start": 26.83
+     "start": 30
     }
    ],
    "cues": [
@@ -860,34 +867,39 @@ window.FILMS["deutsch"] = {
      "end": 6.2
     },
     {
-     "text": "Der Leistungskurs Deutsch bringt dir also keine zusätzliche Klausur;",
+     "text": "Der Leistungskurs Deutsch bringt dir also keine zusätzliche Klausur.",
      "start": 6.65,
-     "end": 10.581
+     "end": 10.49
     },
     {
-     "text": "in Englisch dagegen schreibt der Grundkurs bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei.",
-     "start": 10.581,
-     "end": 16.592
+     "text": "Das gilt sonst nur noch für Mathematik;",
+     "start": 10.94,
+     "end": 13.264
+    },
+    {
+     "text": "in allen anderen Fächern schreibt der Grundkurs bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei.",
+     "start": 13.264,
+     "end": 19.76
     },
     {
      "text": "Deine Lehrkraft kann außerdem entscheiden,",
-     "start": 17.1,
-     "end": 19.506
+     "start": 20.27,
+     "end": 22.676
     },
     {
      "text": "dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat",
-     "start": 19.506,
-     "end": 24.49
+     "start": 22.676,
+     "end": 27.66
     },
     {
      "text": "oder eine Präsentation ersetzt.",
-     "start": 24.49,
-     "end": 26.265
+     "start": 27.66,
+     "end": 29.435
     },
     {
      "text": "Deine Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.",
-     "start": 26.83,
-     "end": 31.23
+     "start": 30,
+     "end": 34.4
     }
    ],
    "image": {
@@ -905,20 +917,20 @@ window.FILMS["deutsch"] = {
      },
      {
       "value": "1 → 2",
-      "label": "Englisch: GK → LK",
-      "sub": "dort kommt eine Klausur dazu",
-      "t": 10.638
+      "label": "andere Fächer: GK → LK",
+      "sub": "außer Mathematik – dort kommt eine Klausur dazu",
+      "t": 13.324
      },
      {
       "value": "↔",
       "label": "Referat oder Präsentation statt einer Klausur",
       "sub": "wenn die Lehrkraft es festlegt",
-      "t": 17.444
+      "t": 20.614
      },
      {
       "value": "≥",
       "label": "Mitarbeit zählt mindestens so viel wie die Klausuren",
-      "t": 27.164
+      "t": 30.334
      }
     ]
    },
@@ -998,7 +1010,7 @@ window.FILMS["deutsch"] = {
     ],
     "t": 1.7
    },
-   "start": 242.07
+   "start": 245.24
   },
   {
    "n": 12,
@@ -1081,7 +1093,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 262.84
+   "start": 266.01
   },
   {
    "n": 13,
@@ -1149,7 +1161,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 285.38
+   "start": 288.55
   },
   {
    "n": 14,
@@ -1187,7 +1199,7 @@ window.FILMS["deutsch"] = {
     "src": "media/deutsch/img/s14.jpg",
     "motion": "zoom-out"
    },
-   "start": 301.75
+   "start": 304.92
   },
   {
    "n": 15,
@@ -1240,7 +1252,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "logo": true,
-   "start": 316.39
+   "start": 319.56
   }
  ]
 };
