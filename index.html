@@ -9,6 +9,7 @@
   :root {
     --ink: #f6f3ee; --ink-soft: #c9c3b9; --night: #0b0c0f; --card: #16181d; --line: rgba(255,255,255,0.12);
     --accent: #c8d530; --on-accent: #16180a; --no: #e0533f;
+    --free: #5aa9ff; /* zweite Farbe im Planer: „frei wählbar“ (Entscheidung 64) */
     --sans: "Segoe UI Variable Display", "Segoe UI Variable", "Segoe UI", Inter, system-ui, -apple-system, Roboto, Arial, sans-serif;
   }
   * { box-sizing: border-box; }
@@ -154,7 +155,7 @@
   .spread > .k { font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); }
   .need { display: flex; flex-wrap: wrap; gap: 6px; }
   .need span { padding: 0.3em 0.7em; border-radius: 999px; font-size: 14px; font-weight: 700; background: rgba(200,213,48,0.16); border: 1px solid rgba(200,213,48,0.5); }
-  .need span.free { background: none; border-style: dashed; border-color: var(--line); color: var(--ink-soft); }
+  .need span.free { background: rgba(90,169,255,0.16); border-color: var(--free); color: #cfe5ff; }
   .result ul { margin: 0; padding: 0 0 0 1.1em; display: grid; gap: 0.45em; font-size: 16px; line-height: 1.4; }
   .result ul small { color: var(--ink-soft); }
   .result .links { margin: 0.9em 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
