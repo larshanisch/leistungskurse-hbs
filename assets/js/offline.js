@@ -47,8 +47,11 @@
         // werden kurz nachgefragt (bei unveränderten Dateien kommt nur eine kleine Antwort).
         const known = await cache.match(abs(job.p));
         if (!(known && job.p.endsWith('.mp3'))) {
-          const resp = await fetch(abs(job.p), { cache: 'no-cache' });
-          if (!resp.ok) throw new Error(resp.status);
+          // Ton immer ganz und frisch holen: Hat der Browser ihn schon einmal in Stücken geladen,
+          // käme sonst ein Teilstück (206), und das lässt sich nicht speichern
+          const mode = job.p.endsWith('.mp3') ? 'no-store' : 'no-cache';
+          const resp = await fetch(abs(job.p), { cache: mode });
+          if (resp.status !== 200) throw new Error(resp.status);
           await cache.put(abs(job.p), resp);
         }
       } catch (e) { failed++; }
