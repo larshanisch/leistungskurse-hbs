@@ -109,13 +109,16 @@
 
   <footer>Stand: Oktober 2026 · Grundlage: Oberstufen- und Abiturverordnung (OAVO) des Landes Hessen, Kerncurricula und
     Abiturerlass 2028. Illustrationen KI-generiert (Google Gemini), dargestellte Personen sind erfunden.
-    · <a href="kiosk.html" style="color:inherit">Dauerbetrieb für die Räume</a></footer>
+    <span class="modes">· <a href="tafel.html" target="_top" style="color:inherit">Vollbild für die Tafel</a>
+    · <a href="kiosk.html" target="_top" style="color:inherit">Dauerbetrieb für die Räume</a></span></footer>
 </main>
 <script src="assets/data/deutsch.js"></script>
 <script src="assets/data/englisch.js"></script>
 <script src="assets/data/kunst.js"></script>
 <script>
   (function () {
+    // im Vollbild-Rahmen (tafel.html) keine Links auf andere Betriebsarten
+    if (window.parent !== window) document.querySelector('.modes').hidden = true;
     ['deutsch', 'englisch', 'kunst'].forEach(function (id) {
       var f = (window.FILMS || {})[id], el = document.getElementById('len-' + id);
       if (f && el) el.textContent = Math.floor(f.total / 60) + ':' + String(Math.floor(f.total % 60)).padStart(2, '0') + ' Minuten';

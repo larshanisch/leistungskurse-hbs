@@ -68,7 +68,9 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   (Entscheidung 31). **Online:** https://larshanisch.github.io/leistungskurse-hbs/ (Repository
   `larshanisch/leistungskurse-hbs`, öffentlich, Pages aus `main`/Hauptordner). Geprüft: alle 174
   Dateiverweise in exakter Schreibweise vorhanden, Film und Aufnahmen laden online.
-  Offen: Kiosk einmal am echten Gerät mit Ton testen; QR-Code.
+- 29.10.2026 (Nacht, später): `tafel.html` = Standardmodus im Vollbild (Entscheidung 33): ein Klick,
+  dann Übersicht und Filme im Rahmen; Esc verlässt das Vollbild, ein Knopf holt es zurück.
+  Offen: Kiosk und Tafel einmal am echten Gerät mit Ton testen; QR-Code.
 
 ## Veröffentlichen
 

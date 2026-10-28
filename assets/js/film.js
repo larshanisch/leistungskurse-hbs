@@ -9,6 +9,8 @@
   const LOOP = params.get('loop') === '1';
   // ?kiosk=1 in kiosk.html: am Ende meldet der Film sich beim Rahmen, der den nächsten lädt
   const KIOSK = params.get('kiosk') === '1' && window.parent !== window;
+  // in tafel.html oder kiosk.html: der Rahmen hält das Vollbild, der Film braucht keinen eigenen Knopf
+  const FRAMED = window.parent !== window;
   const AUTOSTART = params.get('autostart') === '1';
   const FADE = 1.2;          // Überblendung zwischen Bildern
   const CHAPTER_FADE = 0.7;  // Ein- und Ausblenden der Kapitelkarte
@@ -469,6 +471,7 @@
   $('mute').addEventListener('click', () => setMuted(!muted));
   $('subsBtn').addEventListener('click', () => setSubs(stage.classList.contains('no-subs')));
   $('fsBtn').addEventListener('click', () => {
+    if (FRAMED) return;
     if (document.fullscreenElement) document.exitFullscreen(); else if (stage.requestFullscreen) stage.requestFullscreen();
   });
   $('againBtn').addEventListener('click', () => { seek(0); play(); });
@@ -515,7 +518,7 @@
   // Startbildschirm zeigt das erste Bild als Standbild statt Schwarz
   $('start').style.background = 'linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2)), url("' + shots[0].src + '") center / cover no-repeat';
   if (LOOP || KIOSK) $('homeBtn').hidden = true;
-  if (KIOSK) $('fsBtn').hidden = true;
+  if (FRAMED) $('fsBtn').hidden = true;
 
   setSubs(params.get('subs') !== '0');
   setMuted(params.get('muted') === '1');

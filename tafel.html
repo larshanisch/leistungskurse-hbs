@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leistungskurse · Tafel</title>
+<style>
+  :root {
+    --ink: #f6f3ee; --ink-soft: #c9c3b9; --night: #0b0c0f; --line: rgba(255,255,255,0.12);
+    --accent: #c8d530; --on-accent: #16180a;
+    --sans: "Segoe UI Variable Display", "Segoe UI Variable", "Segoe UI", Inter, system-ui, -apple-system, Roboto, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--night); color: var(--ink); font-family: var(--sans); }
+  #view { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: var(--night); }
+  /* Startkarte: ein Klick schaltet Vollbild ein (Browser erlauben das nur nach einem Klick) */
+  #go { position: fixed; inset: 0; display: grid; place-content: center; gap: 3vh; text-align: center;
+    background: radial-gradient(ellipse at 20% -10%, #23262e 0%, var(--night) 60%); }
+  #go img { height: 14vh; justify-self: center; }
+  #go h1 { margin: 0; font-size: 6vh; font-weight: 800; letter-spacing: -0.02em; }
+  #go p { margin: 0; font-size: 2.1vh; color: var(--ink-soft); }
+  #go button, #again { font: inherit; font-weight: 700; border: 0; border-radius: 999px; cursor: pointer;
+    background: var(--accent); color: var(--on-accent); }
+  #go button { justify-self: center; font-size: 2.6vh; padding: 1.6vh 3vw; }
+  /* nach Esc: kleiner Knopf, um das Vollbild zurückzuholen */
+  #again { position: fixed; right: 2vh; bottom: 2vh; z-index: 5; font-size: 1.8vh; padding: 1vh 1.6vw; opacity: 0.85; }
+</style>
+</head>
+<body>
+<iframe id="view" title="Leistungskurse" allow="autoplay; fullscreen"></iframe>
+<div id="go">
+  <img src="assets/img/logo_hbs_dunkel.png" alt="Heinrich-Böll-Schule Hattersheim">
+  <h1>Leistungskurse im Film</h1>
+  <p>Übersicht und Filme laufen im Vollbild. Zurück ins Fenster: Esc.</p>
+  <button type="button" id="goBtn">Im Vollbild öffnen</button>
+</div>
+<button type="button" id="again" hidden>Vollbild</button>
+<script>
+  (function () {
+    var view = document.getElementById('view'), go = document.getElementById('go'), again = document.getElementById('again');
+    // Die Übersicht lädt schon hinter der Startkarte
+    view.src = 'index.html';
+    function full() {
+      var el = document.documentElement;
+      if (el.requestFullscreen) el.requestFullscreen().catch(function () { /* ohne Vollbild weiter */ });
+    }
+    document.getElementById('goBtn').addEventListener('click', function () { full(); go.hidden = true; });
+    again.addEventListener('click', full);
+    document.addEventListener('fullscreenchange', function () {
+      again.hidden = !!document.fullscreenElement || !go.hidden;
+    });
+  })();
+</script>
+</body>
+</html>
