@@ -4,7 +4,7 @@ window.FILMS["englisch"] = {
  "id": "englisch",
  "title": "Leistungskurs Englisch",
  "accent": "#c8d530",
- "total": 365.33,
+ "total": 365.01,
  "credits": [
   "Henry Fuseli (Johann Heinrich Füssli): Studie zu den drei Hexen aus „Macbeth“, um 1783, Auckland Art Gallery Toi o Tāmaki – gemeinfrei, Wikimedia Commons",
   "Walter Crane: Imperial Federation – Map of the World Showing the Extent of the British Empire in 1886 – gemeinfrei, Wikimedia Commons (Norman B. Leventhal Map Center, Boston Public Library)",
@@ -15,13 +15,13 @@ window.FILMS["englisch"] = {
    "n": 1,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 18.29,
-   "speechEnd": 16.89,
+   "duration": 17.97,
+   "speechEnd": 16.57,
    "sentences": [
     {
-     "text": "Im Leistungskurs Englisch sitzen die beiden zusammen: Sie wählt Deutsch dazu, er Kunst – und Englisch passt zu beidem.",
-     "audio": "media/englisch/audio/s01_1_470b4557.mp3",
-     "dur": 7.2,
+     "text": "Die beiden hier haben ganz verschieden gewählt: Sie nimmt Deutsch dazu, er Kunst – und Englisch passt zu beidem.",
+     "audio": "media/englisch/audio/s01_1_bfee5b97.mp3",
+     "dur": 6.88,
      "estimated": false,
      "start": 0.6
     },
@@ -30,29 +30,29 @@ window.FILMS["englisch"] = {
      "audio": "media/englisch/audio/s01_2_da2dfa5f.mp3",
      "dur": 8.64,
      "estimated": false,
-     "start": 8.25
+     "start": 7.93
     }
    ],
    "cues": [
     {
-     "text": "Im Leistungskurs Englisch sitzen die beiden zusammen:",
+     "text": "Die beiden hier haben ganz verschieden gewählt:",
      "start": 0.6,
-     "end": 3.834
+     "end": 3.487
     },
     {
-     "text": "Sie wählt Deutsch dazu, er Kunst – und Englisch passt zu beidem.",
-     "start": 3.834,
-     "end": 7.739
+     "text": "Sie nimmt Deutsch dazu, er Kunst – und Englisch passt zu beidem.",
+     "start": 3.487,
+     "end": 7.419
     },
     {
      "text": "Zwei Jahre lang liest, schreibst und diskutierst du auf Englisch,",
-     "start": 8.25,
-     "end": 12.32
+     "start": 7.93,
+     "end": 12
     },
     {
      "text": "über Literatur, Filme und die großen Fragen der englischsprachigen Welt.",
-     "start": 12.32,
-     "end": 16.827
+     "start": 12,
+     "end": 16.507
     }
    ],
    "image": {
@@ -153,7 +153,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 21.29
+   "start": 20.97
   },
   {
    "n": 3,
@@ -229,7 +229,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 49.55
+   "start": 49.23
   },
   {
    "n": 4,
@@ -320,7 +320,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 68.6
+   "start": 68.28
   },
   {
    "n": 5,
@@ -474,7 +474,7 @@ window.FILMS["englisch"] = {
     }
    ],
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 89.69
+   "start": 89.37
   },
   {
    "n": 6,
@@ -529,7 +529,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 135.33
+   "start": 135.01
   },
   {
    "n": 7,
@@ -655,7 +655,7 @@ window.FILMS["englisch"] = {
     ],
     "t": 30.51
    },
-   "start": 145.73
+   "start": 145.41
   },
   {
    "n": 8,
@@ -743,7 +743,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 193.12
+   "start": 192.8
   },
   {
    "n": 9,
@@ -870,7 +870,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 217.06
+   "start": 216.74
   },
   {
    "n": 10,
@@ -946,7 +946,7 @@ window.FILMS["englisch"] = {
     ],
     "t": 3.608
    },
-   "start": 258.61
+   "start": 258.29
   },
   {
    "n": 11,
@@ -1025,7 +1025,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 276.74
+   "start": 276.42
   },
   {
    "n": 12,
@@ -1104,7 +1104,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 301.63
+   "start": 301.31
   },
   {
    "n": 13,
@@ -1150,7 +1150,7 @@ window.FILMS["englisch"] = {
     }
    ],
    "corner": "bei uns in der Regel",
-   "start": 318.88
+   "start": 318.56
   },
   {
    "n": 14,
@@ -1193,7 +1193,7 @@ window.FILMS["englisch"] = {
     "src": "media/englisch/img/e14.jpg",
     "motion": "zoom-out"
    },
-   "start": 332.24
+   "start": 331.92
   },
   {
    "n": 15,
@@ -1246,7 +1246,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "logo": true,
-   "start": 349.68
+   "start": 349.36
   }
  ]
 };

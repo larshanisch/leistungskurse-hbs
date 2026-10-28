@@ -18,6 +18,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   erlaubt (Entscheidung 10) — jeden Text im Bild auf Rechtschreibung prüfen. Keine KI-Porträts
   realer Personen; keine Gemini-Bilder „im Stil von" geschützten Künstlern. Jede fremde
   Abbildung bekommt einen Eintrag im Bildnachweis.
+- **Jeder Film steht für sich** (Entscheidung 36): keine Verweise auf einen anderen Film („die beiden“,
+  „wie im Deutsch-Film“) – die Filme laufen in beliebiger Reihenfolge.
 - **Szene 2 jedes Films** enthält den Rat „deutlich besser als fünf Punkte“ (Entscheidung 26).
 - **Sprechtext:** vollständige, ausformulierte Sätze, die vorgelesen natürlich klingen — keine
   Stichwortketten, keine Doppelpunkt-Aufzählungen, keine Einwortsätze (Nutzer 27.10.2026).
@@ -76,7 +78,9 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Minute vorladen), Bilder werden vorausgeladen; Tafel und Kiosk speichern alle Filme per Service
   Worker (`sw.js`, `assets/js/offline.js`). Test: `vorschau-langsam` (Port 8318, 20 KB/s je Datei).
   Offen: Kiosk und Tafel am echten Gerät mit Ton testen; QR-Codes mit dem Handy scannen (kein Decoder hier);
-  kurzer Link; Englisch-Film ohne Vorwissen aus dem Deutsch-Film.
+  kurzer Link.
+- 29.10.2026: Drehbuch Englisch 0.5 – Satz 1 ohne Rückgriff auf den Deutsch-Film, neu vertont
+  (Entscheidung 36). Regel: jeder Film muss in jeder Reihenfolge verständlich sein.
 
 ## Veröffentlichen
 

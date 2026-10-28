@@ -1,6 +1,10 @@
 # Drehbuch — Leistungskurs Englisch
 
-Version 0.4 · 29.10.2026 (freigegeben)
+Version 0.5 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.4 (Nutzer 29.10.2026): Szene 1 — erster Satz ohne Rückgriff auf den
+Deutsch-Film („die beiden“ setzte voraus, dass man das Duo schon kennt); jeder Film soll in jeder
+Reihenfolge verständlich sein. „Die beiden hier“ zeigt auf das Titelbild, auf dem beide zu sehen sind.
 
 Änderungen gegenüber 0.3 (Nutzer 29.10.2026): Szene 7 — die Merkkarte wird mitgesprochen; den
 zweiten Roman wählt die Lehrkraft, Beispiel der aktuellen HBS-Leistungskurse: Orwell „1984“.
@@ -44,7 +48,7 @@ werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 - **Bewegung:** langsamer Zoom ein.
 - **Element:** Schullogo · Titel „Leistungskurs Englisch“, darunter „Gymnasiale Oberstufe“
 - **Sprechtext:**
-  > Im Leistungskurs Englisch sitzen die beiden zusammen: Sie wählt Deutsch dazu, er Kunst – und
+  > Die beiden hier haben ganz verschieden gewählt: Sie nimmt Deutsch dazu, er Kunst – und
   > Englisch passt zu beidem. Zwei Jahre lang liest, schreibst und diskutierst du auf Englisch, über
   > Literatur, Filme und die großen Fragen der englischsprachigen Welt.
 - **Beleg:** FB-A (§ 13 Abs. 2: Englisch als fortgeführte Fremdsprache erfüllt die Pflichtregel);
