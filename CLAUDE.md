@@ -74,7 +74,7 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 
 ## Veröffentlichen
 
-- Repository `https://github.com/larshanisch/leistungskurse-hbs`, Zweig `main`; GitHub Pages baut nach jedem
+- Repository `https://github.com/larshanisch/leistungskurse-hbs` (öffentlich, Seiten mit noindex – Entscheidung 34), Zweig `main`; GitHub Pages baut nach jedem
   Push von selbst (1–2 min). Autor der Commits: „Hanisch“ mit `295572885+larshanisch@users.noreply.github.com`
   (lokal gesetzt) – nie die Outlook-Adresse.
 - GitHub CLI: die angemeldete aus dem HBS-Planer mitbenutzen,

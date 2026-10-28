@@ -1,6 +1,6 @@
 # Entscheidungslog
 
-Version 21 · 29.10.2026
+Version 22 · 29.10.2026
 
 | Nr. | Datum | Entscheidung | Begründung |
 |---|---|---|---|
@@ -37,3 +37,4 @@ Version 21 · 29.10.2026
 | 31 | 29.10.2026 | Startseite ohne Kasten „Welche Kombinationen gehen?“; stattdessen über den Kacheln die Überschrift „Aufgabenfeld I · Das sprachlich-literarisch-künstlerische Aufgabenfeld“ mit dem Satz „Unsere Leistungskurse in diesem Aufgabenfeld: Deutsch, Englisch und Kunst“. Die Kombinationsregel bleibt in den Filmen (Szene 3) | Nutzer. Die HBS bietet in diesem Aufgabenfeld nur diese drei LKs an (Nutzer 29.10.2026). Gemessen 29.10.2026: bei 1920×1080, 1280×720, 1024×768 und 3840×2160 genau bildschirmhoch |
 | 32 | 29.10.2026 | Veröffentlicht unter https://larshanisch.github.io/leistungskurse-hbs/ (öffentliches Repository `larshanisch/leistungskurse-hbs`, Pages aus `main`). Anlegen und Hochladen mit der GitHub CLI aus dem HBS-Planer, keine eigene Installation | Nutzer. Vorher geprüft: keine Namen, keine Mail-Adressen, keine externen Skripte; Schulfotos und Rohbilder (`art/`) bleiben lokal; 16 MB |
 | 33 | 29.10.2026 | Standardmodus im Vollbild über `tafel.html`: Startkarte „Im Vollbild öffnen“ (ein Klick), danach Übersicht und Filme in einem Rahmen, der selbst nie neu lädt; Auswahl, Film, „Übersicht“ und die automatische Rückkehr nach dem Film bleiben im Vollbild. Nach Esc erscheint unten rechts ein Knopf „Vollbild“. Im Rahmen blenden Film und Startseite ihren eigenen Vollbild-Knopf bzw. die Links auf andere Betriebsarten aus | Nutzer: wie im Kiosk-Modus, aber man wählt jeden Film selbst. Browser beenden das Vollbild bei jedem Seitenwechsel; nur ein Rahmen, der stehen bleibt, hält es. Geprüft 29.10.2026: Ablauf Übersicht → Film → zurück → Film → Countdown → Übersicht ohne Wechsel der Rahmenseite; Übersicht im Rahmen bei 1920×1080, 1280×720, 1024×768 und 3840×2160 genau bildschirmhoch |
+| 34 | 29.10.2026 | Alle Seiten tragen `<meta name="robots" content="noindex, nofollow">`: Suchmaschinen nehmen die Seite nicht auf; erreichbar bleibt sie für alle mit Link oder QR-Code. Das Repository bleibt öffentlich (sonst schaltet GitHub Pages im kostenlosen Konto ab) | Nutzer wollte das Projekt verstecken; gewählt aus drei Wegen (privat mit GitHub Pro, noindex, anderer Anbieter). Eine `robots.txt` im Projekt wirkt nicht, weil sie im Hauptverzeichnis von larshanisch.github.io liegen müsste. Bereits erfasste Seiten verschwinden erst beim nächsten Besuch der Suchmaschine |
