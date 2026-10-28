@@ -368,6 +368,7 @@
 <script src="assets/data/kunst.js"></script>
 <script src="assets/data/powi.js"></script>
 <script src="assets/data/geschichte.js"></script>
+<script src="assets/data/mathematik.js"></script>
 <script>
   (function () {
     // Aufgabenfelder nach KMK-Vereinbarung, Kursangebot nach der Übersicht der Schule (Entscheidung 37)
@@ -388,7 +389,8 @@
                     what: 'Demokratie, Wirtschaft und internationale Politik – analysieren und begründet urteilen.' },
       geschichte: { name: 'Geschichte', field: 2, img: 'media/geschichte/img/g01.jpg', pos: '80% center',
                     what: 'Vom 19. Jahrhundert bis heute – Quellen befragen und historische Urteile begründen.' },
-      mathe:      { name: 'Mathematik', field: 3, kind: 'm' },
+      mathe:      { name: 'Mathematik', field: 3, kind: 'm', film: 'mathematik', img: 'media/mathematik/img/m01.jpg', pos: '80% center',
+                    what: 'Analysis, Geometrie und Stochastik – verstehen, modellieren und sauber begründen.' },
       biologie:   { name: 'Biologie', field: 3, kind: 'nw' },
       chemie:     { name: 'Chemie', field: 3, kind: 'nw' }
     };
@@ -403,7 +405,10 @@
     var LK1 = Object.keys(PAIRS);
     var LK2 = ['englisch', 'deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie', 'mathe'];
     var fits = function (a, b) { return !!PAIRS[a] && PAIRS[a].indexOf(b) >= 0; };
-    var FILMS = window.FILMS || {};
+    // Filme nach Fach-Id; heißt der Film anders als das Fach („film“ in SUBJ), wird er hier zugeordnet
+    var FILMS = {};
+    Object.keys(window.FILMS || {}).forEach(function (k) { FILMS[k] = window.FILMS[k]; });
+    Object.keys(SUBJ).forEach(function (id) { if (SUBJ[id].film && FILMS[SUBJ[id].film]) FILMS[id] = FILMS[SUBJ[id].film]; });
     var $ = function (id) { return document.getElementById(id); };
     var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
     var minutes = function (f) { return Math.floor(f.total / 60) + ':' + String(Math.floor(f.total % 60)).padStart(2, '0') + ' Minuten'; };
@@ -464,7 +469,7 @@
           return '<div class="tile soon" style="--bg: url(\'' + f.img + '\'); --pos: ' + pos + '"><span class="lk">' + lkBadge(id) + '</span><p class="subj">' + esc(s.name) + '</p>' +
             '<p class="what">Der Film zu diesem Leistungskurs entsteht gerade.</p><span class="go">Film folgt</span></div>';
         }
-        return '<a class="tile" href="film.html?fach=' + id + '" style="--bg: url(\'' + s.img + '\'); --pos: ' + s.pos + '">' +
+        return '<a class="tile" href="film.html?fach=' + (s.film || id) + '" style="--bg: url(\'' + s.img + '\'); --pos: ' + s.pos + '">' +
           '<span class="lk">' + lkBadge(id) + '</span><span class="len">' + minutes(film) + '</span>' +
           '<p class="subj">' + esc(s.name) + '</p><p class="what">' + esc(s.what) + '</p><span class="go">' + PLAY + 'Film ansehen</span></a>';
       }).join('');
@@ -561,11 +566,13 @@
         'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';
     }
 
+    function filmSubj(film) { var id = Object.keys(SUBJ).filter(function (k) { return SUBJ[k].film === film; })[0]; return id ? SUBJ[id] : null; }
+
     // --- Ansichten über die Adresse (#feld-2, #planer, #deutsch …), damit „Zurück“ im Browser funktioniert ---
     function route() {
       var h = decodeURIComponent(location.hash.slice(1)), view = 'home', field = null;
       if (/^feld-[123]$/.test(h)) { view = 'feld'; field = FIELDS[Number(h.slice(5)) - 1]; }
-      else if (SUBJ[h]) { view = 'feld'; field = FIELDS[SUBJ[h].field - 1]; }   // Rückweg aus einem Film
+      else if (SUBJ[h] || filmSubj(h)) { view = 'feld'; field = FIELDS[(SUBJ[h] || filmSubj(h)).field - 1]; }   // Rückweg aus einem Film
       else if (/^planer(\/|$)/.test(h)) {
         // #planer/englisch/biologie wählt gleich vor (für Prüfwerkzeuge und Direktlinks)
         var p = h.split('/');

@@ -1,6 +1,6 @@
 # Drehbuch — Leistungskurs Mathematik
 
-Version 0.3 · 29.10.2026 (wartet auf Freigabe)
+Version 0.3 · 29.10.2026 (freigegeben, vertont)
 
 Änderung gegenüber 0.2: Szene zum Unterschied GK/LK nach der Prüfung `drehbuch/pruefung_gk_lk.md`: Was beide Kursarten tun, wird nicht mehr als LK-Merkmal dargestellt; die Vergleichstafel nennt für den GK, was er tut, statt „–“ oder „grundlegend“ (Nutzer 29.10.2026, Entscheidung 53).
 

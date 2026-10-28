@@ -1,0 +1,153 @@
+{
+  "id": "mathematik",
+  "title": "Leistungskurs Mathematik",
+  "accent": "#c8d530",
+  "script": "drehbuch/mathematik.md",
+  "voice": {
+    "voice_id": "TIKjTeWOFujJEvXK1qIU",
+    "name": "Theo Teacher – Clear & Trustworthy",
+    "model": "eleven_v4",
+    "format": "mp3_44100_64"
+  },
+  "scenes": [
+    {
+      "n": 1,
+      "logo": true,
+      "title": { "main": "Leistungskurs Mathematik", "sub": "Gymnasiale Oberstufe" },
+      "image": { "src": "m01.jpg", "motion": "zoom-in", "focus": [0.68, 0.45] }
+    },
+    {
+      "n": 2,
+      "chapter": "Der Rahmen",
+      "image": { "src": "m02.jpg", "motion": "pan-right" },
+      "panel": { "type": "stats", "items": [
+        { "at": "fünf Punkte", "value": "5", "label": "Punkte am Ende der Einführungsphase", "prefix": "mind.", "sub": "besser deutlich mehr – die Anforderungen steigen" },
+        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden", "sub": "als Tutorium 6" },
+        { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
+      ] }
+    },
+    {
+      "n": 3,
+      "image": { "src": "m03.jpg", "motion": "zoom-out" },
+      "panel": { "type": "combo", "title": "Mathematik passt zu …", "items": [
+        { "at": "Deutsch, Englisch und Kunst", "a": "Mathematik", "b": "Englisch, Deutsch oder Kunst", "ok": true },
+        { "at": "Politik und Wirtschaft", "figure": "c", "a": "Mathematik", "b": "Politik und Wirtschaft", "ok": true },
+        { "at": "Biologie und Chemie", "a": "Mathematik", "b": "Geschichte, Biologie oder Chemie", "ok": true }
+      ] }
+    },
+    {
+      "n": 4,
+      "chapter": "Was du lernst",
+      "image": { "src": "m04.jpg", "motion": "zoom-in", "focus": [0.3, 0.45] },
+      "band": { "type": "timeline", "items": [
+        { "at": "Analysis", "label": "Q1", "text": "Analysis" },
+        { "at": "Geometrie", "label": "Q2", "text": "Geometrie im Raum" },
+        { "at": "Stochastik", "label": "Q3", "text": "Stochastik" },
+        { "at": "Funktionenscharen", "label": "Q4", "text": "Funktionenscharen" }
+      ] },
+      "panel": { "type": "stats", "items": [
+        { "at": "zehn", "value": "10", "label": "verbindliche Themenfelder im Leistungskurs", "sub": "im Grundkurs 9" }
+      ] }
+    },
+    {
+      "n": 5,
+      "image": { "src": "m05.jpg", "motion": "pan-right" },
+      "panel": { "type": "list", "title": "Was du damit machst", "items": [
+        { "at": "Wasser", "text": "Bestände aus Änderungsraten berechnen" },
+        { "at": "Flugbahn", "text": "Bewegungen im Raum mit Vektoren" },
+        { "at": "wahrscheinlich", "text": "Wahrscheinlichkeitsverteilungen" }
+      ] }
+    },
+    {
+      "n": 6,
+      "image": { "src": "m06.jpg", "motion": "zoom-in", "focus": [0.4, 0.55] },
+      "panel": { "type": "list", "title": "Rechner und Kopf", "items": [
+        { "at": "Taschenrechner", "text": "bei uns: wissenschaftlicher Taschenrechner (WTR)" },
+        { "at": "ergänzt", "text": "ergänzt das Rechnen von Hand, ersetzt es nicht" },
+        { "at": "ohne Hilfsmittel", "text": "ein Teil des Abiturs ohne Hilfsmittel" }
+      ] }
+    },
+    {
+      "n": 7,
+      "image": { "src": "m07.jpg", "motion": "zoom-in", "focus": [0.6, 0.4] },
+      "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
+        { "at": "weiter", "label": "Themenfelder", "a": "9", "b": "10" },
+        { "at": "Volumen", "label": "Inhalte", "a": "Analysis, Geometrie, Stochastik", "b": "dazu Rotationskörper, logistisches Wachstum, Normalverteilung, Hypothesentests" },
+        { "at": "Begründen", "label": "Argumentieren", "a": "begründen", "b": "dazu exemplarische Beweise" }
+      ] },
+      "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
+        "Analysis, Geometrie, Stochastik, Funktionenscharen",
+        "verstehen und begründen statt Schema",
+        "Leistungskurs: mehr Themen, formaler, mit Beweisen"
+      ] }
+    },
+    {
+      "n": 8,
+      "chapter": "Wie gearbeitet wird",
+      "image": { "src": "m08.jpg", "motion": "pan-left" },
+      "panel": { "type": "list", "title": "Modellieren und begründen", "items": [
+        { "at": "begründest", "text": "Begründen, warum der Weg stimmt" },
+        { "at": "Modell", "text": "Modellieren: Alltag in Mathematik übersetzen" },
+        { "at": "sinnvoll", "text": "Prüfen: Ist das Ergebnis sinnvoll?" },
+        { "at": "erklärst", "text": "Lösungen verständlich erklären" }
+      ] }
+    },
+    {
+      "n": 9,
+      "image": { "src": "m09.jpg", "motion": "zoom-out" },
+      "panel": { "type": "stats", "items": [
+        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten Halbjahr 1 – im Grundkurs genauso" },
+        { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur", "sub": "wenn die Lehrkraft es festlegt" },
+        { "at": "dritten Halbjahr", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
+      ] }
+    },
+    {
+      "n": 10,
+      "chapter": "Bewertung und Abitur",
+      "image": { "src": "m10.jpg", "motion": "zoom-in", "focus": [0.45, 0.55], "dim": 0.3 },
+      "panel": { "type": "list", "title": "So wird bewertet", "items": [
+        { "at": "Bewertungseinheiten", "text": "Bewertungseinheiten je Teilaufgabe" },
+        { "at": "fünfundvierzig", "text": "ab 45 % der Einheiten: 5 Punkte" },
+        { "at": "Lösungsweg", "text": "nachvollziehbarer Lösungsweg zählt" }
+      ], "notes": [
+        { "at": "Gehäufte", "text": "gehäufte Fehler in Sprache oder Form: bis zu 2 Punkte Abzug" }
+      ] }
+    },
+    {
+      "n": 11,
+      "corner": "Stand Abitur 2028",
+      "image": { "src": "m11.jpg", "motion": "zoom-in", "focus": [0.55, 0.5] },
+      "panel": { "type": "stats", "items": [
+        { "at": "zwei Teile", "value": "100", "label": "Bewertungseinheiten im Leistungskurs" },
+        { "at": "dreihundertdreißig", "value": "330", "label": "Minuten Bearbeitungszeit" }
+      ], "notes": [
+        { "at": "sechs kurze", "text": "Teil 1 ohne Hilfsmittel: 6 kurze Aufgaben, 2 davon gewählt" },
+        { "at": "mit Hilfsmitteln", "text": "Teil 2 mit Rechner und Formelsammlung: Analysis (1 aus 2), Geometrie, Stochastik" }
+      ] }
+    },
+    {
+      "n": 12,
+      "chapter": "Die Herausforderungen",
+      "image": { "src": "m12.jpg", "motion": "pan-up" },
+      "panel": { "type": "list", "check": true, "title": "Was du mitbringen solltest", "items": [
+        { "at": "dranzubleiben", "text": "Dranbleiben an kniffligen Aufgaben" },
+        { "at": "Sorgfalt", "text": "Sorgfalt" },
+        { "at": "verstehen", "text": "Zusammenhänge verstehen wollen" },
+        { "at": "Geduld", "text": "Geduld bei mehreren Anläufen" }
+      ] }
+    },
+    {
+      "n": 13,
+      "image": { "src": "m13.jpg", "motion": "zoom-out" }
+    },
+    {
+      "n": 14,
+      "logo": true,
+      "image": { "src": "m14.jpg", "motion": "zoom-out", "dim": 0.45 },
+      "endCard": {
+        "lines": ["Stand: Oktober 2026",
+          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Mathematik, Abiturerlass 2028 des Landes Hessen"]
+      }
+    }
+  ]
+}

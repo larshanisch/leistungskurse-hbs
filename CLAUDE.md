@@ -96,7 +96,9 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - 29.10.2026: Film Geschichte fertig (Drehbuch 0.2, Leitfigur D, **5:43 min gemessen**, Entscheidung 51).
 - 29.10.2026: GK/LK-Aussagen aller Filme geprüft und korrigiert (Entscheidung 53, `drehbuch/pruefung_gk_lk.md`):
   **Deutsch 5:32, Kunst 5:37, PoWi 5:45, Geschichte 5:47 min**. Regel: Was beide Kursarten tun, ist kein LK-Merkmal;
-  Vergleichstafeln ohne „–“ und „grundlegend“ beim GK. Mathematik: Faktenblatt 1.1, Drehbuch 0.3 wartet auf Freigabe.
+  Vergleichstafeln ohne „–“ und „grundlegend“ beim GK.
+- 29.10.2026: Film Mathematik fertig (Drehbuch 0.3, Leitfigur C, **5:34 min gemessen**, Entscheidung 54). Film-Id `mathematik`,
+  Fach-Id `mathe` mit `film`-Zuordnung in `index.html`.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Offen: Filme Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

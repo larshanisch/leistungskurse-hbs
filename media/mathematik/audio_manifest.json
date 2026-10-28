@@ -1,0 +1,146 @@
+{
+  "categories": {
+    "narration": {
+      "kind": "tts",
+      "voice_id": "TIKjTeWOFujJEvXK1qIU",
+      "items": [
+        {
+          "file": "audio/s01_1_80122b50.mp3",
+          "text": "Im Leistungskurs Mathematik geht es nicht ums Rechnen nach Schema, sondern ums Verstehen: Du beschreibst Veränderungen mit Funktionen, bewegst dich mit Vektoren durch den Raum und schätzt mit Wahrscheinlichkeiten ab, wie sicher eine Aussage ist."
+        },
+        {
+          "file": "audio/s01_2_e13a74dd.mp3",
+          "text": "Und du lernst, mathematisch sauber zu begründen."
+        },
+        {
+          "file": "audio/s02_1_8b3e733a.mp3",
+          "text": "Du wählst den Leistungskurs Mathematik gegen Ende der Einführungsphase und brauchst dafür in diesem Fach mindestens fünf Punkte."
+        },
+        {
+          "file": "audio/s02_2_0b1aadf2.mp3",
+          "text": "Fünf Punkte sind aber nur die Untergrenze: Weil die Anforderungen im Leistungskurs steigen, kann es gut sein, dass du dort weniger Punkte bekommst als in der Einführungsphase – du solltest also deutlich besser sein."
+        },
+        {
+          "file": "audio/s02_3_86c480eb.mp3",
+          "text": "Der Kurs hat bei uns fünf Wochenstunden, als Tutorium sechs, und alle vier Halbjahre zählen im Abitur doppelt."
+        },
+        {
+          "file": "audio/s03_1_54b65526.mp3",
+          "text": "Mathematik erfüllt die Regel, dass einer deiner beiden Leistungskurse eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein muss."
+        },
+        {
+          "file": "audio/s03_2_a3947248.mp3",
+          "text": "An unserer Schule kannst du sie deshalb mit jedem anderen Leistungskurs kombinieren, von Deutsch, Englisch und Kunst über Politik und Wirtschaft und Geschichte bis Biologie und Chemie."
+        },
+        {
+          "file": "audio/s03_3_1ca3b00f.mp3",
+          "text": "Unter deinen Prüfungsfächern im Abitur muss Mathematik ohnehin sein."
+        },
+        {
+          "file": "audio/s04_1_9a86b72b.mp3",
+          "text": "Die vier Halbjahre bauen aufeinander auf: zuerst die Analysis mit der Integralrechnung, dann die Geometrie im dreidimensionalen Raum und eine Vertiefung der Analysis, danach die Stochastik und zum Schluss Funktionenscharen, bei denen du ganze Familien von Funktionen auf einmal untersuchst."
+        },
+        {
+          "file": "audio/s04_2_9a8f4015.mp3",
+          "text": "Im Leistungskurs sind zehn Themenfelder verbindlich, eines mehr als im Grundkurs."
+        },
+        {
+          "file": "audio/s05_1_40e8e881.mp3",
+          "text": "Du berechnest zum Beispiel, wie viel Wasser sich in einem Becken sammelt, wenn sich die Zuflussrate ständig ändert, du beschreibst die geradlinige Flugbahn eines Flugzeugs mit Vektoren, und du untersuchst, wie wahrscheinlich bestimmte Ergebnisse bei einem Zufallsexperiment sind."
+        },
+        {
+          "file": "audio/s06_1_50472d6a.mp3",
+          "text": "Für viele Aufgaben nutzt du einen Taschenrechner, bei uns einen wissenschaftlichen Taschenrechner ohne Grafik und ohne Computeralgebra."
+        },
+        {
+          "file": "audio/s06_2_1b22147a.mp3",
+          "text": "Er ergänzt aber das Rechnen von Hand, er ersetzt es nicht: Einen Teil der Abiturprüfung schreibst du ganz ohne Hilfsmittel."
+        },
+        {
+          "file": "audio/s07_1_8c008bcb.mp3",
+          "text": "Im Leistungskurs gehst du weiter: Du berechnest das Volumen von Körpern, die durch Drehung entstehen, beschreibst logistisches Wachstum, arbeitest mit der Normalverteilung und lernst Hypothesentests kennen – also, wie man mit Statistik prüft, ob eine Behauptung zutrifft."
+        },
+        {
+          "file": "audio/s07_2_1ba186e6.mp3",
+          "text": "Begründen und Argumentieren gehören zu beiden Kursarten; im Leistungskurs führst du auch Beweise, und alles wird etwas komplexer und formaler."
+        },
+        {
+          "file": "audio/s07_3_71f82012.mp3",
+          "text": "Kurz zusammengefasst: Die vier Halbjahre führen dich durch Analysis, Geometrie, Stochastik und Funktionenscharen, es geht ums Verstehen und Begründen, und im Leistungskurs arbeitest du mit mehr Themen, formaler und mit Beweisen."
+        },
+        {
+          "file": "audio/s08_1_7b2fbe87.mp3",
+          "text": "Im Unterricht löst du nicht nur Aufgaben, sondern begründest auch, warum dein Weg stimmt."
+        },
+        {
+          "file": "audio/s08_2_7a525377.mp3",
+          "text": "Du übersetzt Situationen aus dem Alltag in ein mathematisches Modell, prüfst, ob dein Ergebnis sinnvoll ist, und erklärst deine Lösung so, dass andere sie nachvollziehen können."
+        },
+        {
+          "file": "audio/s09_1_521a6670.mp3",
+          "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine."
+        },
+        {
+          "file": "audio/s09_2_a5e053f8.mp3",
+          "text": "Das ist im Grundkurs Mathematik übrigens genauso, weil er vier Wochenstunden hat."
+        },
+        {
+          "file": "audio/s09_3_16f11324.mp3",
+          "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt."
+        },
+        {
+          "file": "audio/s09_4_bd516576.mp3",
+          "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet."
+        },
+        {
+          "file": "audio/s10_1_027ca782.mp3",
+          "text": "Jede Aufgabe bringt Bewertungseinheiten; aus dem Anteil, den du erreichst, ergeben sich deine Punkte, fünf Punkte zum Beispiel ab fünfundvierzig Prozent."
+        },
+        {
+          "file": "audio/s10_2_7633dff7.mp3",
+          "text": "Dabei zählt auch ein nachvollziehbarer Lösungsweg, gerade wenn der Rechner einen Teil übernimmt."
+        },
+        {
+          "file": "audio/s10_3_e06bc9db.mp3",
+          "text": "Gehäufte Fehler in Sprache oder äußerer Form kosten bis zu zwei Punkte."
+        },
+        {
+          "file": "audio/s11_1_8d1025f1.mp3",
+          "text": "Das Abitur hat nach heutigem Stand zwei Teile."
+        },
+        {
+          "file": "audio/s11_2_3516274a.mp3",
+          "text": "Im ersten löst du sechs kurze Aufgaben ohne Taschenrechner und ohne Formelsammlung, zwei davon wählst du selbst aus."
+        },
+        {
+          "file": "audio/s11_3_fe5343f5.mp3",
+          "text": "Im zweiten bearbeitest du mit Hilfsmitteln je eine größere Aufgabe zur Analysis, zur Geometrie und zur Stochastik; bei der Analysis wählst du aus zwei Vorschlägen."
+        },
+        {
+          "file": "audio/s11_4_46e2bc9d.mp3",
+          "text": "Du hast dreihundertdreißig Minuten Zeit."
+        },
+        {
+          "file": "audio/s12_1_c7e1e2f1.mp3",
+          "text": "Was solltest du mitbringen?"
+        },
+        {
+          "file": "audio/s12_2_c6181d56.mp3",
+          "text": "Freude daran, an kniffligen Aufgaben dranzubleiben, Sorgfalt beim Rechnen, Lust, Zusammenhänge wirklich zu verstehen, statt nur Formeln zu lernen – und Geduld, denn manche Lösung braucht mehrere Anläufe."
+        },
+        {
+          "file": "audio/s13_1_de176f63.mp3",
+          "text": "Wenn du gern knobelst, Muster entdeckst und dich freust, wenn eine Lösung am Ende aufgeht, ist der Leistungskurs Mathematik das Richtige für dich."
+        },
+        {
+          "file": "audio/s14_1_b3442b93.mp3",
+          "text": "Alle Angaben entsprechen dem Stand vom Oktober 2026; die Vorgaben für deinen Jahrgang veröffentlicht das Land voraussichtlich im Sommer 2027."
+        },
+        {
+          "file": "audio/s14_2_7a7b472f.mp3",
+          "text": "Bei Fragen helfen dir deine Lehrkräfte für Mathematik gern weiter."
+        }
+      ]
+    }
+  }
+}
