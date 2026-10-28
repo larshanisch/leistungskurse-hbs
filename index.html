@@ -35,24 +35,37 @@
 
   /* Startansicht: drei Aufgabenfelder und der Planer */
   .fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-  .fcard { position: relative; display: flex; flex-direction: column; gap: 0.7em; padding: 24px; border-radius: 20px; overflow: hidden;
-    text-decoration: none; background: linear-gradient(160deg, #1d2027 0%, var(--card) 70%); border: 1px solid var(--line);
-    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
-  .fcard:hover, .fcard:focus-visible { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
-  .fcard .num { align-self: flex-start; }
-  .fcard h2 { margin: 0; font-size: clamp(20px, 2vw, 28px); line-height: 1.2; font-weight: 800; letter-spacing: -0.01em; }
-  .fcard p { margin: 0; color: var(--ink-soft); font-size: 16px; }
-  .fcard ul { list-style: none; margin: auto 0 0; padding: 0; display: grid; gap: 0.45em; }
-  .fcard li { display: flex; justify-content: space-between; align-items: baseline; gap: 1em; font-size: 18px; font-weight: 700;
-    padding-top: 0.45em; border-top: 1px solid var(--line); }
-  .fcard li small { font-size: 13px; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
-  .fcard li small.film { color: var(--accent); }
-  .cta { display: flex; align-items: center; gap: 1.2em; margin-top: 20px; padding: 18px 24px; border-radius: 20px; text-decoration: none;
-    background: var(--accent); color: var(--on-accent); transition: transform 0.25s, box-shadow 0.25s; }
-  .cta:hover, .cta:focus-visible { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(0,0,0,0.45); }
-  .cta svg { flex: none; width: 44px; height: 44px; }
+  /* Feldkarte: Bild des Felds (media/start/), unten dunkel verlaufend, darauf Name und Fächer */
+  .fcard { position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 0.6em; min-height: 380px;
+    padding: 24px; border-radius: 20px; overflow: hidden; text-decoration: none; background: var(--card); border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35); transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
+  .fcard::before { content: ""; position: absolute; inset: 0; background: var(--bg) center 30% / cover; transition: transform 0.7s; }
+  .fcard::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(8,9,12,0.97) 0%, rgba(8,9,12,0.88) 34%, rgba(8,9,12,0.2) 68%, rgba(8,9,12,0.5) 100%); }
+  .fcard > * { position: relative; z-index: 1; }
+  .fcard:hover, .fcard:focus-visible { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 22px 60px rgba(0,0,0,0.55); }
+  .fcard:hover::before, .fcard:focus-visible::before { transform: scale(1.05); }
+  .fcard .num { position: absolute; top: 20px; left: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.4); }
+  .fcard h2 { margin: 0; hyphens: auto; font-size: clamp(24px, 2.4vw, 34px); line-height: 1.1; font-weight: 800; letter-spacing: -0.015em; }
+  .fcard h2::after { content: ""; display: block; width: 1.4em; height: 5px; border-radius: 3px; background: var(--accent); margin-top: 0.3em; }
+  .fcard p { margin: 0 0 0.4em; color: var(--ink-soft); font-size: 14px; line-height: 1.35; }
+  .fcard ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .fcard li { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.4em 0.85em; border-radius: 999px; font-size: 16px; font-weight: 700;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.16); }
+  .fcard li.film { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+  .fcard li.film::before { content: "▶"; font-size: 0.7em; }
+  .fcard .go { display: inline-flex; align-items: center; gap: 0.4em; margin-top: 0.4em; font-size: 15px; font-weight: 700; color: var(--accent); }
+  /* Planer-Karte: dunkel mit grünem Rand statt vollflächig grün */
+  .cta { display: flex; align-items: center; gap: 1.2em; margin-top: 20px; padding: 16px 20px; border-radius: 20px; text-decoration: none;
+    background: linear-gradient(90deg, rgba(200,213,48,0.18), rgba(200,213,48,0.04) 70%); border: 1px solid rgba(200,213,48,0.5);
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
+  .cta:hover, .cta:focus-visible { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 14px 40px rgba(0,0,0,0.45); }
+  .cta .ic { flex: none; display: grid; place-items: center; width: 60px; height: 60px; border-radius: 16px; background: var(--accent); color: var(--on-accent); }
+  .cta svg { width: 36px; height: 36px; }
+  .cta .txt { flex: 1; }
   .cta strong { display: block; font-size: clamp(19px, 2vw, 26px); font-weight: 800; }
-  .cta span { font-size: 15px; font-weight: 600; }
+  .cta .txt span { font-size: 15px; color: var(--ink-soft); }
+  .cta .open { flex: none; padding: 0.6em 1.3em; border-radius: 999px; background: var(--accent); color: var(--on-accent); font-weight: 800; font-size: 15px; }
 
   /* Feldansicht: eine Kachel je Kurs */
   .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
@@ -61,8 +74,9 @@
     border: 1px solid var(--line); transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
   .tile::before { content: ""; position: absolute; inset: 0; background: var(--bg, none) var(--pos, center) / cover; transition: transform 0.6s; }
   .tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,9,12,0.92) 18%, rgba(8,9,12,0.1) 72%); }
-  .tile.soon::before { background: linear-gradient(160deg, #22252d 0%, #121418 80%); }
-  .tile.soon::after { background: none; }
+  /* Kurs ohne Film: Bild des Felds, stark abgedunkelt */
+  .tile.soon::before { filter: grayscale(0.4) brightness(0.42); }
+  .tile.soon::after { background: linear-gradient(to top, rgba(8,9,12,0.9) 15%, rgba(8,9,12,0.2) 70%); }
   .tile > * { position: relative; z-index: 1; }
   a.tile:hover, a.tile:focus-visible { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
   a.tile:hover::before { transform: scale(1.04); }
@@ -112,6 +126,7 @@
 
   footer { margin-top: 3em; font-size: 13px; color: #8a857c; line-height: 1.5; }
 
+  @media (max-width: 599px) { .cta { flex-wrap: wrap; } .cta .txt { flex-basis: calc(100% - 60px - 1.2em); } .cta .open { margin-left: auto; } }
   @media (max-width: 599px) { .plan { grid-template-columns: minmax(0, 1fr) !important; } .chips { grid-template-columns: 1fr 1fr; } .chip { font-size: 15px; } .slot b { font-size: 15px; } }
   @media (max-width: 899px) { .plan { grid-template-columns: 1fr 1fr; } .result { grid-column: 1 / -1; } .slots { grid-template-columns: 1fr 1fr; } .slots .slot:last-child { grid-column: 1 / -1; } }
 
@@ -122,9 +137,9 @@
     main { max-width: none; height: 100vh; padding: 4vh 4vw 3vh; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 3vh; }
     .head { display: flex; align-items: center; gap: 3vw; }
     .logo { margin: 0; flex: none; }
-    .logo img { height: 15vh; }
+    .logo img { height: 13vh; }
     .kicker { font-size: 1.5vh; margin-bottom: 0.6vh; }
-    h1 { font-size: 7vh; margin: 0 0 1vh; }
+    h1 { font-size: 6.4vh; margin: 0 0 1vh; }
     .lead { font-size: 2vh; margin: 0; max-width: 60em; }
     /* Unterseiten: schmaler Kopf, damit Kacheln und Planer Platz haben */
     body.sub .logo img { height: 8vh; }
@@ -140,16 +155,19 @@
 
     #v-home { grid-template-rows: minmax(0, 1fr) auto; }
     .fields { grid-template-columns: repeat(3, 1fr); gap: 1.6vw; min-height: 0; }
-    .fcard { padding: 3vh 1.8vw; border-radius: 2vh; gap: 1.4vh; }
-    .fcard h2 { font-size: 3.2vh; }
-    .fcard p { font-size: 2vh; }
-    .fcard li { font-size: 2.9vh; padding-top: 1.2vh; }
-    .fcard ul { gap: 1.2vh; }
-    .fcard li small { font-size: 1.6vh; }
-    .cta { margin-top: 2.4vh; padding: 2vh 1.8vw; border-radius: 2vh; gap: 1.4vw; }
-    .cta svg { width: 5vh; height: 5vh; }
+    .fcard { min-height: 0; padding: 3vh 1.6vw; border-radius: 2vh; gap: 1vh; }
+    .fcard .num { top: 2.2vh; left: 2.2vh; }
+    .fcard h2 { font-size: 4vh; }
+    .fcard p { font-size: 1.7vh; margin-bottom: 0.6vh; }
+    .fcard ul { gap: 0.8vh 0.5vw; }
+    .fcard li { font-size: 2.1vh; }
+    .fcard .go { font-size: 1.9vh; margin-top: 0.6vh; }
+    .cta { margin-top: 2.4vh; padding: 1.6vh 1.4vw; border-radius: 2vh; gap: 1.4vw; }
+    .cta .ic { width: 6.4vh; height: 6.4vh; border-radius: 1.6vh; }
+    .cta svg { width: 3.8vh; height: 3.8vh; }
     .cta strong { font-size: 3vh; }
-    .cta span { font-size: 1.9vh; }
+    .cta .txt span { font-size: 1.9vh; }
+    .cta .open { font-size: 1.9vh; }
 
     .tiles { grid-template-columns: repeat(var(--n, 3), 1fr); gap: 1.6vw; min-height: 0; }
     .tile { min-height: 0; padding: 3vh 1.6vw; border-radius: 2vh; }
@@ -189,6 +207,7 @@
     .result { grid-column: 2; grid-row: 1 / span 2; }
     .chips { grid-template-columns: 1fr 1fr; }
     .result ul { font-size: 1.75vh; }
+    .fcard h2 { font-size: 3.3vh; }
     .result .fine { margin-top: 1.2vh; }
   }
 </style>
@@ -200,17 +219,17 @@
     <div class="head-text">
       <p class="kicker">Gymnasiale Oberstufe · Tag der offenen Tür</p>
       <h1>Leistungskurse an der HBS</h1>
-      <p class="lead">Du überlegst, welche Leistungskurse du wählen sollst? Wähle ein Aufgabenfeld und sieh dir an, was dich
-        in den Kursen erwartet: was das Land Hessen verbindlich vorschreibt, wie gearbeitet und bewertet wird und worin die
-        Herausforderungen liegen. Im Planer kannst du ausprobieren, welche zwei Leistungskurse zusammenpassen.</p>
+      <p class="lead">Wähle ein Aufgabenfeld und sieh dir in kurzen Filmen an, was dich in den Leistungskursen erwartet –
+        oder spiel im Planer durch, welche zwei Kurse du an der HBS kombinieren kannst.</p>
     </div>
   </header>
 
   <section class="view" id="v-home">
     <div class="fields" id="fields"></div>
     <a class="cta" href="#planer">
-      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="8" width="17" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="27" y="8" width="17" height="32" rx="4" fill="currentColor"/><path d="M9 24h7M12.5 20.5v7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
-      <div><strong>Kurswahl durchspielen</strong><span>Welche zwei Leistungskurse kannst du an der HBS kombinieren – und was folgt daraus für dein Abitur?</span></div>
+      <span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="8" width="17" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="27" y="8" width="17" height="32" rx="4" fill="currentColor"/><path d="M9 24h7M12.5 20.5v7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></span>
+      <div class="txt"><strong>Kurswahl durchspielen</strong><span>Welche zwei Leistungskurse passen zusammen – und was folgt daraus für dein Abitur?</span></div>
+      <span class="open">Planer öffnen →</span>
     </a>
   </section>
 
@@ -258,9 +277,9 @@
   (function () {
     // Aufgabenfelder nach KMK-Vereinbarung, Kursangebot nach der Übersicht der Schule (Entscheidung 37)
     var FIELDS = [
-      { id: 1, num: 'I', name: 'Das sprachlich-literarisch-künstlerische Aufgabenfeld', sub: 'Sprachen, Literatur und Kunst', subjects: ['deutsch', 'englisch', 'kunst'] },
-      { id: 2, num: 'II', name: 'Das gesellschaftswissenschaftliche Aufgabenfeld', sub: 'Politik, Wirtschaft und Geschichte', subjects: ['powi', 'geschichte'] },
-      { id: 3, num: 'III', name: 'Das mathematisch-naturwissenschaftlich-technische Aufgabenfeld', sub: 'Mathematik und Naturwissenschaften', subjects: ['mathe', 'biologie', 'chemie'] }
+      { id: 1, num: 'I', name: 'Das sprachlich-literarisch-künstlerische Aufgabenfeld', sub: 'Sprachen, Literatur und Kunst', img: 'media/start/feld1.jpg', subjects: ['deutsch', 'englisch', 'kunst'] },
+      { id: 2, num: 'II', name: 'Das gesellschaftswissenschaftliche Aufgabenfeld', sub: 'Politik, Wirtschaft und Geschichte', img: 'media/start/feld2.jpg', subjects: ['powi', 'geschichte'] },
+      { id: 3, num: 'III', name: 'Das mathematisch-naturwissenschaftlich-technische Aufgabenfeld', sub: 'Mathematik und Naturwissenschaften', img: 'media/start/feld3.jpg', subjects: ['mathe', 'biologie', 'chemie'] }
     ];
     // kind: fs = fortgeführte Fremdsprache, nw = Naturwissenschaft, m = Mathematik (OAVO § 13 Abs. 2, § 24 Abs. 6)
     var SUBJ = {
@@ -298,10 +317,11 @@
 
     // --- Startansicht ---
     $('fields').innerHTML = FIELDS.map(function (f) {
-      return '<a class="fcard" href="#feld-' + f.id + '"><span class="num">Aufgabenfeld ' + f.num + '</span>' +
-        '<h2>' + esc(f.name) + '</h2><p>' + esc(f.sub) + '</p><ul>' + f.subjects.map(function (id) {
-          return '<li>' + esc(SUBJ[id].name) + (FILMS[id] ? '<small class="film">▶ Film</small>' : '<small>Film folgt</small>') + '</li>';
-        }).join('') + '</ul></a>';
+      var films = f.subjects.filter(function (id) { return FILMS[id]; }).length;
+      return '<a class="fcard" href="#feld-' + f.id + '" style="--bg: url(\'' + f.img + '\')"><span class="num">Aufgabenfeld ' + f.num + '</span>' +
+        '<h2>' + esc(f.sub) + '</h2><p>' + esc(f.name) + '</p><ul>' + f.subjects.map(function (id) {
+          return '<li' + (FILMS[id] ? ' class="film"' : '') + '>' + esc(SUBJ[id].name) + '</li>';
+        }).join('') + '</ul><span class="go">' + (films ? films + (films === 1 ? ' Film' : ' Filme') + ' ansehen →' : 'Filme folgen – Kurse ansehen →') + '</span></a>';
     }).join('');
 
     // --- Feldansicht ---
@@ -310,10 +330,12 @@
       $('feldNum').textContent = 'Aufgabenfeld ' + f.num;
       $('feldName').textContent = f.name;
       $('tiles').style.setProperty('--n', f.subjects.length);
-      $('tiles').innerHTML = f.subjects.map(function (id) {
+      $('tiles').innerHTML = f.subjects.map(function (id, i, all) {
         var s = SUBJ[id], film = FILMS[id];
         if (!film) {
-          return '<div class="tile soon"><span class="lk">' + lkBadge(id) + '</span><p class="subj">' + esc(s.name) + '</p>' +
+          // jede Kachel zeigt einen anderen Ausschnitt des Feldbilds
+          var pos = all.length > 1 ? Math.round(100 * i / (all.length - 1)) + '% center' : 'center';
+          return '<div class="tile soon" style="--bg: url(\'' + f.img + '\'); --pos: ' + pos + '"><span class="lk">' + lkBadge(id) + '</span><p class="subj">' + esc(s.name) + '</p>' +
             '<p class="what">Der Film zu diesem Leistungskurs entsteht gerade.</p><span class="go">Film folgt</span></div>';
         }
         return '<a class="tile" href="film.html?fach=' + id + '" style="--bg: url(\'' + s.img + '\'); --pos: ' + s.pos + '">' +

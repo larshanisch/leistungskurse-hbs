@@ -87,6 +87,7 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   (`PAIRS` = Tutoriumsblätter der Schule, Entscheidung 40);
   ein neuer Film braucht dort `img`, `pos`, `what` und ein `<script src="assets/data/<fach>.js">`
   (auch in `film.html`, `tafel.html`, `kiosk.html`, `offline.js` CORE).
+  Startseite mit Bildkarten je Aufgabenfeld (`media/start/feld1–3.jpg`, Entscheidung 42).
   Offen: Filme Politik und Wirtschaft, Geschichte, Mathematik, Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.
 
