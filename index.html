@@ -176,7 +176,7 @@
     .how { font-size: 1.7vh; margin: -0.6vh 0 1.6vh; }
     .need { gap: 0.6vh 0.4vw; }
     .need span { font-size: 1.7vh; }
-    .result ul { font-size: 1.9vh; gap: 0.8vh; }
+    .result ul { font-size: 1.85vh; gap: 0.7vh; }
     .result .links { margin-top: 1.6vh; gap: 0.5vw; }
     .result .links a { font-size: 1.7vh; }
     .fine { font-size: 1.45vh; margin-top: 1.6vh; }
@@ -232,12 +232,12 @@
     <div class="plan">
       <div class="col">
         <h3>1. Leistungskurs</h3>
-        <p class="rule">Eine Fremdsprache, Mathematik oder eine Naturwissenschaft (Landesregel). An der HBS (Ziffer = Aufgabenfeld):</p>
+        <p class="rule">Dein Tutoriumskurs. An der HBS (Ziffer = Aufgabenfeld):</p>
         <div class="chips" id="chips1"></div>
       </div>
       <div class="col">
         <h3>2. Leistungskurs</h3>
-        <p class="rule">Aus dem Angebot der Schule. An der HBS:</p>
+        <p class="rule">Einer der beiden LKs muss eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein.</p>
         <div class="chips" id="chips2"></div>
       </div>
       <div class="result" id="result" aria-live="polite"></div>
@@ -245,7 +245,8 @@
   </section>
 
   <footer>Stand: Oktober 2026 · Grundlage: Oberstufen- und Abiturverordnung (OAVO) des Landes Hessen, Kerncurricula und
-    Abiturerlass 2028, Kursangebot der Heinrich-Böll-Schule. Illustrationen KI-generiert (Google Gemini), dargestellte
+    Abiturerlass 2028, Kursangebot der Heinrich-Böll-Schule. <strong>Das Angebot an Leistungskursen kann sich in Zukunft
+    ändern.</strong> Illustrationen KI-generiert (Google Gemini), dargestellte
     Personen sind erfunden.
     <span class="modes">· <a href="tafel.html" target="_top">Vollbild für die Tafel</a>
     · <a href="kiosk.html" target="_top">Dauerbetrieb für die Räume</a></span></footer>
@@ -275,8 +276,17 @@
       biologie:   { name: 'Biologie', field: 3, kind: 'nw' },
       chemie:     { name: 'Chemie', field: 3, kind: 'nw' }
     };
-    var LK1 = ['englisch', 'biologie', 'chemie', 'mathe'];
+    // Kombinationen nach den Blättern „Mögliche Prüfungsfachkombinationen im Abitur (nach Tutorien)“ der HBS
+    // (Entscheidung 40): 1. LK = Tutoriumskurs, dazu die passenden 2. LKs
+    var PAIRS = {
+      englisch: ['deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie', 'mathe'],
+      biologie: ['englisch', 'deutsch', 'kunst', 'powi', 'geschichte', 'chemie', 'mathe'],
+      mathe:    ['englisch', 'deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie'],
+      powi:     ['englisch', 'biologie', 'chemie', 'mathe']
+    };
+    var LK1 = Object.keys(PAIRS);
     var LK2 = ['englisch', 'deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie', 'mathe'];
+    var fits = function (a, b) { return !!PAIRS[a] && PAIRS[a].indexOf(b) >= 0; };
     var FILMS = window.FILMS || {};
     var $ = function (id) { return document.getElementById(id); };
     var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
@@ -323,6 +333,8 @@
         var b = e.target.closest('.chip');
         if (!b || b.disabled) return;
         pick[slot] = pick[slot] === b.dataset.id ? null : b.dataset.id;
+        // passt die andere Spalte nicht mehr dazu, wird sie geleert
+        if (pick.a && pick.b && !fits(pick.a, pick.b)) pick[slot === 'a' ? 'b' : 'a'] = null;
         renderPlan();
       });
     }
@@ -337,25 +349,26 @@
       var need = [], notes = [];
       if (!has('deutsch')) { need.push('Deutsch'); covered[1] = true; }
       if (!has('mathe')) { need.push('Mathematik'); covered[3] = true; }
-      if (!kind('fs') && !kind('nw')) need.push('Fremdsprache, Naturwissenschaft oder Informatik');
+      if (!kind('fs') && !kind('nw')) need.push('Fremdsprache oder Naturwissenschaft');
       FIELDS.forEach(function (f) { if (!covered[f.id]) need.push('ein Fach aus Aufgabenfeld ' + f.num); });
 
       if (need.indexOf('Deutsch') >= 0 || need.indexOf('Mathematik') >= 0) {
         notes.push('Deutsch und Mathematik gehören für alle zu den fünf Prüfungsfächern.');
       }
       if (need.some(function (n) { return n.indexOf('Fremdsprache') === 0; })) {
-        notes.push('Unter den Prüfungsfächern muss eine Fremdsprache, eine Naturwissenschaft oder Informatik sein – das deckt keiner deiner beiden LKs ab.');
+        notes.push('Unter den Prüfungsfächern muss eine Fremdsprache oder eine Naturwissenschaft sein – das deckt keiner deiner beiden LKs ab.');
       }
       if (need.some(function (n) { return n.indexOf('Aufgabenfeld') >= 0; })) {
-        notes.push('Alle drei Aufgabenfelder müssen in deinen Prüfungsfächern vorkommen – Aufgabenfeld II etwa mit Politik und Wirtschaft oder Geschichte.');
+        notes.push('Alle drei Aufgabenfelder müssen vorkommen – Aufgabenfeld II etwa mit Geschichte, PoWi, Religion, Ethik oder Geographie.');
       }
       if (SUBJ[a].field === SUBJ[b].field) {
         var other = FIELDS.filter(function (f) { return f.id !== SUBJ[a].field; }).map(function (f) { return f.num; });
         notes.push('Beide LKs liegen in Aufgabenfeld ' + FIELDS[SUBJ[a].field - 1].num + '. Dein 3. Prüfungsfach (schriftlich) muss deshalb aus Aufgabenfeld ' +
-          other.join(' oder ') + ' kommen <small>(die drei schriftlichen Fächer müssen mindestens zwei Aufgabenfelder abdecken)</small>.');
+          other.join(' oder ') + ' kommen' + (SUBJ[a].field === 3 ? ' – also weder Mathematik noch eine Naturwissenschaft' : need.indexOf('Deutsch') >= 0 ? ' – Deutsch also nicht' : '') +
+          ' <small>(die drei schriftlichen Fächer müssen mindestens zwei Aufgabenfelder abdecken)</small>.');
       }
       var free = 3 - need.length;
-      notes.push(free === 0 ? 'Damit sind deine Prüfungsfächer 3 bis 5 schon festgelegt – du entscheidest nur noch die Reihenfolge und welches Fach du konkret nimmst.'
+      notes.push(free === 0 ? 'Damit sind deine Prüfungsfächer 3 bis 5 festgelegt; offen sind nur die Reihenfolge und das genaue Fach.'
         : free === 3 ? 'Die Prüfungsfächer 3 bis 5 kannst du frei wählen.'
         : (free === 1 ? 'Ein Prüfungsfach' : free + ' Prüfungsfächer') + ' kannst du darüber hinaus frei wählen.');
       return { need: need, free: free, notes: notes };
@@ -366,13 +379,13 @@
         var mine = i ? pick.b : pick.a, theirs = i ? pick.a : pick.b;
         $(el).querySelectorAll('.chip').forEach(function (c) {
           c.setAttribute('aria-pressed', String(c.dataset.id === mine));
-          c.disabled = c.dataset.id === theirs;
+          c.disabled = !!theirs && !(i ? fits(theirs, c.dataset.id) : fits(c.dataset.id, theirs));
         });
       });
       var a = pick.a, b = pick.b, r = $('result');
       if (!a || !b) {
         r.innerHTML = '<p class="wait">' + (!a && !b ? 'Wähle links deinen 1. und deinen 2. Leistungskurs.'
-          : !a ? 'Wähle noch deinen 1. Leistungskurs – Englisch, Biologie, Chemie oder Mathematik.'
+          : !a ? 'Wähle noch deinen 1. Leistungskurs – Englisch, Biologie, Mathematik oder Politik und Wirtschaft.'
           : 'Wähle noch deinen 2. Leistungskurs.') + '</p>' +
           '<p class="fine">Deutsch und Kunst zusammen gehen nicht: Einer der beiden Leistungskurse muss eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein.</p>';
         return;
@@ -390,8 +403,8 @@
         '<p class="how">1 bis 3 schriftlich, 4 mündlich, 5 als Präsentation oder mündlich.</p>' +
         '<ul>' + c.notes.map(function (n) { return '<li>' + n + '</li>'; }).join('') + '</ul>' +
         (films.length ? '<p class="links">' + films.map(function (id) { return '<a href="film.html?fach=' + id + '">▶ Film ' + esc(SUBJ[id].name) + '</a>'; }).join('') + '</p>' : '') +
-        '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Einen Anspruch auf einen bestimmten ' +
-        'Leistungskurs gibt es nicht. Grundlage: OAVO § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';
+        '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Das Angebot an Leistungskursen ' +
+        'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';
     }
 
     // --- Ansichten über die Adresse (#feld-2, #planer, #deutsch …), damit „Zurück“ im Browser funktioniert ---
@@ -402,7 +415,7 @@
       else if (/^planer(\/|$)/.test(h)) {
         // #planer/englisch/biologie wählt gleich vor (für Prüfwerkzeuge und Direktlinks)
         var p = h.split('/');
-        if (p.length === 3) { pick.a = LK1.indexOf(p[1]) >= 0 ? p[1] : null; pick.b = LK2.indexOf(p[2]) >= 0 && p[2] !== p[1] ? p[2] : null; }
+        if (p.length === 3) { pick.a = PAIRS[p[1]] ? p[1] : null; pick.b = fits(p[1], p[2]) ? p[2] : null; }
         view = 'planer';
       }
       ['home', 'feld', 'planer'].forEach(function (v) { $('v-' + v).hidden = v !== view; });

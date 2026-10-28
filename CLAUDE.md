@@ -83,7 +83,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   (Entscheidung 36). Regel: jeder Film muss in jeder Reihenfolge verständlich sein.
 - 29.10.2026: Erweiterung auf alle drei Aufgabenfelder (Entscheidungen 37–39). `index.html` neu:
   Aufgabenfelder → Kurse des Felds (Kacheln, „Film folgt“ ohne Film) → Planer „Kurswahl durchspielen“.
-  Fächer, Felder und HBS-Angebot stehen als `FIELDS`/`SUBJ`/`LK1`/`LK2` oben im Skript von `index.html`;
+  Fächer, Felder und HBS-Angebot stehen als `FIELDS`/`SUBJ`/`PAIRS` oben im Skript von `index.html`
+  (`PAIRS` = Tutoriumsblätter der Schule, Entscheidung 40);
   ein neuer Film braucht dort `img`, `pos`, `what` und ein `<script src="assets/data/<fach>.js">`
   (auch in `film.html`, `tafel.html`, `kiosk.html`, `offline.js` CORE).
   Offen: Filme Politik und Wirtschaft, Geschichte, Mathematik, Biologie, Chemie – je Fach Faktenblatt →
