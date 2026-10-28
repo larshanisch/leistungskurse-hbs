@@ -90,8 +90,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Startseite mit Bildkarten je Aufgabenfeld (`media/start/feld1–3.jpg`, Entscheidung 42).
 - 29.10.2026: Film Politik und Wirtschaft fertig (Drehbuch 0.2, Leitfigur C, **5:38 min gemessen**, Entscheidung 44).
 - 29.10.2026: Raum-Einrichtung auf der Startseite (Entscheidung 45): erstes Öffnen fragt, welche Filme im Raum
-  laufen; Logo 3 s drücken oder `?einrichten` ändert es; Handys über `handy.html` (zeigt alles, großer QR-Code).
-  Planer mit Titelbildern im Ergebnis (Entscheidung 46). Beim Testen im Browser vorher `localStorage.removeItem('tdot-raum')`.
+  laufen; „Tafel einrichten“ in der Fußzeile, Logo 3 s drücken oder `?einrichten` ändert es (Entscheidung 49); Handys über `handy.html` (zeigt alles, großer QR-Code).
+  Planer mit Titelbildern im Ergebnis, ohne Film-Links (Entscheidungen 46, 48); Räume anderer Fächer eintragbar (48). Beim Testen im Browser vorher `localStorage.removeItem('tdot-raum')`.
   Offen: Filme Geschichte, Mathematik, Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.
 
