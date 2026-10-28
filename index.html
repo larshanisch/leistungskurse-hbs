@@ -367,6 +367,7 @@
 <script src="assets/data/englisch.js"></script>
 <script src="assets/data/kunst.js"></script>
 <script src="assets/data/powi.js"></script>
+<script src="assets/data/geschichte.js"></script>
 <script>
   (function () {
     // Aufgabenfelder nach KMK-Vereinbarung, Kursangebot nach der Übersicht der Schule (Entscheidung 37)
@@ -385,7 +386,8 @@
                     what: 'Bilder verstehen und selbst gestalten – von Malerei und Fotografie bis zur Architektur.' },
       powi:       { name: 'Politik und Wirtschaft', field: 2, img: 'media/powi/img/p01.jpg', pos: '80% center',
                     what: 'Demokratie, Wirtschaft und internationale Politik – analysieren und begründet urteilen.' },
-      geschichte: { name: 'Geschichte', field: 2 },
+      geschichte: { name: 'Geschichte', field: 2, img: 'media/geschichte/img/g01.jpg', pos: '80% center',
+                    what: 'Vom 19. Jahrhundert bis heute – Quellen befragen und historische Urteile begründen.' },
       mathe:      { name: 'Mathematik', field: 3, kind: 'm' },
       biologie:   { name: 'Biologie', field: 3, kind: 'nw' },
       chemie:     { name: 'Chemie', field: 3, kind: 'nw' }
@@ -429,16 +431,16 @@
       $('fields').innerHTML = FIELDS.map(function (f) {
         var away = !f.subjects.some(here);
         var films = f.subjects.filter(function (id) { return FILMS[id] && here(id); }).length;
-        var rooms = f.subjects.map(roomOf).filter(function (r, i, a) { return r && a.indexOf(r) === i; });
-        var allKnown = f.subjects.every(function (id) { return roomOf(id); });
-        var go = away ? (rooms.length && allKnown ? 'Zeigen wir hier: ' + esc(rooms.join(' und ')) : rooms.length ? 'Zeigen wir in anderen Räumen' : 'Zeigen wir in einem anderen Raum') : films ? films + (films === 1 ? ' Film' : ' Filme') + ' ansehen →' : 'Filme folgen – Kurse ansehen →';
+        // Sind Räume eingetragen, stehen sie schon an den Fächern; dann kein Satz darunter (Entscheidung 52)
+        var anyRoom = f.subjects.some(function (id) { return !here(id) && roomOf(id); });
+        var go = away ? (anyRoom ? '' : 'Zeigen wir in einem anderen Raum') : films ? films + (films === 1 ? ' Film' : ' Filme') + ' ansehen →' : 'Filme folgen – Kurse ansehen →';
         return (away ? '<div class="fcard away">' : '<a class="fcard" href="#feld-' + f.id + '">') +
           '<span class="pic" style="--bg: url(\'' + f.img + '\'); --pos: ' + f.pos + '"></span>' +
           '<span class="num">Aufgabenfeld ' + f.num + '</span><div class="body">' +
           '<h2>' + esc(f.sub) + '</h2><p>' + esc(f.name) + '</p><ul>' + f.subjects.map(function (id) {
             var cls = !here(id) ? 'away' : FILMS[id] ? 'film' : '';
             return '<li' + (cls ? ' class="' + cls + '"' : '') + '>' + esc(SUBJ[id].name) + (cls === 'away' && roomOf(id) ? ' · ' + esc(roomOf(id)) : '') + '</li>';
-          }).join('') + '</ul><span class="go' + (away ? ' away' : '') + '">' + go + '</span></div>' + (away ? '</div>' : '</a>');
+          }).join('') + '</ul>' + (go ? '<span class="go' + (away ? ' away' : '') + '">' + go + '</span>' : '') + '</div>' + (away ? '</div>' : '</a>');
       }).join('');
     }
     renderHome();

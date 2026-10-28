@@ -19,7 +19,7 @@
   const COUNT_UP = 0.9;      // Dauer des Hochzählens einer Zahl
   const RING_GROW = 1.3;     // Dauer, bis ein Ringsegment voll ist
   const IDLE_MS = 3000;      // Steuerleiste blendet sich aus
-  const FIGURES = { sie: 'assets/img/figur_sie.jpg', er: 'assets/img/figur_er.jpg', c: 'assets/img/figur_c.jpg' };
+  const FIGURES = { sie: 'assets/img/figur_sie.jpg', er: 'assets/img/figur_er.jpg', c: 'assets/img/figur_c.jpg', d: 'assets/img/figur_d.jpg' };
 
   const film = (window.FILMS || {})[fachId];
   const $ = (id) => document.getElementById(id);
@@ -289,7 +289,7 @@
     if (cap !== shownCaption) {
       shownCaption = cap;
       ui.caption.classList.remove('on');
-      if (cap) {
+      if (cap && cap.text) {   // leerer Text beendet die vorige Bildunterschrift
         // „Name · Werk“: neben einer Porträtkarte zweizeilig, Werk in der Leitfarbe
         const span = ui.caption.firstElementChild;
         const parts = cap.text.split(' · ');

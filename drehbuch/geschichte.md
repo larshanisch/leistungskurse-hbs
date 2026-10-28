@@ -1,6 +1,6 @@
 # Drehbuch — Leistungskurs Geschichte
 
-Version 0.2 · 29.10.2026 (wartet auf Freigabe)
+Version 0.2 · 29.10.2026 (freigegeben, vertont)
 
 Änderungen gegenüber 0.1 (Nutzer 29.10.2026): Leitfigur D mit Biologie + Geschichte bestätigt. Szene 2 ohne
 „als Tutorium sechs“ bestätigt. Szene 5 mit gemeinfreier Lithografie zur Paulskirche (Fund und Download
