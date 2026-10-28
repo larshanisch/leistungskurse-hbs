@@ -80,9 +80,9 @@
       "n": 7,
       "image": { "src": "k07.jpg", "motion": "zoom-in", "focus": [0.3, 0.7] },
       "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
-        { "at": "dieselben", "label": "Themen", "a": "dieselben", "b": "vertieft" },
-        { "at": "Farb- und Gestaltungstheorien", "label": "dazu", "a": "–", "b": "Farb- und Gestaltungstheorien, Varianten, Entwurfsgrafik oder Modell" },
-        { "at": "kunstwissenschaftliches", "label": "Arbeitsweise", "a": "grundlegend", "b": "kunstwissenschaftlich, mit Fachsprache" }
+        { "at": "dieselben", "label": "Themen", "a": "dieselben Themenfelder", "b": "vertiefter" },
+        { "at": "Farb- und Gestaltungstheorien", "label": "Theorie und Gestalten", "a": "Ideen, Skizzen, eigene Werke", "b": "dazu Farb- und Gestaltungstheorien, Varianten, Entwurfsgrafik oder Modell" },
+        { "at": "Fachsprache", "label": "Fachsprache", "a": "sicher", "b": "differenziert, kunstwissenschaftlich" }
       ] },
       "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
         "Analyse und Gestaltung zählen gleich",

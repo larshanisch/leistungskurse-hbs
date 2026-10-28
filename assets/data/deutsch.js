@@ -4,7 +4,7 @@ window.FILMS["deutsch"] = {
  "id": "deutsch",
  "title": "Leistungskurs Deutsch",
  "accent": "#c8d530",
- "total": 328.39,
+ "total": 332.2,
  "credits": [
   "Caspar David Friedrich: Der Wanderer über dem Nebelmeer, um 1817, Hamburger Kunsthalle – gemeinfrei, Wikimedia Commons",
   "Peter Friedel: Heinrich von Kleist, Miniatur, 1801 – gemeinfrei, Wikimedia Commons",
@@ -647,8 +647,8 @@ window.FILMS["deutsch"] = {
    "n": 8,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 31.54,
-   "speechEnd": 28.54,
+   "duration": 35.35,
+   "speechEnd": 32.35,
    "sentences": [
     {
      "text": "Im Leistungskurs sind die Themen dieselben wie im Grundkurs, aber du gehst tiefer.",
@@ -658,18 +658,25 @@ window.FILMS["deutsch"] = {
      "start": 0.6
     },
     {
-     "text": "Du liest zusätzlich theoretische Texte, etwa von Schiller, Novalis, Nietzsche oder Freud, und es geht vor allem darum, Texte selbstständig zu deuten und begründet zu urteilen.",
-     "audio": "media/deutsch/audio/s08_2_6da62f8b.mp3",
-     "dur": 11.36,
+     "text": "Du liest zusätzlich theoretische Texte, etwa von Schiller, Novalis, Nietzsche oder Freud.",
+     "audio": "media/deutsch/audio/s08_2_a551999a.mp3",
+     "dur": 6,
      "estimated": false,
      "start": 6.09
     },
     {
-     "text": "Kurz zusammengefasst: In vier Halbjahren erwarten dich vier Themen, die Pflichtlektüren gelten für ganz Hessen, und im Leistungskurs arbeitest du tiefer und theoretischer.",
-     "audio": "media/deutsch/audio/s08_3_43544b58.mp3",
-     "dur": 10.64,
+     "text": "Texte deuten und beurteilen musst du in beiden Kursarten; im Leistungskurs tust du das aber selbstständiger und mit mehr theoretischem Hintergrund.",
+     "audio": "media/deutsch/audio/s08_3_4f30bd47.mp3",
+     "dur": 8.8,
      "estimated": false,
-     "start": 17.9
+     "start": 12.54
+    },
+    {
+     "text": "Kurz zusammengefasst: In vier Halbjahren erwarten dich vier Themen, die Pflichtlektüren gelten für ganz Hessen, und im Leistungskurs arbeitest du tiefer und theoretischer.",
+     "audio": "media/deutsch/audio/s08_4_43544b58.mp3",
+     "dur": 10.56,
+     "estimated": false,
+     "start": 21.79
     }
    ],
    "cues": [
@@ -679,24 +686,29 @@ window.FILMS["deutsch"] = {
      "end": 5.64
     },
     {
-     "text": "Du liest zusätzlich theoretische Texte, etwa von Schiller, Novalis, Nietzsche oder Freud,",
+     "text": "Du liest zusätzlich theoretische Texte, etwa von Schiller, Novalis, Nietzsche oder Freud.",
      "start": 6.09,
-     "end": 11.867
+     "end": 12.09
     },
     {
-     "text": "und es geht vor allem darum, Texte selbstständig zu deuten und begründet zu urteilen.",
-     "start": 11.867,
-     "end": 17.385
+     "text": "Texte deuten und beurteilen musst du in beiden Kursarten;",
+     "start": 12.54,
+     "end": 15.952
+    },
+    {
+     "text": "im Leistungskurs tust du das aber selbstständiger und mit mehr theoretischem Hintergrund.",
+     "start": 15.952,
+     "end": 21.28
     },
     {
      "text": "Kurz zusammengefasst: In vier Halbjahren erwarten dich vier Themen,",
-     "start": 17.9,
-     "end": 22.069
+     "start": 21.79,
+     "end": 25.928
     },
     {
      "text": "die Pflichtlektüren gelten für ganz Hessen, und im Leistungskurs arbeitest du tiefer und theoretischer.",
-     "start": 22.069,
-     "end": 28.478
+     "start": 25.928,
+     "end": 32.288
     }
    ],
    "image": {
@@ -711,22 +723,22 @@ window.FILMS["deutsch"] = {
     ],
     "items": [
      {
-      "label": "Themen",
-      "a": "gleich",
-      "b": "vertieft",
-      "t": 2.198
+      "label": "Themen und Lektüren",
+      "a": "dieselben",
+      "b": "vertiefter",
+      "t": 2.628
      },
      {
-      "label": "dazu",
-      "a": "–",
-      "b": "theoretische Texte: Schiller, Novalis, Nietzsche, Freud",
-      "t": 7.388
+      "label": "Texte",
+      "a": "literarische und pragmatische",
+      "b": "dazu theoretische Texte (Schiller, Novalis, Nietzsche, Freud)",
+      "t": 7.438
      },
      {
-      "label": "Anforderung",
-      "a": "grundlegend",
-      "b": "erhöht: mehr eigenes Deuten und Urteilen",
-      "t": 14.204
+      "label": "Deuten und Urteilen",
+      "a": "begründet",
+      "b": "selbstständiger, mit Theorie",
+      "t": 14.755
      }
     ]
    },
@@ -737,7 +749,7 @@ window.FILMS["deutsch"] = {
      "Pflichtlektüren für ganz Hessen",
      "Leistungskurs: tiefer und theoretischer"
     ],
-    "t": 17.9
+    "t": 21.79
    },
    "start": 153.69
   },
@@ -803,7 +815,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 188.23
+   "start": 192.04
   },
   {
    "n": 10,
@@ -910,7 +922,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 202.63
+   "start": 206.44
   },
   {
    "n": 11,
@@ -986,7 +998,7 @@ window.FILMS["deutsch"] = {
     ],
     "t": 1.7
    },
-   "start": 238.26
+   "start": 242.07
   },
   {
    "n": 12,
@@ -1069,7 +1081,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 259.03
+   "start": 262.84
   },
   {
    "n": 13,
@@ -1137,7 +1149,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 281.57
+   "start": 285.38
   },
   {
    "n": 14,
@@ -1175,7 +1187,7 @@ window.FILMS["deutsch"] = {
     "src": "media/deutsch/img/s14.jpg",
     "motion": "zoom-out"
    },
-   "start": 297.94
+   "start": 301.75
   },
   {
    "n": 15,
@@ -1228,7 +1240,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "logo": true,
-   "start": 312.58
+   "start": 316.39
   }
  ]
 };

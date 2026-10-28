@@ -74,9 +74,9 @@
       "n": 7,
       "image": { "src": "p07.jpg", "motion": "zoom-in", "focus": [0.55, 0.55] },
       "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
-        { "at": "dieselben", "label": "Themen", "a": "dieselben", "b": "vertieft" },
-        { "at": "Theorien", "label": "Theorie", "a": "–", "b": "Demokratie, Krieg und Frieden, Welthandel" },
-        { "at": "Forschungsprojekten", "label": "Arbeitsweise", "a": "grundlegend", "b": "eigene kleine Forschungsprojekte" }
+        { "at": "dieselben", "label": "Themen", "a": "dieselben Themenfelder", "b": "vertiefter" },
+        { "at": "weitere Theorien", "label": "Theorien", "a": "z. B. Keynes und Neoklassik", "b": "dazu Demokratie, Krieg und Frieden, Welthandel" },
+        { "at": "Forschungsprojekten", "label": "Arbeitsweise", "a": "Fachmethoden, Debatten, Planspiele", "b": "dazu eigene kleine Forschungsprojekte" }
       ] },
       "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
         "Demokratie, Wirtschaft, Welt, Europa",

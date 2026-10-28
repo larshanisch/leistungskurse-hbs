@@ -4,7 +4,7 @@ window.FILMS["kunst"] = {
  "id": "kunst",
  "title": "Leistungskurs Kunst",
  "accent": "#c8d530",
- "total": 332.4,
+ "total": 336.88,
  "credits": [
   "Berthe Morisot: Die Wiege (Le berceau), 1872, Musée d’Orsay, Paris – gemeinfrei, Wikimedia Commons (Google Art Project)",
   "Gustave Caillebotte: Straße in Paris, Regenwetter (Rue de Paris, temps de pluie), 1877, Art Institute of Chicago – gemeinfrei, Wikimedia Commons (Google Art Project)",
@@ -527,8 +527,8 @@ window.FILMS["kunst"] = {
    "n": 7,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 38.9,
-   "speechEnd": 35.9,
+   "duration": 43.38,
+   "speechEnd": 40.38,
    "sentences": [
     {
      "text": "Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst weiter: Du beschäftigst dich etwa mit Farb- und Gestaltungstheorien, entwickelst Varianten deiner Entwürfe und entwirfst Architektur als Entwurfsgrafik oder als Modell.",
@@ -538,9 +538,9 @@ window.FILMS["kunst"] = {
      "start": 0.6
     },
     {
-     "text": "Erwartet wird kunstwissenschaftliches Arbeiten mit der passenden Fachsprache.",
-     "audio": "media/kunst/audio/s07_2_c1c1dc42.mp3",
-     "dur": 4.32,
+     "text": "Mit Fachsprache über Bilder zu schreiben, lernst du in beiden Kursarten; im Leistungskurs wird sie differenzierter, und du arbeitest kunstwissenschaftlich.",
+     "audio": "media/kunst/audio/s07_2_8907d114.mp3",
+     "dur": 8.8,
      "estimated": false,
      "start": 16.33
     },
@@ -549,7 +549,7 @@ window.FILMS["kunst"] = {
      "audio": "media/kunst/audio/s07_3_89d5cb08.mp3",
      "dur": 14.8,
      "estimated": false,
-     "start": 21.1
+     "start": 25.58
     }
    ],
    "cues": [
@@ -569,24 +569,29 @@ window.FILMS["kunst"] = {
      "end": 15.757
     },
     {
-     "text": "Erwartet wird kunstwissenschaftliches Arbeiten mit der passenden Fachsprache.",
+     "text": "Mit Fachsprache über Bilder zu schreiben, lernst du in beiden Kursarten;",
      "start": 16.33,
-     "end": 20.65
+     "end": 20.418
+    },
+    {
+     "text": "im Leistungskurs wird sie differenzierter, und du arbeitest kunstwissenschaftlich.",
+     "start": 20.418,
+     "end": 25.073
     },
     {
      "text": "Kurz zusammengefasst: Analyse und Gestaltung zählen gleich viel,",
-     "start": 21.1,
-     "end": 25.165
+     "start": 25.58,
+     "end": 29.645
     },
     {
      "text": "die vier Halbjahre führen dich von den Bildkünsten über Medien und Umwelt bis zur Gegenwart,",
-     "start": 25.165,
-     "end": 31.009
+     "start": 29.645,
+     "end": 35.489
     },
     {
      "text": "und im Leistungskurs arbeitest du tiefer, theoretischer und eigenständiger.",
-     "start": 31.009,
-     "end": 35.773
+     "start": 35.489,
+     "end": 40.253
     }
    ],
    "image": {
@@ -606,21 +611,21 @@ window.FILMS["kunst"] = {
     "items": [
      {
       "label": "Themen",
-      "a": "dieselben",
-      "b": "vertieft",
+      "a": "dieselben Themenfelder",
+      "b": "vertiefter",
       "t": 2.993
      },
      {
-      "label": "dazu",
-      "a": "–",
-      "b": "Farb- und Gestaltungstheorien, Varianten, Entwurfsgrafik oder Modell",
+      "label": "Theorie und Gestalten",
+      "a": "Ideen, Skizzen, eigene Werke",
+      "b": "dazu Farb- und Gestaltungstheorien, Varianten, Entwurfsgrafik oder Modell",
       "t": 7.902
      },
      {
-      "label": "Arbeitsweise",
-      "a": "grundlegend",
-      "b": "kunstwissenschaftlich, mit Fachsprache",
-      "t": 17.115
+      "label": "Fachsprache",
+      "a": "sicher",
+      "b": "differenziert, kunstwissenschaftlich",
+      "t": 16.557
      }
     ]
    },
@@ -631,7 +636,7 @@ window.FILMS["kunst"] = {
      "4 Halbjahre: Bildkünste, Medien, Umwelt, Gegenwart",
      "Leistungskurs: tiefer, theoretischer, eigenständiger"
     ],
-    "t": 21.1
+    "t": 25.58
    },
    "start": 143.25
   },
@@ -709,7 +714,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 185.15
+   "start": 189.63
   },
   {
    "n": 9,
@@ -804,7 +809,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 205.97
+   "start": 210.45
   },
   {
    "n": 10,
@@ -879,7 +884,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 236.03
+   "start": 240.51
   },
   {
    "n": 11,
@@ -972,7 +977,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 256
+   "start": 260.48
   },
   {
    "n": 12,
@@ -1040,7 +1045,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 284.94
+   "start": 289.42
   },
   {
    "n": 13,
@@ -1078,7 +1083,7 @@ window.FILMS["kunst"] = {
     "src": "media/kunst/img/k13.jpg",
     "motion": "zoom-out"
    },
-   "start": 301.39
+   "start": 305.87
   },
   {
    "n": 14,
@@ -1131,7 +1136,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "logo": true,
-   "start": 316.83
+   "start": 321.31
   }
  ]
 };

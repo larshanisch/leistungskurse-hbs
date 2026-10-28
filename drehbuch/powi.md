@@ -1,6 +1,9 @@
 # Drehbuch — Leistungskurs Politik und Wirtschaft
 
-Version 0.2 · 29.10.2026 (freigegeben, vertont)
+Version 0.3 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.2: Szene zum Unterschied GK/LK nach der Prüfung `drehbuch/pruefung_gk_lk.md`: Was beide Kursarten tun, wird nicht mehr als LK-Merkmal dargestellt; die Vergleichstafel nennt für den GK, was er tut, statt „–“ oder „grundlegend“ (Nutzer 29.10.2026, Entscheidung 53).
+
 
 Änderungen gegenüber 0.1 (Nutzer 29.10.2026): Leitfigur C mit Mathematik + PoWi bestätigt.
 Szene 5 — Exkursion „wenn es möglich ist“. Szene 8 — Debatten und Planspiele statt „Simulationen“.
@@ -131,16 +134,16 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 - **Bild:** F — C in der Bibliothek, vor sich ein Fachbuch und einen Laptop mit selbst erstellter
   Umfrage-Auswertung (Balkendiagramm ohne lesbare Zahlen), konzentriert.
 - **Bewegung:** Zoom ein.
-- **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themen: dieselben | vertieft · Theorie: – |
-  Demokratietheorien, Krieg und Frieden, Welthandel · Arbeitsweise: grundlegend | eigene kleine
-  Forschungsprojekte
+- **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themen: dieselben Themenfelder | vertiefter ·
+  Theorien: z. B. Keynes und Neoklassik | dazu Demokratie, Krieg und Frieden, Welthandel · Arbeitsweise:
+  Fachmethoden, Debatten, Planspiele | dazu eigene kleine Forschungsprojekte
 - **MERKKARTE** (zum letzten Satz): „Demokratie, Wirtschaft, Welt, Europa“ · „Politik und Wirtschaft
   gehören zusammen“ · „Leistungskurs: theoretischer und eigenständiger“
 - **Sprechtext:**
-  > Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst tiefer: Du
-  > arbeitest mit Theorien, etwa mit Theorien der Demokratie, mit Erklärungen, wie Kriege entstehen
-  > und Frieden gesichert wird, oder mit der Frage, warum Länder überhaupt miteinander Handel
-  > treiben. Außerdem lernst du, in kleinen Forschungsprojekten selbst nach Antworten zu suchen.
+  > Die Themenfelder sind dieselben wie im Grundkurs, und mit Modellen und Theorien arbeitest du in beiden
+  > Kursarten, etwa mit unterschiedlichen Ideen, wie der Staat die Wirtschaft steuern soll. Im Leistungskurs
+  > kommen weitere Theorien hinzu, etwa Theorien der Demokratie, Erklärungen, wie Kriege entstehen und
+  > Frieden gesichert wird, oder die Frage, warum Länder überhaupt miteinander Handel treiben. Außerdem lernst du, in kleinen Forschungsprojekten selbst nach Antworten zu suchen.
   > Kurz zusammengefasst: Die vier Halbjahre führen dich von der Demokratie über die Wirtschaft bis
   > in die Welt und nach Europa, Politik und Wirtschaft gehören dabei gleichwertig zusammen, und im
   > Leistungskurs arbeitest du theoretischer und eigenständiger.

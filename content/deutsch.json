@@ -94,9 +94,9 @@
       "n": 8,
       "image": { "src": "s08.jpg", "motion": "pan-right" },
       "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
-        { "at": "Themen", "label": "Themen", "a": "gleich", "b": "vertieft" },
-        { "at": "theoretische Texte", "label": "dazu", "a": "–", "b": "theoretische Texte: Schiller, Novalis, Nietzsche, Freud" },
-        { "at": "selbstständig", "label": "Anforderung", "a": "grundlegend", "b": "erhöht: mehr eigenes Deuten und Urteilen" }
+        { "at": "dieselben", "label": "Themen und Lektüren", "a": "dieselben", "b": "vertiefter" },
+        { "at": "theoretische Texte", "label": "Texte", "a": "literarische und pragmatische", "b": "dazu theoretische Texte (Schiller, Novalis, Nietzsche, Freud)" },
+        { "at": "in beiden Kursarten", "label": "Deuten und Urteilen", "a": "begründet", "b": "selbstständiger, mit Theorie" }
       ] },
       "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
         "4 Halbjahre, 4 Themen",

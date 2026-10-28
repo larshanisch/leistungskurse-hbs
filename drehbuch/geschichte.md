@@ -1,6 +1,9 @@
 # Drehbuch — Leistungskurs Geschichte
 
-Version 0.2 · 29.10.2026 (freigegeben, vertont)
+Version 0.3 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.2: Szene zum Unterschied GK/LK nach der Prüfung `drehbuch/pruefung_gk_lk.md`: Was beide Kursarten tun, wird nicht mehr als LK-Merkmal dargestellt; die Vergleichstafel nennt für den GK, was er tut, statt „–“ oder „grundlegend“ (Nutzer 29.10.2026, Entscheidung 53).
+
 
 Änderungen gegenüber 0.1 (Nutzer 29.10.2026): Leitfigur D mit Biologie + Geschichte bestätigt. Szene 2 ohne
 „als Tutorium sechs“ bestätigt. Szene 5 mit gemeinfreier Lithografie zur Paulskirche (Fund und Download
@@ -125,20 +128,22 @@ Wie im Drehbuch PoWi. **Beleg** FB-G = `quellen/faktenblatt_geschichte.md`, FB-A
 
 - **Bild:** F — D in einem Stadtarchiv oder einer Bibliothek über alten Akten und Fotos, mit Notizblock.
 - **Bewegung:** Zoom ein.
-- **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themen: dieselben | vertieft · Deutungen: – |
-  Kontroversen der Forschung · Arbeitsweise: grundlegend | forschend, eigene Recherche
+- **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themen: dieselben Themenfelder | vertiefter, mehr
+  Quellen · Deutungen: vergleichen und erörtern | dazu Geschichtsbilder, aktuelle Kontroversen · Arbeitsweise:
+  Quellen und Darstellungen untersuchen | dazu eigene Recherche vor Ort
 - **MERKKARTE** (zum letzten Satz): „19. Jahrhundert bis Gegenwart“ · „Quellen und Deutungen im Mittelpunkt“ ·
   „Leistungskurs: forschender und eigenständiger“
 - **Sprechtext:**
-  > Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst tiefer: Du vergleichst
-  > die Deutungen verschiedener Historikerinnen und Historiker, beschäftigst dich mit aktuellen Kontroversen
-  > und fragst, ob Menschen überhaupt aus der Geschichte lernen können. Im aktuellen Jahrgang gehört auch
+  > Quellen und Deutungen von Historikerinnen und Historikern untersuchst du in beiden Kursarten. Im
+  > Leistungskurs gehst du aber tiefer: Du arbeitest heraus, welches Geschichtsbild hinter einer Darstellung
+  > steckt, beschäftigst dich auch mit aktuellen Kontroversen und fragst, ob Menschen überhaupt aus der
+  > Geschichte lernen können. Im aktuellen Jahrgang gehört auch
   > eine Recherche zur Geschichte vor Ort dazu, etwa in einem Archiv oder zu Stolpersteinen; wie genau, entscheidet
   > deine Lehrkraft mit eurem Kurs.
   > Kurz zusammengefasst: Die vier Halbjahre führen dich vom neunzehnten Jahrhundert bis zur Gegenwart,
   > Quellen und Deutungen stehen im Mittelpunkt, und im Leistungskurs arbeitest du forschender und
   > eigenständiger.
-- **Beleg:** FB-G 1 (KCGO W7, A7, U9–U11, O8–O9); FB-G 2 (LA28 LK-Zusätze, Q2.3 lokal-/regionalgeschichtliche
+- **Beleg:** FB-G 1 (KCGO W5 und EPA 1.3: Deutungen erörtern in GK und LK; nur LK W7, A7, U9–U11, O8–O9); FB-G 2 (LA28 LK-Zusätze, Q2.3 lokal-/regionalgeschichtliche
   Recherche, Q4.1 aktuelle Kontroversen); FB-G 5 (EPA 1.3); SCHULE (Archiv, Stolpersteine „möglich, abhängig von
   der Entscheidung der Lehrkraft und dem Interesse des Kurses“, Nutzer 29.10.2026)
 

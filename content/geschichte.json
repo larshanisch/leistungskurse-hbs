@@ -81,9 +81,9 @@
       "n": 7,
       "image": { "src": "g07.jpg", "motion": "zoom-in", "focus": [0.6, 0.55] },
       "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
-        { "at": "dieselben", "label": "Themen", "a": "dieselben", "b": "vertieft" },
-        { "at": "Deutungen", "label": "Deutungen", "a": "–", "b": "Kontroversen der Forschung" },
-        { "at": "Recherche", "label": "Arbeitsweise", "a": "grundlegend", "b": "forschend, eigene Recherche vor Ort" }
+        { "at": "Quellen und Deutungen", "label": "Themen", "a": "dieselben Themenfelder", "b": "vertiefter, mehr Quellen" },
+        { "at": "Geschichtsbild", "label": "Deutungen", "a": "vergleichen und erörtern", "b": "dazu Geschichtsbilder, aktuelle Kontroversen" },
+        { "at": "Recherche", "label": "Arbeitsweise", "a": "Quellen und Darstellungen untersuchen", "b": "dazu eigene Recherche vor Ort" }
       ] },
       "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
         "19. Jahrhundert bis Gegenwart",

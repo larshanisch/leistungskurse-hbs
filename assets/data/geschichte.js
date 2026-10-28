@@ -4,7 +4,7 @@ window.FILMS["geschichte"] = {
  "id": "geschichte",
  "title": "Leistungskurs Geschichte",
  "accent": "#c8d530",
- "total": 342.75,
+ "total": 346.64,
  "credits": [
   "Jean Nicolas Ventadour: Die Paulskirche in Frankfurt am Main, 1848, Aquarell, Historisches Museum Frankfurt – gemeinfrei, Wikimedia Commons",
   "Alle übrigen Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
@@ -493,76 +493,88 @@ window.FILMS["geschichte"] = {
    "n": 7,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 42.82,
-   "speechEnd": 39.82,
+   "duration": 46.71,
+   "speechEnd": 43.71,
    "sentences": [
     {
-     "text": "Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst tiefer: Du vergleichst die Deutungen verschiedener Historikerinnen und Historiker, beschäftigst dich mit aktuellen Kontroversen und fragst, ob Menschen überhaupt aus der Geschichte lernen können.",
-     "audio": "media/geschichte/audio/s07_1_b3d3fce3.mp3",
-     "dur": 15.52,
+     "text": "Quellen und Deutungen von Historikerinnen und Historikern untersuchst du in beiden Kursarten.",
+     "audio": "media/geschichte/audio/s07_1_5d9549b2.mp3",
+     "dur": 5.36,
      "estimated": false,
      "start": 0.6
     },
     {
-     "text": "Im aktuellen Jahrgang gehört auch eine Recherche zur Geschichte vor Ort dazu, etwa in einem Archiv oder zu Stolpersteinen; wie genau, entscheidet deine Lehrkraft mit eurem Kurs.",
-     "audio": "media/geschichte/audio/s07_2_1d525d67.mp3",
-     "dur": 10.32,
+     "text": "Im Leistungskurs gehst du aber tiefer: Du arbeitest heraus, welches Geschichtsbild hinter einer Darstellung steckt, beschäftigst dich auch mit aktuellen Kontroversen und fragst, ob Menschen überhaupt aus der Geschichte lernen können.",
+     "audio": "media/geschichte/audio/s07_2_08f8d653.mp3",
+     "dur": 13.12,
      "estimated": false,
-     "start": 16.57
+     "start": 6.41
+    },
+    {
+     "text": "Im aktuellen Jahrgang gehört auch eine Recherche zur Geschichte vor Ort dazu, etwa in einem Archiv oder zu Stolpersteinen; wie genau, entscheidet deine Lehrkraft mit eurem Kurs.",
+     "audio": "media/geschichte/audio/s07_3_1d525d67.mp3",
+     "dur": 10.8,
+     "estimated": false,
+     "start": 19.98
     },
     {
      "text": "Kurz zusammengefasst: Die vier Halbjahre führen dich vom neunzehnten Jahrhundert bis zur Gegenwart, Quellen und Deutungen stehen im Mittelpunkt, und im Leistungskurs arbeitest du forschender und eigenständiger.",
-     "audio": "media/geschichte/audio/s07_3_7e0b87e6.mp3",
+     "audio": "media/geschichte/audio/s07_4_7e0b87e6.mp3",
      "dur": 12.48,
      "estimated": false,
-     "start": 27.34
+     "start": 31.23
     }
    ],
    "cues": [
     {
-     "text": "Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst tiefer:",
+     "text": "Quellen und Deutungen von Historikerinnen und Historikern untersuchst du in beiden Kursarten.",
      "start": 0.6,
-     "end": 5.548
+     "end": 5.96
     },
     {
-     "text": "Du vergleichst die Deutungen verschiedener Historikerinnen und Historiker,",
-     "start": 5.548,
-     "end": 9.71
+     "text": "Im Leistungskurs gehst du aber tiefer: Du arbeitest heraus,",
+     "start": 6.41,
+     "end": 9.732
     },
     {
-     "text": "beschäftigst dich mit aktuellen Kontroversen und fragst,",
-     "start": 9.71,
-     "end": 12.859
+     "text": "welches Geschichtsbild hinter einer Darstellung steckt,",
+     "start": 9.732,
+     "end": 12.829
+    },
+    {
+     "text": "beschäftigst dich auch mit aktuellen Kontroversen und fragst,",
+     "start": 12.829,
+     "end": 16.264
     },
     {
      "text": "ob Menschen überhaupt aus der Geschichte lernen können.",
-     "start": 12.859,
-     "end": 15.951
+     "start": 16.264,
+     "end": 19.361
     },
     {
      "text": "Im aktuellen Jahrgang gehört auch eine Recherche zur Geschichte vor Ort dazu,",
-     "start": 16.57,
-     "end": 21.059
+     "start": 19.98,
+     "end": 24.678
     },
     {
      "text": "etwa in einem Archiv oder zu Stolpersteinen; wie genau, entscheidet deine Lehrkraft mit eurem Kurs.",
-     "start": 21.059,
-     "end": 26.832
+     "start": 24.678,
+     "end": 30.719
     },
     {
      "text": "Kurz zusammengefasst: Die vier Halbjahre führen dich vom neunzehnten Jahrhundert bis zur Gegenwart,",
-     "start": 27.34,
-     "end": 33.223
+     "start": 31.23,
+     "end": 37.113
     },
     {
      "text": "Quellen und Deutungen stehen im Mittelpunkt,",
-     "start": 33.223,
-     "end": 35.838
+     "start": 37.113,
+     "end": 39.728
     },
     {
      "text": "und im Leistungskurs arbeitest du forschender und eigenständiger.",
-     "start": 35.838,
-     "end": 39.701
+     "start": 39.728,
+     "end": 43.591
     }
    ],
    "image": {
@@ -582,21 +594,21 @@ window.FILMS["geschichte"] = {
     "items": [
      {
       "label": "Themen",
-      "a": "dieselben",
-      "b": "vertieft",
-      "t": 2.793
+      "a": "dieselben Themenfelder",
+      "b": "vertiefter, mehr Quellen",
+      "t": 0.6
      },
      {
       "label": "Deutungen",
-      "a": "–",
-      "b": "Kontroversen der Forschung",
-      "t": 6.673
+      "a": "vergleichen und erörtern",
+      "b": "dazu Geschichtsbilder, aktuelle Kontroversen",
+      "t": 10.239
      },
      {
       "label": "Arbeitsweise",
-      "a": "grundlegend",
-      "b": "forschend, eigene Recherche vor Ort",
-      "t": 18.844
+      "a": "Quellen und Darstellungen untersuchen",
+      "b": "dazu eigene Recherche vor Ort",
+      "t": 22.36
      }
     ]
    },
@@ -607,7 +619,7 @@ window.FILMS["geschichte"] = {
      "Quellen und Deutungen im Mittelpunkt",
      "Leistungskurs: forschender und eigenständiger"
     ],
-    "t": 27.34
+    "t": 31.23
    },
    "start": 143.02
   },
@@ -709,7 +721,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 188.84
+   "start": 192.73
   },
   {
    "n": 9,
@@ -798,7 +810,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 219.47
+   "start": 223.36
   },
   {
    "n": 10,
@@ -897,7 +909,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 244.81
+   "start": 248.7
   },
   {
    "n": 11,
@@ -984,7 +996,7 @@ window.FILMS["geschichte"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 268.03
+   "start": 271.92
   },
   {
    "n": 12,
@@ -1057,7 +1069,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 293.77
+   "start": 297.66
   },
   {
    "n": 13,
@@ -1095,7 +1107,7 @@ window.FILMS["geschichte"] = {
     "src": "media/geschichte/img/g13.jpg",
     "motion": "zoom-out"
    },
-   "start": 314.62
+   "start": 318.51
   },
   {
    "n": 14,
@@ -1148,7 +1160,7 @@ window.FILMS["geschichte"] = {
     ]
    },
    "logo": true,
-   "start": 326.86
+   "start": 330.75
   }
  ]
 };

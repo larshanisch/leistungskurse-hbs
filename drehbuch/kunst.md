@@ -1,6 +1,9 @@
 # Drehbuch — Leistungskurs Kunst
 
-Version 0.5 · 29.10.2026 (freigegeben)
+Version 0.6 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.5: Szene zum Unterschied GK/LK nach der Prüfung `drehbuch/pruefung_gk_lk.md`: Was beide Kursarten tun, wird nicht mehr als LK-Merkmal dargestellt; die Vergleichstafel nennt für den GK, was er tut, statt „–“ oder „grundlegend“ (Nutzer 29.10.2026, Entscheidung 53).
+
 
 Änderung gegenüber 0.4: Szene 2 ohne „als Tutorium sechs“: Laut den Tutoriumsblättern der Schule ist dieses Fach nie Tutorium (Nutzer 29.10.2026, Entscheidung 50).
 
@@ -142,16 +145,17 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 - **Bild:** F — ER baut konzentriert an einem Architekturmodell aus Karton und Holzleisten,
   Schneidematte, Cutter, Nahaufnahme.
 - **Bewegung:** Zoom ein auf die Hände.
-- **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themen: dieselben | vertieft · dazu: – |
-  Farb- und Gestaltungstheorien, Varianten, Entwurfsgrafik oder Modell · Arbeitsweise: grundlegend |
-  kunstwissenschaftlich, mit Fachsprache
+- **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themen: dieselben Themenfelder | vertiefter ·
+  Theorie und Gestalten: Ideen, Skizzen, eigene Werke | dazu Farb- und Gestaltungstheorien, Varianten,
+  Entwurfsgrafik oder Modell · Fachsprache: sicher | differenziert, kunstwissenschaftlich
 - **MERKKARTE** (zum letzten Satz): „Analyse und Gestaltung zählen gleich“ · „4 Halbjahre: Bildkünste,
   Medien, Umwelt, Gegenwart“ · „Leistungskurs: tiefer, theoretischer, eigenständiger“
 - **Sprechtext:**
   > Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst weiter: Du
   > beschäftigst dich etwa mit Farb- und Gestaltungstheorien, entwickelst Varianten deiner Entwürfe
-  > und entwirfst Architektur als Entwurfsgrafik oder als Modell. Erwartet wird
-  > kunstwissenschaftliches Arbeiten mit der passenden Fachsprache.
+  > und entwirfst Architektur als Entwurfsgrafik oder als Modell. Mit Fachsprache über Bilder zu schreiben,
+  > lernst du in beiden Kursarten; im Leistungskurs wird sie differenzierter, und du arbeitest
+  > kunstwissenschaftlich.
   > Kurz zusammengefasst: Analyse und Gestaltung zählen gleich viel, die vier Halbjahre führen dich
   > von den Bildkünsten über Medien und Umwelt bis zur Gegenwart, und im Leistungskurs arbeitest du
   > tiefer, theoretischer und eigenständiger.

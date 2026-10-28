@@ -94,7 +94,11 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Planer mit Titelbildern im Ergebnis, ohne Film-Links (Entscheidungen 46, 48); Räume anderer Fächer eintragbar (48). Beim Testen im Browser vorher `localStorage.removeItem('tdot-raum')`.
 - 29.10.2026: Deutsch 0.8 und Kunst 0.5 ohne „als Tutorium sechs“ (Entscheidung 50), **Deutsch 5:28, Kunst 5:32 min**.
 - 29.10.2026: Film Geschichte fertig (Drehbuch 0.2, Leitfigur D, **5:43 min gemessen**, Entscheidung 51).
-  Offen: Filme Mathematik, Biologie, Chemie – je Fach Faktenblatt →
+- 29.10.2026: GK/LK-Aussagen aller Filme geprüft und korrigiert (Entscheidung 53, `drehbuch/pruefung_gk_lk.md`):
+  **Deutsch 5:32, Kunst 5:37, PoWi 5:45, Geschichte 5:47 min**. Regel: Was beide Kursarten tun, ist kein LK-Merkmal;
+  Vergleichstafeln ohne „–“ und „grundlegend“ beim GK. Mathematik: Faktenblatt 1.1, Drehbuch 0.3 wartet auf Freigabe.
+- Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
+  Offen: Filme Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.
 
 ## Veröffentlichen

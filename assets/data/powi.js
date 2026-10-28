@@ -4,7 +4,7 @@ window.FILMS["powi"] = {
  "id": "powi",
  "title": "Leistungskurs Politik und Wirtschaft",
  "accent": "#c8d530",
- "total": 338.11,
+ "total": 344.56,
  "credits": [
   "Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
@@ -475,76 +475,93 @@ window.FILMS["powi"] = {
    "n": 7,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 42.26,
-   "speechEnd": 39.26,
+   "duration": 48.71,
+   "speechEnd": 45.71,
    "sentences": [
     {
-     "text": "Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst tiefer: Du arbeitest mit Theorien, etwa mit Theorien der Demokratie, mit Erklärungen, wie Kriege entstehen und Frieden gesichert wird, oder mit der Frage, warum Länder überhaupt miteinander Handel treiben.",
-     "audio": "media/powi/audio/s07_1_35789a01.mp3",
-     "dur": 18,
+     "text": "Die Themenfelder sind dieselben wie im Grundkurs, und mit Modellen und Theorien arbeitest du in beiden Kursarten, etwa mit unterschiedlichen Ideen, wie der Staat die Wirtschaft steuern soll.",
+     "audio": "media/powi/audio/s07_1_5f0743ce.mp3",
+     "dur": 10.88,
      "estimated": false,
      "start": 0.6
     },
     {
+     "text": "Im Leistungskurs kommen weitere Theorien hinzu, etwa Theorien der Demokratie, Erklärungen, wie Kriege entstehen und Frieden gesichert wird, oder die Frage, warum Länder überhaupt miteinander Handel treiben.",
+     "audio": "media/powi/audio/s07_2_8712646f.mp3",
+     "dur": 13.04,
+     "estimated": false,
+     "start": 11.93
+    },
+    {
      "text": "Außerdem lernst du, in kleinen Forschungsprojekten selbst nach Antworten zu suchen.",
-     "audio": "media/powi/audio/s07_2_fde67c89.mp3",
+     "audio": "media/powi/audio/s07_3_fde67c89.mp3",
      "dur": 4.72,
      "estimated": false,
-     "start": 19.05
+     "start": 25.42
     },
     {
      "text": "Kurz zusammengefasst: Die vier Halbjahre führen dich von der Demokratie über die Wirtschaft bis in die Welt und nach Europa, Politik und Wirtschaft gehören dabei gleichwertig zusammen, und im Leistungskurs arbeitest du theoretischer und eigenständiger.",
-     "audio": "media/powi/audio/s07_3_9a1bba41.mp3",
-     "dur": 15.04,
+     "audio": "media/powi/audio/s07_4_9a1bba41.mp3",
+     "dur": 15.12,
      "estimated": false,
-     "start": 24.22
+     "start": 30.59
     }
    ],
    "cues": [
     {
-     "text": "Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst tiefer:",
+     "text": "Die Themenfelder sind dieselben wie im Grundkurs,",
      "start": 0.6,
-     "end": 6.138
+     "end": 3.406
     },
     {
-     "text": "Du arbeitest mit Theorien, etwa mit Theorien der Demokratie,",
-     "start": 6.138,
-     "end": 9.915
+     "text": "und mit Modellen und Theorien arbeitest du in beiden Kursarten,",
+     "start": 3.406,
+     "end": 7.013
     },
     {
-     "text": "mit Erklärungen, wie Kriege entstehen und Frieden gesichert wird,",
-     "start": 9.915,
-     "end": 14.006
+     "text": "etwa mit unterschiedlichen Ideen, wie der Staat die Wirtschaft steuern soll.",
+     "start": 7.013,
+     "end": 11.365
     },
     {
-     "text": "oder mit der Frage, warum Länder überhaupt miteinander Handel treiben.",
-     "start": 14.006,
-     "end": 18.411
+     "text": "Im Leistungskurs kommen weitere Theorien hinzu, etwa Theorien der Demokratie, Erklärungen,",
+     "start": 11.93,
+     "end": 17.627
+    },
+    {
+     "text": "wie Kriege entstehen und Frieden gesichert wird, oder die Frage,",
+     "start": 17.627,
+     "end": 21.678
+    },
+    {
+     "text": "warum Länder überhaupt miteinander Handel treiben.",
+     "start": 21.678,
+     "end": 24.843
     },
     {
      "text": "Außerdem lernst du, in kleinen Forschungsprojekten selbst nach Antworten zu suchen.",
-     "start": 19.05,
-     "end": 23.77
+     "start": 25.42,
+     "end": 30.14
     },
     {
      "text": "Kurz zusammengefasst: Die vier Halbjahre führen dich von der Demokratie",
-     "start": 24.22,
-     "end": 28.457
+     "start": 30.59,
+     "end": 34.85
     },
     {
      "text": "über die Wirtschaft bis in die Welt und nach Europa,",
-     "start": 28.457,
-     "end": 31.561
+     "start": 34.85,
+     "end": 37.97
     },
     {
      "text": "Politik und Wirtschaft gehören dabei gleichwertig zusammen,",
-     "start": 31.561,
-     "end": 35.082
+     "start": 37.97,
+     "end": 41.51
     },
     {
      "text": "und im Leistungskurs arbeitest du theoretischer und eigenständiger.",
-     "start": 35.082,
-     "end": 39.081
+     "start": 41.51,
+     "end": 45.53
     }
    ],
    "image": {
@@ -564,21 +581,21 @@ window.FILMS["powi"] = {
     "items": [
      {
       "label": "Themen",
-      "a": "dieselben",
-      "b": "vertieft",
-      "t": 3.055
+      "a": "dieselben Themenfelder",
+      "b": "vertiefter",
+      "t": 1.86
      },
      {
-      "label": "Theorie",
-      "a": "–",
-      "b": "Demokratie, Krieg und Frieden, Welthandel",
-      "t": 7.271
+      "label": "Theorien",
+      "a": "z. B. Keynes und Neoklassik",
+      "b": "dazu Demokratie, Krieg und Frieden, Welthandel",
+      "t": 13.449
      },
      {
       "label": "Arbeitsweise",
-      "a": "grundlegend",
-      "b": "eigene kleine Forschungsprojekte",
-      "t": 20.813
+      "a": "Fachmethoden, Debatten, Planspiele",
+      "b": "dazu eigene kleine Forschungsprojekte",
+      "t": 27.183
      }
     ]
    },
@@ -589,7 +606,7 @@ window.FILMS["powi"] = {
      "Politik und Wirtschaft gehören zusammen",
      "Leistungskurs: theoretischer und eigenständiger"
     ],
-    "t": 24.22
+    "t": 30.59
    },
    "start": 145.55
   },
@@ -671,7 +688,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 190.81
+   "start": 197.26
   },
   {
    "n": 9,
@@ -760,7 +777,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 215.79
+   "start": 222.24
   },
   {
    "n": 10,
@@ -855,7 +872,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 241.13
+   "start": 247.58
   },
   {
    "n": 11,
@@ -947,7 +964,7 @@ window.FILMS["powi"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 264.03
+   "start": 270.48
   },
   {
    "n": 12,
@@ -1020,7 +1037,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 289.61
+   "start": 296.06
   },
   {
    "n": 13,
@@ -1058,7 +1075,7 @@ window.FILMS["powi"] = {
     "src": "media/powi/img/p13.jpg",
     "motion": "zoom-out"
    },
-   "start": 306.86
+   "start": 313.31
   },
   {
    "n": 14,
@@ -1111,7 +1128,7 @@ window.FILMS["powi"] = {
     ]
    },
    "logo": true,
-   "start": 321.42
+   "start": 327.87
   }
  ]
 };

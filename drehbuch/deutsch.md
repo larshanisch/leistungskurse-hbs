@@ -1,6 +1,9 @@
 # Drehbuch — Leistungskurs Deutsch
 
-Version 0.8 · 29.10.2026 (freigegeben)
+Version 0.9 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.8: Szene zum Unterschied GK/LK nach der Prüfung `drehbuch/pruefung_gk_lk.md`: Was beide Kursarten tun, wird nicht mehr als LK-Merkmal dargestellt; die Vergleichstafel nennt für den GK, was er tut, statt „–“ oder „grundlegend“ (Nutzer 29.10.2026, Entscheidung 53).
+
 
 Änderung gegenüber 0.7: Szene 2 ohne „als Tutorium sechs“: Laut den Tutoriumsblättern der Schule ist dieses Fach nie Tutorium (Nutzer 29.10.2026, Entscheidung 50).
  · Vorfassung: `drehbuch/archiv/deutsch_v0.3.md`
@@ -170,15 +173,16 @@ Inhaltsangabe, damit jede Porträtkarte genau so lange steht, wie über das Werk
 
 - **Bild:** F — SIE liest konzentriert einen Text und schreibt Randnotizen, Nahaufnahme.
 - **Bewegung:** Schwenk von links nach rechts.
-- **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themen: gleich | vertieft · dazu: — |
-  theoretische Texte (Schiller, Novalis, Nietzsche, Freud) · Anforderung: grundlegend | erhöht,
-  mehr eigenes Deuten und Urteilen
+- **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themen und Pflichtlektüren: dieselben | vertiefter ·
+  Texte: literarische und pragmatische | dazu theoretische Texte (Schiller, Novalis, Nietzsche, Freud) ·
+  Deuten und Urteilen: begründet | selbstständiger, mit Theorie
 - **MERKKARTE** (zum letzten Satz): „4 Halbjahre, 4 Themen“ · „Pflichtlektüren für ganz Hessen“ ·
   „Leistungskurs: tiefer und theoretischer“
 - **Sprechtext:**
   > Im Leistungskurs sind die Themen dieselben wie im Grundkurs, aber du gehst tiefer. Du liest
-  > zusätzlich theoretische Texte, etwa von Schiller, Novalis, Nietzsche oder Freud, und es geht
-  > vor allem darum, Texte selbstständig zu deuten und begründet zu urteilen.
+  > zusätzlich theoretische Texte, etwa von Schiller, Novalis, Nietzsche oder Freud. Texte deuten und
+  > beurteilen musst du in beiden Kursarten; im Leistungskurs tust du das aber selbstständiger und mit mehr
+  > theoretischem Hintergrund.
   > Kurz zusammengefasst: In vier Halbjahren erwarten dich vier Themen, die Pflichtlektüren gelten für ganz
   > Hessen, und im Leistungskurs arbeitest du tiefer und theoretischer.
 - **Beleg:** FB-D 1 (KCGO S. 16; LK-Zusätze Erlass 2028 Q1.1 und Q3.1 „zum Beispiel“; KMK:
