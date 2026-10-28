@@ -573,7 +573,7 @@ window.FILMS["mathematik"] = {
      {
       "label": "Inhalte",
       "a": "Analysis, Geometrie, Stochastik",
-      "b": "dazu Rotationskörper, logistisches Wachstum, Normalverteilung, Hypothesentests",
+      "b": "dazu Rotations­körper, logistisches Wachstum, Normal­verteilung, Hypothesen­tests",
       "t": 3.762
      },
      {

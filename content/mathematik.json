@@ -72,7 +72,7 @@
       "image": { "src": "m07.jpg", "motion": "zoom-in", "focus": [0.6, 0.4] },
       "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
         { "at": "weiter", "label": "Themenfelder", "a": "9", "b": "10" },
-        { "at": "Volumen", "label": "Inhalte", "a": "Analysis, Geometrie, Stochastik", "b": "dazu Rotationskörper, logistisches Wachstum, Normalverteilung, Hypothesentests" },
+        { "at": "Volumen", "label": "Inhalte", "a": "Analysis, Geometrie, Stochastik", "b": "dazu Rotations­körper, logistisches Wachstum, Normal­verteilung, Hypothesen­tests" },
         { "at": "Begründen", "label": "Argumentieren", "a": "begründen", "b": "dazu exemplarische Beweise" }
       ] },
       "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [

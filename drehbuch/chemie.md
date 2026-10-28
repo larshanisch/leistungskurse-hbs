@@ -128,8 +128,8 @@ Wie im Drehbuch PoWi. **Beleg** FB-C = `quellen/faktenblatt_chemie.md`, FB-A = `
 
 ### Szene 7 · Was den Leistungskurs ausmacht
 
-- **Bild:** F — E an der Tafel, auf der ein sechseckiger Ring als Kugelmodell (Benzol, ohne Atomzeichen) und
-  daneben eine Titrationskurve gezeichnet sind (ohne Zahlen und Buchstaben).
+- **Bild:** F — E an der Tafel, auf der ein sechseckiger Ring als Kugelmodell (Benzol, ohne Atomzeichen) gezeichnet
+  ist (ohne Zahlen und Buchstaben); die Titrationskurve gelang Gemini nicht und wurde wegretuschiert.
 - **Bewegung:** Zoom ein.
 - **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themenfelder: 9 | dieselben 9 · Inhalte: Stoffgruppen,
   Natur- und Kunststoffe, Gleichgewichte, Energie | dazu Reaktionsmechanismen, Benzol, Haber-Bosch,
@@ -266,4 +266,4 @@ Wie im Drehbuch PoWi. **Beleg** FB-C = `quellen/faktenblatt_chemie.md`, FB-A = `
 - [x] Keine Besonderheiten (Nutzer 29.10.2026).
 - [x] **Szene 6:** Experimente „eher selten“, Schwerpunkt Material (Nutzer 29.10.2026).
 - [x] **Szene 3:** „meist kein Tutorium“ (Nutzer 29.10.2026).
-- [ ] Länge: Sprechtext 4 927 Zeichen (gezählt 29.10.2026; Biologie 4 792 Zeichen = 5:45 min gemessen) → etwa 5:50 min.
+- [x] Länge: 4 850 Zeichen gesprochen, **5:45 min gemessen** (29.10.2026).

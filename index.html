@@ -145,6 +145,7 @@
   .grp > .k small { font-weight: 700; letter-spacing: 0.02em; text-transform: none; }
   .pf { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; align-content: start; gap: 2px 0.4em; }
   .pf b, .pf em { grid-column: 1 / -1; min-width: 0; hyphens: auto; }
+  .pf.open { outline: 1.5px dashed rgba(255,255,255,0.32); outline-offset: 3px; border-radius: 8px; }
   .pf em { font-style: normal; font-size: 13px; color: var(--ink-soft); line-height: 1.25; }
   .pf i { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-style: normal; font-weight: 900; font-size: 14px;
     border: 1px solid var(--line); color: var(--ink-soft); }
@@ -399,6 +400,7 @@
 <script src="assets/data/geschichte.js"></script>
 <script src="assets/data/mathematik.js"></script>
 <script src="assets/data/biologie.js"></script>
+<script src="assets/data/chemie.js"></script>
 <script>
   (function () {
     // Aufgabenfelder nach KMK-Vereinbarung, Kursangebot nach der Übersicht der Schule (Entscheidung 37)
@@ -423,7 +425,8 @@
                     what: 'Analysis, Geometrie und Stochastik – verstehen, modellieren und sauber begründen.' },
       biologie:   { name: 'Biologie', field: 3, kind: 'nw', img: 'media/biologie/img/b01.jpg', pos: '75% center',
                     what: 'Gene, Evolution, Nervenzellen und Ökosysteme – Fragen mit Daten und Versuchen untersuchen.' },
-      chemie:     { name: 'Chemie', field: 3, kind: 'nw' }
+      chemie:     { name: 'Chemie', field: 3, kind: 'nw', img: 'media/chemie/img/c01.jpg', pos: '78% center',
+                    what: 'Stoffe, Reaktionen und Gleichgewichte – was du siehst, mit Teilchen erklären.' }
     };
     // Kombinationen nach den Blättern „Mögliche Prüfungsfachkombinationen im Abitur (nach Tutorien)“ der HBS
     // (Entscheidung 40): 1. LK = Tutoriumskurs, dazu die passenden 2. LKs
@@ -575,7 +578,7 @@
       return { need: need, free: free, notes: notes, third: third };
     }
 
-    function pf(n, kind, name, more) { return '<div class="pf"><i>' + n + '</i><small>' + kind + '</small><b>' + esc(name) + '</b>' + (more ? '<em>' + esc(more) + '</em>' : '') + '</div>'; }
+    function pf(n, kind, name, more) { return '<div class="pf' + (n >= 3 ? ' open' : '') + '"><i>' + n + '</i><small>' + kind + '</small><b>' + esc(name) + '</b>' + (more ? '<em>' + esc(more) + '</em>' : '') + '</div>'; }
 
     function renderPlan() {
       ['chips1', 'chips2'].forEach(function (el, i) {
@@ -604,7 +607,7 @@
           '<div class="grp m"><span class="k">Mündlich</span>' +
             pf(4, 'GK', 'Prüfung') + pf(5, 'GK', 'Prüfung', 'oder Präsentation') + '</div>' +
         '</div>' +
-        '<div class="spread"><span class="k">In 3 bis 5 gehören – Reihenfolge frei</span><div class="need">' + chipsHtml + '</div></div>' +
+        '<div class="spread"><span class="k">Auf 3 bis 5 verteilst du – Reihenfolge frei</span><div class="need">' + chipsHtml + '</div></div>' +
         '<ul>' + c.notes.map(function (n) { return '<li>' + n + '</li>'; }).join('') + '</ul>' +
         '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Das Angebot an Leistungskursen ' +
         'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 9 Abs. 6, § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';

@@ -1,0 +1,153 @@
+{
+  "id": "chemie",
+  "title": "Leistungskurs Chemie",
+  "accent": "#c8d530",
+  "script": "drehbuch/chemie.md",
+  "voice": {
+    "voice_id": "TIKjTeWOFujJEvXK1qIU",
+    "name": "Theo Teacher – Clear & Trustworthy",
+    "model": "eleven_v4",
+    "format": "mp3_44100_64"
+  },
+  "scenes": [
+    {
+      "n": 1,
+      "logo": true,
+      "title": { "main": "Leistungskurs Chemie", "sub": "Gymnasiale Oberstufe" },
+      "image": { "src": "c01.jpg", "motion": "zoom-in", "focus": [0.68, 0.45] }
+    },
+    {
+      "n": 2,
+      "chapter": "Der Rahmen",
+      "image": { "src": "c02.jpg", "motion": "pan-right" },
+      "panel": { "type": "stats", "items": [
+        { "at": "fünf Punkte", "value": "5", "label": "Punkte am Ende der Einführungsphase", "prefix": "mind.", "sub": "besser deutlich mehr – die Anforderungen steigen" },
+        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden" },
+        { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
+      ] }
+    },
+    {
+      "n": 3,
+      "image": { "src": "c03.jpg", "motion": "zoom-out" },
+      "panel": { "type": "combo", "title": "Chemie passt zu …", "items": [
+        { "at": "Englisch", "figure": "e", "a": "Englisch", "b": "Chemie", "ok": true },
+        { "at": "Biologie", "a": "Biologie oder Mathematik", "b": "Chemie", "ok": true },
+        { "at": "Politik und Wirtschaft", "a": "Politik und Wirtschaft", "b": "Chemie", "ok": true }
+      ] }
+    },
+    {
+      "n": 4,
+      "chapter": "Was du lernst",
+      "image": { "src": "c04.jpg", "motion": "zoom-in", "focus": [0.3, 0.45] },
+      "band": { "type": "timeline", "items": [
+        { "at": "organischen Stoffe", "label": "Q1", "text": "Stoffgruppen" },
+        { "at": "Naturstoffe", "label": "Q2", "text": "Naturstoffe und Kunststoffe" },
+        { "at": "Gleichgewichte", "label": "Q3", "text": "Chemisches Gleichgewicht" },
+        { "at": "Energie und Nachhaltigkeit", "label": "Q4", "text": "Energie und Nachhaltigkeit" }
+      ] },
+      "panel": { "type": "stats", "items": [
+        { "at": "verbindlichen Themenfelder", "value": "9", "label": "verbindliche Themenfelder", "sub": "in Grund- und Leistungskurs dieselben" }
+      ] }
+    },
+    {
+      "n": 5,
+      "image": { "src": "c05.jpg", "motion": "pan-right" },
+      "panel": { "type": "list", "title": "Was du damit machst", "items": [
+        { "at": "Traubenzucker", "text": "Traubenzucker nachweisen" },
+        { "at": "Titration", "text": "Säure durch Titration bestimmen" },
+        { "at": "wiederverwerten", "text": "Kunststoff-Recycling vergleichen" }
+      ] }
+    },
+    {
+      "n": 6,
+      "image": { "src": "c06.jpg", "motion": "zoom-in", "focus": [0.55, 0.55] },
+      "panel": { "type": "list", "title": "Zwei Ebenen", "items": [
+        { "at": "experimentierst", "text": "auch selbst experimentieren" },
+        { "at": "Versuchsbeschreibungen", "text": "Versuche, Messwerte, Diagramme auswerten" },
+        { "at": "Teilchen", "text": "beobachten → mit Teilchen erklären" }
+      ] }
+    },
+    {
+      "n": 7,
+      "image": { "src": "c07.jpg", "motion": "zoom-in", "focus": [0.35, 0.4] },
+      "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
+        { "at": "weiter", "label": "Themenfelder", "a": "9", "b": "dieselben 9" },
+        { "at": "Haber-Bosch", "label": "Inhalte", "a": "Stoffgruppen, Natur- und Kunststoffe, Gleich­gewichte, Energie", "b": "dazu Reaktions­mechanismen, Benzol, Haber-Bosch, Chromatografie, Entropie" },
+        { "at": "anspruchsvoller", "label": "Rechnen", "a": "Gleichgewicht vereinfacht, pH starker Säuren", "b": "dazu erweitertes Gleichgewicht, pH schwacher Säuren, Titrationskurven" }
+      ] },
+      "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
+        "Stoffgruppen, Natur- und Kunststoffe, Gleichgewichte, Energie",
+        "Beobachtungen mit Teilchen erklären",
+        "Leistungskurs: tiefer, mehr Rechnen"
+      ] }
+    },
+    {
+      "n": 8,
+      "chapter": "Wie gearbeitet wird",
+      "image": { "src": "c08.jpg", "motion": "pan-left" },
+      "panel": { "type": "list", "title": "Begründet urteilen", "items": [
+        { "at": "Recycling", "text": "Recycling: Lohnt es sich?" },
+        { "at": "nachhaltig", "text": "Wie nachhaltig ist ein Produkt?" },
+        { "at": "Blickwinkeln", "text": "aus mehreren Blickwinkeln, mit Belegen" }
+      ] }
+    },
+    {
+      "n": 9,
+      "image": { "src": "c09.jpg", "motion": "zoom-out" },
+      "panel": { "type": "stats", "items": [
+        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1" },
+        { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur", "sub": "wenn die Lehrkraft es festlegt" },
+        { "at": "dritten Halbjahr", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
+      ] }
+    },
+    {
+      "n": 10,
+      "chapter": "Bewertung und Abitur",
+      "image": { "src": "c10.jpg", "motion": "zoom-in", "focus": [0.45, 0.55], "dim": 0.3 },
+      "panel": { "type": "list", "title": "So wird bewertet", "items": [
+        { "at": "Bewertungseinheiten", "text": "Bewertungseinheiten je Teilaufgabe" },
+        { "at": "fünfundvierzig", "text": "ab 45 % der Einheiten: 5 Punkte" },
+        { "at": "Material", "text": "Material genau auswerten" }
+      ], "notes": [
+        { "at": "Gehäufte", "text": "gehäufte Fehler in Sprache oder Form: bis zu 2 Punkte Abzug" }
+      ] }
+    },
+    {
+      "n": 11,
+      "corner": "Stand Abitur 2028",
+      "image": { "src": "c11.jpg", "motion": "zoom-in", "focus": [0.5, 0.55] },
+      "panel": { "type": "stats", "items": [
+        { "at": "vier Aufgabenvorschläge", "value": "3 aus 4", "label": "Aufgabenvorschläge wählst du aus" },
+        { "at": "dreihundert", "value": "300", "label": "Minuten Bearbeitungszeit" },
+        { "at": "hundertzwanzig", "value": "120", "label": "Bewertungseinheiten im Leistungskurs" }
+      ], "notes": [
+        { "at": "Material", "text": "jede Aufgabe mit Material: Diagramme, Tabellen, Versuche" },
+        { "at": "Formelsammlung", "text": "mit Taschenrechner und Formelsammlung" }
+      ] }
+    },
+    {
+      "n": 12,
+      "chapter": "Die Herausforderungen",
+      "image": { "src": "c12.jpg", "motion": "pan-up" },
+      "panel": { "type": "list", "check": true, "title": "Was du mitbringen solltest", "items": [
+        { "at": "Teilchen", "text": "Dinge bis zu den Teilchen verstehen wollen" },
+        { "at": "Sorgfalt", "text": "Sorgfalt bei Formeln und Gleichungen" },
+        { "at": "Rechnungen", "text": "keine Scheu vor Rechnungen" },
+        { "at": "Geduld", "text": "Geduld – vieles baut aufeinander auf" }
+      ] }
+    },
+    {
+      "n": 13,
+      "image": { "src": "c13.jpg", "motion": "zoom-out" }
+    },
+    {
+      "n": 14,
+      "logo": true,
+      "image": { "src": "c14.jpg", "motion": "zoom-out", "dim": 0.45 },
+      "endCard": {
+        "lines": ["Stand: Oktober 2026",
+          "Grundlagen: Oberstufen- und Abiturverordnung (OAVO), Kerncurriculum Chemie, Abiturerlass 2028 des Landes Hessen"]
+      }
+    }
+  ]
+}

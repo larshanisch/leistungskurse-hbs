@@ -112,9 +112,11 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Kunst 5:49 min**. Fortschrittsbalken oben im Player (Entscheidung 61). Drehbuch Biologie 0.2 freigegeben (Leitfigur D,
   Entscheidung 62).
 - 29.10.2026: Film Biologie fertig (Leitfigur D, **5:45 min gemessen**, Entscheidung 63). Vorlagebilder mit einer anderen
-  Leitfigur nie als Raumvorlage nehmen – die Figur kommt mit. Offen: Film Chemie.
+  Leitfigur nie als Raumvorlage nehmen – die Figur kommt mit.
+- 29.10.2026: Film Chemie fertig (neue Leitfigur E, **5:45 min gemessen**, Entscheidung 65). Damit alle acht Filme.
+  Vergleichstafeln: lange Wörter mit weicher Trennstelle U+00AD in content (Entscheidung 66).
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
-  Offen: Film Chemie – Faktenblatt →
+  Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.
 
 ## Veröffentlichen

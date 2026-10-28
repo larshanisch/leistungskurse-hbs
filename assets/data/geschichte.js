@@ -631,7 +631,7 @@ window.FILMS["geschichte"] = {
      {
       "label": "Deutungen",
       "a": "vergleichen und erörtern",
-      "b": "dazu Geschichtsbilder, aktuelle Kontroversen",
+      "b": "dazu Geschichts­bilder, aktuelle Kontro­versen",
       "t": 10.239
      },
      {

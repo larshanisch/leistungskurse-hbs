@@ -560,14 +560,14 @@ window.FILMS["biologie"] = {
      },
      {
       "label": "Inhalte",
-      "a": "Gene, Evolution, Nervenzellen, Ökosysteme, Stoffwechsel",
+      "a": "Gene, Evolution, Nerven­zellen, Öko­systeme, Stoff­wechsel",
       "b": "dazu Gentechnik mit Vektoren, Krebs, Evolution des Menschen, Hormone",
       "t": 4.782
      },
      {
       "label": "Arbeiten",
       "a": "Experimente und Material auswerten",
-      "b": "selbstständiger, komplexer, mehr Fachsprache",
+      "b": "selbstständiger, komplexer, mehr Fach­sprache",
       "t": 21.785
      }
     ]
@@ -575,7 +575,7 @@ window.FILMS["biologie"] = {
    "takeaways": {
     "title": "Das Wichtigste aus Kapitel 2",
     "items": [
-     "Gene, Evolution, Nervenzellen, Ökosysteme, Stoffwechsel",
+     "Gene, Evolution, Nerven­zellen, Öko­systeme, Stoff­wechsel",
      "Fragen mit Experimenten und Daten untersuchen",
      "Leistungskurs: tiefer und selbstständiger"
     ],

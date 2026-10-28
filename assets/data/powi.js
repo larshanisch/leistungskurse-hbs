@@ -614,13 +614,13 @@ window.FILMS["powi"] = {
      {
       "label": "Theorien",
       "a": "z. B. Keynes und Neoklassik",
-      "b": "dazu Demokratie, Krieg und Frieden, Welthandel",
+      "b": "dazu Demokratie, Krieg und Frieden, Welt­handel",
       "t": 13.449
      },
      {
       "label": "Arbeitsweise",
       "a": "Fachmethoden, Debatten, Planspiele",
-      "b": "dazu eigene kleine Forschungsprojekte",
+      "b": "dazu eigene kleine Forschungs­projekte",
       "t": 27.183
      }
     ]

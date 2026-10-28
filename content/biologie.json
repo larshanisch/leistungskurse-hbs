@@ -72,11 +72,11 @@
       "image": { "src": "b07.jpg", "motion": "zoom-in", "focus": [0.4, 0.4] },
       "panel": { "type": "compare", "head": ["Grundkurs", "Leistungskurs"], "items": [
         { "at": "weiter", "label": "Themenfelder", "a": "8", "b": "dieselben 8" },
-        { "at": "Plasmiden", "label": "Inhalte", "a": "Gene, Evolution, Nervenzellen, Ökosysteme, Stoffwechsel", "b": "dazu Gentechnik mit Vektoren, Krebs, Evolution des Menschen, Hormone" },
-        { "at": "selbstständiger", "label": "Arbeiten", "a": "Experimente und Material auswerten", "b": "selbstständiger, komplexer, mehr Fachsprache" }
+        { "at": "Plasmiden", "label": "Inhalte", "a": "Gene, Evolution, Nerven­zellen, Öko­systeme, Stoff­wechsel", "b": "dazu Gentechnik mit Vektoren, Krebs, Evolution des Menschen, Hormone" },
+        { "at": "selbstständiger", "label": "Arbeiten", "a": "Experimente und Material auswerten", "b": "selbstständiger, komplexer, mehr Fach­sprache" }
       ] },
       "takeaways": { "at": "Kurz zusammengefasst", "title": "Das Wichtigste aus Kapitel 2", "items": [
-        "Gene, Evolution, Nervenzellen, Ökosysteme, Stoffwechsel",
+        "Gene, Evolution, Nerven­zellen, Öko­systeme, Stoff­wechsel",
         "Fragen mit Experimenten und Daten untersuchen",
         "Leistungskurs: tiefer und selbstständiger"
       ] }

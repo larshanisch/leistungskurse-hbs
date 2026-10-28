@@ -618,13 +618,13 @@ window.FILMS["kunst"] = {
      {
       "label": "Theorie und Gestalten",
       "a": "Ideen, Skizzen, eigene Werke",
-      "b": "dazu Farb- und Gestaltungstheorien, Varianten, Entwurfsgrafik oder Modell",
+      "b": "dazu Farb- und Gestaltungs­theorien, Varianten, Entwurfs­grafik oder Modell",
       "t": 7.902
      },
      {
       "label": "Fachsprache",
       "a": "sicher",
-      "b": "differenziert, kunstwissenschaftlich",
+      "b": "differenziert, kunst­wissenschaftlich",
       "t": 16.557
      }
     ]

@@ -19,7 +19,7 @@
   const COUNT_UP = 0.9;      // Dauer des Hochzählens einer Zahl
   const RING_GROW = 1.3;     // Dauer, bis ein Ringsegment voll ist
   const IDLE_MS = 3000;      // Steuerleiste blendet sich aus
-  const FIGURES = { sie: 'assets/img/figur_sie.jpg', er: 'assets/img/figur_er.jpg', c: 'assets/img/figur_c.jpg', d: 'assets/img/figur_d.jpg' };
+  const FIGURES = { sie: 'assets/img/figur_sie.jpg', er: 'assets/img/figur_er.jpg', c: 'assets/img/figur_c.jpg', d: 'assets/img/figur_d.jpg', e: 'assets/img/figur_e.jpg' };
 
   const film = (window.FILMS || {})[fachId];
   const $ = (id) => document.getElementById(id);
