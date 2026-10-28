@@ -1,11 +1,18 @@
-// Kleiner Webserver für die Vorschau: node tools/serve.mjs [port]
+// Kleiner Webserver für die Vorschau: node tools/serve.mjs [port] [KB/s]
+// Mit KB/s drosselt er jede Antwort auf diese Geschwindigkeit (Test für langsames Schulnetz).
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
+import { Transform } from 'node:stream';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PORT = Number(process.argv[2]) || 8317;
+const RATE = Number(process.argv[3]) || 0;   // KB/s je Antwort, 0 = ungedrosselt
+const slow = () => new Transform({
+  transform(chunk, enc, done) { setTimeout(() => done(null, chunk), (chunk.length / 1024 / RATE) * 1000); }
+});
+const send = (stream, res) => (RATE ? stream.pipe(slow()).pipe(res) : stream.pipe(res));
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8',
   '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.png': 'image/png', '.mp3': 'audio/mpeg' };
 
@@ -20,9 +27,9 @@ http.createServer((req, res) => {
     if (range) {
       const start = range[1] ? Number(range[1]) : 0, end = range[2] ? Number(range[2]) : st.size - 1;
       res.writeHead(206, { 'Content-Type': type, 'Content-Range': `bytes ${start}-${end}/${st.size}`, 'Accept-Ranges': 'bytes', 'Content-Length': end - start + 1 });
-      return fs.createReadStream(file, { start, end }).pipe(res);
+      return send(fs.createReadStream(file, { start, end, highWaterMark: 16384 }), res);
     }
     res.writeHead(200, { 'Content-Type': type, 'Content-Length': st.size, 'Accept-Ranges': 'bytes' });
-    fs.createReadStream(file).pipe(res);
+    send(fs.createReadStream(file, { highWaterMark: 16384 }), res);
   });
 }).listen(PORT, () => console.log(`Vorschau: http://localhost:${PORT}/`));

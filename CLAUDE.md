@@ -72,7 +72,11 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   dann Übersicht und Filme im Rahmen; Esc verlässt das Vollbild, ein Knopf holt es zurück.
 - 29.10.2026: QR-Codes (`assets/img/qr_start.svg`, `qr_tafel.svg`, Paket qrcode 1.5.4, nur im Scratchpad
   installiert), Druckvorlage `qr.html` und `qr_aushang.pdf` (A4, eine Seite). Alle Seiten noindex (Entscheidung 34).
-  Offen: Kiosk und Tafel am echten Gerät mit Ton testen; QR-Codes mit dem Handy scannen (kein Decoder hier).
+- 29.10.2026: Laden für langsames Schulnetz (Entscheidung 35): Ladeanzeige beim Filmstart (erste
+  Minute vorladen), Bilder werden vorausgeladen; Tafel und Kiosk speichern alle Filme per Service
+  Worker (`sw.js`, `assets/js/offline.js`). Test: `vorschau-langsam` (Port 8318, 20 KB/s je Datei).
+  Offen: Kiosk und Tafel am echten Gerät mit Ton testen; QR-Codes mit dem Handy scannen (kein Decoder hier);
+  kurzer Link; Englisch-Film ohne Vorwissen aus dem Deutsch-Film.
 
 ## Veröffentlichen
 

@@ -335,7 +335,7 @@
   }
   function stopAudio() { if (audio) audio.pause(); audio = null; audioFor = null; }
   // Die nächsten Aufnahmen schon laden, solange die aktuelle läuft
-  const AHEAD = 3;
+  const AHEAD = 5;
   function preloadFrom(i) { for (let k = i; k < Math.min(sentences.length, i + AHEAD); k++) getAudio(sentences[k].audio); }
 
   // Ist eine Aufnahme noch nicht abspielbereit, bleibt die Uhr stehen, statt ohne Ton
@@ -442,6 +442,7 @@
     const tt = Math.min(t, total - 0.001);
     const sc = sceneAt(tt);
     renderImages(tt, sc);
+    if (playing) preloadImagesAfter(tt);
     renderOverlays(tt, sc);
     const hold = renderAudio(tt);
     if (hold !== null && playing) { base = hold; startedAt = now(); }
@@ -507,7 +508,67 @@
   }
   ['mousemove', 'touchstart', 'click'].forEach((ev) => stage.addEventListener(ev, wake, { passive: true }));
 
+  // ---- Vorladen -------------------------------------------------------------------------------
+  // Beim Öffnen lädt der Player die erste Minute (Bilder und Ton). „Film starten“ wartet darauf und
+  // zeigt den Fortschritt – bei langsamem Netz wartet man einmal am Anfang statt mittendrin.
+  const WARM = 60;          // so viele Sekunden Film sollen vor dem Start geladen sein
+  const WARM_MAX = 20;      // danach bietet der Knopf „Trotzdem starten“ an
+  const SHOW_AFTER = 400;   // ms: lädt es schneller, erscheint gar keine Anzeige
+  const imgCache = new Map();
+  function loadImage(src) {
+    if (!imgCache.has(src)) imgCache.set(src, new Promise((res) => { const im = new Image(); im.onload = im.onerror = () => res(); im.src = src; }));
+    return imgCache.get(src);
+  }
+  function audioReady(a) {
+    return new Promise((res) => {
+      if (a.readyState >= 3) { res(); return; }
+      ['canplay', 'canplaythrough', 'error'].forEach((ev) => a.addEventListener(ev, () => res(), { once: true }));
+    });
+  }
+  let warmDone = false, warmP = 0;
+  function warmUp(from) {
+    const tEnd = from + WARM, jobs = [];
+    shots.forEach((s) => { if (s.to > from && s.from < tEnd) { jobs.push(loadImage(s.src)); if (s.bg) jobs.push(loadImage(s.bg)); } });
+    sentences.forEach((s) => { if (s.abs + s.dur > from && s.abs < tEnd) jobs.push(audioReady(getAudio(s.audio))); });
+    let n = 0;
+    jobs.forEach((p) => p.then(() => { n++; warmP = n / jobs.length; showLoad(); }));
+    return Promise.all(jobs).then(() => { warmDone = true; showLoad(); });
+  }
+  function showLoad() {
+    const box = $('loadInfo');
+    if (warmDone) { box.hidden = true; return; }
+    box.querySelector('i').style.width = Math.round(100 * warmP) + '%';
+    box.querySelector('span').textContent = 'Film wird geladen … ' + Math.round(100 * warmP) + ' %';
+  }
+  // Bilder der nächsten Einstellungen schon laden, während der Film läuft
+  let aheadFrom = -1;
+  function preloadImagesAfter(t) {
+    const i = shots.findIndex((s) => t < s.to);
+    if (i === aheadFrom) return;
+    aheadFrom = i;
+    shots.slice(i, i + 5).forEach((s) => { loadImage(s.src); if (s.bg) loadImage(s.bg); });
+  }
+
+  let waiting = false;
   function begin() {
+    if (!warmDone) {
+      // erst starten, wenn die erste Minute da ist; nach WARM_MAX Sekunden geht es auch so
+      if (waiting) { warmDone = true; } else {
+        waiting = true;
+        $('loadInfo').hidden = false;
+        $('startBtn').disabled = true;
+        $('startBtn').querySelector('span').textContent = 'Wird geladen …';
+        setTimeout(() => {
+          if (warmDone) return;
+          $('startBtn').disabled = false;
+          $('startBtn').querySelector('span').textContent = 'Trotzdem starten';
+        }, WARM_MAX * 1000);
+        warm.then(() => { if (waiting) begin(); });
+        return;
+      }
+    }
+    waiting = false;
+    $('loadInfo').hidden = true;
     $('start').hidden = true;
     stage.classList.remove('at-start');
     play(); wake();
@@ -527,8 +588,9 @@
   // ?static=1 schaltet Übergänge ab: Chrome headless friert CSS-Übergänge beim Bildschirmfoto ein
   if (params.get('static') === '1') stage.classList.add('static');
   stage.classList.add('paused');
-  // die ersten Sätze laden schon, während der Startbildschirm steht
-  preloadFrom(Math.max(0, sentences.findIndex((x) => x.abs + x.dur > base)));
+  // die erste Minute lädt schon, während der Startbildschirm steht
+  const warm = warmUp(base);
+  setTimeout(() => { if (!warmDone && !$('start').hidden) { $('loadInfo').hidden = false; showLoad(); } }, SHOW_AFTER);
   if (!$('start').hidden) stage.classList.add('at-start');
   if (AUTOSTART) begin();
   requestAnimationFrame(frame);

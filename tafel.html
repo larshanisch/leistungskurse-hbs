@@ -37,6 +37,14 @@
   <button type="button" id="goBtn">Im Vollbild öffnen</button>
 </div>
 <button type="button" id="again" hidden>Vollbild</button>
+<script src="assets/data/deutsch.js"></script>
+<script src="assets/data/englisch.js"></script>
+<script src="assets/data/kunst.js"></script>
+<script src="assets/js/offline.js"></script>
+<script>
+  // alle Filme im Browser speichern, damit die Tafel auch bei schwachem Netz flüssig läuft
+  window.TDOT_OFFLINE.start();
+</script>
 <script>
   (function () {
     var view = document.getElementById('view'), go = document.getElementById('go'), again = document.getElementById('again');

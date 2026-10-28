@@ -68,6 +68,11 @@
 <script src="assets/data/deutsch.js"></script>
 <script src="assets/data/englisch.js"></script>
 <script src="assets/data/kunst.js"></script>
+<script src="assets/js/offline.js"></script>
+<script>
+  // alle Filme im Browser speichern, damit der Dauerbetrieb auch bei schwachem Netz flüssig läuft
+  window.TDOT_OFFLINE.start();
+</script>
 <script>
   (function () {
     var NEXT_SECONDS = 6;    // Zwischenkarte vor jedem Film

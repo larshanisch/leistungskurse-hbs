@@ -196,6 +196,12 @@ button, a { font: inherit; color: inherit; }
 #startBtn:hover, #startBtn:focus-visible { filter: brightness(1.1); }
 #startBtn svg { width: 1.2em; height: 1.2em; fill: currentColor; }
 .start-hint { margin: 1.1em 0 0; color: var(--ink-soft); font-size: clamp(13px, 1.25vw, 18px); }
+#startBtn:disabled { cursor: progress; filter: saturate(0.6) brightness(0.9); }
+/* Ladeanzeige unter dem Startknopf */
+#loadInfo { margin-top: 1.2em; width: min(420px, 60vw); font-size: clamp(13px, 1.2vw, 17px); color: var(--ink-soft); }
+#loadInfo[hidden] { display: none; }
+#loadInfo .bar { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.18); overflow: hidden; margin-bottom: 0.5em; }
+#loadInfo .bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.3s; }
 #finish { align-items: center; justify-content: center; padding: 0; }
 #finish p { font-size: clamp(28px, 4vw, 60px); font-weight: 800; margin: 0 0 1em; }
 .finish-btns { display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; }
