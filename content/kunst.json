@@ -22,7 +22,7 @@
       "image": { "src": "k02.jpg", "motion": "pan-right" },
       "panel": { "type": "stats", "items": [
         { "at": "fünf Punkte", "value": "5", "label": "Punkte am Ende der Einführungsphase", "prefix": "mind.", "sub": "besser deutlich mehr – die Anforderungen steigen" },
-        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden", "sub": "als Tutorium 6" },
+        { "at": "fünf Wochenstunden", "value": "5", "label": "Wochenstunden" },
         { "at": "doppelt", "value": "×2", "label": "zählt im Abitur" }
       ] }
     },

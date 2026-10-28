@@ -92,6 +92,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - 29.10.2026: Raum-Einrichtung auf der Startseite (Entscheidung 45): erstes Öffnen fragt, welche Filme im Raum
   laufen; „Tafel einrichten“ in der Fußzeile, Logo 3 s drücken oder `?einrichten` ändert es (Entscheidung 49); Handys über `handy.html` (zeigt alles, großer QR-Code).
   Planer mit Titelbildern im Ergebnis, ohne Film-Links (Entscheidungen 46, 48); Räume anderer Fächer eintragbar (48). Beim Testen im Browser vorher `localStorage.removeItem('tdot-raum')`.
+- 29.10.2026: Deutsch 0.8 und Kunst 0.5 ohne „als Tutorium sechs“ (Entscheidung 50), **Deutsch 5:28, Kunst 5:32 min**.
+  Geschichte: Faktenblatt 1.1, Drehbuch 0.2 wartet auf Freigabe; gemeinfreies Paulskirchen-Bild in `art/geschichte/pd/`.
   Offen: Filme Geschichte, Mathematik, Biologie, Chemie – je Fach Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.
 

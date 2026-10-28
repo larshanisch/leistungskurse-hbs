@@ -1,6 +1,9 @@
 # Drehbuch — Leistungskurs Deutsch
 
-Version 0.7 · 29.10.2026 (freigegeben) · Vorfassung: `drehbuch/archiv/deutsch_v0.3.md`
+Version 0.8 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.7: Szene 2 ohne „als Tutorium sechs“: Laut den Tutoriumsblättern der Schule ist dieses Fach nie Tutorium (Nutzer 29.10.2026, Entscheidung 50).
+ · Vorfassung: `drehbuch/archiv/deutsch_v0.3.md`
 
 Änderungen gegenüber 0.6 (Nutzer 29.10.2026): Szene 8 — die Merkkarte wird mitgesprochen.
 Szene 10 — die Lehrkraft entscheidet über die Klausurersatzleistung (für den ganzen Kurs, einmal in
@@ -70,14 +73,14 @@ Inhaltsangabe, damit jede Porträtkarte genau so lange steht, wie über das Werk
 - **Bild:** F — SIE und ER sitzen sich im Flur auf den Hockern gegenüber und gehen ihre
   Wahlbögen durch (Weiterentwicklung der Stilprobe F, aber näher beieinander und im Gespräch).
 - **Bewegung:** Schwenk von links nach rechts.
-- **Element:** ZAHL nacheinander: „5 Wochenstunden“ (klein darunter „als Tutorium 6“) ·
+- **Element:** ZAHL nacheinander: „5 Wochenstunden“ ·
   „× 2 im Abitur“ · „mind. 5 Punkte am Ende der E-Phase“
 - **Sprechtext:**
   > Du wählst den Leistungskurs gegen Ende der Einführungsphase; dafür brauchst du dann in Deutsch
   > mindestens fünf Punkte. Fünf Punkte sind aber nur die Untergrenze: Weil die Anforderungen im
   > Leistungskurs steigen, kann es gut sein, dass du dort weniger Punkte bekommst als in der
   > Einführungsphase – du solltest also deutlich besser sein. Der Kurs hat bei uns fünf
-  > Wochenstunden, als Tutorium sechs, und alle vier Halbjahre zählen im Abitur doppelt.
+  > Wochenstunden, und alle vier Halbjahre zählen im Abitur doppelt.
 - **Beleg:** FB-A (§ 13 Abs. 1, § 13 Abs. 2 Satz 3 — am Originaltext geprüft; § 26 Abs. 2);
   SCHULE (Entscheidung 12); Rat „deutlich besser als fünf Punkte“: SCHULE/EINSCHÄTZUNG der
   Fachlehrkraft (Entscheidung 26)

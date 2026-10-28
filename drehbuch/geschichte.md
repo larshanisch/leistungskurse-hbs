@@ -4,7 +4,7 @@ Version 0.2 · 29.10.2026 (wartet auf Freigabe)
 
 Änderungen gegenüber 0.1 (Nutzer 29.10.2026): Leitfigur D mit Biologie + Geschichte bestätigt. Szene 2 ohne
 „als Tutorium sechs“ bestätigt. Szene 5 mit gemeinfreier Lithografie zur Paulskirche (Fund und Download
-stehen noch aus). Szene 7: Recherche vor Ort „abhängig von der Lehrkraft und dem Kurs“. Szene 8: Exkursion
+nach Zustimmung erledigt). Szene 7: Recherche vor Ort „abhängig von der Lehrkraft und dem Kurs“. Szene 8: Exkursion
 „wenn es möglich ist“. Geschichte bilingual gibt es an der HBS nicht.
 
 Aufbau wie das Drehbuch PoWi 0.2: Stil F (Entscheidung 19), Räume nach den Schulfotos als eigene
@@ -95,8 +95,9 @@ Wie im Drehbuch PoWi. **Beleg** FB-G = `quellen/faktenblatt_geschichte.md`, FB-A
 ### Szene 5 · Vom Kaiserreich bis 1945
 
 - **Bild:** F — Einstieg: Gedenkort mit Kerzen und Blumen vor einer schlichten Steinwand ohne Inschrift,
-  ruhiges Licht. Dazu als Porträtkarte zu „1848“: PD — Lithografie „Einzug des Vorparlaments in die
-  Paulskirche“, 1848 (Status prüfen, vor dem Herunterladen fragen).
+  ruhiges Licht. Dazu als Porträtkarte zu „1848“: PD — Jean Nicolas Ventadour, *Die Paulskirche in
+  Frankfurt am Main*, 1848, Aquarell, Historisches Museum Frankfurt (gemeinfrei, Wikimedia Commons;
+  geladen 29.10.2026 nach Zustimmung, `art/geschichte/pd/paulskirche_1848_ventadour.jpg`, 1243×1400).
 - **Bewegung:** Zoom ein.
 - **Element:** LISTE „Revolution 1848/49“ · „Kolonialherrschaft und Erster Weltkrieg“ · „Weimarer Republik“ ·
   „NS-Diktatur und Völkermord“ · HINWEIS „Beispiel: Abiturjahrgang 2028“
@@ -259,7 +260,7 @@ Wie im Drehbuch PoWi. **Beleg** FB-G = `quellen/faktenblatt_geschichte.md`, FB-A
 
 - [x] **Leitfigur:** neue Figur D mit Biologie + Geschichte (Nutzer 29.10.2026).
 - [x] **Szene 2:** 5 Wochenstunden ohne „als Tutorium 6“ (Nutzer 29.10.2026).
-- [ ] **Szene 5:** gemeinfreie Lithografie zur Paulskirche 1848 – gesucht, Download wartet auf Zustimmung.
+- [x] **Szene 5:** gemeinfreies Bild der Paulskirche 1848 (Ventadour, Aquarell) geladen (Nutzer 29.10.2026).
 - [x] **Szene 7:** Recherche vor Ort abhängig von Lehrkraft und Kurs (Nutzer 29.10.2026).
 - [x] Exkursionen „möglich“ – Satz in Szene 8 (Nutzer 29.10.2026).
 - [x] Geschichte bilingual gibt es an der HBS nicht (Nutzer 29.10.2026).

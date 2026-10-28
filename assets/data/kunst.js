@@ -4,7 +4,7 @@ window.FILMS["kunst"] = {
  "id": "kunst",
  "title": "Leistungskurs Kunst",
  "accent": "#c8d530",
- "total": 334.08,
+ "total": 332.4,
  "credits": [
   "Berthe Morisot: Die Wiege (Le berceau), 1872, Musée d’Orsay, Paris – gemeinfrei, Wikimedia Commons (Google Art Project)",
   "Gustave Caillebotte: Straße in Paris, Regenwetter (Rue de Paris, temps de pluie), 1877, Art Institute of Chicago – gemeinfrei, Wikimedia Commons (Google Art Project)",
@@ -65,8 +65,8 @@ window.FILMS["kunst"] = {
    "n": 2,
    "chapter": "Der Rahmen",
    "chapterDur": 3,
-   "duration": 28.74,
-   "speechEnd": 27.34,
+   "duration": 27.06,
+   "speechEnd": 25.66,
    "sentences": [
     {
      "text": "Du wählst den Leistungskurs Kunst gegen Ende der Einführungsphase und brauchst dafür in Kunst mindestens fünf Punkte.",
@@ -83,9 +83,9 @@ window.FILMS["kunst"] = {
      "start": 7.93
     },
     {
-     "text": "Der Kurs hat bei uns fünf Wochenstunden, als Tutorium sechs, und alle vier Halbjahre zählen im Abitur doppelt.",
-     "audio": "media/kunst/audio/s02_3_86c480eb.mp3",
-     "dur": 7.12,
+     "text": "Der Kurs hat bei uns fünf Wochenstunden, und alle vier Halbjahre zählen im Abitur doppelt.",
+     "audio": "media/kunst/audio/s02_3_894a5d00.mp3",
+     "dur": 5.44,
      "estimated": false,
      "start": 20.22
     }
@@ -112,9 +112,9 @@ window.FILMS["kunst"] = {
      "end": 19.715
     },
     {
-     "text": "Der Kurs hat bei uns fünf Wochenstunden, als Tutorium sechs, und alle vier Halbjahre zählen im Abitur doppelt.",
+     "text": "Der Kurs hat bei uns fünf Wochenstunden, und alle vier Halbjahre zählen im Abitur doppelt.",
      "start": 20.22,
-     "end": 27.34
+     "end": 25.66
     }
    ],
    "image": {
@@ -134,13 +134,12 @@ window.FILMS["kunst"] = {
      {
       "value": "5",
       "label": "Wochenstunden",
-      "sub": "als Tutorium 6",
-      "t": 21.579
+      "t": 21.489
      },
      {
       "value": "×2",
       "label": "zählt im Abitur",
-      "t": 26.822
+      "t": 25.176
      }
     ]
    },
@@ -214,7 +213,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 46.03
+   "start": 44.35
   },
   {
    "n": 4,
@@ -308,7 +307,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 64.28
+   "start": 62.6
   },
   {
    "n": 5,
@@ -440,7 +439,7 @@ window.FILMS["kunst"] = {
     }
    ],
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 87.69
+   "start": 86.01
   },
   {
    "n": 6,
@@ -522,7 +521,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 118.32
+   "start": 116.64
   },
   {
    "n": 7,
@@ -634,7 +633,7 @@ window.FILMS["kunst"] = {
     ],
     "t": 21.1
    },
-   "start": 144.93
+   "start": 143.25
   },
   {
    "n": 8,
@@ -710,7 +709,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 186.83
+   "start": 185.15
   },
   {
    "n": 9,
@@ -805,7 +804,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 207.65
+   "start": 205.97
   },
   {
    "n": 10,
@@ -880,7 +879,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 237.71
+   "start": 236.03
   },
   {
    "n": 11,
@@ -973,7 +972,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 257.68
+   "start": 256
   },
   {
    "n": 12,
@@ -1041,7 +1040,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 286.62
+   "start": 284.94
   },
   {
    "n": 13,
@@ -1079,7 +1078,7 @@ window.FILMS["kunst"] = {
     "src": "media/kunst/img/k13.jpg",
     "motion": "zoom-out"
    },
-   "start": 303.07
+   "start": 301.39
   },
   {
    "n": 14,
@@ -1132,7 +1131,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "logo": true,
-   "start": 318.51
+   "start": 316.83
   }
  ]
 };

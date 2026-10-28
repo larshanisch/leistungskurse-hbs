@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Kunst
 
-Version 0.4 · 29.10.2026 (freigegeben)
+Version 0.5 · 29.10.2026 (freigegeben)
+
+Änderung gegenüber 0.4: Szene 2 ohne „als Tutorium sechs“: Laut den Tutoriumsblättern der Schule ist dieses Fach nie Tutorium (Nutzer 29.10.2026, Entscheidung 50).
 
 Änderungen gegenüber 0.3 (Nutzer 29.10.2026): Szene 7 — die Merkkarte wird mitgesprochen.
 Szene 9 — Referat oder Präsentation statt einer Klausur in Q1 oder Q2, wenn die Lehrkraft es
@@ -54,13 +56,12 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 
 - **Bild:** F — ER am Tisch in der Mensa, sein Wahlbogen vor ihm, daneben ein Skizzenbuch.
 - **Bewegung:** Schwenk von links nach rechts.
-- **Element:** ZAHL „mind. 5 Punkte am Ende der Einführungsphase“ · „5 Wochenstunden“ (klein „als
-  Tutorium 6“) · „× 2 im Abitur“
+- **Element:** ZAHL „mind. 5 Punkte am Ende der Einführungsphase“ · „5 Wochenstunden“ · „× 2 im Abitur“
 - **Sprechtext:**
   > Du wählst den Leistungskurs Kunst gegen Ende der Einführungsphase und brauchst dafür in Kunst mindestens fünf Punkte. Fünf Punkte sind aber nur die Untergrenze: Weil
   > die Anforderungen im Leistungskurs steigen, kann es gut sein, dass du dort weniger Punkte
   > bekommst als in der Einführungsphase – du solltest also deutlich besser sein. Der Kurs hat bei
-  > uns fünf Wochenstunden, als Tutorium sechs, und alle vier Halbjahre zählen im Abitur doppelt.
+  > uns fünf Wochenstunden, und alle vier Halbjahre zählen im Abitur doppelt.
 - **Beleg:** FB-K 0 und FB-A (§ 13 Abs. 2 Satz 3 fünf Punkte — am Originaltext geprüft; § 13
   Abs. 1; § 26 Abs. 2); SCHULE (Stunden, Entscheidung 12);
   Rat „deutlich besser als fünf Punkte“: SCHULE/EINSCHÄTZUNG der Fachlehrkraft (Entscheidung 26)

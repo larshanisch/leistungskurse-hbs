@@ -4,7 +4,7 @@ window.FILMS["deutsch"] = {
  "id": "deutsch",
  "title": "Leistungskurs Deutsch",
  "accent": "#c8d530",
- "total": 329.91,
+ "total": 328.39,
  "credits": [
   "Caspar David Friedrich: Der Wanderer über dem Nebelmeer, um 1817, Hamburger Kunsthalle – gemeinfrei, Wikimedia Commons",
   "Peter Friedel: Heinrich von Kleist, Miniatur, 1801 – gemeinfrei, Wikimedia Commons",
@@ -72,8 +72,8 @@ window.FILMS["deutsch"] = {
    "n": 2,
    "chapter": "Der Rahmen",
    "chapterDur": 3,
-   "duration": 28.42,
-   "speechEnd": 27.02,
+   "duration": 26.9,
+   "speechEnd": 25.5,
    "sentences": [
     {
      "text": "Du wählst den Leistungskurs gegen Ende der Einführungsphase; dafür brauchst du dann in Deutsch mindestens fünf Punkte.",
@@ -90,9 +90,9 @@ window.FILMS["deutsch"] = {
      "start": 7.77
     },
     {
-     "text": "Der Kurs hat bei uns fünf Wochenstunden, als Tutorium sechs, und alle vier Halbjahre zählen im Abitur doppelt.",
-     "audio": "media/deutsch/audio/s02_3_86c480eb.mp3",
-     "dur": 6.96,
+     "text": "Der Kurs hat bei uns fünf Wochenstunden, und alle vier Halbjahre zählen im Abitur doppelt.",
+     "audio": "media/deutsch/audio/s02_3_894a5d00.mp3",
+     "dur": 5.44,
      "estimated": false,
      "start": 20.06
     }
@@ -119,9 +119,9 @@ window.FILMS["deutsch"] = {
      "end": 19.555
     },
     {
-     "text": "Der Kurs hat bei uns fünf Wochenstunden, als Tutorium sechs, und alle vier Halbjahre zählen im Abitur doppelt.",
+     "text": "Der Kurs hat bei uns fünf Wochenstunden, und alle vier Halbjahre zählen im Abitur doppelt.",
      "start": 20.06,
-     "end": 27.02
+     "end": 25.5
     }
    ],
    "image": {
@@ -141,13 +141,12 @@ window.FILMS["deutsch"] = {
      {
       "value": "5",
       "label": "Wochenstunden",
-      "sub": "als Tutorium 6",
-      "t": 21.389
+      "t": 21.329
      },
      {
       "value": "×2",
       "label": "zählt im Abitur",
-      "t": 26.514
+      "t": 25.016
      }
     ]
    },
@@ -222,7 +221,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 47.07
+   "start": 45.55
   },
   {
    "n": 4,
@@ -316,7 +315,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 64.12
+   "start": 62.6
   },
   {
    "n": 5,
@@ -490,7 +489,7 @@ window.FILMS["deutsch"] = {
     }
    ],
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 83.93
+   "start": 82.41
   },
   {
    "n": 6,
@@ -557,7 +556,7 @@ window.FILMS["deutsch"] = {
      "end": 7.48
     }
    ],
-   "start": 129.03
+   "start": 127.51
   },
   {
    "n": 7,
@@ -642,7 +641,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 137.11
+   "start": 135.59
   },
   {
    "n": 8,
@@ -740,7 +739,7 @@ window.FILMS["deutsch"] = {
     ],
     "t": 17.9
    },
-   "start": 155.21
+   "start": 153.69
   },
   {
    "n": 9,
@@ -804,7 +803,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 189.75
+   "start": 188.23
   },
   {
    "n": 10,
@@ -911,7 +910,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 204.15
+   "start": 202.63
   },
   {
    "n": 11,
@@ -987,7 +986,7 @@ window.FILMS["deutsch"] = {
     ],
     "t": 1.7
    },
-   "start": 239.78
+   "start": 238.26
   },
   {
    "n": 12,
@@ -1070,7 +1069,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 260.55
+   "start": 259.03
   },
   {
    "n": 13,
@@ -1138,7 +1137,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 283.09
+   "start": 281.57
   },
   {
    "n": 14,
@@ -1176,7 +1175,7 @@ window.FILMS["deutsch"] = {
     "src": "media/deutsch/img/s14.jpg",
     "motion": "zoom-out"
    },
-   "start": 299.46
+   "start": 297.94
   },
   {
    "n": 15,
@@ -1229,7 +1228,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "logo": true,
-   "start": 314.1
+   "start": 312.58
   }
  ]
 };
