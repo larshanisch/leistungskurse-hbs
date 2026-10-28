@@ -1,6 +1,6 @@
 # Faktenblatt Leistungskurs Politik und Wirtschaft (Hessen) – für den Tag der offenen Tür
 
-Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Abitur voraussichtlich Frühjahr 2029 · Version 1.1 (29.10.2026: PoWi auch als 1. LK laut Tutoriumsblatt)
+Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Abitur voraussichtlich Frühjahr 2029 · Version 1.2 (29.10.2026: Schulangaben ergänzt)
 
 > **Prüfung 29.10.2026 (am Originaltext):** Alle Angaben aus KCGO, Abiturerlass 2028 und EPA wurden
 > direkt aus den PDF-Texten gelesen (Textauszug mit `pdftotext`), nicht aus Zusammenfassungen.
@@ -131,7 +131,7 @@ Seitenangaben „S.“ sind die gedruckten Seitenzahlen der Dokumente.
 - **Keine Personen oder Pflichttexte** genannt (anders als in Deutsch, Englisch, Kunst). – LA28 S. 73–76
 - **Bilingual:** Es gibt PoWi auch bilingual (Englisch oder Französisch) als eigenes Prüfungsfach; die
   bilingualen Aufgaben sind nur für Prüflinge, die solche Kurse besucht haben. (LA28 Abschn. II.3, S. 5–6;
-  III.15–16) Ob die HBS bilingualen PoWi anbietet: [UNSICHER] → SCHULE
+  III.15–16) An der HBS gibt es PoWi nicht bilingual. – SCHULE (Nutzer 29.10.2026)
 
 ## 3. Abiturprüfung im LK
 
@@ -198,9 +198,9 @@ Alles nach FB-A Abschn. 3, für PoWi ohne Besonderheit:
 
 ## Offene Punkte (SCHULE)
 
-1. Gibt es an der HBS PoWi bilingual?
+1. ~~PoWi bilingual?~~ Nein (Nutzer 29.10.2026).
 2. Wie viele Stunden hat der GK PoWi an der HBS (für den Klausurvergleich)?
-3. Was gehört bei euch in der Regel dazu – Exkursionen (z. B. Landtag, Bundestag, Gerichte,
-   Europäische Zentralbank), Planspiele, Projekte? Nur nennen, was die Fachschaft bestätigt.
+3. ~~Exkursionen, Planspiele?~~ Exkursion etwa in ein Parlament „falls möglich“; Debatten und Planspiele
+   sind üblich; LK 5 Wochenstunden, als Tutorium 6 (Nutzer 29.10.2026).
 4. Ansprechpartner im Abspann wie bei den anderen Filmen („deine PoWi-Lehrkräfte“).
 5. Nicht geprüft: ob die Vorgaben 2027 mit 2028 übereinstimmen (Stabilität der Themenfelder).

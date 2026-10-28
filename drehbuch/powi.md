@@ -1,13 +1,17 @@
 # Drehbuch — Leistungskurs Politik und Wirtschaft
 
-Version 0.1 · 29.10.2026 (Entwurf, wartet auf Freigabe)
+Version 0.2 · 29.10.2026 (wartet auf Freigabe)
+
+Änderungen gegenüber 0.1 (Nutzer 29.10.2026): Leitfigur C mit Mathematik + PoWi bestätigt.
+Szene 5 — Exkursion „wenn es möglich ist“. Szene 8 — Debatten und Planspiele statt „Simulationen“.
+Szene 2 — 5 Wochenstunden, als Tutorium 6, gilt auch für PoWi. PoWi bilingual gibt es an der HBS nicht.
 
 Aufbau wie das Drehbuch Kunst 0.4: Stil F (Entscheidung 19), Präsentationselemente, Schulgrün
 (Entscheidung 21), Stimme Theo mit Eleven v4 (Entscheidung 18), gesprochene Merkkarte am Ende von
 Kapitel 2 (Entscheidung 27), Rat „deutlich besser als fünf Punkte“ in Szene 2 (Entscheidung 26),
 Film ohne Verweis auf andere Filme (Entscheidung 36).
 
-**Leitfigur (Vorschlag, siehe Prüfliste):** Die beiden bisherigen Leitfiguren wählen PoWi nicht als
+**Leitfigur (Nutzer 29.10.2026):** Die beiden bisherigen Leitfiguren wählen PoWi nicht als
 LK (Entscheidung 20). Neu: **C**, eine erfundene Schülerin oder ein erfundener Schüler, wählt
 **Mathematik + Politik und Wirtschaft** – zeigt, dass PoWi nicht nur mit Englisch geht. Figurenblatt
 wird wie bei SIE und ER zuerst erzeugt und dann in jedes Bild mitgegeben.
@@ -96,8 +100,7 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 ### Szene 5 · Demokratie
 
 - **Bild:** F — erfundener Plenarsaal von der Besuchertribüne aus, C mit Mitschülerinnen und
-  Mitschülern auf der Tribüne (Exkursion – nur, wenn SCHULE bestätigt; sonst Klassenraum mit
-  projiziertem Plenarsaal).
+  Mitschülern auf der Tribüne (Exkursion, SCHULE: „falls möglich“).
 - **Bewegung:** Schwenk von rechts nach links.
 - **Element:** LISTE „Grundgesetz und Bundesverfassungsgericht“ · „Parteien, Populismus,
   Extremismus“ · „Filterblasen und Fake News“ · HINWEIS „Beispiel: Abiturjahrgang 2028“
@@ -105,8 +108,8 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   > Im aktuellen Jahrgang geht es im ersten Halbjahr zum Beispiel um das Grundgesetz und um die
   > Rolle des Bundesverfassungsgerichts, um Parteien, Populismus und Extremismus als Gefahr für die
   > Demokratie und um die Frage, was Filterblasen und Fake News mit der politischen Öffentlichkeit
-  > machen.
-- **Beleg:** FB-P 2 (LA28 Q1.1, Q1.2, Q1.4)
+  > machen. Wenn es möglich ist, gehört auch eine Exkursion dazu, zum Beispiel in ein Parlament.
+- **Beleg:** FB-P 2 (LA28 Q1.1, Q1.2, Q1.4); SCHULE (Exkursion „falls möglich“, Nutzer 29.10.2026)
 
 ### Szene 6 · Wirtschaft und Welt
 
@@ -156,13 +159,14 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 - **Bewegung:** Schwenk von links nach rechts.
 - **Element:** LISTE in drei Gruppen: „Analysieren: Texte, Statistiken, Grafiken – wer will was?“ ·
   „Urteilen: Lösungen abwägen, Zielkonflikte, eigene Begründung“ · „Mitreden: Position vertreten,
-  Debatten, Simulationen“
+  Debatten, Planspiele“
 - **Sprechtext:**
   > Im Unterricht untersuchst du Texte, Statistiken und Grafiken und fragst dich, wer welche
   > Interessen verfolgt und wer sich durchsetzen kann. Dann wägst du Lösungen gegeneinander ab,
   > erkennst, wo Ziele miteinander in Konflikt geraten, und begründest dein eigenes Urteil. Und in
-  > Debatten und Simulationen probierst du selbst aus, wie man eine Position überzeugend vertritt.
-- **Beleg:** FB-P 1 (KCGO A3, A4, U1–U5, H1, H3, M2 „simulative Erprobung“)
+  > Debatten und Planspielen probierst du selbst aus, wie man eine Position überzeugend vertritt.
+- **Beleg:** FB-P 1 (KCGO A3, A4, U1–U5, H1, H3, M2 „simulative Erprobung“); SCHULE (Debatten und
+  Planspiele üblich, Nutzer 29.10.2026)
 
 ### Szene 9 · Klausuren
 
@@ -265,11 +269,10 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 
 ## Prüfliste vor der Freigabe
 
-- [ ] **Leitfigur:** neue Figur C mit Mathematik + PoWi? Alternativen: C mit Englisch + PoWi;
-      oder eine Figur für ganz Aufgabenfeld II (PoWi und Geschichte), die Englisch als 1. LK hat.
-- [ ] **Szene 5:** Exkursion in ein Parlament o. Ä. – gehört das bei euch dazu? Sonst Klassenraum.
-- [ ] **Szene 8:** „Debatten und Simulationen“ (Planspiele) – so im Unterricht üblich?
-- [ ] **Szene 2:** 5 Wochenstunden, als Tutorium 6 – gilt das auch für PoWi?
-- [ ] Gibt es PoWi bilingual an der HBS? (dann einen Satz in Szene 3 oder 11)
-- [ ] Länge: 14 Szenen, Sprechtext 4 804 Zeichen (gezählt 29.10.2026; Kunst 4 661 Zeichen = 5:34 min
-      gemessen) → etwa 5:45 min, gemessen wird nach der Vertonung.
+- [x] **Leitfigur:** neue Figur C mit Mathematik + PoWi (Nutzer 29.10.2026). Figurenblatt fehlt noch.
+- [x] **Szene 5:** Exkursion „falls möglich“ (Nutzer 29.10.2026).
+- [x] **Szene 8:** Debatten und Planspiele üblich (Nutzer 29.10.2026).
+- [x] **Szene 2:** 5 Wochenstunden, als Tutorium 6, gilt auch für PoWi (Nutzer 29.10.2026).
+- [x] PoWi bilingual gibt es an der HBS nicht (Nutzer 29.10.2026) – kein Satz dazu.
+- [ ] Länge: 14 Szenen, Sprechtext 4 890 Zeichen (gezählt 29.10.2026, Fassung 0.2; Kunst 4 661 Zeichen = 5:34 min
+      gemessen) → etwa 5:50 min, gemessen wird nach der Vertonung.

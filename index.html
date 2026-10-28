@@ -35,17 +35,18 @@
 
   /* Startansicht: drei Aufgabenfelder und der Planer */
   .fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-  /* Feldkarte: Bild des Felds (media/start/), unten dunkel verlaufend, darauf Name und Fächer */
-  .fcard { position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 0.6em; min-height: 380px;
-    padding: 24px; border-radius: 20px; overflow: hidden; text-decoration: none; background: var(--card); border: 1px solid var(--line);
+  /* Feldkarte: oben das Bild des Felds (media/start/) unverdeckt, darunter Name und Fächer auf dunklem Grund */
+  .fcard { position: relative; display: flex; flex-direction: column; min-height: 460px; border-radius: 20px; overflow: hidden;
+    text-decoration: none; background: #111317; border: 1px solid var(--line);
     box-shadow: 0 10px 30px rgba(0,0,0,0.35); transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
-  .fcard::before { content: ""; position: absolute; inset: 0; background: var(--bg) center 30% / cover; transition: transform 0.7s; }
-  .fcard::after { content: ""; position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(8,9,12,0.97) 0%, rgba(8,9,12,0.88) 34%, rgba(8,9,12,0.2) 68%, rgba(8,9,12,0.5) 100%); }
-  .fcard > * { position: relative; z-index: 1; }
+  .fcard .pic { position: relative; flex: 1 1 0; min-height: 200px; overflow: hidden; }
+  .fcard .pic::before { content: ""; position: absolute; inset: 0; background: var(--bg) var(--pos, center) / cover; transition: transform 0.7s; }
+  .fcard .pic::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 30%;
+    background: linear-gradient(to top, #111317, rgba(17,19,23,0)); }
+  .fcard .body { display: flex; flex-direction: column; gap: 0.6em; padding: 4px 24px 22px; }
   .fcard:hover, .fcard:focus-visible { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 22px 60px rgba(0,0,0,0.55); }
-  .fcard:hover::before, .fcard:focus-visible::before { transform: scale(1.05); }
-  .fcard .num { position: absolute; top: 20px; left: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.4); }
+  .fcard:hover .pic::before, .fcard:focus-visible .pic::before { transform: scale(1.05); }
+  .fcard .num { position: absolute; z-index: 1; top: 20px; left: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.4); }
   .fcard h2 { margin: 0; hyphens: auto; font-size: clamp(24px, 2.4vw, 34px); line-height: 1.1; font-weight: 800; letter-spacing: -0.015em; }
   .fcard h2::after { content: ""; display: block; width: 1.4em; height: 5px; border-radius: 3px; background: var(--accent); margin-top: 0.3em; }
   .fcard p { margin: 0 0 0.4em; color: var(--ink-soft); font-size: 14px; line-height: 1.35; }
@@ -155,7 +156,9 @@
 
     #v-home { grid-template-rows: minmax(0, 1fr) auto; }
     .fields { grid-template-columns: repeat(3, 1fr); gap: 1.6vw; min-height: 0; }
-    .fcard { min-height: 0; padding: 3vh 1.6vw; border-radius: 2vh; gap: 1vh; }
+    .fcard { min-height: 0; border-radius: 2vh; }
+    .fcard .pic { min-height: 0; }
+    .fcard .body { gap: 1vh; padding: 0.4vh 1.6vw 2.6vh; }
     .fcard .num { top: 2.2vh; left: 2.2vh; }
     .fcard h2 { font-size: 4vh; }
     .fcard p { font-size: 1.7vh; margin-bottom: 0.6vh; }
@@ -277,9 +280,9 @@
   (function () {
     // Aufgabenfelder nach KMK-Vereinbarung, Kursangebot nach der Übersicht der Schule (Entscheidung 37)
     var FIELDS = [
-      { id: 1, num: 'I', name: 'Das sprachlich-literarisch-künstlerische Aufgabenfeld', sub: 'Sprachen, Literatur und Kunst', img: 'media/start/feld1.jpg', subjects: ['deutsch', 'englisch', 'kunst'] },
-      { id: 2, num: 'II', name: 'Das gesellschaftswissenschaftliche Aufgabenfeld', sub: 'Politik, Wirtschaft und Geschichte', img: 'media/start/feld2.jpg', subjects: ['powi', 'geschichte'] },
-      { id: 3, num: 'III', name: 'Das mathematisch-naturwissenschaftlich-technische Aufgabenfeld', sub: 'Mathematik und Naturwissenschaften', img: 'media/start/feld3.jpg', subjects: ['mathe', 'biologie', 'chemie'] }
+      { id: 1, num: 'I', name: 'Das sprachlich-literarisch-künstlerische Aufgabenfeld', sub: 'Sprachen, Literatur und Kunst', img: 'media/start/feld1.jpg', pos: 'center 78%', subjects: ['deutsch', 'englisch', 'kunst'] },
+      { id: 2, num: 'II', name: 'Das gesellschaftswissenschaftliche Aufgabenfeld', sub: 'Politik, Wirtschaft und Geschichte', img: 'media/start/feld2.jpg', pos: 'center 48%', subjects: ['powi', 'geschichte'] },
+      { id: 3, num: 'III', name: 'Das mathematisch-naturwissenschaftlich-technische Aufgabenfeld', sub: 'Mathematik und Naturwissenschaften', img: 'media/start/feld3.jpg', pos: 'center 62%', subjects: ['mathe', 'biologie', 'chemie'] }
     ];
     // kind: fs = fortgeführte Fremdsprache, nw = Naturwissenschaft, m = Mathematik (OAVO § 13 Abs. 2, § 24 Abs. 6)
     var SUBJ = {
@@ -318,10 +321,11 @@
     // --- Startansicht ---
     $('fields').innerHTML = FIELDS.map(function (f) {
       var films = f.subjects.filter(function (id) { return FILMS[id]; }).length;
-      return '<a class="fcard" href="#feld-' + f.id + '" style="--bg: url(\'' + f.img + '\')"><span class="num">Aufgabenfeld ' + f.num + '</span>' +
+      return '<a class="fcard" href="#feld-' + f.id + '"><span class="pic" style="--bg: url(\'' + f.img + '\'); --pos: ' + f.pos + '"></span>' +
+        '<span class="num">Aufgabenfeld ' + f.num + '</span><div class="body">' +
         '<h2>' + esc(f.sub) + '</h2><p>' + esc(f.name) + '</p><ul>' + f.subjects.map(function (id) {
           return '<li' + (FILMS[id] ? ' class="film"' : '') + '>' + esc(SUBJ[id].name) + '</li>';
-        }).join('') + '</ul><span class="go">' + (films ? films + (films === 1 ? ' Film' : ' Filme') + ' ansehen →' : 'Filme folgen – Kurse ansehen →') + '</span></a>';
+        }).join('') + '</ul><span class="go">' + (films ? films + (films === 1 ? ' Film' : ' Filme') + ' ansehen →' : 'Filme folgen – Kurse ansehen →') + '</span></div></a>';
     }).join('');
 
     // --- Feldansicht ---
