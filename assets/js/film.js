@@ -603,7 +603,13 @@
     stage.classList.remove('at-start');
     play(); wake();
   }
-  $('startBtn').addEventListener('click', begin);
+  $('startBtn').addEventListener('click', () => {
+    // auf Tafeln gleich ins Vollbild – nicht im Rahmen (Tafel-/Vollbildansicht) und nicht auf dem Handy (Entscheidung 82)
+    if (!FRAMED && !document.fullscreenElement && stage.requestFullscreen && matchMedia('(min-width: 900px)').matches) {
+      stage.requestFullscreen().catch(() => { /* ohne Vollbild weiter */ });
+    }
+    begin();
+  });
   document.querySelector('.start-title').textContent = film.title;
   document.querySelector('.start-hint').textContent = fmt(total) + ' Minuten · mit Ton und Untertiteln';
   // Startbildschirm zeigt das erste Bild als Standbild statt Schwarz

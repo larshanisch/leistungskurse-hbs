@@ -41,7 +41,9 @@ async function media(req) {
 
 async function page(req) {
   const cache = await caches.open(CACHE);
-  const fromNet = fetch(req).then((resp) => {
+  // frisch beim Server nachfragen (unverändert: kleine 304-Antwort) statt aus dem Browser-Zwischenspeicher
+  const fresh = req.mode === 'navigate' ? fetch(req.url, { cache: 'no-cache', credentials: 'same-origin' }) : fetch(req, { cache: 'no-cache' });
+  const fromNet = fresh.then((resp) => {
     if (resp.ok && resp.status === 200) cache.put(req, resp.clone());
     return resp;
   });
