@@ -128,7 +128,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - 29.10.2026: Rechner sperrt unmögliche Prüfungsfächer (`kNeeds`, `kCompletable`, `kWhy` in `index.html`, Entscheidung 90).
 - 29.10.2026: Rechner belegt Pflicht ohne Wahl vor (`MIN_BEL`, `MIN_EIN`, Entscheidung 91). CSS: Regeln für schmale Fenster immer nach den Grundregeln.
 - 29.10.2026: Update-Meldung `assets/js/update.js` auf Startseite, Tafel, Dauerbetrieb (Entscheidung 92). Alte Fassung trotz Neuladen = Speicher; sofort: Strg+Umschalt+R.
-  Lokale Vorschau im Website-Stil: `node tools/vorschau_web.mjs` → `vorschau_web.html` (nur lokal, .gitignore).
+- 29.10.2026: Startseite hell im Stil der neuen Schulwebsite (`assets/css/hell.css`, Schriften in `assets/fonts/`, Entscheidung 94); Filme bleiben dunkel.
+  Farben der Startseite in `hell.css` ändern, nicht im Grundstil. Gleich hohe Aufgabenfeld-Bilder: `eqCards` (Entscheidung 93).
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

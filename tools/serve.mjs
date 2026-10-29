@@ -30,7 +30,7 @@ http.createServer((req, res) => {
       return send(fs.createReadStream(file, { start, end, highWaterMark: 16384 }), res);
     }
     // Zeitstempel wie GitHub Pages (assets/js/update.js vergleicht ihn mit der angezeigten Seite)
-    res.writeHead(200, { 'Content-Type': type, 'Content-Length': st.size, 'Accept-Ranges': 'bytes', 'Last-Modified': st.mtime.toUTCString() });
+    res.writeHead(200, { 'Content-Type': type, 'Content-Length': st.size, 'Accept-Ranges': 'bytes', 'Last-Modified': st.mtime.toUTCString(), 'Cache-Control': 'no-cache' });
     if (req.method === 'HEAD') return res.end();
     send(fs.createReadStream(file, { highWaterMark: 16384 }), res);
   });

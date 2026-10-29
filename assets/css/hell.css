@@ -1,0 +1,97 @@
+/* Helles Design der Startseite im Stil von neu.heinrich-boell-schule.de (Entscheidung 94), liegt über dem Grundstil in index.html.
+   Gemessen auf der Website 29.10.2026: Hintergrund #F6F7F3, Karten weiß mit Rand #E4E8DC und Rundung 16 px, Text #2E2E2E,
+   Überschriften #1A1A1A in „Outfit“ 600, Fließtext „Source Sans 3“, dunkle Pillenknöpfe (#1A1A1A), dunkle Fußzeile mit grüner Oberkante.
+   Statt des Website-Grüns das Schulgrün aus dem Logo #C8D530; für Schrift auf Weiß der dunkle Ton #6B7414 (Kontrast 5,1 : 1).
+   Schriften lokal (assets/fonts, SIL Open Font License 1.1, aus @fontsource 5.3), damit alles offline läuft. Die Filme bleiben dunkel. */
+@font-face { font-family: "Outfit"; font-weight: 500; font-display: swap; src: url("../fonts/outfit-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 600; font-display: swap; src: url("../fonts/outfit-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 700; font-display: swap; src: url("../fonts/outfit-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 400; font-display: swap; src: url("../fonts/source-sans-3-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 600; font-display: swap; src: url("../fonts/source-sans-3-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 700; font-display: swap; src: url("../fonts/source-sans-3-latin-700-normal.woff2") format("woff2"); }
+:root {
+  --ink: #2e2e2e; --ink-soft: #5a5f55; --night: #f6f7f3; --card: #ffffff; --line: #e4e8dc;
+  --accent: #c8d530; --accent-dark: #6b7414; --on-accent: #1a1a1a; --no: #c0392b; --free: #1f4f8a;
+  --head-ink: #1a1a1a; --pale: #f8fae6;
+  --sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --display: "Outfit", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+}
+body { background: var(--night); color: var(--ink); }
+
+/* Kopf wie auf der Website: weiße Kopfzeile mit Logo */
+main { padding-top: 0; }
+.head { background: #fff; box-shadow: 0 0 0 100vmax #fff; clip-path: inset(0 -100vmax); padding: 16px 0 10px; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
+@media (min-width: 900px) and (min-aspect-ratio: 4/3) { .head { padding: 1.4vh 0 0.6vh; margin-bottom: 1.6vh; } }
+.kicker { color: var(--accent-dark); letter-spacing: 0.14em; }
+h1, h2, h3, .cta strong, .fcard h2, .tile .subj { font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; }
+h1 { color: var(--head-ink); font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; }
+h1::after { content: ""; display: block; width: 56px; height: 4px; background: var(--accent); margin-top: 0.2em; }
+.bar h2 { color: var(--head-ink); }
+.lead { color: var(--ink-soft); }
+
+/* Karten: weiß, feiner Rand, kein schwerer Schatten */
+.fcard, .col, .result, .kgrp, .kcheck, .slot, .grp, #setup .box {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: none; }
+.fcard { background: #fff; }
+.fcard .pic::after { display: none; }
+.fcard .body { padding: 18px 24px 22px; }
+.fcard h2 { color: var(--head-ink); }
+.fcard:hover, .fcard:focus-visible, .cta:hover, .cta:focus-visible, a.tile:hover, a.tile:focus-visible {
+  border-color: var(--accent); box-shadow: 0 10px 28px rgba(26,26,26,0.10); }
+.fcard .num { box-shadow: none; }
+.fcard li { background: var(--pale); border-color: #e2e7b8; color: var(--head-ink); }
+.fcard li.film { background: var(--accent); color: #1a1a1a; }
+.fcard .go { color: var(--head-ink); }
+
+/* Bildkacheln der Filme bleiben dunkel überlagert (wie der Begrüßungskasten der Website) – Schrift dort hell */
+.tile, .lkpic { --ink: #ffffff; --ink-soft: #e6e6e6; color: #fff; border-radius: 16px; }
+
+.cta { background: var(--pale); border: 1px solid #e2e7b8; border-radius: 16px; }
+.cta strong { color: var(--head-ink); }
+.cta .ic { background: var(--accent); color: #1a1a1a; }
+.cta .open, .result .links a { background: #1a1a1a; color: #fff; border-radius: 24px; }
+
+/* Knöpfe: dunkle Pillen wie „Weitere Meldungen“ */
+.back { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+.tabs button { border-color: var(--line); background: #fff; color: var(--ink); }
+.tabs button[aria-selected="true"], .tabs button.on { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+.tabs a.go { border-color: var(--accent-dark); color: var(--accent-dark); }
+.tabs a.go:hover { background: var(--accent); color: #1a1a1a; }
+#fsBtn { background: #fff; color: var(--head-ink); border: 1px solid var(--line); }
+
+/* Planer */
+.chip { background: #fff; border-color: var(--line); color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--accent); color: #1a1a1a; border-color: var(--accent); }
+.chip .th { color: var(--accent-dark); }
+.chip[aria-pressed="true"] .th { color: #1a1a1a; }
+.lkpic.empty { background: var(--pale); border-color: #e2e7b8; }
+.pf.open { outline-color: rgba(26,26,26,0.3); }
+.grp.w { border-color: var(--accent); }
+.need span { background: var(--pale); border-color: var(--accent); color: var(--head-ink); }
+.need span.free { background: #e8f0fa; border-color: var(--free); color: var(--free); }
+.ein .st span.got { background: var(--pale); border-color: var(--accent); }
+.fine, footer .fine { color: #6b7064; }
+
+/* Kurse selbst planen */
+.kgrp { background: #fff; }
+.kr .kn .ki { color: var(--accent-dark); }
+.kx { border-color: rgba(26,26,26,0.35); color: var(--ink-soft); }
+.kx[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #1a1a1a; }
+.kst button { background: #fff; border-color: #cfd6c2; color: var(--head-ink); }
+.kfix.must, .kr .kn small { color: var(--accent-dark); }
+.kcheck { background: #fff; }
+.kcheck li.no { background: #fbecea; color: #5a1a12; }
+.kcheck li.no::before, .kcheck h3 .cnt.no { color: #fff; }
+.kcheck .oks span::before, .kcheck h3 .cnt.ok { color: var(--accent-dark); }
+.knote { background: #fff; color: var(--ink); border-color: var(--no); box-shadow: 0 8px 30px rgba(26,26,26,0.18); }
+
+/* Fußzeile wie auf der Website: dunkel, grüne Oberkante, volle Breite */
+footer { position: relative; background: #1a1a1a; color: #d6d6d6; box-shadow: 0 0 0 100vmax #1a1a1a; clip-path: inset(-6px -100vmax 0);
+  padding: 10px 0 12px; margin-top: 2em; }
+footer::before { content: ""; position: absolute; top: -6px; height: 6px; left: -100vmax; right: -100vmax; background: var(--accent); }
+footer a, footer .linkish { color: #fff; }
+main { padding-bottom: 0; }
+html, body { overflow-x: clip; }
+/* Bilder der Aufgabenfelder nie unter 16 % der Fensterhöhe (die weiße Kopfzeile kostet Platz) */
+.fcard .pic { min-height: max(120px, 16vh) !important; }
+@media (max-width: 899px) { .fcard { min-height: 0; } .fcard .pic { flex: none; height: 180px; } }

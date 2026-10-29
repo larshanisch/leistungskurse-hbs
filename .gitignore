@@ -6,7 +6,3 @@
 art/
 # Platzhalterbilder aus dem Prototyp
 media/*/img/ph_*.svg
-# Lokale Vorschau im Stil der neuen Website (nicht veröffentlichen)
-vorschau_web.html
-assets/css/stil_web.css
-tools/vorschau_web.mjs

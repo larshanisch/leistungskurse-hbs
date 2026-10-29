@@ -187,6 +187,7 @@
   .kgrp { font-size: 15px; }
   .kr .kn { display: flex; align-items: center; gap: 0.45em; }
   .kr .kn .ki { flex: none; width: 1.3em; height: 1.3em; color: var(--accent); }
+  .kr .kn.lkn { grid-column: span 2; }
   .kr .kn small { color: var(--accent); font-weight: 800; margin-left: 0.3em; }
   .kx { font: inherit; font-size: 12px; font-weight: 800; padding: 0.2em 0.55em; border-radius: 999px; border: 1px dashed rgba(255,255,255,0.35); background: none; color: var(--ink-soft); cursor: pointer; min-width: 3.4em; }
   .kx[aria-pressed="true"] { border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent); }
@@ -413,6 +414,7 @@
     #setup .acts button { font-size: max(13px, 1.9vh); }
   }
 </style>
+<link rel="stylesheet" href="assets/css/hell.css">
 </head>
 <body>
 <main>
@@ -592,6 +594,21 @@
       }).join('');
     }
     renderHome();
+    function eqCards() {
+      var bs = [].slice.call(document.querySelectorAll('#fields .fcard .body'));
+      bs.forEach(function (b) { b.style.minHeight = ''; });
+      if (!bs.length || !bs[0].offsetHeight) return;   // Startansicht gerade verborgen
+      // je Reihe angleichen (zwei nebeneinander, eine darunter; auf dem Handy jede für sich)
+      var rows = {};
+      bs.forEach(function (b) { var t = b.parentNode.offsetTop; (rows[t] = rows[t] || []).push(b); });
+      Object.keys(rows).forEach(function (t) {
+        var r = rows[t]; if (r.length < 2) return;
+        var m = Math.max.apply(null, r.map(function (b) { return b.offsetHeight; }));
+        r.forEach(function (b) { b.style.minHeight = m + 'px'; });
+      });
+    }
+    window.addEventListener('resize', eqCards);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(eqCards);
 
     // --- Feldansicht ---
     function lkBadge(id) { return LK1.indexOf(id) >= 0 ? '1. oder 2. LK' : '2. LK'; }
@@ -881,7 +898,7 @@
       var head = '<div class="khead"><span>Fach</span><span>Prüfung</span><span>belegt</span><span>eingebracht</span></div>';
       var grpHtml = groups.map(function (gr) {
         return '<div class="kgrp g' + gr[0] + '"><span class="k">' + gr[1] + '</span>' + head + GK.filter(function (g) { return g.f === gr[0]; }).map(function (g) {
-          if (isLK(g.id)) return '<div class="kr"><span class="kn">' + fachIcon(g.id, 'ki') + esc(g.name) + '<small>LK</small></span><span></span><span class="kfix">4</span><span class="kfix">4 · doppelt</span></div>';
+          if (isLK(g.id)) return '<div class="kr"><span class="kn lkn">' + fachIcon(g.id, 'ki') + esc(g.name) + '<small>LK</small></span><span class="kfix">4</span><span class="kfix">4 · doppelt</span></div>';
           var why = kWhy(g.id);
           var exBtn = '<button type="button" class="kx' + (why ? ' off' : '') + '" data-x="' + g.id + '" aria-pressed="' + isEx(g.id) + '"' +
             (why ? ' aria-disabled="true" title="' + esc(why) + '"' : '') + '>3–5</button>';
@@ -949,6 +966,7 @@
         if (PAIRS[q[1]] && fits(q[1], q[2])) { pick.a = q[1]; pick.b = q[2]; kStart(q[1], q[2]); view = 'kurse'; } else view = 'planer';
       }
       ['home', 'feld', 'planer', 'kurse'].forEach(function (v) { $('v-' + v).hidden = v !== view; });
+      if (view === 'home') eqCards();
       document.body.classList.toggle('sub', view !== 'home');
       if (field) showField(field);
       if (view === 'planer') renderPlan();
