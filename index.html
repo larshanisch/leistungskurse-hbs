@@ -1425,6 +1425,8 @@
       var resume = !pick.a && saved && saved !== '#planer'
         ? '<span class="p2resume">Auf diesem Gerät ist ein Plan gespeichert. <a href="' + esc(saved) + '">Weitermachen →</a></span>' : '';
       if (!pick.a || P2.step < 2) return resume ? '<div class="p2tools">' + resume + '</div>' : '';
+      // Tag der offenen Tür an Tafel und Dauerbetrieb: nur der QR-Code, ohne Aufklappen (Entscheidung 113)
+      if (!NOTEN_AN && !OWN_DEVICE && window.qrSvg) return '<div class="p2tools"><button type="button" class="p2tool p2menu" data-tool="qr">Für später merken: QR-Code fürs Handy</button></div>';
       var head = '<button type="button" class="p2tool p2menu" data-tool="menu" aria-expanded="' + toolsOpen + '">Für später merken <span aria-hidden="true">' + (toolsOpen ? '▴' : '▾') + '</span></button>';
       if (!toolsOpen) return '<div class="p2tools">' + head + '</div>';
       return '<div class="p2tools open">' + head +
