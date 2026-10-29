@@ -202,22 +202,22 @@ window.FILMS["powi"] = {
     "title": "Politik und Wirtschaft passt zu …",
     "items": [
      {
-      "a": "Politik und Wirtschaft",
-      "b": "Englisch, Biologie oder Chemie",
       "ok": true,
-      "t": 6.742
-     },
-     {
-      "figure": "c",
-      "a": "Politik und Wirtschaft",
-      "b": "Mathematik",
-      "ok": true,
+      "with": [
+       "englisch",
+       "biologie",
+       "chemie",
+       "mathe"
+      ],
       "t": 11.619
      },
      {
-      "a": "Politik und Wirtschaft",
-      "b": "Deutsch, Kunst oder Geschichte",
       "ok": false,
+      "with": [
+       "deutsch",
+       "kunst",
+       "geschichte"
+      ],
       "t": 15.32
      }
     ]

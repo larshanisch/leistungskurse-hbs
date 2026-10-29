@@ -10,7 +10,7 @@
 // Version erhöhen, wenn eine Aufnahme oder ein Bild unter gleichem Namen ersetzt wird
 // (sonst bleibt auf den Tafeln die alte Datei, Entscheidung 58) – und GLEICHZEITIG in
 // assets/js/offline.js, sonst lädt die Tafel in einen Speicher, den hier niemand liest (Entscheidung 68)
-const CACHE = 'tdot-filme-v5';
+const CACHE = 'tdot-filme-v6';
 const NET_TIMEOUT = 4000;
 
 self.addEventListener('install', () => self.skipWaiting());

@@ -33,15 +33,10 @@
     {
       "n": 3,
       "image": { "src": "e03.jpg", "motion": "zoom-out" },
-      "panel": {
-        "type": "combo",
-        "title": "Englisch passt zu …",
-        "items": [
-          { "at": "mit Deutsch", "figure": "sie", "a": "Englisch", "b": "Deutsch", "ok": true },
-          { "at": "mit Kunst", "figure": "er", "a": "Englisch", "b": "Kunst", "ok": true },
-          { "at": "vielen anderen", "a": "Englisch", "b": "viele weitere Fächer", "ok": true }
-        ]
-      }
+      "panel": { "type": "combo", "title": "Englisch passt zu …", "items": [
+        { "at": "mit Deutsch", "ok": true, "with": ["deutsch", "kunst", "powi", "geschichte", "biologie", "chemie", "mathe"] },
+        { "at": "vielen anderen", "note": "Mit jedem anderen Leistungskurs an der HBS." }
+      ] }
     },
     {
       "n": 4,

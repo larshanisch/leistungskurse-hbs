@@ -33,15 +33,10 @@
     {
       "n": 3,
       "image": { "src": "k03.jpg", "motion": "zoom-out" },
-      "panel": {
-        "type": "combo",
-        "title": "Kunst passt zu …",
-        "items": [
-          { "at": "Mathematik", "a": "Kunst", "b": "Mathematik oder Naturwissenschaft", "ok": true },
-          { "at": "Kunst mit Englisch", "figure": "er", "a": "Kunst", "b": "Englisch", "ok": true },
-          { "at": "Kunst mit Deutsch", "a": "Kunst", "b": "Deutsch", "ok": false }
-        ]
-      }
+      "panel": { "type": "combo", "title": "Kunst passt zu …", "items": [
+        { "at": "Kunst mit Englisch", "ok": true, "with": ["englisch", "mathe", "biologie"] },
+        { "at": "Kunst mit Deutsch", "ok": false, "with": ["deutsch", "powi", "geschichte", "chemie"] }
+      ] }
     },
     {
       "n": 4,

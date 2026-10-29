@@ -205,22 +205,22 @@ window.FILMS["chemie"] = {
     "title": "Chemie passt zu …",
     "items": [
      {
-      "figure": "e",
-      "a": "Englisch",
-      "b": "Chemie",
       "ok": true,
+      "with": [
+       "englisch",
+       "biologie",
+       "mathe",
+       "powi"
+      ],
       "t": 16.885
      },
      {
-      "a": "Biologie oder Mathematik",
-      "b": "Chemie",
-      "ok": true,
-      "t": 17.482
-     },
-     {
-      "a": "Politik und Wirtschaft",
-      "b": "Chemie",
-      "ok": true,
+      "ok": false,
+      "with": [
+       "deutsch",
+       "kunst",
+       "geschichte"
+      ],
       "t": 19.036
      }
     ]

@@ -33,15 +33,10 @@
     {
       "n": 3,
       "image": { "src": "s03.jpg", "motion": "zoom-out" },
-      "panel": {
-        "type": "combo",
-        "title": "Welche Kombination geht?",
-        "items": [
-          { "at": "Deutsch und Englisch", "figure": "sie", "a": "Deutsch", "b": "Englisch", "ok": true },
-          { "at": "Deutsch und Englisch", "figure": "er", "a": "Englisch", "b": "Kunst", "ok": true },
-          { "at": "Deutsch und Kunst", "a": "Deutsch", "b": "Kunst", "ok": false }
-        ]
-      }
+      "panel": { "type": "combo", "title": "Deutsch passt zu …", "items": [
+        { "at": "Deutsch und Englisch", "ok": true, "with": ["englisch", "mathe", "biologie"] },
+        { "at": "Deutsch und Kunst", "ok": false, "with": ["kunst", "powi", "geschichte", "chemie"] }
+      ] }
     },
     {
       "n": 4,

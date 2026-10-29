@@ -193,22 +193,22 @@ window.FILMS["kunst"] = {
     "title": "Kunst passt zu …",
     "items": [
      {
-      "a": "Kunst",
-      "b": "Mathematik oder Naturwissenschaft",
       "ok": true,
-      "t": 6.689
-     },
-     {
-      "figure": "er",
-      "a": "Kunst",
-      "b": "Englisch",
-      "ok": true,
+      "with": [
+       "englisch",
+       "mathe",
+       "biologie"
+      ],
       "t": 9.69
      },
      {
-      "a": "Kunst",
-      "b": "Deutsch",
       "ok": false,
+      "with": [
+       "deutsch",
+       "powi",
+       "geschichte",
+       "chemie"
+      ],
       "t": 11.703
      }
     ]

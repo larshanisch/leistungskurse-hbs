@@ -139,6 +139,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - 29.10.2026: Planer Schritt 4 „Noten“ (Erwartung / Meine Noten, Zulassung, Fachhochschulreife, Möglichkeiten, Entscheidung 102), Speichern im Link, Teilen,
   Drucken, QR, Merken (103), Touch-Größen (104). Code im Planer-Block von `index.html` (`p4Calc`, `p4EchtZul`, `p4Fhr`, `p2Code`/`p2Restore`), QR `assets/js/qr.js`.
   Prüf-Adressen: `#planer/4/<LK1>/<LK2>/<P3>,<P4>,<P5>/auffuellen`, Touch `?touch=1`. Eigene Noten nur auf eigenen Geräten (`SHOW_ALL` und nicht im Rahmen).
+- 29.10.2026: Kombinationen im Film als Partnerfächer mit Icons, „geht nicht mit“ darunter (Entscheidung 111), erzeugt mit `node tools/combos.mjs` aus `PAIRS`.
+  **Erste TdoT-Fassung ohne Schritt 4 „Noten“** (`NOTEN_AN = false` in `index.html`, Entscheidung 112) – später wieder einschalten.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.
@@ -156,7 +158,7 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 ## Präsentationselemente (content/<fach>.json)
 
 - `panel` rechts: `stats` (value/label/sub/prefix; reine Zahlen zählen hoch), `combo`
-  (figure sie/er, a, b, ok), `list` (check: true für Häkchen), `compare` (head + items label/a/b),
+  (items: ok + with [Fach-Ids] oder note; nur über `tools/combos.mjs` ändern), `list` (check: true für Häkchen), `compare` (head + items label/a/b),
   `ring` (parts mit value, notes). Jedes Element mit `"at"`.
 - `band` unten: `timeline` (label Q1…, text). `captions`: Bildunterschriften.
 - `imageCues` mit `"fit": "card"`: Original als Porträtkarte; die Bildunterschrift „Name · Werk“ steht dann groß daneben.

@@ -197,26 +197,25 @@ window.FILMS["deutsch"] = {
    },
    "panel": {
     "type": "combo",
-    "title": "Welche Kombination geht?",
+    "title": "Deutsch passt zu …",
     "items": [
      {
-      "figure": "sie",
-      "a": "Deutsch",
-      "b": "Englisch",
       "ok": true,
+      "with": [
+       "englisch",
+       "mathe",
+       "biologie"
+      ],
       "t": 7.69
      },
      {
-      "figure": "er",
-      "a": "Englisch",
-      "b": "Kunst",
-      "ok": true,
-      "t": 7.69
-     },
-     {
-      "a": "Deutsch",
-      "b": "Kunst",
       "ok": false,
+      "with": [
+       "kunst",
+       "powi",
+       "geschichte",
+       "chemie"
+      ],
       "t": 10.69
      }
     ]

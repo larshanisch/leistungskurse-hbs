@@ -22,6 +22,7 @@
   const COUNT_UP = 0.9;      // Dauer des Hochzählens einer Zahl
   const RING_GROW = 1.3;     // Dauer, bis ein Ringsegment voll ist
   const IDLE_MS = 3000;      // Steuerleiste blendet sich aus
+  const SUBJ_NAMES = { englisch: 'Englisch', deutsch: 'Deutsch', kunst: 'Kunst', powi: 'Politik und Wirtschaft', geschichte: 'Geschichte', biologie: 'Biologie', chemie: 'Chemie', mathe: 'Mathematik' };
   const FIGURES = { sie: 'assets/img/figur_sie.jpg', er: 'assets/img/figur_er.jpg', c: 'assets/img/figur_c.jpg', d: 'assets/img/figur_d.jpg', e: 'assets/img/figur_e.jpg' };
 
   const film = (window.FILMS || {})[fachId];
@@ -155,14 +156,19 @@
         if (target !== null) b.counters.push({ node: val, t: at(it), target });
       });
     } else if (p.type === 'combo') {
+      // nur die Partnerfächer mit Icon und was nicht geht (Entscheidung 111)
       p.items.forEach((it) => {
+        if (it.note) { card.appendChild(reveal(el('p', 'combo-note', it.note), at(it))); return; }
         const row = el('div', 'combo ' + (it.ok ? 'ok' : 'no'));
-        if (it.figure && FIGURES[it.figure]) { const im = el('img', 'av'); im.src = FIGURES[it.figure]; im.alt = ''; row.appendChild(im); }
-        else row.appendChild(el('span', 'av none', '?'));
-        row.appendChild(el('span', 'pair', it.a + ' + ' + it.b));
-        const badge = el('span', 'badge', it.ok ? '✓' : '✗');
-        badge.setAttribute('aria-label', it.ok ? 'möglich' : 'nicht möglich');
-        row.appendChild(badge);
+        row.appendChild(el('p', 'combo-h', it.ok ? '✓ geht mit' : '✗ geht nicht mit'));
+        const chips = el('div', 'chips');
+        it.with.forEach((id) => {
+          const c = el('span', 'chip');
+          if (window.fachIcon) c.insertAdjacentHTML('afterbegin', window.fachIcon(id, 'ci'));
+          c.appendChild(el('span', '', SUBJ_NAMES[id] || id));
+          chips.appendChild(c);
+        });
+        row.appendChild(chips);
         card.appendChild(reveal(row, at(it)));
       });
     } else if (p.type === 'list') {

@@ -874,6 +874,9 @@
     // ===== Planer „Kurswahl durchspielen“ in drei Schritten (Entscheidung 96) =====
     // Nutzt die Regeln der echten Seite: PAIRS/fits (Kombinationen), consequences (Pflicht für 3–5), K/kStart/kChecks/renderKurse (Rechner).
     var P2 = { step: 1, slot: { 3: null, 4: null, 5: null }, open: 0 };
+    // Schritt 4 „Noten“ (Punkterechner, eigene Noten) vorerst aus: erste Fassung für den Tag der offenen Tür nur mit
+    // Kombinationen, Prüfungsfächern, Belegen und Einbringen (Entscheidung 112). Auf true setzen schaltet alles wieder ein.
+    var NOTEN_AN = false;
     var SHORT = { powi: 'PoWi', mathe: 'Mathe' };
     var nm = function (id) { return (GKOF[id] && GKOF[id].name) || SUBJ[id].name; };
     var fOf = function (id) { return GKOF[id] ? GKOF[id].f : SUBJ[id].field; };
@@ -1091,7 +1094,7 @@
         return on ? '<a class="p2t' + (s === n ? ' cur' : '') + (n < s ? ' done' : '') + '" href="' + href + '"><i>' + n + '</i>' + label + '</a>'
           : '<span class="p2t dis"><i>' + n + '</i>' + label + '</span>';
       };
-      $('p2steps').innerHTML = tab(1, 'Leistungskurse', true) + tab(2, 'Prüfungsfächer', ok1) + tab(3, 'Kurse', ok2) + tab(4, 'Noten', ok2 && p3Ok());
+      $('p2steps').innerHTML = tab(1, 'Leistungskurse', true) + tab(2, 'Prüfungsfächer', ok1) + tab(3, 'Kurse', ok2) + (NOTEN_AN ? tab(4, 'Noten', ok2 && p3Ok()) : '');
       $('p2status').innerHTML = p2Status();
       $('p2tools').innerHTML = p2Tools();
       $('v-planer').className = 'view st' + s;
@@ -1234,7 +1237,7 @@
     });
     function p3GoRender() {
       var g = $('p3go'); if (!g) return;
-      g.innerHTML = p3Ok() ? '<span class="p3ok">✓ Belegen und Einbringen erfüllt.</span><a class="p2next" href="#planer/4/' + pick.a + '/' + pick.b + '">Weiter: Noten und Zulassung →</a>'
+      g.innerHTML = p3Ok() ? '<span class="p3ok">✓ Belegen und Einbringen erfüllt.</span>' + (NOTEN_AN ? '<a class="p2next" href="#planer/4/' + pick.a + '/' + pick.b + '">Weiter: Noten und Zulassung →</a>' : '')
         : '<button type="button" class="p2sug" data-fill="1">Pflicht automatisch auffüllen</button><span class="fine">Ergänzt Belegen und Einbringen so, dass alles erfüllt ist. Danach kannst du alles ändern.</span>';
     }
     $('v-planer').addEventListener('click', function (e) {
@@ -1430,7 +1433,7 @@
         (window.qrSvg ? '<button type="button" class="p2tool" data-tool="qr">QR-Code fürs Handy</button>' : '') +
         (CAN_KEEP ? '<label class="p2keep"><input type="checkbox" data-tool="keep"' + (keepOn() ? ' checked' : '') + '> Auf diesem Gerät merken</label>' +
           (keepOn() ? '<button type="button" class="p2tool ghost" data-tool="forget">Gespeichertes löschen</button>' : '') : '') +
-        '<span class="p2toolnote">Gespeichert wird nur im Link bzw. auf diesem Gerät – nichts geht an die Schule oder ins Internet. Mit Noten den Link nicht weitergeben.</span>' +
+        '<span class="p2toolnote">Gespeichert wird nur im Link bzw. auf diesem Gerät – nichts geht an die Schule oder ins Internet.' + (NOTEN_AN ? ' Mit Noten den Link nicht weitergeben.' : '') + '</span>' +
         '</div>';
     }
     $('v-planer').addEventListener('click', function (e) {
@@ -1519,7 +1522,7 @@
       if (step > 1 && !(pick.a && pick.b)) step = 1;
       if (step > 2 && !p2Valid(P2.slot)) step = 2;
       if (step > 3 && q[5] === 'auffuellen') p3Fill();   // Prüf-Adresse …/<P3>,<P4>,<P5>/auffuellen
-      if (step > 3 && !p3Ok()) step = 3;
+      if (step > 3 && (!NOTEN_AN || !p3Ok())) step = 3;
       P2.step = step; if (step !== 2) P2.open = 0; else if (!P2.open && !p2Exam().length) P2.open = 3;
       p2Render(); p2SyncUrl();
     }

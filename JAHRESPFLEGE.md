@@ -40,7 +40,8 @@ dann diese Liste ab, Schritt für Schritt, und fragt bei jeder inhaltlichen Änd
 ## 4. Startseite und Planer anpassen
 
 - [ ] Fußzeile „Stand: Oktober [Jahr]“, Grundlage „Abiturerlass [Jahr]“ (`index.html`)
-- [ ] `PAIRS` (Kombinationen nach Tutoriumsblättern), `SUBJ`, `GK` (Grundkurs-Angebot) in `index.html`
+- [ ] `PAIRS` (Kombinationen nach Tutoriumsblättern), `SUBJ`, `GK` (Grundkurs-Angebot) in `index.html`; danach `node tools/combos.mjs`
+      (Kombinations-Tafel in allen Filmen) und `build.mjs` für alle Fächer. Schritt 4 „Noten“ an oder aus? (`NOTEN_AN`)
 - [ ] Regeln im Planer gegen die geprüfte OAVO: `consequences`, `kNeeds`, `kChecks`, `MIN_BEL`/`MIN_EIN`, Einschränkungen, Schritt 4 (`p4Calc`, `p4EchtZul`, `p4Fhr`:
       § 23, § 26, § 48), Notentabellen Anlage 10b und 12, Texte „Deine Möglichkeiten“ (§ 13 Abs. 10–11, § 23 Abs. 5, § 48 Abs. 6), Link zur Berufsorientierung
 - [ ] Planer-Tests: Sperre in allen Kombinationen gegen unabhängige Regelprüfung, Vorschläge, Einschränkungen gegen die Tutoriumsblätter

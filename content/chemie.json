@@ -30,9 +30,8 @@
       "n": 3,
       "image": { "src": "c03.jpg", "motion": "zoom-out" },
       "panel": { "type": "combo", "title": "Chemie passt zu …", "items": [
-        { "at": "Englisch", "figure": "e", "a": "Englisch", "b": "Chemie", "ok": true },
-        { "at": "Biologie", "a": "Biologie oder Mathematik", "b": "Chemie", "ok": true },
-        { "at": "Politik und Wirtschaft", "a": "Politik und Wirtschaft", "b": "Chemie", "ok": true }
+        { "at": "Englisch", "ok": true, "with": ["englisch", "biologie", "mathe", "powi"] },
+        { "at": "Politik und Wirtschaft", "ok": false, "with": ["deutsch", "kunst", "geschichte"] }
       ] }
     },
     {

@@ -33,15 +33,10 @@
     {
       "n": 3,
       "image": { "src": "p03.jpg", "motion": "zoom-out" },
-      "panel": {
-        "type": "combo",
-        "title": "Politik und Wirtschaft passt zu …",
-        "items": [
-          { "at": "Fremdsprache", "a": "Politik und Wirtschaft", "b": "Englisch, Biologie oder Chemie", "ok": true },
-          { "at": "kombinierst", "figure": "c", "a": "Politik und Wirtschaft", "b": "Mathematik", "ok": true },
-          { "at": "Mathematik.", "a": "Politik und Wirtschaft", "b": "Deutsch, Kunst oder Geschichte", "ok": false }
-        ]
-      }
+      "panel": { "type": "combo", "title": "Politik und Wirtschaft passt zu …", "items": [
+        { "at": "kombinierst", "ok": true, "with": ["englisch", "biologie", "chemie", "mathe"] },
+        { "at": "Mathematik.", "ok": false, "with": ["deutsch", "kunst", "geschichte"] }
+      ] }
     },
     {
       "n": 4,

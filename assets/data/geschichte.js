@@ -203,22 +203,22 @@ window.FILMS["geschichte"] = {
     "title": "Geschichte passt zu …",
     "items": [
      {
-      "a": "Geschichte",
-      "b": "Englisch oder Mathematik",
       "ok": true,
-      "t": 6.086
-     },
-     {
-      "figure": "d",
-      "a": "Geschichte",
-      "b": "Biologie",
-      "ok": true,
+      "with": [
+       "englisch",
+       "biologie",
+       "mathe"
+      ],
       "t": 10.925
      },
      {
-      "a": "Geschichte",
-      "b": "Deutsch, Kunst oder PoWi",
       "ok": false,
+      "with": [
+       "deutsch",
+       "kunst",
+       "powi",
+       "chemie"
+      ],
       "t": 13.673
      }
     ]

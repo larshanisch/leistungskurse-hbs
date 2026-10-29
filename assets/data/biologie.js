@@ -206,22 +206,20 @@ window.FILMS["biologie"] = {
     "title": "Biologie passt zu …",
     "items": [
      {
-      "a": "Biologie",
-      "b": "Englisch, Deutsch oder Kunst",
       "ok": true,
+      "with": [
+       "deutsch",
+       "englisch",
+       "kunst",
+       "powi",
+       "geschichte",
+       "chemie",
+       "mathe"
+      ],
       "t": 16.802
      },
      {
-      "figure": "d",
-      "a": "Biologie",
-      "b": "Geschichte",
-      "ok": true,
-      "t": 20.32
-     },
-     {
-      "a": "Biologie",
-      "b": "Politik und Wirtschaft, Chemie oder Mathematik",
-      "ok": true,
+      "note": "Mit jedem anderen Leistungskurs an der HBS.",
       "t": 21.2
      }
     ]

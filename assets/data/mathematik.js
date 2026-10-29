@@ -218,22 +218,20 @@ window.FILMS["mathematik"] = {
     "title": "Mathematik passt zu …",
     "items": [
      {
-      "a": "Mathematik",
-      "b": "Englisch, Deutsch oder Kunst",
       "ok": true,
+      "with": [
+       "deutsch",
+       "englisch",
+       "kunst",
+       "powi",
+       "geschichte",
+       "biologie",
+       "chemie"
+      ],
       "t": 14.395
      },
      {
-      "figure": "c",
-      "a": "Mathematik",
-      "b": "Politik und Wirtschaft",
-      "ok": true,
-      "t": 16.318
-     },
-     {
-      "a": "Mathematik",
-      "b": "Geschichte, Biologie oder Chemie",
-      "ok": true,
+      "note": "Mit jedem anderen Leistungskurs an der HBS.",
       "t": 18.765
      }
     ]

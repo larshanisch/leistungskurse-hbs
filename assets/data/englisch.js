@@ -208,23 +208,20 @@ window.FILMS["englisch"] = {
     "title": "Englisch passt zu …",
     "items": [
      {
-      "figure": "sie",
-      "a": "Englisch",
-      "b": "Deutsch",
       "ok": true,
+      "with": [
+       "deutsch",
+       "kunst",
+       "powi",
+       "geschichte",
+       "biologie",
+       "chemie",
+       "mathe"
+      ],
       "t": 8.443
      },
      {
-      "figure": "er",
-      "a": "Englisch",
-      "b": "Kunst",
-      "ok": true,
-      "t": 9.157
-     },
-     {
-      "a": "Englisch",
-      "b": "viele weitere Fächer",
-      "ok": true,
+      "note": "Mit jedem anderen Leistungskurs an der HBS.",
       "t": 10.201
      }
     ]
