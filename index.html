@@ -177,25 +177,35 @@
   .klist { display: flex; flex-wrap: wrap; gap: 0 18px; align-items: flex-start; }
   .kcol { flex: 1 1 330px; min-width: 0; }
   @media (max-width: 599px) { .klist { flex-direction: column; align-items: stretch; } .kcol { display: contents; } .kgrp.g0 { order: 4; } }
-  @media (max-width: 420px) { .kr .kn .ki { display: none; } .kst button { width: 1.5em; height: 1.5em; } .kx { min-width: 2.8em; padding: 0.2em 0.35em; } .kr { gap: 4px; } }
-  @media (min-width: 600px) and (max-width: 1199px) { .kr .kn .ki { display: none; } .kst button { width: 1.5em; height: 1.5em; } .kx { min-width: 3em; padding: 0.2em 0.4em; }
-    .kcol { flex-basis: 290px; } .kplan { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } }
   .kgrp { break-inside: avoid; margin: 0 0 12px; padding: 10px 12px; border-radius: 14px; border: 1px solid var(--line); background: rgba(255,255,255,0.04); }
   .kgrp > .k { display: block; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 4px; }
-  .khead, .kr { display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; align-items: center; gap: 6px; }
-  .khead { font-size: 12px; color: var(--ink-soft); font-weight: 700; padding: 0 0 2px; }
-  .kr { padding: 3px 0; border-top: 1px solid var(--line); font-size: 15px; }
+  .khead, .kr { display: grid; grid-template-columns: minmax(0, 1fr) 3.2em 5.2em 5.2em; align-items: center; gap: 6px; }
+  .kr > :not(.kn), .khead > :not(:first-child) { justify-self: center; text-align: center; }
+  .khead { color: var(--ink-soft); font-weight: 700; padding: 0 0 2px; }
+  .khead span { font-size: 0.8em; }
+  .kr { padding: 3px 0; border-top: 1px solid var(--line); }
+  .kgrp { font-size: 15px; }
   .kr .kn { display: flex; align-items: center; gap: 0.45em; }
   .kr .kn .ki { flex: none; width: 1.3em; height: 1.3em; color: var(--accent); }
   .kr .kn small { color: var(--accent); font-weight: 800; margin-left: 0.3em; }
   .kx { font: inherit; font-size: 12px; font-weight: 800; padding: 0.2em 0.55em; border-radius: 999px; border: 1px dashed rgba(255,255,255,0.35); background: none; color: var(--ink-soft); cursor: pointer; min-width: 3.4em; }
   .kx[aria-pressed="true"] { border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent); }
-  .kx:disabled { opacity: 0.25; cursor: default; }
+  .kx:disabled, .kx.off { opacity: 0.25; cursor: not-allowed; }
+  .knote { position: fixed; z-index: 20; left: 50%; bottom: 24px; transform: translateX(-50%); width: max-content; max-width: min(40em, calc(100vw - 32px));
+    margin: 0; padding: 0.7em 1.1em; border-radius: 14px; background: #3a1f1b; border: 1px solid var(--no); box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    font-size: 16px; font-weight: 600; line-height: 1.35; }
+  .knote[hidden] { display: none; }
+  /* schmale Fenster – nach den Grundregeln, damit sie greifen */
+  @media (min-width: 600px) and (max-width: 1199px) { .kr .kn .ki { display: none; } .kst button { width: 1.5em; height: 1.5em; } .kx { min-width: 3em; padding: 0.2em 0.4em; }
+    .kcol { flex-basis: 290px; } .kplan { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } }
+  @media (max-width: 420px) { .kr .kn .ki { display: none; } .kst button { width: 1.5em; height: 1.5em; } .kx { min-width: 2.8em; padding: 0.2em 0.35em; }
+    .kr, .khead { gap: 4px; grid-template-columns: minmax(0, 1fr) 2.9em 4.8em 4.8em; } }
   .kst { display: inline-flex; align-items: center; gap: 2px; }
   .kst button { width: 1.7em; height: 1.7em; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,0.06); color: var(--ink); font: inherit; font-weight: 800; cursor: pointer; line-height: 1; }
   .kst button:disabled { opacity: 0.25; cursor: default; }
   .kst b { min-width: 1.3em; text-align: center; }
-  .kfix { font-size: 13px; color: var(--ink-soft); text-align: center; min-width: 4.6em; }
+  .kfix.must { color: var(--accent); font-weight: 700; }
+  .kfix { font-size: 13px; color: var(--ink-soft); text-align: center; white-space: nowrap; }
   .kcheck { padding: 14px 16px; border-radius: 16px; border: 1px solid var(--line); background: linear-gradient(160deg, #1d2027 0%, var(--card) 70%); }
   .kcheck h3 { margin: 0.2em 0 0.3em; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
   .kcheck h3:first-child { margin-top: 0; }
@@ -322,8 +332,8 @@
     .kplan { gap: 1.2vw; }
     .kgrp { padding: 0.9vh 0.7vw; margin-bottom: 1.1vh; border-radius: 1.4vh; }
     .kgrp > .k { font-size: max(12px, 1.35vh); }
-    .khead { font-size: max(12px, 1.3vh); }
-    .kr { font-size: max(13px, 1.8vh); padding: 0.3vh 0; }
+    .kgrp { font-size: max(13px, 1.8vh); }
+    .kr { padding: 0.3vh 0; }
     .kx { font-size: max(12px, 1.35vh); }
     .kfix { font-size: max(12px, 1.5vh); }
     .kcheck { padding: 1.5vh 1vw; border-radius: 1.8vh; }
@@ -460,6 +470,7 @@
       <a class="back" id="kBack" href="#planer">← Kurswahl</a>
       <h2 id="kTitle">Kurse selbst planen</h2>
     </div>
+    <p class="knote" id="kNote" role="status" hidden></p>
     <div class="kplan">
       <div class="klist" id="kList"></div>
       <div class="kcheck" id="kCheck" aria-live="polite"></div>
@@ -766,20 +777,52 @@
     ];
     var GKOF = {}; GK.forEach(function (g) { GKOF[g.id] = g; });
     var K = { a: null, b: null, exam: [], bel: {}, ein: {} };
+    var MIN_BEL = { deutsch: 4, englisch: 4, geschichte: 4, mathe: 4, sport: 4 };
+    var MIN_EIN = { deutsch: 4, englisch: 4, mathe: 4, geschichte: 2 };
+    var minBel = function (id) { return MIN_BEL[id] || 0; };
+    var minEin = function (id) { return MIN_EIN[id] || 0; };
     function kStart(a, b) {
       if (K.a === a && K.b === b) return;
       K = { a: a, b: b, exam: [], bel: {}, ein: {} };
       // Vorbelegung: was jede und jeder nach Anlage 7 belegen muss und eindeutig ist
-      ['deutsch', 'englisch', 'powi', 'geschichte', 'mathe', 'sport'].forEach(function (id) { K.bel[id] = 4; });
-      GK.forEach(function (g) { if (K.bel[g.id] == null) K.bel[g.id] = 0; K.ein[g.id] = 0; });
+      K.bel.powi = 4;   // PoWi 4 ist der Regelfall, Geographie ab Q3 nur mit Belegung ab E1 – darum vorbelegt, aber änderbar
+      GK.forEach(function (g) { if (K.bel[g.id] == null) K.bel[g.id] = minBel(g.id); K.ein[g.id] = minEin(g.id); });
     }
     var isLK = function (id) { return id === K.a || id === K.b; };
     var isEx = function (id) { return K.exam.indexOf(id) >= 0; };
-    var bel = function (id) { return isLK(id) ? 4 : K.bel[id]; };
+    var bel = function (id) { return isLK(id) || isEx(id) ? 4 : K.bel[id]; };
     var ein = function (id) { return isLK(id) || isEx(id) ? 4 : K.ein[id]; };
     var maxOf = function (ids, f) { return Math.max.apply(null, ids.map(f)); };
     var ids = function (key) { return GK.filter(function (g) { return g[key]; }).map(function (g) { return g.id; }); };
 
+    function kNeeds(ex) {
+      var all = [K.a, K.b].concat(ex), need = [];
+      var has = function (id) { return all.indexOf(id) >= 0; };
+      if (!has('deutsch')) need.push('Deutsch');
+      if (!has('mathe')) need.push('Mathematik');
+      if (!all.some(function (id) { var g = GKOF[id]; return g && (g.fs || g.nw || g.inf); })) need.push('eine Fremdsprache, Naturwissenschaft oder Informatik');
+      var fields = {}; all.forEach(function (id) { var g = GKOF[id]; if (g && g.f) fields[g.f] = true; });
+      [1, 2, 3].forEach(function (f) { if (!fields[f]) need.push('ein Fach aus Aufgabenfeld ' + FIELDS[f - 1].num); });
+      var two = GKOF[K.a].f !== GKOF[K.b].f;   // LKs in verschiedenen Feldern: jedes 3. Fach außer Sport reicht
+      var written = ex.some(function (id) { return id !== 'sport' && (two || GKOF[id].f !== GKOF[K.a].f); });
+      if (!written && !(ex.length < 3 && two) && !need.some(function (t) { return /^ein Fach aus/.test(t); })) need.push('ein schriftliches 3. Fach' + (two ? '' : ' aus einem anderen Aufgabenfeld') + ' (nicht Sport)');
+      return need;
+    }
+    // Lässt sich die Auswahl zu drei gültigen Prüfungsfächern ergänzen? (höchstens 455 Dreiergruppen)
+    function kCompletable(ex) {
+      if (ex.length === 3) return kNeeds(ex).length === 0;
+      return GK.some(function (g) { return !isLK(g.id) && ex.indexOf(g.id) < 0 && kCompletable(ex.concat(g.id)); });
+    }
+    // Warum ein Fach als Prüfungsfach nicht mehr geht – leer heißt: wählbar
+    function kWhy(id) {
+      if (isEx(id) || isLK(id)) return '';
+      if (K.exam.length >= 3) return 'Du hast schon drei Prüfungsfächer gewählt – wähl erst eins ab.';
+      if (kCompletable(K.exam.concat(id))) return '';
+      var need = kNeeds(K.exam), left = 3 - K.exam.length;
+      var und = function (a) { return a.length > 1 ? a.slice(0, -1).join(', ') + ' und ' + a[a.length - 1] : a[0]; };
+      return GKOF[id].name + ' geht hier nicht als Prüfungsfach: ' + (need.length ? (need.length > 1 ? 'Es fehlen noch ' : 'Es fehlt noch ') + und(need) +
+        ', und dafür bleib' + (left > 1 ? 'en nur ' + left + ' Plätze' : 't nur 1 Platz') + '.' : 'Damit ginge keine gültige Wahl mehr auf.');
+    }
     function kChecks() {
       var NW = ids('nw'), FS2 = GK.filter(function (g) { return g.fs === 2; }).map(function (g) { return g.id; });
       var KM = ids('km'), RE = ids('re'), AF2 = GK.filter(function (g) { return g.f === 2; }).map(function (g) { return g.id; });
@@ -792,7 +835,9 @@
       var has = function (id) { return all.indexOf(id) >= 0; };
       var fields = {}; all.forEach(function (id) { var g = GKOF[id]; if (g && g.f) fields[g.f] = true; });
       var written = ex.some(function (id) { var f = {}; f[GKOF[K.a].f] = f[GKOF[K.b].f] = f[GKOF[id].f] = 1; return id !== 'sport' && Object.keys(f).length >= 2; });
-      P.push([ex.length === 3, ex.length === 3 ? 'drei Prüfungsfächer gewählt' : 'noch ' + (3 - ex.length) + ' Prüfungsfach/-fächer wählen (Knopf „3–5“)']);
+      var need = kNeeds(ex);
+      P.push([ex.length === 3, ex.length === 3 ? 'drei Prüfungsfächer gewählt' : 'noch ' + (3 - ex.length) + ' Prüfungsfach/-fächer wählen (Knopf „3–5“)' +
+        (need.length ? ' – nötig: ' + need.join(', ') : '')]);
       if (ex.length === 3) {
         P.push([has('deutsch') && has('mathe'), 'Deutsch und Mathematik dabei']);
         P.push([all.some(function (id) { var g = GKOF[id]; return g && (g.fs || g.nw || g.inf); }), 'Fremdsprache, Naturwissenschaft oder Informatik dabei']);
@@ -836,10 +881,12 @@
       var grpHtml = groups.map(function (gr) {
         return '<div class="kgrp g' + gr[0] + '"><span class="k">' + gr[1] + '</span>' + head + GK.filter(function (g) { return g.f === gr[0]; }).map(function (g) {
           if (isLK(g.id)) return '<div class="kr"><span class="kn">' + fachIcon(g.id, 'ki') + esc(g.name) + '<small>LK</small></span><span></span><span class="kfix">4</span><span class="kfix">4 · doppelt</span></div>';
-          var full = K.exam.length >= 3 && !isEx(g.id);
-          var exBtn = '<button type="button" class="kx" data-x="' + g.id + '" aria-pressed="' + isEx(g.id) + '"' + (full ? ' disabled' : '') + '>3–5</button>';
-          var belCell = isEx(g.id) ? '<span class="kfix">4</span>' : stepper(g.id, 'bel', K.bel[g.id], 0, 4);
-          var einCell = isEx(g.id) ? '<span class="kfix">4</span>' : stepper(g.id, 'ein', K.ein[g.id], 0, K.bel[g.id]);
+          var why = kWhy(g.id);
+          var exBtn = '<button type="button" class="kx' + (why ? ' off' : '') + '" data-x="' + g.id + '" aria-pressed="' + isEx(g.id) + '"' +
+            (why ? ' aria-disabled="true" title="' + esc(why) + '"' : '') + '>3–5</button>';
+          var must = '<span class="kfix must" title="Pflicht">4 · Pflicht</span>';
+          var belCell = isEx(g.id) ? '<span class="kfix">4</span>' : minBel(g.id) === 4 ? must : stepper(g.id, 'bel', K.bel[g.id], minBel(g.id), 4);
+          var einCell = isEx(g.id) ? '<span class="kfix">4</span>' : minEin(g.id) === 4 ? must : stepper(g.id, 'ein', K.ein[g.id], minEin(g.id), K.bel[g.id]);
           return '<div class="kr"><span class="kn">' + fachIcon(g.id, 'ki') + esc(g.name) + '</span>' + exBtn + belCell + einCell + '</div>';
         }).join('') + '</div>';
       });
@@ -857,19 +904,26 @@
       var allOk = c.P.concat(c.B, c.E).every(function (x) { return x[0]; });
       $('kCheck').innerHTML = '<p class="verdict' + (allOk ? ' ok' : '') + '">' + (allOk ? 'Alles erfüllt.' : 'Noch nicht alles erfüllt.') + '</p>' +
         h3('Prüfungsfächer 3 bis 5', c.P) + list(c.P) + h3('Belegen', c.B) + list(c.B) + h3('Einbringen', c.E) + list(c.E) +
-        '<p class="fine">Belegt = besuchte Kurse in Q1 bis Q4, eingebracht = Kurse, die in die Abiturnote zählen; LK-Kurse zählen doppelt. Ohne Noten: ' +
+        '<p class="fine">Belegt = besuchte Kurse in Q1 bis Q4, eingebracht = Kurse, die in die Abiturnote zählen; LK-Kurse zählen doppelt. „Pflicht“ und Geschichte 2 sind ohne Wahl vorgegeben. Ohne Noten: ' +
         'keiner darf 0 Punkte haben, höchstens 6 unter 5 Punkten. Sonderfall zweite Fremdsprache nach § 14 Abs. 3 nicht berücksichtigt – das klärt die ' +
         'Oberstufenleitung. Grundlage: OAVO § 13 Abs. 9 mit Anlage 7, § 24, § 26.</p>';
     }
+    var kNoteTimer = 0;
+    function kNote(text) {
+      var n = $('kNote'); n.textContent = text; n.hidden = false;
+      clearTimeout(kNoteTimer); kNoteTimer = setTimeout(function () { n.hidden = true; }, 5000);
+    }
     $('kList').addEventListener('click', function (e) {
       var x = e.target.closest('[data-x]'), st = e.target.closest('[data-k]');
+      if (x && x.classList.contains('off')) { kNote(kWhy(x.dataset.x)); return; }
       if (x && !x.disabled) {
         var id = x.dataset.x, i = K.exam.indexOf(id);
-        if (i >= 0) K.exam.splice(i, 1); else if (K.exam.length < 3) { K.exam.push(id); K.bel[id] = 4; K.ein[id] = 4; }
+        if (i >= 0) { K.exam.splice(i, 1); var pv = (K.prev || {})[id]; if (pv) { K.bel[id] = pv[0]; K.ein[id] = pv[1]; } }
+        else if (K.exam.length < 3) { (K.prev = K.prev || {})[id] = [K.bel[id], K.ein[id]]; K.exam.push(id); }
       } else if (st && !st.disabled) {
         var id2 = st.dataset.id, d = Number(st.dataset.d);
-        if (st.dataset.k === 'bel') { K.bel[id2] = Math.max(0, Math.min(4, K.bel[id2] + d)); K.ein[id2] = Math.min(K.ein[id2], K.bel[id2]); }
-        else K.ein[id2] = Math.max(0, Math.min(K.bel[id2], K.ein[id2] + d));
+        if (st.dataset.k === 'bel') { K.bel[id2] = Math.max(minBel(id2), Math.min(4, K.bel[id2] + d)); K.ein[id2] = Math.max(minEin(id2), Math.min(K.ein[id2], K.bel[id2])); }
+        else K.ein[id2] = Math.max(minEin(id2), Math.min(K.bel[id2], K.ein[id2] + d));
       } else return;
       renderKurse();
     });

@@ -125,6 +125,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Listen im Film mit Punkten (Entscheidung 88). Layout messen: auch Überdeckung innerhalb von Zeilen (Geschwister-Rechtecke, `scrollWidth`), nicht nur Fußzeile.
 - 29.10.2026: Halbjahre heißen in Filmen Q1–Q4 (Entscheidung 89): **Deutsch 5:44, Englisch 6:12, Kunst 5:51, PoWi 5:50, Geschichte 5:52,
   Mathematik 5:41, Biologie 5:46, Chemie 5:46 min**. Bestimmte Halbjahre nie als „erstes/drittes/letztes Halbjahr“ sprechen oder schreiben.
+- 29.10.2026: Rechner sperrt unmögliche Prüfungsfächer (`kNeeds`, `kCompletable`, `kWhy` in `index.html`, Entscheidung 90).
+- 29.10.2026: Rechner belegt Pflicht ohne Wahl vor (`MIN_BEL`, `MIN_EIN`, Entscheidung 91). CSS: Regeln für schmale Fenster immer nach den Grundregeln.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

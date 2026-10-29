@@ -1,6 +1,7 @@
 # Faktenblatt: Leistungskurse in Hessen – fächerübergreifende amtliche Vorgaben
 
 Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Q-Phase 2027/28–2028/29, Landesabitur 2029
+Version 2.1 (29.10.2026: Fächer mit zentralen Aufgaben im Landesabitur 2028 am Originaltext)
 Version 2.0 (29.10.2026: Belegpflicht § 13 Abs. 9 und Anlage 7 am Originaltext; Grundkurs-Angebot der HBS)
 Version 1.9 (29.10.2026: Sport als Prüfungsfach, § 24 Abs. 3–4 am Originaltext)
 Version 1.8 (29.10.2026: Einbringpflichten § 26 Abs. 4–7 am Originaltext)
@@ -156,6 +157,16 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
   - An der HBS gibt es einen Sport-Abi-Kurs. – SCHULE (Nutzer 29.10.2026)
   - **[ABLEITUNG] Je Kombination:** Sport deckt weder Deutsch, Mathematik, Fremdsprache/Naturwissenschaft noch ein Aufgabenfeld ab. Es geht also nur, wenn unter den Prüfungsfächern 3–5 ein frei wählbarer Platz bleibt. Nach den Tutoriumsblättern geht das bei 18 von 25 Kombinationen, nicht bei E + Ku, E + Bio, E + Ch, Bio + E, Bio + Ku, Bio + Ch, M + Ku (dort sind 3–5 durch Deutsch/Mathematik und das fehlende Aufgabenfeld belegt). Als Prüfungsfach sind die vier Sportkurse Q1–Q4 einzubringen (§ 26 Abs. 4 Nr. 1), sonst bis zu drei (§ 26 Abs. 5 Nr. 1).
 - **Die beiden LKs sind schriftliche Prüfungsfächer** (1. und 2. Prüfungsfach). Dazu kommt ein frei gewähltes 3. schriftliches Fach. Die drei schriftlichen Fächer müssen mindestens zwei Aufgabenfelder abdecken. – OAVO § 24 Abs. 2, ebd., abgerufen 27.10.2026
+- **Welche Fächer schriftlich geprüft werden können (Landesabitur 2028):** „Die in Abschnitt III genannten Fächer sind unter der
+  Berücksichtigung der genannten Kursarten als Prüfungsfächer … zugelassen.“ Weitere Fächer nur per Einzelerlass, dann „dezentral“. – LA28
+  Abschn. I, https://kultus.hessen.de/sites/kultus.hessen.de/files/2026-07/abiturerlass_2028.pdf, abgerufen 29.10.2026
+  - Abschnitt III nennt mit **Grundkurs und Leistungskurs** („Grundlegendes/erhöhtes Niveau“): Deutsch, Englisch, Französisch, Latein,
+    Griechisch, Russisch, Spanisch, Italienisch, Kunst, **Musik**, Geschichte, Politik und Wirtschaft, **Geographie**, Wirtschaftswissenschaften,
+    **Evangelische und Katholische Religion**, **Ethik**, Philosophie, Mathematik, Biologie, Chemie, **Physik**, **Informatik**. Nur Grundkurs:
+    Geschichte und PoWi bilingual. **Sport nur Leistungskurs** („Erhöhtes Niveau (Leistungskurs)“, Abschn. III.28). – LA28 Abschn. III, jeweils
+    Unterpunkt „Kursart“, URL wie oben, abgerufen 29.10.2026
+  - **[ABLEITUNG]** Damit kann jedes Grundkursfach des HBS-Angebots 3. (schriftliches) Prüfungsfach sein, außer Sport (Grundkurs Sport nur
+    4. oder 5., OAVO § 24 Abs. 4). Voraussetzung bleibt durchgehender Unterricht ab der Einführungsphase (§ 24 Abs. 5).
 - Alle Leistungskurse werden **zentral** (Landesabitur) geprüft, ebenso das 3. Prüfungsfach. – https://kultus.hessen.de/schulsystem/schulformen-und-bildungsgaenge/gymnasium/landesabitur, abgerufen 27.10.2026
 - Die Aufgaben stellt das Ministerium landesweit einheitlich. Bearbeitungszeit und Auswahlmodus legt es **per Erlass** fest. – OAVO § 25 Abs. 1 Satz 5, Abs. 2, ebd., abgerufen 27.10.2026
 - Prüfungsstoff ist der Inhalt aller vier Halbjahre Q1 bis Q4. – OAVO § 25 Abs. 1 Satz 2, ebd., abgerufen 27.10.2026
