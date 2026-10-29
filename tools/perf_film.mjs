@@ -51,11 +51,29 @@ try {
   const metrics = async () => Object.fromEntries((await send('Performance.getMetrics')).result.metrics.map(m => [m.name, m.value]));
   const m0 = await metrics();
   const PROF = args.includes('--profile');
+  // Grafikebenen: Fläche aller gezeichneten Ebenen in Geräte-Pixeln (Richtwert für den Grafikspeicher)
+  let layerPeak = 0, layerPeakN = 0, layerPeakList = []; const seenLayers = new Set(); let newLayers = 0, counting = false;
+  if (args.includes('--layers')) {
+    await send('LayerTree.enable');
+    ws.addEventListener('message', (e) => { const m = JSON.parse(e.data); if (m.method !== 'LayerTree.layerTreeDidChange' || !m.params.layers) return;
+      const drawn = m.params.layers.filter(l => l.drawsContent);
+      drawn.forEach(l => { if (!seenLayers.has(l.layerId)) { seenLayers.add(l.layerId); if (counting) newLayers++; } });
+      const px = drawn.reduce((a, l) => a + l.width * l.height, 0) * DPR * DPR;
+      if (px > layerPeak) { layerPeak = px; layerPeakN = drawn.length; layerPeakList = drawn.map(l => [Math.round(l.width), Math.round(l.height), l.backendNodeId]); } });
+  }
   if (PROF) { await send('Profiler.enable'); await send('Profiler.setSamplingInterval', { interval: 200 }); await send('Profiler.start'); }
+  counting = true;
   const res = await evalJs(`new Promise((resolve) => {
+    // Flackern zählen: Sichtbarkeitswechsel (Klasse on) und Bildwechsel je Element
+    const flips = new Map(); const keyOf = (n) => (n.id || n.className || n.tagName) + '';
+    const mo = new MutationObserver((ms) => ms.forEach((m) => { const n = m.target;
+      if (m.attributeName === 'class') { const was = (m.oldValue || '').split(' ').includes('on'), is = n.classList.contains('on'); if (was !== is) { const k = 'on:' + keyOf(n); flips.set(k, (flips.get(k) || 0) + 1); } }
+      if (m.attributeName === 'src') { const k = 'src:' + (n.closest('.shot') ? n.closest('.shot').id : keyOf(n)); flips.set(k, (flips.get(k) || 0) + 1); } }));
+    mo.observe(document.getElementById('stage'), { subtree: true, attributes: true, attributeOldValue: true, attributeFilter: ['class', 'src'] });
+    window.__flips = flips;
     window.__film.play();
     const ts = []; const t0 = performance.now(); const film0 = window.__film.time(); let last = film0, back = 0, backMax = 0;
-    const step = (now) => { ts.push(now); const ft = window.__film.time(); if (ft < last - 0.001) { back++; backMax = Math.max(backMax, last - ft); } last = ft; if (now - t0 < ${SEC * 1000}) requestAnimationFrame(step); else resolve({ ts, filmSec: window.__film.time() - film0, stats: window.__film.stats || null, back, backMax }); };
+    const step = (now) => { ts.push(now); const ft = window.__film.time(); if (ft < last - 0.001) { back++; backMax = Math.max(backMax, last - ft); } last = ft; if (now - t0 < ${SEC * 1000}) requestAnimationFrame(step); else resolve({ ts, filmSec: window.__film.time() - film0, stats: window.__film.stats || null, back, backMax, flips: [...window.__flips.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6) }); };
     requestAnimationFrame(step);
   })`);
   const m1 = await metrics();
@@ -80,7 +98,7 @@ try {
   const fps = (d.length / (SEC)).toFixed(1);
   console.log(JSON.stringify({ fach, t: T, cpu: CPU, size: `${W}x${H}`, dpr: DPR, coarse: COARSE, css: CSS || null, fps: Number(fps),
     median_ms: +q(0.5).toFixed(1), p95_ms: +q(0.95).toFixed(1), max_ms: +d[d.length - 1].toFixed(1),
-    over50ms: d.filter(x => x > 50).length, filmSec: +res.filmSec.toFixed(1), ton: res.stats, uhrRueckwaerts: res.back, groessterRuecksprung_s: +res.backMax.toFixed(3) }));
+    over50ms: d.filter(x => x > 50).length, filmSec: +res.filmSec.toFixed(1), ton: res.stats, uhrRueckwaerts: res.back, groessterRuecksprung_s: +res.backMax.toFixed(3), wechsel: res.flips, ebenen: await Promise.all(layerPeakList.sort((a, b) => b[0] * b[1] - a[0] * a[1]).slice(0, 9).map(async ([w, h, id]) => { let n = '?'; try { await send('DOM.getDocument', { depth: 0 }); const d = (await send('DOM.describeNode', { backendNodeId: id })).result.node; n = d.localName + (d.attributes ? ((i => i >= 0 ? '#' + d.attributes[i + 1] : '')(d.attributes.indexOf('id')) + (i => i >= 0 ? '.' + d.attributes[i + 1].split(' ').join('.') : '')(d.attributes.indexOf('class'))) : ''); } catch (e) { n = 'Ebene ohne Element'; } return w + 'x' + h + ' ' + n; })), ebenenSpitze_MB: +(layerPeak * 4 / 1e6).toFixed(0), ebenenAnzahl: layerPeakN, neueEbenen: newLayers }));
 } finally {
   ws.close(); chrome.kill();
   await new Promise(r => setTimeout(r, 800));

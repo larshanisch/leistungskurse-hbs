@@ -39,6 +39,8 @@
     if (m[prop] !== val) { m[prop] = val; node.style[prop] = val; }
   };
   const setText = (node, txt) => { if (node.textContent !== txt) node.textContent = txt; };
+  // durchsichtig = ausgeblendet: so muss der Browser die Ebene gar nicht erst zeichnen
+  const setOpacity = (node, v) => { setStyle(node, 'opacity', v); setStyle(node, 'visibility', v > 0 ? 'visible' : 'hidden'); };
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 
   // ---- Zeitachse aufbereiten -------------------------------------------------------------
@@ -97,7 +99,7 @@
     }
     // "pos": Ausschnitt eines Hochformats wandert, z. B. [[0.5, 1], [0.5, 0]] = von unten nach oben
     if (shot.pos) layer.img.style.objectPosition = lerp(shot.pos[0][0], shot.pos[1][0], p) * 100 + '% ' + lerp(shot.pos[0][1], shot.pos[1][1], p) * 100 + '%';
-    setStyle(layer.node, 'opacity', +opacity.toFixed(3));
+    setOpacity(layer.node, +opacity.toFixed(3));
   }
 
   let currentShot = null;   // für die große Bildunterschrift neben Porträtkarten
@@ -106,7 +108,7 @@
     if (t < sc.start) {
       // Kapitelkarte: das vorige Bild blendet aus
       const prev = shots.filter((s) => s.to <= sc.start).pop();
-      layers.forEach((l) => setStyle(l.node, 'opacity', 0));
+      layers.forEach((l) => setOpacity(l.node, 0));
       if (prev) paintShot(layers[shots.indexOf(prev) % 2], prev, t, clamp01(1 - (t - sc.chapStart) / CHAPTER_FADE));
       return;
     }
@@ -118,7 +120,7 @@
     const curLayer = layers[i % 2], otherLayer = layers[(i + 1) % 2];
     // Unter dem neuen Bild liegt das vorige (Überblendung) – nach einer Kapitelkarte kommt es aus dem Schwarz
     if (prev && fadeIn < 1 && !afterChapter) paintShot(otherLayer, prev, t, 1);
-    else setStyle(otherLayer.node, 'opacity', 0);
+    else setOpacity(otherLayer.node, 0);
     setStyle(curLayer.node, 'zIndex', 2); setStyle(otherLayer.node, 'zIndex', 1);
     paintShot(curLayer, cur, t, fadeIn);
     currentShot = cur;
@@ -291,8 +293,8 @@
       const c = t - sc.chapStart;
       chapOp = c < CHAPTER_FADE ? c / CHAPTER_FADE : (t < sc.start ? 1 : 1 - (t - sc.start) / CHAPTER_FADE);
     }
-    setStyle(ui.chapter, 'opacity', +clamp01(chapOp).toFixed(3));
-    setStyle(ui.title, 'opacity', sc.title ? +clamp01(Math.min((lt - 0.8) / 1.2, (sc.duration - 1.5 - lt) / 1.0)).toFixed(3) : 0);
+    setOpacity(ui.chapter, +clamp01(chapOp).toFixed(3));
+    setOpacity(ui.title, sc.title ? +clamp01(Math.min((lt - 0.8) / 1.2, (sc.duration - 1.5 - lt) / 1.0)).toFixed(3) : 0);
     ui.corner.classList.toggle('on', !!sc.corner && lt > 0.5 && live && !tkOn);
     ui.logo.classList.toggle('on', !!sc.logo && lt > 0.3 && live);
 
