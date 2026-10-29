@@ -1,6 +1,7 @@
 # Faktenblatt: Leistungskurse in Hessen – fächerübergreifende amtliche Vorgaben
 
 Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Q-Phase 2027/28–2028/29, Landesabitur 2029
+Version 1.9 (29.10.2026: Sport als Prüfungsfach, § 24 Abs. 3–4 am Originaltext)
 Version 1.8 (29.10.2026: Einbringpflichten § 26 Abs. 4–7 am Originaltext)
 Version 1.7 (29.10.2026: Klausurzahl je LK-Kombination)
 Version 1.6 (29.10.2026: Kombinationen nach den Tutoriumsblättern der HBS)
@@ -135,6 +136,9 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
 ## 5. Abiturprüfung
 
 - **Fünf Prüfungsfächer:** 3 schriftlich, das 4. mündlich, das 5. als Präsentation, besondere Lernleistung oder mündliche Prüfung. Die drei Aufgabenfelder müssen abgedeckt sein. – OAVO § 24 Abs. 1, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
+- **Sport als Prüfungsfach:** Mündliche Prüfungsfächer sind „Fächer aus den drei Aufgabenfeldern oder Sport“ (Abs. 3) – Sport gehört zu keinem Aufgabenfeld. „Sport und Darstellendes Spiel können als Grundkursfächer ausschließlich viertes oder fünftes Prüfungsfach sein, wobei jeweils eine mündliche und eine fachpraktische Prüfung durchgeführt werden.“ (Abs. 4) – OAVO § 24 Abs. 3–4, https://www.rv.hessenrecht.hessen.de/perma?d=hevr-OSt_AbiVHEV13P24 (Fassung 10.07.2024, gültig ab 01.08.2024), abgerufen 29.10.2026
+  - An der HBS gibt es einen Sport-Abi-Kurs. – SCHULE (Nutzer 29.10.2026)
+  - **[ABLEITUNG] Je Kombination:** Sport deckt weder Deutsch, Mathematik, Fremdsprache/Naturwissenschaft noch ein Aufgabenfeld ab. Es geht also nur, wenn unter den Prüfungsfächern 3–5 ein frei wählbarer Platz bleibt. Nach den Tutoriumsblättern geht das bei 18 von 25 Kombinationen, nicht bei E + Ku, E + Bio, E + Ch, Bio + E, Bio + Ku, Bio + Ch, M + Ku (dort sind 3–5 durch Deutsch/Mathematik und das fehlende Aufgabenfeld belegt). Als Prüfungsfach sind die vier Sportkurse Q1–Q4 einzubringen (§ 26 Abs. 4 Nr. 1), sonst bis zu drei (§ 26 Abs. 5 Nr. 1).
 - **Die beiden LKs sind schriftliche Prüfungsfächer** (1. und 2. Prüfungsfach). Dazu kommt ein frei gewähltes 3. schriftliches Fach. Die drei schriftlichen Fächer müssen mindestens zwei Aufgabenfelder abdecken. – OAVO § 24 Abs. 2, ebd., abgerufen 27.10.2026
 - Alle Leistungskurse werden **zentral** (Landesabitur) geprüft, ebenso das 3. Prüfungsfach. – https://kultus.hessen.de/schulsystem/schulformen-und-bildungsgaenge/gymnasium/landesabitur, abgerufen 27.10.2026
 - Die Aufgaben stellt das Ministerium landesweit einheitlich. Bearbeitungszeit und Auswahlmodus legt es **per Erlass** fest. – OAVO § 25 Abs. 1 Satz 5, Abs. 2, ebd., abgerufen 27.10.2026

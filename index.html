@@ -588,9 +588,9 @@
       }
       if (SUBJ[a].field === SUBJ[b].field) {
         var other = FIELDS.filter(function (f) { return f.id !== SUBJ[a].field; }).map(function (f) { return f.num; });
-        notes.push('Beide LKs liegen in Aufgabenfeld ' + FIELDS[SUBJ[a].field - 1].num + ', die drei schriftlichen Fächer müssen aber mindestens zwei Aufgabenfelder abdecken. ' +
-          'Dein 3. Prüfungsfach kommt deshalb aus Aufgabenfeld ' + other.join(' oder ') +
-          (SUBJ[a].field === 3 ? ' – also weder Mathematik noch eine Naturwissenschaft' : need.indexOf('Deutsch') >= 0 ? ' – Deutsch also nicht' : '') + '.');
+        notes.push('Beide LKs liegen in Aufgabenfeld ' + FIELDS[SUBJ[a].field - 1].num + ' – das 3. Fach kommt aus ' + other.join(' oder ') +
+          (SUBJ[a].field === 3 ? ', also weder Mathematik noch eine Naturwissenschaft' : need.indexOf('Deutsch') >= 0 ? ', Deutsch also nicht' : '') +
+          ' <small>(schriftlich müssen zwei Aufgabenfelder vorkommen)</small>.');
       }
       // wie viele Prüfungsfächer frei bleiben, zeigen die Schaltflächen „frei wählbar“ (kein eigener Satz, Entscheidung 55)
       var free = 3 - need.length;
@@ -604,6 +604,10 @@
         ? 'Deutsch und Mathematik schreiben schon im Grundkurs zwei pro Halbjahr – mit diesen Leistungskursen kommt keine dazu.'
         : 'pro Halbjahr ' + (more.length === 1 ? 'eine' : 'zwei') + ' mehr, als wenn du ' + more.join(' und ') + ' als Grundkurs hättest' +
           (more.length === 1 ? ' – Deutsch und Mathematik haben schon im Grundkurs zwei.' : '.')));
+      // Sport-Abi (OAVO § 24 Abs. 3–4): nur 4. oder 5. Prüfungsfach, deckt keine Pflicht ab – braucht einen freien Platz
+      notes.push('<b>Sport-Abi:</b> ' + (free > 0
+        ? 'möglich, als 4. oder 5. Prüfungsfach (frei wählbarer Platz).'
+        : 'hier nicht möglich – 3 bis 5 sind durch Pflichtfächer belegt.'));
       return { need: need, free: free, notes: notes, third: third };
     }
 
@@ -627,7 +631,8 @@
           has('geschichte') ? lk('LK') + ' ' + gk('+ 2 PoWi') : has('powi') ? lk('LK') + ' ' + gk('+ 2 Geschichte') : gk('6 Grundkurse')],
         ['2. Fremd­sprache oder 2. Natur­wiss./Informatik', '2 Kurse',
           has('biologie') && has('chemie') ? lk('deine LKs') : gk('2 Grundkurse')],
-        ['Prüfungsfächer 3 bis 5', 'alle vier Halbjahre', gk('12 Grundkurse')]
+        ['Prüfungsfächer 3 bis 5', 'alle vier Halbjahre', gk('12 Grundkurse')],
+        ['Sport', 'bis zu 3 Kurse; als Prüfungsfach alle 4', gk('freiwillig')]
       ];
       return '<div class="ein">' + rows.map(function (r) {
         return '<div>' + esc(r[0]) + '<small>' + esc(r[1]) + '</small></div><div class="st">' + r[2] + '</div>';
@@ -675,8 +680,8 @@
         '</div>' +
         '<div class="spread"><span class="k">Auf 3 bis 5 verteilst du – Reihenfolge frei</span><div class="need">' + chipsHtml + '</div></div>' +
         '<ul>' + c.notes.map(function (n) { return '<li>' + n + '</li>'; }).join('') + '</ul>' +
-        '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Das Angebot an Leistungskursen ' +
-        'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 9 Abs. 6, § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>');
+        '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Das Angebot kann sich ändern; ' +
+        'einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 9 Abs. 6, § 13 Abs. 2 und 5, § 24.</p>');
     }
 
     function filmSubj(film) { var id = Object.keys(SUBJ).filter(function (k) { return SUBJ[k].film === film; })[0]; return id ? SUBJ[id] : null; }

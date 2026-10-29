@@ -15,6 +15,9 @@
   const HOME = 'index.html#' + encodeURIComponent(fachId);
   const FADE = 1.2;          // Überblendung zwischen Bildern
   const CHAPTER_FADE = 0.7;  // Ein- und Ausblenden der Kapitelkarte
+  const HARD = new URLSearchParams(location.search).has('hart')
+    ? new URLSearchParams(location.search).get('hart') !== '0'
+    : !!(window.matchMedia && matchMedia('(min-resolution: 2dppx)').matches);
   const SUB_HOLD = 0.35;     // Untertitel steht noch kurz nach dem Satzende
   const COUNT_UP = 0.9;      // Dauer des Hochzählens einer Zahl
   const RING_GROW = 1.3;     // Dauer, bis ein Ringsegment voll ist
@@ -109,13 +112,13 @@
       // Kapitelkarte: das vorige Bild blendet aus
       const prev = shots.filter((s) => s.to <= sc.start).pop();
       layers.forEach((l) => setOpacity(l.node, 0));
-      if (prev) paintShot(layers[shots.indexOf(prev) % 2], prev, t, clamp01(1 - (t - sc.chapStart) / CHAPTER_FADE));
+      if (prev && !HARD) paintShot(layers[shots.indexOf(prev) % 2], prev, t, clamp01(1 - (t - sc.chapStart) / CHAPTER_FADE));
       return;
     }
     let i = shots.findIndex((s) => t >= s.from && t < s.to);
     if (i < 0) i = shots.length - 1;
     const cur = shots[i], prev = shots[i - 1];
-    const fadeIn = clamp01((t - cur.from) / FADE);
+    const fadeIn = HARD ? 1 : clamp01((t - cur.from) / FADE);
     const afterChapter = cur.from === cur.scene.start && cur.scene.chapterDur > 0;
     const curLayer = layers[i % 2], otherLayer = layers[(i + 1) % 2];
     // Unter dem neuen Bild liegt das vorige (Überblendung) – nach einer Kapitelkarte kommt es aus dem Schwarz
@@ -291,10 +294,11 @@
     let chapOp = 0;
     if (sc.chapterDur && t < sc.start + CHAPTER_FADE) {
       const c = t - sc.chapStart;
-      chapOp = c < CHAPTER_FADE ? c / CHAPTER_FADE : (t < sc.start ? 1 : 1 - (t - sc.start) / CHAPTER_FADE);
+      chapOp = HARD ? (t < sc.start ? 1 : 0) : c < CHAPTER_FADE ? c / CHAPTER_FADE : (t < sc.start ? 1 : 1 - (t - sc.start) / CHAPTER_FADE);
     }
     setOpacity(ui.chapter, +clamp01(chapOp).toFixed(3));
-    setOpacity(ui.title, sc.title ? +clamp01(Math.min((lt - 0.8) / 1.2, (sc.duration - 1.5 - lt) / 1.0)).toFixed(3) : 0);
+    setOpacity(ui.title, !sc.title ? 0 : HARD ? (lt >= 0.8 && lt < sc.duration - 1.5 ? 1 : 0)
+      : +clamp01(Math.min((lt - 0.8) / 1.2, (sc.duration - 1.5 - lt) / 1.0)).toFixed(3));
     ui.corner.classList.toggle('on', !!sc.corner && lt > 0.5 && live && !tkOn);
     ui.logo.classList.toggle('on', !!sc.logo && lt > 0.3 && live);
 

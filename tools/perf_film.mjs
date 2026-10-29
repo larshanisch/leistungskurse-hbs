@@ -18,6 +18,7 @@ const opt = (k, d) => { const a = args.find(x => x.startsWith('--' + k + '=')); 
 const T = Number(opt('t', 150)), SEC = Number(opt('sec', 10)), CPU = Number(opt('cpu', 4));
 const [W, H] = opt('size', '1920,1080').split(',').map(Number);
 const CSS = opt('css', '');
+const Q = opt('q', '');       // zusätzliche Adressparameter, z. B. --q=hart=0
 const DPR = Number(opt('dpr', 1));
 const COARSE = Number(opt('coarse', 0));   // Tonzeit nur in groben Schritten melden (wie manche Tafel-Browser), z. B. 0.25   // Pixeldichte wie auf 4K-Tafeln (Promethean: 2)
 
@@ -44,7 +45,7 @@ try {
   if (DPR !== 1) await send('Emulation.setDeviceMetricsOverride', { width: W, height: H, deviceScaleFactor: DPR, mobile: false });
   if (COARSE) await send('Page.addScriptToEvaluateOnNewDocument', { source: `(() => { const d = Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'currentTime');
     Object.defineProperty(HTMLMediaElement.prototype, 'currentTime', { configurable: true, get() { return Math.floor(d.get.call(this) / ${COARSE}) * ${COARSE}; }, set(v) { d.set.call(this, v); } }); })();` });
-  await send('Page.navigate', { url: `http://localhost:8317/film.html?fach=${fach}&t=${T}&muted=1` });
+  await send('Page.navigate', { url: `http://localhost:8317/film.html?fach=${fach}&t=${T}&muted=1${Q ? "&" + Q : ""}` });
   await new Promise(r => setTimeout(r, 4000));
   if (CSS) await evalJs(`(() => { const s = document.createElement('style'); s.textContent = ${JSON.stringify(CSS)}; document.head.appendChild(s); })()`);
   await send('Performance.enable');
