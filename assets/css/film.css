@@ -39,7 +39,7 @@ button, a { font: inherit; color: inherit; }
     radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.38) 100%),
     linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%); }
 
-#shade, #chapter, #title, #corner, #logo, #caption, #panel, #band, #takeaways, #endcard, #subs { z-index: 5; }
+#shade, #chapter, #title, #tl, #caption, #panel, #band, #takeaways, #endcard, #subs { z-index: 5; }
 
 /* ---------- Kapitelkarte ---------- */
 #chapter { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 9vw;
@@ -57,17 +57,23 @@ button, a { font: inherit; color: inherit; }
 #title p::before { content: ""; display: inline-block; width: 2em; height: 4px; border-radius: 2px; background: var(--accent); vertical-align: middle; margin-right: 0.8em; }
 
 /* ---------- Hinweis, Logo, Bildunterschrift ---------- */
-#corner { position: absolute; top: 3vh; left: 3vw; padding: 0.5em 1em; font-size: clamp(11px, 1.1vw, 16px); font-weight: 600;
+/* obere linke Reihe: [Logo] Fach [Hinweis] – das Fach steht immer da (Entscheidung 69) */
+#tl { position: absolute; top: 3vh; left: 3vw; display: flex; align-items: center; gap: 1.2vw; pointer-events: none; }
+#fach { padding: 0.45em 1em 0.45em 0.8em; font-size: clamp(12px, 1.15vw, 18px); font-weight: 700; letter-spacing: 0.02em;
+  border-radius: 999px; background: rgba(11,12,15,0.66); border: 1px solid rgba(255,255,255,0.14); white-space: nowrap; }
+#fach::before { content: ""; display: inline-block; width: 0.55em; height: 0.55em; border-radius: 50%; background: var(--accent);
+  margin-right: 0.55em; vertical-align: 0.08em; }
+#stage.at-start #fach, #stage.at-start #corner { visibility: hidden; }
+#corner { padding: 0.5em 1em; font-size: clamp(11px, 1.1vw, 16px); font-weight: 600;
   border-radius: 999px; background: var(--glass); border: 1px solid var(--accent); backdrop-filter: blur(12px);
   opacity: 0; transition: opacity 0.8s; pointer-events: none; }
 #corner.on { opacity: 1; }
-/* Schullogo freigestellt (Fassung für dunklen Grund aus dem HBS-Planer); weicher Schatten hält es
-   auch auf hellen Bildstellen lesbar */
-#logo { position: absolute; top: 3vh; left: 3vw; opacity: 0; transition: opacity 0.8s; pointer-events: none; }
-#logo img { display: block; height: clamp(52px, 13vh, 140px); width: auto;
-  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.75)) drop-shadow(0 0 2px rgba(0,0,0,0.6)); }
-#logo.on { opacity: 1; }
-#stage.at-start #logo { opacity: 1; z-index: 16; transition: none; }
+/* Schullogo als Wasserzeichen: Fassung für helles Design wie im HBS-Planer, ohne Schatten, immer sichtbar
+   freigestellt (tools/logo_freistellen.mjs), ohne Schild (Entscheidung 74). "logo": true in content wirkt nicht mehr. */
+#logo { line-height: 0; }
+#logo img { display: block; height: clamp(30px, 5.6vh, 64px); width: auto; }
+
+#stage.at-start #tl { z-index: 16; }
 
 #caption { position: absolute; left: 4vw; bottom: 19vh; max-width: 60vw; pointer-events: none; }
 #caption span { display: inline-block; padding: 0.55em 1.1em; font-size: clamp(15px, 1.7vw, 26px); font-weight: 600; line-height: 1.25;
@@ -165,6 +171,7 @@ button, a { font: inherit; color: inherit; }
 #endcard .end-line.small { font-size: clamp(13px, 1.4vw, 20px); font-weight: 500; color: var(--ink-soft); }
 #endcard .credits { margin-top: 2em; font-size: clamp(11px, 1.05vw, 15px); color: var(--ink-soft); line-height: 1.55; max-width: 62em;
   background: var(--glass); border-radius: 14px; padding: 1em 1.2em; backdrop-filter: blur(10px); }
+#endcard .credits.origin { margin-top: 1em; }
 #endcard .credits h3 { font-size: 1em; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin: 0 0 0.5em; }
 
 /* ---------- Untertitel ---------- */
@@ -221,7 +228,7 @@ button, a { font: inherit; color: inherit; }
 #stage:not(.ctl-visible) { cursor: none; }
 #progress { position: relative; height: 20px; cursor: pointer; display: flex; align-items: center; }
 #progress::before { content: ""; position: absolute; left: 0; right: 0; height: 4px; background: rgba(255,255,255,0.22); border-radius: 2px; }
-#progress-fill { position: absolute; left: 0; height: 4px; background: var(--accent); border-radius: 2px; width: 0; }
+#progress-fill { position: absolute; left: 0; right: 0; height: 4px; background: var(--accent); border-radius: 2px; transform-origin: left center; transform: scaleX(0); }
 #progress-marks i { position: absolute; top: 4px; width: 3px; height: 12px; border-radius: 2px; background: rgba(255,255,255,0.75); }
 .ctl-row { display: flex; align-items: center; gap: 0.3em; flex-wrap: wrap; }
 .ctl-row button, .ctl-row a { background: none; border: 0; padding: 0.45em 0.6em; cursor: pointer; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; }

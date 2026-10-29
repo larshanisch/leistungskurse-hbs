@@ -27,11 +27,18 @@
   if (!film) { document.body.textContent = 'Film „' + fachId + '“ nicht gefunden.'; return; }
 
   document.title = film.title;
+  document.getElementById('fach').textContent = film.title;
   document.documentElement.style.setProperty('--accent', film.accent);
 
   const lerp = (a, b, p) => a + (b - a) * p;
   const ease = (p) => 0.5 - Math.cos(Math.PI * p) / 2;
   const clamp01 = (v) => Math.max(0, Math.min(1, v));
+  const lastStyle = new WeakMap();   // zuletzt geschriebene Werte je Element (der Browser normalisiert beim Zurücklesen)
+  const setStyle = (node, prop, val) => {
+    val = String(val); let m = lastStyle.get(node); if (!m) lastStyle.set(node, m = {});
+    if (m[prop] !== val) { m[prop] = val; node.style[prop] = val; }
+  };
+  const setText = (node, txt) => { if (node.textContent !== txt) node.textContent = txt; };
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 
   // ---- Zeitachse aufbereiten -------------------------------------------------------------
@@ -84,13 +91,13 @@
     const p = ease(clamp01((t - shot.from) / (shot.to - shot.from + FADE)));
     const s = lerp(m.s[0], m.s[1], p);
     if (shot.fit === 'card') {
-      layer.frame.style.transform = 'translate(-50%, -50%) scale(' + s + ')';
+      setStyle(layer.frame, 'transform', 'translate(-50%, -50%) scale(' + s.toFixed(4) + ')');
     } else {
-      layer.frame.style.transform = 'translate(' + lerp(m.x[0], m.x[1], p) + '%,' + lerp(m.y[0], m.y[1], p) + '%) scale(' + s + ')';
+      setStyle(layer.frame, 'transform', 'translate(' + lerp(m.x[0], m.x[1], p).toFixed(3) + '%, ' + lerp(m.y[0], m.y[1], p).toFixed(3) + '%) scale(' + s.toFixed(4) + ')');
     }
     // "pos": Ausschnitt eines Hochformats wandert, z. B. [[0.5, 1], [0.5, 0]] = von unten nach oben
     if (shot.pos) layer.img.style.objectPosition = lerp(shot.pos[0][0], shot.pos[1][0], p) * 100 + '% ' + lerp(shot.pos[0][1], shot.pos[1][1], p) * 100 + '%';
-    layer.node.style.opacity = opacity;
+    setStyle(layer.node, 'opacity', +opacity.toFixed(3));
   }
 
   let currentShot = null;   // für die große Bildunterschrift neben Porträtkarten
@@ -99,7 +106,7 @@
     if (t < sc.start) {
       // Kapitelkarte: das vorige Bild blendet aus
       const prev = shots.filter((s) => s.to <= sc.start).pop();
-      layers.forEach((l) => { l.node.style.opacity = 0; });
+      layers.forEach((l) => setStyle(l.node, 'opacity', 0));
       if (prev) paintShot(layers[shots.indexOf(prev) % 2], prev, t, clamp01(1 - (t - sc.chapStart) / CHAPTER_FADE));
       return;
     }
@@ -111,8 +118,8 @@
     const curLayer = layers[i % 2], otherLayer = layers[(i + 1) % 2];
     // Unter dem neuen Bild liegt das vorige (Überblendung) – nach einer Kapitelkarte kommt es aus dem Schwarz
     if (prev && fadeIn < 1 && !afterChapter) paintShot(otherLayer, prev, t, 1);
-    else otherLayer.node.style.opacity = 0;
-    curLayer.node.style.zIndex = 2; otherLayer.node.style.zIndex = 1;
+    else setStyle(otherLayer.node, 'opacity', 0);
+    setStyle(curLayer.node, 'zIndex', 2); setStyle(otherLayer.node, 'zIndex', 1);
     paintShot(curLayer, cur, t, fadeIn);
     currentShot = cur;
   }
@@ -223,6 +230,7 @@
   const ui = {
     chapter: $('chapter'), chapNum: document.querySelector('.chap-num'), chapKicker: document.querySelector('.chap-kicker'),
     chapTitle: document.querySelector('.chap-title'), title: $('title'), corner: $('corner'), logo: $('logo'),
+    progressFill: $('progress-fill'), topbarFill: $('topbar-fill'), time: $('time'),
     caption: $('caption'), panel: $('panel'), band: $('band'), takeaways: $('takeaways'), endcard: $('endcard'), subs: $('subs')
   };
   let shownScene = null, shownCaption = null, shownSub = null;
@@ -257,6 +265,11 @@
       // ohne content/<fach>_credits.json: nur eigene KI-Bilder
       (film.credits.length ? film.credits : ['Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden.']).forEach((line) => c.appendChild(el('div', '', line)));
       ui.endcard.appendChild(c);
+      // Herkunft und KI-Einsatz (Entscheidung 75)
+      const o = el('div', 'credits origin');
+      o.appendChild(el('div', '', "Erstellt von Lars Hanisch für die Heinrich-Böll-Schule Hattersheim · Alle Rechte vorbehalten"));
+      o.appendChild(el('div', '', "Mit KI-Unterstützung erstellt: Texte und Programmierung mit Claude (Anthropic), Bilder mit Google Gemini, Stimme mit ElevenLabs. Alle Inhalte sind von der Lehrkraft geprüft, die Angaben zu Regeln und Prüfungen an amtlichen Quellen belegt; dargestellte Personen sind erfunden."));
+      ui.endcard.appendChild(o);
     }
     $('chapName').textContent = currentChapterName(sc);
   }
@@ -278,8 +291,8 @@
       const c = t - sc.chapStart;
       chapOp = c < CHAPTER_FADE ? c / CHAPTER_FADE : (t < sc.start ? 1 : 1 - (t - sc.start) / CHAPTER_FADE);
     }
-    ui.chapter.style.opacity = clamp01(chapOp);
-    ui.title.style.opacity = sc.title ? clamp01(Math.min((lt - 0.8) / 1.2, (sc.duration - 1.5 - lt) / 1.0)) : 0;
+    setStyle(ui.chapter, 'opacity', +clamp01(chapOp).toFixed(3));
+    setStyle(ui.title, 'opacity', sc.title ? +clamp01(Math.min((lt - 0.8) / 1.2, (sc.duration - 1.5 - lt) / 1.0)).toFixed(3) : 0);
     ui.corner.classList.toggle('on', !!sc.corner && lt > 0.5 && live && !tkOn);
     ui.logo.classList.toggle('on', !!sc.logo && lt > 0.3 && live);
 
@@ -307,13 +320,13 @@
     b.reveals.forEach((r) => r.node.classList.toggle('on', showEls && lt >= r.t));
     b.counters.forEach((c) => {
       const p = clamp01((lt - c.t) / COUNT_UP);
-      c.node.textContent = String(Math.round(c.target * ease(p)));
+      setText(c.node, String(Math.round(c.target * ease(p))));
     });
     if (b.ring) b.ring.segs.forEach((s) => {
       const p = showEls ? ease(clamp01((lt - s.t) / RING_GROW)) : 0;
-      s.node.style.strokeDasharray = (s.len * p) + ' ' + b.ring.C;
+      setStyle(s.node, 'strokeDasharray', (s.len * p).toFixed(1) + ' ' + b.ring.C);
     });
-    ui.band.style.opacity = showEls && lt >= b.bandT ? 1 : 0;
+    setStyle(ui.band, 'opacity', showEls && lt >= b.bandT ? 1 : 0);
     b.stations.forEach((s) => s.node.classList.toggle('on', lt >= s.t));
     ui.takeaways.classList.toggle('on', tkOn);
 
@@ -448,9 +461,10 @@
     renderOverlays(tt, sc);
     const hold = renderAudio(tt);
     if (hold !== null && playing) { base = hold; startedAt = now(); }
-    $('progress-fill').style.width = (100 * tt / total) + '%';
-    $('topbar-fill').style.transform = 'scaleX(' + (tt / total) + ')';
-    $('time').textContent = fmt(tt) + ' / ' + fmt(total);
+    const f = 'scaleX(' + (tt / total).toFixed(4) + ')';
+    setStyle(ui.progressFill, 'transform', f);
+    setStyle(ui.topbarFill, 'transform', f);
+    setText(ui.time, fmt(tt) + ' / ' + fmt(total));
     requestAnimationFrame(frame);
   }
 

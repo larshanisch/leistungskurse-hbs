@@ -24,7 +24,7 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - **Sprechtext:** vollständige, ausformulierte Sätze, die vorgelesen natürlich klingen — keine
   Stichwortketten, keine Doppelpunkt-Aufzählungen, keine Einwortsätze (Nutzer 27.10.2026).
 - **Hosting:** GitHub Pages (Konto des Nutzers), Repository öffentlich → keine Namen von
-  Kolleg:innen oder Schüler:innen, kein Tracking, keine externen Schriften/CDNs.
+  Kolleg:innen oder Schüler:innen (der Ersteller steht auf eigenen Wunsch im Vermerk, Entscheidung 75), kein Tracking, keine externen Schriften/CDNs.
 - **Offline-fähig:** alle Dateien lokal referenziert, läuft auch vom USB-Stick im Kiosk-Modus.
 - **Kein Scrollen** (digitale Tafel, Entscheidung 25): jede Seite im Querformat auf einen Bildschirm; nach Änderungen mit `scrollHeight` bei 1920×1080, 1280×720, 1024×768 nachmessen.
 
@@ -105,7 +105,7 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   **5:35 min gemessen**. `tools/build.mjs` liest Aussprache-Umschreibungen aus `content/aussprache.json` (Untertitel bleiben).
 - 29.10.2026: Planer mit Kästen „Schriftlich“ (1–3) und „Mündlich“ (4–5) (Entscheidung 57). „Analysis“ im Mathe-Film per
   ausgewählter Neuaufnahme richtig betont (Entscheidung 58), **5:40 min**. Falsch betonte Wörter: erst denselben Satz mehrfach
-  aufnehmen und hören lassen, Umschreibungen halfen hier nicht. Wird eine Datei unter gleichem Namen ersetzt: `CACHE` in `sw.js` hochzählen.
+  aufnehmen und hören lassen, Umschreibungen halfen hier nicht. Wird eine Datei unter gleichem Namen ersetzt: `CACHE` in `sw.js` **und** `assets/js/offline.js` hochzählen (Entscheidung 68).
 - 29.10.2026: Gemeinfreie Fotos in Geschichte 0.5 (Scheidemann, Mauerbau) und PoWi 0.5 (Grundgesetz), Entscheidung 59.
   Regel: Porträtkarte und Liste (`panel`) nie gleichzeitig – sonst verdeckt die Liste die große Bildunterschrift.
 - 29.10.2026: Klausur unter Abiturbedingungen jetzt in allen Filmen (Entscheidung 60): **Deutsch 5:43, Englisch 6:13,
@@ -115,6 +115,9 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Leitfigur nie als Raumvorlage nehmen – die Figur kommt mit.
 - 29.10.2026: Film Chemie fertig (neue Leitfigur E, **5:45 min gemessen**, Entscheidung 65). Damit alle acht Filme.
   Vergleichstafeln: lange Wörter mit weicher Trennstelle U+00AD in content (Entscheidung 66).
+- 29.10.2026: Ruckeln behoben (Entscheidung 68), Fach oben links (69), `kiosk.html?stumm=1` (70), Planer-Reiter „Einbringen“ (71), LK-Noten doppelt im Planer (73), Logo freigestellt als Wasserzeichen (74), Herkunfts- und KI-Vermerk (75).
+  Flüssigkeit messen: `node tools/perf_film.mjs <fach> --t=150 --cpu=6` (Werte streuen – je dreimal; verlässlich sind
+  `layoutCount` und `task_s`). Im Player Werte nur über `setStyle`/`setText` schreiben (nur bei Änderung).
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

@@ -1,6 +1,7 @@
 # Faktenblatt: Leistungskurse in Hessen – fächerübergreifende amtliche Vorgaben
 
 Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Q-Phase 2027/28–2028/29, Landesabitur 2029
+Version 1.8 (29.10.2026: Einbringpflichten § 26 Abs. 4–7 am Originaltext)
 Version 1.7 (29.10.2026: Klausurzahl je LK-Kombination)
 Version 1.6 (29.10.2026: Kombinationen nach den Tutoriumsblättern der HBS)
 Version 1.5 (29.10.2026: Kursangebot der HBS, Aufgabenfelder II und III)
@@ -105,7 +106,24 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
 - **Umrechnung Prozent → Punkte (Anlage 9a):** unter 20 % = 0; ab 20 = 1; ab 27 = 2; ab 33 = 3; ab 40 = 4; ab 45 = 5; ab 50 = 6; ab 55 = 7; ab 60 = 8; ab 65 = 9; ab 70 = 10; ab 75 = 11; ab 80 = 12; ab 85 = 13; ab 90 = 14; ab 95 = 15. Maßgeblich ist der ganzzahlige, **nicht gerundete** Prozentsatz. Die Tabelle gilt verbindlich in E- und Q-Phase. – OAVO § 9 Abs. 12 Satz 1 i. V. m. Anlage 9a, ebd., abgerufen 27.10.2026
 - **Gesamtqualifikation:** höchstens 900 Punkte. Block I (Q-Phase) bringt höchstens 600, davon höchstens **240 aus dem LK-Bereich** und 360 aus dem GK-Bereich. Block II (Abiturprüfung) bringt höchstens 300. – OAVO § 26 Abs. 1, ebd., abgerufen 27.10.2026
 - **Einbringung und Faktor:** In Block I werden 24 Grundkurse einfach und **8 Leistungskurse zweifach** gewertet. Das sind alle 4 Halbjahre beider LKs: 8 × 15 × 2 = 240. – OAVO § 26 Abs. 2 Satz 1, ebd., abgerufen 27.10.2026
-  - **Pflicht:** Die LKs im 1. und 2. Prüfungsfach müssen eingebracht werden. – OAVO § 26 Abs. 4 Nr. 1, ebd., abgerufen 27.10.2026
+  - **Pflicht (Abs. 4):** „die Leistungskurse im ersten und zweiten Prüfungsfach sowie die Grundkurse Q1 bis Q4 im dritten,
+    vierten und fünften Prüfungsfach, soweit nicht eine besondere Lernleistung angemeldet ist“, dazu „weitere Grundkurse nach
+    § 13 Abs. 9“ und im Fall von § 14 Abs. 3 die letzten beiden Kurse der zweiten Fremdsprache. – OAVO § 26 Abs. 4, https://www.rv.hessenrecht.hessen.de/bshe/document/hevr-OSt_AbiVHEV14P26 (Fassung 04.06.2025, gültig ab 01.08.2025), abgerufen 29.10.2026
+  - **Kann (Abs. 5):** u. a. bis zu drei Kurse Sport. – OAVO § 26 Abs. 5 Nr. 1, ebd.
+  - **Verteilung auf die Aufgabenfelder (Abs. 6, gymnasiale Oberstufe)** – gilt für alle eingebrachten LK- und GK-Kurse zusammen:
+    - Aufgabenfeld I: „jeweils vier Kurse in Deutsch und einer fortgeführten Fremdsprache“; „mindestens zwei Kurse in Kunst, Musik
+      oder Darstellendes Spiel“; „mindestens zwei Kurse in einer weiteren Fremdsprache …, wenn nicht zwei Kurse in einer zweiten
+      Naturwissenschaft oder in Informatik eingebracht werden“.
+    - Aufgabenfeld II: „mindestens sechs Kurse, darunter mindestens zwei Kurse in Geschichte, mindestens zwei Kurse in Politik und
+      Wirtschaft oder … Wirtschaftswissenschaften oder … Geographie“ (Geographie nur bei durchgängiger Belegung ab E1).
+    - Aufgabenfeld III: „vier Kurse in Mathematik, vier Kurse in einer Naturwissenschaft, mindestens zwei Kurse in einer weiteren
+      Naturwissenschaft oder in Informatik, wenn nicht zwei Kurse in einer zweiten Fremdsprache eingebracht werden“. – OAVO § 26 Abs. 6, ebd.
+  - Ein Fach, das als GK und LK unterrichtet wurde, zählt nur einmal. – OAVO § 26 Abs. 7 Satz 2, ebd.
+  - **[ABLEITUNG] Was die LKs abdecken:** Ein LK bringt seine vier Kurse in die Pflicht seines Fachs ein: LK Deutsch die vier
+    Deutschkurse, LK Englisch die vier Kurse der fortgeführten Fremdsprache, LK Mathematik die vier Mathematikkurse, LK Biologie oder
+    Chemie die vier Kurse einer Naturwissenschaft, LK Kunst die mindestens zwei Kurse Kunst/Musik/DS, LK Geschichte die zwei
+    Geschichtskurse und vier der sechs Kurse in Aufgabenfeld II, LK PoWi die zwei PoWi-Kurse und vier der sechs. Bio + Chemie
+    erfüllt zugleich „zwei Kurse in einer weiteren Naturwissenschaft“. Alles Übrige kommt aus Grundkursen. – aus Abs. 4 und 6
   - Wird ein Halbjahr wiederholt, zählen nur die Ergebnisse der Wiederholungskurse. – OAVO § 26 Abs. 7; § 23 Abs. 4, ebd., abgerufen 27.10.2026
 - **Unterkurse (Defizite):** Von den 32 eingebrachten Kursen darf **keiner 0 Punkte** haben. **Höchstens 6 Kurse dürfen unter 5 Punkten** liegen, „davon maximal zwei Leistungskurse in einfacher Wertung“. – OAVO § 26 Abs. 2 Satz 2–3, ebd., abgerufen 27.10.2026
 - Kurse mit 0 Punkten gelten als nicht besucht und erfüllen die Belegverpflichtung nicht. – OAVO § 13 Abs. 9 Satz 5–6, ebd., abgerufen 27.10.2026

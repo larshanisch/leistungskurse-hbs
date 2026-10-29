@@ -1,14 +1,14 @@
-// Vorladen für Tafel und Kiosk: meldet den Service Worker (sw.js) an und legt alle drei Filme
+// Vorladen für Tafel und Kiosk: meldet den Service Worker (sw.js) an und legt alle Filme
 // samt Seiten im Browser ab. Danach laufen sie ohne Netz – auch am nächsten Tag.
 // Braucht window.FILMS (assets/data/*.js). Vom USB-Stick (file://) gibt es keinen Service
 // Worker; dort liegt ohnehin alles lokal, und es wird nichts geladen.
 (function () {
   'use strict';
-  const CACHE = 'tdot-filme-v1';           // derselbe Name wie in sw.js
+  const CACHE = 'tdot-filme-v2';           // MUSS derselbe Name wie in sw.js sein (Entscheidung 68)
   const PARALLEL = 4;
   const CORE = ['index.html', 'film.html', 'assets/css/film.css', 'assets/js/film.js',
     'assets/data/deutsch.js', 'assets/data/englisch.js', 'assets/data/kunst.js', 'assets/data/powi.js', 'assets/data/geschichte.js', 'assets/data/mathematik.js', 'assets/data/biologie.js', 'assets/data/chemie.js',
-    'assets/img/logo_hbs_dunkel.png', 'assets/img/figur_sie.jpg', 'assets/img/figur_er.jpg', 'assets/img/figur_c.jpg', 'assets/img/figur_d.jpg', 'assets/img/figur_e.jpg',
+    'assets/img/logo_hbs_dunkel.png', 'assets/img/logo_hbs_frei.png', 'assets/img/figur_sie.jpg', 'assets/img/figur_er.jpg', 'assets/img/figur_c.jpg', 'assets/img/figur_d.jpg', 'assets/img/figur_e.jpg',
     'media/start/feld1.jpg', 'media/start/feld2.jpg', 'media/start/feld3.jpg'];
 
   function mediaList() {
@@ -28,6 +28,8 @@
     }
     await navigator.serviceWorker.register('sw.js');
     await navigator.serviceWorker.ready;
+    // ältere Speicher (andere Version) freigeben – der Service Worker liest nur CACHE
+    for (const k of await caches.keys()) if (k.startsWith('tdot-filme-') && k !== CACHE) await caches.delete(k);
     const cache = await caches.open(CACHE);
     const media = mediaList();
     const base = new URL('.', location.href).href;

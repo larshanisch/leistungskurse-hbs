@@ -42,6 +42,7 @@
   #next .k { letter-spacing: 0.26em; text-transform: uppercase; font-weight: 700; font-size: 2vh; color: var(--accent); }
   #next .t { font-size: 8vh; font-weight: 800; letter-spacing: -0.02em; }
   #next .l { font-size: 2.4vh; color: var(--ink-soft); }
+  #next .h { font-size: 1.9vh; color: var(--ink-soft); opacity: 0.8; }
   @media (max-aspect-ratio: 1/1) { .rooms { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -85,6 +86,7 @@
     var params = new URLSearchParams(location.search);
     var player = document.getElementById('player'), next = document.getElementById('next');
     var list = [], pos = 0;
+    var MUTED = params.get('stumm') === '1';
 
     // ?filme=… hebt einen Raum hervor; starten muss trotzdem ein Klick (Ton-Freigabe des Browsers)
     var pre = params.get('filme');
@@ -95,11 +97,14 @@
 
     function fmt(s) { return Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0') + ' Minuten'; }
 
+    function fullscreen() {
+      var el = document.documentElement;
+      if (el.requestFullscreen && !document.fullscreenElement) el.requestFullscreen().catch(function () { /* ohne Vollbild weiter */ });
+    }
     function start(ids) {
       list = ids.filter(function (id) { return films[id]; });
       if (!list.length) return;
-      var el = document.documentElement;
-      if (el.requestFullscreen) el.requestFullscreen().catch(function () { /* ohne Vollbild weiter */ });
+      if (!MUTED) fullscreen();   // stumm startet ohne Klick – das Vollbild erlaubt der Browser erst nach einem Klick
       document.getElementById('choose').hidden = true;
       document.body.classList.add('playing');
       pos = 0;
@@ -113,16 +118,28 @@
       next.querySelector('.l').textContent = fmt(f.total);
       var first = f.scenes[0], img = first && first.image && first.image.src;
       next.style.backgroundImage = img ? 'url("' + img + '")' : '';
+      if (MUTED) {
+        var h = next.querySelector('.h');
+        if (!h) { h = document.createElement('p'); h.className = 'h'; next.appendChild(h); }
+        h.textContent = 'Ohne Ton in Dauerschleife · Klick: Vollbild · Esc: zurück zur Startseite';
+      }
       next.classList.add('on');
       setTimeout(function () {
         player.hidden = false;
-        player.src = 'film.html?fach=' + encodeURIComponent(id) + '&kiosk=1&autostart=1';
+        player.src = 'film.html?fach=' + encodeURIComponent(id) + '&kiosk=1&autostart=1' + (MUTED ? '&muted=1' : '');
       }, NEXT_SECONDS * 1000);
     }
     // Karte erst ausblenden, wenn der Film geladen ist (sonst blitzt Schwarz auf)
     player.addEventListener('load', function () {
       if (player.getAttribute('src')) setTimeout(function () { next.classList.remove('on'); }, 300);
     });
+
+    if (MUTED) {
+      // alle Filme in der Reihenfolge der Startseite, sofort
+      start(Object.keys(films));
+      document.addEventListener('click', fullscreen);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !document.fullscreenElement) location.href = 'index.html'; });
+    }
 
     window.addEventListener('message', function (e) {
       if (!e.data || e.data.type !== 'tdot-film-ended') return;

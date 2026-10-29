@@ -153,6 +153,20 @@
   .grp.w .pf i { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
   .pf b { font-size: 16px; line-height: 1.2; }
   .pf small { font-size: 13px; color: var(--ink-soft); line-height: 1.25; }
+  .vrow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.4em 1em; margin-bottom: 0.8em; }
+  .vrow .verdict { margin: 0 !important; }
+  .tabs { display: flex; gap: 6px; margin: 0; }
+  .tabs button { padding: 0.35em 0.9em; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.05);
+    color: var(--ink-soft); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+  .tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .ein { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0; margin-bottom: 0.6em; }
+  .ein > div { padding: 0.42em 0; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.3; }
+  .ein > div:nth-child(-n+2) { border-top: 0; }
+  .ein small { color: var(--ink-soft); font-size: 12.5px; margin-left: 0.4em; }
+  .ein .st { text-align: right; padding-left: 0.8em; white-space: nowrap; }
+  .ein .st span { display: inline-block; padding: 0.15em 0.65em; border-radius: 999px; font-size: 13px; font-weight: 700;
+    border: 1px solid var(--line); color: var(--ink-soft); }
+  .ein .st span.got { background: rgba(200,213,48,0.16); border-color: rgba(200,213,48,0.6); color: var(--ink); }
   .spread { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-bottom: 0.9em; }
   .spread > .k { font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); }
   .need { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -169,7 +183,7 @@
   footer .linkish { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
 
   @media (max-width: 599px) { .cta { flex-wrap: wrap; } .cta .txt { flex-basis: calc(100% - 60px - 1.2em); } .cta .open { margin-left: auto; } }
-  @media (max-width: 599px) { .plan { grid-template-columns: minmax(0, 1fr) !important; } .chips { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .chip { padding: 0.5em 0.6em; gap: 0.4em; } .chip .th { width: 24px; height: 24px; } .chip { font-size: 15px; } .lkpic { height: 130px; } .lkpic b { font-size: 17px; } .exam { grid-template-columns: minmax(0, 1fr); } .grp.w, .grp.m { grid-template-columns: minmax(0, 1fr); } .pf { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; } }
+  @media (max-width: 599px) { .plan { grid-template-columns: minmax(0, 1fr) !important; } .chips { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .chip { padding: 0.5em 0.6em; gap: 0.4em; } .chip .th { width: 24px; height: 24px; } .chip { font-size: 15px; } .lkpic { height: 130px; padding: 10px; } .lkpic b { font-size: 15px; } .lkpic .k { font-size: 10px; letter-spacing: 0.06em; } .exam { grid-template-columns: minmax(0, 1fr); } .grp.w, .grp.m { grid-template-columns: minmax(0, 1fr); } .pf { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; } }
   @media (max-width: 899px) { .plan { grid-template-columns: 1fr 1fr; } .result { grid-column: 1 / -1; } #setup { place-items: start center; } }
 
   /* Querformat ab Tablet-Größe (digitale Tafel): alles auf einem Bildschirm, kein Scrollen.
@@ -252,6 +266,12 @@
     .pf small, .pf em { font-size: 1.5vh; }
     .pf b { font-size: 1.85vh; }
     .spread { gap: 0.6vh 0.6vw; margin-bottom: 1.4vh; }
+    .vrow { margin-bottom: 1vh; }
+    .tabs { gap: 0.4vw; }
+    .tabs button { font-size: 1.6vh; }
+    .ein > div { font-size: 1.8vh; padding: 0.55vh 0; }
+    .ein small { font-size: 1.45vh; }
+    .ein .st span { font-size: 1.55vh; }
     .need { gap: 0.6vh 0.4vw; }
     .need span { font-size: 1.7vh; }
     .result ul { font-size: 1.85vh; gap: 0.7vh; }
@@ -376,9 +396,9 @@
 
   <footer>Stand: Oktober 2026 · Grundlage: Oberstufen- und Abiturverordnung (OAVO) des Landes Hessen, Kerncurricula und
     Abiturerlass 2028, Kursangebot der Heinrich-Böll-Schule. <strong>Das Angebot an Leistungskursen kann sich in Zukunft
-    ändern.</strong> Illustrationen KI-generiert (Google Gemini), dargestellte
-    Personen sind erfunden.
-    <span class="modes">· <button type="button" class="linkish" id="openSetup">Tafel einrichten</button></span></footer>
+    ändern.</strong> Erstellt von Lars Hanisch für die Heinrich-Böll-Schule Hattersheim · Alle Rechte vorbehalten. Mit KI-Unterstützung erstellt (Texte und Programmierung: Claude, Bilder: Google Gemini, Stimme:
+    ElevenLabs), von der Lehrkraft geprüft; dargestellte Personen sind erfunden.
+    <span class="modes">· <button type="button" class="linkish" id="openSetup">Tafel einrichten</button> · <a class="linkish" href="kiosk.html?stumm=1">Dauerschleife ohne Ton</a></span></footer>
 </main>
 <div id="setup" hidden role="dialog" aria-modal="true" aria-labelledby="setupTitle">
   <div class="box">
@@ -517,7 +537,7 @@
     function lkPic(id, label) {
       if (!id) return '<div class="lkpic empty"><b>' + label.replace('LK', 'Leistungskurs') + ' wählen</b></div>';
       var pic = picOf(id), style = ' style="--bg: url(\'' + pic.img + '\'); --pos: ' + pic.pos + '"';
-      var inner = '<span class="k">' + label + '</span><b>' + esc(SUBJ[id].name) + '</b>';
+      var inner = '<span class="k">' + label + ' · Noten zählen doppelt</span><b>' + esc(SUBJ[id].name) + '</b>';
       return '<div class="lkpic"' + style + '>' + inner + '</div>';   // ohne Film-Link (Entscheidung 48)
     }
     function duo(a, b) { return '<div class="duo">' + lkPic(a, '1. LK') + '<span class="plus" aria-hidden="true">+</span>' + lkPic(b, '2. LK') + '</div>'; }
@@ -581,6 +601,38 @@
 
     function pf(n, kind, name, more) { return '<div class="pf' + (n >= 3 ? ' open' : '') + '"><i>' + n + '</i><small>' + kind + '</small><b>' + esc(name) + '</b>' + (more ? '<em>' + esc(more) + '</em>' : '') + '</div>'; }
 
+    // Einbringen in Block I (OAVO § 26 Abs. 2, 4–6): was die beiden LKs schon erfüllen, was aus Grundkursen kommt
+    var tab = 'pruef';
+    function einbring(a, b) {
+      var has = function (id) { return a === id || b === id; };
+      var lk = function (txt) { return '<span class="got">✓ ' + txt + '</span>'; };
+      var gk = function (txt) { return '<span>' + txt + '</span>'; };
+      var nw = has('biologie') || has('chemie');
+      var rows = [
+        ['deine beiden Leistungskurse', 'alle 8 Halbjahre, doppelt gewertet', lk('beide LKs')],
+        ['Deutsch', '4 Kurse', has('deutsch') ? lk('dein LK') : gk('4 Grundkurse')],
+        ['fort­geführte Fremd­sprache', '4 Kurse', has('englisch') ? lk('dein LK') : gk('4 Grundkurse')],
+        ['Mathematik', '4 Kurse', has('mathe') ? lk('dein LK') : gk('4 Grundkurse')],
+        ['eine Natur­wissenschaft', '4 Kurse', nw ? lk('dein LK') : gk('4 Grundkurse')],
+        ['Kunst, Musik oder Darst. Spiel', 'mind. 2 Kurse', has('kunst') ? lk('dein LK') : gk('2 Grundkurse')],
+        ['Aufgabenfeld II', 'mind. 6, darunter 2 Geschichte, 2 PoWi',
+          has('geschichte') ? lk('LK') + ' ' + gk('+ 2 PoWi') : has('powi') ? lk('LK') + ' ' + gk('+ 2 Geschichte') : gk('6 Grundkurse')],
+        ['2. Fremd­sprache oder 2. Natur­wiss./Informatik', '2 Kurse',
+          has('biologie') && has('chemie') ? lk('deine LKs') : gk('2 Grundkurse')],
+        ['Prüfungsfächer 3 bis 5', 'alle vier Halbjahre', gk('12 Grundkurse')]
+      ];
+      return '<div class="ein">' + rows.map(function (r) {
+        return '<div>' + esc(r[0]) + '<small>' + esc(r[1]) + '</small></div><div class="st">' + r[2] + '</div>';
+      }).join('') + '</div>' +
+        '<p class="fine">Es zählen 32 Kurse: deine 8 LK-Kurse doppelt, 24 Grundkurse einfach; die Pflichten überschneiden sich. Keiner ' +
+        'darf 0 Punkte haben, höchstens 6 dürfen unter 5 Punkten liegen, davon höchstens 2 LK-Kurse. Statt PoWi geht auch Geographie, wenn ' +
+        'sie ab der Einführungsphase belegt wurde. Grundlage: OAVO § 26 Abs. 2, 4–6.</p>';
+    }
+    $('result').addEventListener('click', function (e) {
+      var t = e.target.closest('.tabs button');
+      if (t && t.dataset.tab !== tab) { tab = t.dataset.tab; renderPlan(); }
+    });
+
     function renderPlan() {
       ['chips1', 'chips2'].forEach(function (el, i) {
         var mine = i ? pick.b : pick.a, theirs = i ? pick.a : pick.b;
@@ -594,6 +646,7 @@
         r.innerHTML = duo(a, b) + '<p class="wait">' + (!a && !b ? 'Wähle links deinen 1. und deinen 2. Leistungskurs.'
           : !a ? 'Wähle noch deinen 1. Leistungskurs – Englisch, Biologie, Mathematik oder Politik und Wirtschaft.'
           : 'Wähle noch deinen 2. Leistungskurs.') + '</p>' +
+          '<p class="fine">Nach der Wahl siehst du, welche Fächer du im Abitur prüfen lässt und welche Kurse du in die Abiturnote einbringen musst.</p>' +
           '<p class="fine">Deutsch und Kunst zusammen gehen nicht: Einer der beiden Leistungskurse muss eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein.</p>';
         return;
       }
@@ -601,7 +654,11 @@
       var chipsHtml = c.need.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') +
         new Array(c.free + 1).join('<span class="free">frei wählbar</span>');
       r.innerHTML = duo(a, b) +
-        '<p class="verdict ok">Diese Kombination gibt es an der HBS.</p>' +
+        '<div class="vrow"><p class="verdict ok">Diese Kombination gibt es an der HBS.</p>' +
+        '<div class="tabs" role="tablist">' +
+          '<button type="button" role="tab" data-tab="pruef" aria-selected="' + (tab === 'pruef') + '">Prüfungsfächer</button>' +
+          '<button type="button" role="tab" data-tab="einbr" aria-selected="' + (tab === 'einbr') + '">Einbringen</button></div></div>' +
+        (tab === 'einbr' ? einbring(a, b) :
         '<div class="exam">' +
           '<div class="grp w"><span class="k">Schriftlich <small>· Landesabitur</small></span>' +
             pf(1, 'LK', SUBJ[a].name) + pf(2, 'LK', SUBJ[b].name) + pf(3, 'GK', '3. Fach', c.third) + '</div>' +
@@ -611,7 +668,7 @@
         '<div class="spread"><span class="k">Auf 3 bis 5 verteilst du – Reihenfolge frei</span><div class="need">' + chipsHtml + '</div></div>' +
         '<ul>' + c.notes.map(function (n) { return '<li>' + n + '</li>'; }).join('') + '</ul>' +
         '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Das Angebot an Leistungskursen ' +
-        'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 9 Abs. 6, § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>';
+        'kann sich in Zukunft ändern, und einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 9 Abs. 6, § 13 Abs. 2 und 5, § 24 Abs. 1, 2 und 6.</p>');
     }
 
     function filmSubj(film) { var id = Object.keys(SUBJ).filter(function (k) { return SUBJ[k].film === film; })[0]; return id ? SUBJ[id] : null; }
@@ -624,7 +681,8 @@
       else if (/^planer(\/|$)/.test(h)) {
         // #planer/englisch/biologie wählt gleich vor (für Prüfwerkzeuge und Direktlinks)
         var p = h.split('/');
-        if (p.length === 3) { pick.a = PAIRS[p[1]] ? p[1] : null; pick.b = fits(p[1], p[2]) ? p[2] : null; }
+        if (p.length >= 3) { pick.a = PAIRS[p[1]] ? p[1] : null; pick.b = fits(p[1], p[2]) ? p[2] : null; }
+        if (p[3] === 'einbringen') tab = 'einbr';   // #planer/englisch/biologie/einbringen öffnet den Reiter „Einbringen“
         view = 'planer';
       }
       ['home', 'feld', 'planer'].forEach(function (v) { $('v-' + v).hidden = v !== view; });
