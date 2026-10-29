@@ -179,6 +179,12 @@
   .result .links a:hover { background: var(--accent); color: var(--on-accent); }
   .fine { margin: 1em 0 0; font-size: 13px; color: #8a857c; line-height: 1.45; }
 
+  #fsBtn { position: fixed; top: 16px; right: 16px; z-index: 30; display: inline-flex; align-items: center; gap: 0.5em;
+    padding: 0.5em 1em; border-radius: 999px; border: 1px solid var(--line); background: rgba(11,12,15,0.7); color: var(--ink);
+    font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; }
+  #fsBtn:hover, #fsBtn:focus-visible { border-color: var(--accent); }
+  #fsBtn svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  @media (min-width: 900px) and (min-aspect-ratio: 4/3) { #fsBtn { top: 2.4vh; right: 2vw; font-size: 1.7vh; } }
   footer { margin-top: 3em; font-size: 13px; color: #8a857c; line-height: 1.5; }
   footer .linkish { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
 
@@ -189,8 +195,7 @@
   /* Querformat ab Tablet-Größe (digitale Tafel): alles auf einem Bildschirm, kein Scrollen.
      Größen hängen an der Bildschirmhöhe (vh), damit die Seite bei jeder Auflösung genau passt. */
   @media (min-width: 900px) and (min-aspect-ratio: 4/3) {
-    html, body { height: 100%; overflow: hidden; }
-    main { max-width: none; height: 100vh; padding: 4vh 4vw 3vh; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 3vh; }
+    main { max-width: none; min-height: 100vh; padding: 4vh 4vw 3vh; display: grid; grid-template-rows: auto 1fr auto; gap: 3vh; }
     .head { display: flex; align-items: center; gap: 3vw; }
     .logo { margin: 0; flex: none; }
     .logo img { height: 13vh; }
@@ -201,7 +206,7 @@
     body.sub .logo img { height: 8vh; }
     body.sub h1 { font-size: 4.4vh; margin: 0; }
     body.sub .lead { display: none; }
-    .view { min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+    .view { display: grid; grid-template-rows: auto 1fr; }
     .bar { margin: 0 0 2.4vh; gap: 1vh 1.2vw; flex-wrap: nowrap; }
     .bar > * { flex-shrink: 0; }
     .bar h2 { flex: 1 1 0; min-width: 0; }
@@ -209,7 +214,7 @@
     .num { font-size: 1.6vh; }
     .bar h2 { font-size: 3.6vh; }
 
-    #v-home { grid-template-rows: minmax(0, 1fr) auto; }
+    #v-home { grid-template-rows: 1fr auto; }
     .fields { grid-template-columns: repeat(3, 1fr); gap: 1.6vw; min-height: 0; }
     .fcard { min-height: 0; border-radius: 2vh; }
     .fcard .pic { min-height: 0; }
@@ -346,7 +351,7 @@
 <body>
 <main>
   <header class="head">
-    <div class="logo"><img src="assets/img/logo_hbs_dunkel.png" alt="Heinrich-Böll-Schule Hattersheim"></div>
+    <div class="logo"><img src="assets/img/logo_hbs_frei.png" alt="Heinrich-Böll-Schule Hattersheim"></div>
     <div class="head-text">
       <p class="kicker">Gymnasiale Oberstufe · Tag der offenen Tür</p>
       <h1>Leistungskurse an der HBS</h1>
@@ -400,6 +405,7 @@
     ElevenLabs), von der Lehrkraft geprüft; dargestellte Personen sind erfunden.
     <span class="modes">· <button type="button" class="linkish" id="openSetup">Tafel einrichten</button> · <a class="linkish" href="kiosk.html?stumm=1">Dauerschleife ohne Ton</a></span></footer>
 </main>
+<button type="button" id="fsBtn" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span>Vollbild</span></button>
 <div id="setup" hidden role="dialog" aria-modal="true" aria-labelledby="setupTitle">
   <div class="box">
     <p class="kicker">Tafel einrichten · gilt für dieses Gerät</p>
@@ -422,6 +428,7 @@
 <script src="assets/data/mathematik.js"></script>
 <script src="assets/data/biologie.js"></script>
 <script src="assets/data/chemie.js"></script>
+<script src="assets/js/offline.js"></script>
 <script>
   (function () {
     // Aufgabenfelder nach KMK-Vereinbarung, Kursangebot nach der Übersicht der Schule (Entscheidung 37)
@@ -485,6 +492,7 @@
     // im Vollbild-Rahmen (tafel.html) keine Links auf andere Betriebsarten
     // „Tafel einrichten“ nicht auf der Handy-Seite (handy.html), dort gibt es keine Raum-Einrichtung
     if (SHOW_ALL) document.querySelector('.modes').hidden = true;
+    if (!SHOW_ALL && window.top === window && window.TDOT_OFFLINE) window.TDOT_OFFLINE.start();
 
     // --- Startansicht ---
     function renderHome() {
@@ -731,6 +739,18 @@
     $('setupAll').addEventListener('click', function () { save({ all: true, subjects: [] }); });
     $('openSetup').addEventListener('click', openSetup);
     // versteckter Zugang: drei Sekunden auf das Logo drücken, oder index.html?einrichten
+    // Vollbild: nur wenn der Browser es kann und die Seite nicht schon in der Tafel-Ansicht steckt (die hat einen eigenen Knopf)
+    (function () {
+      var b = $('fsBtn'), d = document;
+      if (!d.fullscreenEnabled || window.top !== window) return;
+      b.hidden = false;
+      var sync = function () { b.querySelector('span').textContent = d.fullscreenElement ? 'Vollbild beenden' : 'Vollbild'; };
+      b.addEventListener('click', function () {
+        if (d.fullscreenElement) d.exitFullscreen(); else d.documentElement.requestFullscreen().catch(function () {});
+      });
+      d.addEventListener('fullscreenchange', sync);
+    })();
+
     var hold = null, logo = document.querySelector('.logo');
     logo.addEventListener('pointerdown', function () { clearTimeout(hold); hold = setTimeout(openSetup, 3000); });
     ['pointerup', 'pointerleave', 'pointercancel'].forEach(function (ev) { logo.addEventListener(ev, function () { clearTimeout(hold); }); });

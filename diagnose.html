@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Leistungskurse · Diagnose</title>
+<!-- Prüfseite für Tafeln (Entscheidung 78): zeigt, was der Browser kann. Bewusst einfaches Skript (ES5),
+     damit sie auch in sehr alten Browsern läuft. Fotografieren und schicken genügt. -->
+<style>
+  body { margin: 0; padding: 24px; background: #0b0c0f; color: #f6f3ee; font: 16px/1.45 "Segoe UI", system-ui, Arial, sans-serif; }
+  h1 { margin: 0 0 4px; font-size: 26px; }
+  p.sub { margin: 0 0 18px; color: #c9c3b9; }
+  table { border-collapse: collapse; width: 100%; max-width: 1100px; }
+  td { padding: 5px 10px; border-top: 1px solid #2a2d33; vertical-align: top; }
+  td:first-child { color: #c9c3b9; width: 34%; }
+  .ok { color: #c8d530; font-weight: 700; } .no { color: #ff7a66; font-weight: 700; }
+  button { margin: 14px 10px 0 0; padding: 10px 18px; border-radius: 999px; border: 0; background: #c8d530; color: #16180a; font: inherit; font-weight: 700; cursor: pointer; }
+  #log { margin-top: 14px; white-space: pre-wrap; color: #c9c3b9; max-width: 1100px; }
+</style>
+</head>
+<body>
+<h1>Diagnose für die Tafel</h1>
+<p class="sub">Bitte diese Seite auf der Tafel öffnen, beide Tests starten und ein Foto vom Bildschirm schicken.</p>
+<table id="t"></table>
+<button type="button" id="audioBtn">Ton testen</button>
+<button type="button" id="netBtn">Netz testen</button>
+<div id="log"></div>
+<script>
+(function () {
+  var t = document.getElementById('t'), log = document.getElementById('log');
+  function row(k, v, good) {
+    var tr = document.createElement('tr'), a = document.createElement('td'), b = document.createElement('td');
+    a.textContent = k; b.textContent = v; if (good === true) b.className = 'ok'; if (good === false) b.className = 'no';
+    tr.appendChild(a); tr.appendChild(b); t.appendChild(tr); return b;
+  }
+  function say(s) { log.textContent += s + '\n'; }
+  window.onerror = function (m, src, line) { say('Skriptfehler: ' + m + ' (' + (src || '').split('/').pop() + ':' + line + ')'); };
+
+  var ua = navigator.userAgent, m = /Chrom(e|ium)\/(\d+)/.exec(ua), v = m ? +m[2] : 0;
+  row('Browser', ua);
+  row('Chrome-Version', v ? String(v) : 'unbekannt', v ? v >= 87 : null);
+  row('Fenster (CSS-Pixel)', innerWidth + ' × ' + innerHeight + ' · Bildschirm ' + screen.width + ' × ' + screen.height);
+  row('Skalierung (devicePixelRatio)', String(window.devicePixelRatio));
+  row('Querformat-Layout aktiv', String(!!(window.matchMedia && matchMedia('(min-width: 900px) and (min-aspect-ratio: 4/3)').matches)));
+  var sup = function (p, val) { return !!(window.CSS && CSS.supports && CSS.supports(p, val)); };
+  row('CSS clamp() (Schriftgrößen)', sup('font-size', 'clamp(10px, 2vw, 20px)') ? 'ja' : 'NEIN', sup('font-size', 'clamp(10px, 2vw, 20px)'));
+  row('CSS inset', sup('inset', '0') ? 'ja' : 'NEIN', sup('inset', '0'));
+  row('CSS gap in Flexbox/Grid', sup('gap', '1px') ? 'ja' : 'NEIN', sup('gap', '1px'));
+  row('CSS backdrop-filter', sup('backdrop-filter', 'blur(2px)') ? 'ja' : 'nein (nur Optik)', null);
+  row('CSS color-mix', sup('color', 'color-mix(in srgb, red 50%, blue)') ? 'ja' : 'nein (nur Optik)', null);
+  row('Sichere Verbindung (für Speicher nötig)', String(window.isSecureContext), !!window.isSecureContext);
+  row('Service Worker (Offline-Speicher)', 'serviceWorker' in navigator ? 'ja' : 'NEIN', 'serviceWorker' in navigator);
+  row('Cache-Speicher', window.caches ? 'ja' : 'NEIN', !!window.caches);
+  row('Vollbild', document.fullscreenEnabled ? 'ja' : (document.webkitFullscreenEnabled ? 'nur mit webkit-Präfix' : 'nein'), !!document.fullscreenEnabled);
+  var au = document.createElement('audio');
+  row('MP3 abspielbar', au.canPlayType('audio/mpeg') || 'NEIN', !!au.canPlayType('audio/mpeg'));
+  var sw = row('Gespeicherte Filme', 'wird geprüft …');
+  if (window.caches && caches.keys) {
+    caches.keys().then(function (keys) {
+      if (!keys.length) { sw.textContent = 'keine (Startseite oder Tafel einmal öffnen und warten)'; sw.className = 'no'; return; }
+      return Promise.all(keys.map(function (k) { return caches.open(k).then(function (c) { return c.keys(); }).then(function (r) { return k + ': ' + r.length + ' Dateien'; }); }))
+        .then(function (l) { sw.textContent = l.join(' · '); sw.className = 'ok'; });
+    }).catch(function (e) { sw.textContent = 'Fehler: ' + e; sw.className = 'no'; });
+  } else { sw.textContent = 'nicht möglich'; sw.className = 'no'; }
+  if (navigator.serviceWorker && navigator.serviceWorker.getRegistration) {
+    navigator.serviceWorker.getRegistration().then(function (r) {
+      row('Service Worker angemeldet', r ? 'ja (' + (r.active ? 'aktiv' : 'noch nicht aktiv') + ')' : 'nein', !!r);
+    });
+  }
+  if (navigator.storage && navigator.storage.estimate) {
+    navigator.storage.estimate().then(function (e) {
+      row('Speicher belegt / verfügbar', Math.round(e.usage / 1e6) + ' MB / ' + Math.round(e.quota / 1e6) + ' MB', e.quota > 60e6);
+    });
+  }
+
+  // Ton: wie lange dauert es vom Abspielen bis zum ersten Klang?
+  var SRC = 'media/englisch/audio_manifest.json';
+  document.getElementById('audioBtn').onclick = function () {
+    fetch(SRC).then(function (r) { return r.json(); }).then(function (m) {
+      var cat = m.categories[Object.keys(m.categories)[0]], file = 'media/englisch/' + cat.items[3].file;
+      var a = new Audio(file), t0 = Date.now(); a.preload = 'auto';
+      a.addEventListener('playing', function () { say('Ton: erster Klang nach ' + (Date.now() - t0) + ' ms (' + file.split('/').pop() + ')'); setTimeout(function () { a.pause(); }, 2500); });
+      a.addEventListener('error', function () { say('Ton: Fehler beim Laden (' + (a.error && a.error.code) + ')'); });
+      var p = a.play(); if (p && p.catch) p.catch(function (e) { say('Ton: Abspielen blockiert – ' + e.name + ': ' + e.message); });
+    }).catch(function (e) { say('Ton: Manifest nicht geladen – ' + e); });
+  };
+  // Netz: Durchsatz bei einer Aufnahme ohne Speicher
+  document.getElementById('netBtn').onclick = function () {
+    var url = 'media/kunst/img/k14.jpg?x=' + Date.now(), t0 = Date.now();
+    fetch(url, { cache: 'no-store' }).then(function (r) { return r.arrayBuffer(); }).then(function (b) {
+      var s = (Date.now() - t0) / 1000;
+      say('Netz: ' + Math.round(b.byteLength / 1024) + ' KB in ' + s.toFixed(2) + ' s = ' + Math.round(b.byteLength / 1024 / s) + ' KB/s');
+    }).catch(function (e) { say('Netz: Fehler – ' + e); });
+  };
+})();
+</script>
+</body>
+</html>
