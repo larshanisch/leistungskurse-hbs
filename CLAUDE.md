@@ -4,7 +4,7 @@ Vertonte, automatisch abspielbare Web-Präsentationen zu den Leistungskursen **D
 Kunst** für den Tag der offenen Tür der Heinrich-Böll-Schule Hattersheim (Hessen).
 Zielgruppe: E-Phase (Klasse 11), Abitur voraussichtlich 2029.
 
-Plan und Inhalt: `PLAN.md`. Entscheidungen: `ENTSCHEIDUNGEN.md` (nummeriert, nicht still neu
+Plan und Inhalt: `PLAN.md`. **Jedes Jahr Anfang Oktober:** `JAHRESPFLEGE.md` abarbeiten (Erinnerung: geplante Aufgabe am 1. Oktober). Entscheidungen: `ENTSCHEIDUNGEN.md` (nummeriert, nicht still neu
 verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 
 ## Konventionen
@@ -130,6 +130,15 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - 29.10.2026: Update-Meldung `assets/js/update.js` auf Startseite, Tafel, Dauerbetrieb (Entscheidung 92). Alte Fassung trotz Neuladen = Speicher; sofort: Strg+Umschalt+R.
 - 29.10.2026: Startseite hell im Stil der neuen Schulwebsite (`assets/css/hell.css`, Schriften in `assets/fonts/`, Entscheidung 94); Filme bleiben dunkel.
   Farben der Startseite in `hell.css` ändern, nicht im Grundstil. Gleich hohe Aufgabenfeld-Bilder: `eqCards` (Entscheidung 93).
+- 29.10.2026: Haftungshinweis „Ohne Gewähr“ im Planer (Entscheidung 95). **Planer neu in drei Schritten** (Entscheidung 96): Code im Block „Planer in drei Schritten“
+  in `index.html` (`p2Show`, `p2Render`, Einschränkungen `p2Limits`), Stil in `assets/css/planer.css`; der Rechner (`renderKurse`, Ablage `#v-kurse`) wird in Schritt 3 eingehängt.
+  Prüf-Adresse `#planer/3/<LK1>/<LK2>/<P3>,<P4>,<P5>`. Farben: 1. LK grün, 2. LK blau, „frei wählbar“ dunkelgrün. Fach-Icons auch auf Feldkarten und Filmkacheln (97).
+- 29.10.2026: Testversion; später über die Schulwebsite (Link auf `handy.html`, nicht auf die Startseite – sonst Tafel-Einrichtung und 35 MB Vorladen).
+  Datenschutz/Impressum dann über die Schulwebsite; Entwurf `datenschutz.html` nur lokal (Entscheidung 101). Später liegen die Dateien auf dem **Schulserver**
+  (alle Verweise sind relativ; `update.js` braucht dort `Last-Modified` und `HEAD`, der Service Worker HTTPS).
+- 29.10.2026: Planer Schritt 4 „Noten“ (Erwartung / Meine Noten, Zulassung, Fachhochschulreife, Möglichkeiten, Entscheidung 102), Speichern im Link, Teilen,
+  Drucken, QR, Merken (103), Touch-Größen (104). Code im Planer-Block von `index.html` (`p4Calc`, `p4EchtZul`, `p4Fhr`, `p2Code`/`p2Restore`), QR `assets/js/qr.js`.
+  Prüf-Adressen: `#planer/4/<LK1>/<LK2>/<P3>,<P4>,<P5>/auffuellen`, Touch `?touch=1`. Eigene Noten nur auf eigenen Geräten (`SHOW_ALL` und nicht im Rahmen).
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

@@ -1,6 +1,8 @@
 # Faktenblatt: Leistungskurse in Hessen – fächerübergreifende amtliche Vorgaben
 
 Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Q-Phase 2027/28–2028/29, Landesabitur 2029
+Version 2.3 (29.10.2026: Fachhochschulreife § 48, Anlage 12, Zulassung § 23 Abs. 4–6, Wiederholung § 40, Rücktritt § 13 Abs. 10–11, Verweildauer § 3 am Originaltext)
+Version 2.2 (29.10.2026: Tabelle Anlage 10b am Originaltext)
 Version 2.1 (29.10.2026: Fächer mit zentralen Aufgaben im Landesabitur 2028 am Originaltext)
 Version 2.0 (29.10.2026: Belegpflicht § 13 Abs. 9 und Anlage 7 am Originaltext; Grundkurs-Angebot der HBS)
 Version 1.9 (29.10.2026: Sport als Prüfungsfach, § 24 Abs. 3–4 am Originaltext)
@@ -148,6 +150,46 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
 - **Mindestpunktzahlen für das Abitur:** insgesamt mindestens **300 Punkte**. Davon in Block I mindestens **80 im LK-Bereich** und mindestens **120 im GK-Bereich**, in Block II mindestens **100**. – OAVO § 26 Abs. 14, ebd., abgerufen 27.10.2026
 - **Zulassung zur Abiturprüfung:** Voraussetzungen sind die Verweildauer (§ 3), die Pflichten in der zweiten Fremdsprache, die Pflichtkurse nach Anlage 7 und die nach § 26 verbindlichen Kurse mit der nötigen Punktzahl. Entschieden wird am Ende der Kursphase Q4. Die Meldung zum Abitur erfolgt schriftlich zu Beginn von Q4. – OAVO § 23 Abs. 1–3, ebd., abgerufen 27.10.2026
 - **Durchschnittsnote** nach Tabelle Anlage 10b. – OAVO § 38 Abs. 1, ebd., abgerufen 27.10.2026
+  - **Anlage 10b (Gesamtpunkte → Durchschnittsnote):** 300 → 4,0; 301–318 → 3,9; 319–336 → 3,8; … in Stufen von je 18 Punkten …;
+    463–480 → 3,0; 481–498 → 2,9; 643–660 → 2,0; 661–678 → 1,9; 805–822 → 1,1; **823–900 → 1,0**. – OAVO Anlage 10b (zu § 38 Abs. 1),
+    https://www.rv.hessenrecht.hessen.de/perma?d=hevr-OSt_AbiVHEV6Anlage10b (Fassung 01.08.2017, gültig ab 16.09.2017; laut Inhaltsverzeichnis
+    der Gesamtfassung gültig ab 01.08.2026 weiterhin diese Fassung), abgerufen 29.10.2026
+  - **[ABLEITUNG]** Als Formel: Note = 4,0 − 0,1 × aufgerundet((Punkte − 300) / 18) für 301 bis 822 Punkte; ab 823 Punkten 1,0. Gegengeprüft an allen
+    Stufengrenzen der Tabelle.
+- **Zulassung, Einbringen aus welchen Halbjahren:** „Für die Zulassung und die Berechnung der Gesamtqualifikation werden Kurse aus vier
+  Halbjahren einschließlich des Prüfungshalbjahres eingebracht.“ Bei wiederholten Halbjahren zählt der zweite Durchgang. – OAVO § 23 Abs. 4, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+- **Wer die Zulassungsbedingungen nicht erfüllt:** „Wer die Bedingungen des Abs. 2 nicht spätestens zu Beginn des sechsten Halbjahres nach Eintritt in
+  die Qualifikationsphase erfüllt, muss die Schule verlassen.“ Weiterer Unterricht in diesem Halbjahr nur auf Antrag, wenn dabei der schulische Teil der
+  Fachhochschulreife oder eine bescheinigte Teilqualifikation erworben werden kann. Nicht zugelassen wird auch, wer sich nicht zur Prüfung meldet. – OAVO § 23 Abs. 5–6, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+- **Wiederholung der Abiturprüfung:** „Wer die Abiturprüfung nicht bestanden hat, kann sie einmal wiederholen.“ Dann ist „ein Schuljahr mit sämtlichen
+  Belegverpflichtungen und die gesamte schriftliche und mündliche Prüfung“ zu wiederholen (Kurse wie im zweiten Jahr der Q-Phase). Eine zweite Wiederholung
+  nur ausnahmsweise mit Genehmigung der Schulaufsicht. – OAVO § 40 Abs. 1–3, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+- **Freiwilliger Rücktritt:** aus Q1 oder Q2 in die Einführungsphase möglich, wenn man nicht schon einmal in die E-Phase zurückgetreten ist oder sie
+  wiederholt hat; ab Q3 nur, wenn der Antrag mindestens vier Wochen vor der Zulassungsentscheidung gestellt wurde. – OAVO § 13 Abs. 10–11, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+- **Verweildauer:** Die Oberstufe dauert „in der Regel drei, mindestens zwei und höchstens vier Jahre“; Verlängerung nur ausnahmsweise durch die
+  Schulaufsicht; eine Wiederholung der nicht bestandenen Abiturprüfung darf die Höchstdauer um ein Jahr überschreiten. – OAVO § 3 Abs. 1, 3, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+- **Fachhochschulreife (gymnasiale Oberstufe):** Wer die Q-Phase mindestens bis zum Ende des zweiten Halbjahres besucht hat, erwirbt die
+  Fachhochschulreife, wenn die schulischen Leistungen nach Abs. 2 erfüllt sind und eine berufliche Tätigkeit nach Abs. 6 nachgewiesen ist. – OAVO § 48 Abs. 1, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+  - **Schulischer Teil (Abs. 2):** in zwei Halbjahren der Q-Phase (1) in **11 Grundkursen zusammen mindestens 55 Punkte** (einfach), davon mindestens
+    **7 Kurse mit je mindestens 5 Punkten**, und (2) in **beiden Leistungsfächern mit je zwei Kursen zusammen mindestens 40 Punkte in zweifacher Wertung**,
+    davon mindestens **2 Kurse mit je mindestens 5 Punkten** (einfach). Unter den Kursen müssen je zwei Halbjahreskurse in **Deutsch, einer Fremdsprache,
+    Mathematik und einer Naturwissenschaft** sein und je zwei in **Geschichte oder Politik und Wirtschaft** (oder Wirtschaftswissenschaften); aus
+    anderen Fächern höchstens je zwei Kurse. – OAVO § 48 Abs. 2, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+  - **Abs. 4:** Kurse mit 0 Punkten und Leistungen der E-Phase zählen nicht. Wer die Q-Phase länger als zwei Halbjahre besucht hat, bringt je Fach
+    Kurse aus **zwei unmittelbar aufeinanderfolgenden Halbjahren** ein; die Auswahl erfolgt für jedes Fach gesondert. – OAVO § 48 Abs. 4, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+  - **Abs. 5:** Gesamtpunktzahl mindestens 95, höchstens 285; Note nach **Anlage 12**: 95 → 4,0; 96–100 → 3,9; 101–106 → 3,8; 107–112 → 3,7;
+    113–117 → 3,6; 118–123 → 3,5; 124–129 → 3,4; 130–134 → 3,3; 135–140 → 3,2; 141–146 → 3,1; 147–152 → 3,0; 153–157 → 2,9; 158–163 → 2,8;
+    164–169 → 2,7; 170–174 → 2,6; 175–180 → 2,5; 181–186 → 2,4; 187–191 → 2,3; 192–197 → 2,2; 198–203 → 2,1; 204–209 → 2,0; 210–214 → 1,9;
+    215–220 → 1,8; 221–226 → 1,7; 227–231 → 1,6; 232–237 → 1,5; 238–243 → 1,4; 244–248 → 1,3; 249–254 → 1,2; 255–260 → 1,1; 261–285 → 1,0.
+    – OAVO § 48 Abs. 5 und Anlage 12, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+  - **Berufliche Tätigkeit (Abs. 6)**, für das volle Zeugnis der Fachhochschulreife: Abschlussprüfung in einem anerkannten Ausbildungsberuf,
+    schulische Berufsausbildung mit staatlicher Prüfung, Laufbahnprüfung im öffentlichen Dienst, mindestens einjähriges gelenktes Praktikum in Vollzeit
+    (oder ein Jahr Ausbildung), freiwilliges soziales oder ökologisches Jahr, Wehrdienst, entwicklungspolitischer Freiwilligendienst oder
+    Bundesfreiwilligendienst. In der Oberstufe kann die berufliche Tätigkeit erst nach Erwerb des schulischen Teils begonnen werden (Abs. 8). Wer den
+    schulischen Teil erworben hat und die Schule verlässt, bekommt ihn im Abgangszeugnis bescheinigt (Abs. 9); das Zeugnis der Fachhochschulreife stellt
+    dann die Schule aus (Abs. 10). – OAVO § 48 Abs. 6, 8–10, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
+- **Berufsorientierung an der HBS:** Die Schule hat ein „Berufsorientierungszentrum“ (Koordination in Raum 227) mit Angeboten für alle Jahrgangsstufen; die Studien- und Berufsberatung der Agentur für Arbeit (Bad Homburg) berät an der Schule. – Schulwebsite https://www.heinrich-boell-schule.de/angebote/beratungsangebote/berufliche-orientierung.html, abgerufen 29.10.2026 (vom Nutzer genannt)
+- **Einbringen bei weniger als vier Pflichtkursen** (z. B. Kunst oder Musik 2): Welche Halbjahre, ist frei wählbar. – SCHULE (Nutzer 29.10.2026)
 - **Nebenbei (Zulassung zur Q-Phase, relevant für die E-Phase):** In jedem Pflichtfach braucht man am Ende der E-Phase mindestens 5 Punkte, sonst ist ein Ausgleich nötig. 0 Punkte in einem Fach schließt die Zulassung aus. – OAVO § 12 Abs. 2–3, ebd., abgerufen 27.10.2026
 
 ## 5. Abiturprüfung

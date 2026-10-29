@@ -95,3 +95,9 @@ html, body { overflow-x: clip; }
 /* Bilder der Aufgabenfelder nie unter 16 % der Fensterhöhe (die weiße Kopfzeile kostet Platz) */
 .fcard .pic { min-height: max(120px, 16vh) !important; }
 @media (max-width: 899px) { .fcard { min-height: 0; } .fcard .pic { flex: none; height: 180px; } }
+
+/* Fach-Icons auf Startseite und Filmkacheln (Entscheidung 97) */
+.fcard li .li-ico { flex: none; width: 1.15em; height: 1.15em; }
+.fcard li.film::before { display: none; }
+.tile .subj .subj-ico { display: inline-block; width: 0.8em; height: 0.8em; margin-right: 0.25em; vertical-align: -0.06em; color: var(--accent); }
+.tile.away .subj .subj-ico, .tile.soon .subj .subj-ico { color: #e6e6e6; }
