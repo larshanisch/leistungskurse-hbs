@@ -116,6 +116,7 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - 29.10.2026: Film Chemie fertig (neue Leitfigur E, **5:45 min gemessen**, Entscheidung 65). Damit alle acht Filme.
   Vergleichstafeln: lange Wörter mit weicher Trennstelle U+00AD in content (Entscheidung 66).
 - 29.10.2026: Ruckeln behoben (Entscheidung 68), Fach oben links (69), `kiosk.html?stumm=1` (70), Planer-Reiter „Einbringen“ (71), LK-Noten doppelt im Planer (73), Logo freigestellt als Wasserzeichen (74), Herkunfts- und KI-Vermerk (75), Startseite scrollbar (76), Vollbild-Knopf (77), Startseite speichert, `diagnose.html` für Tafeln (78).
+  Promethean-Tafeln: Chrome 108, 4K (Pixeldichte 2) – Ton ist die Uhr, keine Unschärfe bei 2dppx, Vollbild im Rahmen (79).
   Flüssigkeit messen: `node tools/perf_film.mjs <fach> --t=150 --cpu=6` (Werte streuen – je dreimal; verlässlich sind
   `layoutCount` und `task_s`). Im Player Werte nur über `setStyle`/`setText` schreiben (nur bei Änderung).
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.

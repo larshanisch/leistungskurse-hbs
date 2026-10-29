@@ -358,6 +358,8 @@
   // damit eine fehlende Datei den Film nicht anhält.
   const HOLD_MAX = 4;
   let holdT = null, holdSince = 0, audioBlocked = false;
+  const SYNC = 0.12, JUMP = 1.5;            // ab 0,12 s Abstand stellt sich die Uhr nach dem Ton; ab 1,5 s war es ein Sprung
+  const stats = { resyncs: 0, seeks: 0 };
 
   // gibt die Zeit zurück, auf der die Uhr stehen bleiben soll, sonst null
   function renderAudio(t) {
@@ -373,8 +375,10 @@
       // Autoplay gesperrt (Seite ohne Klick geöffnet): Film läuft stumm weiter
       if (p && p.catch) p.catch((e) => { if (e && e.name === 'NotAllowedError') audioBlocked = true; });
       preloadFrom(sentences.indexOf(s) + 1);
-    } else if (!audio.paused && Math.abs(audio.currentTime - want) > 0.35 && audio.readyState >= 3) {
-      audio.currentTime = want;
+    } else if (!audio.paused && audio.readyState >= 3) {
+      const drift = audio.currentTime - want;
+      if (Math.abs(drift) > JUMP) { audio.currentTime = want; stats.seeks++; }      // jemand ist im Film gesprungen
+      else if (Math.abs(drift) > SYNC) { stats.resyncs++; holdT = null; return s.abs + audio.currentTime; }   // Uhr folgt dem Ton
     }
     if (!audioBlocked && audio.readyState < 3) {
       if (holdT === null) { holdT = t; holdSince = now(); }
@@ -615,5 +619,5 @@
   requestAnimationFrame(frame);
 
   // Für Prüfwerkzeuge: Zustand von außen lesbar, ohne die Uhr zu beeinflussen
-  window.__film = { time, total, scenes, seek, play, pause, isMuted: () => muted, finish: showFinish };
+  window.__film = { time, total, scenes, seek, play, pause, isMuted: () => muted, finish: showFinish, stats };
 })();

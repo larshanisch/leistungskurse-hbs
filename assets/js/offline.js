@@ -69,7 +69,7 @@
   // Kleine Anzeige unten links: Fortschritt, dann kurz „gespeichert“, dann weg
   function start() {
     const style = document.createElement('style');
-    style.textContent = '#tdotOffline{position:fixed;left:2vh;bottom:2vh;z-index:20;display:flex;align-items:center;gap:1vw;' +
+    style.textContent = '#tdotOffline{position:fixed;left:2vh;bottom:2vh;z-index:20;pointer-events:none;display:flex;align-items:center;gap:1vw;' +
       'padding:1vh 1.4vw;border-radius:999px;background:rgba(11,12,15,0.82);color:#f6f3ee;font:600 1.7vh/1.2 "Segoe UI",system-ui,sans-serif;' +
       'transition:opacity .6s}#tdotOffline .b{width:9vw;height:.7vh;border-radius:.4vh;background:rgba(255,255,255,.2);overflow:hidden}' +
       '#tdotOffline .b i{display:block;height:100%;width:0;background:#c8d530;transition:width .3s}#tdotOffline.done{opacity:0}';
@@ -88,7 +88,8 @@
       box.querySelector('.b').remove();
       t.textContent = r.ok ? '✓ Alle Filme gespeichert – sie laufen jetzt auch ohne Internet'
         : 'Nicht alles gespeichert (' + r.failed + ' Dateien) – die Filme laufen trotzdem über das Netz';
-      setTimeout(() => box.classList.add('done'), r.ok ? 6000 : 15000);
+      // ausblenden und danach entfernen – die unsichtbare Anzeige lag sonst über „Tafel einrichten“ (Entscheidung 79)
+      setTimeout(() => { box.classList.add('done'); setTimeout(() => box.remove(), 800); }, r.ok ? 6000 : 15000);
       return r;
     }).catch(() => { box.remove(); });
   }

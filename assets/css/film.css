@@ -125,7 +125,7 @@ button, a { font: inherit; color: inherit; }
 .cmp { display: grid; grid-template-columns: minmax(min-content, 0.8fr) minmax(0, 1fr) minmax(0, 1.25fr); gap: 0; font-size: clamp(13px, 1.3vw, 20px); }
 .cmp > div { padding: 0.6em 0.6em; border-top: 1px solid var(--line); line-height: 1.25; hyphens: manual; }
 .cmp .h { border-top: 0; font-weight: 800; font-size: 1.05em; }
-.cmp .h.lk, .cmp .lk { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+.cmp .h.lk, .cmp .lk { background: rgba(200,213,48,0.22); background: color-mix(in srgb, var(--accent) 22%, transparent); }
 .cmp .h.lk { border-radius: 10px 10px 0 0; }
 .cmp .rl { color: var(--ink-soft); font-weight: 600; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.06em; }
 .cmp .lk { font-weight: 700; }
@@ -274,3 +274,10 @@ button, a { font: inherit; color: inherit; }
 /* Nur für Prüfwerkzeuge (?static=1): Endzustand ohne Übergang zeigen */
 #stage.static *, #stage.static *::before { transition: none !important; }
 .finish-hint { margin: 1.4em 0 0; color: var(--ink-soft); font-size: clamp(13px, 1.2vw, 17px); }
+
+/* 4K-Tafeln (Pixeldichte 2, z. B. Promethean): keine Milchglas-Unschärfe – sie muss bei jedem Bild über der
+   bewegten Aufnahme neu gerechnet werden; die Flächen werden dafür dichter (Entscheidung 79) */
+@media (min-resolution: 2dppx) {
+  * { backdrop-filter: none !important; }
+  :root { --glass: rgba(14,16,20,0.78); --glass-strong: rgba(10,11,14,0.88); }
+}

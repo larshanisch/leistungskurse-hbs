@@ -745,10 +745,27 @@
       if (!d.fullscreenEnabled || window.top !== window) return;
       b.hidden = false;
       var sync = function () { b.querySelector('span').textContent = d.fullscreenElement ? 'Vollbild beenden' : 'Vollbild'; };
+      var frame = null;
       b.addEventListener('click', function () {
-        if (d.fullscreenElement) d.exitFullscreen(); else d.documentElement.requestFullscreen().catch(function () {});
+        if (d.fullscreenElement) { d.exitFullscreen(); return; }
+        d.documentElement.requestFullscreen().then(function () {
+          frame = d.createElement('iframe');
+          frame.title = 'Leistungskurse'; frame.allow = 'autoplay; fullscreen';
+          frame.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;border:0;z-index:40;background:#0b0c0f';
+          frame.src = location.href;
+          d.body.appendChild(frame);
+          d.body.style.overflow = 'hidden';
+        }).catch(function () {});
       });
-      d.addEventListener('fullscreenchange', sync);
+      d.addEventListener('fullscreenchange', function () {
+        sync();
+        // Vollbild verlassen: dort weitermachen, wo der Rahmen gerade ist
+        if (!d.fullscreenElement && frame) {
+          var here = null; try { here = frame.contentWindow.location.href; } catch (e) { /* fremde Seite */ }
+          if (here && here !== location.href) location.href = here;
+          else { frame.remove(); frame = null; d.body.style.overflow = ''; }
+        }
+      });
     })();
 
     var hold = null, logo = document.querySelector('.logo');

@@ -18,6 +18,7 @@ const opt = (k, d) => { const a = args.find(x => x.startsWith('--' + k + '=')); 
 const T = Number(opt('t', 150)), SEC = Number(opt('sec', 10)), CPU = Number(opt('cpu', 4));
 const [W, H] = opt('size', '1920,1080').split(',').map(Number);
 const CSS = opt('css', '');
+const DPR = Number(opt('dpr', 1));   // Pixeldichte wie auf 4K-Tafeln (Promethean: 2)
 
 const chrome = spawn(CHROME, ['--headless=new', '--remote-debugging-port=0', `--user-data-dir=${PROFILE}`,
   `--window-size=${W},${H}`, '--autoplay-policy=no-user-gesture-required', '--mute-audio', 'about:blank'],
@@ -39,6 +40,7 @@ const evalJs = async (expr) => { const r = await send('Runtime.evaluate', { expr
 try {
   await send('Page.enable');
   await send('Emulation.setCPUThrottlingRate', { rate: CPU });
+  if (DPR !== 1) await send('Emulation.setDeviceMetricsOverride', { width: W, height: H, deviceScaleFactor: DPR, mobile: false });
   await send('Page.navigate', { url: `http://localhost:8317/film.html?fach=${fach}&t=${T}&muted=1` });
   await new Promise(r => setTimeout(r, 4000));
   if (CSS) await evalJs(`(() => { const s = document.createElement('style'); s.textContent = ${JSON.stringify(CSS)}; document.head.appendChild(s); })()`);
@@ -50,7 +52,7 @@ try {
   const res = await evalJs(`new Promise((resolve) => {
     window.__film.play();
     const ts = []; const t0 = performance.now(); const film0 = window.__film.time();
-    const step = (now) => { ts.push(now); if (now - t0 < ${SEC * 1000}) requestAnimationFrame(step); else resolve({ ts, filmSec: window.__film.time() - film0 }); };
+    const step = (now) => { ts.push(now); if (now - t0 < ${SEC * 1000}) requestAnimationFrame(step); else resolve({ ts, filmSec: window.__film.time() - film0, stats: window.__film.stats || null }); };
     requestAnimationFrame(step);
   })`);
   const m1 = await metrics();
@@ -73,9 +75,9 @@ try {
   const d = res.ts.slice(1).map((t, i) => t - res.ts[i]).sort((a, b) => a - b);
   const q = (p) => d[Math.min(d.length - 1, Math.floor(p * d.length))];
   const fps = (d.length / (SEC)).toFixed(1);
-  console.log(JSON.stringify({ fach, t: T, cpu: CPU, size: `${W}x${H}`, css: CSS || null, fps: Number(fps),
+  console.log(JSON.stringify({ fach, t: T, cpu: CPU, size: `${W}x${H}`, dpr: DPR, css: CSS || null, fps: Number(fps),
     median_ms: +q(0.5).toFixed(1), p95_ms: +q(0.95).toFixed(1), max_ms: +d[d.length - 1].toFixed(1),
-    over50ms: d.filter(x => x > 50).length, filmSec: +res.filmSec.toFixed(1) }));
+    over50ms: d.filter(x => x > 50).length, filmSec: +res.filmSec.toFixed(1), ton: res.stats }));
 } finally {
   ws.close(); chrome.kill();
   await new Promise(r => setTimeout(r, 800));
