@@ -693,7 +693,9 @@
         ['2. Fremd­sprache oder 2. Natur­wiss./Informatik', '2 Kurse',
           has('biologie') && has('chemie') ? lk('deine LKs') : gk('2 Grundkurse')],
         ['Prüfungsfächer 3 bis 5', 'alle vier Halbjahre', gk('12 Grundkurse')],
-        ['Sport', 'bis zu 3 Kurse; als Prüfungsfach alle 4', gk('freiwillig')]
+        ['Sport', 'bis zu 3 Kurse; als Prüfungsfach alle 4', gk('freiwillig')],
+        // § 26 Abs. 2: 24 Grundkurse zählen; was die Pflichten nicht füllen, wählst du aus deinen übrigen Kursen (Entscheidung 109)
+        ['alle anderen belegten Kurse', 'z. B. Religion, Ethik, Physik, Informatik oder weitere Kurse in Pflichtfächern – bis 24 Grundkurse erreicht sind', gk('freiwillig')]
       ];
       return '<div class="ein">' + rows.map(function (r) {
         return '<div>' + esc(r[0]) + '<small>' + esc(r[1]) + '</small></div><div class="st">' + r[2] + '</div>';
@@ -1078,7 +1080,7 @@
           '<p>Einen Teil der 24 Grundkurse schreibt die Verordnung vor, den Rest wählst du selbst. Du kannst nur einbringen, was du auch belegt hast.</p>' +
           '<p class="p2ex"><b>Beispiel:</b> Kunst oder Musik musst du mindestens zwei Halbjahre belegen – und diese zwei Kurse zählen dann auch für dein Abitur.</p>' +
         '</div>' +
-        '<p class="p2sub">Was du bei deiner Kombination einbringen musst:</p>' + einbring(pick.a, pick.b) + '</details><div id="p3go" class="p3go"></div><div id="p2calc"></div>';
+        '<p class="p2sub">Was du bei deiner Kombination einbringen musst oder kannst:</p>' + einbring(pick.a, pick.b) + '</details><div id="p3go" class="p3go"></div><div id="p2calc"></div>';
     }
 
     function p2Render() {
