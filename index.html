@@ -1414,13 +1414,16 @@
     // nicht bei Links: die ändern die Adresse selbst (sonst überschreibt das Nachführen den Sprung, z. B. „Weitermachen“)
     ['click', 'input', 'change'].forEach(function (ev) { $('v-planer').addEventListener(ev, function (e) { if (e.target.closest && e.target.closest('a[href^="#"]')) return; setTimeout(p2SyncUrl, 0); }); });
 
-    // Leiste mit Teilen / Drucken / Merken
+    // Knopf „Für später merken“ (ab Schritt 2): klappt Teilen / Drucken / QR / Merken auf (Entscheidung 108)
+    var toolsOpen = false;
     function p2Tools() {
       var saved = null; try { saved = CAN_KEEP && localStorage.getItem('tdot-plan'); } catch (e) { /* */ }
       var resume = !pick.a && saved && saved !== '#planer'
         ? '<span class="p2resume">Auf diesem Gerät ist ein Plan gespeichert. <a href="' + esc(saved) + '">Weitermachen →</a></span>' : '';
-      if (!pick.a) return resume ? '<div class="p2tools">' + resume + '</div>' : '';
-      return '<div class="p2tools">' +
+      if (!pick.a || P2.step < 2) return resume ? '<div class="p2tools">' + resume + '</div>' : '';
+      var head = '<button type="button" class="p2tool p2menu" data-tool="menu" aria-expanded="' + toolsOpen + '">Für später merken <span aria-hidden="true">' + (toolsOpen ? '▴' : '▾') + '</span></button>';
+      if (!toolsOpen) return '<div class="p2tools">' + head + '</div>';
+      return '<div class="p2tools open">' + head +
         '<button type="button" class="p2tool" data-tool="share">' + (navigator.share ? 'Teilen' : 'Link kopieren') + '</button>' +
         '<button type="button" class="p2tool" data-tool="print">Drucken / PDF</button>' +
         (window.qrSvg ? '<button type="button" class="p2tool" data-tool="qr">QR-Code fürs Handy</button>' : '') +
@@ -1432,7 +1435,8 @@
     $('v-planer').addEventListener('click', function (e) {
       var t = e.target.closest('[data-tool]'); if (!t) return;
       var k = t.dataset.tool;
-      if (k === 'share') {
+      if (k === 'menu') { toolsOpen = !toolsOpen; $('p2tools').innerHTML = p2Tools(); var mb = $('p2tools').querySelector('.p2menu'); if (mb) mb.focus(); }
+      else if (k === 'share') {
         p2SyncUrl();
         var url = location.href;
         if (navigator.share) navigator.share({ title: 'Mein Kursplan · Leistungskurse an der HBS', url: url }).catch(function () {});

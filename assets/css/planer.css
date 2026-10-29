@@ -335,3 +335,7 @@ html.touch .p4q { height: 44px; }
 .mx .mx-ok .mxp { font-size: min(15px, 12cqw); }
 @media (min-width: 900px) and (min-aspect-ratio: 4/3) { .mx .mx-ok .ci { width: min(max(28px, 4.4vh), 40cqw); height: min(max(28px, 4.4vh), 40cqw); } }
 @media (min-width: 1250px) and (max-width: 1599px) { .p2s1 { grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); } }
+/* Knopf „Für später merken“ (Entscheidung 108) */
+.p2tools.open { padding: 10px 12px; border-radius: 14px; background: #fff; border: 1px solid var(--line); }
+.p2menu span { font-size: 0.8em; margin-left: 0.2em; }
+.p2tools.open .p2menu { background: #1a1a1a; color: #fff; }
