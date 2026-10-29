@@ -18,7 +18,8 @@ const opt = (k, d) => { const a = args.find(x => x.startsWith('--' + k + '=')); 
 const T = Number(opt('t', 150)), SEC = Number(opt('sec', 10)), CPU = Number(opt('cpu', 4));
 const [W, H] = opt('size', '1920,1080').split(',').map(Number);
 const CSS = opt('css', '');
-const DPR = Number(opt('dpr', 1));   // Pixeldichte wie auf 4K-Tafeln (Promethean: 2)
+const DPR = Number(opt('dpr', 1));
+const COARSE = Number(opt('coarse', 0));   // Tonzeit nur in groben Schritten melden (wie manche Tafel-Browser), z. B. 0.25   // Pixeldichte wie auf 4K-Tafeln (Promethean: 2)
 
 const chrome = spawn(CHROME, ['--headless=new', '--remote-debugging-port=0', `--user-data-dir=${PROFILE}`,
   `--window-size=${W},${H}`, '--autoplay-policy=no-user-gesture-required', '--mute-audio', 'about:blank'],
@@ -41,6 +42,8 @@ try {
   await send('Page.enable');
   await send('Emulation.setCPUThrottlingRate', { rate: CPU });
   if (DPR !== 1) await send('Emulation.setDeviceMetricsOverride', { width: W, height: H, deviceScaleFactor: DPR, mobile: false });
+  if (COARSE) await send('Page.addScriptToEvaluateOnNewDocument', { source: `(() => { const d = Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'currentTime');
+    Object.defineProperty(HTMLMediaElement.prototype, 'currentTime', { configurable: true, get() { return Math.floor(d.get.call(this) / ${COARSE}) * ${COARSE}; }, set(v) { d.set.call(this, v); } }); })();` });
   await send('Page.navigate', { url: `http://localhost:8317/film.html?fach=${fach}&t=${T}&muted=1` });
   await new Promise(r => setTimeout(r, 4000));
   if (CSS) await evalJs(`(() => { const s = document.createElement('style'); s.textContent = ${JSON.stringify(CSS)}; document.head.appendChild(s); })()`);
@@ -51,8 +54,8 @@ try {
   if (PROF) { await send('Profiler.enable'); await send('Profiler.setSamplingInterval', { interval: 200 }); await send('Profiler.start'); }
   const res = await evalJs(`new Promise((resolve) => {
     window.__film.play();
-    const ts = []; const t0 = performance.now(); const film0 = window.__film.time();
-    const step = (now) => { ts.push(now); if (now - t0 < ${SEC * 1000}) requestAnimationFrame(step); else resolve({ ts, filmSec: window.__film.time() - film0, stats: window.__film.stats || null }); };
+    const ts = []; const t0 = performance.now(); const film0 = window.__film.time(); let last = film0, back = 0, backMax = 0;
+    const step = (now) => { ts.push(now); const ft = window.__film.time(); if (ft < last - 0.001) { back++; backMax = Math.max(backMax, last - ft); } last = ft; if (now - t0 < ${SEC * 1000}) requestAnimationFrame(step); else resolve({ ts, filmSec: window.__film.time() - film0, stats: window.__film.stats || null, back, backMax }); };
     requestAnimationFrame(step);
   })`);
   const m1 = await metrics();
@@ -75,9 +78,9 @@ try {
   const d = res.ts.slice(1).map((t, i) => t - res.ts[i]).sort((a, b) => a - b);
   const q = (p) => d[Math.min(d.length - 1, Math.floor(p * d.length))];
   const fps = (d.length / (SEC)).toFixed(1);
-  console.log(JSON.stringify({ fach, t: T, cpu: CPU, size: `${W}x${H}`, dpr: DPR, css: CSS || null, fps: Number(fps),
+  console.log(JSON.stringify({ fach, t: T, cpu: CPU, size: `${W}x${H}`, dpr: DPR, coarse: COARSE, css: CSS || null, fps: Number(fps),
     median_ms: +q(0.5).toFixed(1), p95_ms: +q(0.95).toFixed(1), max_ms: +d[d.length - 1].toFixed(1),
-    over50ms: d.filter(x => x > 50).length, filmSec: +res.filmSec.toFixed(1), ton: res.stats }));
+    over50ms: d.filter(x => x > 50).length, filmSec: +res.filmSec.toFixed(1), ton: res.stats, uhrRueckwaerts: res.back, groessterRuecksprung_s: +res.backMax.toFixed(3) }));
 } finally {
   ws.close(); chrome.kill();
   await new Promise(r => setTimeout(r, 800));

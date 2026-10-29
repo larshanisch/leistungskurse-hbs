@@ -182,16 +182,15 @@ button, a { font: inherit; color: inherit; }
 #stage.no-subs #subs { display: none; }
 
 /* ---------- Ton-Knopf ---------- */
-#mute { position: absolute; top: 2.6vh; right: 2.4vw; z-index: 20; display: flex; align-items: center; gap: 0.5em;
-  padding: 0.55em 1.05em 0.55em 0.85em; border: 1px solid var(--line); border-radius: 999px; background: var(--glass);
-  backdrop-filter: blur(12px); cursor: pointer; font-size: clamp(14px, 1.25vw, 18px); font-weight: 600; }
-#mute svg { width: 1.35em; height: 1.35em; fill: currentColor; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+/* in der Steuerleiste neben „Untertitel“ (Entscheidung 80) */
+.ctl-row #mute { display: inline-flex; align-items: center; gap: 0.35em; }
+#mute svg { stroke-linecap: round; }
 #mute svg path:first-child { stroke: none; }
 #mute .ico-off { display: none; }
-#mute[aria-pressed="true"] { border-color: var(--accent); }
+#mute[aria-pressed="true"] { color: var(--accent); }
 #mute[aria-pressed="true"] .ico-on { display: none; }
 #mute[aria-pressed="true"] .ico-off { display: inline; }
-#mute:hover, #mute:focus-visible { background: var(--glass-strong); }
+
 
 /* ---------- Start und Ende ---------- */
 #start, #finish { position: absolute; inset: 0; z-index: 15; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end;
@@ -265,6 +264,7 @@ button, a { font: inherit; color: inherit; }
   #chapName, #time { display: none; }
   .ctl-row { flex-wrap: nowrap; gap: 0; }
   .ctl-row button, .ctl-row a { padding: 0.45em 0.45em; font-size: 14px; }
+  #mute .lbl { display: none; }   /* auf dem Handy nur das Symbol, sonst passt die Leiste nicht */
   #start { padding-bottom: 20vh; }
 }
 @media (prefers-reduced-motion: reduce) {

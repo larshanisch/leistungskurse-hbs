@@ -358,8 +358,10 @@
   // damit eine fehlende Datei den Film nicht anhält.
   const HOLD_MAX = 4;
   let holdT = null, holdSince = 0, audioBlocked = false;
-  const SYNC = 0.12, JUMP = 1.5;            // ab 0,12 s Abstand stellt sich die Uhr nach dem Ton; ab 1,5 s war es ein Sprung
-  const stats = { resyncs: 0, seeks: 0 };
+  const SYNC = 0.15, JUMP = 1.5;            // bis 0,15 s Abstand bleibt die Uhr, wie sie ist; ab 1,5 s war es ein Sprung
+  const GAIN = 0.06, SLOWER = 0.006, FASTER = 0.02;   // Nachführen je Bild; gebremst wird höchstens 40 % der seit dem
+  let frameDt = 0.016, lastFrameNow = 0;              // letzten Bild vergangenen Zeit – so läuft die Uhr nie rückwärts
+  const stats = { resyncs: 0, seeks: 0, maxDrift: 0 };
 
   // gibt die Zeit zurück, auf der die Uhr stehen bleiben soll, sonst null
   function renderAudio(t) {
@@ -378,7 +380,11 @@
     } else if (!audio.paused && audio.readyState >= 3) {
       const drift = audio.currentTime - want;
       if (Math.abs(drift) > JUMP) { audio.currentTime = want; stats.seeks++; }      // jemand ist im Film gesprungen
-      else if (Math.abs(drift) > SYNC) { stats.resyncs++; holdT = null; return s.abs + audio.currentTime; }   // Uhr folgt dem Ton
+      else if (Math.abs(drift) > SYNC) {
+        // Uhr folgt dem Ton sanft: je Bild höchstens etwas langsamer oder schneller, nie rückwärts
+        stats.resyncs++; stats.maxDrift = Math.max(stats.maxDrift, Math.abs(drift)); holdT = null;
+        return t + Math.max(-Math.min(SLOWER, 0.4 * frameDt), Math.min(FASTER, drift * GAIN));
+      }
     }
     if (!audioBlocked && audio.readyState < 3) {
       if (holdT === null) { holdT = t; holdSince = now(); }
@@ -452,7 +458,9 @@
   const fmt = (s) => Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
 
   function frame() {
-    let t = time();
+    const frameNow = now();                   // Zeitpunkt, zu dem die Uhr gelesen wird
+    frameDt = lastFrameNow ? frameNow - lastFrameNow : 0.016; lastFrameNow = frameNow;
+    let t = playing ? base + (frameNow - startedAt) : base;
     if (t >= total) {
       if (KIOSK) { if (playing) { base = total; playing = false; stopAudio(); window.parent.postMessage({ type: 'tdot-film-ended', fach: fachId }, '*'); } t = total; }
       else if (LOOP) { seek(0); t = 0; }
@@ -464,7 +472,8 @@
     if (playing) preloadImagesAfter(tt);
     renderOverlays(tt, sc);
     const hold = renderAudio(tt);
-    if (hold !== null && playing) { base = hold; startedAt = now(); }
+    // auf den Lesezeitpunkt beziehen – sonst ginge die Zeit für das Zeichnen dieses Bildes verloren (Uhr liefe rückwärts)
+    if (hold !== null && playing) { base = hold; startedAt = frameNow; }
     const f = 'scaleX(' + (tt / total).toFixed(4) + ')';
     setStyle(ui.progressFill, 'transform', f);
     setStyle(ui.topbarFill, 'transform', f);
