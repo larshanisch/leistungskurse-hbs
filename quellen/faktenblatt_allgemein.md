@@ -1,6 +1,7 @@
 # Faktenblatt: Leistungskurse in Hessen – fächerübergreifende amtliche Vorgaben
 
 Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Q-Phase 2027/28–2028/29, Landesabitur 2029
+Version 2.0 (29.10.2026: Belegpflicht § 13 Abs. 9 und Anlage 7 am Originaltext; Grundkurs-Angebot der HBS)
 Version 1.9 (29.10.2026: Sport als Prüfungsfach, § 24 Abs. 3–4 am Originaltext)
 Version 1.8 (29.10.2026: Einbringpflichten § 26 Abs. 4–7 am Originaltext)
 Version 1.7 (29.10.2026: Klausurzahl je LK-Kombination)
@@ -64,7 +65,7 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
   - Kunst LK geht also nur, wenn die Schule dafür eine Genehmigung hat und den Kurs tatsächlich einrichtet. Ob die HBS eine solche Genehmigung hat, steht in keiner amtlichen Quelle, die ich gefunden habe. – [UNSICHER] → bei der Schulleitung oder Oberstufenleitung erfragen
   - **Geklärt (Schulangabe):** Die HBS bietet Kunst als 2. Leistungskurs an. – Übersicht der Schule „1./2. Leistungskurs“, vom Nutzer eingestellt 29.10.2026
   - **Aufgabenfeld I** ist das sprachlich-literarisch-künstlerische Aufgabenfeld; dazu gehören Deutsch, die Fremdsprachen, Kunst und Musik (in Hessen auch Darstellendes Spiel). – KMK, Vereinbarung zur Gestaltung der gymnasialen Oberstufe und der Abiturprüfung (Fassung 2023), Abschnitt Aufgabenfelder, https://deutsches-schulportal.de/content/uploads/2023/03/Oberstufenvereinbarung-2023.pdf, abgerufen 29.10.2026; hessischer Sprachgebrauch „sprachlich-literarisch-künstlerisches Aufgabenfeld (Aufgabenfeld I)“ in Stellenausschreibungen des Landes, abgerufen 29.10.2026. Wortlaut der OAVO dazu nicht eingesehen (Hessenrecht-Seite lädt ohne Browser nicht).
-  - **Aufgabenfeld II:** Geschichte sowie Politik und Wirtschaft (auch bilingual), Wirtschaftswissenschaften, Erdkunde, katholische und evangelische Religionslehre, Ethik und Philosophie. **Aufgabenfeld III:** Mathematik, Biologie, Chemie, Physik und Informatik. – https://kultus.hessen.de/schulsystem/schulformen-und-bildungsgaenge/gymnasium/landesabitur (Fächerliste des Landesabiturs nach Aufgabenfeldern), abgerufen 29.10.2026 über die Suche; Wortlaut OAVO § 7 nicht eingesehen
+  - **Aufgabenfeld II:** Geschichte sowie Politik und Wirtschaft (auch bilingual), Wirtschaftswissenschaften, Erdkunde (so in der Liste; in OAVO § 26 und an der HBS „Geographie“ – Nutzer 29.10.2026), katholische und evangelische Religionslehre, Ethik und Philosophie. **Aufgabenfeld III:** Mathematik, Biologie, Chemie, Physik und Informatik. – https://kultus.hessen.de/schulsystem/schulformen-und-bildungsgaenge/gymnasium/landesabitur (Fächerliste des Landesabiturs nach Aufgabenfeldern), abgerufen 29.10.2026 über die Suche; Wortlaut OAVO § 7 nicht eingesehen
   - Kunst ist landesweit zentral geprüftes Abiturfach (Aufgabenfeld I). – https://kultus.hessen.de/schulsystem/schulformen-und-bildungsgaenge/gymnasium/landesabitur, abgerufen 27.10.2026
 - **Mindestnote für jedes LK-Fach:** Gewählt werden darf nur ein Fach, in dem am Ende der Einführungsphase **mindestens 5 Punkte** erreicht wurden, oder in dem gleichwertige Kenntnisse nachgewiesen werden. – OAVO § 13 Abs. 2 Satz 3, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
 - **Durchgehender Unterricht:** In jedem Prüfungsfach, also auch in beiden LKs, muss in der gesamten Einführungsphase Unterricht stattgefunden haben. In der Q-Phase sind 4 Kurse zu besuchen (3 vor dem Prüfungshalbjahr, 1 im Prüfungshalbjahr). – OAVO § 24 Abs. 5 Satz 1, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
@@ -126,6 +127,21 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
     Geschichtskurse und vier der sechs Kurse in Aufgabenfeld II, LK PoWi die zwei PoWi-Kurse und vier der sechs. Bio + Chemie
     erfüllt zugleich „zwei Kurse in einer weiteren Naturwissenschaft“. Alles Übrige kommt aus Grundkursen. – aus Abs. 4 und 6
   - Wird ein Halbjahr wiederholt, zählen nur die Ergebnisse der Wiederholungskurse. – OAVO § 26 Abs. 7; § 23 Abs. 4, ebd., abgerufen 27.10.2026
+- **Belegpflicht in der Q-Phase (gymnasiale Oberstufe):** „In den vier Halbjahren der Qualifikationsphase besuchen die
+  Schülerinnen und Schüler in den Grundkurs- und Leistungskursfächern mindestens die in Anlage 7 genannten Kurse“ – die
+  LK-Kurse zählen also mit. Kurse mit 0 Punkten gelten als nicht besucht. Die Verpflichtungen sind „in zeitlich und inhaltlich
+  aufeinanderfolgenden Kursen zu erfüllen“. – OAVO § 13 Abs. 9, https://www.rv.hessenrecht.hessen.de/perma?d=hevr-OSt_AbiVHEV14P13 (Fassung 04.06.2025, gültig ab 01.08.2025), abgerufen 29.10.2026
+  - **Anlage 7, Spalte gymnasiale Oberstufe:** Deutsch 4 · fortgeführte Fremdsprache 4 · (Fremdsprache nach § 14 Abs. 3: 4) ·
+    Kunst oder Musik oder Darstellendes Spiel 2 · weitere Fremdsprache (2)¹ · Politik und Wirtschaft „0, 2 oder 4“² ·
+    Wirtschaftswissenschaften „0 oder 4“² · Geographie „0 oder 4“² · Geschichte 4 · Religion oder Ethik 4 · Mathematik 4 ·
+    Naturwissenschaft (Biologie, Chemie oder Physik) 4 · weitere Naturwissenschaft oder Informatik (2)¹ · Sport 4.
+    ¹ „zwei fremdsprachliche oder zwei naturwissenschaftliche Kurse oder zwei Informatikkurse“ (eine gemeinsame Pflicht).
+    ² „entweder vier Kurse Politik und Wirtschaft oder vier Kurse Wirtschaftswissenschaften“; im zweiten Jahr der Q-Phase kann
+    Geographie Politik und Wirtschaft ersetzen, wenn Geographie seit E1 durchgängig belegt wurde. – OAVO Anlage 7, https://www.rv.hessenrecht.hessen.de/perma?d=hevr-OSt_AbiVHEV13Anlage7 (Fassung 10.07.2024, gültig ab 01.08.2024), abgerufen 29.10.2026
+  - Den Sonderfall „Fremdsprache nach § 14 Abs. 3“ (§ 14 nicht im Original gelesen) bildet der Rechner nicht ab.
+  - **Grundkurs-Angebot der HBS in der Q-Phase:** Deutsch, Englisch, Französisch, Spanisch, Kunst, Musik, Politik und Wirtschaft,
+    Geschichte, Geographie, Religion, Ethik, Mathematik, Biologie, Chemie, Physik, Informatik, Sport (mit Sport-Abi); **kein**
+    Latein, **kein** Darstellendes Spiel. Die Schule sagt „Geographie“. – SCHULE (Nutzer 29.10.2026)
 - **Unterkurse (Defizite):** Von den 32 eingebrachten Kursen darf **keiner 0 Punkte** haben. **Höchstens 6 Kurse dürfen unter 5 Punkten** liegen, „davon maximal zwei Leistungskurse in einfacher Wertung“. – OAVO § 26 Abs. 2 Satz 2–3, ebd., abgerufen 27.10.2026
 - Kurse mit 0 Punkten gelten als nicht besucht und erfüllen die Belegverpflichtung nicht. – OAVO § 13 Abs. 9 Satz 5–6, ebd., abgerufen 27.10.2026
 - **Mindestpunktzahlen für das Abitur:** insgesamt mindestens **300 Punkte**. Davon in Block I mindestens **80 im LK-Bereich** und mindestens **120 im GK-Bereich**, in Block II mindestens **100**. – OAVO § 26 Abs. 14, ebd., abgerufen 27.10.2026

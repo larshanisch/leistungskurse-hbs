@@ -4,7 +4,7 @@ window.FILMS["geschichte"] = {
  "id": "geschichte",
  "title": "Leistungskurs Geschichte",
  "accent": "#c8d530",
- "total": 351.09,
+ "total": 351.81,
  "credits": [
   "Jean Nicolas Ventadour: Die Paulskirche in Frankfurt am Main, 1848, Aquarell, Historisches Museum Frankfurt – gemeinfrei, Wikimedia Commons",
   "Erich Greiser: Ausrufung der Republik durch Philipp Scheidemann am Reichstag, Berlin, 9. November 1918, Fotografie – gemeinfrei, Wikimedia Commons",
@@ -307,7 +307,7 @@ window.FILMS["geschichte"] = {
      },
      {
       "label": "Q2",
-      "text": "Demokratie und Diktatur 1917–1945",
+      "text": "Demokratie und Diktatur 1917–⁠1945",
       "t": 11.917
      },
      {
@@ -430,8 +430,8 @@ window.FILMS["geschichte"] = {
    "n": 6,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 23.17,
-   "speechEnd": 21.77,
+   "duration": 22.61,
+   "speechEnd": 21.21,
    "sentences": [
     {
      "text": "Nach 1945 untersuchst du den Kalten Krieg, den Bau der Mauer, die friedliche Revolution in der DDR und den Weg zur deutschen Einheit, außerdem die Einigung Europas.",
@@ -441,9 +441,9 @@ window.FILMS["geschichte"] = {
      "start": 0.6
     },
     {
-     "text": "Im letzten Halbjahr geht es darum, wie über die Vergangenheit gestritten wird – etwa über die Frage, wer die Verantwortung für den Ersten Weltkrieg trägt.",
-     "audio": "media/geschichte/audio/s06_2_721bce29.mp3",
-     "dur": 8.8,
+     "text": "In Q4 geht es darum, wie über die Vergangenheit gestritten wird – etwa über die Frage, wer die Verantwortung für den Ersten Weltkrieg trägt.",
+     "audio": "media/geschichte/audio/s06_2_31803bf2.mp3",
+     "dur": 8.24,
      "estimated": false,
      "start": 12.97
     }
@@ -460,14 +460,14 @@ window.FILMS["geschichte"] = {
      "end": 12.447
     },
     {
-     "text": "Im letzten Halbjahr geht es darum, wie über die Vergangenheit gestritten wird",
+     "text": "In Q4 geht es darum, wie über die Vergangenheit gestritten wird",
      "start": 12.97,
-     "end": 17.37
+     "end": 16.678
     },
     {
      "text": "– etwa über die Frage, wer die Verantwortung für den Ersten Weltkrieg trägt.",
-     "start": 17.37,
-     "end": 21.713
+     "start": 16.678,
+     "end": 21.151
     }
    ],
    "image": {
@@ -496,7 +496,7 @@ window.FILMS["geschichte"] = {
     {
      "text": "",
      "t": 8.377,
-     "end": 22.57
+     "end": 22.01
     }
    ],
    "panel": {
@@ -513,7 +513,7 @@ window.FILMS["geschichte"] = {
      },
      {
       "text": "Streit über die Vergangenheit",
-      "t": 16.513
+      "t": 15.795
      }
     ]
    },
@@ -651,7 +651,7 @@ window.FILMS["geschichte"] = {
     ],
     "t": 31.23
    },
-   "start": 143.02
+   "start": 142.46
   },
   {
    "n": 8,
@@ -751,79 +751,74 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 192.73
+   "start": 192.17
   },
   {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 26.79,
-   "speechEnd": 25.39,
+   "duration": 28.07,
+   "speechEnd": 26.67,
    "sentences": [
     {
-     "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine.",
-     "audio": "media/geschichte/audio/s09_1_521a6670.mp3",
-     "dur": 3.76,
+     "text": "Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine.",
+     "audio": "media/geschichte/audio/s09_1_120477e4.mp3",
+     "dur": 4.16,
      "estimated": false,
      "start": 0.6
     },
     {
-     "text": "Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine.",
-     "audio": "media/geschichte/audio/s09_2_68b17b1f.mp3",
-     "dur": 4,
+     "text": "Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine.",
+     "audio": "media/geschichte/audio/s09_2_912a2830.mp3",
+     "dur": 4.32,
      "estimated": false,
-     "start": 4.81
+     "start": 5.21
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "audio": "media/geschichte/audio/s09_3_16f11324.mp3",
-     "dur": 8.56,
+     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
+     "audio": "media/geschichte/audio/s09_3_0a9e1e11.mp3",
+     "dur": 9.44,
      "estimated": false,
-     "start": 9.26
+     "start": 9.98
     },
     {
-     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
-     "audio": "media/geschichte/audio/s09_4_bd516576.mp3",
-     "dur": 7.12,
+     "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
+     "audio": "media/geschichte/audio/s09_4_397b1793.mp3",
+     "dur": 6.8,
      "estimated": false,
-     "start": 18.27
+     "start": 19.87
     }
    ],
    "cues": [
     {
-     "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine.",
+     "text": "Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine.",
      "start": 0.6,
-     "end": 4.36
+     "end": 4.76
     },
     {
-     "text": "Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine.",
-     "start": 4.81,
-     "end": 8.81
+     "text": "Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine.",
+     "start": 5.21,
+     "end": 9.53
     },
     {
      "text": "Deine Lehrkraft kann entscheiden,",
-     "start": 9.26,
-     "end": 11.106
+     "start": 9.98,
+     "end": 12.271
     },
     {
-     "text": "dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat",
-     "start": 11.106,
-     "end": 15.974
+     "text": "dass euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
+     "start": 12.271,
+     "end": 19.351
     },
     {
-     "text": "oder eine Präsentation ersetzt.",
-     "start": 15.974,
-     "end": 17.708
-    },
-    {
-     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
-     "start": 18.27,
-     "end": 23.583
+     "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
+     "start": 19.87,
+     "end": 24.743
     },
     {
      "text": "was dich in der Prüfung erwartet.",
-     "start": 23.583,
-     "end": 25.337
+     "start": 24.743,
+     "end": 26.613
     }
    ],
    "image": {
@@ -836,23 +831,23 @@ window.FILMS["geschichte"] = {
      {
       "value": "2",
       "label": "Klausuren pro Halbjahr",
-      "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1",
-      "t": 2.286
+      "sub": "in Q4 nur 1 · im Grundkurs Q1–Q3 je 1",
+      "t": 2.498
      },
      {
       "value": "↔",
       "label": "Referat oder Präsentation statt einer Klausur",
       "sub": "wenn die Lehrkraft es festlegt",
-      "t": 9.596
+      "t": 10.396
      },
      {
       "value": "Q3",
       "label": "Klausur unter Abiturbedingungen",
-      "t": 18.429
+      "t": 19.87
      }
     ]
    },
-   "start": 223.36
+   "start": 222.8
   },
   {
    "n": 10,
@@ -951,7 +946,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 253.15
+   "start": 253.87
   },
   {
    "n": 11,
@@ -1038,7 +1033,7 @@ window.FILMS["geschichte"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 276.37
+   "start": 277.09
   },
   {
    "n": 12,
@@ -1111,7 +1106,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 302.11
+   "start": 302.83
   },
   {
    "n": 13,
@@ -1149,7 +1144,7 @@ window.FILMS["geschichte"] = {
     "src": "media/geschichte/img/g13.jpg",
     "motion": "zoom-out"
    },
-   "start": 322.96
+   "start": 323.68
   },
   {
    "n": 14,
@@ -1202,7 +1197,7 @@ window.FILMS["geschichte"] = {
     ]
    },
    "logo": true,
-   "start": 335.2
+   "start": 335.92
   }
  ]
 };

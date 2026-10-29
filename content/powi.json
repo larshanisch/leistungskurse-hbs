@@ -64,7 +64,7 @@
       "image": { "src": "p05.jpg", "motion": "pan-left" },
       "panel": {
         "type": "list",
-        "title": "Erstes Halbjahr",
+        "title": "Q1",
         "items": [
           { "at": "Extremismus", "text": "Grundgesetz und Bundesverfassungsgericht" },
           { "at": "Extremismus", "text": "Parteien, Populismus, Extremismus" },
@@ -148,7 +148,7 @@
             "at": "zwei Klausuren",
             "value": "2",
             "label": "Klausuren pro Halbjahr",
-            "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1"
+            "sub": "in Q4 nur 1 · im Grundkurs Q1–Q3 je 1"
           },
           {
             "at": "Lehrkraft",
@@ -156,7 +156,7 @@
             "label": "Referat oder Präsentation statt einer Klausur",
             "sub": "wenn die Lehrkraft es festlegt"
           },
-          { "at": "dritten Halbjahr", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
+          { "at": "In Q3 schreibst", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
         ]
       }
     },

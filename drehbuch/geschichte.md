@@ -129,7 +129,7 @@ Wie im Drehbuch PoWi. **Beleg** FB-G = `quellen/faktenblatt_geschichte.md`, FB-A
   Europas“ · „Streit über die Vergangenheit“
 - **Sprechtext:**
   > Nach 1945 untersuchst du den Kalten Krieg, den Bau der Mauer, die friedliche Revolution in der DDR und
-  > den Weg zur deutschen Einheit, außerdem die Einigung Europas. Im letzten Halbjahr geht es darum, wie über
+  > den Weg zur deutschen Einheit, außerdem die Einigung Europas. In Q4 geht es darum, wie über
   > die Vergangenheit gestritten wird – etwa über die Frage, wer die Verantwortung für den Ersten Weltkrieg
   > trägt.
 - **Beleg:** FB-G 2 (LA28 Q3.1, Q3.3, Q3.4, Q4.1 Fischer- und Clark-Kontroverse)
@@ -185,9 +185,9 @@ Wie im Drehbuch PoWi. **Beleg** FB-G = `quellen/faktenblatt_geschichte.md`, FB-A
 - **Element:** wie PoWi: ZAHL „2 Klausuren pro Halbjahr“ (klein „im letzten Halbjahr 1“) · „Referat oder
   Präsentation statt einer Klausur – wenn die Lehrkraft es festlegt“ · „Q3: Klausur unter Abiturbedingungen“
 - **Sprechtext:** (wortgleich mit PoWi Szene 9, Aufnahmen werden übernommen)
-  > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine. Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine. Deine Lehrkraft kann entscheiden, dass
-  > euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat oder eine
-  > Präsentation ersetzt. Im dritten Halbjahr schreibst du in der Regel eine Klausur unter
+  > Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine. Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine. Deine Lehrkraft kann entscheiden, dass
+  > euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine
+  > Präsentation ersetzt. In Q3 schreibst du in der Regel eine Klausur unter
   > Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
 - **Beleg:** FB-G 4 (FB-A Abschn. 3)
 

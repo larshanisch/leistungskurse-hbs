@@ -115,7 +115,7 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 - **Element:** LISTE ab „Extremismus“: „Grundgesetz und Bundesverfassungsgericht“ · „Parteien, Populismus,
   Extremismus“ · „Filterblasen und Fake News“ · HINWEIS „Beispiel: Abiturjahrgang 2028“
 - **Sprechtext:**
-  > Im aktuellen Jahrgang geht es im ersten Halbjahr zum Beispiel um das Grundgesetz und um die
+  > Im aktuellen Jahrgang geht es in Q1 zum Beispiel um das Grundgesetz und um die
   > Rolle des Bundesverfassungsgerichts, um Parteien, Populismus und Extremismus als Gefahr für die
   > Demokratie und um die Frage, was Filterblasen und Fake News mit der politischen Öffentlichkeit
   > machen. Wenn es möglich ist, gehört auch eine Exkursion dazu, zum Beispiel in ein Parlament.
@@ -187,9 +187,9 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   Präsentation statt einer Klausur – wenn die Lehrkraft es festlegt“ · „im 3. Halbjahr: Klausur unter
   Abiturbedingungen“
 - **Sprechtext:**
-  > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine. Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine. Deine Lehrkraft kann entscheiden, dass
-  > euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat oder eine
-  > Präsentation ersetzt. Im dritten Halbjahr schreibst du in der Regel eine Klausur unter
+  > Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine. Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine. Deine Lehrkraft kann entscheiden, dass
+  > euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine
+  > Präsentation ersetzt. In Q3 schreibst du in der Regel eine Klausur unter
   > Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
 - **Beleg:** FB-P 4 (OAVO § 9 Abs. 6, 6a Nr. 1, Abs. 11; Schaubild Abb. 4)
 

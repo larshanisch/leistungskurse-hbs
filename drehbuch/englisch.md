@@ -199,14 +199,14 @@ werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   einer Klausur in Q1 oder Q2 – wenn die Lehrkraft es festlegt“ · „Q3: Kommunikationsprüfung statt
   einer Klausur“ · Hinweis „bei uns: zwei Prüflinge, zwei Lehrkräfte, frei auf Englisch“
 - **Sprechtext:**
-  > Im Leistungskurs schreibst du pro Halbjahr zwei Klausuren, im letzten eine; im Grundkurs ist es
+  > Im Leistungskurs schreibst du pro Halbjahr zwei Klausuren, in Q4 nur eine; im Grundkurs ist es
   > bei uns nur eine.
   > In Deutsch und Mathematik schreibt dagegen auch der Grundkurs zwei; wer eines dieser Fächer als
   > Leistungskurs wählt, bekommt dadurch also keine zusätzliche Klausur. Deine Lehrkraft kann
-  > entscheiden, dass euer ganzer Kurs im ersten oder zweiten Halbjahr eine Klausur durch ein Referat
-  > ersetzt. Im dritten Halbjahr ersetzt eine mündliche Kommunikationsprüfung eine Klausur: Bei
+  > entscheiden, dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat
+  > ersetzt. In Q3 ersetzt eine mündliche Kommunikationsprüfung eine Klausur: Bei
   > uns sprichst du dabei zusammen mit einer Mitschülerin oder einem Mitschüler vor zwei Lehrkräften
-  > frei auf Englisch. Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
+  > frei auf Englisch. In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
 - **Beleg:** FB-E 4 (Schaubild Klausuren Abb. 1 und 4, Allgemeine Anmerkung a; OAVO § 9 Abs. 6
   Nr. 1–3, Abs. 6a Nr. 1 „nach Entscheidung der Lehrkraft … einheitlich“ und Nr. 3 — am Originaltext geprüft;
   SCHULE: Grundkurs Englisch dreistündig, eine Klausur (Nutzer 29.10.2026);

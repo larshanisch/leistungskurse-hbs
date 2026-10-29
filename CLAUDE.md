@@ -119,6 +119,12 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Promethean-Tafeln: Chrome 108, 4K (Pixeldichte 2) – Ton ist die Uhr, keine Unschärfe bei 2dppx, Vollbild im Rahmen (79). Ton-Knopf in der Steuerleiste (80). Uhr folgt dem Ton sanft, nie rückwärts (81) – nach Änderungen an Uhr oder Ton: `perf_film.mjs --coarse=0.5 --cpu=6` muss `uhrRueckwaerts: 0` zeigen. Seiten holt der Worker frisch (`no-cache`, Entscheidung 82); Filmstart auf großem Bildschirm = Vollbild. Grafikspeicher bei 4K: `perf_film.mjs --dpr=2 --layers` (Ziel ≤ 3 bildschirmfüllende Ebenen; unsichtbare Ebenen per `setOpacity` ausblenden, Entscheidung 83). Bei 2dppx keine Einblend-Animationen (84) – `--layers` zählt auch neu angelegte Ebenen. Bei 2dppx harte Schnitte (86, `?hart=0/1`). Sport-Abi im Planer (85).
   Flüssigkeit messen: `node tools/perf_film.mjs <fach> --t=150 --cpu=6` (Werte streuen – je dreimal; verlässlich sind
   `layoutCount` und `task_s`). Im Player Werte nur über `setStyle`/`setText` schreiben (nur bei Änderung).
+- 29.10.2026: „Kurse selbst planen“ (`#kurse/a/b`, Entscheidung 87): Belegen/Einbringen je Fach mit Prüfliste; Regeln in `kChecks()` in `index.html`,
+  Grundlage FB-A 2.0 (§ 13 Abs. 9, Anlage 7, § 26). Grundkurs-Angebot steht in `GK`.
+- 29.10.2026: Fach-Icons (`assets/js/icons.js`, aus dem Schulcurriculum; `fachIcon(id)`), Mindestschrift `max(px, vh)`, Prüfliste und Spalten im Rechner,
+  Listen im Film mit Punkten (Entscheidung 88). Layout messen: auch Überdeckung innerhalb von Zeilen (Geschwister-Rechtecke, `scrollWidth`), nicht nur Fußzeile.
+- 29.10.2026: Halbjahre heißen in Filmen Q1–Q4 (Entscheidung 89): **Deutsch 5:44, Englisch 6:12, Kunst 5:51, PoWi 5:50, Geschichte 5:52,
+  Mathematik 5:41, Biologie 5:46, Chemie 5:46 min**. Bestimmte Halbjahre nie als „erstes/drittes/letztes Halbjahr“ sprechen oder schreiben.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

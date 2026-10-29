@@ -29,7 +29,7 @@ Seitenangaben „S.“ sind die gedruckten Seitenzahlen der Dokumente.
 
 - **Regel-Leistungsfach:** PoWi steht in der Liste der Fächer, die regulär Leistungsfach sein können
   (anders als Kunst, keine Genehmigung nötig). – OAVO § 13 Abs. 3, siehe FB-A Abschn. 2
-- **Aufgabenfeld II** (gesellschaftswissenschaftlich), zusammen mit Geschichte, Erdkunde,
+- **Aufgabenfeld II** (gesellschaftswissenschaftlich), zusammen mit Geschichte, Geographie,
   Wirtschaftswissenschaften, Religion, Ethik und Philosophie. – LAP; FB-A Abschn. 2
 - **Nur zusammen mit einer Fremdsprache, Mathematik oder einer Naturwissenschaft:** PoWi erfüllt die
   Pflichtregel nicht; das andere Leistungsfach muss eine fortgeführte Fremdsprache, Mathematik oder eine

@@ -125,7 +125,9 @@
   .lkpic.empty { border: 2px dashed var(--line); background: rgba(255,255,255,0.03); justify-content: center; align-items: center; text-align: center; }
   .lkpic.empty::before, .lkpic.empty::after { content: none; }
   .lkpic.empty b { font-size: 17px; color: var(--ink-soft); }
-  .chip .th { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--bg) var(--pos, center) / cover; border: 1px solid rgba(255,255,255,0.2); }
+  .chip .th { flex: none; width: 30px; height: 30px; color: var(--accent); }
+  .chip[aria-pressed="true"] .th { color: var(--on-accent); }
+  .fach-ico { display: block; width: 100%; height: 100%; }
   .chip .nm { flex: 1; min-width: 0; overflow-wrap: anywhere; }
   .result .wait { margin: 0; font-size: 18px; color: var(--ink-soft); line-height: 1.5; }
   .slots { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 0.9em; }
@@ -167,6 +169,48 @@
   .ein .st span { display: inline-block; padding: 0.15em 0.65em; border-radius: 999px; font-size: 13px; font-weight: 700;
     border: 1px solid var(--line); color: var(--ink-soft); }
   .ein .st span.got { background: rgba(200,213,48,0.16); border-color: rgba(200,213,48,0.6); color: var(--ink); }
+  /* Kurse selbst planen (Entscheidung 87) */
+  .tabs a.go { padding: 0.35em 0.9em; border-radius: 999px; border: 1px solid var(--accent); color: var(--accent); font-size: 14px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+  @media (max-width: 599px) { .tabs { flex-wrap: wrap; } }
+  .tabs a.go:hover { background: var(--accent); color: var(--on-accent); }
+  .kplan { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+  .klist { display: flex; flex-wrap: wrap; gap: 0 18px; align-items: flex-start; }
+  .kcol { flex: 1 1 330px; min-width: 0; }
+  @media (max-width: 599px) { .klist { flex-direction: column; align-items: stretch; } .kcol { display: contents; } .kgrp.g0 { order: 4; } }
+  @media (max-width: 420px) { .kr .kn .ki { display: none; } .kst button { width: 1.5em; height: 1.5em; } .kx { min-width: 2.8em; padding: 0.2em 0.35em; } .kr { gap: 4px; } }
+  @media (min-width: 600px) and (max-width: 1199px) { .kr .kn .ki { display: none; } .kst button { width: 1.5em; height: 1.5em; } .kx { min-width: 3em; padding: 0.2em 0.4em; }
+    .kcol { flex-basis: 290px; } .kplan { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } }
+  .kgrp { break-inside: avoid; margin: 0 0 12px; padding: 10px 12px; border-radius: 14px; border: 1px solid var(--line); background: rgba(255,255,255,0.04); }
+  .kgrp > .k { display: block; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 4px; }
+  .khead, .kr { display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; align-items: center; gap: 6px; }
+  .khead { font-size: 12px; color: var(--ink-soft); font-weight: 700; padding: 0 0 2px; }
+  .kr { padding: 3px 0; border-top: 1px solid var(--line); font-size: 15px; }
+  .kr .kn { display: flex; align-items: center; gap: 0.45em; }
+  .kr .kn .ki { flex: none; width: 1.3em; height: 1.3em; color: var(--accent); }
+  .kr .kn small { color: var(--accent); font-weight: 800; margin-left: 0.3em; }
+  .kx { font: inherit; font-size: 12px; font-weight: 800; padding: 0.2em 0.55em; border-radius: 999px; border: 1px dashed rgba(255,255,255,0.35); background: none; color: var(--ink-soft); cursor: pointer; min-width: 3.4em; }
+  .kx[aria-pressed="true"] { border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent); }
+  .kx:disabled { opacity: 0.25; cursor: default; }
+  .kst { display: inline-flex; align-items: center; gap: 2px; }
+  .kst button { width: 1.7em; height: 1.7em; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,0.06); color: var(--ink); font: inherit; font-weight: 800; cursor: pointer; line-height: 1; }
+  .kst button:disabled { opacity: 0.25; cursor: default; }
+  .kst b { min-width: 1.3em; text-align: center; }
+  .kfix { font-size: 13px; color: var(--ink-soft); text-align: center; min-width: 4.6em; }
+  .kcheck { padding: 14px 16px; border-radius: 16px; border: 1px solid var(--line); background: linear-gradient(160deg, #1d2027 0%, var(--card) 70%); }
+  .kcheck h3 { margin: 0.2em 0 0.3em; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+  .kcheck h3:first-child { margin-top: 0; }
+  .kcheck ul { list-style: none; margin: 0 0 0.35em; padding: 0; display: grid; gap: 2px; font-size: 14.5px; line-height: 1.3; }
+  .kcheck li { display: flex; gap: 0.5em; align-items: baseline; padding: 0.12em 0.5em; border-radius: 8px; }
+  .kcheck li::before { flex: none; display: inline-grid; place-items: center; width: 1.25em; height: 1.25em; border-radius: 50%; font-size: 0.85em; font-weight: 900; transform: translateY(0.1em); }
+  .kcheck .oks { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 0.15em 0 0.7em; color: var(--ink-soft); font-size: 0.85em; line-height: 1.35; }
+  .kcheck .oks span::before { content: "✓ "; color: var(--accent); font-weight: 900; }
+  .kcheck li.no { color: var(--ink); font-weight: 700; background: rgba(255,110,90,0.14); box-shadow: inset 3px 0 0 var(--no); }
+  .kcheck li.no::before { content: "!"; background: var(--no); color: #1a0d0b; }
+  .kcheck h3 .cnt { margin-left: 0.4em; padding: 0.1em 0.55em; border-radius: 999px; font-size: 0.85em; letter-spacing: 0.02em; text-transform: none; }
+  .kcheck h3 .cnt.no { background: var(--no); color: #1a0d0b; }
+  .kcheck h3 .cnt.ok { color: var(--accent); }
+  .kcheck .sum { font-weight: 800; }
+  .kcheck .fine { margin-top: 0.4em; }
   .spread { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-bottom: 0.9em; }
   .spread > .k { font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); }
   .need { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -184,11 +228,12 @@
     font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; }
   #fsBtn:hover, #fsBtn:focus-visible { border-color: var(--accent); }
   #fsBtn svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-  @media (min-width: 900px) and (min-aspect-ratio: 4/3) { #fsBtn { top: 2.4vh; right: 2vw; font-size: 1.7vh; } }
+  @media (min-width: 900px) and (min-aspect-ratio: 4/3) { #fsBtn { top: 2.4vh; right: 2vw; font-size: max(13px, 1.7vh); } }
   footer { margin-top: 3em; font-size: 13px; color: #8a857c; line-height: 1.5; }
   footer .linkish { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
 
   @media (max-width: 599px) { .cta { flex-wrap: wrap; } .cta .txt { flex-basis: calc(100% - 60px - 1.2em); } .cta .open { margin-left: auto; } }
+  @media (max-width: 899px) { .kplan { grid-template-columns: minmax(0, 1fr); } }
   @media (max-width: 599px) { .plan { grid-template-columns: minmax(0, 1fr) !important; } .chips { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .chip { padding: 0.5em 0.6em; gap: 0.4em; } .chip .th { width: 24px; height: 24px; } .chip { font-size: 15px; } .lkpic { height: 130px; padding: 10px; } .lkpic b { font-size: 15px; } .lkpic .k { font-size: 10px; letter-spacing: 0.06em; } .exam { grid-template-columns: minmax(0, 1fr); } .grp.w, .grp.m { grid-template-columns: minmax(0, 1fr); } .pf { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; } }
   @media (max-width: 899px) { .plan { grid-template-columns: 1fr 1fr; } .result { grid-column: 1 / -1; } #setup { place-items: start center; } }
 
@@ -199,20 +244,20 @@
     .head { display: flex; align-items: center; gap: 3vw; }
     .logo { margin: 0; flex: none; }
     .logo img { height: 13vh; }
-    .kicker { font-size: 1.5vh; margin-bottom: 0.6vh; }
-    h1 { font-size: 6.4vh; margin: 0 0 1vh; }
-    .lead { font-size: 2vh; margin: 0; max-width: 60em; }
+    .kicker { font-size: max(12px, 1.5vh); margin-bottom: 0.6vh; }
+    h1 { font-size: max(14px, 6.4vh); margin: 0 0 1vh; }
+    .lead { font-size: max(14px, 2vh); margin: 0; max-width: 60em; }
     /* Unterseiten: schmaler Kopf, damit Kacheln und Planer Platz haben */
     body.sub .logo img { height: 8vh; }
-    body.sub h1 { font-size: 4.4vh; margin: 0; }
+    body.sub h1 { font-size: max(14px, 4.4vh); margin: 0; }
     body.sub .lead { display: none; }
     .view { display: grid; grid-template-rows: auto 1fr; }
     .bar { margin: 0 0 2.4vh; gap: 1vh 1.2vw; flex-wrap: nowrap; }
     .bar > * { flex-shrink: 0; }
     .bar h2 { flex: 1 1 0; min-width: 0; }
-    .back { font-size: 1.9vh; }
-    .num { font-size: 1.6vh; }
-    .bar h2 { font-size: 3.6vh; }
+    .back { font-size: max(13px, 1.9vh); }
+    .num { font-size: max(13px, 1.6vh); }
+    .bar h2 { font-size: max(14px, 3.6vh); }
 
     #v-home { grid-template-rows: 1fr auto; }
     .fields { grid-template-columns: repeat(3, 1fr); gap: 1.6vw; min-height: 0; }
@@ -220,70 +265,81 @@
     .fcard .pic { min-height: 0; }
     .fcard .body { gap: 1vh; padding: 0.4vh 1.6vw 2.6vh; }
     .fcard .num { top: 2.2vh; left: 2.2vh; }
-    .fcard h2 { font-size: 4vh; }
-    .fcard p { font-size: 1.7vh; margin-bottom: 0.6vh; }
+    .fcard h2 { font-size: max(14px, 4vh); }
+    .fcard p { font-size: max(13px, 1.7vh); margin-bottom: 0.6vh; }
     .fcard ul { gap: 0.8vh 0.5vw; }
-    .fcard li { font-size: 2.1vh; }
-    .fcard .go { font-size: 1.9vh; margin-top: 0.6vh; }
+    .fcard li { font-size: max(14px, 2.1vh); }
+    .fcard .go { font-size: max(13px, 1.9vh); margin-top: 0.6vh; }
     .cta { margin-top: 2.4vh; padding: 1.6vh 1.4vw; border-radius: 2vh; gap: 1.4vw; }
     .cta .ic { width: 6.4vh; height: 6.4vh; border-radius: 1.6vh; }
     .cta svg { width: 3.8vh; height: 3.8vh; }
-    .cta strong { font-size: 3vh; }
-    .cta .txt span { font-size: 1.9vh; }
-    .cta .open { font-size: 1.9vh; }
+    .cta strong { font-size: max(14px, 3vh); }
+    .cta .txt span { font-size: max(13px, 1.9vh); }
+    .cta .open { font-size: max(13px, 1.9vh); }
 
     .tiles { grid-template-columns: repeat(var(--n, 3), 1fr); gap: 1.6vw; min-height: 0; }
     .tile { min-height: 0; padding: 3vh 1.6vw; border-radius: 2vh; }
-    .tile .subj { font-size: 4.6vh; }
-    .tile .what { font-size: 1.9vh; margin: 0.6vh 0 2vh; }
-    .tile .go { font-size: 1.9vh; padding: 1vh 1.4vw; }
-    .tile .len, .tile .lk { font-size: 1.5vh; top: 2vh; }
+    .tile .subj { font-size: max(14px, 4.6vh); }
+    .tile .what { font-size: max(13px, 1.9vh); margin: 0.6vh 0 2vh; }
+    .tile .go { font-size: max(13px, 1.9vh); padding: 1vh 1.4vw; }
+    .tile .len, .tile .lk { font-size: max(12px, 1.5vh); top: 2vh; }
     .tile .len { right: 2vh; }
     .tile .lk { left: 2vh; }
 
     .plan { gap: 1.4vw; min-height: 0; }
     .col, .result { padding: 2.4vh 1.4vw; border-radius: 2vh; }
-    .col h3 { font-size: 2.6vh; }
-    .col .rule { font-size: 1.7vh; margin: 0.6vh 0 1.4vh; }
+    .col h3 { font-size: max(14px, 2.6vh); }
+    .col .rule { font-size: max(13px, 1.7vh); margin: 0.6vh 0 1.4vh; }
     .chips { gap: 0.9vh; }
-    .chip { font-size: 2.1vh; padding: 0.9vh 0.9vw; border-radius: 1.2vh; }
-    .chip small { font-size: 1.4vh; }
-    .result .verdict { font-size: 2vh; margin-bottom: 0.9vh; }
+    .chip { font-size: max(14px, 2.1vh); padding: 0.9vh 0.9vw; border-radius: 1.2vh; }
+    .chip small { font-size: max(12px, 1.4vh); }
+    .result .verdict { font-size: max(14px, 2vh); margin-bottom: 0.9vh; }
     .duo { gap: 0.8vw; margin-bottom: 1vh; }
-    .duo .plus { width: 4vh; height: 4vh; font-size: 2.6vh; }
+    .duo .plus { width: 4vh; height: 4vh; font-size: max(14px, 2.6vh); }
     .lkpic { height: 8.5vh; padding: 1.2vh 1vw; border-radius: 1.6vh; }
-    .lkpic .k { font-size: 1.4vh; }
-    .lkpic b { font-size: 2.6vh; }
-    .lkpic.empty b { font-size: 2vh; }
+    .lkpic .k { font-size: max(12px, 1.4vh); }
+    .lkpic b { font-size: max(14px, 2.6vh); }
+    .lkpic.empty b { font-size: max(14px, 2vh); }
     .chip .th { width: 3.4vh; height: 3.4vh; }
-    .result .wait { font-size: 2.2vh; }
+    .result .wait { font-size: max(14px, 2.2vh); }
     .slots { gap: 0.6vw; margin-bottom: 1.6vh; }
     .slot { padding: 1vh 0.7vw; border-radius: 1.2vh; }
-    .slot .k { font-size: 1.4vh; margin-bottom: 0.5vh; }
-    .slot b { font-size: 2.1vh; }
+    .slot .k { font-size: max(12px, 1.4vh); margin-bottom: 0.5vh; }
+    .slot b { font-size: max(14px, 2.1vh); }
     .exam { gap: 0.7vw; margin-bottom: 1vh; }
     .grp { padding: 1vh 0.7vw; border-radius: 1.2vh; gap: 0.7vh; }
-    .grp > .k, .spread > .k { font-size: 1.4vh; }
+    .grp > .k, .spread > .k { font-size: max(12px, 1.4vh); }
     .pf { gap: 0.2vh 0.4vw; }
     .grp { gap: 0.7vh 0.7vw; }
-    .pf i { width: 3vh; height: 3vh; font-size: 1.6vh; }
-    .pf b { font-size: 1.95vh; }
-    .pf small, .pf em { font-size: 1.5vh; }
-    .pf b { font-size: 1.85vh; }
+    .pf i { width: 3vh; height: 3vh; font-size: max(13px, 1.6vh); }
+    .pf b { font-size: max(13px, 1.95vh); }
+    .pf small, .pf em { font-size: max(12px, 1.5vh); }
+    .pf b { font-size: max(13px, 1.85vh); }
     .spread { gap: 0.6vh 0.6vw; margin-bottom: 1.4vh; }
     .vrow { margin-bottom: 1vh; }
     .tabs { gap: 0.4vw; }
-    .tabs button { font-size: 1.6vh; }
-    .ein > div { font-size: 1.8vh; padding: 0.55vh 0; }
-    .ein small { font-size: 1.45vh; }
-    .ein .st span { font-size: 1.55vh; }
+    .tabs button, .tabs a.go { font-size: max(13px, 1.6vh); }
+    .kplan { gap: 1.2vw; }
+    .kgrp { padding: 0.9vh 0.7vw; margin-bottom: 1.1vh; border-radius: 1.4vh; }
+    .kgrp > .k { font-size: max(12px, 1.35vh); }
+    .khead { font-size: max(12px, 1.3vh); }
+    .kr { font-size: max(13px, 1.8vh); padding: 0.3vh 0; }
+    .kx { font-size: max(12px, 1.35vh); }
+    .kfix { font-size: max(12px, 1.5vh); }
+    .kcheck { padding: 1.5vh 1vw; border-radius: 1.8vh; }
+    .kcheck h3 { font-size: max(13px, 1.6vh); }
+    .kcheck ul { font-size: max(13px, 1.7vh); }
+    .kcheck .oks { font-size: max(12px, 1.45vh); }
+    .ein > div { font-size: max(13px, 1.8vh); padding: 0.55vh 0; }
+    .ein small { font-size: max(12px, 1.45vh); }
+    .ein .st span { font-size: max(12px, 1.55vh); }
     .need { gap: 0.6vh 0.4vw; }
-    .need span { font-size: 1.7vh; }
-    .result ul { font-size: 1.85vh; gap: 0.7vh; }
+    .need span { font-size: max(13px, 1.7vh); }
+    .result ul { font-size: max(13px, 1.85vh); gap: 0.7vh; }
     .result .links { margin-top: 1.6vh; gap: 0.5vw; }
-    .result .links a { font-size: 1.7vh; }
-    .fine { font-size: 1.45vh; margin-top: 1.2vh; }
-    footer { margin: 0; font-size: 1.4vh; }
+    .result .links a { font-size: max(13px, 1.7vh); }
+    .fine { font-size: max(12px, 1.45vh); margin-top: 1.2vh; }
+    footer { margin: 0; font-size: max(12px, 1.4vh); }
   }
   /* fast quadratische Tafeln (4:3): Wahlspalten untereinander, damit das Ergebnis genug Breite hat */
   @media (min-width: 900px) and (min-aspect-ratio: 4/3) and (max-aspect-ratio: 3/2) {
@@ -293,8 +349,8 @@
     .chips { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.7vh; }
     .chip { padding: 0.7vh 0.6vw; gap: 0.4vw; }
     .chip .th { width: 2.8vh; height: 2.8vh; }
-    .result ul { font-size: 1.75vh; }
-    .fcard h2 { font-size: 3.3vh; }
+    .result ul { font-size: max(13px, 1.75vh); }
+    .fcard h2 { font-size: max(14px, 3.3vh); }
     .result .fine { margin-top: 1.2vh; }
   }
   /* Raum-Einrichtung (Entscheidung 45): was in einem anderen Raum läuft, ist ausgegraut */
@@ -338,13 +394,13 @@
   #setup .acts .primary:disabled { opacity: 0.4; cursor: default; }
   @media (min-width: 900px) and (min-aspect-ratio: 4/3) {
     #setup .box { padding: 3.4vh 2.4vw; border-radius: 2vh; }
-    #setup h2 { font-size: 4vh; }
-    #setup .hint { font-size: 1.9vh; }
-    #setup legend { font-size: 1.5vh; }
-    #setup label { font-size: 2.1vh; }
-    #setup label small { font-size: 1.4vh; }
-    #setup .room { font-size: 1.8vh; }
-    #setup .acts button { font-size: 1.9vh; }
+    #setup h2 { font-size: max(14px, 4vh); }
+    #setup .hint { font-size: max(13px, 1.9vh); }
+    #setup legend { font-size: max(12px, 1.5vh); }
+    #setup label { font-size: max(14px, 2.1vh); }
+    #setup label small { font-size: max(12px, 1.4vh); }
+    #setup .room { font-size: max(13px, 1.8vh); }
+    #setup .acts button { font-size: max(13px, 1.9vh); }
   }
 </style>
 </head>
@@ -399,6 +455,17 @@
     </div>
   </section>
 
+  <section class="view" id="v-kurse" hidden>
+    <div class="bar">
+      <a class="back" id="kBack" href="#planer">← Kurswahl</a>
+      <h2 id="kTitle">Kurse selbst planen</h2>
+    </div>
+    <div class="kplan">
+      <div class="klist" id="kList"></div>
+      <div class="kcheck" id="kCheck" aria-live="polite"></div>
+    </div>
+  </section>
+
   <footer>Stand: Oktober 2026 · Grundlage: Oberstufen- und Abiturverordnung (OAVO) des Landes Hessen, Kerncurricula und
     Abiturerlass 2028, Kursangebot der Heinrich-Böll-Schule. <strong>Das Angebot an Leistungskursen kann sich in Zukunft
     ändern.</strong> Erstellt von Lars Hanisch für die Heinrich-Böll-Schule Hattersheim · Alle Rechte vorbehalten. Mit KI-Unterstützung erstellt (Texte und Programmierung: Claude, Bilder: Google Gemini, Stimme:
@@ -428,6 +495,7 @@
 <script src="assets/data/mathematik.js"></script>
 <script src="assets/data/biologie.js"></script>
 <script src="assets/data/chemie.js"></script>
+<script src="assets/js/icons.js"></script>
 <script src="assets/js/offline.js"></script>
 <script>
   (function () {
@@ -551,9 +619,8 @@
     function duo(a, b) { return '<div class="duo">' + lkPic(a, '1. LK') + '<span class="plus" aria-hidden="true">+</span>' + lkPic(b, '2. LK') + '</div>'; }
     function chips(el, list, slot) {
       $(el).innerHTML = list.map(function (id) {
-        var pic = picOf(id);
         return '<button type="button" class="chip" data-id="' + id + '" aria-pressed="false">' +
-          '<span class="th" style="--bg: url(\'' + pic.img + '\'); --pos: ' + pic.pos + '"></span><span class="nm">' + esc(SUBJ[id].name) + '</span>' +
+          '<span class="th">' + fachIcon(id) + '</span><span class="nm">' + esc(SUBJ[id].name) + '</span>' +
           '<small>' + FIELDS[SUBJ[id].field - 1].num + '</small></button>';
       }).join('');
       $(el).addEventListener('click', function (e) {
@@ -626,7 +693,7 @@
         ['fort­geführte Fremd­sprache', '4 Kurse', has('englisch') ? lk('dein LK') : gk('4 Grundkurse')],
         ['Mathematik', '4 Kurse', has('mathe') ? lk('dein LK') : gk('4 Grundkurse')],
         ['eine Natur­wissenschaft', '4 Kurse', nw ? lk('dein LK') : gk('4 Grundkurse')],
-        ['Kunst, Musik oder Darst. Spiel', 'mind. 2 Kurse', has('kunst') ? lk('dein LK') : gk('2 Grundkurse')],
+        ['Kunst oder Musik', 'mind. 2 Kurse', has('kunst') ? lk('dein LK') : gk('2 Grundkurse')],
         ['Aufgabenfeld II', 'mind. 6, darunter 2 Geschichte, 2 PoWi',
           has('geschichte') ? lk('LK') + ' ' + gk('+ 2 PoWi') : has('powi') ? lk('LK') + ' ' + gk('+ 2 Geschichte') : gk('6 Grundkurse')],
         ['2. Fremd­sprache oder 2. Natur­wiss./Informatik', '2 Kurse',
@@ -670,7 +737,8 @@
         '<div class="vrow"><p class="verdict ok">Diese Kombination gibt es an der HBS.</p>' +
         '<div class="tabs" role="tablist">' +
           '<button type="button" role="tab" data-tab="pruef" aria-selected="' + (tab === 'pruef') + '">Prüfungsfächer</button>' +
-          '<button type="button" role="tab" data-tab="einbr" aria-selected="' + (tab === 'einbr') + '">Einbringen</button></div></div>' +
+          '<button type="button" role="tab" data-tab="einbr" aria-selected="' + (tab === 'einbr') + '">Einbringen</button>' +
+          '<a class="go" href="#kurse/' + a + '/' + b + '">Selbst planen →</a></div></div>' +
         (tab === 'einbr' ? einbring(a, b) :
         '<div class="exam">' +
           '<div class="grp w"><span class="k">Schriftlich <small>· Landesabitur</small></span>' +
@@ -683,6 +751,128 @@
         '<p class="fine">In beiden Leistungsfächern brauchst du am Ende der Einführungsphase mindestens 5 Punkte. Das Angebot kann sich ändern; ' +
         'einen Anspruch auf einen bestimmten Kurs gibt es nicht. Grundlage: OAVO § 9 Abs. 6, § 13 Abs. 2 und 5, § 24.</p>');
     }
+
+    // ===== Kurse selbst planen: Belegen (OAVO § 13 Abs. 9, Anlage 7) und Einbringen (§ 26) – Entscheidung 87 =====
+    // Grundkurs-Angebot der HBS in der Q-Phase (Nutzer 29.10.2026; FB-A „Grundkurs-Angebot“)
+    var GK = [
+      { id: 'deutsch', name: 'Deutsch', f: 1 }, { id: 'englisch', name: 'Englisch', f: 1, fs: 1 },
+      { id: 'franz', name: 'Französisch', f: 1, fs: 2 }, { id: 'span', name: 'Spanisch', f: 1, fs: 2 },
+      { id: 'kunst', name: 'Kunst', f: 1, km: 1 }, { id: 'musik', name: 'Musik', f: 1, km: 1 },
+      { id: 'powi', name: 'Politik und Wirtschaft', f: 2 }, { id: 'geschichte', name: 'Geschichte', f: 2 },
+      { id: 'geo', name: 'Geographie', f: 2 }, { id: 'religion', name: 'Religion', f: 2, re: 1 }, { id: 'ethik', name: 'Ethik', f: 2, re: 1 },
+      { id: 'mathe', name: 'Mathematik', f: 3 }, { id: 'biologie', name: 'Biologie', f: 3, nw: 1 },
+      { id: 'chemie', name: 'Chemie', f: 3, nw: 1 }, { id: 'physik', name: 'Physik', f: 3, nw: 1 },
+      { id: 'info', name: 'Informatik', f: 3, inf: 1 }, { id: 'sport', name: 'Sport', f: 0 }
+    ];
+    var GKOF = {}; GK.forEach(function (g) { GKOF[g.id] = g; });
+    var K = { a: null, b: null, exam: [], bel: {}, ein: {} };
+    function kStart(a, b) {
+      if (K.a === a && K.b === b) return;
+      K = { a: a, b: b, exam: [], bel: {}, ein: {} };
+      // Vorbelegung: was jede und jeder nach Anlage 7 belegen muss und eindeutig ist
+      ['deutsch', 'englisch', 'powi', 'geschichte', 'mathe', 'sport'].forEach(function (id) { K.bel[id] = 4; });
+      GK.forEach(function (g) { if (K.bel[g.id] == null) K.bel[g.id] = 0; K.ein[g.id] = 0; });
+    }
+    var isLK = function (id) { return id === K.a || id === K.b; };
+    var isEx = function (id) { return K.exam.indexOf(id) >= 0; };
+    var bel = function (id) { return isLK(id) ? 4 : K.bel[id]; };
+    var ein = function (id) { return isLK(id) || isEx(id) ? 4 : K.ein[id]; };
+    var maxOf = function (ids, f) { return Math.max.apply(null, ids.map(f)); };
+    var ids = function (key) { return GK.filter(function (g) { return g[key]; }).map(function (g) { return g.id; }); };
+
+    function kChecks() {
+      var NW = ids('nw'), FS2 = GK.filter(function (g) { return g.fs === 2; }).map(function (g) { return g.id; });
+      var KM = ids('km'), RE = ids('re'), AF2 = GK.filter(function (g) { return g.f === 2; }).map(function (g) { return g.id; });
+      var second = function (f) { // zweite Pflicht: weitere Fremdsprache oder weitere Naturwissenschaft oder Informatik
+        var nw = NW.map(f).sort(function (x, y) { return y - x; });
+        return maxOf(FS2, f) >= 2 || nw[1] >= 2 || f('info') >= 2;
+      };
+      // Prüfungsfächer 3 bis 5 (OAVO § 24)
+      var ex = K.exam, all = [K.a, K.b].concat(ex), P = [];
+      var has = function (id) { return all.indexOf(id) >= 0; };
+      var fields = {}; all.forEach(function (id) { var g = GKOF[id]; if (g && g.f) fields[g.f] = true; });
+      var written = ex.some(function (id) { var f = {}; f[GKOF[K.a].f] = f[GKOF[K.b].f] = f[GKOF[id].f] = 1; return id !== 'sport' && Object.keys(f).length >= 2; });
+      P.push([ex.length === 3, ex.length === 3 ? 'drei Prüfungsfächer gewählt' : 'noch ' + (3 - ex.length) + ' Prüfungsfach/-fächer wählen (Knopf „3–5“)']);
+      if (ex.length === 3) {
+        P.push([has('deutsch') && has('mathe'), 'Deutsch und Mathematik dabei']);
+        P.push([all.some(function (id) { var g = GKOF[id]; return g && (g.fs || g.nw || g.inf); }), 'Fremdsprache, Naturwissenschaft oder Informatik dabei']);
+        P.push([fields[1] && fields[2] && fields[3], 'alle drei Aufgabenfelder abgedeckt']);
+        P.push([written, 'ein Fach für die 3. schriftliche Prüfung (zwei Aufgabenfelder schriftlich, nicht Sport)']);
+      }
+      // Belegen (Anlage 7)
+      var B = [
+        [bel('deutsch') >= 4, 'Deutsch 4'], [bel('englisch') >= 4, 'Englisch (fortgeführte Fremdsprache) 4'],
+        [maxOf(KM, bel) >= 2, 'Kunst oder Musik 2'],
+        [bel('powi') >= 4 || (bel('powi') >= 2 && bel('geo') >= 2), 'Politik und Wirtschaft 4' + (bel('powi') < 4 && bel('geo') >= 2 ? ' (ab Q3 Geographie – nur wenn ab E1 belegt)' : '')],
+        [bel('geschichte') >= 4, 'Geschichte 4'], [maxOf(RE, bel) >= 4, 'Religion oder Ethik 4'],
+        [bel('mathe') >= 4, 'Mathematik 4'], [maxOf(NW, bel) >= 4, 'eine Naturwissenschaft 4'],
+        [second(bel), 'weitere Fremdsprache, Naturwissenschaft oder Informatik 2'], [bel('sport') >= 4, 'Sport 4']
+      ];
+      // Einbringen (§ 26)
+      var gkSum = GK.reduce(function (n, g) { return n + (isLK(g.id) ? 0 : ein(g.id)); }, 0);
+      var af2 = AF2.reduce(function (n, id) { return n + ein(id); }, 0);
+      var E = [
+        [gkSum === 24, 'Grundkurse: ' + gkSum + ' von 24' + (gkSum > 24 ? ' – ' + (gkSum - 24) + ' zu viel' : '')],
+        [ein('deutsch') >= 4, 'Deutsch 4'], [ein('englisch') >= 4, 'Englisch 4'], [ein('mathe') >= 4, 'Mathematik 4'],
+        [maxOf(NW, ein) >= 4, 'eine Naturwissenschaft 4'], [maxOf(KM, ein) >= 2, 'Kunst oder Musik mind. 2'],
+        [af2 >= 6 && ein('geschichte') >= 2 && Math.max(ein('powi'), ein('geo')) >= 2,
+          'Aufgabenfeld II: ' + af2 + ' von mind. 6, darunter 2 Geschichte, 2 PoWi oder Geographie'],
+        [second(ein), 'weitere Fremdsprache, Naturwissenschaft oder Informatik 2'],
+        [isEx('sport') || ein('sport') <= 3, 'Sport höchstens 3' + (isEx('sport') ? ' (als Prüfungsfach alle 4)' : '')]
+      ];
+      return { P: P, B: B, E: E, gkSum: gkSum };
+    }
+
+    function stepper(id, kind, val, min, max) {
+      return '<span class="kst"><button type="button" data-k="' + kind + '" data-id="' + id + '" data-d="-1"' + (val <= min ? ' disabled' : '') + ' aria-label="weniger">–</button>' +
+        '<b>' + val + '</b><button type="button" data-k="' + kind + '" data-id="' + id + '" data-d="1"' + (val >= max ? ' disabled' : '') + ' aria-label="mehr">+</button></span>';
+    }
+    function renderKurse() {
+      var a = K.a, b = K.b;
+      $('kTitle').textContent = 'Kurse selbst planen: ' + SUBJ[a].name + ' + ' + SUBJ[b].name;
+      $('kBack').href = '#planer/' + a + '/' + b + '/einbringen';
+      var groups = [[1, 'Aufgabenfeld I'], [2, 'Aufgabenfeld II'], [3, 'Aufgabenfeld III'], [0, 'Sport']];
+      var head = '<div class="khead"><span>Fach</span><span>Prüfung</span><span>belegt</span><span>eingebracht</span></div>';
+      var grpHtml = groups.map(function (gr) {
+        return '<div class="kgrp g' + gr[0] + '"><span class="k">' + gr[1] + '</span>' + head + GK.filter(function (g) { return g.f === gr[0]; }).map(function (g) {
+          if (isLK(g.id)) return '<div class="kr"><span class="kn">' + fachIcon(g.id, 'ki') + esc(g.name) + '<small>LK</small></span><span></span><span class="kfix">4</span><span class="kfix">4 · doppelt</span></div>';
+          var full = K.exam.length >= 3 && !isEx(g.id);
+          var exBtn = '<button type="button" class="kx" data-x="' + g.id + '" aria-pressed="' + isEx(g.id) + '"' + (full ? ' disabled' : '') + '>3–5</button>';
+          var belCell = isEx(g.id) ? '<span class="kfix">4</span>' : stepper(g.id, 'bel', K.bel[g.id], 0, 4);
+          var einCell = isEx(g.id) ? '<span class="kfix">4</span>' : stepper(g.id, 'ein', K.ein[g.id], 0, K.bel[g.id]);
+          return '<div class="kr"><span class="kn">' + fachIcon(g.id, 'ki') + esc(g.name) + '</span>' + exBtn + belCell + einCell + '</div>';
+        }).join('') + '</div>';
+      });
+      $('kList').innerHTML = [[0, 3], [1, 2]].map(function (col) { return '<div class="kcol">' + col.map(function (i) { return grpHtml[i]; }).join('') + '</div>'; }).join('');
+      var c = kChecks();
+      var list = function (arr) {
+        var no = arr.filter(function (x) { return !x[0]; }), ok = arr.filter(function (x) { return x[0]; });
+        return (no.length ? '<ul>' + no.map(function (x) { return '<li class="no">' + x[1] + '</li>'; }).join('') + '</ul>' : '') +
+          (ok.length ? '<p class="oks">' + ok.map(function (x) { return '<span>' + x[1] + '</span>'; }).join('') + '</p>' : '');
+      };
+      var h3 = function (t, arr) {
+        var n = arr.filter(function (x) { return !x[0]; }).length;
+        return '<h3>' + t + (n ? ' <span class="cnt no">' + n + (n > 1 ? ' fehlen' : ' fehlt') + '</span>' : ' <span class="cnt ok">✓ erfüllt</span>') + '</h3>';
+      };
+      var allOk = c.P.concat(c.B, c.E).every(function (x) { return x[0]; });
+      $('kCheck').innerHTML = '<p class="verdict' + (allOk ? ' ok' : '') + '">' + (allOk ? 'Alles erfüllt.' : 'Noch nicht alles erfüllt.') + '</p>' +
+        h3('Prüfungsfächer 3 bis 5', c.P) + list(c.P) + h3('Belegen', c.B) + list(c.B) + h3('Einbringen', c.E) + list(c.E) +
+        '<p class="fine">Belegt = besuchte Kurse in Q1 bis Q4, eingebracht = Kurse, die in die Abiturnote zählen; LK-Kurse zählen doppelt. Ohne Noten: ' +
+        'keiner darf 0 Punkte haben, höchstens 6 unter 5 Punkten. Sonderfall zweite Fremdsprache nach § 14 Abs. 3 nicht berücksichtigt – das klärt die ' +
+        'Oberstufenleitung. Grundlage: OAVO § 13 Abs. 9 mit Anlage 7, § 24, § 26.</p>';
+    }
+    $('kList').addEventListener('click', function (e) {
+      var x = e.target.closest('[data-x]'), st = e.target.closest('[data-k]');
+      if (x && !x.disabled) {
+        var id = x.dataset.x, i = K.exam.indexOf(id);
+        if (i >= 0) K.exam.splice(i, 1); else if (K.exam.length < 3) { K.exam.push(id); K.bel[id] = 4; K.ein[id] = 4; }
+      } else if (st && !st.disabled) {
+        var id2 = st.dataset.id, d = Number(st.dataset.d);
+        if (st.dataset.k === 'bel') { K.bel[id2] = Math.max(0, Math.min(4, K.bel[id2] + d)); K.ein[id2] = Math.min(K.ein[id2], K.bel[id2]); }
+        else K.ein[id2] = Math.max(0, Math.min(K.bel[id2], K.ein[id2] + d));
+      } else return;
+      renderKurse();
+    });
 
     function filmSubj(film) { var id = Object.keys(SUBJ).filter(function (k) { return SUBJ[k].film === film; })[0]; return id ? SUBJ[id] : null; }
 
@@ -698,10 +888,16 @@
         if (p[3] === 'einbringen') tab = 'einbr';   // #planer/englisch/biologie/einbringen öffnet den Reiter „Einbringen“
         view = 'planer';
       }
-      ['home', 'feld', 'planer'].forEach(function (v) { $('v-' + v).hidden = v !== view; });
+      else if (/^kurse\//.test(h)) {
+        // #kurse/<1. LK>/<2. LK>: Rechner für Belegen und Einbringen
+        var q = h.split('/');
+        if (PAIRS[q[1]] && fits(q[1], q[2])) { pick.a = q[1]; pick.b = q[2]; kStart(q[1], q[2]); view = 'kurse'; } else view = 'planer';
+      }
+      ['home', 'feld', 'planer', 'kurse'].forEach(function (v) { $('v-' + v).hidden = v !== view; });
       document.body.classList.toggle('sub', view !== 'home');
       if (field) showField(field);
       if (view === 'planer') renderPlan();
+      if (view === 'kurse') renderKurse();
     }
     window.addEventListener('hashchange', route);
     route();

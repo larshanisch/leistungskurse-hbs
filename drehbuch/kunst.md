@@ -198,11 +198,11 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   Prüfung statt einer Klausur in Q3 oder Q4“ · Hinweis „eigenes Werk, auch zu Hause · Präsentation
   und Gespräch“
 - **Sprechtext:**
-  > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine. Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine. Deine Lehrkraft kann entscheiden,
-  > dass euer ganzer Kurs im ersten Jahr eine Klausur durch ein Referat oder eine Präsentation
-  > ersetzt. Im zweiten Jahr ersetzt eine
+  > Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine. Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine. Deine Lehrkraft kann entscheiden,
+  > dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat oder eine Präsentation
+  > ersetzt. In Q3 oder Q4 ersetzt eine
   > fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk – je nach Aufgabe auch zu
-  > Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist. Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
+  > Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist. In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
 - **Beleg:** FB-K 4 (OAVO § 9 Abs. 6, 6a Nr. 1 „nach Entscheidung der Lehrkraft … einheitlich“ und
   6a Nr. 4 — am Originaltext geprüft; HKM-Schaubild Klausuren Abb. 2; ERL23 Abschn. 2.1.2
   häusliche Arbeit; Präsentation und Gespräch nach 2.3.2). Dauer bewusst nicht genannt (Nutzer).

@@ -4,7 +4,7 @@ window.FILMS["kunst"] = {
  "id": "kunst",
  "title": "Leistungskurs Kunst",
  "accent": "#c8d530",
- "total": 348.9,
+ "total": 350.9,
  "credits": [
   "Berthe Morisot: Die Wiege (Le berceau), 1872, Musée d’Orsay, Paris – gemeinfrei, Wikimedia Commons (Google Art Project)",
   "Gustave Caillebotte: Straße in Paris, Regenwetter (Rue de Paris, temps de pluie), 1877, Art Institute of Chicago – gemeinfrei, Wikimedia Commons (Google Art Project)",
@@ -720,90 +720,90 @@ window.FILMS["kunst"] = {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 39.08,
-   "speechEnd": 37.68,
+   "duration": 41.08,
+   "speechEnd": 39.68,
    "sentences": [
     {
-     "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine.",
-     "audio": "media/kunst/audio/s09_1_521a6670.mp3",
-     "dur": 3.76,
+     "text": "Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine.",
+     "audio": "media/kunst/audio/s09_1_120477e4.mp3",
+     "dur": 4.16,
      "estimated": false,
      "start": 0.6
     },
     {
-     "text": "Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine.",
-     "audio": "media/kunst/audio/s09_2_68b17b1f.mp3",
-     "dur": 4,
+     "text": "Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine.",
+     "audio": "media/kunst/audio/s09_2_912a2830.mp3",
+     "dur": 4.32,
      "estimated": false,
-     "start": 4.81
+     "start": 5.21
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs im ersten Jahr eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "audio": "media/kunst/audio/s09_3_f2130b71.mp3",
-     "dur": 7.68,
+     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
+     "audio": "media/kunst/audio/s09_3_d7c4bc14.mp3",
+     "dur": 8.48,
      "estimated": false,
-     "start": 9.26
+     "start": 9.98
     },
     {
-     "text": "Im zweiten Jahr ersetzt eine fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk – je nach Aufgabe auch zu Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.",
-     "audio": "media/kunst/audio/s09_4_c805a11e.mp3",
-     "dur": 12.72,
+     "text": "In Q3 oder Q4 ersetzt eine fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk – je nach Aufgabe auch zu Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.",
+     "audio": "media/kunst/audio/s09_4_4ac9effb.mp3",
+     "dur": 13.52,
      "estimated": false,
-     "start": 17.39
+     "start": 18.91
     },
     {
-     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
-     "audio": "media/kunst/audio/s09_5_bd516576.mp3",
-     "dur": 7.12,
+     "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
+     "audio": "media/kunst/audio/s09_5_397b1793.mp3",
+     "dur": 6.8,
      "estimated": false,
-     "start": 30.56
+     "start": 32.88
     }
    ],
    "cues": [
     {
-     "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine.",
+     "text": "Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine.",
      "start": 0.6,
-     "end": 4.36
+     "end": 4.76
     },
     {
-     "text": "Im Grundkurs schreibst du in den ersten drei Halbjahren jeweils nur eine.",
-     "start": 4.81,
-     "end": 8.81
+     "text": "Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine.",
+     "start": 5.21,
+     "end": 9.53
     },
     {
      "text": "Deine Lehrkraft kann entscheiden,",
-     "start": 9.26,
-     "end": 11.166
+     "start": 9.98,
+     "end": 12.1
     },
     {
-     "text": "dass euer ganzer Kurs im ersten Jahr eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "start": 11.166,
-     "end": 16.882
+     "text": "dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
+     "start": 12.1,
+     "end": 18.396
     },
     {
-     "text": "Im zweiten Jahr ersetzt eine fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk",
-     "start": 17.39,
-     "end": 23.15
+     "text": "In Q3 oder Q4 ersetzt eine fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk",
+     "start": 18.91,
+     "end": 24.962
     },
     {
      "text": "– je nach Aufgabe auch zu Hause –,",
-     "start": 23.15,
-     "end": 25.19
+     "start": 24.962,
+     "end": 27.151
     },
     {
      "text": "stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.",
-     "start": 25.19,
-     "end": 29.99
+     "start": 27.151,
+     "end": 32.301
     },
     {
-     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
-     "start": 30.56,
-     "end": 35.873
+     "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
+     "start": 32.88,
+     "end": 37.753
     },
     {
      "text": "was dich in der Prüfung erwartet.",
-     "start": 35.873,
-     "end": 37.627
+     "start": 37.753,
+     "end": 39.623
     }
    ],
    "image": {
@@ -816,30 +816,30 @@ window.FILMS["kunst"] = {
      {
       "value": "2",
       "label": "Klausuren pro Halbjahr",
-      "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1",
-      "t": 2.286
+      "sub": "in Q4 nur 1 · im Grundkurs Q1–Q3 je 1",
+      "t": 2.498
      },
      {
       "value": "↔",
       "label": "Referat oder Präsentation statt einer Klausur in Q1 oder Q2",
       "sub": "wenn die Lehrkraft es festlegt",
-      "t": 9.606
+      "t": 10.365
      },
      {
       "value": "Q3/Q4",
       "label": "fachpraktische Prüfung statt einer Klausur",
-      "t": 19.13
+      "t": 20.648
      },
      {
       "value": "Q3",
       "label": "Klausur unter Abiturbedingungen",
-      "t": 34.014
+      "t": 35.77
      }
     ],
     "notes": [
      {
       "text": "eigenes Werk, auch zu Hause · Präsentation und Gespräch",
-      "t": 22.43
+      "t": 24.189
      }
     ]
    },
@@ -918,7 +918,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 252.53
+   "start": 254.53
   },
   {
    "n": 11,
@@ -1011,7 +1011,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 272.5
+   "start": 274.5
   },
   {
    "n": 12,
@@ -1079,7 +1079,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 301.44
+   "start": 303.44
   },
   {
    "n": 13,
@@ -1117,7 +1117,7 @@ window.FILMS["kunst"] = {
     "src": "media/kunst/img/k13.jpg",
     "motion": "zoom-out"
    },
-   "start": 317.89
+   "start": 319.89
   },
   {
    "n": 14,
@@ -1170,7 +1170,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "logo": true,
-   "start": 333.33
+   "start": 335.33
   }
  ]
 };

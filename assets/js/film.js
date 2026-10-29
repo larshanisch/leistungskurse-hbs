@@ -166,9 +166,9 @@
         card.appendChild(reveal(row, at(it)));
       });
     } else if (p.type === 'list') {
-      p.items.forEach((it, k) => {
+      p.items.forEach((it) => {
         const row = el('div', 'li');
-        row.appendChild(el('span', 'dot', p.check ? '✓' : String(k + 1)));
+        row.appendChild(el('span', p.check ? 'dot' : 'dot bullet', p.check ? '✓' : ''));
         row.appendChild(el('span', '', it.text));
         card.appendChild(reveal(row, at(it)));
       });

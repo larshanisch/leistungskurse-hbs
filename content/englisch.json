@@ -152,7 +152,7 @@
       "panel": {
         "type": "stats",
         "items": [
-          { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten 1 · Grundkurs bei uns: 1" },
+          { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "in Q4 nur 1 · Grundkurs bei uns: 1" },
           {
             "at": "Deutsch und Mathematik",
             "value": "2",

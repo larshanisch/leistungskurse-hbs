@@ -4,7 +4,7 @@ window.FILMS["deutsch"] = {
  "id": "deutsch",
  "title": "Leistungskurs Deutsch",
  "accent": "#c8d530",
- "total": 342.94,
+ "total": 343.5,
  "credits": [
   "Caspar David Friedrich: Der Wanderer über dem Nebelmeer, um 1817, Hamburger Kunsthalle – gemeinfrei, Wikimedia Commons",
   "Peter Friedel: Heinrich von Kleist, Miniatur, 1801 – gemeinfrei, Wikimedia Commons",
@@ -821,13 +821,13 @@ window.FILMS["deutsch"] = {
    "n": 10,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 43.37,
-   "speechEnd": 41.97,
+   "duration": 43.93,
+   "speechEnd": 42.53,
    "sentences": [
     {
-     "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine – genau wie im Grundkurs Deutsch.",
-     "audio": "media/deutsch/audio/s10_1_5050022a.mp3",
-     "dur": 5.6,
+     "text": "Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine – genau wie im Grundkurs Deutsch.",
+     "audio": "media/deutsch/audio/s10_1_61c53c52.mp3",
+     "dur": 5.84,
      "estimated": false,
      "start": 0.6
     },
@@ -836,87 +836,82 @@ window.FILMS["deutsch"] = {
      "audio": "media/deutsch/audio/s10_2_fa6836d0.mp3",
      "dur": 3.84,
      "estimated": false,
-     "start": 6.65
+     "start": 6.89
     },
     {
      "text": "Das gilt sonst nur noch für Mathematik; in allen anderen Fächern schreibt der Grundkurs bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei.",
      "audio": "media/deutsch/audio/s10_3_e87b1eec.mp3",
      "dur": 8.88,
      "estimated": false,
-     "start": 10.94
+     "start": 11.18
     },
     {
-     "text": "Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "audio": "media/deutsch/audio/s10_4_d9c2b376.mp3",
-     "dur": 9.28,
+     "text": "Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
+     "audio": "media/deutsch/audio/s10_4_65f05c51.mp3",
+     "dur": 9.92,
      "estimated": false,
-     "start": 20.27
+     "start": 20.51
     },
     {
-     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
-     "audio": "media/deutsch/audio/s10_5_bd516576.mp3",
-     "dur": 7.12,
+     "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
+     "audio": "media/deutsch/audio/s10_5_397b1793.mp3",
+     "dur": 6.8,
      "estimated": false,
-     "start": 30
+     "start": 30.88
     },
     {
      "text": "Deine Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.",
      "audio": "media/deutsch/audio/s10_6_e77900c0.mp3",
      "dur": 4.4,
      "estimated": false,
-     "start": 37.57
+     "start": 38.13
     }
    ],
    "cues": [
     {
-     "text": "Pro Halbjahr schreibst du zwei Klausuren, im letzten eine – genau wie im Grundkurs Deutsch.",
+     "text": "Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine – genau wie im Grundkurs Deutsch.",
      "start": 0.6,
-     "end": 6.2
+     "end": 6.44
     },
     {
      "text": "Der Leistungskurs Deutsch bringt dir also keine zusätzliche Klausur.",
-     "start": 6.65,
-     "end": 10.49
+     "start": 6.89,
+     "end": 10.73
     },
     {
      "text": "Das gilt sonst nur noch für Mathematik;",
-     "start": 10.94,
-     "end": 13.264
+     "start": 11.18,
+     "end": 13.504
     },
     {
      "text": "in allen anderen Fächern schreibt der Grundkurs bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei.",
-     "start": 13.264,
-     "end": 19.76
+     "start": 13.504,
+     "end": 20
     },
     {
      "text": "Deine Lehrkraft kann außerdem entscheiden,",
-     "start": 20.27,
-     "end": 22.676
+     "start": 20.51,
+     "end": 23.383
     },
     {
-     "text": "dass euer ganzer Kurs in einem der ersten drei Halbjahre eine Klausur durch ein Referat",
-     "start": 22.676,
-     "end": 27.66
+     "text": "dass euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
+     "start": 23.383,
+     "end": 30.362
     },
     {
-     "text": "oder eine Präsentation ersetzt.",
-     "start": 27.66,
-     "end": 29.435
-    },
-    {
-     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
-     "start": 30,
-     "end": 35.313
+     "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
+     "start": 30.88,
+     "end": 35.753
     },
     {
      "text": "was dich in der Prüfung erwartet.",
-     "start": 35.313,
-     "end": 37.067
+     "start": 35.753,
+     "end": 37.623
     },
     {
      "text": "Deine Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.",
-     "start": 37.57,
-     "end": 41.97
+     "start": 38.13,
+     "end": 42.53
     }
    ],
    "image": {
@@ -929,30 +924,30 @@ window.FILMS["deutsch"] = {
      {
       "value": "2",
       "label": "Klausuren pro Halbjahr",
-      "sub": "im Grundkurs genauso · im letzten Halbjahr 1",
-      "t": 2.2
+      "sub": "im Grundkurs genauso · in Q4 nur 1",
+      "t": 2.287
      },
      {
       "value": "1 → 2",
       "label": "andere Fächer: GK → LK",
       "sub": "außer Mathematik – dort kommt eine Klausur dazu",
-      "t": 13.324
+      "t": 13.564
      },
      {
       "value": "↔",
       "label": "Referat oder Präsentation statt einer Klausur",
       "sub": "wenn die Lehrkraft es festlegt",
-      "t": 20.614
+      "t": 20.92
      },
      {
       "value": "Q3",
       "label": "Klausur unter Abiturbedingungen",
-      "t": 33.454
+      "t": 33.77
      },
      {
       "value": "≥",
       "label": "Mitarbeit zählt mindestens so viel wie die Klausuren",
-      "t": 37.904
+      "t": 38.464
      }
     ]
    },
@@ -1032,7 +1027,7 @@ window.FILMS["deutsch"] = {
     ],
     "t": 1.7
    },
-   "start": 252.81
+   "start": 253.37
   },
   {
    "n": 12,
@@ -1115,7 +1110,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 273.58
+   "start": 274.14
   },
   {
    "n": 13,
@@ -1183,7 +1178,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 296.12
+   "start": 296.68
   },
   {
    "n": 14,
@@ -1221,7 +1216,7 @@ window.FILMS["deutsch"] = {
     "src": "media/deutsch/img/s14.jpg",
     "motion": "zoom-out"
    },
-   "start": 312.49
+   "start": 313.05
   },
   {
    "n": 15,
@@ -1274,7 +1269,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "logo": true,
-   "start": 327.13
+   "start": 327.69
   }
  ]
 };

@@ -176,10 +176,7 @@ Wie im Drehbuch PoWi. **Beleg** FB-C = `quellen/faktenblatt_chemie.md`, FB-A = `
   „Referat oder Präsentation statt einer Klausur – wenn die Lehrkraft es festlegt“ · „Q3: Klausur unter
   Abiturbedingungen“
 - **Sprechtext:**
-  > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine. Im Grundkurs schreibst du in den ersten drei
-  > Halbjahren jeweils nur eine. Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in einem der ersten
-  > drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt. Im dritten Halbjahr schreibst
-  > du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
+  > Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine. Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine. Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine Präsentation ersetzt. In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
 - **Beleg:** FB-C 4 (FB-A Abschn. 3; Entscheidungen 55, 60); alle Sätze wortgleich aus Biologie
 
 ---

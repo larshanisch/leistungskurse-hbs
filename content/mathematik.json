@@ -96,9 +96,9 @@
       "n": 9,
       "image": { "src": "m09.jpg", "motion": "zoom-out" },
       "panel": { "type": "stats", "items": [
-        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "im letzten Halbjahr 1 – im Grundkurs genauso, also keine zusätzliche" },
+        { "at": "zwei Klausuren", "value": "2", "label": "Klausuren pro Halbjahr", "sub": "in Q4 nur 1 – im Grundkurs genauso, also keine zusätzliche" },
         { "at": "Lehrkraft", "value": "↔", "label": "Referat oder Präsentation statt einer Klausur", "sub": "wenn die Lehrkraft es festlegt" },
-        { "at": "dritten Halbjahr", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
+        { "at": "In Q3 schreibst", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
       ] }
     },
     {

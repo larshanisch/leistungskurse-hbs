@@ -168,11 +168,9 @@ Wie im Drehbuch PoWi. **Beleg** FB-M = `quellen/faktenblatt_mathematik.md`, FB-A
   „Referat oder Präsentation statt einer Klausur – wenn die Lehrkraft es festlegt“ · „Q3: Klausur unter
   Abiturbedingungen“
 - **Sprechtext:**
-  > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine. Das ist im Grundkurs Mathematik übrigens
+  > Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine. Das ist im Grundkurs Mathematik übrigens
   > genauso, weil er vier Wochenstunden hat; der Leistungskurs Mathematik bringt dir also keine zusätzliche
-  > Klausur. Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in einem
-  > der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt. Im dritten
-  > Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in
+  > Klausur. Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine Präsentation ersetzt. In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in
   > der Prüfung erwartet.
 - **Beleg:** FB-M 4 (FB-A Abschn. 3, Schaubild Abb. 4)
 

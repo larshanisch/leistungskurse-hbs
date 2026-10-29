@@ -51,7 +51,7 @@
         "type": "timeline",
         "items": [
           { "at": "neunzehnte", "label": "Q1", "text": "19. Jahrhundert" },
-          { "at": "Demokratie und Diktatur", "label": "Q2", "text": "Demokratie und Diktatur 1917–1945" },
+          { "at": "Demokratie und Diktatur", "label": "Q2", "text": "Demokratie und Diktatur 1917–⁠1945" },
           { "at": "Kalte Krieg", "label": "Q3", "text": "Kalter Krieg, Teilung, Globalisierung" },
           { "at": "öffentlich", "label": "Q4", "text": "Umgang mit Geschichte" }
         ]
@@ -150,7 +150,7 @@
             "at": "zwei Klausuren",
             "value": "2",
             "label": "Klausuren pro Halbjahr",
-            "sub": "im letzten Halbjahr 1 · im Grundkurs Q1–Q3 je 1"
+            "sub": "in Q4 nur 1 · im Grundkurs Q1–Q3 je 1"
           },
           {
             "at": "Lehrkraft",
@@ -158,7 +158,7 @@
             "label": "Referat oder Präsentation statt einer Klausur",
             "sub": "wenn die Lehrkraft es festlegt"
           },
-          { "at": "dritten Halbjahr", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
+          { "at": "In Q3 schreibst", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
         ]
       }
     },

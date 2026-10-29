@@ -217,11 +217,10 @@ Inhaltsangabe, damit jede Porträtkarte genau so lange steht, wie über das Werk
   Halbjahr 1“) · „andere Fächer außer Mathematik: Grundkurs 1, Leistungskurs 2“ · „Referat oder Präsentation statt einer
   Klausur – wenn die Lehrkraft es festlegt“ · „Mitarbeit zählt mindestens so viel“
 - **Sprechtext:**
-  > Pro Halbjahr schreibst du zwei Klausuren, im letzten eine – genau wie im Grundkurs Deutsch.
+  > Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine – genau wie im Grundkurs Deutsch.
   > Der Leistungskurs Deutsch bringt dir also keine zusätzliche
   > Klausur. Das gilt sonst nur noch für Mathematik; in allen anderen Fächern schreibt der Grundkurs
-  > bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei. Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in einem
-  > der ersten drei Halbjahre eine Klausur durch ein Referat oder eine Präsentation ersetzt. Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet. Deine
+  > bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei. Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine Präsentation ersetzt. In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet. Deine
   > Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.
 - **Beleg:** FB-A (§ 9 Abs. 6 Nr. 1–3, Abs. 6a Nr. 1 „nach Entscheidung der Lehrkraft … einheitlich“
   und Abs. 7 — am Originaltext geprüft; § 9 Abs. 2; HKM-Schaubild Klausuren Abb. 1 und 4,

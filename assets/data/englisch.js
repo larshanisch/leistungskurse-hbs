@@ -4,7 +4,7 @@ window.FILMS["englisch"] = {
  "id": "englisch",
  "title": "Leistungskurs Englisch",
  "accent": "#c8d530",
- "total": 372.58,
+ "total": 372.34,
  "credits": [
   "Henry Fuseli (Johann Heinrich Füssli): Studie zu den drei Hexen aus „Macbeth“, um 1783, Auckland Art Gallery Toi o Tāmaki – gemeinfrei, Wikimedia Commons",
   "Walter Crane: Imperial Federation – Map of the World Showing the Extent of the British Empire in 1886 – gemeinfrei, Wikimedia Commons (Norman B. Leventhal Map Center, Boston Public Library)",
@@ -749,13 +749,13 @@ window.FILMS["englisch"] = {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 46.12,
-   "speechEnd": 44.72,
+   "duration": 45.88,
+   "speechEnd": 44.48,
    "sentences": [
     {
-     "text": "Im Leistungskurs schreibst du pro Halbjahr zwei Klausuren, im letzten eine; im Grundkurs ist es bei uns nur eine.",
-     "audio": "media/englisch/audio/s09_1_62c3faca.mp3",
-     "dur": 7.2,
+     "text": "Im Leistungskurs schreibst du pro Halbjahr zwei Klausuren, in Q4 nur eine; im Grundkurs ist es bei uns nur eine.",
+     "audio": "media/englisch/audio/s09_1_de0698d3.mp3",
+     "dur": 7.44,
      "estimated": false,
      "start": 0.6
     },
@@ -764,85 +764,80 @@ window.FILMS["englisch"] = {
      "audio": "media/englisch/audio/s09_2_74b3519b.mp3",
      "dur": 9.52,
      "estimated": false,
-     "start": 8.25
+     "start": 8.49
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs im ersten oder zweiten Halbjahr eine Klausur durch ein Referat ersetzt.",
-     "audio": "media/englisch/audio/s09_3_6e490413.mp3",
+     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat ersetzt.",
+     "audio": "media/englisch/audio/s09_3_4e3f8c6a.mp3",
      "dur": 7.12,
      "estimated": false,
-     "start": 18.22
+     "start": 18.46
     },
     {
-     "text": "Im dritten Halbjahr ersetzt eine mündliche Kommunikationsprüfung eine Klausur: Bei uns sprichst du dabei zusammen mit einer Mitschülerin oder einem Mitschüler vor zwei Lehrkräften frei auf Englisch.",
-     "audio": "media/englisch/audio/s09_4_4f75fc4c.mp3",
-     "dur": 11.36,
+     "text": "In Q3 ersetzt eine mündliche Kommunikationsprüfung eine Klausur: Bei uns sprichst du dabei zusammen mit einer Mitschülerin oder einem Mitschüler vor zwei Lehrkräften frei auf Englisch.",
+     "audio": "media/englisch/audio/s09_4_bb1ae409.mp3",
+     "dur": 11.2,
      "estimated": false,
-     "start": 25.79
+     "start": 26.03
     },
     {
-     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
-     "audio": "media/englisch/audio/s09_5_bd516576.mp3",
-     "dur": 7.12,
+     "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
+     "audio": "media/englisch/audio/s09_5_397b1793.mp3",
+     "dur": 6.8,
      "estimated": false,
-     "start": 37.6
+     "start": 37.68
     }
    ],
    "cues": [
     {
      "text": "Im Leistungskurs schreibst du pro Halbjahr zwei Klausuren,",
      "start": 0.6,
-     "end": 4.296
+     "end": 4.453
     },
     {
-     "text": "im letzten eine; im Grundkurs ist es bei uns nur eine.",
-     "start": 4.296,
-     "end": 7.736
+     "text": "in Q4 nur eine; im Grundkurs ist es bei uns nur eine.",
+     "start": 4.453,
+     "end": 7.974
     },
     {
      "text": "In Deutsch und Mathematik schreibt dagegen auch der Grundkurs zwei;",
-     "start": 8.25,
-     "end": 12.139
+     "start": 8.49,
+     "end": 12.379
     },
     {
      "text": "wer eines dieser Fächer als Leistungskurs wählt, bekommt dadurch also keine zusätzliche Klausur.",
-     "start": 12.139,
-     "end": 17.712
+     "start": 12.379,
+     "end": 17.952
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden,",
-     "start": 18.22,
-     "end": 20.07
+     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat ersetzt.",
+     "start": 18.46,
+     "end": 25.58
     },
     {
-     "text": "dass euer ganzer Kurs im ersten oder zweiten Halbjahr eine Klausur durch ein Referat ersetzt.",
-     "start": 20.07,
-     "end": 25.284
-    },
-    {
-     "text": "Im dritten Halbjahr ersetzt eine mündliche Kommunikationsprüfung eine Klausur:",
-     "start": 25.79,
-     "end": 30.265
+     "text": "In Q3 ersetzt eine mündliche Kommunikationsprüfung eine Klausur:",
+     "start": 26.03,
+     "end": 29.926
     },
     {
      "text": "Bei uns sprichst du dabei zusammen mit einer Mitschülerin",
-     "start": 30.265,
-     "end": 33.535
+     "start": 29.926,
+     "end": 33.395
     },
     {
      "text": "oder einem Mitschüler vor zwei Lehrkräften frei auf Englisch.",
-     "start": 33.535,
-     "end": 37.035
+     "start": 33.395,
+     "end": 37.108
     },
     {
-     "text": "Im dritten Halbjahr schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
-     "start": 37.6,
-     "end": 42.913
+     "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
+     "start": 37.68,
+     "end": 42.553
     },
     {
      "text": "was dich in der Prüfung erwartet.",
-     "start": 42.913,
-     "end": 44.667
+     "start": 42.553,
+     "end": 44.423
     }
    ],
    "image": {
@@ -859,36 +854,36 @@ window.FILMS["englisch"] = {
      {
       "value": "2",
       "label": "Klausuren pro Halbjahr",
-      "sub": "im letzten 1 · Grundkurs bei uns: 1",
-      "t": 3.34
+      "sub": "in Q4 nur 1 · Grundkurs bei uns: 1",
+      "t": 3.456
      },
      {
       "value": "2",
       "label": "Deutsch und Mathematik: auch im Grundkurs",
       "sub": "als Leistungskurs also keine zusätzliche Klausur",
-      "t": 8.424
+      "t": 8.664
      },
      {
       "value": "↔",
       "label": "Referat statt einer Klausur in Q1 oder Q2",
       "sub": "wenn die Lehrkraft es festlegt",
-      "t": 18.556
+      "t": 18.852
      },
      {
       "value": "Q3",
       "label": "mündliche Kommunikationsprüfung statt einer Klausur",
-      "t": 28.257
+      "t": 27.795
      },
      {
       "value": "Q3",
       "label": "Klausur unter Abiturbedingungen",
-      "t": 41.054
+      "t": 40.57
      }
     ],
     "notes": [
      {
       "text": "bei uns: zwei Prüflinge · zwei Lehrkräfte · frei auf Englisch",
-      "t": 30.323
+      "t": 29.987
      }
     ]
    },
@@ -968,7 +963,7 @@ window.FILMS["englisch"] = {
     ],
     "t": 3.608
    },
-   "start": 265.86
+   "start": 265.62
   },
   {
    "n": 11,
@@ -1047,7 +1042,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 283.99
+   "start": 283.75
   },
   {
    "n": 12,
@@ -1126,7 +1121,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 308.88
+   "start": 308.64
   },
   {
    "n": 13,
@@ -1172,7 +1167,7 @@ window.FILMS["englisch"] = {
     }
    ],
    "corner": "bei uns in der Regel",
-   "start": 326.13
+   "start": 325.89
   },
   {
    "n": 14,
@@ -1215,7 +1210,7 @@ window.FILMS["englisch"] = {
     "src": "media/englisch/img/e14.jpg",
     "motion": "zoom-out"
    },
-   "start": 339.49
+   "start": 339.25
   },
   {
    "n": 15,
@@ -1268,7 +1263,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "logo": true,
-   "start": 356.93
+   "start": 356.69
   }
  ]
 };
