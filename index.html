@@ -1356,8 +1356,7 @@
     function p4Toggle() {
       if (!OWN_DEVICE) { if (P4.mode === 'echt') P4.mode = 'erw'; P4.q = {}; }
       return '<div class="p4mode" role="tablist"><button type="button" role="tab" data-mode="erw" aria-selected="' + (P4.mode === 'erw') + '">Was wäre, wenn … (Erwartung)</button>' +
-        (OWN_DEVICE ? '<button type="button" role="tab" data-mode="echt" aria-selected="' + (P4.mode === 'echt') + '">Meine bisherigen Noten</button>'
-          : '<span class="p4own">Eigene Noten eintragen: nur auf deinem eigenen Gerät – über die Schulwebsite oder den QR-Code.</span>') + '</div>';
+        (OWN_DEVICE ? '<button type="button" role="tab" data-mode="echt" aria-selected="' + (P4.mode === 'echt') + '">Meine bisherigen Noten</button>' : '') + '</div>';   // an Tafel und Dauerbetrieb kein Hinweis: „Was wäre, wenn“ ist rein ausgedacht (Entscheidung 110)
     }
     $('v-planer').addEventListener('click', function (e) {
       var m = e.target.closest('[data-mode]'); if (!m) return;
