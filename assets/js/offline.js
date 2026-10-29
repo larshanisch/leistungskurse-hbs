@@ -4,7 +4,7 @@
 // Worker; dort liegt ohnehin alles lokal, und es wird nichts geladen.
 (function () {
   'use strict';
-  const CACHE = 'tdot-filme-v2';           // MUSS derselbe Name wie in sw.js sein (Entscheidung 68)
+  const CACHE = 'tdot-filme-v3';           // MUSS derselbe Name wie in sw.js sein (Entscheidung 68)
   const PARALLEL = 4;
   const CORE = ['index.html', 'film.html', 'assets/css/film.css', 'assets/js/film.js', 'assets/js/icons.js', 'assets/js/update.js', 'assets/js/qr.js', 'assets/css/hell.css', 'assets/css/planer.css', 'assets/fonts/outfit-latin-500-normal.woff2', 'assets/fonts/outfit-latin-600-normal.woff2', 'assets/fonts/outfit-latin-700-normal.woff2', 'assets/fonts/source-sans-3-latin-400-normal.woff2', 'assets/fonts/source-sans-3-latin-600-normal.woff2', 'assets/fonts/source-sans-3-latin-700-normal.woff2',
     'assets/data/deutsch.js', 'assets/data/englisch.js', 'assets/data/kunst.js', 'assets/data/powi.js', 'assets/data/geschichte.js', 'assets/data/mathematik.js', 'assets/data/biologie.js', 'assets/data/chemie.js',

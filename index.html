@@ -983,7 +983,7 @@
           '<p class="p2lead">Das sind deine <b>Prüfungsfächer 1 und 2</b>. Auf die Plätze 3 bis 5 kommen:</p>' +
           '<div class="need">' + c.need.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') +
           new Array(c.free + 1).join('<span class="free">frei wählbar</span>') + '</div>' + p2LimBox(pick.a, pick.b) +
-          '<a class="p2next" href="#p2/2/' + pick.a + '/' + pick.b + '">Weiter: Prüfungsfächer →</a>';
+          '<a class="p2next" href="#planer/2/' + pick.a + '/' + pick.b + '">Weiter: Prüfungsfächer →</a>';
       } else {
         side = '<p class="p2lead">Tippe auf die Kombination, die dich interessiert.</p>' +
           '<p class="fine">Einer der beiden LKs muss eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein.</p>';
@@ -1014,7 +1014,7 @@
         var done = p2Exam().length === 3 && p2Valid(P2.slot);
         return '<div class="p2pick idle">' + p2LimBox(pick.a, pick.b) + '<p class="p2lead">' + (done ? '<b>Deine fünf Prüfungsfächer stehen.</b> Tippe auf einen Platz, um ihn zu ändern.'
           : 'Tippe auf Platz 3, 4 oder 5 und wähle ein Fach.') + '</p>' +
-          (done ? '<a class="p2next" href="#p2/3/' + pick.a + '/' + pick.b + '">Weiter: Kurse →</a>' : '') + '</div>';
+          (done ? '<a class="p2next" href="#planer/3/' + pick.a + '/' + pick.b + '">Weiter: Kurse →</a>' : '') + '</div>';
       }
       var groups = [[1, 'Aufgabenfeld I'], [2, 'Aufgabenfeld II'], [3, 'Aufgabenfeld III'], [0, 'Sport']];
       return '<div class="p2pick"><p class="p2lead"><b>Platz ' + n + '</b> · ' + (n === 3 ? 'schriftlich, Landesabitur' : n === 4 ? 'mündliche Prüfung' : 'mündliche Prüfung oder Präsentation') +

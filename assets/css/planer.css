@@ -1,7 +1,7 @@
 /* Planer „Kurswahl durchspielen“ in drei Schritten (Entscheidung 96): Leistungskurse → Prüfungsfächer → Kurse. Liegt über hell.css. */
 #v-planer .bar { flex-wrap: wrap; }
 #v-planer > * { align-self: start; }
-#v-planer { grid-template-rows: auto auto auto 1fr; }
+#v-planer { grid-template-rows: auto auto auto auto 1fr; }   /* Leiste, Status, Hinweis, Werkzeuge, Inhalt */
 .p2steps { display: flex; gap: 8px; margin-left: auto; }
 .p2t { display: inline-flex; align-items: center; gap: 0.5em; padding: 0.45em 1em 0.45em 0.5em; border-radius: 999px; font-weight: 700; font-size: 16px;
   text-decoration: none; border: 1px solid var(--line); background: #fff; color: var(--ink); }
@@ -329,3 +329,9 @@ html.touch .p4q { height: 44px; }
 .p4local { margin: 0 0 10px; padding: 10px 14px; border-radius: 12px; background: #e6f2eb; border: 1px solid #9fcfb3; color: #164f35; font-weight: 700; line-height: 1.4; }
 .p4wipe { margin-top: 10px; border-color: var(--no); color: var(--no); }
 @media (min-width: 900px) and (min-aspect-ratio: 4/3) { .p4local { font-size: max(14px, 1.75vh); } }
+/* Größere Symbole im Kombinationsraster (Nutzer 29.10.2026: „zu klein“). Vorher 27 px in 115 px breiten Feldern (1920 px), 14 px bei 1280 px */
+.mx .mx-ok { padding: 1px 3px; gap: 2px; }
+.mx .mx-ok .ci { width: min(44px, 40cqw); height: min(44px, 40cqw); }
+.mx .mx-ok .mxp { font-size: min(15px, 12cqw); }
+@media (min-width: 900px) and (min-aspect-ratio: 4/3) { .mx .mx-ok .ci { width: min(max(28px, 4.4vh), 40cqw); height: min(max(28px, 4.4vh), 40cqw); } }
+@media (min-width: 1250px) and (max-width: 1599px) { .p2s1 { grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); } }
