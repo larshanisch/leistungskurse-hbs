@@ -127,6 +127,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Mathematik 5:41, Biologie 5:46, Chemie 5:46 min**. Bestimmte Halbjahre nie als „erstes/drittes/letztes Halbjahr“ sprechen oder schreiben.
 - 29.10.2026: Rechner sperrt unmögliche Prüfungsfächer (`kNeeds`, `kCompletable`, `kWhy` in `index.html`, Entscheidung 90).
 - 29.10.2026: Rechner belegt Pflicht ohne Wahl vor (`MIN_BEL`, `MIN_EIN`, Entscheidung 91). CSS: Regeln für schmale Fenster immer nach den Grundregeln.
+- 29.10.2026: Update-Meldung `assets/js/update.js` auf Startseite, Tafel, Dauerbetrieb (Entscheidung 92). Alte Fassung trotz Neuladen = Speicher; sofort: Strg+Umschalt+R.
+  Lokale Vorschau im Website-Stil: `node tools/vorschau_web.mjs` → `vorschau_web.html` (nur lokal, .gitignore).
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

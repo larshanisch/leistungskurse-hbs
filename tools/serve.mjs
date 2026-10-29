@@ -29,7 +29,9 @@ http.createServer((req, res) => {
       res.writeHead(206, { 'Content-Type': type, 'Content-Range': `bytes ${start}-${end}/${st.size}`, 'Accept-Ranges': 'bytes', 'Content-Length': end - start + 1 });
       return send(fs.createReadStream(file, { start, end, highWaterMark: 16384 }), res);
     }
-    res.writeHead(200, { 'Content-Type': type, 'Content-Length': st.size, 'Accept-Ranges': 'bytes' });
+    // Zeitstempel wie GitHub Pages (assets/js/update.js vergleicht ihn mit der angezeigten Seite)
+    res.writeHead(200, { 'Content-Type': type, 'Content-Length': st.size, 'Accept-Ranges': 'bytes', 'Last-Modified': st.mtime.toUTCString() });
+    if (req.method === 'HEAD') return res.end();
     send(fs.createReadStream(file, { highWaterMark: 16384 }), res);
   });
 }).listen(PORT, () => console.log(`Vorschau: http://localhost:${PORT}/`));
