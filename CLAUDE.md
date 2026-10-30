@@ -141,6 +141,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Prüf-Adressen: `#planer/4/<LK1>/<LK2>/<P3>,<P4>,<P5>/auffuellen`, Touch `?touch=1`. Eigene Noten nur auf eigenen Geräten (`SHOW_ALL` und nicht im Rahmen).
 - 29.10.2026: Kombinationen im Film als Partnerfächer mit Icons, „geht nicht mit“ darunter (Entscheidung 111), erzeugt mit `node tools/combos.mjs` aus `PAIRS`.
   **Erste TdoT-Fassung ohne Schritt 4 „Noten“** (`NOTEN_AN = false` in `index.html`, Entscheidung 112) – später wieder einschalten.
+- 30.10.2026: **Moodle-Lernpaket „Kursplaner“** (Entscheidung 116): `node tools/build_moodle.mjs` → `dist/Kursplaner_HBS_Moodle_v<VERSION>.zip` (VERSION/STAND oben im Skript hochzählen).
+  Quelle ist `index.html` mit Schalter `MOODLE` (aus `moodle/scorm.js`); Berichtsplätze im Kopf von `moodle/scorm.js` = Vertrag mit `moodle/auswertung.html`. Test: `dist/test_lms.html` (strenge Attrappe).
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

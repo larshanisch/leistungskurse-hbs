@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kursplaner – Auswertung für Lehrkräfte</title>
+<!--
+  Auswertung des Moodle-Interaktionsberichts zum Lernpaket „Kursplaner“ (Entscheidung 116).
+  Die Plätze 0–7 stehen im Kopf von scorm.js – beide Dateien müssen zusammenpassen.
+  Parser nach moodle-scorm/assets/progress_report_template.html: Tab-getrennt, gemischte
+  Anführungszeichen, HTML-maskierte Zellen, Formel-Apostroph, „-“ = kein Versuch, Spalten nach Muster.
+  Alles läuft im Browser; die Datei wird nirgendwohin geschickt.
+-->
+<style>
+  @font-face { font-family: "Source Sans 3"; font-weight: 400; src: url("assets/fonts/source-sans-3-latin-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Source Sans 3"; font-weight: 700; src: url("assets/fonts/source-sans-3-latin-700-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Outfit"; font-weight: 600; src: url("assets/fonts/outfit-latin-600-normal.woff2") format("woff2"); }
+  :root { --ink: #1a1a1a; --soft: #5c5c55; --line: #dedfd6; --bg: #f6f6f2; --accent: #c8d530; --head: #3d4310; --pale: #f4f7dc;
+    --ok: #1e7a45; --okbg: #e3f3e8; --no: #b3261e; --nobg: #fbe7e5; --mid: #8a6d00; --midbg: #fbf3d5; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.45 "Source Sans 3", system-ui, sans-serif; }
+  .wrap { max-width: 1400px; margin: 0 auto; padding: 24px 20px 60px; }
+  header { display: flex; align-items: center; gap: 18px; border-bottom: 4px solid var(--accent); padding-bottom: 14px; }
+  header img { height: 64px; }
+  h1 { font-family: Outfit, sans-serif; font-weight: 600; margin: 0; font-size: 28px; }
+  header p { margin: 2px 0 0; color: var(--soft); }
+  h2 { font-family: Outfit, sans-serif; font-weight: 600; font-size: 20px; margin: 26px 0 8px; color: var(--head); }
+  .box { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; }
+  ol { margin: 6px 0; padding-left: 22px; } li { margin: 4px 0; }
+  .privacy { margin-top: 12px; padding: 8px 14px; border-radius: 10px; background: var(--pale); font-size: 14.5px; }
+  #drop { display: block; margin-top: 10px; border: 2px dashed #b9be8a; border-radius: 14px; padding: 26px; text-align: center; cursor: pointer; background: #fff; font-weight: 700; }
+  #drop.hover { background: var(--pale); border-color: var(--accent); }
+  #drop input { display: none; }
+  .acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  button { font: inherit; font-weight: 700; padding: 0.45em 1.1em; border-radius: 999px; border: 1px solid #1a1a1a; background: #fff; cursor: pointer; }
+  button.primary { background: #1a1a1a; color: #fff; }
+  #status { margin-top: 10px; font-weight: 700; } #status.err { color: var(--no); } #status.ok { color: var(--ok); }
+  .grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 12px; }
+  .stat { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 8px 14px; min-width: 150px; }
+  .stat b { display: block; font-size: 24px; font-family: Outfit, sans-serif; } .stat span { color: var(--soft); font-size: 14px; }
+  .tw { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  th { position: sticky; top: 0; background: var(--pale); color: var(--head); cursor: pointer; white-space: nowrap; user-select: none; }
+  td.name { font-weight: 700; white-space: nowrap; } td.name small { display: block; font-weight: 400; color: var(--soft); }
+  .t { display: inline-block; padding: 2px 8px; border-radius: 7px; font-weight: 700; font-size: 13.5px; }
+  .t.ok { background: var(--okbg); color: var(--ok); } .t.no { background: var(--nobg); color: var(--no); }
+  .t.mid { background: var(--midbg); color: var(--mid); } .t.non { background: #eee; color: var(--soft); }
+  td small.d { display: block; color: var(--soft); font-size: 13px; margin-top: 2px; }
+  .hint { color: var(--soft); font-size: 14px; }
+  @media print { .noprint { display: none !important; } body { background: #fff; } .tw { border: 0; } th { position: static; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="assets/img/logo_hbs_frei.png" alt="Heinrich-Böll-Schule Hattersheim"><div><h1>Kursplaner – Auswertung für Lehrkräfte</h1>
+    <p>Zeigt für Ihr Tutorium, was die Schülerinnen und Schüler im Kursplaner eingegeben haben.</p></div></header>
+
+  <div class="noprint">
+    <h2>So geht es</h2>
+    <div class="box">
+      <ol>
+        <li>In Moodle die Aktivität <b>Kursplaner</b> öffnen und oben auf <b>Berichte</b> gehen.</li>
+        <li>Im Auswahlfeld <b>Interaktionen</b> wählen (nicht „Lernziele“, dieser Bericht bleibt in Moodle leer).</li>
+        <li>Ganz unten <b>„Als Textdatei herunterladen“</b> anklicken.</li>
+        <li>Die heruntergeladene Datei unten ablegen oder auswählen.</li>
+      </ol>
+      <p class="privacy"><b>Datenschutz:</b> Die Datei wird nur hier im Browser gelesen und nirgendwohin geschickt. Nach dem Schließen der Seite ist nichts mehr gespeichert.
+        Zu sehen sind Kurswahl und Ergebnisse, keine einzelnen Noten. Die Schülerinnen und Schüler werden im Planer darauf hingewiesen.</p>
+    </div>
+    <label id="drop">Bericht hierher ziehen oder klicken, um die Datei auszuwählen<input type="file" id="file" accept=".txt,.csv,.tsv"></label>
+    <div class="acts">
+      <button type="button" class="primary" id="print" hidden>Drucken</button>
+      <button type="button" id="copy" hidden>Für Excel kopieren</button>
+      <button type="button" id="clear" hidden>Zurücksetzen</button>
+      <button type="button" id="demo">Beispiel ansehen</button>
+    </div>
+    <div id="status" role="status"></div>
+  </div>
+  <div id="out"></div>
+  <p class="hint">Ohne Gewähr: Der Planer ist eine Orientierungshilfe. Ergebnisse mit „Annahme“ oder „Erwartung“ beruhen auf geschätzten Punkten. Es gelten die amtlichen Vorgaben.</p>
+</div>
+<script>
+'use strict';
+/* Plätze laut scorm.js – Reihenfolge = Index im Bericht */
+var SLOTS = [
+  { key: 'lk', label: 'Leistungskurse' },
+  { key: 'pf', label: 'Prüfungsfächer 3–5' },
+  { key: 'bel', label: 'Belegen/Einbringen' },
+  { key: 'noten', label: 'Noten' },
+  { key: 'zul', label: 'Zulassung' },
+  { key: 'fhr', label: 'Fachhochschulreife' },
+  { key: 'abi', label: 'Abiturnote' },
+  { key: 'stand', label: 'Zuletzt' }
+];
+
+function htmlDecode(s) { return String(s == null ? '' : s).replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&'); }
+function clean(s) {
+  var v = htmlDecode(String(s == null ? '' : s).trim());
+  if (v.length > 1 && v[0] === "'" && '=+-@'.indexOf(v[1]) >= 0) v = v.slice(1);   // Formel-Schutz von Moodle
+  return v === '-' || v === "'" ? '' : v;                                         // „-“ = kein Versuch
+}
+function delim(h) { var b = '\t', n = h.split('\t').length; [';', ','].forEach(function (d) { var c = h.split(d).length; if (c > n) { n = c; b = d; } }); return b; }
+function table(text) {
+  var D = delim(text.split(/\r?\n/)[0] || ''), rows = [], row = [], cell = '', q = false;
+  for (var i = 0; i < text.length; i++) {
+    var c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; } else cell += c; }
+    else if (c === '"') q = true; else if (c === D) { row.push(cell); cell = ''; }
+    else if (c === '\n') { row.push(cell); rows.push(row); row = []; cell = ''; } else if (c !== '\r') cell += c;
+  }
+  if (cell.length || row.length) { row.push(cell); rows.push(row); }
+  return rows.filter(function (r) { return r.some(function (x) { return String(x).trim(); }); });
+}
+function col(head, names) {
+  for (var i = 0; i < head.length; i++) { var h = head[i].toLowerCase(); for (var j = 0; j < names.length; j++) if (h === names[j] || h.indexOf(names[j]) === 0) return i; }
+  return -1;
+}
+function parse(text) {
+  var rows = table(text.replace(/^﻿/, '')); if (rows.length < 2) return null;
+  var head = rows[0].map(clean), resp = {};
+  head.forEach(function (h, i) { var m = h.match(/^(antworten|response)\s*(\d+)$/i); if (m) resp[+m[2]] = i; });
+  if (!Object.keys(resp).length) return null;
+  var iName = col(head, ['name', 'vollständiger name', 'full name']), iMail = col(head, ['e-mail', 'email']),
+      iTry = col(head, ['versuch', 'attempt']), iLast = col(head, ['letzter versuch', 'last accessed', 'zuletzt']);
+  var people = {};
+  for (var r = 1; r < rows.length; r++) {
+    var z = rows[r].map(clean), name = iName >= 0 ? z[iName] : ''; if (!name) continue;
+    var v = {}, started = false;
+    SLOTS.forEach(function (s, n) { var x = resp[n] != null ? z[resp[n]] || '' : ''; if (x) started = true; v[s.key] = x; });
+    var p = { name: name, mail: iMail >= 0 ? z[iMail] : '', attempt: iTry >= 0 ? Number(z[iTry]) || 0 : 0, last: iLast >= 0 ? z[iLast] : '', v: v, started: started };
+    var k = name + '|' + p.mail, old = people[k];
+    if (!old || (p.started && (!old.started || p.attempt >= old.attempt))) people[k] = p;   // je Person der neueste Versuch mit Daten
+  }
+  var list = Object.keys(people).map(function (k) { return people[k]; });
+  return list.length ? list : null;
+}
+
+function esc(x) { return String(x == null ? '' : x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+// kurze Marke + Rest als Detail
+function tag(key, v) {
+  if (!v) return '<span class="t non">–</span>';
+  var m = /\(([^)]*)\)\s*$/.exec(v), detail = m ? m[1] : '', main = m ? v.slice(0, m.index).trim() : v;
+  var cls = 'non', short = main;
+  if (key === 'lk') { short = main.replace(/^Leistungskurse:\s*/, '').replace('1. LK ', '').replace(', 2. LK ', ' + '); cls = /noch/.test(main) ? 'non' : ''; }
+  else if (key === 'pf') { short = main.replace(/^Prüfungsfächer\s*/, ''); cls = /offen|noch nicht/.test(main) ? 'mid' : ''; }
+  else if (key === 'bel') { if (/erfüllt/.test(main) && !/offen/.test(main)) { short = 'erfüllt'; cls = 'ok'; } else if (/offen:/.test(main)) { short = 'noch offen'; detail = main.replace(/^.*offen:\s*/, ''); cls = 'no'; } else { short = 'noch nicht prüfbar'; } }
+  else if (key === 'noten') { if (/^Meine Noten/.test(main)) { short = 'eigene Noten'; detail = main.replace(/^Meine Noten:\s*/, ''); cls = ''; } else if (/Erwartung/.test(main)) { short = 'nur Erwartung'; cls = 'mid'; } else short = 'nicht geöffnet'; }
+  else if (key === 'stand') { short = main.replace(/^Zuletzt bearbeitet am\s*/, ''); cls = ''; }
+  else {
+    var erw = /^Erwartung/.test(main); short = main.replace(/^Erwartung:\s*/, '').replace(/^(Zulassung|Fachhochschulreife( \(schulischer Teil\))?|Abiturnote):?\s*/, '');
+    if (/noch nicht berechnet|nur mit eigenen|noch nicht prüfbar/.test(main)) cls = 'non';
+    else if (/nicht erreicht|nicht bestanden|nicht erreichbar/.test(main)) cls = 'no';
+    else if (/Annahme|angenommen/.test(v) || erw) cls = 'mid';   // beruht auf angenommenen Punkten
+    else cls = 'ok';
+    if (key === 'abi' && /^\d/.test(short)) short = short.split(' ')[0];
+    if (erw) short = 'Erwartung: ' + short;
+    short = short.replace(/^Fachhochschulreife:\s*/, '');
+  }
+  return (cls ? '<span class="t ' + cls + '">' + esc(short) + '</span>' : esc(short)) + (detail ? '<small class="d">' + esc(detail) + '</small>' : '');
+}
+
+var CUR = [], dir = {};
+function render(list) {
+  CUR = list;
+  var played = list.filter(function (p) { return p.started; });
+  var cnt = function (k, re) { return played.filter(function (p) { return re.test(p.v[k] || ''); }).length; };
+  var h = '<h2>Übersicht</h2><div class="grid">' +
+    '<div class="stat"><b>' + list.length + '</b><span>in der Liste</span></div>' +
+    '<div class="stat"><b>' + played.length + '</b><span>haben den Planer genutzt</span></div>' +
+    '<div class="stat"><b>' + cnt('bel', /^Belegen und Einbringen erfüllt/) + '</b><span>Belegen/Einbringen erfüllt</span></div>' +
+    '<div class="stat"><b>' + cnt('noten', /^Meine Noten/) + '</b><span>mit eigenen Noten</span></div>' +
+    '<div class="stat"><b>' + cnt('zul', /^Zulassung (nicht erreicht|so nicht)/) + '</b><span>Zulassung nach eigenen Noten gefährdet</span></div></div>' +
+    '<div class="tw"><table><thead><tr><th data-k="name">Name ↕</th>' + SLOTS.map(function (s) { return '<th data-k="' + s.key + '">' + esc(s.label) + ' ↕</th>'; }).join('') + '</tr></thead><tbody>' +
+    list.map(function (p) {
+      return '<tr><td class="name">' + esc(p.name) + (p.mail ? '<small>' + esc(p.mail) + '</small>' : '') + '</td>' +
+        (p.started ? SLOTS.map(function (s) { return '<td>' + tag(s.key, p.v[s.key]) + '</td>'; }).join('')
+          : '<td colspan="' + SLOTS.length + '"><span class="t non">noch nicht geöffnet</span></td>') + '</tr>';
+    }).join('') + '</tbody></table></div>' +
+    '<p class="hint">Spaltenkopf anklicken zum Sortieren. Bei mehreren Versuchen zählt je Person der neueste mit Eingaben.</p>';
+  document.getElementById('out').innerHTML = h;
+  [].forEach.call(document.querySelectorAll('th[data-k]'), function (th) {
+    th.onclick = function () {
+      var k = th.dataset.k; dir[k] = !dir[k];
+      var f = function (p) { return k === 'name' ? p.name.toLowerCase() : (p.v[k] || '~').toLowerCase(); };
+      render(CUR.slice().sort(function (a, b) { var x = f(a), y = f(b); return (x < y ? -1 : x > y ? 1 : 0) * (dir[k] ? 1 : -1); }));
+    };
+  });
+  ['print', 'copy', 'clear'].forEach(function (id) { document.getElementById(id).hidden = false; });
+}
+
+function status(t, c) { var e = document.getElementById('status'); e.textContent = t; e.className = c || ''; }
+function run(text) {
+  var list = parse(text);
+  if (!list) { document.getElementById('out').innerHTML = ''; status('In dieser Datei stehen keine Spalten „Antworten 0, 1, …“. Bitte in Moodle den Bericht „Interaktionen“ wählen und „Als Textdatei herunterladen“.', 'err'); return; }
+  list.sort(function (a, b) { return a.name.localeCompare(b.name, 'de'); });
+  status(list.length + (list.length === 1 ? ' Person' : ' Personen') + ' gelesen.', 'ok');
+  render(list);
+}
+function read(f) {
+  if (!f) return;
+  var r = new FileReader();
+  r.onload = function () {
+    var t = String(r.result || '');
+    if (/�/.test(t)) { var r2 = new FileReader(); r2.onload = function () { run(String(r2.result || '')); }; r2.readAsText(f, 'windows-1252'); return; }   // nach Excel-Umweg
+    run(t);
+  };
+  r.readAsText(f, 'utf-8');
+}
+var drop = document.getElementById('drop'), inp = document.getElementById('file');
+['dragover', 'dragenter'].forEach(function (e) { drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.add('hover'); }); });
+['dragleave', 'drop'].forEach(function (e) { drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.remove('hover'); }); });
+drop.addEventListener('drop', function (e) { read(e.dataTransfer.files[0]); });
+inp.addEventListener('change', function () { read(inp.files[0]); inp.value = ''; });
+document.getElementById('print').onclick = function () { window.print(); };
+document.getElementById('clear').onclick = function () { CUR = []; document.getElementById('out').innerHTML = ''; status(''); ['print', 'copy', 'clear'].forEach(function (id) { document.getElementById(id).hidden = true; }); };
+document.getElementById('copy').onclick = function () {
+  var lines = [['Name', 'E-Mail'].concat(SLOTS.map(function (s) { return s.label; })).join('\t')];
+  CUR.forEach(function (p) { lines.push([p.name, p.mail].concat(SLOTS.map(function (s) { return p.started ? p.v[s.key] || '' : 'noch nicht geöffnet'; })).join('\t')); });
+  navigator.clipboard.writeText(lines.join('\n')).then(function () { status('Kopiert – in Excel einfügen.', 'ok'); }, function () { status('Kopieren ging nicht.', 'err'); });
+};
+// Beispiel mit erfundenen Personen, im Format des echten Exports (Tab, Anführungszeichen, HTML-maskiert, „-“ = nie geöffnet)
+var DEMO = ['Name\t"E-Mail-Adresse"\tVersuch\tBewertung\tKursplaner\t"Antworten 0"\t"Antworten 1"\t"Antworten 2"\t"Antworten 3"\t"Antworten 4"\t"Antworten 5"\t"Antworten 6"\t"Antworten 7"',
+  ['"Beispiel, Alex"', '-', '1', '-', 'unvollständig', '"Leistungskurse: 1. LK Englisch, 2. LK Deutsch"', '"Prüfungsfächer 3. Mathematik, 4. Geschichte, 5. Politik und Wirtschaft"', '"Belegen und Einbringen erfüllt"', '"Meine Noten: 18 von 36 Halbjahren eingetragen, offene mit 8 Punkten angenommen"', '"Zulassung mit Annahmen erreichbar (LK 156/240, GK 230/360)"', '"Fachhochschulreife (schulischer Teil) erreicht, Note 2,4 (185/285)"', '"Abiturnote 2,5 (566/900, Prüfungen geschätzt, offene Halbjahre angenommen)"', '"Zuletzt bearbeitet am 30.10.2026, Schritt 4"'].join('\t'),
+  ['"Beispiel, Kim"', '-', '1', '-', 'unvollständig', '"Leistungskurse: 1. LK Biologie, 2. LK Chemie"', '"Prüfungsfächer 3. Mathematik, 4. Deutsch, 5. Englisch"', '"Belegen/Einbringen noch offen: Geschichte 2 Kurse belegen; Kunst oder Musik 2"', '"Noten: Schritt 4 noch nicht geöffnet"', '"Zulassung: noch nicht berechnet"', '"Fachhochschulreife: noch nicht berechnet"', '"Abiturnote: noch nicht berechnet"', '"Zuletzt bearbeitet am 28.10.2026, Schritt 3"'].join('\t'),
+  ['"Beispiel, Noah"', '-', '1', '-', 'unvollständig', '"Leistungskurse: 1. LK Mathematik, 2. LK Kunst"', '"Prüfungsfächer 3. Englisch, 4. Biologie, 5. Deutsch"', '"Belegen und Einbringen erfüllt"', '"Meine Noten: 36 von 36 Halbjahren eingetragen"', '"Zulassung nicht erreicht (LK 72/240, GK 141/360)"', '"Fachhochschulreife (schulischer Teil) noch nicht erreicht"', '"Abiturnote so nicht bestanden (293/900, Prüfungen geschätzt)"', '"Zuletzt bearbeitet am 30.10.2026, Schritt 4"'].join('\t'),
+  ['"Beispiel, Sam"', '-', '1', '-', 'unvollständig', '"Leistungskurse: 1. LK Politik und Wirtschaft, 2. LK Englisch"', '"Prüfungsfächer 3. Mathematik, 4. Deutsch, 5. Biologie"', '"Belegen und Einbringen erfüllt"', '"Nur Erwartung (Was wäre, wenn), keine echten Noten"', '"Erwartung: Zulassung erreicht (LK 176/240, GK 264/360)"', '"Fachhochschulreife: nur mit eigenen Noten prüfbar"', '"Erwartung: Abiturnote 2,0 (616/900)"', '"Zuletzt bearbeitet am 29.10.2026, Schritt 4"'].join('\t'),
+  ['"Beispiel, Mika"', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'].join('\t')].join('\n');
+document.getElementById('demo').onclick = function () { run(DEMO); status('Beispiel mit erfundenen Personen – so sieht die Auswertung aus.', 'ok'); };
+if (location.hash === '#beispiel') document.getElementById('demo').click();
+window.TDOT_PARSE = parse;   // für den Prüflauf
+</script>
+</body>
+</html>

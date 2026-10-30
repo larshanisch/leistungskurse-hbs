@@ -47,6 +47,11 @@ dann diese Liste ab, Schritt für Schritt, und fragt bei jeder inhaltlichen Änd
 - [ ] Planer-Tests: Sperre in allen Kombinationen gegen unabhängige Regelprüfung, Vorschläge, Einschränkungen gegen die Tutoriumsblätter
 - [ ] Layout messen (1920×1080, 1920×936 Tafel, 1280×720, 1024×768, 1280×600, Handy), keine Überdeckung
 
+## 4b. Moodle-Lernpaket
+
+- [ ] `VERSION`/`STAND` in `tools/build_moodle.mjs` hochzählen, `node tools/build_moodle.mjs`, Durchlauf mit `dist/test_lms.html`
+- [ ] Zip den Tutorinnen und Tutoren geben: Datei in der bestehenden Aktivität **ersetzen** (nicht neu anlegen), sonst gehen die gespeicherten Pläne verloren
+
 ## 5. Abschluss
 
 - [ ] Wurden Dateien unter gleichem Namen ersetzt: `CACHE` in `sw.js` **und** `assets/js/offline.js` hochzählen
