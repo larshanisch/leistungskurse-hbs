@@ -403,6 +403,12 @@
   #setup .acts .ghost { background: transparent; }
   #setup .acts .primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
   #setup .acts .primary:disabled { opacity: 0.4; cursor: default; }
+  #setup .more { margin-top: 1.4em; padding-top: 1em; border-top: 1px solid var(--line); }
+  #setup .more .kicker { margin: 0 0 0.2em; }
+  #setup .acts.left { justify-content: flex-start; align-items: center; margin-top: 0.6em; }
+  #setup .dl { display: inline-flex; flex-direction: column; padding: 0.55em 1.2em; border-radius: 14px; border: 1px solid var(--line); font-weight: 800; font-size: 16px; color: inherit; text-decoration: none; }
+  #setup .dl small { font-weight: 600; font-size: 13px; opacity: 0.75; }
+  #setup .dl:hover, #setup .dl:focus-visible { border-color: var(--accent); }
   @media (min-width: 900px) and (min-aspect-ratio: 4/3) {
     #setup .box { padding: 3.4vh 2.4vw; border-radius: 2vh; }
     #setup h2 { font-size: max(14px, 4vh); }
@@ -411,7 +417,7 @@
     #setup label { font-size: max(14px, 2.1vh); }
     #setup label small { font-size: max(12px, 1.4vh); }
     #setup .room { font-size: max(13px, 1.8vh); }
-    #setup .acts button { font-size: max(13px, 1.9vh); }
+    #setup .acts button, #setup .dl { font-size: max(13px, 1.9vh); }
   }
 </style>
 <link rel="stylesheet" href="assets/css/hell.css">
@@ -456,7 +462,7 @@
     </div>
     <div class="p2status" id="p2status" aria-live="polite"></div>
     <!-- Hinweis oben, damit er nicht mit langen Listen nach unten rutscht (Nutzer 29.10.2026) -->
-    <p class="fine p2fine"><b>Ohne Gewähr:</b> Dieser Planer ist eine Orientierungshilfe und kann Fehler enthalten. Es gelten immer die aktuellen amtlichen Vorgaben; im Zweifel berät die Oberstufenleitung. Grundlage: OAVO § 13, § 24, § 26 mit Anlage 7.</p>
+    <p class="fine p2fine"><b>Ohne Gewähr:</b> Dieser Planer ist eine Orientierungshilfe und kann Fehler enthalten. Es gelten immer die aktuellen amtlichen Vorgaben; im Zweifel berät dich deine Tutorin oder dein Tutor. Grundlage: OAVO § 13, § 24, § 26 mit Anlage 7.</p>
     <div id="p2tools"></div>
     <div id="p2body"></div>
   </section>
@@ -491,6 +497,16 @@
     <div class="acts">
       <button type="button" class="ghost" id="setupAll">Alles zeigen, kein fester Raum</button>
       <button type="button" class="primary" id="setupSave" disabled>Speichern</button>
+    </div>
+    <div class="more">
+      <p class="kicker">Außerdem</p>
+      <div class="acts left">
+        <button type="button" class="ghost" id="setupKiosk">Als Dauerschleife zeigen</button>
+        <button type="button" class="ghost" id="setupKioskMute">Dauerschleife ohne Ton</button>
+        <a class="dl" href="downloads/Poster_Leistungskurse_HBS.zip" download>Poster zum Ausdrucken herunterladen <small>9 PDFs in einer ZIP-Datei, 1,5 MB</small></a>
+      </div>
+      <p class="hint">Die Dauerschleife zeigt die oben ausgewählten Filme nacheinander im Vollbild, immer wieder von vorn (ohne Auswahl: alle Filme).
+        Mit Ton braucht der Browser einen Klick zum Start; ohne Ton startet sie sofort. Beenden: Esc.</p>
     </div>
   </div>
 </div>
@@ -1550,7 +1566,7 @@
         '<h2>Kurse in Q1 bis Q4</h2><table><tr><th>Fach</th><th>belegt</th><th>eingebracht</th></tr>' + rows + '</table>' +
         (open.length ? '<p class="warn"><b>Noch offen:</b> ' + open.map(function (x) { return x[1]; }).join('; ') + '</p>' : '<p>Belegen und Einbringen: alles erfüllt.</p>') +
         noten +
-        '<p class="fine"><b>Ohne Gewähr:</b> Dieser Planer ist eine Orientierungshilfe und kann Fehler enthalten. Es gelten immer die aktuellen amtlichen Vorgaben; im Zweifel berät die Oberstufenleitung.</p>' +
+        '<p class="fine"><b>Ohne Gewähr:</b> Dieser Planer ist eine Orientierungshilfe und kann Fehler enthalten. Es gelten immer die aktuellen amtlichen Vorgaben; im Zweifel berät dich deine Tutorin oder dein Tutor.</p>' +
         '<p class="fine">Weiterplanen: ' + esc(location.href) + '</p>';
     }
     window.addEventListener('beforeprint', function () { if (!$('v-planer').hidden) p2PrintFill(); });
@@ -1637,6 +1653,16 @@
       var c = chosen(); save({ all: c.length === Object.keys(SUBJ).length, subjects: c, where: where() });
     });
     $('setupAll').addEventListener('click', function () { save({ all: true, subjects: [] }); });
+    // Dauerbetrieb mit den ausgewählten Filmen (kiosk.html?filme=…); die Auswahl wird zugleich gespeichert
+    function kiosk(mute) {
+      var c = chosen();
+      if (c.length) save({ all: c.length === Object.keys(SUBJ).length, subjects: c, where: where() });
+      var ids = (c.length ? c : Object.keys(SUBJ)).map(function (id) { return SUBJ[id].film || id; }).filter(function (id) { return FILMS[id]; });
+      var url = 'kiosk.html?filme=' + ids.join(',') + (mute ? '&stumm=1' : '');
+      try { window.top.location.href = new URL(url, location.href).href; } catch (e) { location.href = url; }   // aus dem Tafel-Rahmen heraus
+    }
+    $('setupKiosk').addEventListener('click', function () { kiosk(false); });
+    $('setupKioskMute').addEventListener('click', function () { kiosk(true); });
     $('openSetup').addEventListener('click', openSetup);
     // versteckter Zugang: drei Sekunden auf das Logo drücken, oder index.html?einrichten
     // Vollbild: nur wenn der Browser es kann und die Seite nicht schon in der Tafel-Ansicht steckt (die hat einen eigenen Knopf)

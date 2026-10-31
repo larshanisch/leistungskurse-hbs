@@ -47,6 +47,10 @@ dann diese Liste ab, Schritt für Schritt, und fragt bei jeder inhaltlichen Änd
 - [ ] Planer-Tests: Sperre in allen Kombinationen gegen unabhängige Regelprüfung, Vorschläge, Einschränkungen gegen die Tutoriumsblätter
 - [ ] Layout messen (1920×1080, 1920×936 Tafel, 1280×720, 1024×768, 1280×600, Handy), keine Überdeckung
 
+## 4a. Poster
+
+- [ ] `node tools/build_poster.mjs`, dann das Zip nach `downloads/Poster_Leistungskurse_HBS.zip` kopieren (Link in „Tafel einrichten“)
+
 ## 4b. Moodle-Lernpaket
 
 - [ ] `VERSION`/`STAND` in `tools/build_moodle.mjs` hochzählen, `node tools/build_moodle.mjs`, Durchlauf mit `dist/test_lms.html`

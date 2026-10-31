@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Poster · Leistungskurs Geschichte</title>
+<!-- erzeugt von tools/build_poster.mjs aus content/geschichte.json – nicht von Hand ändern -->
+<style>
+@font-face { font-family: "Outfit"; font-weight: 600; src: url("../assets/fonts/outfit-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 700; src: url("../assets/fonts/outfit-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 400; src: url("../assets/fonts/source-sans-3-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 600; src: url("../assets/fonts/source-sans-3-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 700; src: url("../assets/fonts/source-sans-3-latin-700-normal.woff2") format("woff2"); }
+:root { --ink: #2e2e2e; --soft: #5a5f55; --line: #e4e8dc; --accent: #c8d530; --accent-dark: #6b7414; --head: #1a1a1a;
+  --pale: #f8fae6; --no: #c0392b; --sans: "Source Sans 3", "Segoe UI", sans-serif; --display: "Outfit", "Segoe UI", sans-serif; }
+@page { size: A4 portrait; margin: 0; }
+* { box-sizing: border-box; }
+html { background: #e9e7e2; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: var(--sans); color: var(--ink); font-size: 10.5pt; line-height: 1.3; }
+.sheet { width: 210mm; height: 297mm; margin: 0 auto; padding: 10mm 12mm 8mm; background: #fff; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 3.2mm; position: relative; }
+@media screen and (min-width: 820px) { .sheet { margin: 10mm auto; box-shadow: 0 4px 24px rgba(0,0,0,0.15); } }
+@media print { html { background: #fff; } }
+h1, h2, h3 { font-family: var(--display); color: var(--head); margin: 0; letter-spacing: -0.01em; }
+.top { display: flex; align-items: center; justify-content: space-between; border-bottom: 0.3mm solid var(--line); padding-bottom: 3mm; }
+.top img { height: 15mm; }
+.top p { margin: 0; text-align: right; font-size: 9.5pt; color: var(--accent-dark); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.5; }
+.title { display: flex; align-items: center; gap: 5mm; }
+.title .tt { flex: 1; }
+.title .logo { height: 16mm; align-self: flex-start; }
+.title .ic { flex: none; width: 19mm; height: 19mm; border-radius: 50%; background: var(--accent); color: var(--head); display: grid; place-items: center; }
+.title .ic svg { width: 13mm; height: 13mm; }
+.title .kick { margin: 0; font-family: var(--display); font-weight: 600; font-size: 13pt; color: var(--accent-dark); }
+.title h1 { font-size: 31pt; line-height: 1.02; font-weight: 700; }
+.title h1.long { font-size: 27pt; }
+.title h1::after { content: ""; display: block; width: 18mm; height: 1.2mm; background: var(--accent); margin-top: 1.6mm; }
+.what { margin: 1.5mm 0 0; font-size: 11pt; color: var(--soft); }
+/* Rahmen des Kurses als Zahlenleiste (ohne Filmbild, Nutzer 30.10.2026), hell wie hell.css (Nutzer 31.10.2026) */
+.stats { display: flex; gap: 3mm; }
+.stat { flex: 1 1 auto; background: #fff; border: 0.3mm solid var(--line); border-left: 1.4mm solid var(--accent); border-radius: 2.5mm; padding: 2.4mm 3.4mm; display: flex; align-items: center; gap: 2.4mm; }
+.stat:first-child { flex-grow: 2; }
+.stat b { font-family: var(--display); font-size: 22pt; color: var(--head); line-height: 1; white-space: nowrap; }
+.stat b small { font-size: 10pt; font-weight: 600; margin-right: 0.8mm; }
+.stat span { font-size: 10pt; line-height: 1.15; }
+.stat span i { display: block; font-style: normal; color: var(--soft); font-size: 8.5pt; }
+h2 { font-size: 12.5pt; font-weight: 700; margin-bottom: 1.4mm; display: flex; align-items: center; gap: 2mm; }
+h2 .tag, h3 .tag { font-family: var(--sans); font-size: 7.5pt; font-weight: 700; color: var(--accent-dark); background: var(--pale); border: 0.25mm solid #e2e7b8; border-radius: 3mm; padding: 0.3mm 2mm; letter-spacing: 0.04em; }
+.q { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm; }
+.q div { background: var(--pale); border: 0.25mm solid #e2e7b8; border-radius: 2.5mm; padding: 1.6mm 2.4mm; }
+.q b { display: inline-block; font-family: var(--display); font-size: 10pt; background: var(--accent); color: var(--head); border-radius: 1.5mm; padding: 0.2mm 1.8mm; margin-bottom: 1mm; }
+.q p { margin: 0; font-size: 10pt; font-weight: 600; color: var(--head); line-height: 1.2; hyphens: manual; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.box { border: 0.3mm solid var(--line); border-radius: 3mm; padding: 2.4mm 3.2mm; }
+.rows { margin: 0; padding: 0; list-style: none; display: grid; gap: 1.4mm; }
+.rows li { display: grid; grid-template-columns: 13mm 1fr; gap: 2mm; align-items: baseline; }
+.rows li > b { font-family: var(--display); font-size: 11.5pt; color: var(--accent-dark); text-align: right; white-space: nowrap; }
+.rows li span { font-size: 9.5pt; line-height: 1.2; }
+.rows li span i { display: block; font-style: normal; color: var(--soft); font-size: 8.5pt; }
+.notes { margin: 1.6mm 0 0; padding: 1.4mm 0 0; border-top: 0.25mm dashed var(--line); list-style: none; font-size: 8.5pt; color: var(--soft); display: grid; gap: 0.6mm; }
+.combo { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5mm 1.6mm; }
+.ch { margin: 0 0 1mm; font-weight: 700; font-size: 9.5pt; }
+.combo + .ch { margin-top: 1.8mm; }
+.ch.ok { color: var(--accent-dark); }
+.ch.no { color: var(--no); }
+.note { margin: 2mm 0 0; font-size: 9.5pt; color: var(--soft); }
+.mit { background: var(--pale); border-color: #e2e7b8; }
+.mit .check { font-size: 11.5pt; gap: 1.6mm; }
+.abi { border-top: 0.3mm solid var(--line); padding-top: 2mm; }
+.abi h3 { font-size: 10.5pt; font-weight: 700; display: flex; align-items: center; gap: 2mm; margin-bottom: 0.8mm; }
+.abi p { margin: 0; font-size: 8.5pt; line-height: 1.35; color: var(--soft); }
+.abi p b { font-family: var(--display); color: var(--head); font-size: 9.5pt; }
+.chip { display: inline-flex; align-items: center; gap: 1mm; border-radius: 2mm; padding: 0.6mm 1.8mm 0.6mm 1.2mm; font-size: 9pt; font-weight: 600; }
+.chip svg { width: 4.4mm; height: 4.4mm; }
+.ok .chip { background: var(--pale); border: 0.3mm solid var(--accent); color: var(--head); }
+.no .chip { background: #fdecea; border: 0.3mm solid var(--no); color: #8e2a1f; }   /* „geht nicht mit“ rot (Nutzer 31.10.2026) */
+table { width: 100%; border-collapse: collapse; font-size: 9pt; line-height: 1.2; }
+th { text-align: left; font-family: var(--display); font-weight: 600; font-size: 9pt; color: var(--soft); padding: 0 1.5mm 0.8mm; }
+td { padding: 1mm 1.5mm; border-top: 0.25mm solid var(--line); vertical-align: top; }
+td:first-child { font-weight: 700; color: var(--head); width: 20%; }
+td:nth-child(2) { width: 34%; }
+td:last-child { font-weight: 600; color: var(--head); }
+.check { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.6mm; font-size: 9.5pt; }
+.check li::before { content: "✓"; color: var(--accent-dark); font-weight: 700; margin-right: 1.8mm; }
+.bottom { display: grid; grid-template-columns: 1fr auto; gap: 6mm; align-items: start; }
+.qrs { display: flex; gap: 4mm; }
+.qr { width: 31mm; text-align: center; }
+.qr svg { width: 31mm; height: 31mm; display: block; border: 0.3mm solid var(--line); border-radius: 2mm; }
+.qr b { display: block; font-family: var(--display); font-size: 10pt; white-space: nowrap; color: var(--head); margin-top: 1.2mm; }
+.qr span { display: block; font-size: 7.5pt; color: var(--soft); word-break: break-all; line-height: 1.15; }
+.foot { border-top: 1.2mm solid var(--accent); padding-top: 1.8mm; font-size: 7.5pt; color: var(--soft); display: flex; justify-content: space-between; gap: 4mm; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="title">
+    <div class="ic"><svg class="fach-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5h17"/><path d="M5 18h14"/><path d="M6.5 18V9.5M10.2 18V9.5M13.8 18V9.5M17.5 18V9.5"/><path d="M5 9.5h14"/><path d="M4 9.5L12 4l8 5.5"/><path d="M5.6 8.2h1.8M9.3 8.2h1.8M13 8.2h1.8M16.6 8.2h1.8" stroke-width="1.1"/></svg></div>
+    <div class="tt">
+      <p class="kick">Leistungskurs · Gymnasiale Oberstufe</p>
+      <h1>Geschichte</h1>
+      <p class="what">Vom 19. Jahrhundert bis heute – Quellen befragen und historische Urteile begründen.</p>
+    </div>
+    <img class="logo" src="../assets/img/logo_hbs_frei.png" alt="Heinrich-Böll-Schule Hattersheim">
+  </div>
+  <div class="stats"><div class="stat"><b><small>mind.</small>5</b><span>Punkte am Ende der Einführungsphase<i>besser deutlich mehr – die Anforderungen steigen</i></span></div><div class="stat"><b>5</b><span>Wochenstunden</span></div><div class="stat"><b>×2</b><span>zählt im Abitur</span></div></div>
+  <section>
+    <h2>Themen in Q1 bis Q4</h2>
+    <div class="q"><div><b>Q1</b><p>19. Jahrhundert</p></div><div><b>Q2</b><p>Demokratie und Diktatur 1917–⁠1945</p></div><div><b>Q3</b><p>Kalter Krieg, Teilung, Globalisierung</p></div><div><b>Q4</b><p>Umgang mit Geschichte</p></div></div>
+  </section>
+  <section><h2>Grundkurs und Leistungskurs</h2>
+    <table><tr><th></th><th>Grundkurs</th><th>Leistungskurs</th></tr>
+    <tr><td>Themen</td><td>dieselben Themenfelder</td><td>vertiefter, mehr Quellen</td></tr><tr><td>Deutungen</td><td>vergleichen und erörtern</td><td>dazu Geschichts­bilder, aktuelle Kontro­versen</td></tr><tr><td>Arbeitsweise</td><td>Quellen und Darstellungen untersuchen</td><td>dazu eigene Recherche vor Ort</td></tr></table></section>
+  <div class="cols">
+    <section class="box mit"><h2>Was du mitbringen solltest</h2><ul class="check"><li>Neugier auf die Vergangenheit</li><li>Freude an längeren Texten</li><li>Lust zu diskutieren</li><li>Ernst auch bei schweren Themen</li></ul></section>
+    <section class="box"><h2>Klausuren</h2><ul class="rows"><li><b>2</b><span>Klausuren pro Halbjahr<i>in Q4 nur 1 · im Grundkurs Q1–Q3 je 1</i></span></li><li><b>↔</b><span>Referat oder Präsentation statt einer Klausur<i>wenn die Lehrkraft es festlegt</i></span></li><li><b>Q3</b><span>Klausur unter Abiturbedingungen</span></li></ul></section>
+  </div>
+  <section class="abi"><h3>Abiturprüfung <span class="tag">Stand Abitur 2028</span></h3>
+    <p><b>1 aus 3</b> Vorschläge zur Wahl · <b>300</b> Minuten Bearbeitungszeit · Quellen interpretieren, historisch argumentieren · auch Rede, Brief oder Plädoyer · Hilfsmittel: Grundgesetz</p></section>
+  <div class="bottom">
+    <section><h2>Geschichte passt zu …</h2>
+      <p class="ch ok">✓ geht mit</p><div class="combo ok"><span class="chip"><svg class="fach-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5v2"/><path d="M9.5 8.5L12 4.5l2.5 4"/><path d="M9.5 8.5h5"/><path d="M9.5 8.5v12M14.5 8.5v12"/><path d="M8 20.5h8"/><circle cx="12" cy="11.6" r="2.1"/><path d="M12 10.4v1.2l.9.6" stroke-width="1.1"/><path d="M10.7 15.5h2.6M10.7 17.7h2.6" stroke-width="1.1"/></svg>Englisch</span><span class="chip"><svg class="fach-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5c0-8.5 4.5-13.5 14.5-14.5-1 10-6 14.5-14.5 14.5z"/><path d="M5 19.5l8.5-8.5"/><path d="M9.5 15.2c2-.2 3.7-.6 5-1.4M11.6 12.9c1.8-.5 3.2-1.2 4.4-2.1" stroke-width="1.1"/></svg>Biologie</span><span class="chip"><svg class="fach-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4.5v2.5"/><path d="M12 7l-6.3 12.5"/><path d="M12 7l6.3 12.5"/><path d="M8.4 14.2h7.2"/><circle cx="12" cy="4.5" r="1.4"/><path d="M5.7 19.5l-.6 1.5M18.3 19.5l.6 1.5" stroke-width="1.1"/></svg>Mathematik</span></div>
+      <p class="ch no">✗ geht nicht mit</p><div class="combo no"><span class="chip"><svg class="fach-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-1.4-1.3-3.4-1.9-6.5-1.9v13c3.1 0 5.1.6 6.5 1.9 1.4-1.3 3.4-1.9 6.5-1.9v-13c-3.1 0-5.1.6-6.5 1.9z"/><path d="M12 7v13"/><path d="M8 9.5h2.2M8 12h2.2M8 14.5h2.2M13.8 9.5H16M13.8 12H16M13.8 14.5H16" stroke-width="1.1"/></svg>Deutsch</span><span class="chip"><svg class="fach-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1.4 0 2.1-.9 2.1-1.8 0-.8-.5-1.1-.5-1.8 0-.9.7-1.5 1.6-1.5h1.7a3.9 3.9 0 0 0 3.9-3.9C20.8 7.4 16.9 3.5 12 3.5z"/><circle cx="7.6" cy="11.5" r="1.1"/><circle cx="9.6" cy="7.6" r="1.1"/><circle cx="14" cy="6.8" r="1.1"/><circle cx="17.2" cy="10" r="1.1"/></svg>Kunst</span><span class="chip"><svg class="fach-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5h17"/><path d="M5 20.5V12h14v8.5"/><path d="M4 12h16"/><path d="M6.5 9.5a5.5 5.5 0 0 1 11 0z"/><path d="M12 4v-1.5"/><path d="M8 20.5V15M12 20.5V15M16 20.5V15"/></svg>Politik und Wirtschaft</span><span class="chip"><svg class="fach-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3.5h6"/><path d="M10 3.5v5.8L4.7 18.4A1.6 1.6 0 0 0 6.1 21h11.8a1.6 1.6 0 0 0 1.4-2.6L14 9.3V3.5"/><path d="M6.9 15.5h10.2"/><circle cx="10" cy="18" r=".9" stroke-width="1.1"/><circle cx="13.5" cy="17" r=".7" stroke-width="1.1"/></svg>Chemie</span></div>
+    </section>
+    <div class="qrs"><div class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41" width="300" height="300" shape-rendering="crispEdges" role="img" aria-label="QR-Code"><rect width="41" height="41" fill="#fff"/><path d="M2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM13 2h1v1h-1zM15 2h1v1h-1zM16 2h1v1h-1zM18 2h1v1h-1zM19 2h1v1h-1zM21 2h1v1h-1zM22 2h1v1h-1zM23 2h1v1h-1zM24 2h1v1h-1zM30 2h1v1h-1zM32 2h1v1h-1zM33 2h1v1h-1zM34 2h1v1h-1zM35 2h1v1h-1zM36 2h1v1h-1zM37 2h1v1h-1zM38 2h1v1h-1zM2 3h1v1h-1zM8 3h1v1h-1zM10 3h1v1h-1zM13 3h1v1h-1zM14 3h1v1h-1zM15 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM19 3h1v1h-1zM20 3h1v1h-1zM21 3h1v1h-1zM24 3h1v1h-1zM27 3h1v1h-1zM28 3h1v1h-1zM32 3h1v1h-1zM38 3h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM10 4h1v1h-1zM12 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM15 4h1v1h-1zM17 4h1v1h-1zM21 4h1v1h-1zM23 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM27 4h1v1h-1zM28 4h1v1h-1zM29 4h1v1h-1zM32 4h1v1h-1zM34 4h1v1h-1zM35 4h1v1h-1zM36 4h1v1h-1zM38 4h1v1h-1zM2 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM11 5h1v1h-1zM12 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM18 5h1v1h-1zM19 5h1v1h-1zM23 5h1v1h-1zM27 5h1v1h-1zM29 5h1v1h-1zM30 5h1v1h-1zM32 5h1v1h-1zM34 5h1v1h-1zM35 5h1v1h-1zM36 5h1v1h-1zM38 5h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM13 6h1v1h-1zM21 6h1v1h-1zM23 6h1v1h-1zM27 6h1v1h-1zM30 6h1v1h-1zM32 6h1v1h-1zM34 6h1v1h-1zM35 6h1v1h-1zM36 6h1v1h-1zM38 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM11 7h1v1h-1zM14 7h1v1h-1zM15 7h1v1h-1zM16 7h1v1h-1zM17 7h1v1h-1zM18 7h1v1h-1zM22 7h1v1h-1zM23 7h1v1h-1zM24 7h1v1h-1zM25 7h1v1h-1zM26 7h1v1h-1zM27 7h1v1h-1zM28 7h1v1h-1zM30 7h1v1h-1zM32 7h1v1h-1zM38 7h1v1h-1zM2 8h1v1h-1zM3 8h1v1h-1zM4 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM26 8h1v1h-1zM28 8h1v1h-1zM30 8h1v1h-1zM32 8h1v1h-1zM33 8h1v1h-1zM34 8h1v1h-1zM35 8h1v1h-1zM36 8h1v1h-1zM37 8h1v1h-1zM38 8h1v1h-1zM11 9h1v1h-1zM14 9h1v1h-1zM15 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM19 9h1v1h-1zM20 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM24 9h1v1h-1zM26 9h1v1h-1zM27 9h1v1h-1zM29 9h1v1h-1zM30 9h1v1h-1zM2 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM8 10h1v1h-1zM9 10h1v1h-1zM10 10h1v1h-1zM11 10h1v1h-1zM16 10h1v1h-1zM17 10h1v1h-1zM25 10h1v1h-1zM28 10h1v1h-1zM30 10h1v1h-1zM31 10h1v1h-1zM34 10h1v1h-1zM36 10h1v1h-1zM37 10h1v1h-1zM38 10h1v1h-1zM4 11h1v1h-1zM6 11h1v1h-1zM10 11h1v1h-1zM11 11h1v1h-1zM13 11h1v1h-1zM14 11h1v1h-1zM16 11h1v1h-1zM18 11h1v1h-1zM20 11h1v1h-1zM24 11h1v1h-1zM25 11h1v1h-1zM28 11h1v1h-1zM29 11h1v1h-1zM33 11h1v1h-1zM34 11h1v1h-1zM35 11h1v1h-1zM37 11h1v1h-1zM2 12h1v1h-1zM4 12h1v1h-1zM5 12h1v1h-1zM7 12h1v1h-1zM8 12h1v1h-1zM10 12h1v1h-1zM12 12h1v1h-1zM14 12h1v1h-1zM17 12h1v1h-1zM18 12h1v1h-1zM19 12h1v1h-1zM21 12h1v1h-1zM22 12h1v1h-1zM25 12h1v1h-1zM27 12h1v1h-1zM28 12h1v1h-1zM29 12h1v1h-1zM30 12h1v1h-1zM33 12h1v1h-1zM34 12h1v1h-1zM38 12h1v1h-1zM2 13h1v1h-1zM3 13h1v1h-1zM4 13h1v1h-1zM11 13h1v1h-1zM18 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM21 13h1v1h-1zM22 13h1v1h-1zM24 13h1v1h-1zM25 13h1v1h-1zM28 13h1v1h-1zM31 13h1v1h-1zM32 13h1v1h-1zM34 13h1v1h-1zM35 13h1v1h-1zM36 13h1v1h-1zM37 13h1v1h-1zM38 13h1v1h-1zM2 14h1v1h-1zM5 14h1v1h-1zM8 14h1v1h-1zM11 14h1v1h-1zM12 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM16 14h1v1h-1zM17 14h1v1h-1zM22 14h1v1h-1zM24 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM30 14h1v1h-1zM32 14h1v1h-1zM33 14h1v1h-1zM35 14h1v1h-1zM38 14h1v1h-1zM2 15h1v1h-1zM4 15h1v1h-1zM5 15h1v1h-1zM6 15h1v1h-1zM7 15h1v1h-1zM9 15h1v1h-1zM11 15h1v1h-1zM12 15h1v1h-1zM13 15h1v1h-1zM15 15h1v1h-1zM16 15h1v1h-1zM17 15h1v1h-1zM18 15h1v1h-1zM23 15h1v1h-1zM25 15h1v1h-1zM27 15h1v1h-1zM28 15h1v1h-1zM29 15h1v1h-1zM30 15h1v1h-1zM34 15h1v1h-1zM35 15h1v1h-1zM4 16h1v1h-1zM8 16h1v1h-1zM10 16h1v1h-1zM12 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM17 16h1v1h-1zM20 16h1v1h-1zM21 16h1v1h-1zM22 16h1v1h-1zM23 16h1v1h-1zM24 16h1v1h-1zM26 16h1v1h-1zM28 16h1v1h-1zM29 16h1v1h-1zM31 16h1v1h-1zM34 16h1v1h-1zM35 16h1v1h-1zM36 16h1v1h-1zM38 16h1v1h-1zM2 17h1v1h-1zM4 17h1v1h-1zM5 17h1v1h-1zM6 17h1v1h-1zM7 17h1v1h-1zM9 17h1v1h-1zM13 17h1v1h-1zM14 17h1v1h-1zM16 17h1v1h-1zM24 17h1v1h-1zM28 17h1v1h-1zM30 17h1v1h-1zM32 17h1v1h-1zM33 17h1v1h-1zM35 17h1v1h-1zM36 17h1v1h-1zM37 17h1v1h-1zM38 17h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM8 18h1v1h-1zM10 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM16 18h1v1h-1zM17 18h1v1h-1zM19 18h1v1h-1zM20 18h1v1h-1zM22 18h1v1h-1zM24 18h1v1h-1zM25 18h1v1h-1zM26 18h1v1h-1zM27 18h1v1h-1zM29 18h1v1h-1zM32 18h1v1h-1zM36 18h1v1h-1zM38 18h1v1h-1zM12 19h1v1h-1zM14 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM19 19h1v1h-1zM23 19h1v1h-1zM24 19h1v1h-1zM29 19h1v1h-1zM31 19h1v1h-1zM33 19h1v1h-1zM3 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM8 20h1v1h-1zM11 20h1v1h-1zM13 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM21 20h1v1h-1zM25 20h1v1h-1zM28 20h1v1h-1zM29 20h1v1h-1zM30 20h1v1h-1zM31 20h1v1h-1zM32 20h1v1h-1zM33 20h1v1h-1zM35 20h1v1h-1zM36 20h1v1h-1zM38 20h1v1h-1zM2 21h1v1h-1zM4 21h1v1h-1zM5 21h1v1h-1zM7 21h1v1h-1zM10 21h1v1h-1zM11 21h1v1h-1zM14 21h1v1h-1zM15 21h1v1h-1zM16 21h1v1h-1zM17 21h1v1h-1zM18 21h1v1h-1zM21 21h1v1h-1zM25 21h1v1h-1zM27 21h1v1h-1zM30 21h1v1h-1zM31 21h1v1h-1zM32 21h1v1h-1zM34 21h1v1h-1zM35 21h1v1h-1zM38 21h1v1h-1zM3 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM8 22h1v1h-1zM9 22h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM14 22h1v1h-1zM16 22h1v1h-1zM19 22h1v1h-1zM21 22h1v1h-1zM28 22h1v1h-1zM29 22h1v1h-1zM30 22h1v1h-1zM31 22h1v1h-1zM32 22h1v1h-1zM33 22h1v1h-1zM34 22h1v1h-1zM35 22h1v1h-1zM4 23h1v1h-1zM6 23h1v1h-1zM7 23h1v1h-1zM9 23h1v1h-1zM11 23h1v1h-1zM12 23h1v1h-1zM13 23h1v1h-1zM15 23h1v1h-1zM16 23h1v1h-1zM17 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM21 23h1v1h-1zM23 23h1v1h-1zM24 23h1v1h-1zM25 23h1v1h-1zM28 23h1v1h-1zM29 23h1v1h-1zM31 23h1v1h-1zM34 23h1v1h-1zM36 23h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM5 24h1v1h-1zM8 24h1v1h-1zM10 24h1v1h-1zM11 24h1v1h-1zM12 24h1v1h-1zM16 24h1v1h-1zM17 24h1v1h-1zM18 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM25 24h1v1h-1zM28 24h1v1h-1zM29 24h1v1h-1zM33 24h1v1h-1zM35 24h1v1h-1zM38 24h1v1h-1zM4 25h1v1h-1zM5 25h1v1h-1zM6 25h1v1h-1zM9 25h1v1h-1zM10 25h1v1h-1zM13 25h1v1h-1zM14 25h1v1h-1zM15 25h1v1h-1zM17 25h1v1h-1zM18 25h1v1h-1zM20 25h1v1h-1zM22 25h1v1h-1zM25 25h1v1h-1zM26 25h1v1h-1zM28 25h1v1h-1zM30 25h1v1h-1zM32 25h1v1h-1zM33 25h1v1h-1zM34 25h1v1h-1zM35 25h1v1h-1zM36 25h1v1h-1zM2 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM8 26h1v1h-1zM9 26h1v1h-1zM12 26h1v1h-1zM13 26h1v1h-1zM14 26h1v1h-1zM15 26h1v1h-1zM16 26h1v1h-1zM19 26h1v1h-1zM22 26h1v1h-1zM26 26h1v1h-1zM31 26h1v1h-1zM32 26h1v1h-1zM33 26h1v1h-1zM37 26h1v1h-1zM38 26h1v1h-1zM2 27h1v1h-1zM3 27h1v1h-1zM4 27h1v1h-1zM5 27h1v1h-1zM6 27h1v1h-1zM11 27h1v1h-1zM13 27h1v1h-1zM15 27h1v1h-1zM19 27h1v1h-1zM20 27h1v1h-1zM23 27h1v1h-1zM25 27h1v1h-1zM28 27h1v1h-1zM29 27h1v1h-1zM30 27h1v1h-1zM34 27h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM7 28h1v1h-1zM8 28h1v1h-1zM10 28h1v1h-1zM11 28h1v1h-1zM12 28h1v1h-1zM13 28h1v1h-1zM14 28h1v1h-1zM15 28h1v1h-1zM16 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM21 28h1v1h-1zM23 28h1v1h-1zM24 28h1v1h-1zM27 28h1v1h-1zM29 28h1v1h-1zM30 28h1v1h-1zM32 28h1v1h-1zM34 28h1v1h-1zM35 28h1v1h-1zM37 28h1v1h-1zM38 28h1v1h-1zM2 29h1v1h-1zM4 29h1v1h-1zM5 29h1v1h-1zM6 29h1v1h-1zM7 29h1v1h-1zM13 29h1v1h-1zM15 29h1v1h-1zM16 29h1v1h-1zM18 29h1v1h-1zM20 29h1v1h-1zM28 29h1v1h-1zM30 29h1v1h-1zM33 29h1v1h-1zM35 29h1v1h-1zM36 29h1v1h-1zM2 30h1v1h-1zM4 30h1v1h-1zM8 30h1v1h-1zM9 30h1v1h-1zM10 30h1v1h-1zM13 30h1v1h-1zM15 30h1v1h-1zM17 30h1v1h-1zM22 30h1v1h-1zM24 30h1v1h-1zM26 30h1v1h-1zM27 30h1v1h-1zM28 30h1v1h-1zM30 30h1v1h-1zM31 30h1v1h-1zM32 30h1v1h-1zM33 30h1v1h-1zM34 30h1v1h-1zM36 30h1v1h-1zM37 30h1v1h-1zM10 31h1v1h-1zM11 31h1v1h-1zM12 31h1v1h-1zM13 31h1v1h-1zM15 31h1v1h-1zM17 31h1v1h-1zM19 31h1v1h-1zM20 31h1v1h-1zM21 31h1v1h-1zM22 31h1v1h-1zM24 31h1v1h-1zM30 31h1v1h-1zM34 31h1v1h-1zM36 31h1v1h-1zM2 32h1v1h-1zM3 32h1v1h-1zM4 32h1v1h-1zM5 32h1v1h-1zM6 32h1v1h-1zM7 32h1v1h-1zM8 32h1v1h-1zM10 32h1v1h-1zM17 32h1v1h-1zM19 32h1v1h-1zM20 32h1v1h-1zM21 32h1v1h-1zM24 32h1v1h-1zM25 32h1v1h-1zM28 32h1v1h-1zM30 32h1v1h-1zM32 32h1v1h-1zM34 32h1v1h-1zM38 32h1v1h-1zM2 33h1v1h-1zM8 33h1v1h-1zM10 33h1v1h-1zM17 33h1v1h-1zM24 33h1v1h-1zM25 33h1v1h-1zM27 33h1v1h-1zM29 33h1v1h-1zM30 33h1v1h-1zM34 33h1v1h-1zM2 34h1v1h-1zM4 34h1v1h-1zM5 34h1v1h-1zM6 34h1v1h-1zM8 34h1v1h-1zM10 34h1v1h-1zM14 34h1v1h-1zM17 34h1v1h-1zM18 34h1v1h-1zM20 34h1v1h-1zM22 34h1v1h-1zM28 34h1v1h-1zM29 34h1v1h-1zM30 34h1v1h-1zM31 34h1v1h-1zM32 34h1v1h-1zM33 34h1v1h-1zM34 34h1v1h-1zM38 34h1v1h-1zM2 35h1v1h-1zM4 35h1v1h-1zM5 35h1v1h-1zM6 35h1v1h-1zM8 35h1v1h-1zM10 35h1v1h-1zM12 35h1v1h-1zM13 35h1v1h-1zM21 35h1v1h-1zM23 35h1v1h-1zM24 35h1v1h-1zM25 35h1v1h-1zM26 35h1v1h-1zM27 35h1v1h-1zM28 35h1v1h-1zM29 35h1v1h-1zM31 35h1v1h-1zM32 35h1v1h-1zM36 35h1v1h-1zM38 35h1v1h-1zM2 36h1v1h-1zM4 36h1v1h-1zM5 36h1v1h-1zM6 36h1v1h-1zM8 36h1v1h-1zM14 36h1v1h-1zM15 36h1v1h-1zM22 36h1v1h-1zM24 36h1v1h-1zM25 36h1v1h-1zM26 36h1v1h-1zM27 36h1v1h-1zM29 36h1v1h-1zM34 36h1v1h-1zM36 36h1v1h-1zM38 36h1v1h-1zM2 37h1v1h-1zM8 37h1v1h-1zM11 37h1v1h-1zM12 37h1v1h-1zM14 37h1v1h-1zM17 37h1v1h-1zM19 37h1v1h-1zM25 37h1v1h-1zM26 37h1v1h-1zM34 37h1v1h-1zM36 37h1v1h-1zM37 37h1v1h-1zM38 37h1v1h-1zM2 38h1v1h-1zM3 38h1v1h-1zM4 38h1v1h-1zM5 38h1v1h-1zM6 38h1v1h-1zM7 38h1v1h-1zM8 38h1v1h-1zM10 38h1v1h-1zM11 38h1v1h-1zM12 38h1v1h-1zM14 38h1v1h-1zM15 38h1v1h-1zM16 38h1v1h-1zM22 38h1v1h-1zM24 38h1v1h-1zM26 38h1v1h-1zM30 38h1v1h-1zM31 38h1v1h-1zM33 38h1v1h-1zM35 38h1v1h-1zM38 38h1v1h-1z" fill="#000"/></svg><b>Film ansehen</b></div></div>
+  </div>
+  <div class="foot"><span>Heinrich-Böll-Schule Hattersheim · Tag der offenen Tür</span><span>Angaben zur Abiturprüfung: Stand Abitur 2028 · ohne Gewähr</span></div>
+</div>
+<script>
+  // Prüfung für build_poster.mjs: passt alles aufs Blatt? (Abstand zwischen Inhalt und Fußzeile, Überläufe in Zeilen)
+  document.fonts.ready.then(function () {
+    var sheet = document.querySelector('.sheet'), foot = document.querySelector('.foot'), r = sheet.getBoundingClientRect(), bad = [];
+    var fr = foot.getBoundingClientRect();
+    document.querySelectorAll('.sheet *').forEach(function (el) {
+      var b = el.getBoundingClientRect();
+      if (el.scrollWidth > el.clientWidth + 1 && getComputedStyle(el).overflow !== 'visible') bad.push(el.className || el.tagName);
+      if (b.width && (b.right > r.right + 0.5 || b.bottom > r.bottom + 0.5)) bad.push('außen:' + (el.className || el.tagName));
+    });
+    var bot = document.querySelector('.bottom'), pre = bot.previousElementSibling.getBoundingClientRect();
+    document.body.setAttribute('data-fit', JSON.stringify({ luftMm: +((bot.getBoundingClientRect().top - pre.bottom) * 25.4 / 96).toFixed(1),
+      fussUnten: +((r.bottom - fr.bottom) * 25.4 / 96).toFixed(1), fonts: document.fonts.check('12px "Source Sans 3"') && document.fonts.check('600 12px Outfit'), bad: bad }));
+  });
+</script>
+</body>
+</html>

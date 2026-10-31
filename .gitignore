@@ -9,3 +9,5 @@ media/*/img/ph_*.svg
 datenschutz.html
 # Gebaute Pakete (tools/build_moodle.mjs)
 dist/
+# Vorschaubilder der Poster (nur zur Sichtprüfung)
+poster/*.png

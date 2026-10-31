@@ -91,6 +91,16 @@
 
     // ?filme=… hebt einen Raum hervor; starten muss trotzdem ein Klick (Ton-Freigabe des Browsers)
     var pre = params.get('filme');
+    var known = [].some.call(document.querySelectorAll('.rooms button'), function (b) { return b.dataset.filme === pre; });
+    if (pre && !known) {   // Auswahl aus „Tafel einrichten“ (Entscheidung 121)
+      var ids = pre.split(',').filter(function (id) { return films[id]; });
+      if (ids.length) {
+        var nb = document.createElement('button'); nb.type = 'button'; nb.dataset.filme = ids.join(',');
+        nb.innerHTML = '<b>Diese Tafel</b><span></span><em>Starten</em>';
+        nb.querySelector('span').textContent = ids.map(function (id) { return films[id].title.replace(/^Leistungskurs\s+/, ''); }).join(', ');
+        document.querySelector('.rooms').insertBefore(nb, document.querySelector('.rooms').firstChild);
+      }
+    }
     document.querySelectorAll('.rooms button').forEach(function (b) {
       if (b.dataset.filme === pre) { b.classList.add('pre'); b.focus(); }
       b.addEventListener('click', function () { start(b.dataset.filme.split(',')); });
@@ -137,7 +147,7 @@
 
     if (MUTED) {
       // alle Filme in der Reihenfolge der Startseite, sofort
-      start(Object.keys(films));
+      start(pre ? pre.split(',') : Object.keys(films));
       document.addEventListener('click', fullscreen);
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !document.fullscreenElement) location.href = 'index.html'; });
     }
