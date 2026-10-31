@@ -102,3 +102,9 @@ html, body { overflow-x: clip; }
 .fcard li.film::before { display: none; }
 .tile .subj .subj-ico { display: inline-block; width: 0.8em; height: 0.8em; margin-right: 0.25em; vertical-align: -0.06em; color: var(--accent); }
 .tile.away .subj .subj-ico, .tile.soon .subj .subj-ico { color: #e6e6e6; }
+/* Planer-Karte, wenn der Kursplaner in einem anderen Raum läuft (Entscheidung 122) */
+.cta.away { cursor: default; background: #f1f1ed; border-color: var(--line); }
+.cta.away:hover, .cta.away:focus-visible { transform: none; box-shadow: none; border-color: var(--line); }
+.cta.away .ic { background: #e4e4df; color: #8a857c; }
+.cta.away strong, .cta.away .txt span { color: #8a857c; }
+.cta.away .open { background: #e4e4df; color: #6f6b63; }

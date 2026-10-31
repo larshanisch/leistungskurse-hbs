@@ -145,6 +145,7 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   Quelle ist `index.html` mit Schalter `MOODLE` (aus `moodle/scorm.js`); Berichtsplätze im Kopf von `moodle/scorm.js` = Vertrag mit `moodle/auswertung.html`. Test: `dist/test_lms.html` (strenge Attrappe).
 - 31.10.2026: Kunst 0.9 nach Rückmeldung der Fachschaft (Entscheidung 119). Kombinations-Tafel ab erstem Satz und 4 s Haltezeit (`"hold"`, Entscheidung 120):
   **Deutsch 5:48, Englisch 6:16, Kunst 5:48, PoWi 5:54, Geschichte 5:56, Mathematik 5:45, Biologie 5:50, Chemie 5:50 min**.
+- 31.10.2026: „Tafel einrichten“: Dauerschleife und Poster-Download (Entscheidung 121), Kursplaner ja/nein und „nur Planer“ (122, `planerHere`, `planerOnly` in `index.html`).
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

@@ -403,6 +403,9 @@
   #setup .acts .ghost { background: transparent; }
   #setup .acts .primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
   #setup .acts .primary:disabled { opacity: 0.4; cursor: default; }
+  body.nur-planer #v-planer .bar .back { display: none; }
+  #setup .cols.plan { display: block; margin-top: 0.9em; }
+  #setup .cols.plan fieldset { max-width: 34em; }
   #setup .more { margin-top: 1.4em; padding-top: 1em; border-top: 1px solid var(--line); }
   #setup .more .kicker { margin: 0 0 0.2em; }
   #setup .acts.left { justify-content: flex-start; align-items: center; margin-top: 0.6em; }
@@ -491,9 +494,10 @@
     <p class="kicker">Tafel einrichten · gilt für dieses Gerät</p>
     <h2 id="setupTitle">Welche Filme laufen in diesem Raum?</h2>
     <p class="hint">Was du nicht auswählst, erscheint ausgegraut mit dem Hinweis, dass wir es in einem anderen Raum zeigen.
-      Für diese Fächer kannst du rechts den Raum eintragen, in dem sie laufen (freiwillig). Der Kurswahl-Planer bleibt
-      vollständig. Später ändern: unten auf „Tafel einrichten“ tippen oder drei Sekunden auf das Schullogo drücken.</p>
+      Für diese Fächer kannst du rechts den Raum eintragen, in dem sie laufen (freiwillig). Ebenso für den Kursplaner;
+      wählst du nur ihn und keine Filme, öffnet die Tafel gleich den Planer. Später ändern: unten auf „Tafel einrichten“ tippen oder drei Sekunden auf das Schullogo drücken.</p>
     <div class="cols" id="setupCols"></div>
+    <div class="cols plan" id="setupPlan"></div>
     <div class="acts">
       <button type="button" class="ghost" id="setupAll">Alles zeigen, kein fester Raum</button>
       <button type="button" class="primary" id="setupSave" disabled>Speichern</button>
@@ -577,6 +581,10 @@
     if (MOODLE) SHOW_ALL = true;
     try { room = JSON.parse(localStorage.getItem(KEY)); } catch (e) { room = null; }
     function here(id) { return SHOW_ALL || !room || room.all || room.subjects.indexOf(id) >= 0; }
+    // Kursplaner im Raum (fehlt die Angabe, wie vor Entscheidung 122: ja); „nur Planer“ = keine Filme, aber der Planer
+    function planerHere() { return SHOW_ALL || !room || room.all || room.planer !== false; }
+    function planerOnly() { return !SHOW_ALL && !!room && !room.all && !room.subjects.length && room.planer !== false; }
+    function planerRoom() { var r = room && room.planerWhere; return r ? (/^\d/.test(r) ? 'Raum ' + r : r) : ''; }
     var AWAY = 'Diesen Kurs stellen wir in einem anderen Raum vor.';
     // Raum, in dem ein Fach läuft (freiwillig in der Einrichtung eingetragen); eine Nummer wie „204“ wird zu
     // „Raum 204“, ein Name wie „Kunstraum“ bleibt, wie er ist
@@ -591,6 +599,11 @@
 
     // --- Startansicht ---
     function renderHome() {
+      var cta = document.querySelector('#v-home .cta'), ph = planerHere();
+      cta.classList.toggle('away', !ph);
+      if (ph) cta.setAttribute('href', '#planer'); else cta.removeAttribute('href');
+      cta.querySelector('.open').textContent = ph ? 'Planer öffnen →' : planerRoom() ? 'Läuft in ' + planerRoom() : 'Zeigen wir in einem anderen Raum';
+      document.querySelectorAll('.to-plan').forEach(function (a) { a.style.display = ph ? '' : 'none'; });
       $('fields').innerHTML = FIELDS.map(function (f) {
         var away = !f.subjects.some(here);
         var films = f.subjects.filter(function (id) { return FILMS[id] && here(id); }).length;
@@ -1608,6 +1621,9 @@
       else if (SUBJ[h] || filmSubj(h)) { view = 'feld'; field = FIELDS[(SUBJ[h] || filmSubj(h)).field - 1]; }   // Rückweg aus einem Film
       else if (/^(planer|kurse)(\/|$)/.test(h)) view = 'planer';   // #planer/<Schritt>/<LK1>/<LK2>/…, alte Adressen werden umgeleitet
       if (MOODLE && view !== 'planer') { location.replace('#planer'); return; }
+      if (view === 'planer' && !planerHere()) { location.replace('#'); return; }        // Planer läuft in einem anderen Raum
+      if (planerOnly() && view !== 'planer') { location.replace('#planer'); return; }   // Raum nur mit Planer
+      document.body.classList.toggle('nur-planer', planerOnly());
       ['home', 'feld', 'planer', 'kurse'].forEach(function (v) { $('v-' + v).hidden = v !== view; });
       if (view === 'home') eqCards();
       document.body.classList.toggle('sub', view !== 'home');
@@ -1628,12 +1644,17 @@
             '<input class="room" type="text" maxlength="20" placeholder="z. B. 204" aria-label="Raum für ' + esc(SUBJ[id].name) + '" data-id="' + id + '" value="' + esc(r) + '"' + (on ? ' disabled' : '') + '></div>';
         }).join('') + '</fieldset>';
       }).join('');
+      var pOn = !room || room.all || room.planer !== false, pr = (room && room.planerWhere) || '';
+      $('setupPlan').innerHTML = '<fieldset><legend>Kursplaner</legend><div class="row"><label><input type="checkbox" id="setupPlaner"' + (pOn ? ' checked' : '') + '>Kurswahl durchspielen</label>' +
+        '<input class="room" id="setupPlanerRoom" type="text" maxlength="20" placeholder="z. B. 204" aria-label="Raum für den Kursplaner" value="' + esc(pr) + '"' + (pOn ? ' disabled' : '') + '></div></fieldset>';
       update();
       $('setup').hidden = false;
     }
     function chosen() { return [].map.call($('setupCols').querySelectorAll('input[type="checkbox"]:checked'), function (i) { return i.value; }); }
     function update() {
-      $('setupSave').disabled = !chosen().length;
+      var pl = $('setupPlaner');
+      $('setupSave').disabled = !chosen().length && !(pl && pl.checked);
+      if (pl) $('setupPlanerRoom').disabled = pl.checked;
       // Raumfeld nur für Fächer, die nicht hier laufen
       $('setupCols').querySelectorAll('.row').forEach(function (row) { row.querySelector('.room').disabled = row.querySelector('input[type="checkbox"]').checked; });
     }
@@ -1649,14 +1670,18 @@
       renderHome(); route();
     }
     $('setupCols').addEventListener('change', update);
+    $('setupPlan').addEventListener('change', update);
+    function planerPart() { var p = $('setupPlaner').checked, w = $('setupPlanerRoom').value.trim(); return { planer: p, planerWhere: p ? '' : w }; }
     $('setupSave').addEventListener('click', function () {
-      var c = chosen(); save({ all: c.length === Object.keys(SUBJ).length, subjects: c, where: where() });
+      var c = chosen(), p = planerPart();
+      save({ all: c.length === Object.keys(SUBJ).length && p.planer, subjects: c, where: where(), planer: p.planer, planerWhere: p.planerWhere });
     });
-    $('setupAll').addEventListener('click', function () { save({ all: true, subjects: [] }); });
+    $('setupAll').addEventListener('click', function () { save({ all: true, subjects: [], planer: true }); });
     // Dauerbetrieb mit den ausgewählten Filmen (kiosk.html?filme=…); die Auswahl wird zugleich gespeichert
     function kiosk(mute) {
       var c = chosen();
-      if (c.length) save({ all: c.length === Object.keys(SUBJ).length, subjects: c, where: where() });
+      var p = planerPart();
+      if (c.length) save({ all: c.length === Object.keys(SUBJ).length && p.planer, subjects: c, where: where(), planer: p.planer, planerWhere: p.planerWhere });
       var ids = (c.length ? c : Object.keys(SUBJ)).map(function (id) { return SUBJ[id].film || id; }).filter(function (id) { return FILMS[id]; });
       var url = 'kiosk.html?filme=' + ids.join(',') + (mute ? '&stumm=1' : '');
       try { window.top.location.href = new URL(url, location.href).href; } catch (e) { location.href = url; }   // aus dem Tafel-Rahmen heraus
