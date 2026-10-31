@@ -4,7 +4,7 @@ window.FILMS["powi"] = {
  "id": "powi",
  "title": "Leistungskurs Politik und Wirtschaft",
  "accent": "#c8d530",
- "total": 349.97,
+ "total": 353.97,
  "credits": [
   "Parlamentarischer Rat: Urschrift des Grundgesetzes für die Bundesrepublik Deutschland, Titelblatt, 1949 – gemeinfrei, Wikimedia Commons",
   "Alle übrigen Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
@@ -158,7 +158,7 @@ window.FILMS["powi"] = {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 17.41,
+   "duration": 21.41,
    "speechEnd": 16.01,
    "sentences": [
     {
@@ -209,7 +209,7 @@ window.FILMS["powi"] = {
        "chemie",
        "mathe"
       ],
-      "t": 11.619
+      "t": 0.6
      },
      {
       "ok": false,
@@ -311,7 +311,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 73.88
+   "start": 77.88
   },
   {
    "n": 5,
@@ -414,7 +414,7 @@ window.FILMS["powi"] = {
     ]
    },
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 96.73
+   "start": 100.73
   },
   {
    "n": 6,
@@ -495,7 +495,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 121.26
+   "start": 125.26
   },
   {
    "n": 7,
@@ -634,7 +634,7 @@ window.FILMS["powi"] = {
     ],
     "t": 30.59
    },
-   "start": 145.23
+   "start": 149.23
   },
   {
    "n": 8,
@@ -714,7 +714,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 196.94
+   "start": 200.94
   },
   {
    "n": 9,
@@ -810,7 +810,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 221.92
+   "start": 225.92
   },
   {
    "n": 10,
@@ -905,7 +905,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 252.99
+   "start": 256.99
   },
   {
    "n": 11,
@@ -997,7 +997,7 @@ window.FILMS["powi"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 275.89
+   "start": 279.89
   },
   {
    "n": 12,
@@ -1070,7 +1070,7 @@ window.FILMS["powi"] = {
      }
     ]
    },
-   "start": 301.47
+   "start": 305.47
   },
   {
    "n": 13,
@@ -1108,7 +1108,7 @@ window.FILMS["powi"] = {
     "src": "media/powi/img/p13.jpg",
     "motion": "zoom-out"
    },
-   "start": 318.72
+   "start": 322.72
   },
   {
    "n": 14,
@@ -1161,7 +1161,7 @@ window.FILMS["powi"] = {
     ]
    },
    "logo": true,
-   "start": 333.28
+   "start": 337.28
   }
  ]
 };

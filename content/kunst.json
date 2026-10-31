@@ -33,8 +33,9 @@
     {
       "n": 3,
       "image": { "src": "k03.jpg", "motion": "zoom-out" },
+      "hold": 4,
       "panel": { "type": "combo", "title": "Kunst passt zu …", "items": [
-        { "at": "Kunst mit Englisch", "ok": true, "with": ["englisch", "mathe", "biologie"] },
+        { "at": "Kunst kann nur eines", "ok": true, "with": ["englisch", "mathe", "biologie"] },
         { "at": "Kunst mit Deutsch", "ok": false, "with": ["deutsch", "powi", "geschichte", "chemie"] }
       ] }
     },
@@ -105,7 +106,7 @@
         "at": "Kurz zusammengefasst",
         "title": "Das Wichtigste aus Kapitel 2",
         "items": [
-          "Analyse und Gestaltung zählen gleich",
+          "Analyse und Gestaltung gehören zusammen",
           "4 Halbjahre: Bildkünste, Medien, Umwelt, Gegenwart",
           "Leistungskurs: tiefer, theoretischer, eigenständiger"
         ]
@@ -136,13 +137,7 @@
             "label": "Klausuren pro Halbjahr",
             "sub": "in Q4 nur 1 · im Grundkurs Q1–Q3 je 1"
           },
-          {
-            "at": "Lehrkraft",
-            "value": "↔",
-            "label": "Referat oder Präsentation statt einer Klausur in Q1 oder Q2",
-            "sub": "wenn die Lehrkraft es festlegt"
-          },
-          { "at": "fachpraktische", "value": "Q3/Q4", "label": "fachpraktische Prüfung statt einer Klausur" },
+          { "at": "fachpraktische", "value": "↔", "label": "fachpraktische Prüfung statt einer Klausur" },
           { "at": "Abiturbedingungen", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
         ],
         "notes": [{ "at": "eigenes Werk", "text": "eigenes Werk, auch zu Hause · Präsentation und Gespräch" }]

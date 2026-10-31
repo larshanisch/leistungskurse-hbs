@@ -169,7 +169,7 @@ for (const sc of content.scenes) {
     st += s.dur + (i < sentences.length - 1 ? GAP : 0);
   });
   const speechEnd = st;
-  let duration = st + TAIL;
+  let duration = st + TAIL + (sc.hold || 0);   // "hold": Sekunden, die das Bild nach dem letzten Satz zusätzlich steht (Entscheidung 120)
   if (sc.takeaways) duration += sc.takeaways.at ? TAKEAWAYS_SPOKEN : TAKEAWAYS;
   duration = r3(duration);
 

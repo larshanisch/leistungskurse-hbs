@@ -4,7 +4,7 @@ window.FILMS["kunst"] = {
  "id": "kunst",
  "title": "Leistungskurs Kunst",
  "accent": "#c8d530",
- "total": 350.9,
+ "total": 348.21,
  "credits": [
   "Berthe Morisot: Die Wiege (Le berceau), 1872, Musée d’Orsay, Paris – gemeinfrei, Wikimedia Commons (Google Art Project)",
   "Gustave Caillebotte: Straße in Paris, Regenwetter (Rue de Paris, temps de pluie), 1877, Art Institute of Chicago – gemeinfrei, Wikimedia Commons (Google Art Project)",
@@ -16,8 +16,8 @@ window.FILMS["kunst"] = {
    "n": 1,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 14.29,
-   "speechEnd": 12.89,
+   "duration": 15.09,
+   "speechEnd": 13.69,
    "sentences": [
     {
      "text": "Im Leistungskurs Kunst verbindest du zwei Dinge: Du untersuchst und deutest Bilder, und du gestaltest selbst.",
@@ -27,9 +27,9 @@ window.FILMS["kunst"] = {
      "start": 0.6
     },
     {
-     "text": "Beides zählt gleich viel – und genau das macht diesen Kurs besonders.",
-     "audio": "media/kunst/audio/s01_2_50002a4f.mp3",
-     "dur": 4.4,
+     "text": "Beides gehört in jedem Halbjahr dazu – und genau das macht diesen Kurs besonders.",
+     "audio": "media/kunst/audio/s01_2_eb8e4491.mp3",
+     "dur": 5.2,
      "estimated": false,
      "start": 8.49
     }
@@ -41,9 +41,9 @@ window.FILMS["kunst"] = {
      "end": 8.04
     },
     {
-     "text": "Beides zählt gleich viel – und genau das macht diesen Kurs besonders.",
+     "text": "Beides gehört in jedem Halbjahr dazu – und genau das macht diesen Kurs besonders.",
      "start": 8.49,
-     "end": 12.89
+     "end": 13.69
     }
    ],
    "image": {
@@ -143,13 +143,13 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 17.29
+   "start": 18.09
   },
   {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 15.25,
+   "duration": 19.25,
    "speechEnd": 13.85,
    "sentences": [
     {
@@ -199,7 +199,7 @@ window.FILMS["kunst"] = {
        "mathe",
        "biologie"
       ],
-      "t": 9.69
+      "t": 0.6
      },
      {
       "ok": false,
@@ -213,7 +213,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 44.35
+   "start": 45.15
   },
   {
    "n": 4,
@@ -307,7 +307,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 62.6
+   "start": 67.4
   },
   {
    "n": 5,
@@ -439,7 +439,7 @@ window.FILMS["kunst"] = {
     }
    ],
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 86.01
+   "start": 90.81
   },
   {
    "n": 6,
@@ -521,14 +521,14 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 116.64
+   "start": 121.44
   },
   {
    "n": 7,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 43.38,
-   "speechEnd": 40.38,
+   "duration": 44.5,
+   "speechEnd": 41.5,
    "sentences": [
     {
      "text": "Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst weiter: Du beschäftigst dich etwa mit Farb- und Gestaltungstheorien, entwickelst Varianten deiner Entwürfe und entwirfst Architektur als Entwurfsgrafik oder als Modell.",
@@ -545,9 +545,9 @@ window.FILMS["kunst"] = {
      "start": 16.33
     },
     {
-     "text": "Kurz zusammengefasst: Analyse und Gestaltung zählen gleich viel, die vier Halbjahre führen dich von den Bildkünsten über Medien und Umwelt bis zur Gegenwart, und im Leistungskurs arbeitest du tiefer, theoretischer und eigenständiger.",
-     "audio": "media/kunst/audio/s07_3_89d5cb08.mp3",
-     "dur": 14.8,
+     "text": "Kurz zusammengefasst: Analyse und Gestaltung gehören in jedem Halbjahr zusammen, die vier Halbjahre führen dich von den Bildkünsten über Medien und Umwelt bis zur Gegenwart, und im Leistungskurs arbeitest du tiefer, theoretischer und eigenständiger.",
+     "audio": "media/kunst/audio/s07_3_9d54bb35.mp3",
+     "dur": 15.92,
      "estimated": false,
      "start": 25.58
     }
@@ -579,19 +579,19 @@ window.FILMS["kunst"] = {
      "end": 25.073
     },
     {
-     "text": "Kurz zusammengefasst: Analyse und Gestaltung zählen gleich viel,",
+     "text": "Kurz zusammengefasst: Analyse und Gestaltung gehören in jedem Halbjahr zusammen,",
      "start": 25.58,
-     "end": 29.645
+     "end": 30.695
     },
     {
      "text": "die vier Halbjahre führen dich von den Bildkünsten über Medien und Umwelt bis zur Gegenwart,",
-     "start": 29.645,
-     "end": 35.489
+     "start": 30.695,
+     "end": 36.577
     },
     {
      "text": "und im Leistungskurs arbeitest du tiefer, theoretischer und eigenständiger.",
-     "start": 35.489,
-     "end": 40.253
+     "start": 36.577,
+     "end": 41.372
     }
    ],
    "image": {
@@ -632,13 +632,13 @@ window.FILMS["kunst"] = {
    "takeaways": {
     "title": "Das Wichtigste aus Kapitel 2",
     "items": [
-     "Analyse und Gestaltung zählen gleich",
+     "Analyse und Gestaltung gehören zusammen",
      "4 Halbjahre: Bildkünste, Medien, Umwelt, Gegenwart",
      "Leistungskurs: tiefer, theoretischer, eigenständiger"
     ],
     "t": 25.58
    },
-   "start": 143.25
+   "start": 148.05
   },
   {
    "n": 8,
@@ -714,14 +714,14 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 189.63
+   "start": 195.55
   },
   {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 41.08,
-   "speechEnd": 39.68,
+   "duration": 32.47,
+   "speechEnd": 31.07,
    "sentences": [
     {
      "text": "Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine.",
@@ -738,25 +738,18 @@ window.FILMS["kunst"] = {
      "start": 5.21
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "audio": "media/kunst/audio/s09_3_d7c4bc14.mp3",
-     "dur": 8.48,
+     "text": "An unserer Schule ersetzt im Leistungskurs eine fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk – je nach Aufgabe auch zu Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.",
+     "audio": "media/kunst/audio/s09_3_0b193aa3.mp3",
+     "dur": 13.84,
      "estimated": false,
      "start": 9.98
     },
     {
-     "text": "In Q3 oder Q4 ersetzt eine fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk – je nach Aufgabe auch zu Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.",
-     "audio": "media/kunst/audio/s09_4_4ac9effb.mp3",
-     "dur": 13.52,
-     "estimated": false,
-     "start": 18.91
-    },
-    {
      "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
-     "audio": "media/kunst/audio/s09_5_397b1793.mp3",
+     "audio": "media/kunst/audio/s09_4_397b1793.mp3",
      "dur": 6.8,
      "estimated": false,
-     "start": 32.88
+     "start": 24.27
     }
    ],
    "cues": [
@@ -771,39 +764,34 @@ window.FILMS["kunst"] = {
      "end": 9.53
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden,",
+     "text": "An unserer Schule ersetzt im Leistungskurs eine fachpraktische Prüfung eine Klausur:",
      "start": 9.98,
-     "end": 12.1
+     "end": 15.013
     },
     {
-     "text": "dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat oder eine Präsentation ersetzt.",
-     "start": 12.1,
-     "end": 18.396
-    },
-    {
-     "text": "In Q3 oder Q4 ersetzt eine fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk",
-     "start": 18.91,
-     "end": 24.962
+     "text": "Du gestaltest ein eigenes Werk",
+     "start": 15.013,
+     "end": 16.81
     },
     {
      "text": "– je nach Aufgabe auch zu Hause –,",
-     "start": 24.962,
-     "end": 27.151
+     "start": 16.81,
+     "end": 18.847
     },
     {
      "text": "stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist.",
-     "start": 27.151,
-     "end": 32.301
+     "start": 18.847,
+     "end": 23.64
     },
     {
      "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
-     "start": 32.88,
-     "end": 37.753
+     "start": 24.27,
+     "end": 29.143
     },
     {
      "text": "was dich in der Prüfung erwartet.",
-     "start": 37.753,
-     "end": 39.623
+     "start": 29.143,
+     "end": 31.013
     }
    ],
    "image": {
@@ -821,29 +809,23 @@ window.FILMS["kunst"] = {
      },
      {
       "value": "↔",
-      "label": "Referat oder Präsentation statt einer Klausur in Q1 oder Q2",
-      "sub": "wenn die Lehrkraft es festlegt",
-      "t": 10.365
-     },
-     {
-      "value": "Q3/Q4",
       "label": "fachpraktische Prüfung statt einer Klausur",
-      "t": 20.648
+      "t": 12.856
      },
      {
       "value": "Q3",
       "label": "Klausur unter Abiturbedingungen",
-      "t": 35.77
+      "t": 27.16
      }
     ],
     "notes": [
      {
       "text": "eigenes Werk, auch zu Hause · Präsentation und Gespräch",
-      "t": 24.189
+      "t": 16.151
      }
     ]
    },
-   "start": 210.45
+   "start": 216.37
   },
   {
    "n": 10,
@@ -918,7 +900,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 254.53
+   "start": 251.84
   },
   {
    "n": 11,
@@ -1011,7 +993,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 274.5
+   "start": 271.81
   },
   {
    "n": 12,
@@ -1079,7 +1061,7 @@ window.FILMS["kunst"] = {
      }
     ]
    },
-   "start": 303.44
+   "start": 300.75
   },
   {
    "n": 13,
@@ -1117,7 +1099,7 @@ window.FILMS["kunst"] = {
     "src": "media/kunst/img/k13.jpg",
     "motion": "zoom-out"
    },
-   "start": 319.89
+   "start": 317.2
   },
   {
    "n": 14,
@@ -1170,7 +1152,7 @@ window.FILMS["kunst"] = {
     ]
    },
    "logo": true,
-   "start": 335.33
+   "start": 332.64
   }
  ]
 };

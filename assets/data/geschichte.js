@@ -4,7 +4,7 @@ window.FILMS["geschichte"] = {
  "id": "geschichte",
  "title": "Leistungskurs Geschichte",
  "accent": "#c8d530",
- "total": 351.81,
+ "total": 355.81,
  "credits": [
   "Jean Nicolas Ventadour: Die Paulskirche in Frankfurt am Main, 1848, Aquarell, Historisches Museum Frankfurt – gemeinfrei, Wikimedia Commons",
   "Erich Greiser: Ausrufung der Republik durch Philipp Scheidemann am Reichstag, Berlin, 9. November 1918, Fotografie – gemeinfrei, Wikimedia Commons",
@@ -159,7 +159,7 @@ window.FILMS["geschichte"] = {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 15.73,
+   "duration": 19.73,
    "speechEnd": 14.33,
    "sentences": [
     {
@@ -209,7 +209,7 @@ window.FILMS["geschichte"] = {
        "biologie",
        "mathe"
       ],
-      "t": 10.925
+      "t": 0.6
      },
      {
       "ok": false,
@@ -322,7 +322,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 70.92
+   "start": 74.92
   },
   {
    "n": 5,
@@ -424,7 +424,7 @@ window.FILMS["geschichte"] = {
     }
    ],
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 99.13
+   "start": 103.13
   },
   {
    "n": 6,
@@ -517,7 +517,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 119.85
+   "start": 123.85
   },
   {
    "n": 7,
@@ -651,7 +651,7 @@ window.FILMS["geschichte"] = {
     ],
     "t": 31.23
    },
-   "start": 142.46
+   "start": 146.46
   },
   {
    "n": 8,
@@ -751,7 +751,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 192.17
+   "start": 196.17
   },
   {
    "n": 9,
@@ -847,7 +847,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 222.8
+   "start": 226.8
   },
   {
    "n": 10,
@@ -946,7 +946,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 253.87
+   "start": 257.87
   },
   {
    "n": 11,
@@ -1033,7 +1033,7 @@ window.FILMS["geschichte"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 277.09
+   "start": 281.09
   },
   {
    "n": 12,
@@ -1106,7 +1106,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 302.83
+   "start": 306.83
   },
   {
    "n": 13,
@@ -1144,7 +1144,7 @@ window.FILMS["geschichte"] = {
     "src": "media/geschichte/img/g13.jpg",
     "motion": "zoom-out"
    },
-   "start": 323.68
+   "start": 327.68
   },
   {
    "n": 14,
@@ -1197,7 +1197,7 @@ window.FILMS["geschichte"] = {
     ]
    },
    "logo": true,
-   "start": 335.92
+   "start": 339.92
   }
  ]
 };

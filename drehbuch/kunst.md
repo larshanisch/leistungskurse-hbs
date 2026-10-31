@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Kunst
 
-Version 0.8 · 29.10.2026 (freigegeben)
+Version 0.9 · 31.10.2026 (freigegeben)
+
+Änderung gegenüber 0.8 (Rückmeldung der Fachschaft Kunst, Nutzer 31.10.2026, Entscheidung 119): „Analyse und Gestaltung zählen gleich viel“ war falsch – das KCGO nennt beide nur „gleichwertige Kompetenzbereiche“, eine feste Notengewichtung gibt es nicht (FB-K Abschn. 5). Jetzt: „Beides gehört in jedem Halbjahr dazu“ (Szene 1, Merkkarte, Zusammenfassung). Szene 9 ohne Referat/Präsentation als Klausurersatz: An der HBS ersetzt im LK die fachpraktische Prüfung eine Klausur (Halbjahr bewusst nicht genannt).
 
 Änderung gegenüber 0.7: Szene 9 nennt die Klausur unter Abiturbedingungen in Q3, wie in den übrigen Filmen (Satz wortgleich übernommen; OAVO § 9 Abs. 11, FB-A Abschn. 3; Nutzer 29.10.2026, Entscheidung 60).
 
@@ -52,9 +54,10 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 - **Element:** Schullogo · Titel „Leistungskurs Kunst“, darunter „Gymnasiale Oberstufe“
 - **Sprechtext:**
   > Im Leistungskurs Kunst verbindest du zwei Dinge: Du untersuchst und deutest Bilder, und du
-  > gestaltest selbst. Beides zählt gleich viel – und genau das macht diesen Kurs besonders.
+  > gestaltest selbst. Beides gehört in jedem Halbjahr dazu – und genau das macht diesen Kurs besonders.
 - **Beleg:** FB-K 1 (KCGO Abschn. 2.2: Bilderschließung und Bildgestaltung „gleichwertige
-  Kompetenzbereiche“)
+  Kompetenzbereiche“; Übersicht S. 23–24: in jedem Halbjahr ein Erschließungs- und ein
+  Gestaltungs-Themenfeld). Keine Aussage zur Notengewichtung: Die gibt es nicht fest (FB-K Abschn. 5).
 
 ---
 
@@ -153,7 +156,7 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
 - **Element:** VERGLEICH „Grundkurs“ | „Leistungskurs“: Themen: dieselben Themenfelder | vertiefter ·
   Theorie und Gestalten: Ideen, Skizzen, eigene Werke | dazu Farb- und Gestaltungstheorien, Varianten,
   Entwurfsgrafik oder Modell · Fachsprache: sicher | differenziert, kunstwissenschaftlich
-- **MERKKARTE** (zum letzten Satz): „Analyse und Gestaltung zählen gleich“ · „4 Halbjahre: Bildkünste,
+- **MERKKARTE** (zum letzten Satz): „Analyse und Gestaltung gehören zusammen“ · „4 Halbjahre: Bildkünste,
   Medien, Umwelt, Gegenwart“ · „Leistungskurs: tiefer, theoretischer, eigenständiger“
 - **Sprechtext:**
   > Im Leistungskurs sind die Themenfelder dieselben wie im Grundkurs, aber du gehst weiter: Du
@@ -161,7 +164,7 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   > und entwirfst Architektur als Entwurfsgrafik oder als Modell. Mit Fachsprache über Bilder zu schreiben,
   > lernst du in beiden Kursarten; im Leistungskurs wird sie differenzierter, und du arbeitest
   > kunstwissenschaftlich.
-  > Kurz zusammengefasst: Analyse und Gestaltung zählen gleich viel, die vier Halbjahre führen dich
+  > Kurz zusammengefasst: Analyse und Gestaltung gehören in jedem Halbjahr zusammen, die vier Halbjahre führen dich
   > von den Bildkünsten über Medien und Umwelt bis zur Gegenwart, und im Leistungskurs arbeitest du
   > tiefer, theoretischer und eigenständiger.
 - **Beleg:** FB-K 1 (KCGO: gleiche Themenfelder, LK-Zusätze Q1.1 Farb- und Gestaltungstheorien,
@@ -193,18 +196,15 @@ erschienen) und werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   Skizzen; eine Lehrkraft (erwachsen, klar anders aussehend als die Leitfiguren) hört zu. Bewusst
   ohne Festlegung, wie viele Prüfende dabei sind (Ablauf an der HBS offen, Nutzer: „allgemein“).
 - **Bewegung:** Zoom aus.
-- **Element:** ZAHL „2 Klausuren pro Halbjahr“ (klein „im letzten Halbjahr 1“) · „Referat oder
-  Präsentation statt einer Klausur in Q1 oder Q2 – wenn die Lehrkraft es festlegt“ · „fachpraktische
-  Prüfung statt einer Klausur in Q3 oder Q4“ · Hinweis „eigenes Werk, auch zu Hause · Präsentation
+- **Element:** ZAHL „2 Klausuren pro Halbjahr“ (klein „im letzten Halbjahr 1“) · „fachpraktische
+  Prüfung statt einer Klausur“ · Hinweis „eigenes Werk, auch zu Hause · Präsentation
   und Gespräch“
 - **Sprechtext:**
-  > Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine. Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine. Deine Lehrkraft kann entscheiden,
-  > dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat oder eine Präsentation
-  > ersetzt. In Q3 oder Q4 ersetzt eine
+  > Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine. Im Grundkurs schreibst du in Q1 bis Q3 jeweils nur eine. An unserer Schule ersetzt im Leistungskurs eine
   > fachpraktische Prüfung eine Klausur: Du gestaltest ein eigenes Werk – je nach Aufgabe auch zu
   > Hause –, stellst es anschließend vor und erläuterst im Gespräch, wie du vorgegangen bist. In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
-- **Beleg:** FB-K 4 (OAVO § 9 Abs. 6, 6a Nr. 1 „nach Entscheidung der Lehrkraft … einheitlich“ und
-  6a Nr. 4 — am Originaltext geprüft; HKM-Schaubild Klausuren Abb. 2; ERL23 Abschn. 2.1.2
+- **Beleg:** FB-K 4 (OAVO § 9 Abs. 6 und 6a Nr. 4 — am Originaltext geprüft; an der HBS ersetzt die
+  fachpraktische Prüfung die Klausur, kein Referat/keine Präsentation: Fachschaft Kunst, Nutzer 31.10.2026; HKM-Schaubild Klausuren Abb. 2; ERL23 Abschn. 2.1.2
   häusliche Arbeit; Präsentation und Gespräch nach 2.3.2). Dauer bewusst nicht genannt (Nutzer).
 
 ---

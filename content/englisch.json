@@ -33,8 +33,9 @@
     {
       "n": 3,
       "image": { "src": "e03.jpg", "motion": "zoom-out" },
+      "hold": 4,
       "panel": { "type": "combo", "title": "Englisch passt zu …", "items": [
-        { "at": "mit Deutsch", "ok": true, "with": ["deutsch", "kunst", "powi", "geschichte", "biologie", "chemie", "mathe"] },
+        { "at": "Weil Englisch eine fortgeführte", "ok": true, "with": ["deutsch", "kunst", "powi", "geschichte", "biologie", "chemie", "mathe"] },
         { "at": "vielen anderen", "note": "Mit jedem anderen Leistungskurs an der HBS." }
       ] }
     },

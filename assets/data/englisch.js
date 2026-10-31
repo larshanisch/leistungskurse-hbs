@@ -4,7 +4,7 @@ window.FILMS["englisch"] = {
  "id": "englisch",
  "title": "Leistungskurs Englisch",
  "accent": "#c8d530",
- "total": 372.34,
+ "total": 376.34,
  "credits": [
   "Henry Fuseli (Johann Heinrich Füssli): Studie zu den drei Hexen aus „Macbeth“, um 1783, Auckland Art Gallery Toi o Tāmaki – gemeinfrei, Wikimedia Commons",
   "Walter Crane: Imperial Federation – Map of the World Showing the Extent of the British Empire in 1886 – gemeinfrei, Wikimedia Commons (Norman B. Leventhal Map Center, Boston Public Library)",
@@ -159,7 +159,7 @@ window.FILMS["englisch"] = {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 16.05,
+   "duration": 20.05,
    "speechEnd": 14.65,
    "sentences": [
     {
@@ -218,7 +218,7 @@ window.FILMS["englisch"] = {
        "chemie",
        "mathe"
       ],
-      "t": 8.443
+      "t": 0.6
      },
      {
       "note": "Mit jedem anderen Leistungskurs an der HBS.",
@@ -317,7 +317,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 68.28
+   "start": 72.28
   },
   {
    "n": 5,
@@ -471,7 +471,7 @@ window.FILMS["englisch"] = {
     }
    ],
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 89.37
+   "start": 93.37
   },
   {
    "n": 6,
@@ -526,7 +526,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 135.01
+   "start": 139.01
   },
   {
    "n": 7,
@@ -652,7 +652,7 @@ window.FILMS["englisch"] = {
     ],
     "t": 30.51
    },
-   "start": 145.41
+   "start": 149.41
   },
   {
    "n": 8,
@@ -740,7 +740,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 192.8
+   "start": 196.8
   },
   {
    "n": 9,
@@ -884,7 +884,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 216.74
+   "start": 220.74
   },
   {
    "n": 10,
@@ -960,7 +960,7 @@ window.FILMS["englisch"] = {
     ],
     "t": 3.608
    },
-   "start": 265.62
+   "start": 269.62
   },
   {
    "n": 11,
@@ -1039,7 +1039,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 283.75
+   "start": 287.75
   },
   {
    "n": 12,
@@ -1118,7 +1118,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 308.64
+   "start": 312.64
   },
   {
    "n": 13,
@@ -1164,7 +1164,7 @@ window.FILMS["englisch"] = {
     }
    ],
    "corner": "bei uns in der Regel",
-   "start": 325.89
+   "start": 329.89
   },
   {
    "n": 14,
@@ -1207,7 +1207,7 @@ window.FILMS["englisch"] = {
     "src": "media/englisch/img/e14.jpg",
     "motion": "zoom-out"
    },
-   "start": 339.25
+   "start": 343.25
   },
   {
    "n": 15,
@@ -1260,7 +1260,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "logo": true,
-   "start": 356.69
+   "start": 360.69
   }
  ]
 };

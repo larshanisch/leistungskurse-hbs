@@ -4,7 +4,7 @@ window.FILMS["mathematik"] = {
  "id": "mathematik",
  "title": "Leistungskurs Mathematik",
  "accent": "#c8d530",
- "total": 340.56,
+ "total": 344.56,
  "credits": [
   "Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
@@ -157,7 +157,7 @@ window.FILMS["mathematik"] = {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 25.78,
+   "duration": 29.78,
    "speechEnd": 24.38,
    "sentences": [
     {
@@ -228,7 +228,7 @@ window.FILMS["mathematik"] = {
        "biologie",
        "chemie"
       ],
-      "t": 14.395
+      "t": 0.6
      },
      {
       "note": "Mit jedem anderen Leistungskurs an der HBS.",
@@ -331,7 +331,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 80.81
+   "start": 84.81
   },
   {
    "n": 5,
@@ -392,7 +392,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 107.18
+   "start": 111.18
   },
   {
    "n": 6,
@@ -464,7 +464,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 125.1
+   "start": 129.1
   },
   {
    "n": 7,
@@ -591,7 +591,7 @@ window.FILMS["mathematik"] = {
     ],
     "t": 26.86
    },
-   "start": 143.07
+   "start": 147.07
   },
   {
    "n": 8,
@@ -658,7 +658,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 190.73
+   "start": 194.73
   },
   {
    "n": 9,
@@ -759,7 +759,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 209.02
+   "start": 213.02
   },
   {
    "n": 10,
@@ -845,7 +845,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 244.49
+   "start": 248.49
   },
   {
    "n": 11,
@@ -954,7 +954,7 @@ window.FILMS["mathematik"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 266.43
+   "start": 270.43
   },
   {
    "n": 12,
@@ -1027,7 +1027,7 @@ window.FILMS["mathematik"] = {
      }
     ]
    },
-   "start": 296.46
+   "start": 300.46
   },
   {
    "n": 13,
@@ -1060,7 +1060,7 @@ window.FILMS["mathematik"] = {
     "src": "media/mathematik/img/m13.jpg",
     "motion": "zoom-out"
    },
-   "start": 313.79
+   "start": 317.79
   },
   {
    "n": 14,
@@ -1113,7 +1113,7 @@ window.FILMS["mathematik"] = {
     ]
    },
    "logo": true,
-   "start": 324.19
+   "start": 328.19
   }
  ]
 };

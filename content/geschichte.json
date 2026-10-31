@@ -33,8 +33,9 @@
     {
       "n": 3,
       "image": { "src": "g03.jpg", "motion": "zoom-out" },
+      "hold": 4,
       "panel": { "type": "combo", "title": "Geschichte passt zu …", "items": [
-        { "at": "kombinierst", "ok": true, "with": ["englisch", "biologie", "mathe"] },
+        { "at": "Geschichte kann nur eines", "ok": true, "with": ["englisch", "biologie", "mathe"] },
         { "at": "Mathematik.", "ok": false, "with": ["deutsch", "kunst", "powi", "chemie"] }
       ] }
     },

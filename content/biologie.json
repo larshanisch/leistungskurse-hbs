@@ -29,8 +29,9 @@
     {
       "n": 3,
       "image": { "src": "b03.jpg", "motion": "zoom-out" },
+      "hold": 4,
       "panel": { "type": "combo", "title": "Biologie passt zu …", "items": [
-        { "at": "Deutsch, Englisch und Kunst", "ok": true, "with": ["deutsch", "englisch", "kunst", "powi", "geschichte", "chemie", "mathe"] },
+        { "at": "Biologie ist eine Naturwissenschaft", "ok": true, "with": ["deutsch", "englisch", "kunst", "powi", "geschichte", "chemie", "mathe"] },
         { "at": "Chemie und Mathematik", "note": "Mit jedem anderen Leistungskurs an der HBS." }
       ] }
     },

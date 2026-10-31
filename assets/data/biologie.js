@@ -4,7 +4,7 @@ window.FILMS["biologie"] = {
  "id": "biologie",
  "title": "Leistungskurs Biologie",
  "accent": "#c8d530",
- "total": 346.46,
+ "total": 350.46,
  "credits": [
   "Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
@@ -157,7 +157,7 @@ window.FILMS["biologie"] = {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 23.89,
+   "duration": 27.89,
    "speechEnd": 22.49,
    "sentences": [
     {
@@ -216,7 +216,7 @@ window.FILMS["biologie"] = {
        "chemie",
        "mathe"
       ],
-      "t": 16.802
+      "t": 0.6
      },
      {
       "note": "Mit jedem anderen Leistungskurs an der HBS.",
@@ -329,7 +329,7 @@ window.FILMS["biologie"] = {
      }
     ]
    },
-   "start": 80.36
+   "start": 84.36
   },
   {
    "n": 5,
@@ -385,7 +385,7 @@ window.FILMS["biologie"] = {
      }
     ]
    },
-   "start": 111.93
+   "start": 115.93
   },
   {
    "n": 6,
@@ -457,7 +457,7 @@ window.FILMS["biologie"] = {
      }
     ]
    },
-   "start": 129.77
+   "start": 133.77
   },
   {
    "n": 7,
@@ -579,7 +579,7 @@ window.FILMS["biologie"] = {
     ],
     "t": 26.38
    },
-   "start": 150.94
+   "start": 154.94
   },
   {
    "n": 8,
@@ -646,7 +646,7 @@ window.FILMS["biologie"] = {
      }
     ]
    },
-   "start": 199.08
+   "start": 203.08
   },
   {
    "n": 9,
@@ -742,7 +742,7 @@ window.FILMS["biologie"] = {
      }
     ]
    },
-   "start": 218.17
+   "start": 222.17
   },
   {
    "n": 10,
@@ -833,7 +833,7 @@ window.FILMS["biologie"] = {
      }
     ]
    },
-   "start": 249.24
+   "start": 253.24
   },
   {
    "n": 11,
@@ -921,7 +921,7 @@ window.FILMS["biologie"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 273.58
+   "start": 277.58
   },
   {
    "n": 12,
@@ -999,7 +999,7 @@ window.FILMS["biologie"] = {
      }
     ]
    },
-   "start": 297.48
+   "start": 301.48
   },
   {
    "n": 13,
@@ -1032,7 +1032,7 @@ window.FILMS["biologie"] = {
     "src": "media/biologie/img/b13.jpg",
     "motion": "zoom-out"
    },
-   "start": 318.73
+   "start": 322.73
   },
   {
    "n": 14,
@@ -1085,7 +1085,7 @@ window.FILMS["biologie"] = {
     ]
    },
    "logo": true,
-   "start": 330.33
+   "start": 334.33
   }
  ]
 };

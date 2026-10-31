@@ -4,7 +4,7 @@ window.FILMS["deutsch"] = {
  "id": "deutsch",
  "title": "Leistungskurs Deutsch",
  "accent": "#c8d530",
- "total": 343.5,
+ "total": 347.5,
  "credits": [
   "Caspar David Friedrich: Der Wanderer über dem Nebelmeer, um 1817, Hamburger Kunsthalle – gemeinfrei, Wikimedia Commons",
   "Peter Friedel: Heinrich von Kleist, Miniatur, 1801 – gemeinfrei, Wikimedia Commons",
@@ -156,7 +156,7 @@ window.FILMS["deutsch"] = {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 14.05,
+   "duration": 18.05,
    "speechEnd": 12.65,
    "sentences": [
     {
@@ -206,7 +206,7 @@ window.FILMS["deutsch"] = {
        "mathe",
        "biologie"
       ],
-      "t": 7.69
+      "t": 0.6
      },
      {
       "ok": false,
@@ -314,7 +314,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 62.6
+   "start": 66.6
   },
   {
    "n": 5,
@@ -488,7 +488,7 @@ window.FILMS["deutsch"] = {
     }
    ],
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 82.41
+   "start": 86.41
   },
   {
    "n": 6,
@@ -555,7 +555,7 @@ window.FILMS["deutsch"] = {
      "end": 7.48
     }
    ],
-   "start": 127.51
+   "start": 131.51
   },
   {
    "n": 7,
@@ -640,7 +640,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 135.59
+   "start": 139.59
   },
   {
    "n": 8,
@@ -750,7 +750,7 @@ window.FILMS["deutsch"] = {
     ],
     "t": 21.79
    },
-   "start": 153.69
+   "start": 157.69
   },
   {
    "n": 9,
@@ -814,7 +814,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 192.04
+   "start": 196.04
   },
   {
    "n": 10,
@@ -950,7 +950,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 206.44
+   "start": 210.44
   },
   {
    "n": 11,
@@ -1026,7 +1026,7 @@ window.FILMS["deutsch"] = {
     ],
     "t": 1.7
    },
-   "start": 253.37
+   "start": 257.37
   },
   {
    "n": 12,
@@ -1109,7 +1109,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 274.14
+   "start": 278.14
   },
   {
    "n": 13,
@@ -1177,7 +1177,7 @@ window.FILMS["deutsch"] = {
      }
     ]
    },
-   "start": 296.68
+   "start": 300.68
   },
   {
    "n": 14,
@@ -1215,7 +1215,7 @@ window.FILMS["deutsch"] = {
     "src": "media/deutsch/img/s14.jpg",
     "motion": "zoom-out"
    },
-   "start": 313.05
+   "start": 317.05
   },
   {
    "n": 15,
@@ -1268,7 +1268,7 @@ window.FILMS["deutsch"] = {
     ]
    },
    "logo": true,
-   "start": 327.69
+   "start": 331.69
   }
  ]
 };

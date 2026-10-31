@@ -4,7 +4,7 @@ window.FILMS["chemie"] = {
  "id": "chemie",
  "title": "Leistungskurs Chemie",
  "accent": "#c8d530",
- "total": 346.16,
+ "total": 350.16,
  "credits": [
   "Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
@@ -156,7 +156,7 @@ window.FILMS["chemie"] = {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 21.81,
+   "duration": 25.81,
    "speechEnd": 20.41,
    "sentences": [
     {
@@ -212,7 +212,7 @@ window.FILMS["chemie"] = {
        "mathe",
        "powi"
       ],
-      "t": 16.885
+      "t": 0.6
      },
      {
       "ok": false,
@@ -337,7 +337,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 77.48
+   "start": 81.48
   },
   {
    "n": 5,
@@ -393,7 +393,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 111.42
+   "start": 115.42
   },
   {
    "n": 6,
@@ -470,7 +470,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 127.02
+   "start": 131.02
   },
   {
    "n": 7,
@@ -592,7 +592,7 @@ window.FILMS["chemie"] = {
     ],
     "t": 28.22
    },
-   "start": 151.63
+   "start": 155.63
   },
   {
    "n": 8,
@@ -655,7 +655,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 202.01
+   "start": 206.01
   },
   {
    "n": 9,
@@ -751,7 +751,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 219.58
+   "start": 223.58
   },
   {
    "n": 10,
@@ -842,7 +842,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 250.65
+   "start": 254.65
   },
   {
    "n": 11,
@@ -946,7 +946,7 @@ window.FILMS["chemie"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 274.99
+   "start": 278.99
   },
   {
    "n": 12,
@@ -1019,7 +1019,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 303.1
+   "start": 307.1
   },
   {
    "n": 13,
@@ -1052,7 +1052,7 @@ window.FILMS["chemie"] = {
     "src": "media/chemie/img/c13.jpg",
     "motion": "zoom-out"
    },
-   "start": 319.39
+   "start": 323.39
   },
   {
    "n": 14,
@@ -1105,7 +1105,7 @@ window.FILMS["chemie"] = {
     ]
    },
    "logo": true,
-   "start": 330.27
+   "start": 334.27
   }
  ]
 };

@@ -143,6 +143,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   **Erste TdoT-Fassung ohne Schritt 4 „Noten“** (`NOTEN_AN = false` in `index.html`, Entscheidung 112) – später wieder einschalten.
 - 30.10.2026: **Moodle-Lernpaket „Kursplaner“** (Entscheidung 116): `node tools/build_moodle.mjs` → `dist/Kursplaner_HBS_Moodle_v<VERSION>.zip` (VERSION/STAND oben im Skript hochzählen).
   Quelle ist `index.html` mit Schalter `MOODLE` (aus `moodle/scorm.js`); Berichtsplätze im Kopf von `moodle/scorm.js` = Vertrag mit `moodle/auswertung.html`. Test: `dist/test_lms.html` (strenge Attrappe).
+- 31.10.2026: Kunst 0.9 nach Rückmeldung der Fachschaft (Entscheidung 119). Kombinations-Tafel ab erstem Satz und 4 s Haltezeit (`"hold"`, Entscheidung 120):
+  **Deutsch 5:48, Englisch 6:16, Kunst 5:48, PoWi 5:54, Geschichte 5:56, Mathematik 5:45, Biologie 5:50, Chemie 5:50 min**.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.
@@ -162,6 +164,7 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - `panel` rechts: `stats` (value/label/sub/prefix; reine Zahlen zählen hoch), `combo`
   (items: ok + with [Fach-Ids] oder note; nur über `tools/combos.mjs` ändern), `list` (check: true für Häkchen), `compare` (head + items label/a/b),
   `ring` (parts mit value, notes). Jedes Element mit `"at"`.
+- Szenenfeld `"hold"`: Sekunden, die das Bild nach dem letzten Satz zusätzlich steht (Kombinations-Tafel: 4).
 - `band` unten: `timeline` (label Q1…, text). `captions`: Bildunterschriften.
 - `imageCues` mit `"fit": "card"`: Original als Porträtkarte; die Bildunterschrift „Name · Werk“ steht dann groß daneben.
 - `takeaways`: Merkkarte. Mit `"at"` erscheint sie zum Zusammenfassungssatz („Kurz

@@ -29,8 +29,9 @@
     {
       "n": 3,
       "image": { "src": "c03.jpg", "motion": "zoom-out" },
+      "hold": 4,
       "panel": { "type": "combo", "title": "Chemie passt zu …", "items": [
-        { "at": "Englisch", "ok": true, "with": ["englisch", "biologie", "mathe", "powi"] },
+        { "at": "Chemie ist eine Naturwissenschaft", "ok": true, "with": ["englisch", "biologie", "mathe", "powi"] },
         { "at": "Politik und Wirtschaft", "ok": false, "with": ["deutsch", "kunst", "geschichte"] }
       ] }
     },
