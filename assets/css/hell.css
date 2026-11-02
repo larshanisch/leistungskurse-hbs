@@ -108,11 +108,11 @@ html, body { overflow-x: clip; }
 .cta.away .ic { background: #e4e4df; color: #8a857c; }
 .cta.away strong, .cta.away .txt span { color: #8a857c; }
 .cta.away .open { background: #e4e4df; color: #6f6b63; }
-/* Farbe je Aufgabenfeld (Entscheidung 124): überschreibt die Farbwerte nur innerhalb von Karte, Feldansicht und Einrichtung.
+/* Farbe je Aufgabenfeld (Entscheidungen 124, 126): überschreibt die Farbwerte nur innerhalb von Karte, Feldansicht und Einrichtung.
    Grau bleibt, was in einem anderen Raum läuft. Der Planer behält seine Farben für 1. und 2. LK. */
-[data-feld="1"] { --accent: #c2521d; --on-accent: #ffffff; --accent-dark: #97390f; --pale: #fbeee6; --feld-line: #f0d3c1; --feld-hell: #f6a77b; }
-[data-feld="2"] { --accent: #1f6fb2; --on-accent: #ffffff; --accent-dark: #174f80; --pale: #e8f1f9; --feld-line: #c7dcef; --feld-hell: #8ec5f0; }
-[data-feld="3"] { --accent: #c8d530; --on-accent: #1a1a1a; --accent-dark: #6b7414; --pale: #f8fae6; --feld-line: #e2e7b8; --feld-hell: #c8d530; }
+[data-feld="1"] { --accent: #c62f2f; --on-accent: #ffffff; --accent-dark: #9c2222; --pale: #fbeaea; --feld-line: #f0c9c9; --feld-hell: #f59a9a; }
+[data-feld="2"] { --accent: #e0a100; --on-accent: #1a1a1a; --accent-dark: #7f5a00; --pale: #fdf5df; --feld-line: #f0dfa8; --feld-hell: #f2c23e; }
+[data-feld="3"] { --accent: #1f6fb2; --on-accent: #ffffff; --accent-dark: #174f80; --pale: #e8f1f9; --feld-line: #c7dcef; --feld-hell: #8ec5f0; }
 .fcard[data-feld]:hover, .fcard[data-feld]:focus-visible { border-color: var(--accent); }
 .fcard.away[data-feld]:hover, .fcard.away[data-feld]:focus-visible { border-color: var(--line); }
 .fcard.away[data-feld] .go { color: #8a857c; }
