@@ -799,6 +799,15 @@
       return GKOF[id].name + ' geht hier nicht als Prüfungsfach: ' + (need.length ? (need.length > 1 ? 'Es fehlen noch ' : 'Es fehlt noch ') + und(need) +
         ', und dafür bleib' + (left > 1 ? 'en nur ' + left + ' Plätze' : 't nur 1 Platz') + '.' : 'Damit ginge keine gültige Wahl mehr auf.');
     }
+    // Warnung, sobald Französisch oder Spanisch anstelle von Englisch die fortgeführte Fremdsprache werden soll (Entscheidung 132).
+    // Mit Englisch 4 sind die beiden nur weitere Fremdsprache, dafür gilt die Einschränkung nicht.
+    function fsWarn() {
+      var w = ['franz', 'span'].filter(function (id) { return (bel('englisch') < 4 && bel(id) > 0) || (ein('englisch') < 4 && ein(id) > 0); });
+      if (!w.length) return '';
+      var n = w.map(function (id) { return GKOF[id].name; });
+      return n.length > 1 ? n.join(' und ') + ' zählen hier nur, wenn sie bei dir eine fortgeführte Fremdsprache sind.'
+        : n[0] + ' zählt hier nur, wenn es bei dir eine fortgeführte Fremdsprache ist.';
+    }
     function kChecks() {
       var NW = ids('nw');
       var KM = ids('km'), RE = ids('re'), AF2 = GK.filter(function (g) { return g.f === 2; }).map(function (g) { return g.id; });
@@ -882,6 +891,7 @@
       };
       var allOk = c.P.concat(c.B, c.E).every(function (x) { return x[0]; });
       $('kCheck').innerHTML = '<p class="verdict' + (allOk ? ' ok' : '') + '">' + (allOk ? 'Alles erfüllt.' : 'Noch nicht alles erfüllt.') + '</p>' +
+        (fsWarn() ? '<p class="kwarn" role="alert"><b>Achtung:</b> ' + fsWarn() + ' Im Zweifel berät dich deine Tutorin oder dein Tutor.</p>' : '') +
         h3('Prüfungsfächer 3 bis 5', c.P) + list(c.P) + h3('Belegen', c.B) + list(c.B) + h3('Einbringen', c.E) + list(c.E) +
         '<p class="fine">Belegt = besuchte Kurse in Q1 bis Q4, eingebracht = Kurse, die in die Abiturnote zählen; LK-Kurse zählen doppelt. Die LUSD berechnet automatisch die besten Kurse, die du einbringen kannst. Die fortgeführte Fremdsprache ist meist Englisch, in seltenen Fällen Französisch oder Spanisch. „Pflicht“ und Geschichte 2 sind ohne Wahl vorgegeben. Ohne Noten: ' +
         'keiner darf 0 Punkte haben, höchstens 6 unter 5 Punkten. Sonderfall zweite Fremdsprache nach § 14 Abs. 3 nicht berücksichtigt – das klärt die ' +
@@ -1587,6 +1597,7 @@
         '<h2>Prüfungsfächer</h2><ol>' + pf.map(function (x) { return '<li><b>' + (x[1] ? esc(nm(x[1])) : '– noch offen –') + '</b> · ' + x[2] + '</li>'; }).join('') + '</ol>' +
         '<h2>Kurse in Q1 bis Q4</h2><table><tr><th>Fach</th><th>belegt</th><th>eingebracht</th></tr>' + rows + '</table>' +
         (open.length ? '<p class="warn"><b>Noch offen:</b> ' + open.map(function (x) { return x[1]; }).join('; ') + '</p>' : '<p>Belegen und Einbringen: alles erfüllt.</p>') +
+        (fsWarn() ? '<p class="warn"><b>Achtung:</b> ' + fsWarn() + '</p>' : '') +
         noten +
         '<p class="fine"><b>Ohne Gewähr:</b> Dieser Planer ist eine Orientierungshilfe und kann Fehler enthalten. Es gelten immer die aktuellen amtlichen Vorgaben; im Zweifel berät dich deine Tutorin oder dein Tutor.</p>' +
         '<p class="fine">Weiterplanen: ' + esc(location.href) + '</p>';
