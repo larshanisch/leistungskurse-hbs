@@ -192,6 +192,7 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
     schulischen Teil erworben hat und die Schule verlässt, bekommt ihn im Abgangszeugnis bescheinigt (Abs. 9); das Zeugnis der Fachhochschulreife stellt
     dann die Schule aus (Abs. 10). – OAVO § 48 Abs. 6, 8–10, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
 - **Berufsorientierung an der HBS:** Die Schule hat ein „Berufsorientierungszentrum“ (Koordination in Raum 227) mit Angeboten für alle Jahrgangsstufen; die Studien- und Berufsberatung der Agentur für Arbeit (Bad Homburg) berät an der Schule. – Schulwebsite https://www.heinrich-boell-schule.de/angebote/beratungsangebote/berufliche-orientierung.html, abgerufen 29.10.2026 (vom Nutzer genannt)
+- **Fortgeführte Fremdsprache:** meist Englisch; in seltenen Fällen wählen Schülerinnen und Schüler hier Spanisch oder Französisch. – SCHULE (Nutzer 02.11.2026)
 - **Einbringen, Berechnung:** Die LUSD berechnet automatisch die besten Kurse, die man einbringen kann. – SCHULE (Nutzer 02.11.2026)
 - **Einbringen bei weniger als vier Pflichtkursen** (z. B. Kunst oder Musik 2): Welche Halbjahre, ist frei wählbar. – SCHULE (Nutzer 29.10.2026)
 - **Nebenbei (Zulassung zur Q-Phase, relevant für die E-Phase):** In jedem Pflichtfach braucht man am Ende der E-Phase mindestens 5 Punkte, sonst ist ein Ausgleich nötig. 0 Punkte in einem Fach schließt die Zulassung aus. – OAVO § 12 Abs. 2–3, ebd., abgerufen 27.10.2026

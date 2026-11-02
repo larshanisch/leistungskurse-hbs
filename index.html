@@ -750,8 +750,9 @@
     ];
     var GKOF = {}; GK.forEach(function (g) { GKOF[g.id] = g; });
     var K = { a: null, b: null, exam: [], bel: {}, ein: {} };
-    var MIN_BEL = { deutsch: 4, englisch: 4, geschichte: 4, mathe: 4, sport: 4 };
-    var MIN_EIN = { deutsch: 4, englisch: 4, mathe: 4, geschichte: 2 };
+    var MIN_BEL = { deutsch: 4, geschichte: 4, mathe: 4, sport: 4 };
+    var MIN_EIN = { deutsch: 4, mathe: 4, geschichte: 2 };
+    var FS = ['englisch', 'franz', 'span'];   // fortgeführte Fremdsprache: meist Englisch, selten Französisch oder Spanisch (Entscheidung 131)
     var minBel = function (id) { return MIN_BEL[id] || 0; };
     var minEin = function (id) { return MIN_EIN[id] || 0; };
     function kStart(a, b) {
@@ -759,7 +760,9 @@
       K = { a: a, b: b, exam: [], bel: {}, ein: {} };
       // Vorbelegung: was jede und jeder nach Anlage 7 belegen muss und eindeutig ist
       K.bel.powi = 4;   // PoWi 4 ist der Regelfall, Geographie ab Q3 nur mit Belegung ab E1 – darum vorbelegt, aber änderbar
+      K.bel.englisch = 4;   // Englisch ist der Regelfall der fortgeführten Fremdsprache – vorbelegt, aber änderbar
       GK.forEach(function (g) { if (K.bel[g.id] == null) K.bel[g.id] = minBel(g.id); K.ein[g.id] = minEin(g.id); });
+      K.ein.englisch = 4;
     }
     var isLK = function (id) { return id === K.a || id === K.b; };
     var isEx = function (id) { return K.exam.indexOf(id) >= 0; };
@@ -797,11 +800,12 @@
         ', und dafür bleib' + (left > 1 ? 'en nur ' + left + ' Plätze' : 't nur 1 Platz') + '.' : 'Damit ginge keine gültige Wahl mehr auf.');
     }
     function kChecks() {
-      var NW = ids('nw'), FS2 = GK.filter(function (g) { return g.fs === 2; }).map(function (g) { return g.id; });
+      var NW = ids('nw');
       var KM = ids('km'), RE = ids('re'), AF2 = GK.filter(function (g) { return g.f === 2; }).map(function (g) { return g.id; });
+      var desc = function (x, y) { return y - x; };
       var second = function (f) { // zweite Pflicht: weitere Fremdsprache oder weitere Naturwissenschaft oder Informatik
-        var nw = NW.map(f).sort(function (x, y) { return y - x; });
-        return maxOf(FS2, f) >= 2 || nw[1] >= 2 || f('info') >= 2;
+        var nw = NW.map(f).sort(desc), fs = FS.map(f).sort(desc);   // fs[0] ist die fortgeführte, fs[1] die weitere Sprache
+        return fs[1] >= 2 || nw[1] >= 2 || f('info') >= 2;
       };
       // Prüfungsfächer 3 bis 5 (OAVO § 24)
       var ex = K.exam, all = [K.a, K.b].concat(ex), P = [];
@@ -819,7 +823,7 @@
       }
       // Belegen (Anlage 7)
       var B = [
-        [bel('deutsch') >= 4, 'Deutsch 4'], [bel('englisch') >= 4, 'Englisch (fortgeführte Fremdsprache) 4'],
+        [bel('deutsch') >= 4, 'Deutsch 4'], [maxOf(FS, bel) >= 4, 'fortgeführte Fremdsprache 4'],
         [maxOf(KM, bel) >= 2, 'Kunst oder Musik 2'],
         [bel('powi') >= 4 || (bel('powi') >= 2 && bel('geo') >= 2), 'Politik und Wirtschaft 4' + (bel('powi') < 4 && bel('geo') >= 2 ? ' (ab Q3 Geographie – nur wenn ab E1 belegt)' : '')],
         [bel('geschichte') >= 4, 'Geschichte 4'], [maxOf(RE, bel) >= 4, 'Religion oder Ethik 4'],
@@ -831,7 +835,7 @@
       var af2 = AF2.reduce(function (n, id) { return n + ein(id); }, 0);
       var E = [
         [gkSum === 24, 'Grundkurse: ' + gkSum + ' von 24' + (gkSum > 24 ? ' – ' + (gkSum - 24) + ' zu viel' : '')],
-        [ein('deutsch') >= 4, 'Deutsch 4'], [ein('englisch') >= 4, 'Englisch 4'], [ein('mathe') >= 4, 'Mathematik 4'],
+        [ein('deutsch') >= 4, 'Deutsch 4'], [maxOf(FS, ein) >= 4, 'fortgeführte Fremdsprache 4'], [ein('mathe') >= 4, 'Mathematik 4'],
         [maxOf(NW, ein) >= 4, 'eine Naturwissenschaft 4'], [maxOf(KM, ein) >= 2, 'Kunst oder Musik mind. 2'],
         [af2 >= 6 && ein('geschichte') >= 2 && Math.max(ein('powi'), ein('geo')) >= 2,
           'Aufgabenfeld II: ' + af2 + ' von mind. 6, darunter 2 Geschichte, 2 PoWi oder Geographie'],
@@ -879,7 +883,7 @@
       var allOk = c.P.concat(c.B, c.E).every(function (x) { return x[0]; });
       $('kCheck').innerHTML = '<p class="verdict' + (allOk ? ' ok' : '') + '">' + (allOk ? 'Alles erfüllt.' : 'Noch nicht alles erfüllt.') + '</p>' +
         h3('Prüfungsfächer 3 bis 5', c.P) + list(c.P) + h3('Belegen', c.B) + list(c.B) + h3('Einbringen', c.E) + list(c.E) +
-        '<p class="fine">Belegt = besuchte Kurse in Q1 bis Q4, eingebracht = Kurse, die in die Abiturnote zählen; LK-Kurse zählen doppelt. Die LUSD berechnet automatisch die besten Kurse, die du einbringen kannst. „Pflicht“ und Geschichte 2 sind ohne Wahl vorgegeben. Ohne Noten: ' +
+        '<p class="fine">Belegt = besuchte Kurse in Q1 bis Q4, eingebracht = Kurse, die in die Abiturnote zählen; LK-Kurse zählen doppelt. Die LUSD berechnet automatisch die besten Kurse, die du einbringen kannst. Die fortgeführte Fremdsprache ist meist Englisch, in seltenen Fällen Französisch oder Spanisch. „Pflicht“ und Geschichte 2 sind ohne Wahl vorgegeben. Ohne Noten: ' +
         'keiner darf 0 Punkte haben, höchstens 6 unter 5 Punkten. Sonderfall zweite Fremdsprache nach § 14 Abs. 3 nicht berücksichtigt – das klärt die ' +
         'Oberstufenleitung. Grundlage: OAVO § 13 Abs. 9 mit Anlage 7, § 24, § 26.</p>';   // „Ohne Gewähr“ steht oben im Planer
     }
@@ -1174,7 +1178,10 @@
       var setEin = function (id, n) { if (free(id)) { setBel(id, n); K.ein[id] = Math.max(K.ein[id], n); } };
       var any = function (ids, f, n) { return ids.some(function (id) { return f(id) >= n; }); };
       var NW = ['biologie', 'chemie', 'physik'];
-      // Belegen (Anlage 7)
+      // Belegen (Anlage 7): fortgeführte Fremdsprache nur ergänzen, wenn keine erfüllt ist; dann die am weitesten belegte
+      var fsBest = function (f) { return FS.slice().sort(function (x, y) { return f(y) - f(x); })[0]; };
+      if (!any(FS, bel, 4)) setBel(fsBest(bel), 4);
+      if (!any(FS, ein, 4)) setEin(fsBest(bel), 4);
       if (!any(['kunst', 'musik'], bel, 2)) setBel('kunst', 2);
       if (!any(['religion', 'ethik'], bel, 4)) setBel('religion', 4);
       var nw1 = NW.filter(function (id) { return bel(id) >= 4; })[0] || NW.filter(free)[0]; setBel(nw1, 4);
@@ -1182,13 +1189,13 @@
       if (!any(NW, ein, 4)) setEin(nw1, 4);
       if (!any(['kunst', 'musik'], ein, 2)) setEin(bel('musik') >= 2 && bel('kunst') < 2 ? 'musik' : 'kunst', 2);
       if (Math.max(ein('powi'), ein('geo')) < 2) setEin('powi', 2);
-      var second = function () { var nw = NW.map(ein).sort(function (x, y) { return y - x; }); return ein('franz') >= 2 || ein('span') >= 2 || nw[1] >= 2 || ein('info') >= 2; };
+      var second = function () { var d = function (x, y) { return y - x; }, nw = NW.map(ein).sort(d), fs = FS.map(ein).sort(d); return fs[1] >= 2 || nw[1] >= 2 || ein('info') >= 2; };
       if (!second()) { var nw2 = NW.filter(function (id) { return id !== nw1 && free(id); })[0]; setEin(nw2, 2); }
       var af2 = function () { return ['powi', 'geschichte', 'geo', 'religion', 'ethik'].reduce(function (n, id) { return n + ein(id); }, 0); };
       ['geschichte', 'powi', 'religion', 'ethik'].forEach(function (id) { while (af2() < 6 && free(id) && K.ein[id] < K.bel[id]) K.ein[id]++; });
       // auf genau 24 Grundkurse: zuerst schon belegte Kurse einbringen (nicht Sport), dann bei Bedarf zurücknehmen
       var sum = function () { return GK.reduce(function (n, g) { return n + (isLK(g.id) ? 0 : ein(g.id)); }, 0); };
-      var order = ['englisch', 'deutsch', 'mathe', 'geschichte', 'powi', 'religion', 'ethik', 'biologie', 'chemie', 'physik', 'kunst', 'musik', 'geo', 'franz', 'span', 'info'];
+      var order = ['deutsch', 'mathe', 'geschichte', 'powi', 'religion', 'ethik', 'biologie', 'chemie', 'physik', 'kunst', 'musik', 'geo', 'englisch', 'franz', 'span', 'info'];
       order.forEach(function (id) { while (sum() < 24 && free(id) && K.ein[id] < K.bel[id]) K.ein[id]++; });
       order.forEach(function (id) { while (sum() < 24 && free(id) && K.bel[id] < 4) { K.bel[id]++; K.ein[id]++; } });
       return p3Ok();
