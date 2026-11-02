@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Englisch
 
-Version 0.6 · 29.10.2026 (freigegeben)
+Version 0.7 · 02.11.2026 (freigegeben)
+
+Änderung gegenüber 0.6: Szene 9 ohne Referat statt einer Klausur. Die Kommunikationsprüfung ist die eine Klausurersatzleistung, eine weitere ist nicht möglich (Auslegung des Nutzers 02.11.2026, Entscheidung 127).
 
 Änderung gegenüber 0.5: Szene 9 nennt die Klausur unter Abiturbedingungen in Q3, wie in den übrigen Filmen (Satz wortgleich übernommen; OAVO § 9 Abs. 11, FB-A Abschn. 3; Nutzer 29.10.2026, Entscheidung 60).
 
@@ -195,16 +197,13 @@ werden im Film als „im aktuellen Jahrgang“ gekennzeichnet.
   und sprechen miteinander, gegenüber hören zwei erwachsene Lehrkräfte zu und machen Notizen.
   Genau zwei Prüflinge, zwei Lehrkräfte.
 - **Bewegung:** Schwenk von rechts nach links.
-- **Element:** ZAHL „2 Klausuren pro Halbjahr“ (klein „Grundkurs bei uns: 1“) · „Referat statt
-  einer Klausur in Q1 oder Q2 – wenn die Lehrkraft es festlegt“ · „Q3: Kommunikationsprüfung statt
+- **Element:** ZAHL „2 Klausuren pro Halbjahr“ (klein „Grundkurs bei uns: 1“) · „Q3: Kommunikationsprüfung statt
   einer Klausur“ · Hinweis „bei uns: zwei Prüflinge, zwei Lehrkräfte, frei auf Englisch“
 - **Sprechtext:**
   > Im Leistungskurs schreibst du pro Halbjahr zwei Klausuren, in Q4 nur eine; im Grundkurs ist es
   > bei uns nur eine.
   > In Deutsch und Mathematik schreibt dagegen auch der Grundkurs zwei; wer eines dieser Fächer als
-  > Leistungskurs wählt, bekommt dadurch also keine zusätzliche Klausur. Deine Lehrkraft kann
-  > entscheiden, dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat
-  > ersetzt. In Q3 ersetzt eine mündliche Kommunikationsprüfung eine Klausur: Bei
+  > Leistungskurs wählt, bekommt dadurch also keine zusätzliche Klausur. In Q3 ersetzt eine mündliche Kommunikationsprüfung eine Klausur: Bei
   > uns sprichst du dabei zusammen mit einer Mitschülerin oder einem Mitschüler vor zwei Lehrkräften
   > frei auf Englisch. In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
 - **Beleg:** FB-E 4 (Schaubild Klausuren Abb. 1 und 4, Allgemeine Anmerkung a; OAVO § 9 Abs. 6

@@ -4,7 +4,7 @@ window.FILMS["englisch"] = {
  "id": "englisch",
  "title": "Leistungskurs Englisch",
  "accent": "#c8d530",
- "total": 376.34,
+ "total": 368.77,
  "credits": [
   "Henry Fuseli (Johann Heinrich Füssli): Studie zu den drei Hexen aus „Macbeth“, um 1783, Auckland Art Gallery Toi o Tāmaki – gemeinfrei, Wikimedia Commons",
   "Walter Crane: Imperial Federation – Map of the World Showing the Extent of the British Empire in 1886 – gemeinfrei, Wikimedia Commons (Norman B. Leventhal Map Center, Boston Public Library)",
@@ -746,8 +746,8 @@ window.FILMS["englisch"] = {
    "n": 9,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 45.88,
-   "speechEnd": 44.48,
+   "duration": 38.31,
+   "speechEnd": 36.91,
    "sentences": [
     {
      "text": "Im Leistungskurs schreibst du pro Halbjahr zwei Klausuren, in Q4 nur eine; im Grundkurs ist es bei uns nur eine.",
@@ -764,25 +764,18 @@ window.FILMS["englisch"] = {
      "start": 8.49
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat ersetzt.",
-     "audio": "media/englisch/audio/s09_3_4e3f8c6a.mp3",
-     "dur": 7.12,
+     "text": "In Q3 ersetzt eine mündliche Kommunikationsprüfung eine Klausur: Bei uns sprichst du dabei zusammen mit einer Mitschülerin oder einem Mitschüler vor zwei Lehrkräften frei auf Englisch.",
+     "audio": "media/englisch/audio/s09_3_bb1ae409.mp3",
+     "dur": 11.2,
      "estimated": false,
      "start": 18.46
     },
     {
-     "text": "In Q3 ersetzt eine mündliche Kommunikationsprüfung eine Klausur: Bei uns sprichst du dabei zusammen mit einer Mitschülerin oder einem Mitschüler vor zwei Lehrkräften frei auf Englisch.",
-     "audio": "media/englisch/audio/s09_4_bb1ae409.mp3",
-     "dur": 11.2,
-     "estimated": false,
-     "start": 26.03
-    },
-    {
      "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.",
-     "audio": "media/englisch/audio/s09_5_397b1793.mp3",
+     "audio": "media/englisch/audio/s09_4_397b1793.mp3",
      "dur": 6.8,
      "estimated": false,
-     "start": 37.68
+     "start": 30.11
     }
    ],
    "cues": [
@@ -807,34 +800,29 @@ window.FILMS["englisch"] = {
      "end": 17.952
     },
     {
-     "text": "Deine Lehrkraft kann entscheiden, dass euer ganzer Kurs in Q1 oder Q2 eine Klausur durch ein Referat ersetzt.",
-     "start": 18.46,
-     "end": 25.58
-    },
-    {
      "text": "In Q3 ersetzt eine mündliche Kommunikationsprüfung eine Klausur:",
-     "start": 26.03,
-     "end": 29.926
+     "start": 18.46,
+     "end": 22.356
     },
     {
      "text": "Bei uns sprichst du dabei zusammen mit einer Mitschülerin",
-     "start": 29.926,
-     "end": 33.395
+     "start": 22.356,
+     "end": 25.825
     },
     {
      "text": "oder einem Mitschüler vor zwei Lehrkräften frei auf Englisch.",
-     "start": 33.395,
-     "end": 37.108
+     "start": 25.825,
+     "end": 29.538
     },
     {
      "text": "In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach,",
-     "start": 37.68,
-     "end": 42.553
+     "start": 30.11,
+     "end": 34.983
     },
     {
      "text": "was dich in der Prüfung erwartet.",
-     "start": 42.553,
-     "end": 44.423
+     "start": 34.983,
+     "end": 36.853
     }
    ],
    "image": {
@@ -861,26 +849,20 @@ window.FILMS["englisch"] = {
       "t": 8.664
      },
      {
-      "value": "↔",
-      "label": "Referat statt einer Klausur in Q1 oder Q2",
-      "sub": "wenn die Lehrkraft es festlegt",
-      "t": 18.852
-     },
-     {
       "value": "Q3",
       "label": "mündliche Kommunikationsprüfung statt einer Klausur",
-      "t": 27.795
+      "t": 20.225
      },
      {
       "value": "Q3",
       "label": "Klausur unter Abiturbedingungen",
-      "t": 40.57
+      "t": 33
      }
     ],
     "notes": [
      {
       "text": "bei uns: zwei Prüflinge · zwei Lehrkräfte · frei auf Englisch",
-      "t": 29.987
+      "t": 22.417
      }
     ]
    },
@@ -960,7 +942,7 @@ window.FILMS["englisch"] = {
     ],
     "t": 3.608
    },
-   "start": 269.62
+   "start": 262.05
   },
   {
    "n": 11,
@@ -1039,7 +1021,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 287.75
+   "start": 280.18
   },
   {
    "n": 12,
@@ -1118,7 +1100,7 @@ window.FILMS["englisch"] = {
      }
     ]
    },
-   "start": 312.64
+   "start": 305.07
   },
   {
    "n": 13,
@@ -1164,7 +1146,7 @@ window.FILMS["englisch"] = {
     }
    ],
    "corner": "bei uns in der Regel",
-   "start": 329.89
+   "start": 322.32
   },
   {
    "n": 14,
@@ -1207,7 +1189,7 @@ window.FILMS["englisch"] = {
     "src": "media/englisch/img/e14.jpg",
     "motion": "zoom-out"
    },
-   "start": 343.25
+   "start": 335.68
   },
   {
    "n": 15,
@@ -1260,7 +1242,7 @@ window.FILMS["englisch"] = {
     ]
    },
    "logo": true,
-   "start": 360.69
+   "start": 353.12
   }
  ]
 };

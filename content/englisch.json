@@ -155,12 +155,6 @@
             "label": "Deutsch und Mathematik: auch im Grundkurs",
             "sub": "als Leistungskurs also keine zusätzliche Klausur"
           },
-          {
-            "at": "Lehrkraft",
-            "value": "↔",
-            "label": "Referat statt einer Klausur in Q1 oder Q2",
-            "sub": "wenn die Lehrkraft es festlegt"
-          },
           { "at": "Kommunikationsprüfung", "value": "Q3", "label": "mündliche Kommunikationsprüfung statt einer Klausur" },
           { "at": "Abiturbedingungen", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
         ],
