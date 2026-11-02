@@ -147,6 +147,7 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
   **Deutsch 5:48, Englisch 6:16, Kunst 5:48, PoWi 5:54, Geschichte 5:56, Mathematik 5:45, Biologie 5:50, Chemie 5:50 min**.
 - 31.10.2026: „Tafel einrichten“: Dauerschleife und Poster-Download (Entscheidung 121), Kursplaner ja/nein und „nur Planer“ (122, `planerHere`, `planerOnly` in `index.html`).
 - 02.11.2026: Tutorium legt die Oberstufenleitung fest, LUSD berechnet die besten Kurse (Entscheidung 123). Aufgabenfelder in eigenen Farben: Rot, Bernstein, Blau (`data-feld`, `hell.css`, Entscheidungen 124, 126).
+- 02.11.2026: Poster (Entscheidungen 125, 128): `node tools/build_poster.mjs`, Themenfelder im Erlass-Wortlaut in `content/poster.json`, Fach-Poster in Feldfarben, danach ZIP nach `downloads/`. Englisch 0.7 ohne Referat (127), **6:09 min**.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

@@ -278,7 +278,8 @@ Alle Angaben **[VORJAHR, ORIENTIERUNG]** aus dem Erlass 2028, soweit nicht ander
 - Grundkurs zum Vergleich: Ersatz der Q3-Klausur nur für Schüler mit Englisch als drittem Prüfungsfach, außer die
   Fachkonferenz beschließt ihn für alle GK-Schüler. – OAVO § 9 Abs. 6b Nr. 2,
   https://www.rv.hessenrecht.hessen.de/bshe/document/hevr-OSt_AbiVHEV16P9, abgerufen 27.10.2026
-- Leistungsnachweise im LK Englisch in der Q-Phase: Q1 zwei Klausuren, Q2 zwei Klausuren, Q3 eine Klausur plus
+- **An der HBS (Auslegung des Nutzers, 02.11.2026):** Die Kommunikationsprüfung ist die eine Klausurersatzleistung; ein Referat oder eine Präsentation statt einer Klausur kommt nicht hinzu. Das Schaubild unten führt beides in getrennten Zeilen. – SCHULE
+- Leistungsnachweise im LK Englisch in der Q-Phase laut Schaubild: Q1 zwei Klausuren, Q2 zwei Klausuren, Q3 eine Klausur plus
   Kommunikationsprüfung, Q4 eine Klausur; eine Klausur kann in Q1 **oder** Q2 durch Referat/Präsentation ersetzt
   werden; Vergleichsarbeit in Q1 oder Q2; im LK in Q3 eine Klausur unter Abiturbedingungen. – HMKB, Schaubild
   Klausuren, Abbildung 1, S. 1,

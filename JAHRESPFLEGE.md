@@ -49,6 +49,7 @@ dann diese Liste ab, Schritt für Schritt, und fragt bei jeder inhaltlichen Änd
 
 ## 4a. Poster
 
+- [ ] `content/poster.json` gegen den neuen Erlass: Themenfelder im Wortlaut, Abitur Mathematik; „Stand Abitur [Jahr]“ in `tools/build_poster.mjs`
 - [ ] `node tools/build_poster.mjs`, dann das Zip nach `downloads/Poster_Leistungskurse_HBS.zip` kopieren (Link in „Tafel einrichten“)
 
 ## 4b. Moodle-Lernpaket

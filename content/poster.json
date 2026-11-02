@@ -1,0 +1,131 @@
+{
+  "_quelle": "Halbjahresthemen: KCGO des Fachs (quellen/faktenblatt_<fach>.md). Themenfelder im Wortlaut: Abiturerlass 2028, Abschn. III, je Fach <n>.3, geprüft am PDF 02.11.2026. Nach jedem neuen Erlass gegenlesen (JAHRESPFLEGE.md). Entscheidung 125. „mitbringen“: Überschrift wie im Film, Erläuterung aus dem Abschnitt „Typische Herausforderungen“ des Faktenblatts (Entscheidung 129).",
+  "ersatz": "Referat oder Präsentation in Q1, Q2 oder Q3, wenn die Lehrkraft es für den Kurs festlegt",
+  "deutsch": {
+    "mitbringen": [
+      ["Freude an viel Lektüre","Du liest mehrere Werke ganz, für das Abitur 2028 sind es Kleist, Goethe, Kafka und Erpenbeck. Dazu kommen Texte der Romantik und des Expressionismus und im Leistungskurs auch theoretische Texte."],
+      ["Ausdauer für lange Schreibzeiten","Im Abitur arbeitest du gut fünf Stunden an einem einzigen Text. Du solltest also gern ausführlich schreiben."],
+      ["Sorgfalt in Sprache und Stil","Wie du schreibst, zählt mit: Die Darstellung macht 30 Prozent der Note aus, und wenn sich Fehler häufen, gibt es Punktabzug."],
+      ["Eigenes Urteil statt Auswendiglernen","In der Prüfung bekommst du meist einen Text, den du aus dem Unterricht nicht kennst. Auswendig gelernte Deutungen helfen dir dann nicht weiter."]
+    ],
+    "anzahl": 9,
+    "themen": [
+      { "q": "Q1", "titel": "Fiktion und Wirklichkeit", "felder": ["Q1.1 Epochenumbruch 18./19. Jahrhundert – Literatur um 1800 und im frühen 19. Jahrhundert", "Q1.3 Natur als Imagination und Wirklichkeit", "Q1.4 Romantische Spiegelungen"] },
+      { "q": "Q2", "titel": "Sprache und Literatur in politisch-gesellschaftlichen Spannungsfeldern", "felder": ["Q2.1 Sprache und Öffentlichkeit", "Q2.2 Drama und Theater"] },
+      { "q": "Q3", "titel": "Zäsuren, Umbrüche und Neuanfänge", "felder": ["Q3.1 Epochenumbruch 19./20. Jahrhundert – literarische Moderne im frühen 20. Jahrhundert", "Q3.2 Anthropologische Grundfragen – Menschenbilder im Wandel", "Q3.3 Neuanfänge nach historischen Zäsuren 1945 oder 1989/90"] },
+      { "q": "Q4", "titel": "Literatur und Rezeption", "felder": ["Q4.1 Literarisches Leben der Gegenwart"] }
+    ]
+  },
+  "englisch": {
+    "mitbringen": [
+      ["Lust auf lange englische Texte","Du liest mindestens zwei Romane ganz, dazu ein Drama, Kurzgeschichten und Gedichte aus verschiedenen Epochen. Im Abitur liegen bis zu 1 650 Wörter Text vor dir."],
+      ["Mut zum freien Sprechen","In Q3 sprichst du in der Kommunikationsprüfung frei auf Englisch, zusammen mit einer Mitschülerin oder einem Mitschüler vor zwei Lehrkräften."],
+      ["Freude an treffenden Formulierungen","Im Abitur zählt die Sprache mehr als der Inhalt. Fehlerarm, aber eintönig zu schreiben reicht nicht, es kommt auf die Bandbreite deines Ausdrucks an."],
+      ["Ein gutes Zeitgefühl","Im Abitur entscheidest du selbst, in welcher Reihenfolge du Sprachmittlung und Schreiben bearbeitest und wie du dir die Zeit dafür einteilst."]
+    ],
+    "anzahl": 4,
+    "themen": [
+      { "q": "Q1", "titel": "TF2 Politics, culture, society – between tradition and change", "felder": ["Politik, Kultur, Gesellschaft – zwischen Tradition und Wandel (Bezugskultur: USA)"] },
+      { "q": "Q2", "titel": "TF8 Science and technology", "felder": ["Wissenschaft und Technik"] },
+      { "q": "Q3", "titel": "TF3 Politics, culture, society – between tradition and change", "felder": ["Politik, Kultur, Gesellschaft – zwischen Tradition und Wandel (Bezugskultur: Vereinigtes Königreich)"] },
+      { "q": "Q4", "titel": "TF1 The individual and society", "felder": ["Das Individuum und die Gesellschaft"] }
+    ],
+    "ersatz": "bereits festgelegt: mündliche Kommunikationsprüfung in Q3 – bei uns zwei Prüflinge, zwei Lehrkräfte, frei auf Englisch"
+  },
+  "kunst": {
+    "mitbringen": [
+      ["Freude am Gestalten und genauen Hinsehen","In Q1 bis Q3 untersuchst du Werke und gestaltest selbst. Neben Malerei und Zeichnung kommen Fotografie, Typografie, Architekturzeichnung und Modellbau dazu."],
+      ["Lust, über Bilder zu schreiben","Es reicht nicht, aufzuzählen, was du siehst. Du erklärst und gewichtest deine Beobachtungen und belegst sie am Werk, in der passenden Fachsprache."],
+      ["Interesse an Kunstgeschichte","Auch Wissen über die Kunstgeschichte gehört dazu. Für das Abitur 2028 reicht der Bogen vom Impressionismus über Hopper und O’Keeffe bis zu Bauten von der Renaissance bis zur Postmoderne."],
+      ["Zeit – auch für Arbeit zu Hause","Die fachpraktische Prüfung kann als Arbeit zu Hause angelegt sein. Bewertet wird nicht nur das Ergebnis, sondern auch, wie du dorthin gekommen bist."]
+    ],
+    "anzahl": 9,
+    "themen": [
+      { "q": "Q1", "titel": "Klassische Bildkünste (Malerei, Grafik und Plastik)", "felder": ["Q1.1 Ausdrucksmöglichkeiten von Malerei und Zeichnung am Beispiel des Wandels von der gegenständlichen zur ungegenständlichen Kunst", "Q1.2 Nutzung malerischer, grafischer und plastischer Ausdrucksmittel für die eigene gestalterische Darstellung", "Q1.4 Brechung von Konventionen"] },
+      { "q": "Q2", "titel": "Medien (Fotografie, Grafikdesign)", "felder": ["Q2.1 Ausdrucksmöglichkeiten von Fotografie – Hinterfragung der Wirklichkeit", "Q2.2 Nutzung fotografischer und gebrauchsgrafischer Ausdrucksmittel für die eigene gestalterische Darstellung", "Q2.4 Bildsprache und Typografie"] },
+      { "q": "Q3", "titel": "Gestaltete Umwelt (Architektur, Produktdesign)", "felder": ["Q3.1 Ausdrucksmöglichkeiten von Architektur im Spannungsfeld von Weltverständnis und künstlerischem Anspruch", "Q3.2 Nutzung von architektonischen Ausdrucksmitteln für die eigene gestalterische Darstellung"] },
+      { "q": "Q4", "titel": "Gegenwart und Transformation", "felder": ["Q4.1 Zitat als Strategie in Kunst und Medien"] }
+    ],
+    "ersatz": "bereits festgelegt: fachpraktische Prüfung – eigenes Werk, auch zu Hause, mit Präsentation und Gespräch"
+  },
+  "powi": {
+    "mitbringen": [
+      ["Interesse an Nachrichten","Im Kurs untersuchst du zum Beispiel einen aktuellen Konflikt und beschäftigst dich mit neuen Medien. Wer die Nachrichten verfolgt, hat es dabei leichter."],
+      ["Freude an längeren Texten","Du liest und schreibst viel, denn auch die Prüfung ist meist eine Textaufgabe mit Material."],
+      ["Keine Angst vor Zahlen und Statistiken","Wirtschaft ist genauso wichtig wie Politik. Das ganze Halbjahr Q2 und Teile von Q3 und Q4 drehen sich darum, oft mit Modellen und Statistiken."],
+      ["Andere Meinungen ernst nehmen","Deine eigene Meinung allein reicht nicht. Du lernst, Gegenpositionen und Zielkonflikte einzubeziehen und dein Urteil zu begründen."]
+    ],
+    "anzahl": 9,
+    "themen": [
+      { "q": "Q1", "titel": "Demokratie im politischen Mehrebenensystem", "felder": ["Q1.1 Verfassung und Verfassungswirklichkeit: Rechtsstaatlichkeit und Verfassungskonflikte", "Q1.2 Herausforderungen der Parteiendemokratie", "Q1.4 Öffentlichkeit im Wandel – Zivilgesellschaft und Medien im politischen Prozess"] },
+      { "q": "Q2", "titel": "Wirtschaft und Wirtschaftspolitik in der sozialen Marktwirtschaft", "felder": ["Q2.1 Konjunkturanalyse und Konjunkturpolitik – Herausforderungen prozessorientierter Wirtschaftspolitik", "Q2.2 Nachhaltiges Wachstum und fairer Wettbewerb – Herausforderungen wirtschaftlicher Ordnungspolitik"] },
+      { "q": "Q3", "titel": "Internationale Beziehungen im Zeitalter der Globalisierung", "felder": ["Q3.1 Internationale Konflikte und Konfliktbearbeitung in einer differenzierten Staatenwelt", "Q3.2 Strukturwandel der Weltwirtschaft als Herausforderung ökonomischer Globalisierung", "Q3.3 Integration von Schwellen- und Entwicklungsländern in Weltwirtschaft und Weltgesellschaft"] },
+      { "q": "Q4", "titel": "Gegenwart und Zukunft Europas in einer globalisierten Welt", "felder": ["Q4.3 Die Europäische Union als globaler Akteur"] }
+    ]
+  },
+  "geschichte": {
+    "mitbringen": [
+      ["Neugier auf die Vergangenheit","Jahreszahlen allein reichen nicht. Du fragst nach Ursachen und Zusammenhängen und danach, was die Vergangenheit mit uns heute zu tun hat."],
+      ["Freude an längeren Texten","Du arbeitest viel mit Quellen und mit Darstellungen von Historikern und schreibst selbst längere Texte, in denen du historisch argumentierst."],
+      ["Lust zu diskutieren","Historiker deuten dieselben Ereignisse oft unterschiedlich. Du vergleichst diese Deutungen und bildest dir ein eigenes Urteil."],
+      ["Ernst auch bei schweren Themen","Die NS-Diktatur und der Völkermord sind Pflichtthemen. Darauf solltest du dich ernsthaft einlassen können."]
+    ],
+    "anzahl": 9,
+    "themen": [
+      { "q": "Q1", "titel": "Nation, Kapitalismus und Expansion: Europa und die Welt im 19. Jahrhundert", "felder": ["Q1.1 Die deutsche Revolution von 1848/49 – Markstein auf dem Weg zu Parlamentarismus, Demokratie und Nationalstaat?", "Q1.5 Imperialismus – Export europäischer Zivilisation?", "Q1.6 Der Erste Weltkrieg – Zerstörung der alten europäischen Ordnung"] },
+      { "q": "Q2", "titel": "Die Welt zwischen Demokratie und Diktatur (1917–1945)", "felder": ["Q2.1 Die Weimarer Republik als erste deutsche Demokratie", "Q2.3 Die nationalsozialistische Diktatur – Zerstörung von Demokratie und Menschenrechten in Deutschland und Europa"] },
+      { "q": "Q3", "titel": "Ost-West-Konflikt, postkoloniale Welt und Globalisierung", "felder": ["Q3.1 Der Kalte Krieg – stabile oder labile Weltordnung?", "Q3.3 Deutschland von der Teilung zur Einheit", "Q3.4 Weltpolitische Entwicklungen zwischen Bipolarität und Multipolarität"] },
+      { "q": "Q4", "titel": "Öffentlicher Umgang mit Geschichte im Wandel", "felder": ["Q4.1 Kontroversen über die Vergangenheit"] }
+    ]
+  },
+  "mathematik": {
+    "mitbringen": [
+      ["Dranbleiben an kniffligen Aufgaben","Nicht jede Aufgabe lässt sich nach Schema lösen. Oft musst du selbst einen Weg finden und weitermachen, auch wenn es nicht sofort klappt."],
+      ["Sorgfalt","Du musst auch von Hand sicher rechnen können, denn den ersten Teil des Abiturs schreibst du ohne Taschenrechner und ohne Formelsammlung."],
+      ["Zusammenhänge verstehen wollen","Es reicht nicht, richtig zu rechnen. Du begründest auch, warum dein Weg stimmt, und im Leistungskurs lernst du exemplarische Beweise kennen."],
+      ["Geduld bei mehreren Anläufen","Manche Lösung braucht mehrere Anläufe. Weil der Stoff aufeinander aufbaut, solltest du Lücken aus der Einführungsphase früh schließen."]
+    ],
+    "anzahl": 10,
+    "themen": [
+      { "q": "Q1", "titel": "Analysis", "felder": ["Q1.1 Einführung in die Integralrechnung", "Q1.2 Anwendungen der Integralrechnung", "Q1.3 Vertiefung der Differenzial- und Integralrechnung"] },
+      { "q": "Q2", "titel": "Analytische Geometrie, Lineare Algebra und Vertiefung der Analysis", "felder": ["Q2.1 Vertiefung der Analysis", "Q2.2 Orientieren und Bewegen im Raum", "Q2.3 Geraden und Ebenen im Raum"] },
+      { "q": "Q3", "titel": "Stochastik", "felder": ["Q3.1 Grundlegende Begriffe und Methoden der Stochastik", "Q3.2 Wahrscheinlichkeitsverteilungen", "Q3.3 Hypothesentests"] },
+      { "q": "Q4", "titel": "Funktionenscharen, Problemlösen und Argumentieren", "felder": ["Q4.1 Funktionenscharen"] }
+    ],
+    "abitur": [
+      "<b>330</b> Minuten Bearbeitungszeit · <b>100</b> Bewertungseinheiten (BE) · zwei Prüfungsteile",
+      "<b>Prüfungsteil 1</b> (30 BE), ohne Taschenrechner und ohne Formelsammlung: 6 Aufgaben zu je 5 BE. 4 davon sind Pflichtaufgaben, die anderen 2 wählst du aus 6 Wahlaufgaben aus. Abgabe spätestens nach 110 Minuten.",
+      "<b>Prüfungsteil 2</b> (70 BE), mit wissenschaftlich-technischem Taschenrechner (WTR, an der HBS) und Formelsammlung: 3 Vorschläge. Analysis (30 BE): Du wählst 1 von 2 Vorschlägen aus. Lineare Algebra/Analytische Geometrie (20 BE) und Stochastik (20 BE): je 1 Pflichtvorschlag."
+    ]
+  },
+  "biologie": {
+    "mitbringen": [
+      ["Neugier und genaues Beobachten","Du experimentierst auch selbst, planst Versuche und wertest genau aus, was du dabei beobachtest."],
+      ["Ausdauer bei vielen Fachbegriffen","Im Leistungskurs arbeitest du mit einem größeren Fachwortschatz als im Grundkurs. Den eignest du dir nach und nach an."],
+      ["Keine Scheu vor Chemie und etwas Mathematik","Ohne Chemie versteht man den Stoffwechsel nicht und ohne etwas Mathematik nicht das Wachstum von Populationen."],
+      ["Freude daran, Daten auszuwerten","In der Abiturprüfung arbeitest du bei jeder Aufgabe mit Material, also mit Diagrammen, Tabellen und Versuchsbeschreibungen."]
+    ],
+    "anzahl": 8,
+    "themen": [
+      { "q": "Q1", "titel": "Genetik und Gentechnik", "felder": ["Q1.1 Speicherung und Realisierung genetischer Information", "Q1.2 Gene und Gentechnik", "Q1.3 Humangenetik"] },
+      { "q": "Q2", "titel": "Evolution; Informationsverarbeitung in Lebewesen", "felder": ["Q2.1 Entstehung und Entwicklung des Lebens", "Q2.3 Neurobiologie"] },
+      { "q": "Q3", "titel": "Ökosysteme; Stoffwechselphysiologie", "felder": ["Q3.1 Strukturen und Zusammenhänge in Ökosystemen", "Q3.2 Grundlegende Stoffwechselprozesse: Fotosynthese und Grundlagen der Zellatmung"] },
+      { "q": "Q4", "titel": "Einfluss des Menschen auf Ökosysteme; Nachhaltigkeit, Biodiversität", "felder": ["Q4.1 Einfluss des Menschen auf Ökosysteme, Nachhaltigkeit, Biodiversität"] }
+    ]
+  },
+  "chemie": {
+    "mitbringen": [
+      ["Dinge bis zu den Teilchen verstehen wollen","Was du an Stoffen beobachtest, erklärst du damit, was zwischen den Teilchen passiert."],
+      ["Sorgfalt bei Formeln und Gleichungen","Strukturformeln, Reaktionsgleichungen und Reaktionsmechanismen sind die Sprache der Chemie. Du lernst, sie genau aufzuschreiben."],
+      ["Keine Scheu vor Rechnungen","Du rechnest zum Beispiel mit dem Massenwirkungsgesetz, mit pH-Werten und Enthalpien. Im Leistungskurs wird das mathematisch anspruchsvoller."],
+      ["Geduld – vieles baut aufeinander auf","Was du in der Einführungsphase gelernt hast, brauchst du später wieder, zum Beispiel in Q1 und Q3."]
+    ],
+    "anzahl": 9,
+    "themen": [
+      { "q": "Q1", "titel": "Stoffgruppen", "felder": ["Q1.1 Chemische Bindung und Strukturen ausgewählter anorganischer und organischer Stoffe", "Q1.2 Alkanole und Carbonylverbindungen", "Q1.3 Alkansäuren und ihre Derivate"] },
+      { "q": "Q2", "titel": "Naturstoffe und Synthesechemie", "felder": ["Q2.1 Naturstoffe", "Q2.2 Grundlagen der Kunststoffchemie"] },
+      { "q": "Q3", "titel": "Das chemische Gleichgewicht", "felder": ["Q3.1 Chemische Gleichgewichte und ihre Einstellung", "Q3.2 Protolysegleichgewichte", "Q3.3 Redoxgleichgewichte"] },
+      { "q": "Q4", "titel": "Energie und Nachhaltigkeit", "felder": ["Q4.1 Energetische und kinetische Aspekte chemischer Reaktionen"] }
+    ]
+  }
+}
