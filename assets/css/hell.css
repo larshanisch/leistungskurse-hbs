@@ -39,9 +39,9 @@ h1::after { content: ""; display: block; width: 56px; height: 4px; background: v
 .fcard:hover, .fcard:focus-visible, .cta:hover, .cta:focus-visible, a.tile:hover, a.tile:focus-visible {
   border-color: var(--accent); box-shadow: 0 10px 28px rgba(26,26,26,0.10); }
 .fcard .num { box-shadow: none; }
-.fcard li { background: var(--pale); border-color: #e2e7b8; color: var(--head-ink); }
-.fcard li.film { background: var(--accent); color: #1a1a1a; }
-.fcard .go { color: var(--head-ink); }
+.fcard li { background: var(--pale); border-color: var(--feld-line, #e2e7b8); color: var(--head-ink); }
+.fcard li.film { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.fcard .go { color: var(--accent-dark); }
 .fcard.away .num { background: #ecebe6; color: #8a857c; }   /* Aufgabenfeld-Pille ausgegraut, wenn das ganze Feld in einem anderen Raum läuft (Entscheidung 114) */
 
 /* Bildkacheln der Filme bleiben dunkel überlagert (wie der Begrüßungskasten der Website) – Schrift dort hell */
@@ -108,3 +108,14 @@ html, body { overflow-x: clip; }
 .cta.away .ic { background: #e4e4df; color: #8a857c; }
 .cta.away strong, .cta.away .txt span { color: #8a857c; }
 .cta.away .open { background: #e4e4df; color: #6f6b63; }
+/* Farbe je Aufgabenfeld (Entscheidung 124): überschreibt die Farbwerte nur innerhalb von Karte, Feldansicht und Einrichtung.
+   Grau bleibt, was in einem anderen Raum läuft. Der Planer behält seine Farben für 1. und 2. LK. */
+[data-feld="1"] { --accent: #c2521d; --on-accent: #ffffff; --accent-dark: #97390f; --pale: #fbeee6; --feld-line: #f0d3c1; --feld-hell: #f6a77b; }
+[data-feld="2"] { --accent: #1f6fb2; --on-accent: #ffffff; --accent-dark: #174f80; --pale: #e8f1f9; --feld-line: #c7dcef; --feld-hell: #8ec5f0; }
+[data-feld="3"] { --accent: #c8d530; --on-accent: #1a1a1a; --accent-dark: #6b7414; --pale: #f8fae6; --feld-line: #e2e7b8; --feld-hell: #c8d530; }
+.fcard[data-feld]:hover, .fcard[data-feld]:focus-visible { border-color: var(--accent); }
+.fcard.away[data-feld]:hover, .fcard.away[data-feld]:focus-visible { border-color: var(--line); }
+.fcard.away[data-feld] .go { color: #8a857c; }
+.tile .subj .subj-ico { color: var(--feld-hell, var(--accent)); }
+.tile.away .subj .subj-ico, .tile.soon .subj .subj-ico { color: #e6e6e6; }
+#setup fieldset[data-feld] legend { color: var(--accent-dark); }

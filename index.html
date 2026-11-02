@@ -610,7 +610,7 @@
         // Sind Räume eingetragen, stehen sie schon an den Fächern; dann kein Satz darunter (Entscheidung 52)
         var anyRoom = f.subjects.some(function (id) { return !here(id) && roomOf(id); });
         var go = away ? (anyRoom ? '' : 'Zeigen wir in einem anderen Raum') : films ? films + (films === 1 ? ' Film' : ' Filme') + ' ansehen →' : 'Filme folgen – Kurse ansehen →';
-        return (away ? '<div class="fcard away">' : '<a class="fcard" href="#feld-' + f.id + '">') +
+        return (away ? '<div class="fcard away" data-feld="' + f.id + '">' : '<a class="fcard" data-feld="' + f.id + '" href="#feld-' + f.id + '">') +
           '<span class="pic" style="--bg: url(\'' + f.img + '\'); --pos: ' + f.pos + '"></span>' +
           '<span class="num">Aufgabenfeld ' + f.num + '</span><div class="body">' +
           '<h2>' + esc(f.sub) + '</h2><p>' + esc(f.name) + '</p><ul>' + f.subjects.map(function (id) {
@@ -639,6 +639,7 @@
     // --- Feldansicht ---
     function lkBadge(id) { return LK1.indexOf(id) >= 0 ? '1. oder 2. LK' : '2. LK'; }
     function showField(f) {
+      $('v-feld').dataset.feld = f.id;   // Farbe des Felds (Entscheidung 124)
       $('feldNum').textContent = 'Aufgabenfeld ' + f.num;
       $('feldName').textContent = f.name;
       $('tiles').style.setProperty('--n', f.subjects.length);
@@ -1638,7 +1639,7 @@
     function openSetup() {
       if (MOODLE) return;   // im Lernpaket keine Tafel-Einrichtung (auch nicht über das Logo)
       $('setupCols').innerHTML = FIELDS.map(function (f) {
-        return '<fieldset><legend>Aufgabenfeld ' + f.num + '</legend>' + f.subjects.map(function (id) {
+        return '<fieldset data-feld="' + f.id + '"><legend>Aufgabenfeld ' + f.num + '</legend>' + f.subjects.map(function (id) {
           var on = room && (room.all || room.subjects.indexOf(id) >= 0);
           var r = (room && room.where && room.where[id]) || '';
           return '<div class="row"><label><input type="checkbox" value="' + id + '"' + (on ? ' checked' : '') + '>' + esc(SUBJ[id].name) +
