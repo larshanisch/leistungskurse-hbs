@@ -805,8 +805,8 @@
       var w = ['franz', 'span'].filter(function (id) { return (bel('englisch') < 4 && bel(id) > 0) || (ein('englisch') < 4 && ein(id) > 0); });
       if (!w.length) return '';
       var n = w.map(function (id) { return GKOF[id].name; });
-      return n.length > 1 ? n.join(' und ') + ' zählen hier nur, wenn sie bei dir eine fortgeführte Fremdsprache sind.'
-        : n[0] + ' zählt hier nur, wenn es bei dir eine fortgeführte Fremdsprache ist.';
+      return n.length > 1 ? n.join(' und ') + ' zählen hier nur, wenn sie bei dir aus der Mittelstufe fortgeführte Fremdsprachen sind.'
+        : n[0] + ' zählt hier nur, wenn es bei dir eine aus der Mittelstufe fortgeführte Fremdsprache ist.';
     }
     function kChecks() {
       var NW = ids('nw');
@@ -1063,13 +1063,13 @@
     function p2Picker() {
       var n = P2.open; if (!n) {
         var done = p2Exam().length === 3 && p2Valid(P2.slot);
-        return '<div class="p2pick idle">' + p2LimBox(pick.a, pick.b) + '<p class="p2lead">' + (done ? '<b>Deine fünf Prüfungsfächer stehen.</b> Tippe auf einen Platz, um ihn zu ändern.'
+        return '<div class="p2pick idle">' + p2LimBox(pick.a, pick.b) + p2FsHint() + '<p class="p2lead">' + (done ? '<b>Deine fünf Prüfungsfächer stehen.</b> Tippe auf einen Platz, um ihn zu ändern.'
           : 'Tippe auf Platz 3, 4 oder 5 und wähle ein Fach.') + '</p>' +
           (done ? '<a class="p2next" href="#planer/3/' + pick.a + '/' + pick.b + '">Weiter: Kurse →</a>' : '') + '</div>';
       }
       var groups = [[1, 'Aufgabenfeld I'], [2, 'Aufgabenfeld II'], [3, 'Aufgabenfeld III'], [0, 'Sport']];
       return '<div class="p2pick"><p class="p2lead"><b>Platz ' + n + '</b> · ' + (n === 3 ? 'schriftlich, Landesabitur' : n === 4 ? 'mündliche Prüfung' : 'mündliche Prüfung oder Präsentation') +
-        ' <small class="p2leg">Grau = hier nicht möglich, antippen zeigt den Grund</small></p>' + p2LimBox(pick.a, pick.b) +
+        ' <small class="p2leg">Grau = hier nicht möglich, antippen zeigt den Grund</small></p>' + p2LimBox(pick.a, pick.b) + p2FsHint() +
         '<div class="p2grid">' + groups.map(function (gr) {
           return '<div class="p2g g' + gr[0] + '"><span class="k">' + gr[1] + '</span>' + GK.filter(function (g) { return g.f === gr[0] && !isLK(g.id); }).map(function (g) {
             var here = P2.slot[n] === g.id, elsewhere = !here && [3, 4, 5].some(function (m) { return P2.slot[m] === g.id; });
@@ -1103,6 +1103,19 @@
         if (c) P2.slot[n] = c;
       });
       P2.open = 0;
+    }
+    // Französisch/Spanisch als Prüfungsfach: Der Planer weiß nicht, seit wann jemand die Sprache hat, darum Hinweis statt Sperre
+    // (OAVO § 24 Abs. 4: neu begonnene Fremdsprache nur 4. oder 5. Prüfungsfach; § 24 Abs. 5, § 14 Abs. 1 und 5; Entscheidung 133)
+    function p2FsText(n, id) {
+      var name = GKOF[id].name;
+      return n === 3
+        ? '<b>' + esc(name) + ' als 3. Prüfungsfach</b> geht nur, wenn du es schon in der Mittelstufe hattest und es also fortgeführt ist. Außerdem musst du es in der gesamten Einführungsphase gehabt haben und in Q1 bis Q4 belegen.'
+        : '<b>' + esc(name) + ' als Prüfungsfach:</b> Du musst es in der gesamten Einführungsphase gehabt haben und in Q1 bis Q4 belegen. Hast du es in der Mittelstufe schon gehabt, geht jeder der Plätze 3 bis 5. Hast du es erst in der Einführungsphase neu begonnen, geht nur Platz 4 oder 5, und der Unterricht muss insgesamt mindestens zwölf Jahreswochenstunden umfassen.';
+    }
+    function p2FsHint() {
+      return [3, 4, 5].filter(function (n) { return P2.slot[n] === 'franz' || P2.slot[n] === 'span'; }).map(function (n) {
+        return '<p class="kwarn" role="note">' + p2FsText(n, P2.slot[n]) + '</p>';
+      }).join('');
     }
     function p2Step2() {
       var full = p2Exam().length === 3;

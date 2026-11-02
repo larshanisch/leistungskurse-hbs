@@ -1,6 +1,7 @@
 # Faktenblatt: Leistungskurse in Hessen – fächerübergreifende amtliche Vorgaben
 
 Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Q-Phase 2027/28–2028/29, Landesabitur 2029
+Version 2.5 (02.11.2026: Fremdsprachen § 14 und § 24 Abs. 4–5 am Originaltext)
 Version 2.4 (02.11.2026: Tutorium und LUSD, Schulangaben)
 Version 2.3 (29.10.2026: Fachhochschulreife § 48, Anlage 12, Zulassung § 23 Abs. 4–6, Wiederholung § 40, Rücktritt § 13 Abs. 10–11, Verweildauer § 3 am Originaltext)
 Version 2.2 (29.10.2026: Tabelle Anlage 10b am Originaltext)
@@ -74,6 +75,10 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
   - Kunst ist landesweit zentral geprüftes Abiturfach (Aufgabenfeld I). – https://kultus.hessen.de/schulsystem/schulformen-und-bildungsgaenge/gymnasium/landesabitur, abgerufen 27.10.2026
 - **Mindestnote für jedes LK-Fach:** Gewählt werden darf nur ein Fach, in dem am Ende der Einführungsphase **mindestens 5 Punkte** erreicht wurden, oder in dem gleichwertige Kenntnisse nachgewiesen werden. – OAVO § 13 Abs. 2 Satz 3, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
 - **Durchgehender Unterricht:** In jedem Prüfungsfach, also auch in beiden LKs, muss in der gesamten Einführungsphase Unterricht stattgefunden haben. In der Q-Phase sind 4 Kurse zu besuchen (3 vor dem Prüfungshalbjahr, 1 im Prüfungshalbjahr). – OAVO § 24 Abs. 5 Satz 1, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
+- **Fortgeführte Fremdsprache:** Jede und jeder hat bis zum Ende der Q-Phase Unterricht „in einer aus der Mittelstufe fortgeführten Fremdsprache“. – OAVO § 14 Abs. 1 Satz 2, OAVO-Gesamtausgabe gültig ab 01.08.2026, https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE, abgerufen 02.11.2026
+- **Jedes Prüfungsfach:** in der gesamten Einführungsphase unterrichtet (soweit nicht anders zugelassen) und in der Q-Phase vier Kurse besucht. – OAVO § 24 Abs. 5 Satz 1, ebd.
+- **Neu begonnene Fremdsprache als Prüfungsfach:** Eine in der Einführungsphase neu begonnene Fremdsprache kann „ausschließlich viertes oder fünftes Prüfungsfach“ sein (§ 24 Abs. 4 Satz 4) und nur, „wenn sie insgesamt mit mindestens zwölf Jahreswochenstunden unterrichtet wurde und der Unterricht den Anforderungen eines Prüfungsfaches entspricht“ (§ 14 Abs. 5). – ebd.
+  - Ob die HBS Französisch oder Spanisch neu beginnend in der Einführungsphase anbietet, ist hier nicht geklärt. **[UNSICHER]**
 - **Fremdsprache als LK:** Wer eine Fremdsprache außer Griechisch als LK wählt, muss sie einschließlich der E-Phase mindestens 4 Jahrgangsstufen lang durchgehend gehabt haben oder gleichwertige Kenntnisse nachweisen. Für Englisch ist das in der Regel erfüllt. – OAVO § 13 Abs. 5 Satz 2, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
 - Ein LK bleibt über die gesamte Q-Phase in derselben Lerngruppe. – OAVO § 8 Abs. 3 Satz 1, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
 - In der Q-Phase begonnene Leistungsfächer müssen bis zum Abitur fortgeführt werden können. – OAVO § 13 Abs. 5 Satz 4, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
@@ -144,7 +149,7 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
     ¹ „zwei fremdsprachliche oder zwei naturwissenschaftliche Kurse oder zwei Informatikkurse“ (eine gemeinsame Pflicht).
     ² „entweder vier Kurse Politik und Wirtschaft oder vier Kurse Wirtschaftswissenschaften“; im zweiten Jahr der Q-Phase kann
     Geographie Politik und Wirtschaft ersetzen, wenn Geographie seit E1 durchgängig belegt wurde. – OAVO Anlage 7, https://www.rv.hessenrecht.hessen.de/perma?d=hevr-OSt_AbiVHEV13Anlage7 (Fassung 10.07.2024, gültig ab 01.08.2024), abgerufen 29.10.2026
-  - Den Sonderfall „Fremdsprache nach § 14 Abs. 3“ (§ 14 nicht im Original gelesen) bildet der Rechner nicht ab.
+  - Den Sonderfall „Fremdsprache nach § 14 Abs. 3“ (§ 14 Abs. 3, gelesen 02.11.2026) bildet der Rechner nicht ab.
   - **Grundkurs-Angebot der HBS in der Q-Phase:** Deutsch, Englisch, Französisch, Spanisch, Kunst, Musik, Politik und Wirtschaft,
     Geschichte, Geographie, Religion, Ethik, Mathematik, Biologie, Chemie, Physik, Informatik, Sport (mit Sport-Abi); **kein**
     Latein, **kein** Darstellendes Spiel. Die Schule sagt „Geographie“. – SCHULE (Nutzer 29.10.2026)
@@ -287,4 +292,4 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
 6. **Abiturerlass 2029:** Er existiert noch nicht (Stand 27.10.2026). Ob die Erlasse auch im Amtsblatt erscheinen, ist ungeklärt; belegt ist nur die Veröffentlichung auf kultus.hessen.de.
 7. **Broschüre „Abitur in Hessen“:** Sie ist veraltet (2021), die Neuauflage ist angekündigt. Nicht als Beleg verwenden.
 8. **Wortlaut § 26 Abs. 2 Satz 3** („davon maximal zwei Leistungskurse in einfacher Wertung“): Die Formulierung habe ich wörtlich übernommen. Gemeint ist vermutlich: höchstens 2 der 8 LK-Halbjahre unter 5 Punkten. Bei Bedarf bei der Oberstufenleitung gegenprüfen.
-9. **§ 14 OAVO (Begriff „fortgeführte Fremdsprache“):** Den Wortlaut habe ich nicht erneut gelesen, weil das Portal beim zweiten Abruf hängen blieb. Dass Englisch dazugehört, ist Standard, im Wortlaut aber nicht nachgeprüft.
+9. ~~§ 14 OAVO (Begriff „fortgeführte Fremdsprache“)~~ Geklärt 02.11.2026: „aus der Mittelstufe fortgeführte Fremdsprache“ (§ 14 Abs. 1, Abschn. 2). Früher: Den Wortlaut habe ich nicht erneut gelesen, weil das Portal beim zweiten Abruf hängen blieb. Dass Englisch dazugehört, ist Standard, im Wortlaut aber nicht nachgeprüft.
