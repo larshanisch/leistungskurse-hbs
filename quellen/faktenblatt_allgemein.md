@@ -1,6 +1,7 @@
 # Faktenblatt: Leistungskurse in Hessen – fächerübergreifende amtliche Vorgaben
 
 Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Q-Phase 2027/28–2028/29, Landesabitur 2029
+Version 2.4 (02.11.2026: Tutorium und LUSD, Schulangaben)
 Version 2.3 (29.10.2026: Fachhochschulreife § 48, Anlage 12, Zulassung § 23 Abs. 4–6, Wiederholung § 40, Rücktritt § 13 Abs. 10–11, Verweildauer § 3 am Originaltext)
 Version 2.2 (29.10.2026: Tabelle Anlage 10b am Originaltext)
 Version 2.1 (29.10.2026: Fächer mit zentralen Aufgaben im Landesabitur 2028 am Originaltext)
@@ -60,6 +61,7 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
   - Insgesamt sind in der Regel 33 Wochenstunden pro Schuljahr vorgesehen. – OAVO § 13 Abs. 8, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
 - **Pflichtregel für eines der beiden Fächer:** „Ein Leistungsfach muss eine fortgeführte Fremdsprache oder Mathematik oder eine Naturwissenschaft sein.“ Als weiteres Leistungsfach kommt jedes Fach nach § 13 Abs. 3 und 4 in Frage, das die Schule anbietet. – OAVO § 13 Abs. 2 Satz 1–2, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
 - **Kombinationen an der HBS (Schulangabe, gilt vor der Übersicht darunter):** Nach den Blättern „Mögliche Prüfungsfachkombinationen im Abitur (nach Tutorien)“ gibt es Tutorien in Englisch, Biologie, Mathematik und Politik und Wirtschaft (= 1. LK). 2. LK zu Englisch: Deutsch, Kunst, PoWi, Geschichte, Biologie, Chemie, Mathematik; zu Biologie: Englisch, Deutsch, Kunst, PoWi, Geschichte, Chemie, Mathematik; zu Mathematik: Englisch, Deutsch, Kunst, PoWi, Geschichte, Biologie, Chemie; zu PoWi: Englisch, Biologie, Chemie, Mathematik. Die Blätter nennen Aufgabenfeld II als „Geschichte/PoWi/Religion/Ethik/Geographie“ und die Pflicht nach § 24 Abs. 6 als „Fremdsprache/Naturwissenschaft“. Ausnahmen fürs 3. Prüfungsfach: bei Bio/M und M/Ch keine Naturwissenschaft, bei Bio/Ch nicht Mathematik, bei E/Ku nicht Deutsch (deckt sich mit § 24 Abs. 2). – vom Nutzer eingestellt 29.10.2026 (Zip mit vier PDF-Blättern Bio, Eng, Mat, Pol)
+- **Tutorium:** Schülerinnen und Schüler legen nicht selbst fest, welcher ihrer Leistungskurse ihr Tutorium ist; das legt die Oberstufenleitung fest. – SCHULE (Nutzer 02.11.2026)
 - **Kursangebot der HBS, erste Übersicht (Schulangabe, durch die Blätter überholt: PoWi kann auch 1. LK sein, Chemie nur 2. LK):** 1. Leistungskurs Englisch, Biologie, Chemie oder Mathematik (Vorgabe des Landes laut Übersicht: Sprache, Naturwissenschaft, Mathematik); 2. Leistungskurs Englisch, Deutsch, Kunst, Politik und Wirtschaft, Geschichte, Biologie, Chemie oder Mathematik („Angebot der Schule“). – Übersicht der Schule „1./2. Leistungskurs“, vom Nutzer eingestellt 29.10.2026
 - **„Erster“ und „zweiter“ LK:** Die geltende OAVO schreibt keine Reihenfolge vor; § 13 Abs. 2 sagt „**Ein** Leistungsfach muss …“. Die beiden Leistungsfächer heißen in der Prüfung nur „erstes und zweites Prüfungsfach“. – OAVO § 13 Abs. 2; § 24 Abs. 2 Nr. 1, https://www.rv.hessenrecht.hessen.de/perma?j=OSt%2FAbiV_HE, abgerufen 27.10.2026
   - Ob ältere Fassungen „das erste Leistungsfach muss …“ formulierten, habe ich nicht amtlich geprüft. Schulische Infomaterialien sprechen teils noch von „1. LK“. – [UNSICHER]
@@ -189,6 +191,7 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
     schulischen Teil erworben hat und die Schule verlässt, bekommt ihn im Abgangszeugnis bescheinigt (Abs. 9); das Zeugnis der Fachhochschulreife stellt
     dann die Schule aus (Abs. 10). – OAVO § 48 Abs. 6, 8–10, OAVO, Gesamtausgabe https://www.rv.hessenrecht.hessen.de/perma?a=OSt%2FAbiV_HE (gültig ab 01.08.2026), abgerufen 29.10.2026
 - **Berufsorientierung an der HBS:** Die Schule hat ein „Berufsorientierungszentrum“ (Koordination in Raum 227) mit Angeboten für alle Jahrgangsstufen; die Studien- und Berufsberatung der Agentur für Arbeit (Bad Homburg) berät an der Schule. – Schulwebsite https://www.heinrich-boell-schule.de/angebote/beratungsangebote/berufliche-orientierung.html, abgerufen 29.10.2026 (vom Nutzer genannt)
+- **Einbringen, Berechnung:** Die LUSD berechnet automatisch die besten Kurse, die man einbringen kann. – SCHULE (Nutzer 02.11.2026)
 - **Einbringen bei weniger als vier Pflichtkursen** (z. B. Kunst oder Musik 2): Welche Halbjahre, ist frei wählbar. – SCHULE (Nutzer 29.10.2026)
 - **Nebenbei (Zulassung zur Q-Phase, relevant für die E-Phase):** In jedem Pflichtfach braucht man am Ende der E-Phase mindestens 5 Punkte, sonst ist ein Ausgleich nötig. 0 Punkte in einem Fach schließt die Zulassung aus. – OAVO § 12 Abs. 2–3, ebd., abgerufen 27.10.2026
 

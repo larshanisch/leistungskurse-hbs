@@ -9,8 +9,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
 
-const VERSION = '1.0';
-const STAND = '30.10.2026';
+const VERSION = '1.1';
+const STAND = '02.11.2026';
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
 const OUT = path.join(ROOT, 'dist', 'moodle');
 const rd = (f) => fs.readFileSync(path.join(ROOT, f), 'utf8');
@@ -22,6 +22,8 @@ const cut = (re, n) => { const m = s.match(re); if (!m || m.length !== n) throw 
 // Filme, QR-Code, Offline-Speicher und Update-Meldung gehören nicht ins Paket
 cut(/<script src="assets\/data\/[a-z]+\.js"><\/script>\n/g, 8);
 cut(/<script src="assets\/js\/(qr|offline|update)\.js"><\/script>\n/g, 3);
+// Tafel-Einrichtung öffnet sich im Paket nie (openSetup bricht bei MOODLE ab); der Poster-Link zeigt auf eine Datei, die nicht im Paket liegt
+cut(/\s*<a class="dl"[\s\S]*?<\/a>/g, 1);
 rep('<script src="assets/js/icons.js"></script>', '<script src="scorm.js"></script>\n<script src="assets/js/icons.js"></script>');
 rep('<title>Leistungskurse an der Heinrich-Böll-Schule</title>', '<title>Kursplaner · Heinrich-Böll-Schule</title>');
 rep('<p class="kicker">Gymnasiale Oberstufe · Tag der offenen Tür</p>', '<p class="kicker">Gymnasiale Oberstufe · Kursplaner</p>');

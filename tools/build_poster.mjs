@@ -280,14 +280,14 @@ function planerHtml() {
   </div>
   <div class="steps">
     <section class="step"><i>1</i><div><h2>Leistungskurse</h2>
-      <p>Tippe auf die Kombination, die dich interessiert. Du siehst nur Kombinationen, die es an der HBS gibt. Der <span class="pill g">1. Leistungskurs</span> ist dein Tutorium, dazu kommt der <span class="pill b">2. Leistungskurs</span>.</p>
+      <p>Tippe auf die Kombination, die dich interessiert. Du siehst nur Kombinationen, die es an der HBS gibt. Der <span class="pill g">1. Leistungskurs</span> ist der Kurs deines Tutoriums, dazu kommt der <span class="pill b">2. Leistungskurs</span>. Welcher deiner beiden Kurse das Tutorium wird, legt die Oberstufenleitung fest.</p>
       <p>Der Planer zeigt sofort, welche Fächer auf die Plätze 3 bis 5 kommen müssen und ob es Einschränkungen gibt.</p></div></section>
     <section class="step"><i>2</i><div><h2>Prüfungsfächer</h2>
       <p>Deine beiden Leistungskurse sind die Prüfungsfächer 1 und 2. Tippe auf Platz 3, 4 oder 5 und wähle ein Fach: Platz 3 wird schriftlich geprüft, Platz 4 mündlich, Platz 5 mündlich oder als Präsentation.</p>
       <p>Fächer, die auf einem Platz nicht möglich sind, erscheinen grau; antippen zeigt den Grund. <span class="pill k">Vorschlag einsetzen</span> füllt die freien Plätze mit einer gültigen Wahl.</p></div></section>
     <section class="step"><i>3</i><div><h2>Kurse</h2>
       <p>Stelle für jedes Fach ein, wie viele Kurse du <b>belegst</b> und wie viele du <b>einbringst</b>. Was ohnehin Pflicht ist, steht schon da. Eine Prüfliste zeigt, was noch fehlt; <span class="pill k">Pflicht automatisch auffüllen</span> ergänzt den Rest.</p>
-      <p><small>Belegen heißt: einen Kurs ein Halbjahr lang besuchen. Einbringen heißt: Die Note zählt fürs Abitur – genau 32 Kurse, davon 8 Leistungskurse doppelt und 24 Grundkurse.</small></p></div></section>
+      <p><small>Belegen heißt: einen Kurs ein Halbjahr lang besuchen. Einbringen heißt: Die Note zählt fürs Abitur – genau 32 Kurse, davon 8 Leistungskurse doppelt und 24 Grundkurse. Die LUSD berechnet automatisch die besten Kurse, die du einbringen kannst.</small></p></div></section>
   </div>
   <div class="cols2">
     <section><h2>Für später merken</h2>

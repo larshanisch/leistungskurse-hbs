@@ -878,7 +878,7 @@
       var allOk = c.P.concat(c.B, c.E).every(function (x) { return x[0]; });
       $('kCheck').innerHTML = '<p class="verdict' + (allOk ? ' ok' : '') + '">' + (allOk ? 'Alles erfüllt.' : 'Noch nicht alles erfüllt.') + '</p>' +
         h3('Prüfungsfächer 3 bis 5', c.P) + list(c.P) + h3('Belegen', c.B) + list(c.B) + h3('Einbringen', c.E) + list(c.E) +
-        '<p class="fine">Belegt = besuchte Kurse in Q1 bis Q4, eingebracht = Kurse, die in die Abiturnote zählen; LK-Kurse zählen doppelt. „Pflicht“ und Geschichte 2 sind ohne Wahl vorgegeben. Ohne Noten: ' +
+        '<p class="fine">Belegt = besuchte Kurse in Q1 bis Q4, eingebracht = Kurse, die in die Abiturnote zählen; LK-Kurse zählen doppelt. Die LUSD berechnet automatisch die besten Kurse, die du einbringen kannst. „Pflicht“ und Geschichte 2 sind ohne Wahl vorgegeben. Ohne Noten: ' +
         'keiner darf 0 Punkte haben, höchstens 6 unter 5 Punkten. Sonderfall zweite Fremdsprache nach § 14 Abs. 3 nicht berücksichtigt – das klärt die ' +
         'Oberstufenleitung. Grundlage: OAVO § 13 Abs. 9 mit Anlage 7, § 24, § 26.</p>';   // „Ohne Gewähr“ steht oben im Planer
     }
@@ -1024,9 +1024,9 @@
         side = '<p class="p2lead">Tippe auf die Kombination, die dich interessiert.</p>' +
           '<p class="fine">Einer der beiden LKs muss eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein.</p>';
       }
-      return '<div class="p2s1"><div class="mxw"><div class="mx-key"><span class="lk1"><i></i>1. Leistungskurs = dein Tutorium</span>' +
+      return '<div class="p2s1"><div class="mxw"><div class="mx-key"><span class="lk1"><i></i>1. Leistungskurs</span>' +
         '<span class="lk2"><i></i>2. Leistungskurs</span><span class="lm"><i></i>mit Einschränkungen</span><span class="x"><i></i>gibt es an der HBS nicht</span></div>' +
-        '<div class="mx" style="--cols:' + COLS.length + '">' + head + rows + '</div>' + p2List() + '</div><div class="p2side">' + side + '</div></div>';
+        '<div class="mx" style="--cols:' + COLS.length + '">' + head + rows + '</div>' + p2List() + '<p class="fine p2tut">Der 1. Leistungskurs ist der Kurs deines Tutoriums. Welcher deiner beiden Kurse das wird, legt die Oberstufenleitung fest.</p></div><div class="p2side">' + side + '</div></div>';
     }
     // Handy: statt der Tafel (acht Spalten wären nur 25 px breit) je Tutorium eine Reihe Knöpfe mit dem 2. LK
     function p2List() {
@@ -1111,7 +1111,8 @@
             'Manche Fächer musst du alle vier Halbjahre besuchen, zum Beispiel Deutsch, Mathematik und Sport.</p>' +
           '<p><b>Einbringen</b> heißt: Die Note aus diesem Kurs zählt für dein Abitur. Es zählen nicht alle Kurse, die du besuchst, sondern genau 32: ' +
             'deine 8 Kurse in den beiden Leistungskursen – sie zählen doppelt – und 24 Grundkurse.</p>' +
-          '<p>Einen Teil der 24 Grundkurse schreibt die Verordnung vor, den Rest wählst du selbst. Du kannst nur einbringen, was du auch belegt hast.</p>' +
+          '<p>Einen Teil der 24 Grundkurse schreibt die Verordnung vor, der Rest ist frei. Du kannst nur einbringen, was du auch belegt hast.</p>' +
+          '<p class="p2ex"><b>Hinweis:</b> Die LUSD berechnet automatisch die besten Kurse, die du einbringen kannst.</p>' +
           '<p class="p2ex"><b>Beispiel:</b> Kunst oder Musik musst du mindestens zwei Halbjahre belegen – und diese zwei Kurse zählen dann auch für dein Abitur.</p>' +
         '</div>' +
         '<p class="p2sub">Was du bei deiner Kombination einbringen musst oder kannst:</p>' + einbring(pick.a, pick.b) + '</details><div id="p3go" class="p3go"></div><div id="p2calc"></div>';
@@ -1635,6 +1636,7 @@
 
     // --- Einrichtung ---
     function openSetup() {
+      if (MOODLE) return;   // im Lernpaket keine Tafel-Einrichtung (auch nicht über das Logo)
       $('setupCols').innerHTML = FIELDS.map(function (f) {
         return '<fieldset><legend>Aufgabenfeld ' + f.num + '</legend>' + f.subjects.map(function (id) {
           var on = room && (room.all || room.subjects.indexOf(id) >= 0);
