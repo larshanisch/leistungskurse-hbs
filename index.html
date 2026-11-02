@@ -812,6 +812,7 @@
       var NW = ids('nw');
       var KM = ids('km'), RE = ids('re'), AF2 = GK.filter(function (g) { return g.f === 2; }).map(function (g) { return g.id; });
       var desc = function (x, y) { return y - x; };
+      var fs14 = P2.fs14 === 2, fsSorted = function (f) { return FS.map(f).sort(desc); };   // § 14 Abs. 3: durchgehend eine zweite Fremdsprache
       var second = function (f) { // zweite Pflicht: weitere Fremdsprache oder weitere Naturwissenschaft oder Informatik
         var nw = NW.map(f).sort(desc), fs = FS.map(f).sort(desc);   // fs[0] ist die fortgeführte, fs[1] die weitere Sprache
         return fs[1] >= 2 || nw[1] >= 2 || f('info') >= 2;
@@ -837,7 +838,7 @@
         [bel('powi') >= 4 || (bel('powi') >= 2 && bel('geo') >= 2), 'Politik und Wirtschaft 4' + (bel('powi') < 4 && bel('geo') >= 2 ? ' (ab Q3 Geographie – nur wenn ab E1 belegt)' : '')],
         [bel('geschichte') >= 4, 'Geschichte 4'], [maxOf(RE, bel) >= 4, 'Religion oder Ethik 4'],
         [bel('mathe') >= 4, 'Mathematik 4'], [maxOf(NW, bel) >= 4, 'eine Naturwissenschaft 4'],
-        [second(bel), 'weitere Fremdsprache, Naturwissenschaft oder Informatik 2'], [bel('sport') >= 4, 'Sport 4']
+        fs14 ? [fsSorted(bel)[1] >= 4, 'zweite Fremdsprache 4 (durchgehend)'] : [second(bel), 'weitere Fremdsprache, Naturwissenschaft oder Informatik 2'], [bel('sport') >= 4, 'Sport 4']
       ];
       // Einbringen (§ 26)
       var gkSum = GK.reduce(function (n, g) { return n + (isLK(g.id) ? 0 : ein(g.id)); }, 0);
@@ -848,7 +849,7 @@
         [maxOf(NW, ein) >= 4, 'eine Naturwissenschaft 4'], [maxOf(KM, ein) >= 2, 'Kunst oder Musik mind. 2'],
         [af2 >= 6 && ein('geschichte') >= 2 && Math.max(ein('powi'), ein('geo')) >= 2,
           'Aufgabenfeld II: ' + af2 + ' von mind. 6, darunter 2 Geschichte, 2 PoWi oder Geographie'],
-        [second(ein), 'weitere Fremdsprache, Naturwissenschaft oder Informatik 2'],
+        fs14 ? [fsSorted(ein)[1] >= 2, 'zweite Fremdsprache: Q3 und Q4'] : [second(ein), 'weitere Fremdsprache, Naturwissenschaft oder Informatik 2'],
         [isEx('sport') || ein('sport') <= 3, 'Sport höchstens 3' + (isEx('sport') ? ' (als Prüfungsfach alle 4)' : '')]
       ];
       return { P: P, B: B, E: E, gkSum: gkSum };
@@ -894,8 +895,8 @@
         (fsWarn() ? '<p class="kwarn" role="alert"><b>Achtung:</b> ' + fsWarn() + ' Im Zweifel berät dich deine Tutorin oder dein Tutor.</p>' : '') +
         h3('Prüfungsfächer 3 bis 5', c.P) + list(c.P) + h3('Belegen', c.B) + list(c.B) + h3('Einbringen', c.E) + list(c.E) +
         '<p class="fine">Belegt = besuchte Kurse in Q1 bis Q4, eingebracht = Kurse, die in die Abiturnote zählen; LK-Kurse zählen doppelt. Die LUSD berechnet automatisch die besten Kurse, die du einbringen kannst. Die fortgeführte Fremdsprache ist meist Englisch, in seltenen Fällen Französisch oder Spanisch. „Pflicht“ und Geschichte 2 sind ohne Wahl vorgegeben. Ohne Noten: ' +
-        'keiner darf 0 Punkte haben, höchstens 6 unter 5 Punkten. Sonderfall zweite Fremdsprache nach § 14 Abs. 3 nicht berücksichtigt – das klärt die ' +
-        'Oberstufenleitung. Grundlage: OAVO § 13 Abs. 9 mit Anlage 7, § 24, § 26.</p>';   // „Ohne Gewähr“ steht oben im Planer
+        'keiner darf 0 Punkte haben, höchstens 6 unter 5 Punkten. Grundlage: OAVO § 13 Abs. 9 mit Anlage 7, § 14, ' +
+        '§ 24, § 26.</p>';   // „Ohne Gewähr“ steht oben im Planer
     }
     var kNoteTimer = 0;
     function kNote(text) {
@@ -919,7 +920,7 @@
 
     // ===== Planer „Kurswahl durchspielen“ in drei Schritten (Entscheidung 96) =====
     // Nutzt die Regeln der echten Seite: PAIRS/fits (Kombinationen), consequences (Pflicht für 3–5), K/kStart/kChecks/renderKurse (Rechner).
-    var P2 = { step: 1, slot: { 3: null, 4: null, 5: null }, open: 0 };
+    var P2 = { step: 1, slot: { 3: null, 4: null, 5: null }, open: 0, fs14: 0 };   // fs14: zweite Fremdsprache in der Mittelstufe (Entscheidung 134)
     // Schritt 4 „Noten“ (Punkterechner, eigene Noten) vorerst aus: erste Fassung für den Tag der offenen Tür nur mit
     // Kombinationen, Prüfungsfächern, Belegen und Einbringen (Entscheidung 112). Auf true setzen schaltet alles wieder ein.
     var NOTEN_AN = MOODLE;   // im Moodle-Paket an (Entscheidung 116)
@@ -1133,7 +1134,13 @@
     // --- Schritt 3: der Rechner (Belegen, Einbringen) mit den gewählten Prüfungsfächern ---
     function p2Step3() {
       // in einfacher Sprache zuerst, die Übersicht danach (Nutzer: Erklärung muss einfacher verständlich sein)
-      return '<details class="p2more"><summary>Was heißt „belegen“ und „einbringen“?</summary>' +
+      var fsq = function (v, label) { return '<button type="button" data-fs14="' + v + '" aria-selected="' + (P2.fs14 === v) + '">' + label + '</button>'; };
+      var fsNote = P2.fs14 === 2 ? 'Dann musst du in der Oberstufe durchgehend eine zweite Fremdsprache belegen, also auch alle vier Halbjahre Q1 bis Q4. Q3 und Q4 zählen fürs Abitur, und kein Kurs darf 0 Punkte haben. Die Prüfliste rechnet das mit.'
+        : P2.fs14 === 1 ? 'Dann führst du beide Fremdsprachen bis zum Ende der Einführungsphase weiter. In Q1 bis Q4 gilt danach die normale Prüfliste.' : '';
+      return '<div class="p3fs"><span class="p3fsq">Hattest du in der Mittelstufe eine zweite Fremdsprache mit Noten?</span>' +
+        '<div class="p4mode">' + fsq(0, 'Ja, durchgehend') + fsq(1, 'Nur die letzten zwei Jahre') + fsq(2, 'Nein') + '</div>' +
+        (fsNote ? '<p class="p3fsn">' + fsNote + '</p>' : '') + '</div>' +
+        '<details class="p2more"><summary>Was heißt „belegen“ und „einbringen“?</summary>' +
         '<div class="p2easy">' +
           '<p><b>Belegen</b> heißt: Du besuchst einen Kurs ein Halbjahr lang. Die Oberstufe hat vier Halbjahre, Q1 bis Q4. ' +
             'Manche Fächer musst du alle vier Halbjahre besuchen, zum Beispiel Deutsch, Mathematik und Sport.</p>' +
@@ -1205,6 +1212,10 @@
       var fsBest = function (f) { return FS.slice().sort(function (x, y) { return f(y) - f(x); })[0]; };
       if (!any(FS, bel, 4)) setBel(fsBest(bel), 4);
       if (!any(FS, ein, 4)) setEin(fsBest(bel), 4);
+      if (P2.fs14 === 2) {   // § 14 Abs. 3: die zweite Sprache durchgehend, Q3 und Q4 eingebracht
+        var fs2 = FS.filter(function (id) { return id !== fsBest(bel); }).sort(function (x, y) { return bel(y) - bel(x); })[0];
+        setBel(fs2, 4); setEin(fs2, 2);
+      }
       if (!any(['kunst', 'musik'], bel, 2)) setBel('kunst', 2);
       if (!any(['religion', 'ethik'], bel, 4)) setBel('religion', 4);
       var nw1 = NW.filter(function (id) { return bel(id) >= 4; })[0] || NW.filter(free)[0]; setBel(nw1, 4);
@@ -1308,6 +1319,10 @@
       var tmp = document.createElement('div'); tmp.innerHTML = P4.mode === 'echt' ? p2Step4Echt() : p2Step4();
       document.querySelector('#p2body .p4out').replaceWith(tmp.querySelector('.p4out'));
     });
+    $('v-planer').addEventListener('click', function (e) {
+      var b = e.target.closest('[data-fs14]'); if (!b) return;
+      P2.fs14 = Number(b.dataset.fs14); p2Render();
+    });
     function p3GoRender() {
       var g = $('p3go'); if (!g) return;
       g.innerHTML = p3Ok() ? '<span class="p3ok">✓ Belegen und Einbringen erfüllt.</span>' + (NOTEN_AN ? '<a class="p2next" href="#planer/4/' + pick.a + '/' + pick.b + '">Weiter: Noten und Zulassung →</a>' : '')
@@ -1339,7 +1354,9 @@
       GK.forEach(function (g) {
         var id = g.id; if (isLK(id) || ein(id) === 0) return;
         var hs = []; for (var h = 0; h < nBel(id); h++) hs.push({ h: h, v: qOrRest(id, h), open: qv(id, h) == null });
-        hs.sort(function (x, y) { return y.v - x.v; });
+        var fixed = P2.fs14 === 2 && id === FS.slice().sort(function (x, y) { return bel(y) - bel(x); })[1];
+        hs.sort(function (x, y) { return fixed && (y.h >= 2) !== (x.h >= 2) ? (y.h >= 2) - (x.h >= 2) : y.v - x.v; });
+        if (fixed) hs.forEach(function (x) { if (!x.open && x.v === 0 && hs.indexOf(x) >= ein(id)) zero.push(nm(id) + ' Q' + (x.h + 1)); });
         var take = hs.slice(0, ein(id)); pick[id] = take.map(function (x) { return x.h; });
         take.forEach(function (x) { gkPts += x.v; if (x.open) open++; if (x.v < 5) under++; if (x.v === 0) zero.push(nm(id) + ' Q' + (x.h + 1)); });
       });
@@ -1469,7 +1486,7 @@
       var pts = GK.map(function (g) { return HEX[P4.pts[g.id] == null ? 8 : P4.pts[g.id]]; }).join('');
       var ex = [1, 2, 3, 4, 5].map(function (n) { return HEX[P4.ex[n] == null ? 8 : P4.ex[n]]; }).join('');
       var q = GK.map(function (g) { return [0, 1, 2, 3].map(function (h) { var v = (P4.q[g.id] || [])[h]; return v == null ? '-' : HEX[v]; }).join(''); }).join('');
-      return 'z' + be + '.' + (P4.mode === 'echt' ? 'm' : 'e') + HEX[P4.rest == null ? 8 : P4.rest] + '.' + pts + '.' + ex + '.' + q;
+      return 'z' + be + '.' + (P4.mode === 'echt' ? 'm' : 'e') + HEX[P4.rest == null ? 8 : P4.rest] + ['', 's', 'n'][P2.fs14] + '.' + pts + '.' + ex + '.' + q;
     }
     function p2Restore(code) {
       var p = code.slice(1).split('.');
@@ -1479,6 +1496,7 @@
         K.ein[g.id] = Math.max(minEin(g.id), Math.min(K.bel[g.id], Number(p[0][2 * i + 1]) || 0));
       });
       if (typeof P4 === 'undefined' || !p[1]) return;
+      P2.fs14 = p[1][2] === 'n' ? 2 : p[1][2] === 's' ? 1 : 0;
       P4.mode = p[1][0] === 'm' ? 'echt' : 'erw'; P4.rest = HEX.indexOf(p[1][1]) < 0 ? 8 : HEX.indexOf(p[1][1]);
       if (p[2]) GK.forEach(function (g, i) { var v = HEX.indexOf(p[2][i]); if (v >= 0) P4.pts[g.id] = v; });
       if (p[3]) [1, 2, 3, 4, 5].forEach(function (n, i) { var v = HEX.indexOf(p[3][i]); if (v >= 0) P4.ex[n] = v; });

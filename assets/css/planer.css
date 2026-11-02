@@ -341,3 +341,9 @@ html.touch .p4q { height: 44px; }
 /* Warnung: Französisch/Spanisch nur als fortgeführte Fremdsprache (Entscheidung 132) */
 .kwarn { margin: 8px 0 10px; padding: 10px 14px; border-radius: 12px; background: #fdf5df; border: 1px solid #e0a100; color: #4f3a00; font-weight: 600; line-height: 1.4; }
 @media (min-width: 900px) and (min-aspect-ratio: 4/3) { .kwarn { font-size: max(14px, 1.75vh); } }
+/* Frage nach der zweiten Fremdsprache aus der Mittelstufe (Entscheidung 134) */
+.p3fs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 0 0 12px; padding: 10px 16px; border-radius: 14px; background: #fff; border: 1px solid var(--line); }
+.p3fsq { font-weight: 700; }
+.p3fs .p4mode { margin: 0; flex-wrap: wrap; border-radius: 16px; }
+.p3fsn { flex-basis: 100%; margin: 2px 0 0; color: var(--ink-soft); line-height: 1.4; }
+html.touch .p3fs .p4mode button { min-height: 44px; }

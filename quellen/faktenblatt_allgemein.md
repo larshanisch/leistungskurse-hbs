@@ -1,6 +1,7 @@
 # Faktenblatt: Leistungskurse in Hessen – fächerübergreifende amtliche Vorgaben
 
 Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Q-Phase 2027/28–2028/29, Landesabitur 2029
+Version 2.6 (02.11.2026: § 14 Abs. 2 Satz 4 und Abs. 3 am Originaltext)
 Version 2.5 (02.11.2026: Fremdsprachen § 14 und § 24 Abs. 4–5 am Originaltext)
 Version 2.4 (02.11.2026: Tutorium und LUSD, Schulangaben)
 Version 2.3 (29.10.2026: Fachhochschulreife § 48, Anlage 12, Zulassung § 23 Abs. 4–6, Wiederholung § 40, Rücktritt § 13 Abs. 10–11, Verweildauer § 3 am Originaltext)
@@ -149,7 +150,9 @@ Version 1.4 (29.10.2026: Klausurzahl GK/LK, Referat neben Kommunikationsprüfung
     ¹ „zwei fremdsprachliche oder zwei naturwissenschaftliche Kurse oder zwei Informatikkurse“ (eine gemeinsame Pflicht).
     ² „entweder vier Kurse Politik und Wirtschaft oder vier Kurse Wirtschaftswissenschaften“; im zweiten Jahr der Q-Phase kann
     Geographie Politik und Wirtschaft ersetzen, wenn Geographie seit E1 durchgängig belegt wurde. – OAVO Anlage 7, https://www.rv.hessenrecht.hessen.de/perma?d=hevr-OSt_AbiVHEV13Anlage7 (Fassung 10.07.2024, gültig ab 01.08.2024), abgerufen 29.10.2026
-  - Den Sonderfall „Fremdsprache nach § 14 Abs. 3“ (§ 14 Abs. 3, gelesen 02.11.2026) bildet der Rechner nicht ab.
+  - **Keine durchgehende zweite Fremdsprache in der Mittelstufe:** „müssen in der gymnasialen Oberstufe durchgehend Unterricht in einer zweiten Fremdsprache belegen, dessen Umfang insgesamt mindestens zwölf Jahreswochenstunden beträgt, wobei kein Kurs in der Qualifikationsphase mit null Punkten abgeschlossen sein darf“; „die Ergebnisse des Prüfungshalbjahres und des Halbjahres davor“ werden eingebracht; die erste Fremdsprache wird weiter belegt. – OAVO § 14 Abs. 3, Gesamtausgabe gültig ab 01.08.2026, abgerufen 02.11.2026
+  - **Zweite Fremdsprache erst in den letzten beiden Jahren der Mittelstufe benotet:** beide bis zum Ende der Einführungsphase fortführen, mindestens eine während der gesamten Q-Phase belegen und einbringen. – OAVO § 14 Abs. 2 Satz 4, ebd.
+  - **[ABLEITUNG]** Der Rechner fragt danach und wendet Abs. 3 selbst an; Abs. 2 Satz 4 verstehe ich als vorrangige Sonderregel, in der Q-Phase gilt dann die normale Prüfliste. Die zwölf Jahreswochenstunden prüft er nicht.
   - **Grundkurs-Angebot der HBS in der Q-Phase:** Deutsch, Englisch, Französisch, Spanisch, Kunst, Musik, Politik und Wirtschaft,
     Geschichte, Geographie, Religion, Ethik, Mathematik, Biologie, Chemie, Physik, Informatik, Sport (mit Sport-Abi); **kein**
     Latein, **kein** Darstellendes Spiel. Die Schule sagt „Geographie“. – SCHULE (Nutzer 29.10.2026)
