@@ -57,9 +57,10 @@ function data(film) {
   // statt der Ersatz-Zeilen des Films: eine Zeile „nur eine einzige“ direkt hinter der Klausurzahl
   // ohne die Vergleiche mit anderen Fächern: ohne den gesprochenen Text unklar (Nutzer 02.11.2026)
   const rest = klausur.items.filter((i) => i.value !== '↔' && !/Kommunikationsprüfung|andere Fächer: GK|Deutsch und Mathematik: auch/.test(i.label));
-  const ersatz = { value: '1×', label: 'von Q1 bis Q4 nur eine einzige Klausurersatzleistung', sub: P.ersatz || POSTER.ersatz };
+  const ersatz = P.ersatz ? { value: '↔', label: 'eine Klausur wird ersetzt', sub: P.ersatz }   // Englisch, Kunst: festgelegt
+    : { value: '↔', label: 'höchstens eine Klausur kann ersetzt werden', sub: POSTER.ersatz };    // sonst nur eine Möglichkeit (Entscheidung 135)
   return { film, id, c, name: NAMES[id], what: SUBJ[id].what, std, themen: P.themen, ok: ok.with, no: no.with,
-    note: (combo.items.find((i) => i.note) || {}).note, klausur: [rest[0], ersatz, ...rest.slice(1)], klausurNotes: P.ersatz ? [] : klausur.notes || [],
+    notes: combo.items.filter((i) => i.note).map((i) => i.note), klausur: [rest[0], ersatz, ...rest.slice(1)], klausurNotes: P.ersatz ? [] : klausur.notes || [],
     abi: abiS.panel.items, abiNotes: abiS.panel.notes || [], abiText: P.abitur, mitbringen: P.mitbringen };
 }
 
@@ -159,6 +160,7 @@ td:last-child { font-weight: 600; color: var(--head); }
 .check li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
 .kombi.bottom { display: block; }
 .kombi.bottom.two { display: grid; grid-template-columns: max-content 1fr; gap: 8mm; }
+.kombinotes { margin-top: -2mm; }
 .noh { color: var(--no); }
 .bottom { display: grid; grid-template-columns: 1fr auto; gap: 6mm; align-items: start; }
 .qrs { display: flex; gap: 4mm; }
@@ -233,9 +235,10 @@ function html(d) {
       ${d.abiText ? d.abiText.map((l) => '<p>' + l + '</p>').join('') : '<ul class="rows">' + d.abi.map(row).join('') + '</ul>' + notes(d.abiNotes)}</section>
   </div>
   <div class="bottom kombi${d.no.length ? ' two' : ''}">
-    <section><h2>Kombinierbar mit</h2><div class="combo ok">${d.ok.map(chip).join('')}</div>${d.no.length ? '' : '<p class="note">' + esc(d.note) + '</p>'}</section>
+    <section><h2>Kombinierbar mit</h2><div class="combo ok">${d.ok.map(chip).join('')}</div></section>
     ${d.no.length ? '<section><h2 class="noh">Nicht kombinierbar mit</h2><div class="combo no">' + d.no.map(chip).join('') + '</div></section>' : ''}
   </div>
+  ${d.notes.length ? '<div class="kombinotes">' + d.notes.map((n) => '<p class="note">' + esc(n) + '</p>').join('') + '</div>' : ''}
   <div class="foot"><span>Heinrich-Böll-Schule Hattersheim · Tag der offenen Tür</span><span>Stand Abitur 2028 · ohne Gewähr</span></div>
 </div>
 ${MEASURE}

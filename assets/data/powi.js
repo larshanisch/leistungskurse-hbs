@@ -219,6 +219,10 @@ window.FILMS["powi"] = {
        "geschichte"
       ],
       "t": 15.32
+     },
+     {
+      "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen.",
+      "t": 0
      }
     ]
    },

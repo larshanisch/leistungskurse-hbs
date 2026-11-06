@@ -31,8 +31,9 @@
       "image": { "src": "c03.jpg", "motion": "zoom-out" },
       "hold": 4,
       "panel": { "type": "combo", "title": "Chemie passt zu …", "items": [
-        { "at": "Chemie ist eine Naturwissenschaft", "ok": true, "with": ["englisch", "biologie", "mathe", "powi"] },
-        { "at": "Politik und Wirtschaft", "ok": false, "with": ["deutsch", "kunst", "geschichte"] }
+        { "at": "Chemie ist eine Naturwissenschaft", "ok": true, "with": ["deutsch", "englisch", "kunst", "powi", "geschichte", "biologie", "mathe"] },
+        { "at": "Biologie und Mathematik", "note": "Mit jedem anderen Leistungskurs an der HBS." },
+        { "at": "Chemie ist eine Naturwissenschaft", "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen." }
       ] }
     },
     {

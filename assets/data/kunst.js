@@ -197,7 +197,8 @@ window.FILMS["kunst"] = {
       "with": [
        "englisch",
        "mathe",
-       "biologie"
+       "biologie",
+       "chemie"
       ],
       "t": 0.6
      },
@@ -206,10 +207,13 @@ window.FILMS["kunst"] = {
       "with": [
        "deutsch",
        "powi",
-       "geschichte",
-       "chemie"
+       "geschichte"
       ],
       "t": 11.703
+     },
+     {
+      "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen.",
+      "t": 0
      }
     ]
    },

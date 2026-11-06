@@ -233,6 +233,10 @@ window.FILMS["mathematik"] = {
      {
       "note": "Mit jedem anderen Leistungskurs an der HBS.",
       "t": 18.765
+     },
+     {
+      "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen.",
+      "t": 0
      }
     ]
    },

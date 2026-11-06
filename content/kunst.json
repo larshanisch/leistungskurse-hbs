@@ -35,8 +35,9 @@
       "image": { "src": "k03.jpg", "motion": "zoom-out" },
       "hold": 4,
       "panel": { "type": "combo", "title": "Kunst passt zu …", "items": [
-        { "at": "Kunst kann nur eines", "ok": true, "with": ["englisch", "mathe", "biologie"] },
-        { "at": "Kunst mit Deutsch", "ok": false, "with": ["deutsch", "powi", "geschichte", "chemie"] }
+        { "at": "Kunst kann nur eines", "ok": true, "with": ["englisch", "mathe", "biologie", "chemie"] },
+        { "at": "Kunst mit Deutsch", "ok": false, "with": ["deutsch", "powi", "geschichte"] },
+        { "at": "Kunst kann nur eines", "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen." }
       ] }
     },
     {

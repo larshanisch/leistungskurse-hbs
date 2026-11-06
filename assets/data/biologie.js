@@ -221,6 +221,10 @@ window.FILMS["biologie"] = {
      {
       "note": "Mit jedem anderen Leistungskurs an der HBS.",
       "t": 21.2
+     },
+     {
+      "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen.",
+      "t": 0
      }
     ]
    },

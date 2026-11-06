@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Chemie
 
-Version 0.2 · 29.10.2026 (freigegeben)
+Version 0.3 · 06.11.2026 (freigegeben)
+
+Änderung gegenüber 0.2 (Nutzer 06.11.2026, Entscheidung 135): Chemie ist mit allen anderen Leistungskursen kombinierbar, es gelten nur die rechtlichen Vorgaben. Szene 3 nennt alle sieben statt vier; „meist kein Tutorium“ entfällt, weil die Oberstufenleitung das Tutorium festlegt.
 
 Änderung gegenüber 0.1 (Nutzer 29.10.2026): Chemie ist an der HBS „meist kein Tutorium“ – Szene 3 sagt das so, statt „immer dein zweiter Leistungskurs“.
 
@@ -70,9 +72,9 @@ Wie im Drehbuch PoWi. **Beleg** FB-C = `quellen/faktenblatt_chemie.md`, FB-A = `
   „Politik und Wirtschaft + Chemie ✓“
 - **Sprechtext:**
   > Chemie ist eine Naturwissenschaft und erfüllt damit die Regel, dass einer deiner beiden Leistungskurse eine
-  > Fremdsprache, Mathematik oder eine Naturwissenschaft sein muss. An unserer Schule ist Chemie meist kein
-  > Tutorium, sondern dein zweiter Leistungskurs, zusammen mit Englisch, Biologie, Mathematik oder Politik und
-  > Wirtschaft.
+  > Fremdsprache, Mathematik oder eine Naturwissenschaft sein muss. An unserer Schule kannst du Chemie deshalb mit
+  > jedem anderen Leistungskurs kombinieren, von Deutsch, Englisch und Kunst über Politik und Wirtschaft und Geschichte
+  > bis Biologie und Mathematik.
 - **Beleg:** FB-C 0 (§ 13 Abs. 2; Tutoriumsblätter: Chemie 2. LK zu allen vier Tutorien; SCHULE: „meist kein Tutorium“)
 
 ---

@@ -32,7 +32,8 @@
       "hold": 4,
       "panel": { "type": "combo", "title": "Biologie passt zu …", "items": [
         { "at": "Biologie ist eine Naturwissenschaft", "ok": true, "with": ["deutsch", "englisch", "kunst", "powi", "geschichte", "chemie", "mathe"] },
-        { "at": "Chemie und Mathematik", "note": "Mit jedem anderen Leistungskurs an der HBS." }
+        { "at": "Chemie und Mathematik", "note": "Mit jedem anderen Leistungskurs an der HBS." },
+        { "at": "Biologie ist eine Naturwissenschaft", "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen." }
       ] }
     },
     {

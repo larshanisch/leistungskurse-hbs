@@ -1,6 +1,6 @@
 # Faktenblatt Leistungskurs Chemie (Hessen) – für den Tag der offenen Tür
 
-Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Abitur voraussichtlich Frühjahr 2029 · Version 1.0
+Stand: 29.10.2026 · Zielgruppe: E-Phase 2026/27, Abitur voraussichtlich Frühjahr 2029 · Version 1.1 (06.11.2026: mit allen kombinierbar)
 
 > **Prüfung 29.10.2026 (am Originaltext):** KCGO Chemie und Abiturerlass 2028 direkt aus den PDF-Texten gelesen
 > (`pdftotext -layout`). Die Übersichtsseite des Ministeriums verlinkt „KCGO Chemie (Ausgabe April 2026)“; im
@@ -26,7 +26,8 @@ Kennzeichnungen wie im Faktenblatt PoWi: **[ABLEITUNG]** = aus den Quellen gesch
 
 - **Regel-Leistungsfach**, Aufgabenfeld III; als Naturwissenschaft **erfüllt Chemie die Pflichtregel** (einer der
   beiden LKs muss Fremdsprache, Mathematik oder Naturwissenschaft sein). – OAVO § 13 Abs. 2–3, FB-A Abschn. 2
-- **An der HBS:** Chemie ist **meist kein Tutorium** (Nutzer 29.10.2026; die Tutoriumsblätter nennen kein
+- **An der HBS (gilt seit 06.11.2026):** Chemie ist mit **allen** anderen Leistungskursen kombinierbar; es gelten nur die rechtlichen Vorgaben (§ 13 Abs. 2: Chemie ist Naturwissenschaft). – SCHULE (Nutzer 06.11.2026): „Chemie: mit allen kombinierbar. Es gelten nur die rechtlichen Vorgaben“; manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen (Entscheidung 135)
+- **Früher (überholt):** Chemie ist **meist kein Tutorium** (Nutzer 29.10.2026; die Tutoriumsblätter nennen kein
   Chemie-Tutorium), sondern 2. LK zu allen vier Tutorien: **Englisch, Biologie, Mathematik, Politik und
   Wirtschaft**. – SCHULE (Tutoriumsblätter, Entscheidung 40; FB-A Abschn. 2)
 - **[ABLEITUNG] Folgen für die Prüfungsfächer 3–5** (wie im Planer): Deutsch muss immer dabei sein, Mathematik

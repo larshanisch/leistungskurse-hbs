@@ -29,6 +29,7 @@ Faktenblatt PoWi.
 - **Nur zusammen mit einer Fremdsprache, Mathematik oder einer Naturwissenschaft** (OAVO § 13 Abs. 2 Satz 1).
 - **An der HBS:** Geschichte nur als 2. Leistungskurs, und zwar zu den Tutorien Englisch, Biologie oder
   Mathematik (nicht mit PoWi, nicht mit Chemie). – SCHULE (Tutoriumsblätter, FB-A Abschn. 2; Entscheidung 40)
+  - **Überholt seit 06.11.2026:** Geschichte geht auch mit **Chemie** (Englisch, Biologie, Chemie, Mathematik). – SCHULE (Nutzer 06.11.2026): „Chemie: mit allen kombinierbar. Es gelten nur die rechtlichen Vorgaben“; manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen (Entscheidung 135)
 - **[ABLEITUNG] Folgen für die Prüfungsfächer 3–5** (wie im Planer): mit Englisch oder Biologie Deutsch und
   Mathematik, ein Platz frei; mit Mathematik Deutsch sowie eine Fremdsprache oder Naturwissenschaft, ein
   Platz frei. – FB-A Abschn. 2 (§ 24 Abs. 1, 2, 6)

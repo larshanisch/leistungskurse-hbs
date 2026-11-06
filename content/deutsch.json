@@ -35,8 +35,9 @@
       "image": { "src": "s03.jpg", "motion": "zoom-out" },
       "hold": 4,
       "panel": { "type": "combo", "title": "Deutsch passt zu …", "items": [
-        { "at": "Eines deiner beiden Leistungsfächer", "ok": true, "with": ["englisch", "mathe", "biologie"] },
-        { "at": "Deutsch und Kunst", "ok": false, "with": ["kunst", "powi", "geschichte", "chemie"] }
+        { "at": "Eines deiner beiden Leistungsfächer", "ok": true, "with": ["englisch", "mathe", "biologie", "chemie"] },
+        { "at": "Deutsch und Kunst", "ok": false, "with": ["kunst", "powi", "geschichte"] },
+        { "at": "Eines deiner beiden Leistungsfächer", "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen." }
       ] }
     },
     {
@@ -163,8 +164,7 @@
             "label": "Referat oder Präsentation statt einer Klausur",
             "sub": "wenn die Lehrkraft es festlegt"
           },
-          { "at": "Abiturbedingungen", "value": "Q3", "label": "Klausur unter Abiturbedingungen" },
-          { "at": "Mitarbeit", "value": "≥", "label": "Mitarbeit zählt mindestens so viel wie die Klausuren" }
+          { "at": "Abiturbedingungen", "value": "Q3", "label": "Klausur unter Abiturbedingungen" }
         ]
       }
     },

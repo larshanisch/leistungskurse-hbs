@@ -4,7 +4,7 @@ window.FILMS["chemie"] = {
  "id": "chemie",
  "title": "Leistungskurs Chemie",
  "accent": "#c8d530",
- "total": 350.16,
+ "total": 351.92,
  "credits": [
   "Alle Bilder: KI-generiert (Google Gemini); dargestellte Personen sind erfunden."
  ],
@@ -156,8 +156,8 @@ window.FILMS["chemie"] = {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 25.81,
-   "speechEnd": 20.41,
+   "duration": 27.57,
+   "speechEnd": 22.17,
    "sentences": [
     {
      "text": "Chemie ist eine Naturwissenschaft und erfüllt damit die Regel, dass einer deiner beiden Leistungskurse eine Fremdsprache, Mathematik oder eine Naturwissenschaft sein muss.",
@@ -167,9 +167,9 @@ window.FILMS["chemie"] = {
      "start": 0.6
     },
     {
-     "text": "An unserer Schule ist Chemie meist kein Tutorium, sondern dein zweiter Leistungskurs, zusammen mit Englisch, Biologie, Mathematik oder Politik und Wirtschaft.",
-     "audio": "media/chemie/audio/s03_2_074f34ad.mp3",
-     "dur": 9.44,
+     "text": "An unserer Schule kannst du Chemie deshalb mit jedem anderen Leistungskurs kombinieren, von Deutsch, Englisch und Kunst über Politik und Wirtschaft und Geschichte bis Biologie und Mathematik.",
+     "audio": "media/chemie/audio/s03_2_078a9166.mp3",
+     "dur": 11.2,
      "estimated": false,
      "start": 10.97
     }
@@ -186,14 +186,14 @@ window.FILMS["chemie"] = {
      "end": 10.462
     },
     {
-     "text": "An unserer Schule ist Chemie meist kein Tutorium, sondern dein zweiter Leistungskurs,",
+     "text": "An unserer Schule kannst du Chemie deshalb mit jedem anderen Leistungskurs kombinieren,",
      "start": 10.97,
-     "end": 16.048
+     "end": 16.072
     },
     {
-     "text": "zusammen mit Englisch, Biologie, Mathematik oder Politik und Wirtschaft.",
-     "start": 16.048,
-     "end": 20.35
+     "text": "von Deutsch, Englisch und Kunst über Politik und Wirtschaft und Geschichte bis Biologie und Mathematik.",
+     "start": 16.072,
+     "end": 22.111
     }
    ],
    "image": {
@@ -207,21 +207,23 @@ window.FILMS["chemie"] = {
      {
       "ok": true,
       "with": [
+       "deutsch",
        "englisch",
+       "kunst",
+       "powi",
+       "geschichte",
        "biologie",
-       "mathe",
-       "powi"
+       "mathe"
       ],
       "t": 0.6
      },
      {
-      "ok": false,
-      "with": [
-       "deutsch",
-       "kunst",
-       "geschichte"
-      ],
-      "t": 19.036
+      "note": "Mit jedem anderen Leistungskurs an der HBS.",
+      "t": 20.763
+     },
+     {
+      "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen.",
+      "t": 0
      }
     ]
    },
@@ -337,7 +339,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 81.48
+   "start": 83.24
   },
   {
    "n": 5,
@@ -393,7 +395,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 115.42
+   "start": 117.18
   },
   {
    "n": 6,
@@ -470,7 +472,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 131.02
+   "start": 132.78
   },
   {
    "n": 7,
@@ -592,7 +594,7 @@ window.FILMS["chemie"] = {
     ],
     "t": 28.22
    },
-   "start": 155.63
+   "start": 157.39
   },
   {
    "n": 8,
@@ -655,7 +657,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 206.01
+   "start": 207.77
   },
   {
    "n": 9,
@@ -751,7 +753,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 223.58
+   "start": 225.34
   },
   {
    "n": 10,
@@ -842,7 +844,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 254.65
+   "start": 256.41
   },
   {
    "n": 11,
@@ -946,7 +948,7 @@ window.FILMS["chemie"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 278.99
+   "start": 280.75
   },
   {
    "n": 12,
@@ -1019,7 +1021,7 @@ window.FILMS["chemie"] = {
      }
     ]
    },
-   "start": 307.1
+   "start": 308.86
   },
   {
    "n": 13,
@@ -1052,7 +1054,7 @@ window.FILMS["chemie"] = {
     "src": "media/chemie/img/c13.jpg",
     "motion": "zoom-out"
    },
-   "start": 323.39
+   "start": 325.15
   },
   {
    "n": 14,
@@ -1105,7 +1107,7 @@ window.FILMS["chemie"] = {
     ]
    },
    "logo": true,
-   "start": 334.27
+   "start": 336.03
   }
  ]
 };

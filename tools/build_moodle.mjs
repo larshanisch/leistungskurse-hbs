@@ -9,8 +9,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
 
-const VERSION = '1.6';
-const STAND = '02.11.2026';
+const VERSION = '1.7';
+const STAND = '06.11.2026';
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
 const OUT = path.join(ROOT, 'dist', 'moodle');
 const rd = (f) => fs.readFileSync(path.join(ROOT, f), 'utf8');

@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Deutsch
 
-Version 0.11 · 29.10.2026 (freigegeben)
+Version 0.12 · 06.11.2026 (freigegeben)
+
+Änderung gegenüber 0.11 (Nutzer 06.11.2026, Entscheidung 135): Szene 10 ohne den Satz „Deine Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren“ und ohne die Tafelzeile dazu – kein anderer Film nennt das.
 
 Änderung gegenüber 0.10: Szene 10 nennt die Klausur unter Abiturbedingungen in Q3, wie in den übrigen Filmen (Satz wortgleich übernommen; OAVO § 9 Abs. 11, FB-A Abschn. 3; Nutzer 29.10.2026, Entscheidung 60).
 
@@ -208,20 +210,19 @@ Inhaltsangabe, damit jede Porträtkarte genau so lange steht, wie über das Werk
   > vorgegebener Länge.
 - **Beleg:** FB-D 3 (Aufgabenarten); FB-D 2 (materialgestütztes Schreiben mit Ziellänge)
 
-### Szene 10 · Klausuren und Mitarbeit
+### Szene 10 · Klausuren
 
 - **Bild:** F — Kursraum (HBS-Möblierung), Kurs in Gruppenarbeit, SIE spricht und gestikuliert,
   die anderen hören zu.
 - **Bewegung:** Schwenk von rechts nach links.
 - **Element:** ZAHL „2 Klausuren pro Halbjahr“ (darunter „im Grundkurs genauso · im letzten
   Halbjahr 1“) · „andere Fächer außer Mathematik: Grundkurs 1, Leistungskurs 2“ · „Referat oder Präsentation statt einer
-  Klausur – wenn die Lehrkraft es festlegt“ · „Mitarbeit zählt mindestens so viel“
+  Klausur – wenn die Lehrkraft es festlegt“
 - **Sprechtext:**
   > Pro Halbjahr schreibst du zwei Klausuren, in Q4 nur eine – genau wie im Grundkurs Deutsch.
   > Der Leistungskurs Deutsch bringt dir also keine zusätzliche
   > Klausur. Das gilt sonst nur noch für Mathematik; in allen anderen Fächern schreibt der Grundkurs
-  > bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei. Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine Präsentation ersetzt. In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet. Deine
-  > Mitarbeit im Unterricht zählt dabei mindestens so viel wie die Klausuren.
+  > bei uns eine Klausur pro Halbjahr und der Leistungskurs zwei. Deine Lehrkraft kann außerdem entscheiden, dass euer ganzer Kurs in Q1, Q2 oder Q3 eine Klausur durch ein Referat oder eine Präsentation ersetzt. In Q3 schreibst du in der Regel eine Klausur unter Abiturbedingungen und weißt danach, was dich in der Prüfung erwartet.
 - **Beleg:** FB-A (§ 9 Abs. 6 Nr. 1–3, Abs. 6a Nr. 1 „nach Entscheidung der Lehrkraft … einheitlich“
   und Abs. 7 — am Originaltext geprüft; § 9 Abs. 2; HKM-Schaubild Klausuren Abb. 1 und 4,
   Allgemeine Anmerkung a). SCHULE: Grundkurs Englisch dreistündig, eine Klausur (Nutzer 29.10.2026).

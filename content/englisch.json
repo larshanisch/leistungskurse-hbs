@@ -36,7 +36,8 @@
       "hold": 4,
       "panel": { "type": "combo", "title": "Englisch passt zu …", "items": [
         { "at": "Weil Englisch eine fortgeführte", "ok": true, "with": ["deutsch", "kunst", "powi", "geschichte", "biologie", "chemie", "mathe"] },
-        { "at": "vielen anderen", "note": "Mit jedem anderen Leistungskurs an der HBS." }
+        { "at": "vielen anderen", "note": "Mit jedem anderen Leistungskurs an der HBS." },
+        { "at": "Weil Englisch eine fortgeführte", "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen." }
       ] }
     },
     {

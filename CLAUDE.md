@@ -150,6 +150,8 @@ verhandeln). Amtliche Fakten mit Quellen: `quellen/faktenblatt_*.md`.
 - 02.11.2026: Poster (Entscheidungen 125, 128): `node tools/build_poster.mjs`, Themenfelder im Erlass-Wortlaut in `content/poster.json`, Fach-Poster in Feldfarben, danach ZIP nach `downloads/`. Englisch 0.7 ohne Referat (127), **6:09 min**.
 - 02.11.2026: Rechner: „fortgeführte Fremdsprache“ statt fest Englisch (`FS` in `index.html`, Entscheidung 131).
 - 02.11.2026: Französisch/Spanisch: Warnung und Prüfungsfach-Hinweis (Entscheidungen 132, 133). Frage nach der zweiten Fremdsprache in Schritt 3, Rechner wendet § 14 Abs. 3 an (`P2.fs14`, Entscheidung 134).
+- 06.11.2026: Kombinationen nach rechtlichen Vorgaben (Chemie mit allen, Hinweis „nur bei genug Wahlen“), Deutsch ohne Mitarbeit-Satz, Poster-Klausurersatz als Möglichkeit (Entscheidung 135):
+  **Deutsch 5:43, Chemie 5:52, Geschichte 5:57 min**.
 - Vertonen nach Einfügen eines Satzes: verschobene, unveränderte Sätze vorher auf die neue Nummer umbenennen (gleiche Prüfsumme), sonst werden sie neu bezahlt.
   Neue Filme: Faktenblatt →
   Drehbuch zur Freigabe → Bilder → Vertonung.

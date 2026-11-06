@@ -553,13 +553,15 @@
       chemie:     { name: 'Chemie', field: 3, kind: 'nw', img: 'media/chemie/img/c01.jpg', pos: '78% center',
                     what: 'Stoffe, Reaktionen und Gleichgewichte – was du siehst, mit Teilchen erklären.' }
     };
-    // Kombinationen nach den Blättern „Mögliche Prüfungsfachkombinationen im Abitur (nach Tutorien)“ der HBS
-    // (Entscheidung 40): 1. LK = Tutoriumskurs, dazu die passenden 2. LKs
+    // Kombinationen: alle, die rechtlich möglich sind (OAVO § 13 Abs. 2: ein LK Fremdsprache, Mathematik oder Naturwissenschaft;
+    // Nutzer 06.11.2026, Entscheidung 135). Zeilen = Fächer mit dieser Eigenschaft (dazu PoWi wie bisher), Spalten = die zweiten LKs.
+    // Ob eine Kombination zustande kommt, hängt von den Wahlen ab (Hinweis unter dem Raster).
     var PAIRS = {
       englisch: ['deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie', 'mathe'],
       biologie: ['englisch', 'deutsch', 'kunst', 'powi', 'geschichte', 'chemie', 'mathe'],
       mathe:    ['englisch', 'deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie'],
-      powi:     ['englisch', 'biologie', 'chemie', 'mathe']
+      powi:     ['englisch', 'biologie', 'chemie', 'mathe'],
+      chemie:   ['englisch', 'deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'mathe']
     };
     var LK1 = Object.keys(PAIRS);
     var LK2 = ['englisch', 'deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie', 'mathe'];
@@ -1042,7 +1044,7 @@
       }
       return '<div class="p2s1"><div class="mxw"><div class="mx-key"><span class="lk1"><i></i>1. Leistungskurs</span>' +
         '<span class="lk2"><i></i>2. Leistungskurs</span><span class="lm"><i></i>mit Einschränkungen</span><span class="x"><i></i>gibt es an der HBS nicht</span></div>' +
-        '<div class="mx" style="--cols:' + COLS.length + '">' + head + rows + '</div>' + p2List() + '<p class="fine p2tut">Einer der beiden Leistungskurse ist dein Tutorium. Welcher das wird, legt die Oberstufenleitung fest.</p></div><div class="p2side">' + side + '</div></div>';
+        '<div class="mx" style="--cols:' + COLS.length + '">' + head + rows + '</div>' + p2List() + '<p class="fine p2tut">Einer der beiden Leistungskurse ist dein Tutorium. Welcher das wird, legt die Oberstufenleitung fest. Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen.</p></div><div class="p2side">' + side + '</div></div>';
     }
     // Handy: statt der Tafel (acht Spalten wären nur 25 px breit) je Tutorium eine Reihe Knöpfe mit dem 2. LK
     function p2List() {

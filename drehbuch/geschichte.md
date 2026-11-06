@@ -1,6 +1,8 @@
 # Drehbuch — Leistungskurs Geschichte
 
-Version 0.5 · 29.10.2026 (freigegeben)
+Version 0.6 · 06.11.2026 (freigegeben)
+
+Änderung gegenüber 0.5 (Nutzer 06.11.2026, Entscheidung 135): Szene 3 nennt auch Chemie als möglichen Partner.
 
 Änderung gegenüber 0.4: Szene 5 zusätzlich mit dem Foto der Ausrufung der Republik 1918, Szene 6 mit einem Foto vom Mauerbau 1961 (Bundesarchiv), beide als Porträtkarte; die Listen stehen nur noch, wenn keine Karte zu sehen ist (Nutzer 29.10.2026, Entscheidung 59). Sprechtext unverändert.
 
@@ -79,7 +81,7 @@ Wie im Drehbuch PoWi. **Beleg** FB-G = `quellen/faktenblatt_geschichte.md`, FB-A
 - **Sprechtext:**
   > Geschichte kann nur eines deiner beiden Leistungsfächer sein; das andere muss eine fortgeführte
   > Fremdsprache, Mathematik oder eine Naturwissenschaft sein. An unserer Schule kombinierst du es mit
-  > Englisch, Biologie oder Mathematik.
+  > Englisch, Biologie, Chemie oder Mathematik.
 - **Beleg:** FB-G 0 (§ 13 Abs. 2 Satz 1; Tutoriumsblätter, Entscheidung 40)
 
 ---

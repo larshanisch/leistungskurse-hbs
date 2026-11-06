@@ -8,14 +8,14 @@ const PAIRS = eval('(' + idx.match(/var PAIRS = (\{[\s\S]*?\});/)[1] + ')');
 const partners = (s) => ALL.filter((o) => o !== s && ((PAIRS[s] || []).includes(o) || (PAIRS[o] || []).includes(s)));
 const NOTE = 'Mit jedem anderen Leistungskurs an der HBS.';
 const FILMS = {
-  deutsch:    { s: 'deutsch', title: 'Deutsch passt zu …', ok: 'Deutsch und Englisch', no: 'Deutsch und Kunst', order: ['englisch', 'mathe', 'biologie'] },
+  deutsch:    { s: 'deutsch', title: 'Deutsch passt zu …', ok: 'Deutsch und Englisch', no: 'Deutsch und Kunst', order: ['englisch', 'mathe', 'biologie', 'chemie'] },
   englisch:   { s: 'englisch', title: 'Englisch passt zu …', ok: 'mit Deutsch', note: 'vielen anderen', order: ['deutsch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie', 'mathe'] },
-  kunst:      { s: 'kunst', title: 'Kunst passt zu …', ok: 'Kunst mit Englisch', no: 'Kunst mit Deutsch', order: ['englisch', 'mathe', 'biologie'] },
+  kunst:      { s: 'kunst', title: 'Kunst passt zu …', ok: 'Kunst mit Englisch', no: 'Kunst mit Deutsch', order: ['englisch', 'mathe', 'biologie', 'chemie'] },
   powi:       { s: 'powi', title: 'Politik und Wirtschaft passt zu …', ok: 'kombinierst', no: 'Mathematik.', order: ['englisch', 'biologie', 'chemie', 'mathe'] },
-  geschichte: { s: 'geschichte', title: 'Geschichte passt zu …', ok: 'kombinierst', no: 'Mathematik.', order: ['englisch', 'biologie', 'mathe'] },
+  geschichte: { s: 'geschichte', title: 'Geschichte passt zu …', ok: 'kombinierst', no: 'Mathematik.', order: ['englisch', 'biologie', 'chemie', 'mathe'] },
   mathematik: { s: 'mathe', title: 'Mathematik passt zu …', ok: 'Deutsch, Englisch und Kunst', note: 'Biologie und Chemie', order: ['deutsch', 'englisch', 'kunst', 'powi', 'geschichte', 'biologie', 'chemie'] },
   biologie:   { s: 'biologie', title: 'Biologie passt zu …', ok: 'Deutsch, Englisch und Kunst', note: 'Chemie und Mathematik', order: ['deutsch', 'englisch', 'kunst', 'powi', 'geschichte', 'chemie', 'mathe'] },
-  chemie:     { s: 'chemie', title: 'Chemie passt zu …', ok: 'Englisch', no: 'Politik und Wirtschaft', order: ['englisch', 'biologie', 'mathe', 'powi'] }
+  chemie:     { s: 'chemie', title: 'Chemie passt zu …', ok: 'Englisch', note: 'Biologie und Mathematik', order: ['deutsch', 'englisch', 'kunst', 'powi', 'geschichte', 'biologie', 'mathe'] },
 };
 for (const [f, c] of Object.entries(FILMS)) {
   const p = partners(c.s), not = ALL.filter((o) => o !== c.s && !p.includes(o));
@@ -33,6 +33,7 @@ for (const [f, c] of Object.entries(FILMS)) {
   const items = [{ at: first, ok: true, with: c.order }];
   if (c.no) items.push({ at: c.no, ok: false, with: not });
   if (c.note) items.push({ at: c.note, note: NOTE });
+  items.push({ at: first, note: "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen." });   // Entscheidung 135
   let a = s.lastIndexOf('{', k), depth = 0, e = a;
   for (; e < s.length; e++) { if (s[e] === '{') depth++; else if (s[e] === '}') { depth--; if (!depth) break; } }
   const ind = '        ';

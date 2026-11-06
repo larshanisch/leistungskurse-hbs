@@ -35,8 +35,9 @@
       "image": { "src": "g03.jpg", "motion": "zoom-out" },
       "hold": 4,
       "panel": { "type": "combo", "title": "Geschichte passt zu …", "items": [
-        { "at": "Geschichte kann nur eines", "ok": true, "with": ["englisch", "biologie", "mathe"] },
-        { "at": "Mathematik.", "ok": false, "with": ["deutsch", "kunst", "powi", "chemie"] }
+        { "at": "Geschichte kann nur eines", "ok": true, "with": ["englisch", "biologie", "chemie", "mathe"] },
+        { "at": "Mathematik.", "ok": false, "with": ["deutsch", "kunst", "powi"] },
+        { "at": "Geschichte kann nur eines", "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen." }
       ] }
     },
     {

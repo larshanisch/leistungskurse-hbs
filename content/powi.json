@@ -36,7 +36,8 @@
       "hold": 4,
       "panel": { "type": "combo", "title": "Politik und Wirtschaft passt zu …", "items": [
         { "at": "Politik und Wirtschaft kann", "ok": true, "with": ["englisch", "biologie", "chemie", "mathe"] },
-        { "at": "Mathematik.", "ok": false, "with": ["deutsch", "kunst", "geschichte"] }
+        { "at": "Mathematik.", "ok": false, "with": ["deutsch", "kunst", "geschichte"] },
+        { "at": "Politik und Wirtschaft kann", "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen." }
       ] }
     },
     {

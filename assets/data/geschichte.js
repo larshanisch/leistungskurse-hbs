@@ -4,7 +4,7 @@ window.FILMS["geschichte"] = {
  "id": "geschichte",
  "title": "Leistungskurs Geschichte",
  "accent": "#c8d530",
- "total": 355.81,
+ "total": 356.61,
  "credits": [
   "Jean Nicolas Ventadour: Die Paulskirche in Frankfurt am Main, 1848, Aquarell, Historisches Museum Frankfurt – gemeinfrei, Wikimedia Commons",
   "Erich Greiser: Ausrufung der Republik durch Philipp Scheidemann am Reichstag, Berlin, 9. November 1918, Fotografie – gemeinfrei, Wikimedia Commons",
@@ -159,8 +159,8 @@ window.FILMS["geschichte"] = {
    "n": 3,
    "chapter": null,
    "chapterDur": 0,
-   "duration": 19.73,
-   "speechEnd": 14.33,
+   "duration": 20.53,
+   "speechEnd": 15.13,
    "sentences": [
     {
      "text": "Geschichte kann nur eines deiner beiden Leistungsfächer sein; das andere muss eine fortgeführte Fremdsprache, Mathematik oder eine Naturwissenschaft sein.",
@@ -170,9 +170,9 @@ window.FILMS["geschichte"] = {
      "start": 0.6
     },
     {
-     "text": "An unserer Schule kombinierst du es mit Englisch, Biologie oder Mathematik.",
-     "audio": "media/geschichte/audio/s03_2_0ed78608.mp3",
-     "dur": 4.48,
+     "text": "An unserer Schule kombinierst du es mit Englisch, Biologie, Chemie oder Mathematik.",
+     "audio": "media/geschichte/audio/s03_2_8774170d.mp3",
+     "dur": 5.28,
      "estimated": false,
      "start": 9.85
     }
@@ -189,9 +189,9 @@ window.FILMS["geschichte"] = {
      "end": 9.343
     },
     {
-     "text": "An unserer Schule kombinierst du es mit Englisch, Biologie oder Mathematik.",
+     "text": "An unserer Schule kombinierst du es mit Englisch, Biologie, Chemie oder Mathematik.",
      "start": 9.85,
-     "end": 14.33
+     "end": 15.13
     }
    ],
    "image": {
@@ -207,6 +207,7 @@ window.FILMS["geschichte"] = {
       "with": [
        "englisch",
        "biologie",
+       "chemie",
        "mathe"
       ],
       "t": 0.6
@@ -216,10 +217,13 @@ window.FILMS["geschichte"] = {
       "with": [
        "deutsch",
        "kunst",
-       "powi",
-       "chemie"
+       "powi"
       ],
-      "t": 13.673
+      "t": 14.43
+     },
+     {
+      "note": "Manche Kombinationen kommen nur zustande, wenn genug Schülerinnen und Schüler die Kurse wählen.",
+      "t": 0
      }
     ]
    },
@@ -322,7 +326,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 74.92
+   "start": 75.72
   },
   {
    "n": 5,
@@ -424,7 +428,7 @@ window.FILMS["geschichte"] = {
     }
    ],
    "corner": "Beispiel: Abiturjahrgang 2028",
-   "start": 103.13
+   "start": 103.93
   },
   {
    "n": 6,
@@ -517,7 +521,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 123.85
+   "start": 124.65
   },
   {
    "n": 7,
@@ -651,7 +655,7 @@ window.FILMS["geschichte"] = {
     ],
     "t": 31.23
    },
-   "start": 146.46
+   "start": 147.26
   },
   {
    "n": 8,
@@ -751,7 +755,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 196.17
+   "start": 196.97
   },
   {
    "n": 9,
@@ -847,7 +851,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 226.8
+   "start": 227.6
   },
   {
    "n": 10,
@@ -946,7 +950,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 257.87
+   "start": 258.67
   },
   {
    "n": 11,
@@ -1033,7 +1037,7 @@ window.FILMS["geschichte"] = {
     ]
    },
    "corner": "Stand Abitur 2028",
-   "start": 281.09
+   "start": 281.89
   },
   {
    "n": 12,
@@ -1106,7 +1110,7 @@ window.FILMS["geschichte"] = {
      }
     ]
    },
-   "start": 306.83
+   "start": 307.63
   },
   {
    "n": 13,
@@ -1144,7 +1148,7 @@ window.FILMS["geschichte"] = {
     "src": "media/geschichte/img/g13.jpg",
     "motion": "zoom-out"
    },
-   "start": 327.68
+   "start": 328.48
   },
   {
    "n": 14,
@@ -1197,7 +1201,7 @@ window.FILMS["geschichte"] = {
     ]
    },
    "logo": true,
-   "start": 339.92
+   "start": 340.72
   }
  ]
 };
